@@ -25,7 +25,7 @@ export function versePath(
 	return `${chapterPath(versionSlug, bookUsfm, chapterId)}/${verseId}`;
 }
 
-const FALLBACK_ORIGIN = 'https://biblehearth.com';
+const FALLBACK_ORIGIN = 'https://biblehearth.online';
 
 export function siteOrigin(site?: URL): string {
 	return (site ?? new URL(FALLBACK_ORIGIN)).origin;

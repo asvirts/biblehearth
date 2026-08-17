@@ -4,7 +4,7 @@ import { defineConfig, envField, passthroughImageService } from 'astro/config';
 
 // https://astro.build/config
 export default defineConfig({
-	site: 'https://biblehearth.com',
+	site: 'https://biblehearth.online',
 	output: 'server',
 	trailingSlash: 'never',
 	session: false,

@@ -3,4 +3,4 @@ Allow: /
 
 Disallow: /read
 
-Sitemap: https://biblehearth.com/sitemap.xml
+Sitemap: https://biblehearth.online/sitemap.xml
