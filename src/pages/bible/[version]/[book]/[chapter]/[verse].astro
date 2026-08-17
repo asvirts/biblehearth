@@ -15,9 +15,12 @@ import {
 	verseUsfm,
 } from '../../../../../lib/bible/usfm';
 import {
+	scriptureToPlainText,
+	truncateWords,
+} from '../../../../../lib/bible/text';
+import {
 	bookPath,
 	chapterPath,
-	truncate,
 	versePath,
 	versionPath,
 } from '../../../../../lib/bible/urls';
@@ -110,13 +113,23 @@ const heading =
 	(book && version
 		? `${book.title} ${chapterId}:${verseId} (${version.abbreviation})`
 		: 'Verse');
-const description = passage
-	? truncate(`${heading}. ${passage.content.replace(/<[^>]+>/g, '')}`)
+const abbreviation = version?.abbreviation ?? '';
+// Chapter pages carry the abbreviation but `passage.reference` does not,
+// so verse titles used to silently drop the version.
+const verseText = passage ? scriptureToPlainText(passage.content) : '';
+const title = verseText
+	? `${heading} ${abbreviation} — ${truncateWords(verseText, 50)}`
+	: `${heading} ${abbreviation} · BibleHearth`.replace('  ', ' ');
+const description = verseText
+	? truncateWords(
+			`${verseText} — ${heading}, ${abbreviation}. Read the full chapter and compare translations.`,
+			155,
+		)
 	: `Read ${heading} on BibleHearth.`;
 ---
 
 <BaseLayout
-	title={`${heading} · BibleHearth`}
+	title={title}
 	description={description}
 	canonicalPath={versePath(slug, bookUsfm, chapterId, verseId)}
 	jsonLd={

@@ -16,9 +16,12 @@ import {
 	usfmFromBookSlug,
 } from '../../../../../lib/bible/usfm';
 import {
+	scriptureToPlainText,
+	truncateWords,
+} from '../../../../../lib/bible/text';
+import {
 	bookPath,
 	chapterPath,
-	truncate,
 	versionPath,
 } from '../../../../../lib/bible/urls';
 import {
@@ -106,15 +109,24 @@ setCacheControl(
 	status === 200 ? READER_CACHE_CONTROL : ERROR_CACHE_CONTROL,
 );
 
+const reference = book ? `${book.title} ${chapterId}` : 'Chapter';
+const abbreviation = version?.abbreviation ?? '';
 const heading =
-	book && version ? `${book.title} ${chapterId} (${version.abbreviation})` : 'Chapter';
-const description = passage
-	? truncate(`${heading}. ${passage.content.replace(/<[^>]+>/g, '')}`)
+	book && version ? `${reference} (${abbreviation})` : 'Chapter';
+
+// Scripture text in the title captures the way people actually search
+// ("the lord is my shepherd"), not just the reference.
+const snippet = passage ? scriptureToPlainText(passage.content) : '';
+const title = snippet
+	? `${reference} ${abbreviation} — ${truncateWords(snippet, 52)}`
+	: `${heading} · BibleHearth`;
+const description = snippet
+	? truncateWords(`${reference} in the ${abbreviation}: ${snippet}`, 155)
 	: `Read ${heading} on BibleHearth.`;
 ---
 
 <BaseLayout
-	title={`${heading} · BibleHearth`}
+	title={title}
 	description={description}
 	canonicalPath={chapterPath(slug, bookUsfm, chapterId)}
 	jsonLd={

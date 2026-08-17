@@ -5,7 +5,8 @@ import Passage from '../components/Passage.astro';
 import CopyrightNotice from '../components/CopyrightNotice.astro';
 import StatusMessage from '../components/StatusMessage.astro';
 import { isNumericChapter, parsePassageId } from '../lib/bible/usfm';
-import { chapterPath, truncate, versePath, versionPath } from '../lib/bible/urls';
+import { scriptureToPlainText, truncateWords } from '../lib/bible/text';
+import { chapterPath, versePath, versionPath } from '../lib/bible/urls';
 import {
 	ERROR_CACHE_CONTROL,
 	HOME_CACHE_CONTROL,
@@ -101,7 +102,9 @@ const votdHref =
 
 const featured = catalog.slice(0, 8);
 const description = votdPassage
-	? truncate(`${votdPassage.reference}: ${votdPassage.content.replace(/<[^>]+>/g, '')}`)
+	? truncateWords(
+			`${votdPassage.reference}: ${scriptureToPlainText(votdPassage.content)}`,
+		)
 	: 'Read the Bible with licensed translations, chapter pages, and the Verse of the Day.';
 ---
 
