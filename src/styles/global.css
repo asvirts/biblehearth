@@ -176,13 +176,13 @@ h1 {
 }
 
 /*
- * Reader controls. Phones get a two-column card (version spans the full row,
- * book + chapter share a row, Go sits underneath); wide screens collapse it
- * back to a single line.
+ * Reader controls. Phones get a compact two-row card (version spans the full
+ * width, then book + chapter + Go share a row); wide screens collapse it back
+ * to a single line.
  */
 .toolbar {
 	display: grid;
-	grid-template-columns: repeat(2, minmax(0, 1fr));
+	grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr) auto;
 	gap: 0.75rem;
 	align-items: end;
 	margin: 0 0 clamp(1.5rem, 5vw, 2rem);
@@ -203,8 +203,7 @@ h1 {
 	color: var(--muted);
 }
 
-.toolbar .field-wide,
-.toolbar button {
+.toolbar .field-wide {
 	grid-column: 1 / -1;
 }
 
@@ -213,8 +212,7 @@ h1 {
 		grid-template-columns: minmax(0, 2fr) minmax(0, 1.5fr) minmax(0, 0.9fr) auto;
 	}
 
-	.toolbar .field-wide,
-	.toolbar button {
+	.toolbar .field-wide {
 		grid-column: auto;
 	}
 }

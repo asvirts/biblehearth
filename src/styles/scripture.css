@@ -10,6 +10,8 @@
 /* On a phone the column is too narrow to avoid ugly rags without hyphenation. */
 @media (max-width: 40em) {
 	.scripture {
+		/* Safari needed the prefix until 17. */
+		-webkit-hyphens: auto;
 		hyphens: auto;
 	}
 }
@@ -41,20 +43,40 @@
 	margin: 0 0 0.9em;
 }
 
-/* Poetry indents scale with the type instead of staying fixed in rem. */
+/*
+ * Poetry. Indents scale with the type instead of staying fixed in rem, and the
+ * negative text-indent hangs wrapped lines deeper than the poetic line they
+ * belong to — on a phone that is the only cue that a line wrapped rather than
+ * a new line beginning.
+ */
 .scripture .q,
 .scripture .q1,
-.scripture .qr,
-.scripture .qc {
-	margin: 0 0 0.35em 1.1em;
+.scripture .q2,
+.scripture .q3 {
+	margin: 0 0 0.35em;
+	padding-left: 2em;
+	text-indent: -0.9em;
 }
 
 .scripture .q2 {
-	margin: 0 0 0.35em 1.9em;
+	padding-left: 2.8em;
 }
 
 .scripture .q3 {
-	margin: 0 0 0.35em 2.6em;
+	padding-left: 3.5em;
+}
+
+.scripture .qc,
+.scripture .qr {
+	margin: 0 0 0.35em;
+}
+
+.scripture .qc {
+	text-align: center;
+}
+
+.scripture .qr {
+	text-align: right;
 }
 
 .scripture .s,
