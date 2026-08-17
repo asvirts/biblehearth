@@ -1,17 +1,171 @@
 ---
+import type { BiblePassage, BibleVersion, VOTD } from '@youversion/platform-core';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Passage from '../components/Passage.astro';
+import CopyrightNotice from '../components/CopyrightNotice.astro';
+import StatusMessage from '../components/StatusMessage.astro';
+import { isNumericChapter, parsePassageId } from '../lib/bible/usfm';
+import { chapterPath, truncate, versePath, versionPath } from '../lib/bible/urls';
+import {
+	ERROR_CACHE_CONTROL,
+	HOME_CACHE_CONTROL,
+	setCacheControl,
+} from '../lib/http';
+import { breadcrumbJsonLd } from '../lib/seo';
+import {
+	BibleUnavailableError,
+	errorStatus,
+	getBibleIndex,
+	getDefaultVersion,
+	getPassageHtml,
+	getVerseOfTheDay,
+	listEnglishVersions,
+	PlatformConfigError,
+	versionSlug,
+} from '../lib/youversion/api';
 
+let status = 200;
+let errorTitle = '';
+let errorMessage = '';
+let defaultVersion: BibleVersion | null = null;
+let catalog: BibleVersion[] = [];
+let votd: VOTD | null = null;
+let votdPassage: BiblePassage | null = null;
+let startHref = '/versions';
+
+try {
+	[defaultVersion, catalog] = await Promise.all([
+		getDefaultVersion(),
+		listEnglishVersions(),
+	]);
+
+	if (defaultVersion) {
+		const slug = versionSlug(
+			defaultVersion,
+			catalog.length ? catalog : [defaultVersion],
+		);
+		const index = await getBibleIndex(defaultVersion.id);
+		const firstBook = index.books[0];
+		const firstChapter = firstBook?.chapters.find((chapter) =>
+			isNumericChapter(chapter.id),
+		);
+		startHref =
+			firstBook && firstChapter
+				? chapterPath(slug, firstBook.id, firstChapter.id)
+				: versionPath(slug);
+		votd = await getVerseOfTheDay();
+		if (votd) {
+			votdPassage = await getPassageHtml(defaultVersion.id, votd.passage_id, {
+				headings: false,
+				notes: false,
+			});
+		}
+	}
+} catch (error) {
+	status = errorStatus(error);
+	errorTitle =
+		error instanceof PlatformConfigError
+			? 'Bible text is not configured'
+			: 'Bible text is temporarily unavailable';
+	errorMessage =
+		error instanceof PlatformConfigError
+			? 'Add YVP_APP_KEY to your local environment, then restart the dev server.'
+			: error instanceof BibleUnavailableError
+				? error.message
+				: 'Please try again in a moment.';
+}
+
+Astro.response.status = status;
+setCacheControl(
+	Astro.response,
+	status === 200 ? HOME_CACHE_CONTROL : ERROR_CACHE_CONTROL,
+);
+
+const versionLabel = defaultVersion?.abbreviation ?? '';
+const parsedVotd = votd ? parsePassageId(votd.passage_id) : null;
+const votdHref =
+	defaultVersion && parsedVotd?.chapter
+		? parsedVotd.verse
+			? versePath(
+					versionSlug(defaultVersion, catalog.length ? catalog : [defaultVersion]),
+					parsedVotd.book,
+					parsedVotd.chapter,
+					parsedVotd.verse,
+				)
+			: chapterPath(
+					versionSlug(defaultVersion, catalog.length ? catalog : [defaultVersion]),
+					parsedVotd.book,
+					parsedVotd.chapter,
+				)
+		: startHref;
+
+const featured = catalog.slice(0, 8);
+const description = votdPassage
+	? truncate(`${votdPassage.reference}: ${votdPassage.content.replace(/<[^>]+>/g, '')}`)
+	: 'Read the Bible with licensed translations, chapter pages, and the Verse of the Day.';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout
+	title="BibleHearth · Read the Bible"
+	description={description}
+	canonicalPath="/"
+	jsonLd={breadcrumbJsonLd(Astro.site, [{ name: 'BibleHearth', path: '/' }])}
+>
+	{
+		status !== 200 ? (
+			<StatusMessage title={errorTitle} message={errorMessage} />
+		) : (
+			<div class="stack">
+				<section>
+					<p class="muted">A quiet place to read Scripture</p>
+					<h1>Read the Bible</h1>
+					<p class="lede">
+						Licensed Bible text from the YouVersion Platform, with crawlable
+						chapter and verse pages.
+					</p>
+					<p>
+						<a class="cta" href={startHref}>
+							Start reading{versionLabel ? ` in ${versionLabel}` : ''}
+						</a>
+					</p>
+				</section>
+
+				{
+					votdPassage ? (
+						<section class="panel">
+							<p class="tile-kicker">Verse of the day</p>
+							<h2>{votdPassage.reference}</h2>
+							<Passage html={votdPassage.content} />
+							<p>
+								<a href={votdHref}>Read this passage</a>
+							</p>
+							{defaultVersion ? <CopyrightNotice version={defaultVersion} /> : null}
+						</section>
+					) : null
+				}
+
+				{
+					featured.length > 0 ? (
+						<section>
+							<h2>English versions</h2>
+							<div class="version-grid">
+								{featured.map((version) => {
+									const slug = versionSlug(version, catalog);
+									return (
+										<a class="tile" href={versionPath(slug)}>
+											<span class="tile-kicker">{version.abbreviation}</span>
+											{version.localized_title || version.title}
+										</a>
+									);
+								})}
+							</div>
+							<p>
+								<a href="/versions">Browse all versions</a>
+							</p>
+						</section>
+					) : null
+				}
+			</div>
+		)
+	}
+</BaseLayout>

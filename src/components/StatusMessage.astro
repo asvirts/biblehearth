@@ -1,0 +1,12 @@
+---
+type Props = {
+	title: string;
+	message: string;
+};
+
+const { title, message } = Astro.props;
+---
+
+<h1>{title}</h1>
+<p class="lede">{message}</p>
+<p><a href="/">Back to BibleHearth</a></p>

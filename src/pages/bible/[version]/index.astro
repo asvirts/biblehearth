@@ -1,0 +1,102 @@
+---
+import type { BibleIndex, BibleVersion } from '@youversion/platform-core';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import BookList from '../../../components/BookList.astro';
+import CopyrightNotice from '../../../components/CopyrightNotice.astro';
+import StatusMessage from '../../../components/StatusMessage.astro';
+import { versionPath } from '../../../lib/bible/urls';
+import {
+	ERROR_CACHE_CONTROL,
+	READER_CACHE_CONTROL,
+	setCacheControl,
+} from '../../../lib/http';
+import { breadcrumbJsonLd } from '../../../lib/seo';
+import {
+	errorStatus,
+	getBibleIndex,
+	resolveVersion,
+} from '../../../lib/youversion/api';
+
+const requestedSlug = Astro.params.version;
+
+if (!requestedSlug) {
+	return Astro.rewrite('/404');
+}
+
+let version: BibleVersion | null = null;
+let slug = requestedSlug;
+let index: BibleIndex | null = null;
+let status = 200;
+
+try {
+	const resolved = await resolveVersion(requestedSlug);
+	if (!resolved) {
+		return Astro.rewrite('/404');
+	}
+
+	if (resolved.slug !== requestedSlug) {
+		return Astro.redirect(versionPath(resolved.slug), 301);
+	}
+
+	version = resolved.version;
+	slug = resolved.slug;
+	index = await getBibleIndex(resolved.version.id);
+} catch (error) {
+	status = errorStatus(error);
+	if (status === 404) {
+		return Astro.rewrite('/404');
+	}
+}
+
+Astro.response.status = status;
+setCacheControl(
+	Astro.response,
+	status === 200 ? READER_CACHE_CONTROL : ERROR_CACHE_CONTROL,
+);
+
+const title = version
+	? `${version.localized_title || version.title} (${version.abbreviation})`
+	: 'Bible version';
+---
+
+<BaseLayout
+	title={status === 200 ? `${title} · BibleHearth` : 'Bible version unavailable · BibleHearth'}
+	description={
+		status === 200
+			? `Read the ${title} by book and chapter, with publisher copyright displayed on every page.`
+			: 'This Bible version could not be loaded.'
+	}
+	canonicalPath={versionPath(slug)}
+	jsonLd={
+		version
+			? breadcrumbJsonLd(Astro.site, [
+					{ name: 'BibleHearth', path: '/' },
+					{ name: 'Versions', path: '/versions' },
+					{ name: version.abbreviation, path: versionPath(slug) },
+				])
+			: undefined
+	}
+>
+	{
+		status !== 200 || !version || !index ? (
+			<StatusMessage
+				title="This version is unavailable"
+				message="The Bible catalog or this translation could not be loaded right now."
+			/>
+		) : (
+			<>
+				<nav class="crumbs" aria-label="Breadcrumb">
+					<a href="/">Home</a>
+					<span>/</span>
+					<a href="/versions">Versions</a>
+					<span>/</span>
+					<span>{version.abbreviation}</span>
+				</nav>
+				<h1>{title}</h1>
+				<p class="lede">Choose a book to start reading.</p>
+				<BookList versionSlug={slug} books={index.books} />
+				<CopyrightNotice version={version} />
+			</>
+		)
+	}
+</BaseLayout>

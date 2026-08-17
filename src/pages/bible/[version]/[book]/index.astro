@@ -1,0 +1,120 @@
+---
+import type { BibleIndexBook, BibleVersion } from '@youversion/platform-core';
+import BaseLayout from '../../../../layouts/BaseLayout.astro';
+import ChapterGrid from '../../../../components/ChapterGrid.astro';
+import CopyrightNotice from '../../../../components/CopyrightNotice.astro';
+import StatusMessage from '../../../../components/StatusMessage.astro';
+import { usfmFromBookSlug } from '../../../../lib/bible/usfm';
+import { bookPath, versionPath } from '../../../../lib/bible/urls';
+import {
+	ERROR_CACHE_CONTROL,
+	READER_CACHE_CONTROL,
+	setCacheControl,
+} from '../../../../lib/http';
+import { breadcrumbJsonLd } from '../../../../lib/seo';
+import {
+	errorStatus,
+	findBook,
+	getBibleIndex,
+	resolveVersion,
+} from '../../../../lib/youversion/api';
+
+const requestedSlug = Astro.params.version;
+const bookSlug = Astro.params.book;
+
+if (!requestedSlug || !bookSlug) {
+	return Astro.rewrite('/404');
+}
+
+const bookUsfm = usfmFromBookSlug(bookSlug);
+if (!bookUsfm) {
+	return Astro.rewrite('/404');
+}
+
+let version: BibleVersion | null = null;
+let slug = requestedSlug;
+let book: BibleIndexBook | null = null;
+let status = 200;
+
+try {
+	const resolved = await resolveVersion(requestedSlug);
+	if (!resolved) {
+		return Astro.rewrite('/404');
+	}
+
+	if (resolved.slug !== requestedSlug) {
+		return Astro.redirect(bookPath(resolved.slug, bookUsfm), 301);
+	}
+
+	version = resolved.version;
+	slug = resolved.slug;
+	const loadedIndex = await getBibleIndex(resolved.version.id);
+	book = findBook(loadedIndex, bookUsfm);
+	if (!book) {
+		return Astro.rewrite('/404');
+	}
+} catch (error) {
+	status = errorStatus(error);
+	if (status === 404) {
+		return Astro.rewrite('/404');
+	}
+}
+
+Astro.response.status = status;
+setCacheControl(
+	Astro.response,
+	status === 200 ? READER_CACHE_CONTROL : ERROR_CACHE_CONTROL,
+);
+
+const bookTitle = book?.title ?? bookSlug;
+const versionLabel = version?.abbreviation ?? '';
+---
+
+<BaseLayout
+	title={
+		status === 200
+			? `${bookTitle} (${versionLabel}) · BibleHearth`
+			: 'Book unavailable · BibleHearth'
+	}
+	description={
+		status === 200
+			? `Read ${bookTitle} in the ${version?.localized_title || version?.title} by chapter.`
+			: 'This Bible book could not be loaded.'
+	}
+	canonicalPath={bookPath(slug, bookUsfm)}
+	jsonLd={
+		version && book
+			? breadcrumbJsonLd(Astro.site, [
+					{ name: 'BibleHearth', path: '/' },
+					{ name: version.abbreviation, path: versionPath(slug) },
+					{ name: book.title, path: bookPath(slug, book.id) },
+				])
+			: undefined
+	}
+>
+	{
+		status !== 200 || !version || !book ? (
+			<StatusMessage
+				title="This book is unavailable"
+				message="The requested book could not be loaded for this Bible version."
+			/>
+		) : (
+			<>
+				<nav class="crumbs" aria-label="Breadcrumb">
+					<a href="/">Home</a>
+					<span>/</span>
+					<a href={versionPath(slug)}>{version.abbreviation}</a>
+					<span>/</span>
+					<span>{book.title}</span>
+				</nav>
+				<h1>
+					{book.full_title || book.title}
+					<span class="muted"> ({version.abbreviation})</span>
+				</h1>
+				<p class="lede">Select a chapter to read.</p>
+				<ChapterGrid versionSlug={slug} book={book} />
+				<CopyrightNotice version={version} />
+			</>
+		)
+	}
+</BaseLayout>

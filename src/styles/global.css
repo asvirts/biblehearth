@@ -1,0 +1,278 @@
+:root {
+	color-scheme: light;
+	--bg: #f7f1e8;
+	--bg-raised: #fffdf8;
+	--ink: #2c2416;
+	--muted: #6b5d4a;
+	--line: #e4d5c1;
+	--ember: #b54a2c;
+	--ember-dark: #8c351d;
+	--serif: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+	--sans: "Source Sans 3", "Segoe UI", system-ui, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+html {
+	background: var(--bg);
+	color: var(--ink);
+}
+
+body {
+	margin: 0;
+	font-family: var(--sans);
+	line-height: 1.5;
+	min-height: 100vh;
+}
+
+a {
+	color: var(--ember-dark);
+	text-underline-offset: 0.15em;
+}
+
+a:hover {
+	color: var(--ember);
+}
+
+img {
+	max-width: 100%;
+}
+
+.skip-link {
+	position: absolute;
+	left: 1rem;
+	top: -3rem;
+	background: var(--ink);
+	color: var(--bg);
+	padding: 0.5rem 0.75rem;
+	z-index: 10;
+}
+
+.skip-link:focus {
+	top: 1rem;
+}
+
+.site-header,
+.site-footer {
+	border-color: var(--line);
+}
+
+.site-header {
+	border-bottom: 1px solid var(--line);
+	background: var(--bg-raised);
+}
+
+.site-footer {
+	border-top: 1px solid var(--line);
+	margin-top: 3rem;
+	padding: 2rem 0 3rem;
+	color: var(--muted);
+	font-size: 0.9rem;
+}
+
+.wrap {
+	width: min(72rem, calc(100% - 2rem));
+	margin-inline: auto;
+}
+
+.header-inner {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 1rem;
+	min-height: 4rem;
+}
+
+.wordmark {
+	font-family: var(--serif);
+	font-size: 1.35rem;
+	font-weight: 700;
+	color: var(--ink);
+	text-decoration: none;
+}
+
+.nav {
+	display: flex;
+	gap: 1.25rem;
+}
+
+.nav a {
+	text-decoration: none;
+	color: var(--muted);
+	font-weight: 600;
+}
+
+.nav a[aria-current='page'],
+.nav a:hover {
+	color: var(--ink);
+}
+
+.page {
+	padding: 2rem 0 3rem;
+}
+
+h1,
+h2,
+h3 {
+	font-family: var(--serif);
+	line-height: 1.2;
+	font-weight: 700;
+}
+
+h1 {
+	font-size: clamp(1.8rem, 3vw, 2.6rem);
+	margin: 0 0 0.75rem;
+}
+
+.lede {
+	font-size: 1.15rem;
+	color: var(--muted);
+	max-width: 42rem;
+}
+
+.panel {
+	background: var(--bg-raised);
+	border: 1px solid var(--line);
+	border-radius: 1rem;
+	padding: 1.25rem 1.4rem;
+}
+
+.stack {
+	display: grid;
+	gap: 1.25rem;
+}
+
+.toolbar {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.75rem 1rem;
+	align-items: end;
+	margin-bottom: 1.5rem;
+}
+
+.toolbar label {
+	display: grid;
+	gap: 0.3rem;
+	font-size: 0.8rem;
+	font-weight: 600;
+	color: var(--muted);
+}
+
+.toolbar select,
+.toolbar button,
+.cta {
+	font: inherit;
+	border-radius: 0.6rem;
+	border: 1px solid var(--line);
+	background: var(--bg-raised);
+	color: var(--ink);
+	padding: 0.55rem 0.75rem;
+}
+
+.cta,
+.toolbar button {
+	background: var(--ember);
+	border-color: var(--ember);
+	color: #fff;
+	font-weight: 700;
+	text-decoration: none;
+	display: inline-block;
+}
+
+.cta:hover,
+.toolbar button:hover {
+	background: var(--ember-dark);
+	color: #fff;
+}
+
+.book-grid,
+.chapter-grid,
+.version-grid {
+	display: grid;
+	gap: 0.6rem;
+}
+
+.book-grid {
+	grid-template-columns: repeat(auto-fill, minmax(11rem, 1fr));
+}
+
+.chapter-grid {
+	grid-template-columns: repeat(auto-fill, minmax(3.2rem, 1fr));
+}
+
+.version-grid {
+	grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+}
+
+.tile {
+	display: block;
+	background: var(--bg-raised);
+	border: 1px solid var(--line);
+	border-radius: 0.7rem;
+	padding: 0.75rem 0.85rem;
+	text-decoration: none;
+	color: inherit;
+}
+
+.tile:hover {
+	border-color: var(--ember);
+}
+
+.tile-kicker {
+	display: block;
+	color: var(--muted);
+	font-size: 0.8rem;
+	font-weight: 700;
+	letter-spacing: 0.04em;
+	text-transform: uppercase;
+}
+
+.chapter-grid .tile {
+	text-align: center;
+	font-weight: 700;
+}
+
+.crumbs {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.35rem 0.5rem;
+	font-size: 0.9rem;
+	color: var(--muted);
+	margin-bottom: 1rem;
+}
+
+.crumbs a {
+	color: inherit;
+}
+
+.pager {
+	display: flex;
+	justify-content: space-between;
+	gap: 1rem;
+	margin: 2rem 0 1rem;
+}
+
+.copyright {
+	margin-top: 2rem;
+	padding-top: 1rem;
+	border-top: 1px solid var(--line);
+	color: var(--muted);
+	font-size: 0.9rem;
+	max-width: 48rem;
+}
+
+.muted {
+	color: var(--muted);
+}
+
+.canon-label {
+	margin: 1.5rem 0 0.6rem;
+	font-size: 0.85rem;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+	color: var(--muted);
+}

@@ -1,0 +1,23 @@
+---
+import type { BibleIndexBook } from '@youversion/platform-core';
+import { chapterPath } from '../lib/bible/urls';
+import { readableChapters } from '../lib/youversion/api';
+
+type Props = {
+	versionSlug: string;
+	book: BibleIndexBook;
+};
+
+const { versionSlug, book } = Astro.props;
+const chapters = readableChapters(book);
+---
+
+<div class="chapter-grid">
+	{
+		chapters.map((chapter) => (
+			<a class="tile" href={chapterPath(versionSlug, book.id, chapter.id)}>
+				{chapter.title || chapter.id}
+			</a>
+		))
+	}
+</div>

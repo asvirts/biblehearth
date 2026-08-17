@@ -1,0 +1,40 @@
+---
+import type { BibleIndexBook } from '@youversion/platform-core';
+import { bookPath } from '../lib/bible/urls';
+
+type Props = {
+	versionSlug: string;
+	books: readonly BibleIndexBook[];
+};
+
+const { versionSlug, books } = Astro.props;
+
+const groups = [
+	{ id: 'old_testament', label: 'Old Testament' },
+	{ id: 'new_testament', label: 'New Testament' },
+	{ id: 'deuterocanon', label: 'Deuterocanon' },
+] as const;
+---
+
+{
+	groups.map((group) => {
+		const items = books.filter((book) => book.canon === group.id);
+		if (items.length === 0) {
+			return null;
+		}
+
+		return (
+			<section>
+				<h2 class="canon-label">{group.label}</h2>
+				<div class="book-grid">
+					{items.map((book) => (
+						<a class="tile" href={bookPath(versionSlug, book.id)}>
+							<span class="tile-kicker">{book.abbreviation}</span>
+							{book.title}
+						</a>
+					))}
+				</div>
+			</section>
+		);
+	})
+}

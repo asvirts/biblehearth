@@ -1,0 +1,61 @@
+---
+import type { BibleIndex, BibleVersion } from '@youversion/platform-core';
+import { bookSlugFromUsfm } from '../lib/bible/usfm';
+import { readableChapters, versionSlug } from '../lib/youversion/api';
+
+type Props = {
+	catalog: BibleVersion[];
+	version: BibleVersion;
+	index: BibleIndex;
+	bookId: string;
+	chapterId: string;
+};
+
+const { catalog, version, index, bookId, chapterId } = Astro.props;
+const currentSlug = versionSlug(version, catalog);
+const currentBook = index.books.find((book) => book.id === bookId);
+const chapters = currentBook ? readableChapters(currentBook) : [];
+---
+
+<form class="toolbar" method="get" action="/read">
+	<label>
+		Version
+		<select name="version">
+			{
+				catalog.map((item) => {
+					const slug = versionSlug(item, catalog);
+					return (
+						<option value={slug} selected={slug === currentSlug}>
+							{item.abbreviation} — {item.localized_title || item.title}
+						</option>
+					);
+				})
+			}
+		</select>
+	</label>
+	<label>
+		Book
+		<select name="book">
+			{
+				index.books.map((book) => (
+					<option value={bookSlugFromUsfm(book.id)} selected={book.id === bookId}>
+						{book.title}
+					</option>
+				))
+			}
+		</select>
+	</label>
+	<label>
+		Chapter
+		<select name="chapter">
+			{
+				chapters.map((chapter) => (
+					<option value={chapter.id} selected={chapter.id === chapterId}>
+						{chapter.title || chapter.id}
+					</option>
+				))
+			}
+		</select>
+	</label>
+	<button type="submit">Go</button>
+</form>

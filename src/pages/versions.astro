@@ -1,0 +1,83 @@
+---
+import type { BibleVersion } from '@youversion/platform-core';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import StatusMessage from '../components/StatusMessage.astro';
+import { versionPath } from '../lib/bible/urls';
+import {
+	ERROR_CACHE_CONTROL,
+	READER_CACHE_CONTROL,
+	setCacheControl,
+} from '../lib/http';
+import { breadcrumbJsonLd } from '../lib/seo';
+import {
+	errorStatus,
+	listEnglishVersions,
+	versionSlug,
+} from '../lib/youversion/api';
+
+let versions: BibleVersion[] = [];
+let status = 200;
+let errorTitle = '';
+let errorMessage = '';
+
+try {
+	versions = await listEnglishVersions();
+} catch (error) {
+	status = errorStatus(error);
+	errorTitle = 'Versions are unavailable';
+	errorMessage = 'The Bible catalog could not be loaded right now.';
+}
+
+Astro.response.status = status;
+setCacheControl(
+	Astro.response,
+	status === 200 ? READER_CACHE_CONTROL : ERROR_CACHE_CONTROL,
+);
+---
+
+<BaseLayout
+	title="Bible versions · BibleHearth"
+	description="Browse licensed English Bible versions available to read on BibleHearth."
+	canonicalPath="/versions"
+	jsonLd={breadcrumbJsonLd(Astro.site, [
+		{ name: 'BibleHearth', path: '/' },
+		{ name: 'Versions', path: '/versions' },
+	])}
+>
+	{
+		status !== 200 ? (
+			<StatusMessage title={errorTitle} message={errorMessage} />
+		) : (
+			<div class="stack">
+				<section>
+					<nav class="crumbs" aria-label="Breadcrumb">
+						<a href="/">Home</a>
+						<span>/</span>
+						<span>Versions</span>
+					</nav>
+					<h1>Bible versions</h1>
+					<p class="lede">
+						These English translations are available to this app after publisher
+						licensing. Open a version to read by book and chapter.
+					</p>
+				</section>
+				<div class="version-grid">
+					{
+						versions.map((version) => {
+							const slug = versionSlug(version, versions);
+							return (
+								<a class="tile" href={versionPath(slug)}>
+									<span class="tile-kicker">{version.abbreviation}</span>
+									{version.localized_title || version.title}
+									{version.language_tag ? (
+										<span class="muted"> · {version.language_tag}</span>
+									) : null}
+								</a>
+							);
+						})
+					}
+				</div>
+			</div>
+		)
+	}
+</BaseLayout>

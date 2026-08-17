@@ -1,0 +1,95 @@
+.scripture {
+	font-family: var(--serif);
+	font-size: 1.2rem;
+	line-height: 1.7;
+	max-width: 42rem;
+}
+
+.scripture .id,
+.scripture .ide,
+.scripture .usfm,
+.scripture .h,
+.scripture .sts,
+.scripture .rem,
+.scripture .toc1,
+.scripture .toc2,
+.scripture .toc3,
+.scripture .ie,
+.scripture .cl,
+.scripture .yv-n {
+	display: none;
+}
+
+.scripture .p,
+.scripture .m,
+.scripture .mi,
+.scripture .pi,
+.scripture .pc,
+.scripture .cls,
+.scripture .li,
+.scripture .li1,
+.scripture .li2 {
+	margin: 0 0 0.85em;
+}
+
+.scripture .q,
+.scripture .q1,
+.scripture .q2,
+.scripture .q3,
+.scripture .qr,
+.scripture .qc {
+	margin: 0 0 0.35em 1.5rem;
+}
+
+.scripture .q2 {
+	margin-left: 2.25rem;
+}
+
+.scripture .q3 {
+	margin-left: 3rem;
+}
+
+.scripture .s,
+.scripture .s1,
+.scripture .s2,
+.scripture .ms,
+.scripture .ms1,
+.scripture .d,
+.scripture .sp,
+.scripture .mt,
+.scripture .mt1 {
+	font-family: var(--sans);
+	font-size: 1rem;
+	font-weight: 700;
+	margin: 1.4em 0 0.7em;
+}
+
+.scripture .yv-vlbl,
+.scripture .verse > .label,
+.scripture .fv {
+	font-family: var(--sans);
+	font-size: 0.7em;
+	font-weight: 700;
+	color: var(--ember);
+	position: relative;
+	top: -0.35em;
+	padding-right: 0.35em;
+	white-space: nowrap;
+}
+
+.scripture .wj {
+	color: var(--ember-dark);
+}
+
+.scripture table {
+	border-collapse: collapse;
+	margin: 1rem 0;
+	width: 100%;
+}
+
+.scripture td,
+.scripture th {
+	border: 1px solid var(--line);
+	padding: 0.4rem 0.5rem;
+	text-align: start;
+}

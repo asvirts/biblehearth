@@ -1,0 +1,14 @@
+---
+const path = Astro.url.pathname;
+---
+
+<header class="site-header">
+	<div class="wrap header-inner">
+		<a class="wordmark" href="/">BibleHearth</a>
+		<nav class="nav" aria-label="Primary">
+			<a href="/versions" aria-current={path.startsWith('/versions') ? 'page' : undefined}>
+				Versions
+			</a>
+		</nav>
+	</div>
+</header>

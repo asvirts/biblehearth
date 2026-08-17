@@ -1,0 +1,176 @@
+---
+import type {
+	BibleIndexBook,
+	BiblePassage,
+	BibleVersion,
+} from '@youversion/platform-core';
+import BaseLayout from '../../../../../layouts/BaseLayout.astro';
+import CopyrightNotice from '../../../../../components/CopyrightNotice.astro';
+import Passage from '../../../../../components/Passage.astro';
+import StatusMessage from '../../../../../components/StatusMessage.astro';
+import {
+	isNumericChapter,
+	isNumericVerse,
+	usfmFromBookSlug,
+	verseUsfm,
+} from '../../../../../lib/bible/usfm';
+import {
+	bookPath,
+	chapterPath,
+	truncate,
+	versePath,
+	versionPath,
+} from '../../../../../lib/bible/urls';
+import {
+	ERROR_CACHE_CONTROL,
+	READER_CACHE_CONTROL,
+	setCacheControl,
+} from '../../../../../lib/http';
+import { breadcrumbJsonLd, creativeWorkJsonLd } from '../../../../../lib/seo';
+import {
+	errorStatus,
+	findBook,
+	getBibleIndex,
+	getPassageHtml,
+	resolveVersion,
+	verseExists,
+} from '../../../../../lib/youversion/api';
+
+const requestedSlug = Astro.params.version;
+const bookSlug = Astro.params.book;
+const chapterId = Astro.params.chapter;
+const verseId = Astro.params.verse;
+
+if (
+	!requestedSlug ||
+	!bookSlug ||
+	!chapterId ||
+	!verseId ||
+	!isNumericChapter(chapterId) ||
+	!isNumericVerse(verseId)
+) {
+	return Astro.rewrite('/404');
+}
+
+const bookUsfm = usfmFromBookSlug(bookSlug);
+if (!bookUsfm) {
+	return Astro.rewrite('/404');
+}
+
+let version: BibleVersion | null = null;
+let slug = requestedSlug;
+let book: BibleIndexBook | null = null;
+let passage: BiblePassage | null = null;
+let status = 200;
+
+try {
+	const resolved = await resolveVersion(requestedSlug);
+	if (!resolved) {
+		return Astro.rewrite('/404');
+	}
+
+	if (resolved.slug !== requestedSlug) {
+		return Astro.redirect(
+			versePath(resolved.slug, bookUsfm, chapterId, verseId),
+			301,
+		);
+	}
+
+	version = resolved.version;
+	slug = resolved.slug;
+	const index = await getBibleIndex(resolved.version.id);
+	book = findBook(index, bookUsfm);
+	if (!book || !verseExists(book, chapterId, verseId)) {
+		return Astro.rewrite('/404');
+	}
+
+	passage = await getPassageHtml(
+		resolved.version.id,
+		verseUsfm(bookUsfm, chapterId, verseId),
+		{ headings: false, notes: true },
+	);
+	if (!passage) {
+		return Astro.rewrite('/404');
+	}
+} catch (error) {
+	status = errorStatus(error);
+	if (status === 404) {
+		return Astro.rewrite('/404');
+	}
+}
+
+Astro.response.status = status;
+setCacheControl(
+	Astro.response,
+	status === 200 ? READER_CACHE_CONTROL : ERROR_CACHE_CONTROL,
+);
+
+const heading =
+	passage?.reference ||
+	(book && version
+		? `${book.title} ${chapterId}:${verseId} (${version.abbreviation})`
+		: 'Verse');
+const description = passage
+	? truncate(`${heading}. ${passage.content.replace(/<[^>]+>/g, '')}`)
+	: `Read ${heading} on BibleHearth.`;
+---
+
+<BaseLayout
+	title={`${heading} · BibleHearth`}
+	description={description}
+	canonicalPath={versePath(slug, bookUsfm, chapterId, verseId)}
+	jsonLd={
+		version && book
+			? [
+					breadcrumbJsonLd(Astro.site, [
+						{ name: 'BibleHearth', path: '/' },
+						{ name: version.abbreviation, path: versionPath(slug) },
+						{ name: book.title, path: bookPath(slug, book.id) },
+						{
+							name: `Chapter ${chapterId}`,
+							path: chapterPath(slug, book.id, chapterId),
+						},
+						{
+							name: `Verse ${verseId}`,
+							path: versePath(slug, book.id, chapterId, verseId),
+						},
+					]),
+					creativeWorkJsonLd({
+						name: heading,
+						description,
+						inLanguage: version.language_tag,
+						copyrightNotice: version.copyright,
+					}),
+				]
+			: undefined
+	}
+>
+	{
+		status !== 200 || !version || !book || !passage ? (
+			<StatusMessage
+				title="This verse is unavailable"
+				message="The requested verse could not be loaded for this Bible version."
+			/>
+		) : (
+			<>
+				<nav class="crumbs" aria-label="Breadcrumb">
+					<a href="/">Home</a>
+					<span>/</span>
+					<a href={versionPath(slug)}>{version.abbreviation}</a>
+					<span>/</span>
+					<a href={bookPath(slug, book.id)}>{book.title}</a>
+					<span>/</span>
+					<a href={chapterPath(slug, book.id, chapterId)}>{chapterId}</a>
+					<span>/</span>
+					<span>{verseId}</span>
+				</nav>
+				<h1>{heading}</h1>
+				<p>
+					<a href={chapterPath(slug, book.id, chapterId)}>Read the full chapter</a>
+				</p>
+				<Passage html={passage.content} />
+				<CopyrightNotice version={version} />
+			</>
+		)
+	}
+</BaseLayout>
