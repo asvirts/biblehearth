@@ -133,6 +133,13 @@ const description = verseText
 	title={title}
 	description={description}
 	canonicalPath={versePath(slug, bookUsfm, chapterId, verseId)}
+	{/* One indexable page per verse reference, not one per (verse x version).
+	    These stay live for readers and deep links, and keep passing link
+	    equity, but the version-agnostic hub is the page that competes.
+	    Deliberately NOT canonicalised to the hub: a single translation is not
+	    equivalent to a side-by-side comparison, and asserting that would be
+	    a false claim. */}
+	noindex
 	jsonLd={
 		version && book
 			? [
@@ -181,6 +188,10 @@ const description = verseText
 				<h1>{heading}</h1>
 				<p>
 					<a href={chapterPath(slug, book.id, chapterId)}>Read the full chapter</a>
+					{' · '}
+					<a href={`/verse/${bookSlug}/${chapterId}/${verseId}`}>
+						Compare translations
+					</a>
 				</p>
 				<Passage html={passage.content} />
 				<CopyrightNotice version={version} />

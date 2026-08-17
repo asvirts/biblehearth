@@ -340,6 +340,31 @@ export async function getVerseOfTheDay(): Promise<VOTD | null> {
 	}
 }
 
+/**
+ * The whole-year Verse of the Day calendar.
+ *
+ * 366 references curated by YouVersion — the best available "verses people
+ * actually look up" list, and the seed set for which verse hubs get indexed
+ * first. Cached for a day; the calendar is effectively static.
+ */
+export async function getVerseOfTheDayCalendar(): Promise<VOTD[]> {
+	return loadCached(
+		'votd:calendar',
+		PASSAGE_CACHE_MS,
+		STALE_GRACE_MS,
+		async () => {
+			try {
+				const page = await withPlatform(() => getBibleClient().getAllVOTDs());
+				return [...page.data];
+			} catch {
+				// A missing calendar must not break the sitemap; topic verses
+				// still provide a usable seed set on their own.
+				return [];
+			}
+		},
+	);
+}
+
 export function chapterExists(
 	book: { chapters?: ReadonlyArray<{ id: string }> },
 	chapterId: string,

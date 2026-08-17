@@ -23,6 +23,8 @@ export const GET: APIRoute = async ({ site }) => {
 			// Neither of these touches the upstream, so they survive a throttle.
 			'/sitemap-pages.xml',
 			'/sitemap-topics.xml',
+			// Curated seed set only — see lib/topics/seed.ts for why.
+			'/sitemap-verses.xml',
 			...versionSitemaps,
 		]),
 	);

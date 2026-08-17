@@ -1,0 +1,241 @@
+---
+import type { BiblePassage, BibleVersion } from '@youversion/platform-core';
+import BaseLayout from '../../../../layouts/BaseLayout.astro';
+import Passage from '../../../../components/Passage.astro';
+import StatusMessage from '../../../../components/StatusMessage.astro';
+import {
+	bookNameFromUsfm,
+	isNumericChapter,
+	isNumericVerse,
+	usfmFromBookSlug,
+	verseUsfm,
+} from '../../../../lib/bible/usfm';
+import { scriptureToPlainText, truncateWords } from '../../../../lib/bible/text';
+import {
+	HUB_TRANSLATION_LIMIT,
+	HUB_TRANSLATION_SLUGS,
+} from '../../../../lib/bible/translations';
+import {
+	absoluteUrl,
+	chapterPath,
+	versePath,
+	versionPath,
+} from '../../../../lib/bible/urls';
+import {
+	ERROR_CACHE_CONTROL,
+	READER_CACHE_CONTROL,
+	setCacheControl,
+} from '../../../../lib/http';
+import {
+	breadcrumbJsonLd,
+	creativeWorkJsonLd,
+	itemListJsonLd,
+} from '../../../../lib/seo';
+import { topicPath, verseTopicIndex } from '../../../../lib/topics';
+import {
+	displayAbbreviation,
+	errorStatus,
+	getPassageHtml,
+	listEnglishVersions,
+	versionSlug,
+} from '../../../../lib/youversion/api';
+
+const bookSlug = Astro.params.book;
+const chapterId = Astro.params.chapter;
+const verseId = Astro.params.verse;
+
+if (
+	!bookSlug ||
+	!chapterId ||
+	!verseId ||
+	!isNumericChapter(chapterId) ||
+	!isNumericVerse(verseId)
+) {
+	return Astro.rewrite('/404');
+}
+
+const bookUsfm = usfmFromBookSlug(bookSlug);
+if (!bookUsfm) {
+	return Astro.rewrite('/404');
+}
+
+const usfm = verseUsfm(bookUsfm, chapterId, verseId);
+const reference = `${bookNameFromUsfm(bookUsfm)} ${chapterId}:${verseId}`;
+
+type Rendering = {
+	version: BibleVersion;
+	slug: string;
+	passage: BiblePassage;
+};
+
+let renderings: Rendering[] = [];
+let status = 200;
+
+try {
+	const catalog = await listEnglishVersions();
+
+	// Order by the curated list; skip anything not licensed to this app.
+	const chosen = HUB_TRANSLATION_SLUGS.map((wanted) =>
+		catalog.find((version) => versionSlug(version, catalog) === wanted),
+	)
+		.filter((version): version is BibleVersion => Boolean(version))
+		.slice(0, HUB_TRANSLATION_LIMIT);
+
+	const loaded = await Promise.all(
+		chosen.map(async (version) => {
+			const passage = await getPassageHtml(version.id, usfm, {
+				headings: false,
+				notes: false,
+			}).catch(() => null);
+			return passage
+				? { version, slug: versionSlug(version, catalog), passage }
+				: null;
+		}),
+	);
+
+	renderings = loaded.filter((item): item is Rendering => Boolean(item));
+
+	// A reference no licensed translation can render is not a real verse.
+	if (renderings.length === 0) {
+		return Astro.rewrite('/404');
+	}
+} catch (error) {
+	status = errorStatus(error);
+	if (status === 404) {
+		return Astro.rewrite('/404');
+	}
+}
+
+Astro.response.status = status;
+setCacheControl(
+	Astro.response,
+	status === 200 ? READER_CACHE_CONTROL : ERROR_CACHE_CONTROL,
+);
+
+const primary = renderings[0];
+const verseText = primary ? scriptureToPlainText(primary.passage.content) : '';
+
+const canonicalPath = `/verse/${bookSlug}/${chapterId}/${verseId}`;
+const title = verseText
+	? `${reference} in ${renderings.length} Translations — ${truncateWords(verseText, 44)}`
+	: `${reference} — Compare Bible Translations`;
+const description = verseText
+	? truncateWords(
+			`${verseText} — ${reference} compared across ${renderings.length} Bible translations, with links to read each in full context.`,
+			155,
+		)
+	: `Compare ${reference} across Bible translations on BibleHearth.`;
+
+const { byVerse } = await verseTopicIndex();
+const relatedTopics = byVerse.get(usfm) ?? [];
+
+const previousVerse = Number(verseId) > 1 ? String(Number(verseId) - 1) : null;
+const nextVerse = String(Number(verseId) + 1);
+---
+
+<BaseLayout
+	title={title}
+	description={description}
+	canonicalPath={canonicalPath}
+	jsonLd={[
+		breadcrumbJsonLd(Astro.site, [
+			{ name: 'BibleHearth', path: '/' },
+			{ name: bookNameFromUsfm(bookUsfm), path: canonicalPath },
+			{ name: reference, path: canonicalPath },
+		]),
+		creativeWorkJsonLd({
+			name: reference,
+			description,
+			inLanguage: 'en',
+		}),
+		itemListJsonLd({
+			name: `${reference} in ${renderings.length} translations`,
+			items: renderings.map((item) => ({
+				name: `${reference} (${displayAbbreviation(item.version)})`,
+				url: absoluteUrl(
+					Astro.site,
+					versePath(item.slug, bookUsfm, chapterId, verseId),
+				),
+			})),
+		}),
+	]}
+>
+	<nav class="crumbs" aria-label="Breadcrumb">
+		<a href="/">Home</a>
+		<span>/</span>
+		<span>{bookNameFromUsfm(bookUsfm)}</span>
+		<span>/</span>
+		<span>{reference}</span>
+	</nav>
+
+	<h1>{reference}</h1>
+
+	{
+		status !== 200 || renderings.length === 0 ? (
+			<StatusMessage
+				title="This verse is unavailable"
+				message="Scripture could not be loaded right now. Please try again shortly."
+			/>
+		) : (
+			<>
+				<p class="lede">
+					{reference} in {renderings.length} English translations. Each links
+					through to the full chapter for context.
+				</p>
+
+				{renderings.map((item) => (
+					<article class="verse-card">
+						<h2>
+							<a href={versePath(item.slug, bookUsfm, chapterId, verseId)}>
+								{item.version.localized_title || item.version.title} (
+								{displayAbbreviation(item.version)})
+							</a>
+						</h2>
+						<Passage html={item.passage.content} />
+						<p class="muted">
+							<a href={chapterPath(item.slug, bookUsfm, chapterId)}>
+								Read {bookNameFromUsfm(bookUsfm)} {chapterId} in{' '}
+								{displayAbbreviation(item.version)}
+							</a>
+							{' · '}
+							<a href={versionPath(item.slug)}>
+								About the {displayAbbreviation(item.version)}
+							</a>
+						</p>
+						<footer class="copyright">
+							<p>{item.version.copyright || item.version.info || ''}</p>
+						</footer>
+					</article>
+				))}
+
+				<nav class="pager">
+					{previousVerse ? (
+						<a href={`/verse/${bookSlug}/${chapterId}/${previousVerse}`}>
+							{reference.replace(/:\d+$/, `:${previousVerse}`)}
+						</a>
+					) : (
+						<span />
+					)}
+					<a href={`/verse/${bookSlug}/${chapterId}/${nextVerse}`}>
+						{reference.replace(/:\d+$/, `:${nextVerse}`)}
+					</a>
+				</nav>
+
+				{relatedTopics.length ? (
+					<section class="chapter-topics">
+						<h2>This verse appears in</h2>
+						<ul class="topic-links">
+							{relatedTopics.map((topic) => (
+								<li>
+									<a href={topicPath(topic.slug)}>
+										Bible verses about {topic.title.toLowerCase()}
+									</a>
+								</li>
+							))}
+						</ul>
+					</section>
+				) : null}
+			</>
+		)
+	}
+</BaseLayout>
