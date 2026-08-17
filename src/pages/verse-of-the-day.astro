@@ -1,0 +1,289 @@
+---
+/**
+ * The Verse of the Day as its own indexable page.
+ *
+ * The home page already renders today's verse, but a home page cannot rank for
+ * "bible verse of the day" and also be the site's brand page — the title and H1
+ * can only serve one of those. This page owns the query outright, and the home
+ * page links to it rather than competing with it.
+ *
+ * The verse itself rotates, so what makes this rankable is the frame around it:
+ * a stable URL, the reference in context, and links out to the chapter, the
+ * translation comparison, and any topic that cites the verse.
+ */
+import type { BiblePassage, BibleVersion, VOTD } from '@youversion/platform-core';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Passage from '../components/Passage.astro';
+import CopyrightNotice from '../components/CopyrightNotice.astro';
+import StatusMessage from '../components/StatusMessage.astro';
+import {
+	bookNameFromUsfm,
+	bookSlugFromUsfm,
+	isNumericChapter,
+	isNumericVerse,
+	parsePassageId,
+	verseUsfm,
+} from '../lib/bible/usfm';
+import { scriptureToPlainText, truncateWords } from '../lib/bible/text';
+import { chapterPath, versePath, versionPath } from '../lib/bible/urls';
+import {
+	ERROR_CACHE_CONTROL,
+	HOME_CACHE_CONTROL,
+	setCacheControl,
+} from '../lib/http';
+import {
+	articleJsonLd,
+	breadcrumbJsonLd,
+	creativeWorkJsonLd,
+} from '../lib/seo';
+import { topicPath, verseTopicIndex } from '../lib/topics';
+import {
+	BibleUnavailableError,
+	displayAbbreviation,
+	errorStatus,
+	getDefaultVersion,
+	getPassageHtml,
+	getVerseOfTheDay,
+	listEnglishVersions,
+	PlatformConfigError,
+	versionSlug,
+} from '../lib/youversion/api';
+
+const CANONICAL_PATH = '/verse-of-the-day';
+
+let status = 200;
+let errorTitle = '';
+let errorMessage = '';
+let version: BibleVersion | null = null;
+let votd: VOTD | null = null;
+let passage: BiblePassage | null = null;
+let slug = '';
+
+try {
+	const [defaultVersion, catalog] = await Promise.all([
+		getDefaultVersion(),
+		listEnglishVersions(),
+	]);
+	version = defaultVersion;
+
+	if (version) {
+		slug = versionSlug(version, catalog.length ? catalog : [version]);
+		votd = await getVerseOfTheDay();
+		if (votd) {
+			passage = await getPassageHtml(version.id, votd.passage_id, {
+				headings: false,
+				notes: false,
+			});
+		}
+	}
+} catch (error) {
+	status = errorStatus(error);
+	errorTitle =
+		error instanceof PlatformConfigError
+			? 'Bible text is not configured'
+			: 'The verse of the day is temporarily unavailable';
+	errorMessage =
+		error instanceof PlatformConfigError
+			? 'Add YVP_APP_KEY to your local environment, then restart the dev server.'
+			: error instanceof BibleUnavailableError
+				? error.message
+				: 'Please try again in a moment.';
+}
+
+Astro.response.status = status;
+setCacheControl(
+	Astro.response,
+	status === 200 ? HOME_CACHE_CONTROL : ERROR_CACHE_CONTROL,
+);
+
+const parsed = votd ? parsePassageId(votd.passage_id) : null;
+const bookUsfm = parsed?.book ?? null;
+const chapterId =
+	parsed?.chapter && isNumericChapter(parsed.chapter) ? parsed.chapter : null;
+
+/**
+ * The calendar cites ranges as often as single verses (`EPH.4.2-3`), and the
+ * reader routes only accept a single numeric verse. Anchor every link on the
+ * first verse of the range rather than dropping the links entirely.
+ */
+const anchorVerse = (() => {
+	const first = parsed?.verse?.split('-')[0];
+	return first && isNumericVerse(first) ? first : null;
+})();
+
+const abbreviation = version ? displayAbbreviation(version) : '';
+const reference =
+	passage?.reference ??
+	(bookUsfm && chapterId
+		? `${bookNameFromUsfm(bookUsfm)} ${chapterId}${parsed?.verse ? `:${parsed.verse}` : ''}`
+		: '');
+
+const chapterHref =
+	bookUsfm && chapterId && slug ? chapterPath(slug, bookUsfm, chapterId) : null;
+const verseHref =
+	bookUsfm && chapterId && anchorVerse && slug
+		? versePath(slug, bookUsfm, chapterId, anchorVerse)
+		: null;
+const compareHref =
+	bookUsfm && chapterId && anchorVerse
+		? `/verse/${bookSlugFromUsfm(bookUsfm)}/${chapterId}/${anchorVerse}`
+		: null;
+
+const { byVerse } = await verseTopicIndex();
+const relatedTopics =
+	bookUsfm && chapterId && anchorVerse
+		? (byVerse.get(verseUsfm(bookUsfm, chapterId, anchorVerse)) ?? [])
+		: [];
+
+// UTC, because `getVerseOfTheDay` picks the day from the UTC day-of-year. A
+// local-time label would name the wrong day for part of every day.
+const now = new Date();
+const dayStart = new Date(
+	Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate()),
+);
+const dateLabel = dayStart.toLocaleDateString('en-US', {
+	timeZone: 'UTC',
+	year: 'numeric',
+	month: 'long',
+	day: 'numeric',
+});
+
+const verseText = passage ? scriptureToPlainText(passage.content) : '';
+const title =
+	reference && verseText
+		? `Bible Verse of the Day — ${reference}: ${truncateWords(verseText, 40)}`
+		: 'Bible Verse of the Day';
+const description =
+	reference && verseText
+		? truncateWords(
+				`Today's Bible verse of the day is ${reference}${abbreviation ? ` (${abbreviation})` : ''}: ${verseText}`,
+				155,
+			)
+		: 'A new Bible verse every day, with the full chapter for context and the same verse compared across English translations.';
+---
+
+<BaseLayout
+	title={title}
+	description={description}
+	canonicalPath={CANONICAL_PATH}
+	jsonLd={[
+		breadcrumbJsonLd(Astro.site, [
+			{ name: 'BibleHearth', path: '/' },
+			{ name: 'Verse of the Day', path: CANONICAL_PATH },
+		]),
+		articleJsonLd({
+			site: Astro.site,
+			path: CANONICAL_PATH,
+			headline: reference
+				? `Bible Verse of the Day — ${reference}`
+				: 'Bible Verse of the Day',
+			description,
+			datePublished: dayStart,
+			dateModified: dayStart,
+			about: { name: 'Bible verse of the day' },
+		}),
+		...(reference
+			? [
+					creativeWorkJsonLd({
+						name: reference,
+						description,
+						inLanguage: 'en',
+						copyrightNotice: version?.copyright ?? null,
+					}),
+				]
+			: []),
+	]}
+>
+	<nav class="crumbs" aria-label="Breadcrumb">
+		<a href="/">Home</a>
+		<span>/</span>
+		<span>Verse of the Day</span>
+	</nav>
+
+	<h1>Bible Verse of the Day</h1>
+
+	{
+		status !== 200 || !passage ? (
+			<StatusMessage
+				title={errorTitle || 'The verse of the day is unavailable'}
+				message={
+					errorMessage ||
+					'Scripture could not be loaded right now. Please try again shortly.'
+				}
+			/>
+		) : (
+			<>
+				<p class="lede">
+					A new passage every day, drawn from the YouVersion Verse of the Day
+					calendar. Today is <time datetime={dayStart.toISOString().slice(0, 10)}>{dateLabel}</time>.
+				</p>
+
+				<section class="panel">
+					<h2>
+						{reference}
+						{abbreviation ? <span class="muted"> · {abbreviation}</span> : null}
+					</h2>
+					<Passage html={passage.content} />
+
+					<p>
+						{chapterHref ? (
+							<a href={chapterHref}>
+								Read {bookUsfm ? bookNameFromUsfm(bookUsfm) : 'the'} {chapterId} in full
+							</a>
+						) : null}
+						{chapterHref && compareHref ? ' · ' : null}
+						{compareHref ? (
+							<a href={compareHref}>Compare {reference} across translations</a>
+						) : null}
+					</p>
+
+					{version ? <CopyrightNotice version={version} /> : null}
+				</section>
+
+				{relatedTopics.length ? (
+					<section>
+						<h2>Topics this verse speaks to</h2>
+						<ul class="topic-links">
+							{relatedTopics.map((topic) => (
+								<li>
+									<a href={topicPath(topic.slug)}>
+										Bible verses about {topic.title.toLowerCase()}
+									</a>
+								</li>
+							))}
+						</ul>
+					</section>
+				) : null}
+
+				<section>
+					<h2>Keep reading</h2>
+					<p>
+						The verse above is shown in the{' '}
+						{version ? (
+							<a href={versionPath(slug)}>
+								{version.localized_title || version.title}
+							</a>
+						) : (
+							'default translation'
+						)}
+						. You can read the same passage in any licensed English translation,
+						or start somewhere new.
+					</p>
+					<p>
+						<a href="/topics">Browse verses by topic</a>
+						{' · '}
+						<a href="/versions">Browse all translations</a>
+						{verseHref ? (
+							<>
+								{' · '}
+								<a href={verseHref}>
+									{reference} in {abbreviation}
+								</a>
+							</>
+						) : null}
+					</p>
+				</section>
+			</>
+		)
+	}
+</BaseLayout>

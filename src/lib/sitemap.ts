@@ -24,7 +24,12 @@ export function versionSitemapPath(versionSlug: string): string {
 
 export function pageSitemapPaths(versionSlugs: readonly string[]): string[] {
 	const unique = [...new Set(versionSlugs)];
-	return ['/', '/versions', ...unique.map(versionPath)];
+	return [
+		'/',
+		'/verse-of-the-day',
+		'/versions',
+		...unique.map(versionPath),
+	];
 }
 
 export function bibleSitemapPaths(versionSlug: string, index: BibleIndex): string[] {

@@ -137,11 +137,15 @@ const description = votdPassage
 				{
 					votdPassage ? (
 						<section class="panel">
-							<p class="tile-kicker">Verse of the day</p>
+							<p class="tile-kicker">
+								<a href="/verse-of-the-day">Verse of the day</a>
+							</p>
 							<h2>{votdPassage.reference}</h2>
 							<Passage html={votdPassage.content} />
 							<p>
 								<a href={votdHref}>Read this passage</a>
+								{' · '}
+								<a href="/verse-of-the-day">Today's verse in context</a>
 							</p>
 							{defaultVersion ? <CopyrightNotice version={defaultVersion} /> : null}
 						</section>
