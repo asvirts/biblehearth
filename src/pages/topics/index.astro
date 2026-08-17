@@ -1,0 +1,69 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { HOME_CACHE_CONTROL, setCacheControl } from '../../lib/http';
+import { breadcrumbJsonLd, itemListJsonLd } from '../../lib/seo';
+import { absoluteUrl } from '../../lib/bible/urls';
+import { listTopics, topicPath, topicVerseCount } from '../../lib/topics';
+
+setCacheControl(Astro.response, HOME_CACHE_CONTROL);
+
+const topics = await listTopics();
+const names = topics
+	.slice(0, 3)
+	.map((topic) => topic.data.title)
+	.join(', ');
+---
+
+<BaseLayout
+	title={`Bible Topics — Verses About ${names} and More`}
+	description={`Bible verses by topic, grouped by theme with plain-English context for every passage. ${topics.length} topics covering ${names.toLowerCase()}, and more.`}
+	canonicalPath="/topics"
+	jsonLd={[
+		breadcrumbJsonLd(Astro.site, [
+			{ name: 'BibleHearth', path: '/' },
+			{ name: 'Topics', path: '/topics' },
+		]),
+		itemListJsonLd({
+			name: 'Bible topics',
+			items: topics.map((topic) => ({
+				name: `Bible verses about ${topic.data.title.toLowerCase()}`,
+				url: absoluteUrl(Astro.site, topicPath(topic.id)),
+			})),
+		}),
+	]}
+>
+	<nav class="crumbs" aria-label="Breadcrumb">
+		<a href="/">Home</a>
+		<span>/</span>
+		<span>Topics</span>
+	</nav>
+
+	<h1>Bible Verses by Topic</h1>
+	<p class="lede">
+		Every topic is a curated set of passages grouped by theme, with a sentence
+		of context for each verse explaining who is speaking and why it belongs —
+		plus an honest note on how the passages are commonly misused.
+	</p>
+
+	<div class="stack">
+		{
+			topics.map((topic) => (
+				<article class="panel">
+					<h2>
+						<a href={topicPath(topic.id)}>
+							Bible Verses About {topic.data.title}
+						</a>
+					</h2>
+					{/* A one-line definition makes this hub itself answerable. */}
+					<p>{topic.data.shortAnswer}</p>
+					<p class="muted">
+						{topicVerseCount(topic)} verses in {topic.data.groups.length} groups
+						{topic.data.aliases.length
+							? ` · also: ${topic.data.aliases.slice(0, 3).join(', ')}`
+							: ''}
+					</p>
+				</article>
+			))
+		}
+	</div>
+</BaseLayout>

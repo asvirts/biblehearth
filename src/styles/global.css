@@ -383,3 +383,75 @@ h1 {
 	text-transform: uppercase;
 	color: var(--muted);
 }
+
+/* --- Topics --- */
+.topic-group {
+	margin-block: 2.5rem;
+}
+.topic-group > .muted {
+	margin-block-end: 1.5rem;
+}
+.verse-card {
+	border-inline-start: 3px solid var(--rule, #e6ddd0);
+	padding-inline-start: 1rem;
+	margin-block: 1.5rem;
+}
+.verse-card h3 {
+	margin-block-end: 0.35rem;
+	font-size: 1rem;
+	letter-spacing: 0.02em;
+	text-transform: uppercase;
+}
+.verse-card .gloss {
+	font-size: 0.95rem;
+	opacity: 0.82;
+	margin-block-start: 0.5rem;
+}
+.topic-misuse {
+	margin-block: 2.5rem;
+	padding: 1.25rem 1.5rem;
+	border-radius: 10px;
+	background: rgba(0, 0, 0, 0.035);
+}
+.topic-faq .faq-item {
+	margin-block: 1.5rem;
+}
+.topic-faq h3 {
+	font-size: 1.05rem;
+	margin-block-end: 0.4rem;
+}
+.topic-provenance {
+	margin-block-start: 3rem;
+	padding-block-start: 1.5rem;
+	border-block-start: 1px solid var(--rule, #e6ddd0);
+}
+.chapter-topics {
+	margin-block-start: 2.5rem;
+}
+.topic-links {
+	list-style: none;
+	padding: 0;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5rem 1.25rem;
+}
+.footer-nav {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 2.5rem;
+	margin-block-end: 1.5rem;
+}
+.footer-col h2 {
+	font-size: 0.8rem;
+	text-transform: uppercase;
+	letter-spacing: 0.08em;
+	opacity: 0.7;
+	margin-block-end: 0.5rem;
+}
+.footer-col ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	display: grid;
+	gap: 0.35rem;
+}

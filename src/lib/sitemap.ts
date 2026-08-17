@@ -65,6 +65,41 @@ export function urlsetXml(site: URL | undefined, paths: readonly string[]): stri
 	return `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls}\n</urlset>\n`;
 }
 
+/**
+ * Urlset carrying a real `<lastmod>`.
+ *
+ * Only used where the date is genuinely meaningful — topic pages have an
+ * editorial review date. Emitting a fabricated or always-now `lastmod` is how
+ * sites teach Google to ignore the field entirely, so reader pages deliberately
+ * omit it. (BibleGateway's topical sitemap still advertises a 2014 lastmod,
+ * which is the opposite failure.)
+ */
+export function urlsetXmlWithLastmod(
+	site: URL | undefined,
+	entries: readonly { path: string; lastmod?: Date }[],
+): string {
+	const seen = new Set<string>();
+	const urls = entries
+		.map((entry) => ({ ...entry, path: normalizePath(entry.path) }))
+		.filter((entry) => {
+			if (seen.has(entry.path)) {
+				return false;
+			}
+			seen.add(entry.path);
+			return true;
+		})
+		.map((entry) => {
+			const loc = `    <loc>${escapeXml(absoluteUrl(site, entry.path))}</loc>`;
+			const lastmod = entry.lastmod
+				? `\n    <lastmod>${entry.lastmod.toISOString().slice(0, 10)}</lastmod>`
+				: '';
+			return `  <url>\n${loc}${lastmod}\n  </url>`;
+		})
+		.join('\n');
+
+	return `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls}\n</urlset>\n`;
+}
+
 export function sitemapIndexXml(
 	site: URL | undefined,
 	paths: readonly string[],

@@ -9,6 +9,9 @@ const path = Astro.url.pathname;
 			BibleHearth
 		</a>
 		<nav class="nav" aria-label="Primary">
+			<a href="/topics" aria-current={path.startsWith('/topics') ? 'page' : undefined}>
+				Topics
+			</a>
 			<a href="/versions" aria-current={path.startsWith('/versions') ? 'page' : undefined}>
 				Versions
 			</a>

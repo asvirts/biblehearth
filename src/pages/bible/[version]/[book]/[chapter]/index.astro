@@ -19,6 +19,7 @@ import {
 	scriptureToPlainText,
 	truncateWords,
 } from '../../../../../lib/bible/text';
+import { topicPath, verseTopicIndex } from '../../../../../lib/topics';
 import {
 	bookPath,
 	chapterPath,
@@ -110,6 +111,10 @@ setCacheControl(
 	status === 200 ? READER_CACHE_CONTROL : ERROR_CACHE_CONTROL,
 );
 
+// Reverse index: which topics cite this chapter. Computed, never hand-kept.
+const { byChapter } = await verseTopicIndex();
+const chapterTopics = book ? (byChapter.get(`${book.id}.${chapterId}`) ?? []) : [];
+
 const reference = book ? `${book.title} ${chapterId}` : 'Chapter';
 const abbreviation = version ? displayAbbreviation(version) : '';
 const heading =
@@ -186,6 +191,20 @@ const description = snippet
 					)}
 					{nextHref ? <a href={nextHref}>Next chapter</a> : <span />}
 				</nav>
+				{chapterTopics.length ? (
+					<section class="chapter-topics">
+						<h2>Topics in this chapter</h2>
+						<ul class="topic-links">
+							{chapterTopics.map((topic) => (
+								<li>
+									<a href={topicPath(topic.slug)}>
+										Bible verses about {topic.title.toLowerCase()}
+									</a>
+								</li>
+							))}
+						</ul>
+					</section>
+				) : null}
 				<CopyrightNotice version={version} />
 			</>
 		)

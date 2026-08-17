@@ -1,11 +1,40 @@
 ---
+import { listTopics, topicPath } from '../lib/topics';
+
+// Footer links appear on every page, so this is how /topics stays discoverable
+// from deep inside the reader tree.
+const topics = (await listTopics()).slice(0, 5);
 ---
 
 <footer class="site-footer">
 	<div class="wrap">
+		<nav class="footer-nav" aria-label="Footer">
+			<div class="footer-col">
+				<h2>Read</h2>
+				<ul>
+					<li><a href="/versions">Bible versions</a></li>
+					<li><a href="/">Verse of the day</a></li>
+				</ul>
+			</div>
+			<div class="footer-col">
+				<h2>Topics</h2>
+				<ul>
+					{
+						topics.map((topic) => (
+							<li>
+								<a href={topicPath(topic.id)}>{topic.data.title}</a>
+							</li>
+						))
+					}
+					<li><a href="/topics">All topics</a></li>
+				</ul>
+			</div>
+		</nav>
 		<p>
 			BibleHearth displays licensed Scripture from the YouVersion Platform. Each
 			page includes the required publisher copyright for that Bible version.
+			Topical verse selections are our own, informed by Nave's Topical Bible
+			(1897) and Torrey's New Topical Textbook (1897), both public domain.
 		</p>
 	</div>
 </footer>

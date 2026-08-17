@@ -14,6 +14,7 @@ import {
 	isNumericChapter,
 	isNumericVerse,
 } from '../bible/usfm';
+import { isExcludedVersion } from '../bible/catalog';
 import { sanitizePassageHtml } from '../bible/sanitize';
 import { loadCached } from '../cache/store';
 import { getBibleClient, PlatformConfigError } from './client';
@@ -73,7 +74,7 @@ async function withPlatform<T>(operation: () => Promise<T>): Promise<T> {
 	}
 }
 
-export async function listEnglishVersions(): Promise<BibleVersion[]> {
+async function listAllEnglishVersions(): Promise<BibleVersion[]> {
 	return loadCached(
 		'versions:en',
 		VERSION_CACHE_MS,
@@ -100,6 +101,18 @@ export async function listEnglishVersions(): Promise<BibleVersion[]> {
 				return versions;
 			}),
 	);
+}
+
+/**
+ * The catalog as the site presents it.
+ *
+ * Exclusions are applied on read, not before caching: the Runtime Cache
+ * survives deployments, so filtering at write time would leave a newly
+ * excluded version live until the entry happened to expire.
+ */
+export async function listEnglishVersions(): Promise<BibleVersion[]> {
+	const versions = await listAllEnglishVersions();
+	return versions.filter((version) => !isExcludedVersion(version));
 }
 
 /**
@@ -137,7 +150,9 @@ export async function resolveVersion(
 	if (withId) {
 		const id = Number(withId[2]);
 		const version = await getVersionById(id);
-		if (!version) {
+		// An excluded version must 404 here too, or `/bible/tpt-1849` would
+		// bypass the catalog filter entirely.
+		if (!version || isExcludedVersion(version)) {
 			return null;
 		}
 		const catalog = await listEnglishVersions().catch(() => [version]);

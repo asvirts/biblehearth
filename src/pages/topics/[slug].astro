@@ -1,0 +1,236 @@
+---
+import type { BibleVersion } from '@youversion/platform-core';
+import { getEntry, render } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CopyrightNotice from '../../components/CopyrightNotice.astro';
+import Passage from '../../components/Passage.astro';
+import StatusMessage from '../../components/StatusMessage.astro';
+import { bookNameFromUsfm } from '../../lib/bible/usfm';
+import { truncateWords } from '../../lib/bible/text';
+import { absoluteUrl, chapterPath, versePath } from '../../lib/bible/urls';
+import {
+	ERROR_CACHE_CONTROL,
+	READER_CACHE_CONTROL,
+	setCacheControl,
+} from '../../lib/http';
+import {
+	articleJsonLd,
+	breadcrumbJsonLd,
+	faqJsonLd,
+	itemListJsonLd,
+} from '../../lib/seo';
+import {
+	formatReference,
+	listTopics,
+	topicPath,
+	topicVerseCount,
+	topicVerses,
+} from '../../lib/topics';
+import { loadTopicPassages } from '../../lib/topics/passages';
+import {
+	errorStatus,
+	getDefaultVersion,
+	listEnglishVersions,
+	versionSlug,
+} from '../../lib/youversion/api';
+
+const slug = Astro.params.slug;
+if (!slug) {
+	return Astro.rewrite('/404');
+}
+
+const topic = await getEntry('topics', slug);
+if (!topic || topic.data.draft) {
+	return Astro.rewrite('/404');
+}
+
+const { Content } = await render(topic);
+
+let version: BibleVersion | null = null;
+let readerSlug = '';
+let passages = new Map<string, Awaited<ReturnType<typeof loadTopicPassages>> extends Map<string, infer V> ? V : never>();
+let status = 200;
+
+try {
+	const [defaultVersion, catalog] = await Promise.all([
+		getDefaultVersion(),
+		listEnglishVersions(),
+	]);
+	version = defaultVersion;
+	if (version) {
+		readerSlug = versionSlug(version, catalog.length ? catalog : [version]);
+		passages = await loadTopicPassages(
+			version.id,
+			topicVerses(topic).map((verse) => verse.usfm),
+		);
+	}
+} catch (error) {
+	status = errorStatus(error);
+}
+
+Astro.response.status = status;
+setCacheControl(
+	Astro.response,
+	status === 200 ? READER_CACHE_CONTROL : ERROR_CACHE_CONTROL,
+);
+
+/** Range references link to the chapter; single verses to the verse page. */
+function readerHref(usfm: string): string {
+	const [book, chapter, verse] = usfm.split('.');
+	if (!book || !chapter) {
+		return '/versions';
+	}
+	if (verse && !verse.includes('-')) {
+		return versePath(readerSlug, book, chapter, verse);
+	}
+	return chapterPath(readerSlug, book, chapter);
+}
+
+const reference = (usfm: string) => formatReference(usfm, bookNameFromUsfm);
+
+const verseCount = topicVerseCount(topic);
+const canonicalPath = topicPath(topic.id);
+const title = `${verseCount} Bible Verses About ${topic.data.title}, Grouped and Explained`;
+const description = truncateWords(
+	`${verseCount} Bible verses about ${topic.data.title.toLowerCase()}, grouped by theme with plain-English context for each passage: ${topic.data.groups
+		.map((group) => group.heading.toLowerCase())
+		.slice(0, 2)
+		.join('; ')}.`,
+	155,
+);
+
+const allTopics = await listTopics();
+const relatedTopics = topic.data.related
+	.map((ref) => allTopics.find((item) => item.id === ref.id))
+	.filter((item): item is (typeof allTopics)[number] => Boolean(item));
+
+const reviewed = topic.data.reviewedAt.toLocaleDateString('en-US', {
+	year: 'numeric',
+	month: 'long',
+});
+---
+
+<BaseLayout
+	title={title}
+	description={description}
+	canonicalPath={canonicalPath}
+	jsonLd={[
+		breadcrumbJsonLd(Astro.site, [
+			{ name: 'BibleHearth', path: '/' },
+			{ name: 'Topics', path: '/topics' },
+			{ name: topic.data.title, path: canonicalPath },
+		]),
+		articleJsonLd({
+			site: Astro.site,
+			path: canonicalPath,
+			headline: title,
+			description,
+			datePublished: topic.data.publishedAt,
+			dateModified: topic.data.reviewedAt,
+			about: topic.data.entity,
+		}),
+		itemListJsonLd({
+			name: `Bible verses about ${topic.data.title.toLowerCase()}`,
+			items: topicVerses(topic).map((verse) => ({
+				name: reference(verse.usfm),
+				url: absoluteUrl(Astro.site, readerHref(verse.usfm)),
+			})),
+		}),
+		...(topic.data.faqs.length ? [faqJsonLd(topic.data.faqs)] : []),
+	]}
+>
+	<nav class="crumbs" aria-label="Breadcrumb">
+		<a href="/">Home</a>
+		<span>/</span>
+		<a href="/topics">Topics</a>
+		<span>/</span>
+		<span>{topic.data.title}</span>
+	</nav>
+
+	<h1>Bible Verses About {topic.data.title}</h1>
+
+	{/* Answer-first: this is the chunk a snippet or retrieval model lifts whole. */}
+	<p class="lede">{topic.data.shortAnswer}</p>
+
+	{
+		status !== 200 || !version ? (
+			<StatusMessage
+				title="Scripture is temporarily unavailable"
+				message="The verses for this topic could not be loaded. The explanations below are still available."
+			/>
+		) : null
+	}
+
+	{
+		topic.data.groups.map((group) => (
+			<section class="topic-group" id={group.id}>
+				<h2>{group.heading}</h2>
+				<p class="muted">{group.rationale}</p>
+				{group.verses.map((verse) => {
+					const passage = passages.get(verse.usfm);
+					return (
+						<article class="verse-card">
+							<h3>
+								<a href={readerHref(verse.usfm)}>{reference(verse.usfm)}</a>
+							</h3>
+							{passage ? <Passage html={passage.content} /> : null}
+							<p class="gloss">{verse.gloss}</p>
+						</article>
+					);
+				})}
+			</section>
+		))
+	}
+
+	{
+		topic.data.misuse ? (
+			<section class="topic-misuse">
+				<h2>What these verses do not mean</h2>
+				<p>{topic.data.misuse}</p>
+			</section>
+		) : null
+	}
+
+	<section class="topic-notes">
+		<Content />
+	</section>
+
+	{
+		topic.data.faqs.length ? (
+			<section class="topic-faq">
+				<h2>Common questions about {topic.data.title.toLowerCase()}</h2>
+				{topic.data.faqs.map((faq) => (
+					<div class="faq-item">
+						<h3>{faq.q}</h3>
+						<p>{faq.a}</p>
+					</div>
+				))}
+			</section>
+		) : null
+	}
+
+	{
+		relatedTopics.length ? (
+			<section>
+				<h2>Related topics</h2>
+				<div class="version-grid">
+					{relatedTopics.map((item) => (
+						<a class="tile" href={topicPath(item.id)}>
+							<span class="tile-kicker">Topic</span>
+							{item.data.title}
+						</a>
+					))}
+				</div>
+			</section>
+		) : null
+	}
+
+	<footer class="topic-provenance">
+		<p class="muted">
+			Verse selection and explanations reviewed {reviewed}. Sources consulted
+			include Nave's Topical Bible (1897) and Torrey's New Topical Textbook
+			(1897), both public domain.
+		</p>
+		{version ? <CopyrightNotice version={version} /> : null}
+	</footer>
+</BaseLayout>
