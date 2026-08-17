@@ -15,6 +15,7 @@ import {
 import { breadcrumbJsonLd } from '../lib/seo';
 import {
 	BibleUnavailableError,
+	displayAbbreviation,
 	errorStatus,
 	getBibleIndex,
 	getDefaultVersion,
@@ -82,7 +83,7 @@ setCacheControl(
 	status === 200 ? HOME_CACHE_CONTROL : ERROR_CACHE_CONTROL,
 );
 
-const versionLabel = defaultVersion?.abbreviation ?? '';
+const versionLabel = defaultVersion ? displayAbbreviation(defaultVersion) : '';
 const parsedVotd = votd ? parsePassageId(votd.passage_id) : null;
 const votdHref =
 	defaultVersion && parsedVotd?.chapter
@@ -156,7 +157,7 @@ const description = votdPassage
 									const slug = versionSlug(version, catalog);
 									return (
 										<a class="tile" href={versionPath(slug)}>
-											<span class="tile-kicker">{version.abbreviation}</span>
+											<span class="tile-kicker">{displayAbbreviation(version)}</span>
 											{version.localized_title || version.title}
 										</a>
 									);

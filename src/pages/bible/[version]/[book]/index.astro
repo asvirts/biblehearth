@@ -13,6 +13,7 @@ import {
 } from '../../../../lib/http';
 import { breadcrumbJsonLd } from '../../../../lib/seo';
 import {
+	displayAbbreviation,
 	errorStatus,
 	findBook,
 	getBibleIndex,
@@ -67,7 +68,7 @@ setCacheControl(
 );
 
 const bookTitle = book?.title ?? bookSlug;
-const versionLabel = version?.abbreviation ?? '';
+const versionLabel = version ? displayAbbreviation(version) : '';
 ---
 
 <BaseLayout
@@ -86,7 +87,7 @@ const versionLabel = version?.abbreviation ?? '';
 		version && book
 			? breadcrumbJsonLd(Astro.site, [
 					{ name: 'BibleHearth', path: '/' },
-					{ name: version.abbreviation, path: versionPath(slug) },
+					{ name: displayAbbreviation(version), path: versionPath(slug) },
 					{ name: book.title, path: bookPath(slug, book.id) },
 				])
 			: undefined
@@ -103,13 +104,13 @@ const versionLabel = version?.abbreviation ?? '';
 				<nav class="crumbs" aria-label="Breadcrumb">
 					<a href="/">Home</a>
 					<span>/</span>
-					<a href={versionPath(slug)}>{version.abbreviation}</a>
+					<a href={versionPath(slug)}>{displayAbbreviation(version)}</a>
 					<span>/</span>
 					<span>{book.title}</span>
 				</nav>
 				<h1>
 					{book.full_title || book.title}
-					<span class="muted"> ({version.abbreviation})</span>
+					<span class="muted"> ({displayAbbreviation(version)})</span>
 				</h1>
 				<p class="lede">Select a chapter to read.</p>
 				<ChapterGrid versionSlug={slug} book={book} />

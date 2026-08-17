@@ -31,6 +31,7 @@ import {
 } from '../../../../../lib/http';
 import { breadcrumbJsonLd, creativeWorkJsonLd } from '../../../../../lib/seo';
 import {
+	displayAbbreviation,
 	errorStatus,
 	findBook,
 	getBibleIndex,
@@ -111,9 +112,9 @@ setCacheControl(
 const heading =
 	passage?.reference ||
 	(book && version
-		? `${book.title} ${chapterId}:${verseId} (${version.abbreviation})`
+		? `${book.title} ${chapterId}:${verseId} (${displayAbbreviation(version)})`
 		: 'Verse');
-const abbreviation = version?.abbreviation ?? '';
+const abbreviation = version ? displayAbbreviation(version) : '';
 // Chapter pages carry the abbreviation but `passage.reference` does not,
 // so verse titles used to silently drop the version.
 const verseText = passage ? scriptureToPlainText(passage.content) : '';
@@ -137,7 +138,7 @@ const description = verseText
 			? [
 					breadcrumbJsonLd(Astro.site, [
 						{ name: 'BibleHearth', path: '/' },
-						{ name: version.abbreviation, path: versionPath(slug) },
+						{ name: displayAbbreviation(version), path: versionPath(slug) },
 						{ name: book.title, path: bookPath(slug, book.id) },
 						{
 							name: `Chapter ${chapterId}`,
@@ -169,7 +170,7 @@ const description = verseText
 				<nav class="crumbs" aria-label="Breadcrumb">
 					<a href="/">Home</a>
 					<span>/</span>
-					<a href={versionPath(slug)}>{version.abbreviation}</a>
+					<a href={versionPath(slug)}>{displayAbbreviation(version)}</a>
 					<span>/</span>
 					<a href={bookPath(slug, book.id)}>{book.title}</a>
 					<span>/</span>

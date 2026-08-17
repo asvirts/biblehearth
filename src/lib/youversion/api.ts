@@ -15,6 +15,7 @@ import {
 	isNumericVerse,
 } from '../bible/usfm';
 import { sanitizePassageHtml } from '../bible/sanitize';
+import { loadCached } from '../cache/store';
 import { getBibleClient, PlatformConfigError } from './client';
 
 const VERSION_CACHE_MS = 10 * 60 * 1000;
@@ -26,82 +27,6 @@ const INDEX_CACHE_MS = 30 * 60 * 1000;
  */
 const PASSAGE_CACHE_MS = 24 * 60 * 60 * 1000;
 const STALE_GRACE_MS = 7 * 24 * 60 * 60 * 1000;
-
-/** Bounded so a crawl over many chapters cannot grow the heap without limit. */
-const MAX_CACHE_ENTRIES = 500;
-
-type CacheEntry<T> = { value: T; soft: number; hard: number };
-
-const memoryCache = new Map<string, CacheEntry<unknown>>();
-
-function cacheGet<T>(key: string): T | undefined {
-	const entry = memoryCache.get(key) as CacheEntry<T> | undefined;
-	if (!entry) {
-		return undefined;
-	}
-	if (entry.soft < Date.now()) {
-		return undefined;
-	}
-	return entry.value;
-}
-
-/** Expired but still usable — only for serving through an upstream failure. */
-function cacheGetStale<T>(key: string): T | undefined {
-	const entry = memoryCache.get(key) as CacheEntry<T> | undefined;
-	if (!entry) {
-		return undefined;
-	}
-	if (entry.hard < Date.now()) {
-		memoryCache.delete(key);
-		return undefined;
-	}
-	return entry.value;
-}
-
-function cacheSet<T>(key: string, value: T, ttlMs: number, graceMs = 0): T {
-	if (memoryCache.size >= MAX_CACHE_ENTRIES && !memoryCache.has(key)) {
-		const oldest = memoryCache.keys().next().value;
-		if (oldest !== undefined) {
-			memoryCache.delete(oldest);
-		}
-	}
-	const now = Date.now();
-	memoryCache.set(key, {
-		value,
-		soft: now + ttlMs,
-		hard: now + ttlMs + graceMs,
-	});
-	return value;
-}
-
-/**
- * Fresh value, else load, else fall back to a stale value.
- *
- * A YouVersion 429 or outage used to surface as a 503 on every request. Serving
- * stale-but-correct Scripture is strictly better, and it stops a transient
- * throttle from taking the whole site down.
- */
-async function loadCached<T>(
-	key: string,
-	ttlMs: number,
-	graceMs: number,
-	load: () => Promise<T>,
-): Promise<T> {
-	const fresh = cacheGet<T>(key);
-	if (fresh !== undefined) {
-		return fresh;
-	}
-
-	try {
-		return cacheSet(key, await load(), ttlMs, graceMs);
-	} catch (error) {
-		const stale = cacheGetStale<T>(key);
-		if (stale !== undefined) {
-			return stale;
-		}
-		throw error;
-	}
-}
 
 export class BibleNotFoundError extends Error {
 	constructor(message = 'Bible resource not found') {
@@ -177,13 +102,28 @@ export async function listEnglishVersions(): Promise<BibleVersion[]> {
 	);
 }
 
+/**
+ * The abbreviation to show users and to build slugs from.
+ *
+ * `abbreviation` carries YouVersion's internal edition suffix — NIV11,
+ * engWEBUS, enggnv — but people search "john 3 niv", not "john 3 niv11".
+ * `localized_abbreviation` is already the clean public form (NIV, WEBUS, GNV)
+ * and correctly keeps genuinely distinct editions apart (NASB1995 vs NASB2020),
+ * so it is preferred wherever the abbreviation is user-visible.
+ */
+export function displayAbbreviation(
+	version: Pick<BibleVersion, 'abbreviation' | 'localized_abbreviation'>,
+): string {
+	return version.localized_abbreviation || version.abbreviation;
+}
+
 export function versionSlug(
 	version: Pick<BibleVersion, 'id' | 'abbreviation' | 'localized_abbreviation'>,
 	catalog: ReadonlyArray<Pick<BibleVersion, 'id' | 'abbreviation' | 'localized_abbreviation'>>,
 ): string {
-	const abbr = version.abbreviation.toLowerCase();
+	const abbr = displayAbbreviation(version).toLowerCase();
 	const collisions = catalog.filter(
-		(item) => item.abbreviation.toLowerCase() === abbr,
+		(item) => displayAbbreviation(item).toLowerCase() === abbr,
 	);
 	return collisions.length > 1 ? `${abbr}-${version.id}` : abbr;
 }

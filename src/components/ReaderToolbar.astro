@@ -1,7 +1,11 @@
 ---
 import type { BibleIndex, BibleVersion } from '@youversion/platform-core';
 import { bookSlugFromUsfm } from '../lib/bible/usfm';
-import { readableChapters, versionSlug } from '../lib/youversion/api';
+import {
+	displayAbbreviation,
+	readableChapters,
+	versionSlug,
+} from '../lib/youversion/api';
 
 type Props = {
 	catalog: BibleVersion[];
@@ -18,7 +22,7 @@ const chapters = currentBook ? readableChapters(currentBook) : [];
 ---
 
 <form class="toolbar" method="get" action="/read">
-	<label>
+	<label class="field-wide">
 		Version
 		<select name="version">
 			{
@@ -26,7 +30,7 @@ const chapters = currentBook ? readableChapters(currentBook) : [];
 					const slug = versionSlug(item, catalog);
 					return (
 						<option value={slug} selected={slug === currentSlug}>
-							{item.abbreviation} — {item.localized_title || item.title}
+							{displayAbbreviation(item)} — {item.localized_title || item.title}
 						</option>
 					);
 				})

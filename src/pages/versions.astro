@@ -10,6 +10,7 @@ import {
 } from '../lib/http';
 import { breadcrumbJsonLd } from '../lib/seo';
 import {
+	displayAbbreviation,
 	errorStatus,
 	listEnglishVersions,
 	versionSlug,
@@ -67,7 +68,7 @@ setCacheControl(
 							const slug = versionSlug(version, versions);
 							return (
 								<a class="tile" href={versionPath(slug)}>
-									<span class="tile-kicker">{version.abbreviation}</span>
+									<span class="tile-kicker">{displayAbbreviation(version)}</span>
 									{version.localized_title || version.title}
 									{version.language_tag ? (
 										<span class="muted"> · {version.language_tag}</span>

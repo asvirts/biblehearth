@@ -33,6 +33,7 @@ import { breadcrumbJsonLd, creativeWorkJsonLd } from '../../../../../lib/seo';
 import {
 	adjacentReadableChapter,
 	chapterExists,
+	displayAbbreviation,
 	errorStatus,
 	findBook,
 	getBibleIndex,
@@ -110,7 +111,7 @@ setCacheControl(
 );
 
 const reference = book ? `${book.title} ${chapterId}` : 'Chapter';
-const abbreviation = version?.abbreviation ?? '';
+const abbreviation = version ? displayAbbreviation(version) : '';
 const heading =
 	book && version ? `${reference} (${abbreviation})` : 'Chapter';
 
@@ -134,7 +135,7 @@ const description = snippet
 			? [
 					breadcrumbJsonLd(Astro.site, [
 						{ name: 'BibleHearth', path: '/' },
-						{ name: version.abbreviation, path: versionPath(slug) },
+						{ name: displayAbbreviation(version), path: versionPath(slug) },
 						{ name: book.title, path: bookPath(slug, book.id) },
 						{
 							name: `Chapter ${chapterId}`,
@@ -162,7 +163,7 @@ const description = snippet
 				<nav class="crumbs" aria-label="Breadcrumb">
 					<a href="/">Home</a>
 					<span>/</span>
-					<a href={versionPath(slug)}>{version.abbreviation}</a>
+					<a href={versionPath(slug)}>{displayAbbreviation(version)}</a>
 					<span>/</span>
 					<a href={bookPath(slug, book.id)}>{book.title}</a>
 					<span>/</span>

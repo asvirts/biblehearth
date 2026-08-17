@@ -1,8 +1,17 @@
 .scripture {
 	font-family: var(--serif);
-	font-size: 1.2rem;
-	line-height: 1.7;
-	max-width: 42rem;
+	font-size: clamp(1.15rem, 0.95rem + 0.9vw, 1.3rem);
+	line-height: 1.72;
+	/* ~65 characters per line at any size — the comfortable reading measure. */
+	max-width: 40rem;
+	text-wrap: pretty;
+}
+
+/* On a phone the column is too narrow to avoid ugly rags without hyphenation. */
+@media (max-width: 40em) {
+	.scripture {
+		hyphens: auto;
+	}
 }
 
 .scripture .id,
@@ -29,24 +38,23 @@
 .scripture .li,
 .scripture .li1,
 .scripture .li2 {
-	margin: 0 0 0.85em;
+	margin: 0 0 0.9em;
 }
 
+/* Poetry indents scale with the type instead of staying fixed in rem. */
 .scripture .q,
 .scripture .q1,
-.scripture .q2,
-.scripture .q3,
 .scripture .qr,
 .scripture .qc {
-	margin: 0 0 0.35em 1.5rem;
+	margin: 0 0 0.35em 1.1em;
 }
 
 .scripture .q2 {
-	margin-left: 2.25rem;
+	margin: 0 0 0.35em 1.9em;
 }
 
 .scripture .q3 {
-	margin-left: 3rem;
+	margin: 0 0 0.35em 2.6em;
 }
 
 .scripture .s,
@@ -59,32 +67,54 @@
 .scripture .mt,
 .scripture .mt1 {
 	font-family: var(--sans);
-	font-size: 1rem;
+	font-size: 0.78em;
 	font-weight: 700;
-	margin: 1.4em 0 0.7em;
+	line-height: 1.35;
+	letter-spacing: 0.07em;
+	text-transform: uppercase;
+	color: var(--muted);
+	margin: 1.9em 0 0.75em;
+}
+
+.scripture > :first-child,
+.scripture > div:first-child > :first-child {
+	margin-top: 0;
 }
 
 .scripture .yv-vlbl,
 .scripture .verse > .label,
 .scripture .fv {
 	font-family: var(--sans);
-	font-size: 0.7em;
+	font-size: 0.6em;
 	font-weight: 700;
+	line-height: 1;
 	color: var(--ember);
+	font-variant-numeric: tabular-nums;
 	position: relative;
-	top: -0.35em;
-	padding-right: 0.35em;
+	top: -0.45em;
+	padding-right: 0.3em;
 	white-space: nowrap;
+}
+
+/* Divine name (Yahweh) is set in small caps by convention. */
+.scripture .nd {
+	font-variant-caps: small-caps;
 }
 
 .scripture .wj {
 	color: var(--ember-dark);
 }
 
+.scripture .add,
+.scripture .qs {
+	font-style: italic;
+}
+
 .scripture table {
 	border-collapse: collapse;
 	margin: 1rem 0;
 	width: 100%;
+	font-size: 0.9em;
 }
 
 .scripture td,
