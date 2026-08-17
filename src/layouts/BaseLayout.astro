@@ -8,12 +8,13 @@ import { absoluteUrl } from '../lib/bible/urls';
 type Props = {
 	title: string;
 	description: string;
-	canonicalPath: string;
+	canonicalPath?: string;
+	noindex?: boolean;
 	jsonLd?: Record<string, unknown> | Record<string, unknown>[];
 };
 
-const { title, description, canonicalPath, jsonLd } = Astro.props;
-const canonical = absoluteUrl(Astro.site, canonicalPath);
+const { title, description, canonicalPath, noindex = false, jsonLd } = Astro.props;
+const canonical = canonicalPath ? absoluteUrl(Astro.site, canonicalPath) : undefined;
 const documents = jsonLd ? (Array.isArray(jsonLd) ? jsonLd : [jsonLd]) : [];
 ---
 
@@ -22,14 +23,17 @@ const documents = jsonLd ? (Array.isArray(jsonLd) ? jsonLd : [jsonLd]) : [];
 	<head>
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" type="image/png" href="/favicon.png" sizes="32x32" />
+		<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 		<meta name="description" content={description} />
-		<link rel="canonical" href={canonical} />
+		{noindex ? <meta name="robots" content="noindex, follow" /> : null}
+		{canonical ? <link rel="canonical" href={canonical} /> : null}
 		<meta property="og:title" content={title} />
 		<meta property="og:description" content={description} />
-		<meta property="og:url" content={canonical} />
+		{canonical ? <meta property="og:url" content={canonical} /> : null}
 		<meta property="og:type" content="website" />
 		<meta name="twitter:card" content="summary" />
 		{

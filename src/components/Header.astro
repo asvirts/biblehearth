@@ -4,7 +4,10 @@ const path = Astro.url.pathname;
 
 <header class="site-header">
 	<div class="wrap header-inner">
-		<a class="wordmark" href="/">BibleHearth</a>
+		<a class="wordmark" href="/">
+			<img class="wordmark-mark" src="/favicon.svg" alt="" width="36" height="36" />
+			BibleHearth
+		</a>
 		<nav class="nav" aria-label="Primary">
 			<a href="/versions" aria-current={path.startsWith('/versions') ? 'page' : undefined}>
 				Versions

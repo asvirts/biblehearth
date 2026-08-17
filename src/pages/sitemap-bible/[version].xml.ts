@@ -1,15 +1,16 @@
 import type { APIRoute } from 'astro';
-import { isNumericChapter } from '../../lib/bible/usfm';
-import { bookPath, chapterPath, versionPath } from '../../lib/bible/urls';
-import { urlsetXml, xmlResponse } from '../../lib/sitemap';
+import { isSafeSlug } from '../../lib/bible/usfm';
 import {
-	getBibleIndex,
-	resolveVersion,
-} from '../../lib/youversion/api';
+	bibleSitemapPaths,
+	urlsetXml,
+	versionSitemapPath,
+	xmlResponse,
+} from '../../lib/sitemap';
+import { getBibleIndex, resolveVersion } from '../../lib/youversion/api';
 
-export const GET: APIRoute = async ({ params, site }) => {
+export const GET: APIRoute = async ({ params, site, url }) => {
 	const slug = params.version;
-	if (!slug) {
+	if (!slug || !isSafeSlug(slug)) {
 		return new Response('Not found', { status: 404 });
 	}
 
@@ -19,19 +20,15 @@ export const GET: APIRoute = async ({ params, site }) => {
 			return new Response('Not found', { status: 404 });
 		}
 
-		const index = await getBibleIndex(resolved.version.id);
-		const paths = [versionPath(resolved.slug)];
-
-		for (const book of index.books) {
-			paths.push(bookPath(resolved.slug, book.id));
-			for (const chapter of book.chapters) {
-				if (isNumericChapter(chapter.id)) {
-					paths.push(chapterPath(resolved.slug, book.id, chapter.id));
-				}
-			}
+		if (resolved.slug !== slug) {
+			return Response.redirect(
+				new URL(versionSitemapPath(resolved.slug), site ?? url),
+				301,
+			);
 		}
 
-		return xmlResponse(urlsetXml(site, paths));
+		const index = await getBibleIndex(resolved.version.id);
+		return xmlResponse(urlsetXml(site, bibleSitemapPaths(resolved.slug, index)));
 	} catch {
 		return new Response('Sitemap unavailable', { status: 503 });
 	}

@@ -1,19 +1,65 @@
-import { absoluteUrl } from './bible/urls';
+import type { BibleIndex } from '@youversion/platform-core';
+import {
+	bookSlugFromUsfm,
+	isNumericChapter,
+	isNumericVerse,
+	usfmFromBookSlug,
+} from './bible/usfm';
+import {
+	absoluteUrl,
+	bookPath,
+	chapterPath,
+	normalizePath,
+	versePath,
+	versionPath,
+} from './bible/urls';
+import { SITEMAP_CACHE_CONTROL } from './http';
 
-function escapeXml(value: string): string {
-	return value
-		.replaceAll('&', '&amp;')
-		.replaceAll('<', '&lt;')
-		.replaceAll('>', '&gt;')
-		.replaceAll('"', '&quot;');
+/** Sitemap protocol hard limit (uncompressed URL count). */
+export const SITEMAP_URL_LIMIT = 50_000;
+
+export function versionSitemapPath(versionSlug: string): string {
+	return `/sitemap-bible/${versionSlug}.xml`;
+}
+
+export function pageSitemapPaths(versionSlugs: readonly string[]): string[] {
+	const unique = [...new Set(versionSlugs)];
+	return ['/', '/versions', ...unique.map(versionPath)];
+}
+
+export function bibleSitemapPaths(versionSlug: string, index: BibleIndex): string[] {
+	const books: string[] = [];
+	const chapters: string[] = [];
+	const verses: string[] = [];
+
+	for (const book of index.books) {
+		if (!isRoutableBook(book.id)) {
+			continue;
+		}
+
+		books.push(bookPath(versionSlug, book.id));
+
+		for (const chapter of book.chapters) {
+			if (!isNumericChapter(chapter.id)) {
+				continue;
+			}
+
+			chapters.push(chapterPath(versionSlug, book.id, chapter.id));
+
+			for (const verse of chapter.verses) {
+				if (isNumericVerse(verse.id)) {
+					verses.push(versePath(versionSlug, book.id, chapter.id, verse.id));
+				}
+			}
+		}
+	}
+
+	return [...books, ...chapters, ...verses].slice(0, SITEMAP_URL_LIMIT);
 }
 
 export function urlsetXml(site: URL | undefined, paths: readonly string[]): string {
-	const urls = paths
-		.map(
-			(path) =>
-				`  <url>\n    <loc>${escapeXml(absoluteUrl(site, path))}</loc>\n  </url>`,
-		)
+	const urls = uniquePaths(paths)
+		.map((path) => `  <url>\n    <loc>${escapeXml(absoluteUrl(site, path))}</loc>\n  </url>`)
 		.join('\n');
 
 	return `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls}\n</urlset>\n`;
@@ -23,7 +69,7 @@ export function sitemapIndexXml(
 	site: URL | undefined,
 	paths: readonly string[],
 ): string {
-	const items = paths
+	const items = uniquePaths(paths)
 		.map(
 			(path) =>
 				`  <sitemap>\n    <loc>${escapeXml(absoluteUrl(site, path))}</loc>\n  </sitemap>`,
@@ -33,11 +79,35 @@ export function sitemapIndexXml(
 	return `<?xml version="1.0" encoding="UTF-8"?>\n<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${items}\n</sitemapindex>\n`;
 }
 
-export function xmlResponse(body: string): Response {
-	return new Response(body, {
+export async function xmlResponse(body: string): Promise<Response> {
+	return new Response(await gzipUtf8(body), {
 		headers: {
 			'Content-Type': 'application/xml; charset=utf-8',
-			'Cache-Control': 'public, max-age=3600',
+			'Content-Encoding': 'gzip',
+			'Cache-Control': SITEMAP_CACHE_CONTROL,
+			Vary: 'Accept-Encoding',
 		},
 	});
+}
+
+function isRoutableBook(bookId: string): boolean {
+	return usfmFromBookSlug(bookSlugFromUsfm(bookId)) !== null;
+}
+
+function uniquePaths(paths: readonly string[]): string[] {
+	return [...new Set(paths.map(normalizePath))];
+}
+
+function escapeXml(value: string): string {
+	return value
+		.replaceAll('&', '&amp;')
+		.replaceAll('<', '&lt;')
+		.replaceAll('>', '&gt;')
+		.replaceAll('"', '&quot;')
+		.replaceAll("'", '&apos;');
+}
+
+async function gzipUtf8(body: string): Promise<Uint8Array> {
+	const stream = new Blob([body]).stream().pipeThrough(new CompressionStream('gzip'));
+	return new Uint8Array(await new Response(stream).arrayBuffer());
 }

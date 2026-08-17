@@ -88,11 +88,21 @@ img {
 }
 
 .wordmark {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.6rem;
 	font-family: var(--serif);
 	font-size: 1.35rem;
 	font-weight: 700;
 	color: var(--ink);
 	text-decoration: none;
+}
+
+.wordmark-mark {
+	display: block;
+	width: 2.15rem;
+	height: 2.15rem;
+	flex-shrink: 0;
 }
 
 .nav {

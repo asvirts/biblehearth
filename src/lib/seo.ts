@@ -1,3 +1,5 @@
+import { absoluteUrl } from './bible/urls';
+
 export type BreadcrumbItem = {
 	name: string;
 	path: string;
@@ -7,7 +9,6 @@ export function breadcrumbJsonLd(
 	site: URL | undefined,
 	items: readonly BreadcrumbItem[],
 ): Record<string, unknown> {
-	const origin = site ?? new URL('https://biblehearth.com');
 	return {
 		'@context': 'https://schema.org',
 		'@type': 'BreadcrumbList',
@@ -15,7 +16,7 @@ export function breadcrumbJsonLd(
 			'@type': 'ListItem',
 			position: index + 1,
 			name: item.name,
-			item: new URL(item.path, origin).href,
+			item: absoluteUrl(site, item.path),
 		})),
 	};
 }

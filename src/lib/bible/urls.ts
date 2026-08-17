@@ -25,9 +25,27 @@ export function versePath(
 	return `${chapterPath(versionSlug, bookUsfm, chapterId)}/${verseId}`;
 }
 
+const FALLBACK_ORIGIN = 'https://biblehearth.com';
+
+export function siteOrigin(site?: URL): string {
+	return (site ?? new URL(FALLBACK_ORIGIN)).origin;
+}
+
+export function normalizePath(path: string): string {
+	const url = /^https?:\/\//i.test(path)
+		? new URL(path)
+		: new URL(path, FALLBACK_ORIGIN);
+	let pathname = url.pathname;
+	if (pathname.length > 1 && pathname.endsWith('/')) {
+		pathname = pathname.slice(0, -1);
+	}
+	return pathname || '/';
+}
+
 export function absoluteUrl(site: URL | undefined, path: string): string {
-	const base = site ?? new URL('https://biblehearth.com');
-	return new URL(path, base).href;
+	const origin = siteOrigin(site);
+	const pathname = normalizePath(path);
+	return pathname === '/' ? `${origin}/` : `${origin}${pathname}`;
 }
 
 export function truncate(text: string, max = 155): string {
