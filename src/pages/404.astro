@@ -1,10 +1,10 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import StatusMessage from '../components/StatusMessage.astro';
-import { ERROR_CACHE_CONTROL, setCacheControl } from '../lib/http';
+import { NOTFOUND_CACHE_CONTROL, setCacheControl } from '../lib/http';
 
 Astro.response.status = 404;
-setCacheControl(Astro.response, ERROR_CACHE_CONTROL);
+setCacheControl(Astro.response, NOTFOUND_CACHE_CONTROL);
 ---
 
 <BaseLayout

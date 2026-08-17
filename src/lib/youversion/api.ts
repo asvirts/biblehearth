@@ -19,8 +19,18 @@ import { getBibleClient, PlatformConfigError } from './client';
 
 const VERSION_CACHE_MS = 10 * 60 * 1000;
 const INDEX_CACHE_MS = 30 * 60 * 1000;
+/**
+ * Scripture is immutable, so passages are held far longer than metadata.
+ * `soft` is when we try to refresh; `hard` is how long the value stays usable
+ * as a fallback when the upstream is failing.
+ */
+const PASSAGE_CACHE_MS = 24 * 60 * 60 * 1000;
+const STALE_GRACE_MS = 7 * 24 * 60 * 60 * 1000;
 
-type CacheEntry<T> = { value: T; expires: number };
+/** Bounded so a crawl over many chapters cannot grow the heap without limit. */
+const MAX_CACHE_ENTRIES = 500;
+
+type CacheEntry<T> = { value: T; soft: number; hard: number };
 
 const memoryCache = new Map<string, CacheEntry<unknown>>();
 
@@ -29,16 +39,68 @@ function cacheGet<T>(key: string): T | undefined {
 	if (!entry) {
 		return undefined;
 	}
-	if (entry.expires < Date.now()) {
+	if (entry.soft < Date.now()) {
+		return undefined;
+	}
+	return entry.value;
+}
+
+/** Expired but still usable — only for serving through an upstream failure. */
+function cacheGetStale<T>(key: string): T | undefined {
+	const entry = memoryCache.get(key) as CacheEntry<T> | undefined;
+	if (!entry) {
+		return undefined;
+	}
+	if (entry.hard < Date.now()) {
 		memoryCache.delete(key);
 		return undefined;
 	}
 	return entry.value;
 }
 
-function cacheSet<T>(key: string, value: T, ttlMs: number): T {
-	memoryCache.set(key, { value, expires: Date.now() + ttlMs });
+function cacheSet<T>(key: string, value: T, ttlMs: number, graceMs = 0): T {
+	if (memoryCache.size >= MAX_CACHE_ENTRIES && !memoryCache.has(key)) {
+		const oldest = memoryCache.keys().next().value;
+		if (oldest !== undefined) {
+			memoryCache.delete(oldest);
+		}
+	}
+	const now = Date.now();
+	memoryCache.set(key, {
+		value,
+		soft: now + ttlMs,
+		hard: now + ttlMs + graceMs,
+	});
 	return value;
+}
+
+/**
+ * Fresh value, else load, else fall back to a stale value.
+ *
+ * A YouVersion 429 or outage used to surface as a 503 on every request. Serving
+ * stale-but-correct Scripture is strictly better, and it stops a transient
+ * throttle from taking the whole site down.
+ */
+async function loadCached<T>(
+	key: string,
+	ttlMs: number,
+	graceMs: number,
+	load: () => Promise<T>,
+): Promise<T> {
+	const fresh = cacheGet<T>(key);
+	if (fresh !== undefined) {
+		return fresh;
+	}
+
+	try {
+		return cacheSet(key, await load(), ttlMs, graceMs);
+	} catch (error) {
+		const stale = cacheGetStale<T>(key);
+		if (stale !== undefined) {
+			return stale;
+		}
+		throw error;
+	}
 }
 
 export class BibleNotFoundError extends Error {
@@ -87,31 +149,32 @@ async function withPlatform<T>(operation: () => Promise<T>): Promise<T> {
 }
 
 export async function listEnglishVersions(): Promise<BibleVersion[]> {
-	const cached = cacheGet<BibleVersion[]>('versions:en');
-	if (cached) {
-		return cached;
-	}
+	return loadCached(
+		'versions:en',
+		VERSION_CACHE_MS,
+		STALE_GRACE_MS,
+		async () =>
+			withPlatform(async () => {
+				const client = getBibleClient();
+				const versions: BibleVersion[] = [];
+				let pageToken: string | undefined;
 
-	return withPlatform(async () => {
-		const client = getBibleClient();
-		const versions: BibleVersion[] = [];
-		let pageToken: string | undefined;
+				do {
+					const page: Collection<BibleVersion> = await client.getVersions(
+						'en*',
+						undefined,
+						{
+							page_size: 99,
+							page_token: pageToken,
+						},
+					);
+					versions.push(...page.data);
+					pageToken = page.next_page_token ?? undefined;
+				} while (pageToken && versions.length < 2000);
 
-		do {
-			const page: Collection<BibleVersion> = await client.getVersions(
-				'en*',
-				undefined,
-				{
-					page_size: 99,
-					page_token: pageToken,
-				},
-			);
-			versions.push(...page.data);
-			pageToken = page.next_page_token ?? undefined;
-		} while (pageToken && versions.length < 2000);
-
-		return cacheSet('versions:en', versions, VERSION_CACHE_MS);
-	});
+				return versions;
+			}),
+	);
 }
 
 export function versionSlug(
@@ -156,21 +219,21 @@ export async function resolveVersion(
 }
 
 export async function getVersionById(id: number): Promise<BibleVersion | null> {
-	const cacheKey = `version:${id}`;
-	const cached = cacheGet<BibleVersion>(cacheKey);
-	if (cached) {
-		return cached;
-	}
-
-	try {
-		const version = await withPlatform(() => getBibleClient().getVersion(id));
-		return cacheSet(cacheKey, version, VERSION_CACHE_MS);
-	} catch (error) {
-		if (error instanceof BibleNotFoundError) {
-			return null;
-		}
-		throw error;
-	}
+	return loadCached(
+		`version:${id}`,
+		VERSION_CACHE_MS,
+		STALE_GRACE_MS,
+		async () => {
+			try {
+				return await withPlatform(() => getBibleClient().getVersion(id));
+			} catch (error) {
+				if (error instanceof BibleNotFoundError) {
+					return null;
+				}
+				throw error;
+			}
+		},
+	);
 }
 
 export async function getDefaultVersion(): Promise<BibleVersion | null> {
@@ -184,16 +247,12 @@ export async function getDefaultVersion(): Promise<BibleVersion | null> {
 }
 
 export async function getBibleIndex(versionId: number): Promise<BibleIndex> {
-	const cacheKey = `index:${versionId}`;
-	const cached = cacheGet<BibleIndex>(cacheKey);
-	if (cached) {
-		return cached;
-	}
-
-	return withPlatform(async () => {
-		const index = await getBibleClient().getIndex(versionId);
-		return cacheSet(cacheKey, index, INDEX_CACHE_MS);
-	});
+	return loadCached(
+		`index:${versionId}`,
+		INDEX_CACHE_MS,
+		STALE_GRACE_MS,
+		async () => withPlatform(() => getBibleClient().getIndex(versionId)),
+	);
 }
 
 export function findBook(index: BibleIndex, usfm: string) {
@@ -246,49 +305,69 @@ export async function getPassageHtml(
 	usfm: string,
 	options: { headings?: boolean; notes?: boolean } = {},
 ): Promise<BiblePassage | null> {
-	try {
-		const passage = await withPlatform(() =>
-			getBibleClient().getPassage(
-				versionId,
-				usfm,
-				'html',
-				options.headings ?? true,
-				options.notes ?? true,
-				false,
-			),
-		);
+	const headings = options.headings ?? true;
+	const notes = options.notes ?? true;
+	const key = `passage:html:${versionId}:${usfm}:${headings ? 1 : 0}:${notes ? 1 : 0}`;
 
-		if (!passage.content) {
-			return null;
-		}
+	return loadCached(key, PASSAGE_CACHE_MS, STALE_GRACE_MS, async () => {
+		try {
+			const passage = await withPlatform(() =>
+				getBibleClient().getPassage(
+					versionId,
+					usfm,
+					'html',
+					headings,
+					notes,
+					false,
+				),
+			);
 
-		return {
-			...passage,
-			content: sanitizePassageHtml(passage.content),
-		};
-	} catch (error) {
-		if (error instanceof BibleNotFoundError) {
-			return null;
+			if (!passage.content) {
+				return null;
+			}
+
+			return {
+				...passage,
+				content: sanitizePassageHtml(passage.content),
+			};
+		} catch (error) {
+			if (error instanceof BibleNotFoundError) {
+				return null;
+			}
+			throw error;
 		}
-		throw error;
-	}
+	});
 }
 
 export async function getPassageText(
 	versionId: number,
 	usfm: string,
 ): Promise<BiblePassage | null> {
-	try {
-		const passage = await withPlatform(() =>
-			getBibleClient().getPassage(versionId, usfm, 'text', false, false, false),
-		);
-		return passage.content ? passage : null;
-	} catch (error) {
-		if (error instanceof BibleNotFoundError) {
-			return null;
-		}
-		throw error;
-	}
+	return loadCached(
+		`passage:text:${versionId}:${usfm}`,
+		PASSAGE_CACHE_MS,
+		STALE_GRACE_MS,
+		async () => {
+			try {
+				const passage = await withPlatform(() =>
+					getBibleClient().getPassage(
+						versionId,
+						usfm,
+						'text',
+						false,
+						false,
+						false,
+					),
+				);
+				return passage.content ? passage : null;
+			} catch (error) {
+				if (error instanceof BibleNotFoundError) {
+					return null;
+				}
+				throw error;
+			}
+		},
+	);
 }
 
 export async function getVerseOfTheDay(): Promise<VOTD | null> {
