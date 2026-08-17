@@ -82,6 +82,7 @@ const versionLabel = version ? displayAbbreviation(version) : '';
 			? `Read ${bookTitle} in the ${version?.localized_title || version?.title} by chapter.`
 			: 'This Bible book could not be loaded.'
 	}
+	lang={version?.language_tag ?? 'en'}
 	canonicalPath={bookPath(slug, bookUsfm)}
 	jsonLd={
 		version && book

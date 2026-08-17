@@ -67,6 +67,7 @@ const title = version
 			? `Read the ${title} by book and chapter, with publisher copyright displayed on every page.`
 			: 'This Bible version could not be loaded.'
 	}
+	lang={version?.language_tag ?? 'en'}
 	canonicalPath={versionPath(slug)}
 	jsonLd={
 		version

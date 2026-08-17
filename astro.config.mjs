@@ -19,10 +19,16 @@ export default defineConfig({
 				access: 'secret',
 				optional: true,
 			}),
+			/**
+			 * The version the site reads in by default: the home page CTA, the
+			 * Verse of the Day, and anywhere a version is not named in the URL.
+			 * 111 is the NIV — the most-read English translation, so it is what
+			 * a first-time visitor should land in.
+			 */
 			DEFAULT_BIBLE_ID: envField.number({
 				context: 'server',
 				access: 'public',
-				default: 3034,
+				default: 111,
 			}),
 		},
 	},

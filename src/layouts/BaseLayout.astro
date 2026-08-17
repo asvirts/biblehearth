@@ -10,16 +10,33 @@ type Props = {
 	description: string;
 	canonicalPath?: string;
 	noindex?: boolean;
+	/** BCP-47 tag. Wrong the moment a non-English version is served. */
+	lang?: string;
+	/** Root-relative or absolute. Defaults to the brand card. */
+	image?: string;
+	imageAlt?: string;
 	jsonLd?: Record<string, unknown> | Record<string, unknown>[];
 };
 
-const { title, description, canonicalPath, noindex = false, jsonLd } = Astro.props;
+const {
+	title,
+	description,
+	canonicalPath,
+	noindex = false,
+	lang = 'en',
+	image = '/og-default.png',
+	imageAlt = 'BibleHearth — read the Bible online, free',
+	jsonLd,
+} = Astro.props;
+
 const canonical = canonicalPath ? absoluteUrl(Astro.site, canonicalPath) : undefined;
+// Social scrapers and AI preview cards do not resolve relative image URLs.
+const ogImage = /^https?:\/\//i.test(image) ? image : absoluteUrl(Astro.site, image);
 const documents = jsonLd ? (Array.isArray(jsonLd) ? jsonLd : [jsonLd]) : [];
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang={lang}>
 	<head>
 		<!-- Google tag (gtag.js) -->
 		<script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-E46EVPHNWB"></script>
@@ -46,7 +63,17 @@ const documents = jsonLd ? (Array.isArray(jsonLd) ? jsonLd : [jsonLd]) : [];
 		<meta property="og:description" content={description} />
 		{canonical ? <meta property="og:url" content={canonical} /> : null}
 		<meta property="og:type" content="website" />
-		<meta name="twitter:card" content="summary" />
+		<meta property="og:site_name" content="BibleHearth" />
+		<meta property="og:locale" content={lang.replace('-', '_')} />
+		<meta property="og:image" content={ogImage} />
+		<meta property="og:image:width" content="1200" />
+		<meta property="og:image:height" content="630" />
+		<meta property="og:image:alt" content={imageAlt} />
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:title" content={title} />
+		<meta name="twitter:description" content={description} />
+		<meta name="twitter:image" content={ogImage} />
+		<meta name="twitter:image:alt" content={imageAlt} />
 		{
 			documents.map((doc) => (
 				<script is:inline type="application/ld+json" set:html={JSON.stringify(doc)} />

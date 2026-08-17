@@ -132,6 +132,7 @@ const description = verseText
 <BaseLayout
 	title={title}
 	description={description}
+	lang={version?.language_tag ?? 'en'}
 	canonicalPath={versePath(slug, bookUsfm, chapterId, verseId)}
 	{/* One indexable page per verse reference, not one per (verse x version).
 	    These stay live for readers and deep links, and keep passing link

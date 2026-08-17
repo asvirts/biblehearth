@@ -134,6 +134,7 @@ const description = snippet
 <BaseLayout
 	title={title}
 	description={description}
+	lang={version?.language_tag ?? 'en'}
 	canonicalPath={chapterPath(slug, bookUsfm, chapterId)}
 	jsonLd={
 		version && book
