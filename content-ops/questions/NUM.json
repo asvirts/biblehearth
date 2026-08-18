@@ -1,0 +1,172 @@
+{
+  "book": "NUM",
+  "name": "Numbers",
+  "chapters": {
+    "1": [
+      { "q": "Were there really 603,550 fighting men in the wilderness?", "slug": "were-there-really-603550-fighting-men", "passage": "NUM.1.45-46", "kind": "number", "priority": 1 },
+      { "q": "How many Israelites left Egypt if there were 603,550 men?", "slug": "how-many-israelites-total-in-the-wilderness", "passage": "NUM.1.46", "kind": "number", "priority": 1 },
+      { "q": "Why did God order a census in Numbers 1 but punish David's census?", "slug": "why-numbers-1-census-was-allowed", "passage": "NUM.1.2", "kind": "tension", "priority": 1 }
+    ],
+    "2": [
+      { "q": "How was the camp of Israel arranged around the tabernacle?", "slug": "how-the-camp-was-arranged", "passage": "NUM.2.1-34", "kind": "history", "priority": 1 }
+    ],
+    "3": [
+      { "q": "Why were the Levites taken in place of the firstborn?", "slug": "levites-taken-in-place-of-the-firstborn", "passage": "NUM.3.12-13", "kind": "doctrine", "priority": 1 }
+    ],
+    "4": [
+      { "q": "Why would the Levites die if they looked at the holy things?", "slug": "levites-would-die-if-they-looked", "passage": "NUM.4.20", "kind": "ethics", "priority": 1 }
+    ],
+    "5": [
+      { "q": "What was the jealousy ordeal with bitter water?", "slug": "the-jealousy-ordeal-with-bitter-water", "passage": "NUM.5.11-31", "kind": "history", "priority": 1 },
+      { "q": "Is the bitter water test in Numbers 5 about abortion?", "slug": "is-numbers-5-about-abortion", "passage": "NUM.5.21-28", "kind": "claim", "priority": 1 },
+      { "q": "Why was there no equivalent test for a jealous wife?", "slug": "no-equivalent-test-for-a-jealous-wife", "passage": "NUM.5.14", "kind": "ethics", "priority": 1 }
+    ],
+    "6": [
+      { "q": "What is the Aaronic blessing in Numbers 6:24-26?", "slug": "the-aaronic-blessing", "passage": "NUM.6.24-26", "kind": "doctrine", "priority": 1 },
+      { "q": "What does the LORD make his face shine upon you mean?", "slug": "the-lord-make-his-face-shine-upon-you", "passage": "NUM.6.25", "kind": "phrase", "priority": 1 },
+      { "q": "What was the Nazirite vow?", "slug": "what-was-the-nazirite-vow", "passage": "NUM.6.1-8", "kind": "doctrine", "priority": 1 },
+      { "q": "Why could a Nazirite not cut his hair or touch a dead body?", "slug": "why-a-nazirite-could-not-cut-his-hair", "passage": "NUM.6.5-7", "kind": "practice", "priority": 1 }
+    ],
+    "7": [
+      { "q": "Why does Numbers 7 repeat the same offering twelve times?", "slug": "why-numbers-7-repeats-the-same-offering", "passage": "NUM.7.12-83", "kind": "phrase", "priority": 1 }
+    ],
+    "8": [
+      { "q": "Why did Levites serve only from age twenty-five to fifty?", "slug": "levites-served-from-twenty-five-to-fifty", "passage": "NUM.8.24-25", "kind": "practice", "priority": 2 }
+    ],
+    "9": [
+      { "q": "Why was a second-chance Passover allowed in the second month?", "slug": "the-second-chance-passover", "passage": "NUM.9.6-12", "kind": "doctrine", "priority": 1 },
+      { "q": "How did the cloud over the tabernacle guide Israel?", "slug": "how-the-cloud-guided-israel-numbers-9", "passage": "NUM.9.15-23", "kind": "practice", "priority": 1 }
+    ],
+    "10": [
+      { "q": "What were the silver trumpets used for?", "slug": "the-silver-trumpets-of-numbers-10", "passage": "NUM.10.1-10", "kind": "history", "priority": 1 },
+      { "q": "What does rise up, O LORD, and let your enemies be scattered mean?", "slug": "rise-up-o-lord-let-your-enemies-be-scattered", "passage": "NUM.10.35", "kind": "phrase", "priority": 1 }
+    ],
+    "11": [
+      { "q": "Why did God send quail and then a plague?", "slug": "the-quail-and-the-plague", "passage": "NUM.11.31-33", "kind": "ethics", "priority": 1 },
+      { "q": "Why did Israel long for the fish and cucumbers of Egypt?", "slug": "we-remember-the-fish-in-egypt", "passage": "NUM.11.4-6", "kind": "practice", "priority": 1 },
+      { "q": "Why did Moses ask God to kill him?", "slug": "moses-asked-god-to-kill-him", "passage": "NUM.11.14-15", "kind": "practice", "priority": 1 },
+      { "q": "What does would that all the LORD's people were prophets mean?", "slug": "would-that-all-the-lords-people-were-prophets", "passage": "NUM.11.29", "kind": "doctrine", "priority": 1 },
+      { "q": "How did the Spirit come on the seventy elders?", "slug": "the-spirit-on-the-seventy-elders", "passage": "NUM.11.25", "kind": "doctrine", "priority": 1 },
+      { "q": "What is the manna described as tasting like?", "slug": "what-manna-tasted-like", "passage": "NUM.11.7-8", "kind": "history", "priority": 1 }
+    ],
+    "12": [
+      { "q": "Why was Miriam struck with leprosy but not Aaron?", "slug": "why-miriam-got-leprosy-but-not-aaron", "passage": "NUM.12.10", "kind": "ethics", "priority": 1 },
+      { "q": "Who was Moses' Cushite wife?", "slug": "who-was-moses-cushite-wife", "passage": "NUM.12.1", "kind": "identity", "priority": 1 },
+      { "q": "Was Miriam's complaint about race or about authority?", "slug": "was-miriams-complaint-about-race", "passage": "NUM.12.1-2", "kind": "ethics", "priority": 1 },
+      { "q": "If Moses wrote Numbers, who called him the humblest man on earth?", "slug": "who-called-moses-the-humblest-man", "passage": "NUM.12.3", "kind": "tension", "priority": 1 },
+      { "q": "What does God spoke to Moses face to face mean?", "slug": "god-spoke-to-moses-face-to-face-numbers-12", "passage": "NUM.12.6-8", "kind": "doctrine", "priority": 1 }
+    ],
+    "13": [
+      { "q": "Why did ten of the twelve spies bring back a bad report?", "slug": "why-ten-spies-brought-a-bad-report", "passage": "NUM.13.31-33", "kind": "practice", "priority": 1 },
+      { "q": "What does we seemed like grasshoppers in our own eyes mean?", "slug": "we-seemed-like-grasshoppers", "passage": "NUM.13.33", "kind": "phrase", "priority": 1 },
+      { "q": "Who were the Nephilim the spies saw in Canaan?", "slug": "the-nephilim-the-spies-saw", "passage": "NUM.13.33", "kind": "identity", "priority": 1 },
+      { "q": "How big was the cluster of grapes the spies carried?", "slug": "the-cluster-of-grapes-from-eshcol", "passage": "NUM.13.23", "kind": "number", "priority": 1 }
+    ],
+    "14": [
+      { "q": "Why did Israel wander forty years in the wilderness?", "slug": "why-israel-wandered-forty-years", "passage": "NUM.14.33-34", "kind": "doctrine", "priority": 1 },
+      { "q": "What does I have forgiven according to your word mean if they were still punished?", "slug": "i-have-forgiven-according-to-your-word", "passage": "NUM.14.20-23", "kind": "tension", "priority": 1 },
+      { "q": "How did Moses persuade God not to destroy Israel?", "slug": "how-moses-persuaded-god-not-to-destroy-israel", "passage": "NUM.14.13-19", "kind": "doctrine", "priority": 1 },
+      { "q": "Why did the presumptuous attack after the judgment fail?", "slug": "the-presumptuous-attack-failed", "passage": "NUM.14.40-45", "kind": "practice", "priority": 1 },
+      { "q": "Why were Caleb and Joshua the only two allowed to enter?", "slug": "why-only-caleb-and-joshua-entered", "passage": "NUM.14.30", "kind": "doctrine", "priority": 1 }
+    ],
+    "15": [
+      { "q": "Why was a man stoned for gathering sticks on the Sabbath?", "slug": "the-man-stoned-for-gathering-sticks", "passage": "NUM.15.32-36", "kind": "ethics", "priority": 1 },
+      { "q": "What were the blue tassels on the corners of garments for?", "slug": "the-blue-tassels-on-garments", "passage": "NUM.15.38-40", "kind": "practice", "priority": 1 },
+      { "q": "What is the difference between unintentional sin and sinning defiantly?", "slug": "unintentional-sin-versus-sinning-defiantly", "passage": "NUM.15.27-31", "kind": "doctrine", "priority": 1 }
+    ],
+    "16": [
+      { "q": "What was Korah's rebellion?", "slug": "korahs-rebellion", "passage": "NUM.16.1-11", "kind": "history", "priority": 1 },
+      { "q": "How did the ground open up and swallow Korah?", "slug": "the-ground-swallowed-korah", "passage": "NUM.16.31-33", "kind": "history", "priority": 1 },
+      { "q": "Why did 14,700 people die in the plague after Korah's rebellion?", "slug": "the-plague-after-korahs-rebellion", "passage": "NUM.16.49", "kind": "ethics", "priority": 1 },
+      { "q": "Why were Korah's censers hammered into altar plating?", "slug": "korahs-censers-hammered-into-plating", "passage": "NUM.16.38-40", "kind": "phrase", "priority": 1 },
+      { "q": "Why were Korah's children spared, according to Numbers 26?", "slug": "were-korahs-children-spared", "passage": "NUM.16.27", "kind": "tension", "priority": 1 }
+    ],
+    "17": [
+      { "q": "Why did Aaron's staff bud, blossom, and produce almonds?", "slug": "aarons-staff-budded-and-produced-almonds", "passage": "NUM.17.8", "kind": "doctrine", "priority": 1 }
+    ],
+    "18": [
+      { "q": "How were priests and Levites supported without land?", "slug": "how-priests-were-supported-without-land", "passage": "NUM.18.20-24", "kind": "practice", "priority": 1 }
+    ],
+    "19": [
+      { "q": "What was the red heifer and why does it still matter?", "slug": "the-red-heifer", "passage": "NUM.19.1-10", "kind": "doctrine", "priority": 1 },
+      { "q": "Why did the water of cleansing make the clean person unclean?", "slug": "the-water-of-cleansing-paradox", "passage": "NUM.19.7-10", "kind": "tension", "priority": 1 }
+    ],
+    "20": [
+      { "q": "Why was Moses barred from the promised land for striking the rock?", "slug": "why-moses-was-barred-from-the-promised-land", "passage": "NUM.20.10-12", "kind": "ethics", "priority": 1 },
+      { "q": "Was Moses' punishment for striking the rock too harsh?", "slug": "was-moses-punishment-too-harsh", "passage": "NUM.20.12", "kind": "ethics", "priority": 1 },
+      { "q": "What does you did not trust me enough to honor me as holy mean?", "slug": "you-did-not-honor-me-as-holy", "passage": "NUM.20.12", "kind": "doctrine", "priority": 1 },
+      { "q": "How did Aaron die on Mount Hor?", "slug": "how-aaron-died-on-mount-hor", "passage": "NUM.20.22-29", "kind": "history", "priority": 1 },
+      { "q": "Why did Moses call the people rebels?", "slug": "listen-you-rebels", "passage": "NUM.20.10", "kind": "phrase", "priority": 1 }
+    ],
+    "21": [
+      { "q": "Why did God send venomous snakes among the people?", "slug": "why-god-sent-venomous-snakes", "passage": "NUM.21.6", "kind": "ethics", "priority": 1 },
+      { "q": "What was the bronze serpent Moses lifted up?", "slug": "the-bronze-serpent-moses-lifted-up", "passage": "NUM.21.8-9", "kind": "doctrine", "priority": 1 },
+      { "q": "Why did God use an image of the very thing killing them?", "slug": "why-god-used-the-image-of-a-snake", "passage": "NUM.21.8-9", "kind": "doctrine", "priority": 1 },
+      { "q": "What is the Book of the Wars of the LORD?", "slug": "the-book-of-the-wars-of-the-lord", "passage": "NUM.21.14", "kind": "history", "priority": 1 },
+      { "q": "Who was King Og of Bashan and how big was he?", "slug": "who-was-king-og-of-bashan", "passage": "NUM.21.33-35", "kind": "identity", "priority": 1 }
+    ],
+    "22": [
+      { "q": "Did Balaam's donkey really talk?", "slug": "did-balaams-donkey-really-talk", "passage": "NUM.22.28-30", "kind": "history", "priority": 1 },
+      { "q": "Who was Balaam and was he a true prophet?", "slug": "who-was-balaam", "passage": "NUM.22.5-7", "kind": "identity", "priority": 1 },
+      { "q": "Why was God angry at Balaam for going after telling him to go?", "slug": "why-god-was-angry-at-balaam-for-going", "passage": "NUM.22.20-22", "kind": "tension", "priority": 1 },
+      { "q": "Who was the angel of the LORD who stood in Balaam's path?", "slug": "the-angel-in-balaams-path", "passage": "NUM.22.22-35", "kind": "identity", "priority": 1 }
+    ],
+    "23": [
+      { "q": "What does God is not a man, that he should lie mean?", "slug": "god-is-not-a-man-that-he-should-lie", "passage": "NUM.23.19", "kind": "doctrine", "priority": 1 },
+      { "q": "How does Numbers 23:19 fit with verses saying God relented?", "slug": "god-does-not-change-his-mind-versus-relenting", "passage": "NUM.23.19", "kind": "tension", "priority": 1 },
+      { "q": "Why could Balaam not curse Israel?", "slug": "why-balaam-could-not-curse-israel", "passage": "NUM.23.8", "kind": "doctrine", "priority": 1 }
+    ],
+    "24": [
+      { "q": "What does a star will come out of Jacob mean?", "slug": "a-star-will-come-out-of-jacob", "passage": "NUM.24.17", "kind": "doctrine", "priority": 1 },
+      { "q": "Did the wise men follow the star of Numbers 24:17?", "slug": "did-the-magi-follow-the-star-of-numbers-24", "passage": "NUM.24.17", "kind": "doctrine", "priority": 1 },
+      { "q": "What does how beautiful are your tents, O Jacob mean?", "slug": "how-beautiful-are-your-tents-o-jacob", "passage": "NUM.24.5", "kind": "phrase", "priority": 1 }
+    ],
+    "25": [
+      { "q": "What happened at Baal-peor?", "slug": "what-happened-at-baal-peor", "passage": "NUM.25.1-3", "kind": "history", "priority": 1 },
+      { "q": "Why was Phinehas rewarded for killing two people with a spear?", "slug": "why-phinehas-was-rewarded-for-the-spear", "passage": "NUM.25.7-13", "kind": "ethics", "priority": 1 },
+      { "q": "What does he was zealous for my honor mean?", "slug": "he-was-zealous-for-my-honor", "passage": "NUM.25.11", "kind": "doctrine", "priority": 1 },
+      { "q": "How was Balaam behind the sin at Baal-peor?", "slug": "how-balaam-was-behind-baal-peor", "passage": "NUM.25.1-3", "kind": "history", "priority": 1 }
+    ],
+    "26": [
+      { "q": "Why did the population barely change between the two censuses?", "slug": "why-the-population-barely-changed", "passage": "NUM.26.51", "kind": "number", "priority": 1 }
+    ],
+    "27": [
+      { "q": "Why did Zelophehad's daughters get an inheritance?", "slug": "zelophehads-daughters-inheritance", "passage": "NUM.27.1-11", "kind": "ethics", "priority": 1 },
+      { "q": "Why was Joshua chosen to succeed Moses instead of his own sons?", "slug": "why-joshua-succeeded-moses", "passage": "NUM.27.18-23", "kind": "doctrine", "priority": 1 }
+    ],
+    "28": [
+      { "q": "What were the daily, weekly, and monthly offerings?", "slug": "the-daily-weekly-and-monthly-offerings", "passage": "NUM.28.1-15", "kind": "practice", "priority": 2 }
+    ],
+    "29": [
+      { "q": "Why did the Feast of Booths require so many sacrifices?", "slug": "why-booths-required-so-many-sacrifices", "passage": "NUM.29.12-38", "kind": "practice", "priority": 2 }
+    ],
+    "30": [
+      { "q": "Why could a father or husband cancel a woman's vow?", "slug": "why-a-husband-could-cancel-a-womans-vow", "passage": "NUM.30.3-15", "kind": "ethics", "priority": 1 }
+    ],
+    "31": [
+      { "q": "Why did God command killing the Midianite women and boys?", "slug": "killing-the-midianite-women-and-boys", "passage": "NUM.31.15-18", "kind": "ethics", "priority": 1 },
+      { "q": "What happened to the Midianite virgins who were spared?", "slug": "what-happened-to-the-midianite-virgins", "passage": "NUM.31.18", "kind": "ethics", "priority": 1 },
+      { "q": "Why was Balaam killed in the war on Midian?", "slug": "why-balaam-was-killed", "passage": "NUM.31.8", "kind": "history", "priority": 1 }
+    ],
+    "32": [
+      { "q": "Why did Reuben and Gad want to settle east of the Jordan?", "slug": "reuben-and-gad-settled-east-of-the-jordan", "passage": "NUM.32.1-5", "kind": "history", "priority": 1 },
+      { "q": "What does your sin will find you out mean?", "slug": "your-sin-will-find-you-out", "passage": "NUM.32.23", "kind": "phrase", "priority": 1 }
+    ],
+    "33": [
+      { "q": "What were the forty-two stages of Israel's journey?", "slug": "the-forty-two-stages-of-the-journey", "passage": "NUM.33.1-49", "kind": "history", "priority": 1 },
+      { "q": "Why did God command Israel to destroy every Canaanite image?", "slug": "destroy-every-canaanite-image", "passage": "NUM.33.52", "kind": "ethics", "priority": 1 },
+      { "q": "What does they will become thorns in your sides mean?", "slug": "thorns-in-your-sides", "passage": "NUM.33.55", "kind": "phrase", "priority": 1 }
+    ],
+    "34": [
+      { "q": "What were the promised borders of the land of Canaan?", "slug": "the-promised-borders-of-canaan", "passage": "NUM.34.1-12", "kind": "history", "priority": 1 }
+    ],
+    "35": [
+      { "q": "How did the cities of refuge protect accidental killers?", "slug": "how-cities-of-refuge-protected-accidental-killers", "passage": "NUM.35.9-15", "kind": "history", "priority": 1 },
+      { "q": "Why was the killer released at the high priest's death?", "slug": "released-at-the-high-priests-death", "passage": "NUM.35.25-28", "kind": "doctrine", "priority": 1 },
+      { "q": "Why did murder require the death penalty with no ransom allowed?", "slug": "no-ransom-for-murder", "passage": "NUM.35.31-33", "kind": "ethics", "priority": 1 }
+    ],
+    "36": [
+      { "q": "Why did Zelophehad's daughters have to marry within their tribe?", "slug": "zelophehads-daughters-married-within-their-tribe", "passage": "NUM.36.6-9", "kind": "ethics", "priority": 1 }
+    ]
+  }
+}

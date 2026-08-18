@@ -1,0 +1,407 @@
+{
+  "book": "1CH",
+  "name": "1 Chronicles",
+  "chapters": {
+    "1": [
+      {
+        "q": "Why does 1 Chronicles begin with nine chapters of genealogy?",
+        "slug": "why-1-chronicles-begins-with-genealogy",
+        "passage": "1CH.1.1-4",
+        "kind": "history",
+        "priority": 1
+      }
+    ],
+    "2": [
+      {
+        "q": "Why does Chronicles trace Judah's line before the other tribes?",
+        "slug": "why-judahs-line-comes-first",
+        "passage": "1CH.2.3-4",
+        "kind": "doctrine",
+        "priority": 2
+      }
+    ],
+    "3": [
+      {
+        "q": "How many sons did David have and by which wives?",
+        "slug": "how-many-sons-david-had",
+        "passage": "1CH.3.1-9",
+        "kind": "number",
+        "priority": 1
+      }
+    ],
+    "4": [
+      {
+        "q": "What is the prayer of Jabez?",
+        "slug": "the-prayer-of-jabez",
+        "passage": "1CH.4.9-10",
+        "kind": "practice",
+        "priority": 1
+      },
+      {
+        "q": "What does enlarge my territory mean in the prayer of Jabez?",
+        "slug": "enlarge-my-territory",
+        "passage": "1CH.4.10",
+        "kind": "practice",
+        "priority": 1
+      },
+      {
+        "q": "Is it right to pray the prayer of Jabez for prosperity?",
+        "slug": "is-it-right-to-pray-the-prayer-of-jabez",
+        "passage": "1CH.4.10",
+        "kind": "claim",
+        "priority": 1
+      },
+      {
+        "q": "Who was Jabez and why is his name about pain?",
+        "slug": "who-was-jabez",
+        "passage": "1CH.4.9",
+        "kind": "identity",
+        "priority": 1
+      }
+    ],
+    "5": [
+      {
+        "q": "Why did Reuben lose his birthright according to 1 Chronicles 5?",
+        "slug": "why-reuben-lost-his-birthright-1-chronicles",
+        "passage": "1CH.5.1-2",
+        "kind": "history",
+        "priority": 1
+      },
+      {
+        "q": "What does they cried out to God during the battle and he answered mean?",
+        "slug": "they-cried-out-to-god-during-the-battle",
+        "passage": "1CH.5.20",
+        "kind": "practice",
+        "priority": 1
+      }
+    ],
+    "6": [
+      {
+        "q": "Why does Chronicles give the Levites such a detailed genealogy?",
+        "slug": "why-the-levites-genealogy-is-detailed",
+        "passage": "1CH.6.1-15",
+        "kind": "doctrine",
+        "priority": 2
+      }
+    ],
+    "7": [
+      {
+        "q": "Why are some tribes barely mentioned in Chronicles?",
+        "slug": "why-some-tribes-are-barely-mentioned",
+        "passage": "1CH.7.1-5",
+        "kind": "history",
+        "priority": 2
+      }
+    ],
+    "8": [
+      {
+        "q": "Why does Benjamin's genealogy get its own chapter?",
+        "slug": "why-benjamin-gets-its-own-chapter",
+        "passage": "1CH.8.1-40",
+        "kind": "history",
+        "priority": 3
+      }
+    ],
+    "9": [
+      {
+        "q": "Who returned from exile according to 1 Chronicles 9?",
+        "slug": "who-returned-from-exile-1-chronicles-9",
+        "passage": "1CH.9.2-3",
+        "kind": "history",
+        "priority": 2
+      }
+    ],
+    "10": [
+      {
+        "q": "Why does 1 Chronicles 10:13 say Saul died for consulting a medium?",
+        "slug": "saul-died-for-consulting-a-medium",
+        "passage": "1CH.10.13-14",
+        "kind": "doctrine",
+        "priority": 1
+      },
+      {
+        "q": "Does 1 Chronicles 10 say God killed Saul, or that Saul killed himself?",
+        "slug": "did-god-kill-saul-or-did-saul",
+        "passage": "1CH.10.4-14",
+        "kind": "tension",
+        "priority": 1
+      }
+    ],
+    "11": [
+      {
+        "q": "Who were the three mighty men who broke through for water?",
+        "slug": "the-three-who-broke-through-for-water",
+        "passage": "1CH.11.15-19",
+        "kind": "identity",
+        "priority": 1
+      },
+      {
+        "q": "Why did Joab become commander by going up first?",
+        "slug": "joab-became-commander-by-going-up-first",
+        "passage": "1CH.11.6",
+        "kind": "history",
+        "priority": 1
+      }
+    ],
+    "12": [
+      {
+        "q": "Who were the men of Issachar who understood the times?",
+        "slug": "the-men-of-issachar-who-understood-the-times",
+        "passage": "1CH.12.32",
+        "kind": "identity",
+        "priority": 1
+      },
+      {
+        "q": "What does understanding the times and knowing what to do mean?",
+        "slug": "understanding-the-times-and-knowing-what-to-do",
+        "passage": "1CH.12.32",
+        "kind": "practice",
+        "priority": 1
+      }
+    ],
+    "13": [
+      {
+        "q": "Why did God strike Uzzah in 1 Chronicles 13?",
+        "slug": "why-god-struck-uzzah-1-chronicles",
+        "passage": "1CH.13.9-10",
+        "kind": "ethics",
+        "priority": 1
+      }
+    ],
+    "14": [
+      {
+        "q": "Why did David ask God twice before two similar battles?",
+        "slug": "david-asked-god-twice-before-battle",
+        "passage": "1CH.14.10-14",
+        "kind": "practice",
+        "priority": 1
+      }
+    ],
+    "15": [
+      {
+        "q": "What does we did not inquire of him about the proper way mean?",
+        "slug": "we-did-not-inquire-about-the-proper-way",
+        "passage": "1CH.15.13",
+        "kind": "doctrine",
+        "priority": 1
+      },
+      {
+        "q": "How was the ark supposed to be carried?",
+        "slug": "how-the-ark-was-supposed-to-be-carried",
+        "passage": "1CH.15.2-15",
+        "kind": "practice",
+        "priority": 1
+      }
+    ],
+    "16": [
+      {
+        "q": "What does seek the LORD and his strength, seek his face always mean?",
+        "slug": "seek-the-lord-and-his-strength",
+        "passage": "1CH.16.11",
+        "kind": "practice",
+        "priority": 1
+      },
+      {
+        "q": "What does do not touch my anointed ones mean in 1 Chronicles 16:22?",
+        "slug": "do-not-touch-my-anointed-ones-1-chronicles",
+        "passage": "1CH.16.22",
+        "kind": "doctrine",
+        "priority": 1
+      },
+      {
+        "q": "What does give thanks to the LORD for he is good mean?",
+        "slug": "give-thanks-to-the-lord-for-he-is-good",
+        "passage": "1CH.16.34",
+        "kind": "practice",
+        "priority": 1
+      }
+    ],
+    "17": [
+      {
+        "q": "How does the Davidic covenant in 1 Chronicles 17 differ from 2 Samuel 7?",
+        "slug": "davidic-covenant-in-chronicles-versus-samuel",
+        "passage": "1CH.17.11-14",
+        "kind": "tension",
+        "priority": 1
+      }
+    ],
+    "18": [
+      {
+        "q": "Why do the numbers in 1 Chronicles 18 differ from 2 Samuel 8?",
+        "slug": "why-numbers-differ-in-chronicles-and-samuel",
+        "passage": "1CH.18.4",
+        "kind": "tension",
+        "priority": 1
+      }
+    ],
+    "19": [
+      {
+        "q": "Why did Joab tell his brother let us be strong for our people?",
+        "slug": "let-us-be-strong-for-our-people",
+        "passage": "1CH.19.13",
+        "kind": "practice",
+        "priority": 1
+      }
+    ],
+    "20": [
+      {
+        "q": "Why does 1 Chronicles 20:5 say Elhanan killed Goliath's brother?",
+        "slug": "elhanan-killed-goliaths-brother",
+        "passage": "1CH.20.5",
+        "kind": "tension",
+        "priority": 1
+      }
+    ],
+    "21": [
+      {
+        "q": "Why does 1 Chronicles 21:1 say Satan incited David but 2 Samuel says the LORD?",
+        "slug": "satan-incited-david-versus-the-lord",
+        "passage": "1CH.21.1",
+        "kind": "tension",
+        "priority": 1
+      },
+      {
+        "q": "Why do the census numbers differ between Chronicles and Samuel?",
+        "slug": "why-the-census-numbers-differ",
+        "passage": "1CH.21.5",
+        "kind": "tension",
+        "priority": 1
+      },
+      {
+        "q": "Why did David choose the plague over famine or enemies?",
+        "slug": "why-david-chose-the-plague",
+        "passage": "1CH.21.13",
+        "kind": "practice",
+        "priority": 1
+      },
+      {
+        "q": "How did the threshing floor of Ornan become the temple site?",
+        "slug": "the-threshing-floor-became-the-temple-site",
+        "passage": "1CH.21.26-28",
+        "kind": "history",
+        "priority": 1
+      }
+    ],
+    "22": [
+      {
+        "q": "Why could David not build the temple because he shed blood?",
+        "slug": "david-could-not-build-because-he-shed-blood",
+        "passage": "1CH.22.8",
+        "kind": "doctrine",
+        "priority": 1
+      },
+      {
+        "q": "How much material did David prepare for the temple?",
+        "slug": "how-much-material-david-prepared",
+        "passage": "1CH.22.14",
+        "kind": "number",
+        "priority": 1
+      }
+    ],
+    "23": [
+      {
+        "q": "Why did David change the Levites' service age to twenty?",
+        "slug": "david-changed-the-levites-service-age",
+        "passage": "1CH.23.24-27",
+        "kind": "tension",
+        "priority": 1
+      }
+    ],
+    "24": [
+      {
+        "q": "What were the twenty-four divisions of priests?",
+        "slug": "the-twenty-four-divisions-of-priests",
+        "passage": "1CH.24.7-18",
+        "kind": "history",
+        "priority": 1
+      },
+      {
+        "q": "How does the division of Abijah help date John the Baptist's birth?",
+        "slug": "the-division-of-abijah-and-john-the-baptist",
+        "passage": "1CH.24.10",
+        "kind": "history",
+        "priority": 1
+      }
+    ],
+    "25": [
+      {
+        "q": "What does prophesying with harps, lyres, and cymbals mean?",
+        "slug": "prophesying-with-harps-and-cymbals",
+        "passage": "1CH.25.1-3",
+        "kind": "practice",
+        "priority": 1
+      }
+    ],
+    "26": [
+      {
+        "q": "What did the temple gatekeepers actually do?",
+        "slug": "what-the-temple-gatekeepers-did",
+        "passage": "1CH.26.1-19",
+        "kind": "history",
+        "priority": 2
+      }
+    ],
+    "27": [
+      {
+        "q": "How was David's army organized into monthly divisions?",
+        "slug": "davids-monthly-army-divisions",
+        "passage": "1CH.27.1-15",
+        "kind": "history",
+        "priority": 2
+      }
+    ],
+    "28": [
+      {
+        "q": "What does the LORD searches every heart and understands every motive mean?",
+        "slug": "the-lord-searches-every-heart",
+        "passage": "1CH.28.9",
+        "kind": "doctrine",
+        "priority": 1
+      },
+      {
+        "q": "What was David's charge to Solomon about building the temple?",
+        "slug": "davids-charge-to-solomon",
+        "passage": "1CH.28.9-10",
+        "kind": "practice",
+        "priority": 1
+      },
+      {
+        "q": "How did David receive the temple plans in writing?",
+        "slug": "the-temple-plans-in-writing",
+        "passage": "1CH.28.11-19",
+        "kind": "doctrine",
+        "priority": 1
+      }
+    ],
+    "29": [
+      {
+        "q": "What does everything comes from you and we give back what is yours mean?",
+        "slug": "everything-comes-from-you",
+        "passage": "1CH.29.14",
+        "kind": "practice",
+        "priority": 1
+      },
+      {
+        "q": "What does who am I that we should be able to give so generously mean?",
+        "slug": "who-am-i-that-we-should-give-generously",
+        "passage": "1CH.29.14",
+        "kind": "practice",
+        "priority": 1
+      },
+      {
+        "q": "How much did David and the leaders give for the temple?",
+        "slug": "how-much-david-and-the-leaders-gave",
+        "passage": "1CH.29.3-9",
+        "kind": "number",
+        "priority": 1
+      },
+      {
+        "q": "What does we are strangers and sojourners before you mean?",
+        "slug": "we-are-strangers-and-sojourners-before-you",
+        "passage": "1CH.29.15",
+        "kind": "doctrine",
+        "priority": 1
+      }
+    ]
+  }
+}

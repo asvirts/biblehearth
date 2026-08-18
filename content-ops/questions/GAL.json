@@ -1,0 +1,65 @@
+{
+  "book": "GAL",
+  "name": "Galatians",
+  "chapters": {
+    "1": [
+      { "q": "What is the different gospel Paul condemns in Galatians 1?", "slug": "a-different-gospel-galatians-1", "passage": "GAL.1.6-7", "kind": "doctrine", "priority": 1 },
+      { "q": "What does let him be accursed or anathema mean?", "slug": "let-him-be-accursed-anathema", "passage": "GAL.1.8-9", "kind": "phrase", "priority": 1 },
+      { "q": "Why does Paul say even an angel preaching another gospel should be cursed?", "slug": "even-an-angel-preaching-another-gospel", "passage": "GAL.1.8", "kind": "doctrine", "priority": 1 },
+      { "q": "What did Paul do during his three years in Arabia?", "slug": "pauls-three-years-in-arabia", "passage": "GAL.1.17-18", "kind": "history", "priority": 1 },
+      { "q": "Does Galatians 1 contradict Acts about when Paul met the apostles?", "slug": "does-galatians-1-contradict-acts", "passage": "GAL.1.18-19", "kind": "tension", "priority": 1 },
+      { "q": "What does am I trying to please man or God mean?", "slug": "trying-to-please-man-or-god", "passage": "GAL.1.10", "kind": "practice", "priority": 2 }
+    ],
+    "2": [
+      { "q": "Why did Paul confront Peter to his face in Antioch?", "slug": "why-paul-confronted-peter-in-antioch", "passage": "GAL.2.11-14", "kind": "history", "priority": 1 },
+      { "q": "What does I have been crucified with Christ mean?", "slug": "i-have-been-crucified-with-christ", "passage": "GAL.2.20", "kind": "doctrine", "priority": 1 },
+      { "q": "What does no one is justified by works of the law mean?", "slug": "not-justified-by-works-of-the-law", "passage": "GAL.2.16", "kind": "doctrine", "priority": 1 },
+      { "q": "Does faith in Christ or faithfulness of Christ fit Galatians 2:16?", "slug": "faith-in-christ-or-faithfulness-of-christ", "passage": "GAL.2.16", "kind": "doctrine", "priority": 1 },
+      { "q": "Who were the pillars James, Cephas, and John?", "slug": "the-pillars-james-cephas-and-john", "passage": "GAL.2.9", "kind": "identity", "priority": 1 },
+      { "q": "Why was Titus not required to be circumcised?", "slug": "why-titus-was-not-circumcised", "passage": "GAL.2.3", "kind": "history", "priority": 2 },
+      { "q": "What does the life I now live in the flesh I live by faith mean?", "slug": "the-life-i-now-live-i-live-by-faith", "passage": "GAL.2.20", "kind": "practice", "priority": 1 }
+    ],
+    "3": [
+      { "q": "What does who has bewitched you mean?", "slug": "who-has-bewitched-you", "passage": "GAL.3.1", "kind": "phrase", "priority": 1 },
+      { "q": "What does cursed is everyone who hangs on a tree mean?", "slug": "cursed-is-everyone-who-hangs-on-a-tree", "passage": "GAL.3.13", "kind": "doctrine", "priority": 1 },
+      { "q": "What does there is neither Jew nor Greek, male nor female mean?", "slug": "neither-jew-nor-greek-male-nor-female", "passage": "GAL.3.28", "kind": "doctrine", "priority": 1 },
+      { "q": "Does Galatians 3:28 mean men and women have identical roles in church?", "slug": "does-galatians-3-28-erase-gender-roles", "passage": "GAL.3.28", "kind": "doctrine", "priority": 1 },
+      { "q": "What does the law was our guardian until Christ came mean?", "slug": "the-law-was-our-guardian", "passage": "GAL.3.24-25", "kind": "doctrine", "priority": 1 },
+      { "q": "Why does Paul argue that seed is singular, not plural?", "slug": "the-seed-is-singular-not-plural", "passage": "GAL.3.16", "kind": "doctrine", "priority": 1 },
+      { "q": "Why was the law added because of transgressions?", "slug": "the-law-was-added-because-of-transgressions", "passage": "GAL.3.19", "kind": "doctrine", "priority": 1 },
+      { "q": "What does did you receive the Spirit by works or by hearing with faith mean?", "slug": "did-you-receive-the-spirit-by-works", "passage": "GAL.3.2", "kind": "doctrine", "priority": 1 },
+      { "q": "What does all who rely on the law are under a curse mean?", "slug": "all-who-rely-on-the-law-are-under-a-curse", "passage": "GAL.3.10", "kind": "doctrine", "priority": 2 }
+    ],
+    "4": [
+      { "q": "What does Abba, Father mean?", "slug": "what-does-abba-father-mean", "passage": "GAL.4.6", "kind": "phrase", "priority": 1 },
+      { "q": "What does the fullness of time mean in Galatians 4:4?", "slug": "the-fullness-of-time", "passage": "GAL.4.4", "kind": "phrase", "priority": 1 },
+      { "q": "What does Paul's allegory of Hagar and Sarah mean?", "slug": "hagar-and-sarah-allegory", "passage": "GAL.4.22-26", "kind": "doctrine", "priority": 1 },
+      { "q": "Does Galatians 4:10 forbid observing Christian holidays?", "slug": "does-galatians-4-10-forbid-holidays", "passage": "GAL.4.10", "kind": "practice", "priority": 1 },
+      { "q": "What are the elementary principles or elemental spirits of the world?", "slug": "the-elemental-spirits-of-the-world", "passage": "GAL.4.3", "kind": "identity", "priority": 1 },
+      { "q": "What was the bodily ailment Paul mentions in Galatians 4:13-15?", "slug": "pauls-bodily-ailment-galatians-4", "passage": "GAL.4.13-15", "kind": "history", "priority": 1 },
+      { "q": "What does adoption as sons mean in Galatians 4?", "slug": "adoption-as-sons-galatians-4", "passage": "GAL.4.5", "kind": "doctrine", "priority": 2 }
+    ],
+    "5": [
+      { "q": "What is the fruit of the Spirit?", "slug": "what-is-the-fruit-of-the-spirit", "passage": "GAL.5.22-23", "kind": "doctrine", "priority": 1 },
+      { "q": "Why is the fruit of the Spirit singular and not fruits?", "slug": "why-fruit-of-the-spirit-is-singular", "passage": "GAL.5.22", "kind": "phrase", "priority": 1 },
+      { "q": "Does you have fallen away from grace mean you can lose salvation?", "slug": "you-have-fallen-away-from-grace", "passage": "GAL.5.4", "kind": "doctrine", "priority": 1 },
+      { "q": "What does for freedom Christ has set us free mean?", "slug": "for-freedom-christ-has-set-us-free", "passage": "GAL.5.1", "kind": "doctrine", "priority": 1 },
+      { "q": "What are the works of the flesh in Galatians 5:19-21?", "slug": "works-of-the-flesh-galatians-5", "passage": "GAL.5.19-21", "kind": "ethics", "priority": 1 },
+      { "q": "Does Galatians 5:21 mean people who sin will not inherit the kingdom?", "slug": "will-not-inherit-the-kingdom-galatians-5", "passage": "GAL.5.21", "kind": "doctrine", "priority": 1 },
+      { "q": "What does walk by the Spirit mean?", "slug": "walk-by-the-spirit", "passage": "GAL.5.16", "kind": "practice", "priority": 1 },
+      { "q": "Why does Paul wish the circumcision party would emasculate themselves?", "slug": "paul-wished-they-would-emasculate-themselves", "passage": "GAL.5.12", "kind": "ethics", "priority": 1 },
+      { "q": "What does the whole law is fulfilled in one word, love mean?", "slug": "the-whole-law-fulfilled-in-love", "passage": "GAL.5.14", "kind": "doctrine", "priority": 1 },
+      { "q": "What does a little leaven leavens the whole lump mean?", "slug": "a-little-leaven-leavens-the-whole-lump", "passage": "GAL.5.9", "kind": "phrase", "priority": 2 }
+    ],
+    "6": [
+      { "q": "How can Galatians 6:2 say bear one another's burdens and 6:5 say bear your own load?", "slug": "bear-one-anothers-burdens-and-your-own-load", "passage": "GAL.6.2-5", "kind": "tension", "priority": 1 },
+      { "q": "What does you reap what you sow mean?", "slug": "you-reap-what-you-sow", "passage": "GAL.6.7", "kind": "doctrine", "priority": 1 },
+      { "q": "What does God is not mocked mean?", "slug": "god-is-not-mocked", "passage": "GAL.6.7", "kind": "phrase", "priority": 1 },
+      { "q": "What does do not grow weary of doing good mean?", "slug": "do-not-grow-weary-of-doing-good", "passage": "GAL.6.9", "kind": "practice", "priority": 1 },
+      { "q": "What does restore him in a spirit of gentleness mean?", "slug": "restore-him-in-a-spirit-of-gentleness", "passage": "GAL.6.1", "kind": "practice", "priority": 1 },
+      { "q": "Why does Paul mention writing in large letters with his own hand?", "slug": "paul-wrote-in-large-letters", "passage": "GAL.6.11", "kind": "history", "priority": 1 },
+      { "q": "What are the marks of Jesus on Paul's body?", "slug": "the-marks-of-jesus-on-my-body", "passage": "GAL.6.17", "kind": "phrase", "priority": 1 },
+      { "q": "What does a new creation mean in Galatians 6:15?", "slug": "a-new-creation-galatians-6-15", "passage": "GAL.6.15", "kind": "doctrine", "priority": 2 }
+    ]
+  }
+}

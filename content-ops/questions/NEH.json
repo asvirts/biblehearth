@@ -1,0 +1,69 @@
+{
+  "book": "NEH",
+  "name": "Nehemiah",
+  "chapters": {
+    "1": [
+      { "q": "Why did Nehemiah weep and fast for days over Jerusalem's walls?", "slug": "why-nehemiah-wept-over-jerusalems-walls", "passage": "NEH.1.4", "kind": "practice", "priority": 1 },
+      { "q": "What makes Nehemiah's prayer in chapter 1 a model prayer?", "slug": "nehemiahs-prayer-as-a-model", "passage": "NEH.1.5-11", "kind": "practice", "priority": 1 },
+      { "q": "What was a cupbearer to the king?", "slug": "what-was-a-cupbearer-to-the-king", "passage": "NEH.1.11", "kind": "history", "priority": 1 }
+    ],
+    "2": [
+      { "q": "Why was Nehemiah afraid when the king asked why he looked sad?", "slug": "why-nehemiah-was-afraid-before-the-king", "passage": "NEH.2.2", "kind": "history", "priority": 1 },
+      { "q": "Why did Nehemiah inspect the walls secretly at night?", "slug": "nehemiah-inspected-the-walls-at-night", "passage": "NEH.2.11-16", "kind": "practice", "priority": 1 },
+      { "q": "What does the gracious hand of my God was on me mean?", "slug": "the-gracious-hand-of-my-god-was-on-me", "passage": "NEH.2.8", "kind": "phrase", "priority": 1 },
+      { "q": "How did Nehemiah pray and answer the king at the same time?", "slug": "nehemiah-prayed-and-answered-at-once", "passage": "NEH.2.4-5", "kind": "practice", "priority": 1 }
+    ],
+    "3": [
+      { "q": "Why does Nehemiah 3 list every builder by name and section?", "slug": "why-nehemiah-3-names-every-builder", "passage": "NEH.3.1-32", "kind": "doctrine", "priority": 1 },
+      { "q": "Who were the daughters of Shallum who helped build the wall?", "slug": "the-daughters-of-shallum", "passage": "NEH.3.12", "kind": "identity", "priority": 1 },
+      { "q": "Why did the nobles of Tekoa refuse to work on the wall?", "slug": "the-nobles-of-tekoa-refused-to-work", "passage": "NEH.3.5", "kind": "ethics", "priority": 1 }
+    ],
+    "4": [
+      { "q": "Did the builders really work with a sword in one hand?", "slug": "a-sword-in-one-hand-and-a-trowel", "passage": "NEH.4.17-18", "kind": "history", "priority": 1 },
+      { "q": "Who were Sanballat and Tobiah?", "slug": "who-were-sanballat-and-tobiah", "passage": "NEH.4.1-3", "kind": "identity", "priority": 1 },
+      { "q": "What does our God will fight for us mean in Nehemiah 4:20?", "slug": "our-god-will-fight-for-us", "passage": "NEH.4.20", "kind": "doctrine", "priority": 1 },
+      { "q": "How did Nehemiah answer mockery with prayer and a guard?", "slug": "nehemiah-answered-mockery-with-prayer-and-a-guard", "passage": "NEH.4.9", "kind": "practice", "priority": 1 }
+    ],
+    "5": [
+      { "q": "Why were Jews enslaving their own people during the rebuilding?", "slug": "jews-enslaving-their-own-people", "passage": "NEH.5.1-5", "kind": "ethics", "priority": 1 },
+      { "q": "How did Nehemiah stop the practice of charging interest?", "slug": "nehemiah-stopped-charging-interest", "passage": "NEH.5.9-12", "kind": "ethics", "priority": 1 },
+      { "q": "Why did Nehemiah refuse the governor's food allowance?", "slug": "nehemiah-refused-the-governors-allowance", "passage": "NEH.5.14-18", "kind": "practice", "priority": 1 }
+    ],
+    "6": [
+      { "q": "What does I am doing a great work and cannot come down mean?", "slug": "i-am-doing-a-great-work-and-cannot-come-down", "passage": "NEH.6.3", "kind": "practice", "priority": 1 },
+      { "q": "How did Nehemiah recognize a false prophecy from Shemaiah?", "slug": "nehemiah-recognized-a-false-prophecy", "passage": "NEH.6.10-13", "kind": "practice", "priority": 1 },
+      { "q": "How long did it take to rebuild the wall of Jerusalem?", "slug": "how-long-the-wall-took-to-rebuild", "passage": "NEH.6.15", "kind": "number", "priority": 1 },
+      { "q": "What were the four invitations Nehemiah refused?", "slug": "the-four-invitations-nehemiah-refused", "passage": "NEH.6.2-4", "kind": "practice", "priority": 1 }
+    ],
+    "7": [
+      { "q": "Why does Nehemiah repeat the return list from Ezra 2?", "slug": "why-nehemiah-repeats-the-return-list", "passage": "NEH.7.6-7", "kind": "tension", "priority": 1 }
+    ],
+    "8": [
+      { "q": "What does the joy of the LORD is your strength mean?", "slug": "the-joy-of-the-lord-is-your-strength", "passage": "NEH.8.10", "kind": "practice", "priority": 1 },
+      { "q": "What does they read and gave the sense so the people understood mean?", "slug": "they-gave-the-sense-so-people-understood", "passage": "NEH.8.8", "kind": "practice", "priority": 1 },
+      { "q": "Why did the people weep when they heard the law read?", "slug": "why-the-people-wept-when-the-law-was-read", "passage": "NEH.8.9", "kind": "practice", "priority": 1 },
+      { "q": "Why were they told to celebrate instead of mourn?", "slug": "told-to-celebrate-instead-of-mourn", "passage": "NEH.8.10-12", "kind": "practice", "priority": 1 },
+      { "q": "How long did Ezra read the law aloud?", "slug": "how-long-ezra-read-the-law", "passage": "NEH.8.3", "kind": "number", "priority": 1 }
+    ],
+    "9": [
+      { "q": "What makes the confession in Nehemiah 9 the longest prayer in the Bible?", "slug": "the-longest-prayer-in-the-bible", "passage": "NEH.9.5-38", "kind": "practice", "priority": 1 },
+      { "q": "What does you are a forgiving God, gracious and compassionate mean here?", "slug": "you-are-a-forgiving-god-nehemiah-9", "passage": "NEH.9.17", "kind": "doctrine", "priority": 1 },
+      { "q": "Why does Nehemiah 9 retell Israel's whole history as confession?", "slug": "why-nehemiah-9-retells-israels-history", "passage": "NEH.9.6-31", "kind": "practice", "priority": 1 }
+    ],
+    "10": [
+      { "q": "What did the people commit to in the covenant of Nehemiah 10?", "slug": "the-covenant-of-nehemiah-10", "passage": "NEH.10.28-39", "kind": "practice", "priority": 1 }
+    ],
+    "11": [
+      { "q": "Why did they cast lots to decide who would live in Jerusalem?", "slug": "casting-lots-to-live-in-jerusalem", "passage": "NEH.11.1-2", "kind": "history", "priority": 1 }
+    ],
+    "12": [
+      { "q": "How was the wall of Jerusalem dedicated?", "slug": "how-the-wall-was-dedicated", "passage": "NEH.12.27-43", "kind": "history", "priority": 1 }
+    ],
+    "13": [
+      { "q": "Why did Nehemiah pull out men's hair and curse them?", "slug": "nehemiah-pulled-out-mens-hair", "passage": "NEH.13.25", "kind": "ethics", "priority": 1 },
+      { "q": "How did Nehemiah enforce the Sabbath at the city gates?", "slug": "nehemiah-enforced-the-sabbath-at-the-gates", "passage": "NEH.13.15-22", "kind": "practice", "priority": 1 },
+      { "q": "What does remember me, O my God, for good mean?", "slug": "remember-me-o-my-god-for-good", "passage": "NEH.13.31", "kind": "practice", "priority": 1 },
+      { "q": "Why did the reforms fall apart while Nehemiah was away?", "slug": "why-the-reforms-fell-apart", "passage": "NEH.13.6-11", "kind": "doctrine", "priority": 1 }
+    ]
+  }
+}

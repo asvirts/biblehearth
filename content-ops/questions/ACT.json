@@ -1,0 +1,251 @@
+{
+  "book": "ACT",
+  "name": "Acts",
+  "chapters": {
+    "1": [
+      { "q": "What does it is not for you to know the times or seasons mean?", "slug": "not-for-you-to-know-the-times-or-seasons", "passage": "ACT.1.7", "kind": "doctrine", "priority": 1 },
+      { "q": "How did Judas die in Acts, and does it contradict Matthew?", "slug": "how-judas-died-in-acts", "passage": "ACT.1.18", "kind": "tension", "priority": 1 },
+      { "q": "Was choosing Matthias by lot the right way to replace Judas?", "slug": "was-choosing-matthias-by-lot-right", "passage": "ACT.1.26", "kind": "practice", "priority": 1 },
+      { "q": "Should Paul have been the twelfth apostle instead of Matthias?", "slug": "should-paul-have-been-the-twelfth-apostle", "passage": "ACT.1.24-26", "kind": "doctrine", "priority": 1 },
+      { "q": "What does you will be my witnesses to the ends of the earth mean?", "slug": "witnesses-to-the-ends-of-the-earth", "passage": "ACT.1.8", "kind": "doctrine", "priority": 1 },
+      { "q": "Why did Jesus stay forty days after the resurrection?", "slug": "why-jesus-stayed-forty-days", "passage": "ACT.1.3", "kind": "doctrine", "priority": 1 },
+      { "q": "Will Jesus return the same way he ascended?", "slug": "will-jesus-return-the-same-way-he-ascended", "passage": "ACT.1.11", "kind": "doctrine", "priority": 1 },
+      { "q": "What is the field of blood in Acts 1:19?", "slug": "the-field-of-blood-acts-1", "passage": "ACT.1.19", "kind": "history", "priority": 2 }
+    ],
+    "2": [
+      { "q": "What happened at Pentecost?", "slug": "what-happened-at-pentecost", "passage": "ACT.2.1-4", "kind": "doctrine", "priority": 1 },
+      { "q": "Were the tongues at Pentecost real human languages?", "slug": "were-the-tongues-at-pentecost-real-languages", "passage": "ACT.2.6-11", "kind": "doctrine", "priority": 1 },
+      { "q": "Does Acts 2:38 mean baptism is required for forgiveness of sins?", "slug": "does-acts-2-38-require-baptism-for-forgiveness", "passage": "ACT.2.38", "kind": "doctrine", "priority": 1 },
+      { "q": "What are the tongues of fire in Acts 2:3?", "slug": "the-tongues-of-fire", "passage": "ACT.2.3", "kind": "phrase", "priority": 1 },
+      { "q": "Does Acts 2:44-45 teach Christian communism?", "slug": "did-the-early-church-practice-communism", "passage": "ACT.2.44-45", "kind": "ethics", "priority": 1 },
+      { "q": "What does the sun turned to darkness and the moon to blood mean in Acts 2?", "slug": "sun-to-darkness-moon-to-blood-acts-2", "passage": "ACT.2.20", "kind": "doctrine", "priority": 1 },
+      { "q": "What are the last days Peter says began at Pentecost?", "slug": "the-last-days-began-at-pentecost", "passage": "ACT.2.17", "kind": "doctrine", "priority": 1 },
+      { "q": "What does your sons and daughters will prophesy mean?", "slug": "your-sons-and-daughters-will-prophesy", "passage": "ACT.2.17", "kind": "doctrine", "priority": 1 },
+      { "q": "Why were people accused of being drunk on new wine?", "slug": "drunk-on-new-wine", "passage": "ACT.2.13", "kind": "phrase", "priority": 1 },
+      { "q": "What does the promise is for you and your children mean about infant baptism?", "slug": "the-promise-is-for-you-and-your-children", "passage": "ACT.2.39", "kind": "doctrine", "priority": 1 },
+      { "q": "What does breaking bread from house to house mean?", "slug": "breaking-bread-from-house-to-house", "passage": "ACT.2.46", "kind": "practice", "priority": 1 },
+      { "q": "What were the four practices the early church devoted itself to?", "slug": "the-four-practices-of-the-early-church", "passage": "ACT.2.42", "kind": "practice", "priority": 1 }
+    ],
+    "3": [
+      { "q": "What does silver and gold I do not have, but what I have I give you mean?", "slug": "silver-and-gold-i-do-not-have", "passage": "ACT.3.6", "kind": "phrase", "priority": 1 },
+      { "q": "What are the times of refreshing in Acts 3:19?", "slug": "the-times-of-refreshing", "passage": "ACT.3.19", "kind": "doctrine", "priority": 1 },
+      { "q": "What is the restoration of all things in Acts 3:21?", "slug": "the-restoration-of-all-things", "passage": "ACT.3.21", "kind": "doctrine", "priority": 1 },
+      { "q": "Who is the prophet like Moses in Acts 3:22?", "slug": "the-prophet-like-moses", "passage": "ACT.3.22", "kind": "identity", "priority": 1 },
+      { "q": "Where was the Beautiful Gate of the temple?", "slug": "the-beautiful-gate", "passage": "ACT.3.2", "kind": "history", "priority": 2 }
+    ],
+    "4": [
+      { "q": "What does there is no other name by which we must be saved mean?", "slug": "no-other-name-by-which-we-must-be-saved", "passage": "ACT.4.12", "kind": "doctrine", "priority": 1 },
+      { "q": "What does they recognized that they had been with Jesus mean?", "slug": "they-had-been-with-jesus", "passage": "ACT.4.13", "kind": "phrase", "priority": 1 },
+      { "q": "What does we cannot stop speaking about what we have seen mean?", "slug": "we-cannot-stop-speaking", "passage": "ACT.4.20", "kind": "practice", "priority": 1 },
+      { "q": "Did the early church really have everything in common?", "slug": "they-had-everything-in-common", "passage": "ACT.4.32-35", "kind": "ethics", "priority": 1 },
+      { "q": "Who was Barnabas and why is he introduced here?", "slug": "who-was-barnabas", "passage": "ACT.4.36-37", "kind": "identity", "priority": 1 },
+      { "q": "What does they were unschooled, ordinary men mean?", "slug": "unschooled-ordinary-men", "passage": "ACT.4.13", "kind": "history", "priority": 2 }
+    ],
+    "5": [
+      { "q": "Why did God kill Ananias and Sapphira?", "slug": "why-god-killed-ananias-and-sapphira", "passage": "ACT.5.1-11", "kind": "ethics", "priority": 1 },
+      { "q": "What exactly was Ananias and Sapphira's sin?", "slug": "what-was-ananias-and-sapphiras-sin", "passage": "ACT.5.3-4", "kind": "doctrine", "priority": 1 },
+      { "q": "What does we must obey God rather than men mean?", "slug": "we-must-obey-god-rather-than-men", "passage": "ACT.5.29", "kind": "ethics", "priority": 1 },
+      { "q": "Did Peter's shadow really heal people?", "slug": "did-peters-shadow-heal-people", "passage": "ACT.5.15", "kind": "history", "priority": 1 },
+      { "q": "Who was Gamaliel and what was his advice?", "slug": "who-was-gamaliel", "passage": "ACT.5.34-39", "kind": "identity", "priority": 1 },
+      { "q": "Why did the apostles rejoice after being flogged?", "slug": "they-rejoiced-after-being-flogged", "passage": "ACT.5.41", "kind": "practice", "priority": 1 },
+      { "q": "Who were Theudas and Judas the Galilean?", "slug": "theudas-and-judas-the-galilean", "passage": "ACT.5.36-37", "kind": "history", "priority": 2 }
+    ],
+    "6": [
+      { "q": "Were the seven men in Acts 6 the first deacons?", "slug": "were-the-seven-in-acts-6-deacons", "passage": "ACT.6.3-6", "kind": "doctrine", "priority": 1 },
+      { "q": "Who were the Hellenists and the Hebrews in Acts 6?", "slug": "hellenists-and-hebrews-in-acts-6", "passage": "ACT.6.1", "kind": "identity", "priority": 1 },
+      { "q": "What does we will devote ourselves to prayer and the ministry of the word mean?", "slug": "devote-ourselves-to-prayer-and-the-word", "passage": "ACT.6.4", "kind": "practice", "priority": 1 },
+      { "q": "Who was Stephen?", "slug": "who-was-stephen", "passage": "ACT.6.5-8", "kind": "identity", "priority": 1 },
+      { "q": "What does his face was like the face of an angel mean?", "slug": "his-face-was-like-an-angel", "passage": "ACT.6.15", "kind": "phrase", "priority": 2 }
+    ],
+    "7": [
+      { "q": "What does I see the Son of Man standing at the right hand of God mean?", "slug": "the-son-of-man-standing-at-the-right-hand", "passage": "ACT.7.56", "kind": "doctrine", "priority": 1 },
+      { "q": "Why does Acts 7:14 say 75 people when Genesis says 70?", "slug": "seventy-five-in-acts-7-versus-seventy", "passage": "ACT.7.14", "kind": "tension", "priority": 1 },
+      { "q": "Why is Stephen's speech the longest in Acts?", "slug": "why-stephens-speech-is-the-longest", "passage": "ACT.7.2-53", "kind": "doctrine", "priority": 1 },
+      { "q": "Why does Stephen say Moses was mighty in words when Exodus says otherwise?", "slug": "moses-mighty-in-words", "passage": "ACT.7.22", "kind": "tension", "priority": 1 },
+      { "q": "What does the Most High does not dwell in houses made by hands mean?", "slug": "god-does-not-dwell-in-houses-made-by-hands", "passage": "ACT.7.48", "kind": "doctrine", "priority": 1 },
+      { "q": "What is the tabernacle of Moloch in Acts 7:43?", "slug": "the-tabernacle-of-moloch", "passage": "ACT.7.43", "kind": "identity", "priority": 1 },
+      { "q": "Why did Stephen pray do not hold this sin against them?", "slug": "do-not-hold-this-sin-against-them", "passage": "ACT.7.60", "kind": "practice", "priority": 1 },
+      { "q": "Why is Saul mentioned at Stephen's stoning?", "slug": "saul-at-stephens-stoning", "passage": "ACT.7.58", "kind": "history", "priority": 1 },
+      { "q": "Why does Stephen say Jesus is standing rather than seated?", "slug": "why-jesus-is-standing-not-seated", "passage": "ACT.7.55-56", "kind": "doctrine", "priority": 1 }
+    ],
+    "8": [
+      { "q": "Who was Simon Magus and what is simony?", "slug": "simon-magus-and-simony", "passage": "ACT.8.9-24", "kind": "identity", "priority": 1 },
+      { "q": "Was Simon Magus truly saved before Peter rebuked him?", "slug": "was-simon-magus-truly-saved", "passage": "ACT.8.13-23", "kind": "doctrine", "priority": 1 },
+      { "q": "Who was the Ethiopian eunuch?", "slug": "who-was-the-ethiopian-eunuch", "passage": "ACT.8.27", "kind": "identity", "priority": 1 },
+      { "q": "Why did the Samaritans receive the Spirit only after the apostles came?", "slug": "why-the-samaritans-received-the-spirit-later", "passage": "ACT.8.14-17", "kind": "doctrine", "priority": 1 },
+      { "q": "Why is Acts 8:37 about believing with all your heart missing from some Bibles?", "slug": "why-acts-8-37-is-missing", "passage": "ACT.8.36-38", "kind": "history", "priority": 1 },
+      { "q": "Did the Spirit physically teleport Philip in Acts 8:39?", "slug": "did-the-spirit-teleport-philip", "passage": "ACT.8.39", "kind": "phrase", "priority": 1 },
+      { "q": "What does how can I understand unless someone explains it mean?", "slug": "how-can-i-understand-unless-someone-explains", "passage": "ACT.8.31", "kind": "practice", "priority": 1 },
+      { "q": "What does your money perish with you mean?", "slug": "your-money-perish-with-you", "passage": "ACT.8.20", "kind": "phrase", "priority": 1 }
+    ],
+    "9": [
+      { "q": "What happened at Saul's conversion on the road to Damascus?", "slug": "sauls-conversion-on-the-road-to-damascus", "passage": "ACT.9.3-9", "kind": "doctrine", "priority": 1 },
+      { "q": "Why did Jesus say why do you persecute me instead of my church?", "slug": "why-do-you-persecute-me", "passage": "ACT.9.4", "kind": "doctrine", "priority": 1 },
+      { "q": "Do the three accounts of Paul's conversion in Acts contradict each other?", "slug": "do-pauls-conversion-accounts-contradict", "passage": "ACT.9.7", "kind": "tension", "priority": 1 },
+      { "q": "What does something like scales fell from his eyes mean?", "slug": "scales-fell-from-his-eyes", "passage": "ACT.9.18", "kind": "phrase", "priority": 1 },
+      { "q": "What does he is a chosen instrument of mine mean?", "slug": "a-chosen-instrument-of-mine", "passage": "ACT.9.15", "kind": "doctrine", "priority": 1 },
+      { "q": "Who was Ananias of Damascus?", "slug": "who-was-ananias-of-damascus", "passage": "ACT.9.10-17", "kind": "identity", "priority": 1 },
+      { "q": "Who was Tabitha or Dorcas?", "slug": "who-was-tabitha-dorcas", "passage": "ACT.9.36-42", "kind": "identity", "priority": 1 },
+      { "q": "Why was Saul lowered over the wall in a basket?", "slug": "saul-lowered-over-the-wall-in-a-basket", "passage": "ACT.9.25", "kind": "history", "priority": 1 },
+      { "q": "What does I will show him how much he must suffer for my name mean?", "slug": "how-much-he-must-suffer-for-my-name", "passage": "ACT.9.16", "kind": "doctrine", "priority": 1 }
+    ],
+    "10": [
+      { "q": "What does Peter's vision of the unclean animals mean?", "slug": "peters-vision-of-the-unclean-animals", "passage": "ACT.10.11-16", "kind": "doctrine", "priority": 1 },
+      { "q": "Does Acts 10 abolish the kosher food laws?", "slug": "does-acts-10-abolish-kosher-laws", "passage": "ACT.10.15", "kind": "doctrine", "priority": 1 },
+      { "q": "What does do not call anything unclean that God has made clean mean?", "slug": "do-not-call-unclean-what-god-has-made-clean", "passage": "ACT.10.15", "kind": "doctrine", "priority": 1 },
+      { "q": "Who was Cornelius and was he saved before Peter came?", "slug": "who-was-cornelius", "passage": "ACT.10.1-2", "kind": "identity", "priority": 1 },
+      { "q": "What does God shows no partiality mean in Acts 10:34?", "slug": "god-shows-no-partiality-acts-10", "passage": "ACT.10.34-35", "kind": "doctrine", "priority": 1 },
+      { "q": "Why did the Gentiles receive the Spirit before being baptized?", "slug": "the-gentiles-received-the-spirit-before-baptism", "passage": "ACT.10.44-48", "kind": "doctrine", "priority": 1 },
+      { "q": "Why did Peter refuse to let Cornelius bow to him?", "slug": "peter-refused-to-let-cornelius-bow", "passage": "ACT.10.25-26", "kind": "doctrine", "priority": 1 }
+    ],
+    "11": [
+      { "q": "Why were believers first called Christians in Antioch?", "slug": "first-called-christians-in-antioch", "passage": "ACT.11.26", "kind": "history", "priority": 1 },
+      { "q": "How did Peter defend baptizing Gentiles to the Jerusalem church?", "slug": "peter-defended-baptizing-gentiles", "passage": "ACT.11.15-18", "kind": "doctrine", "priority": 1 },
+      { "q": "Who was Agabus the prophet?", "slug": "who-was-agabus", "passage": "ACT.11.27-28", "kind": "identity", "priority": 1 },
+      { "q": "What does who was I to stand in God's way mean?", "slug": "who-was-i-to-stand-in-gods-way", "passage": "ACT.11.17", "kind": "phrase", "priority": 2 }
+    ],
+    "12": [
+      { "q": "Why did God let James be killed but rescue Peter?", "slug": "why-god-let-james-die-but-rescued-peter", "passage": "ACT.12.2-11", "kind": "doctrine", "priority": 1 },
+      { "q": "What does it must be his angel mean in Acts 12:15?", "slug": "it-must-be-his-angel", "passage": "ACT.12.15", "kind": "doctrine", "priority": 1 },
+      { "q": "Why was Herod eaten by worms?", "slug": "why-herod-was-eaten-by-worms", "passage": "ACT.12.23", "kind": "history", "priority": 1 },
+      { "q": "Who was Rhoda and why does Luke name her?", "slug": "who-was-rhoda", "passage": "ACT.12.13-15", "kind": "identity", "priority": 1 },
+      { "q": "Why did the praying church not believe Peter was at the door?", "slug": "the-church-did-not-believe-peter-was-at-the-door", "passage": "ACT.12.14-16", "kind": "phrase", "priority": 1 }
+    ],
+    "13": [
+      { "q": "What does as many as were appointed to eternal life believed mean?", "slug": "as-many-as-were-appointed-to-eternal-life", "passage": "ACT.13.48", "kind": "doctrine", "priority": 1 },
+      { "q": "Who was Elymas or Bar-Jesus and why was he struck blind?", "slug": "elymas-bar-jesus-struck-blind", "passage": "ACT.13.6-11", "kind": "identity", "priority": 1 },
+      { "q": "Why did Saul start being called Paul in Acts 13?", "slug": "why-saul-became-called-paul", "passage": "ACT.13.9", "kind": "history", "priority": 1 },
+      { "q": "Why did John Mark leave Paul and Barnabas?", "slug": "why-john-mark-left-paul-and-barnabas", "passage": "ACT.13.13", "kind": "history", "priority": 1 },
+      { "q": "What does we now turn to the Gentiles mean?", "slug": "we-now-turn-to-the-gentiles", "passage": "ACT.13.46", "kind": "doctrine", "priority": 1 },
+      { "q": "What does everyone who believes is freed from everything the law could not free you from mean?", "slug": "freed-from-what-the-law-could-not-free-you-from", "passage": "ACT.13.39", "kind": "doctrine", "priority": 1 },
+      { "q": "How were Paul and Barnabas set apart by the Spirit?", "slug": "set-apart-by-the-spirit-acts-13", "passage": "ACT.13.2-3", "kind": "practice", "priority": 1 }
+    ],
+    "14": [
+      { "q": "Why did the people of Lystra think Paul and Barnabas were Zeus and Hermes?", "slug": "paul-and-barnabas-mistaken-for-zeus-and-hermes", "passage": "ACT.14.11-13", "kind": "history", "priority": 1 },
+      { "q": "Did Paul die when he was stoned at Lystra?", "slug": "did-paul-die-when-stoned-at-lystra", "passage": "ACT.14.19-20", "kind": "history", "priority": 1 },
+      { "q": "What does through many tribulations we must enter the kingdom mean?", "slug": "through-many-tribulations-we-must-enter-the-kingdom", "passage": "ACT.14.22", "kind": "doctrine", "priority": 1 },
+      { "q": "How were elders appointed in the early church?", "slug": "how-elders-were-appointed", "passage": "ACT.14.23", "kind": "practice", "priority": 1 },
+      { "q": "What does God has not left himself without witness mean?", "slug": "god-has-not-left-himself-without-witness", "passage": "ACT.14.17", "kind": "doctrine", "priority": 1 }
+    ],
+    "15": [
+      { "q": "What was decided at the Jerusalem Council?", "slug": "what-was-decided-at-the-jerusalem-council", "passage": "ACT.15.19-20", "kind": "doctrine", "priority": 1 },
+      { "q": "Why are the four prohibitions in Acts 15 still binding, if they are?", "slug": "the-four-prohibitions-of-acts-15", "passage": "ACT.15.20", "kind": "practice", "priority": 1 },
+      { "q": "Should Christians avoid eating blood because of Acts 15?", "slug": "should-christians-avoid-eating-blood", "passage": "ACT.15.20", "kind": "practice", "priority": 1 },
+      { "q": "What is the yoke our fathers could not bear?", "slug": "the-yoke-our-fathers-could-not-bear", "passage": "ACT.15.10", "kind": "phrase", "priority": 1 },
+      { "q": "Why did Paul and Barnabas split over John Mark?", "slug": "why-paul-and-barnabas-split", "passage": "ACT.15.36-40", "kind": "history", "priority": 1 },
+      { "q": "Who was right in the split between Paul and Barnabas?", "slug": "who-was-right-paul-or-barnabas", "passage": "ACT.15.39", "kind": "ethics", "priority": 1 },
+      { "q": "What does it seemed good to the Holy Spirit and to us mean?", "slug": "it-seemed-good-to-the-holy-spirit-and-to-us", "passage": "ACT.15.28", "kind": "doctrine", "priority": 1 },
+      { "q": "Why did James quote Amos about rebuilding David's tent?", "slug": "james-quoted-amos-about-davids-tent", "passage": "ACT.15.16-17", "kind": "doctrine", "priority": 1 }
+    ],
+    "16": [
+      { "q": "Why did Paul circumcise Timothy after the Jerusalem Council?", "slug": "why-paul-circumcised-timothy", "passage": "ACT.16.3", "kind": "tension", "priority": 1 },
+      { "q": "What must I do to be saved, and what was Paul's answer?", "slug": "what-must-i-do-to-be-saved", "passage": "ACT.16.30-31", "kind": "doctrine", "priority": 1 },
+      { "q": "Does you and your household support infant baptism?", "slug": "you-and-your-household-baptism", "passage": "ACT.16.31-33", "kind": "doctrine", "priority": 1 },
+      { "q": "Who was Lydia the seller of purple cloth?", "slug": "who-was-lydia", "passage": "ACT.16.14-15", "kind": "identity", "priority": 1 },
+      { "q": "Why did Paul cast out the spirit from the slave girl who told the truth?", "slug": "the-slave-girl-with-a-spirit-of-divination", "passage": "ACT.16.16-18", "kind": "doctrine", "priority": 1 },
+      { "q": "What was the Macedonian call and how did Paul know it was God?", "slug": "the-macedonian-call", "passage": "ACT.16.9-10", "kind": "practice", "priority": 1 },
+      { "q": "Why did Paul demand a public apology for being beaten?", "slug": "paul-demanded-a-public-apology", "passage": "ACT.16.37", "kind": "ethics", "priority": 1 },
+      { "q": "Where does the we in Acts 16:10 come from?", "slug": "the-we-passages-in-acts", "passage": "ACT.16.10", "kind": "history", "priority": 1 },
+      { "q": "Why did the Spirit forbid Paul from preaching in Asia?", "slug": "the-spirit-forbade-preaching-in-asia", "passage": "ACT.16.6-7", "kind": "doctrine", "priority": 1 }
+    ],
+    "17": [
+      { "q": "What did Paul say at the Areopagus in Athens?", "slug": "pauls-speech-at-the-areopagus", "passage": "ACT.17.22-31", "kind": "doctrine", "priority": 1 },
+      { "q": "What was the altar to an unknown god?", "slug": "the-altar-to-an-unknown-god", "passage": "ACT.17.23", "kind": "history", "priority": 1 },
+      { "q": "What does in him we live and move and have our being mean?", "slug": "in-him-we-live-and-move-and-have-our-being", "passage": "ACT.17.28", "kind": "doctrine", "priority": 1 },
+      { "q": "Why does Paul quote pagan poets in Acts 17?", "slug": "why-paul-quoted-pagan-poets", "passage": "ACT.17.28", "kind": "practice", "priority": 1 },
+      { "q": "What does God overlooked the times of ignorance mean?", "slug": "god-overlooked-the-times-of-ignorance", "passage": "ACT.17.30", "kind": "doctrine", "priority": 1 },
+      { "q": "Why are the Bereans called noble for examining the Scriptures daily?", "slug": "the-bereans-examined-the-scriptures-daily", "passage": "ACT.17.11", "kind": "practice", "priority": 1 },
+      { "q": "What does these men have turned the world upside down mean?", "slug": "turned-the-world-upside-down", "passage": "ACT.17.6", "kind": "phrase", "priority": 1 },
+      { "q": "What does he is not far from any one of us mean?", "slug": "he-is-not-far-from-any-one-of-us", "passage": "ACT.17.27", "kind": "doctrine", "priority": 1 },
+      { "q": "Who were Dionysius and Damaris?", "slug": "dionysius-and-damaris", "passage": "ACT.17.34", "kind": "identity", "priority": 2 }
+    ],
+    "18": [
+      { "q": "Who were Aquila and Priscilla?", "slug": "who-were-aquila-and-priscilla", "passage": "ACT.18.2-3", "kind": "identity", "priority": 1 },
+      { "q": "How does the Gallio inscription help date Paul's ministry?", "slug": "the-gallio-inscription-and-dating-paul", "passage": "ACT.18.12", "kind": "history", "priority": 1 },
+      { "q": "Who was Apollos and what was missing from his teaching?", "slug": "who-was-apollos", "passage": "ACT.18.24-26", "kind": "identity", "priority": 1 },
+      { "q": "Why did Priscilla and Aquila teach Apollos?", "slug": "priscilla-and-aquila-taught-apollos", "passage": "ACT.18.26", "kind": "doctrine", "priority": 1 },
+      { "q": "Why did Paul shave his head as part of a vow?", "slug": "why-paul-shaved-his-head", "passage": "ACT.18.18", "kind": "practice", "priority": 1 },
+      { "q": "What does your blood be on your own heads mean?", "slug": "your-blood-be-on-your-own-heads", "passage": "ACT.18.6", "kind": "phrase", "priority": 1 },
+      { "q": "Why was Paul a tentmaker while preaching?", "slug": "paul-was-a-tentmaker", "passage": "ACT.18.3", "kind": "practice", "priority": 1 }
+    ],
+    "19": [
+      { "q": "Did you receive the Holy Spirit when you believed?", "slug": "did-you-receive-the-holy-spirit-when-you-believed", "passage": "ACT.19.2", "kind": "doctrine", "priority": 1 },
+      { "q": "Who were the Ephesian disciples who had not heard of the Holy Spirit?", "slug": "the-ephesian-disciples-who-had-not-heard-of-the-spirit", "passage": "ACT.19.1-7", "kind": "identity", "priority": 1 },
+      { "q": "Did handkerchiefs touched by Paul really heal people?", "slug": "handkerchiefs-and-aprons-that-healed", "passage": "ACT.19.11-12", "kind": "doctrine", "priority": 1 },
+      { "q": "What happened to the seven sons of Sceva?", "slug": "the-sons-of-sceva", "passage": "ACT.19.13-16", "kind": "identity", "priority": 1 },
+      { "q": "How much were the burned magic books worth?", "slug": "how-much-the-burned-magic-books-were-worth", "passage": "ACT.19.19", "kind": "number", "priority": 1 },
+      { "q": "Why did the Ephesians burn their magic scrolls?", "slug": "why-the-ephesians-burned-their-magic-scrolls", "passage": "ACT.19.18-19", "kind": "practice", "priority": 1 },
+      { "q": "Why did Demetrius the silversmith start a riot?", "slug": "demetrius-the-silversmith-riot", "passage": "ACT.19.24-27", "kind": "history", "priority": 1 },
+      { "q": "Who was Artemis of the Ephesians?", "slug": "who-was-artemis-of-the-ephesians", "passage": "ACT.19.28", "kind": "identity", "priority": 1 },
+      { "q": "Why is Christianity called the Way in Acts?", "slug": "why-christianity-was-called-the-way", "passage": "ACT.19.23", "kind": "history", "priority": 1 }
+    ],
+    "20": [
+      { "q": "Where does it is more blessed to give than to receive come from?", "slug": "more-blessed-to-give-than-to-receive", "passage": "ACT.20.35", "kind": "history", "priority": 1 },
+      { "q": "Did Eutychus really die when he fell out the window?", "slug": "did-eutychus-really-die", "passage": "ACT.20.9-10", "kind": "history", "priority": 1 },
+      { "q": "Does Acts 20:7 show the church met on Sunday?", "slug": "does-acts-20-7-show-sunday-worship", "passage": "ACT.20.7", "kind": "practice", "priority": 1 },
+      { "q": "What does the church of God which he bought with his own blood mean?", "slug": "purchased-with-his-own-blood", "passage": "ACT.20.28", "kind": "doctrine", "priority": 1 },
+      { "q": "Who are the savage wolves Paul warned about?", "slug": "savage-wolves-will-come-in", "passage": "ACT.20.29-30", "kind": "identity", "priority": 1 },
+      { "q": "What does I am innocent of the blood of all mean?", "slug": "i-am-innocent-of-the-blood-of-all", "passage": "ACT.20.26", "kind": "phrase", "priority": 1 },
+      { "q": "What is the whole counsel of God Paul declared?", "slug": "the-whole-counsel-of-god", "passage": "ACT.20.27", "kind": "practice", "priority": 1 },
+      { "q": "What does I do not count my life of any value to myself mean?", "slug": "i-do-not-count-my-life-of-value-to-myself", "passage": "ACT.20.24", "kind": "practice", "priority": 1 }
+    ],
+    "21": [
+      { "q": "Why did Paul ignore the Spirit's warning not to go to Jerusalem?", "slug": "why-paul-ignored-the-warning-about-jerusalem", "passage": "ACT.21.4", "kind": "tension", "priority": 1 },
+      { "q": "What did Agabus mean by binding his own hands with Paul's belt?", "slug": "agabus-and-pauls-belt", "passage": "ACT.21.11", "kind": "phrase", "priority": 1 },
+      { "q": "Why did Paul take part in a temple purification ritual?", "slug": "why-paul-took-part-in-a-temple-ritual", "passage": "ACT.21.23-26", "kind": "tension", "priority": 1 },
+      { "q": "What does the will of the Lord be done mean in Acts 21:14?", "slug": "the-will-of-the-lord-be-done", "passage": "ACT.21.14", "kind": "practice", "priority": 1 },
+      { "q": "Who were Philip's four prophesying daughters?", "slug": "philips-four-prophesying-daughters", "passage": "ACT.21.9", "kind": "identity", "priority": 1 },
+      { "q": "Why was Paul mistaken for the Egyptian revolutionary?", "slug": "paul-mistaken-for-the-egyptian", "passage": "ACT.21.38", "kind": "history", "priority": 2 }
+    ],
+    "22": [
+      { "q": "What does arise and be baptized and wash away your sins mean?", "slug": "be-baptized-and-wash-away-your-sins", "passage": "ACT.22.16", "kind": "doctrine", "priority": 1 },
+      { "q": "How was Paul born a Roman citizen?", "slug": "how-paul-was-born-a-roman-citizen", "passage": "ACT.22.28", "kind": "history", "priority": 1 },
+      { "q": "What does I was educated at the feet of Gamaliel mean?", "slug": "educated-at-the-feet-of-gamaliel", "passage": "ACT.22.3", "kind": "history", "priority": 1 },
+      { "q": "Why did the crowd riot when Paul mentioned the Gentiles?", "slug": "the-crowd-rioted-over-the-gentiles", "passage": "ACT.22.21-22", "kind": "history", "priority": 1 },
+      { "q": "Why did Paul speak in Hebrew or Aramaic to the crowd?", "slug": "why-paul-spoke-in-hebrew-to-the-crowd", "passage": "ACT.22.2", "kind": "history", "priority": 2 }
+    ],
+    "23": [
+      { "q": "Why did Paul apologize for insulting the high priest?", "slug": "paul-apologized-to-the-high-priest", "passage": "ACT.23.5", "kind": "ethics", "priority": 1 },
+      { "q": "Did Paul really not know Ananias was the high priest?", "slug": "did-paul-know-ananias-was-high-priest", "passage": "ACT.23.5", "kind": "tension", "priority": 1 },
+      { "q": "Was Paul manipulating the Sanhedrin by mentioning the resurrection?", "slug": "was-paul-manipulating-the-sanhedrin", "passage": "ACT.23.6", "kind": "ethics", "priority": 1 },
+      { "q": "What is the difference between Pharisees and Sadducees on the resurrection?", "slug": "pharisees-versus-sadducees-on-the-resurrection", "passage": "ACT.23.8", "kind": "doctrine", "priority": 1 },
+      { "q": "Who was Paul's nephew who exposed the plot?", "slug": "pauls-nephew-exposed-the-plot", "passage": "ACT.23.16", "kind": "identity", "priority": 1 },
+      { "q": "Why did forty men vow not to eat until Paul was dead?", "slug": "forty-men-vowed-not-to-eat", "passage": "ACT.23.12-14", "kind": "history", "priority": 1 }
+    ],
+    "24": [
+      { "q": "What does a resurrection of both the just and the unjust mean?", "slug": "a-resurrection-of-the-just-and-the-unjust", "passage": "ACT.24.15", "kind": "doctrine", "priority": 1 },
+      { "q": "Why was Felix alarmed when Paul spoke about self-control and judgment?", "slug": "felix-was-alarmed", "passage": "ACT.24.25", "kind": "phrase", "priority": 1 },
+      { "q": "Why did Felix leave Paul in prison for two years?", "slug": "why-felix-left-paul-in-prison-two-years", "passage": "ACT.24.27", "kind": "history", "priority": 1 },
+      { "q": "What does I strive to keep my conscience clear before God and man mean?", "slug": "a-clear-conscience-before-god-and-man", "passage": "ACT.24.16", "kind": "practice", "priority": 2 }
+    ],
+    "25": [
+      { "q": "Why did Paul appeal to Caesar?", "slug": "why-paul-appealed-to-caesar", "passage": "ACT.25.11", "kind": "history", "priority": 1 },
+      { "q": "Who were King Agrippa and Bernice?", "slug": "who-were-agrippa-and-bernice", "passage": "ACT.25.13", "kind": "identity", "priority": 1 },
+      { "q": "What was a Roman citizen's right of appeal?", "slug": "a-roman-citizens-right-of-appeal", "passage": "ACT.25.10-12", "kind": "history", "priority": 2 }
+    ],
+    "26": [
+      { "q": "What does it is hard for you to kick against the goads mean?", "slug": "kick-against-the-goads", "passage": "ACT.26.14", "kind": "phrase", "priority": 1 },
+      { "q": "What does Agrippa's almost persuaded mean?", "slug": "almost-persuaded-agrippa", "passage": "ACT.26.28", "kind": "phrase", "priority": 1 },
+      { "q": "Why did Festus say Paul, you are out of your mind?", "slug": "paul-you-are-out-of-your-mind", "passage": "ACT.26.24", "kind": "phrase", "priority": 1 },
+      { "q": "What does I was not disobedient to the heavenly vision mean?", "slug": "not-disobedient-to-the-heavenly-vision", "passage": "ACT.26.19", "kind": "practice", "priority": 1 },
+      { "q": "What does to open their eyes and turn them from darkness to light mean?", "slug": "to-turn-them-from-darkness-to-light", "passage": "ACT.26.18", "kind": "doctrine", "priority": 1 },
+      { "q": "What does none of this has escaped his notice mean?", "slug": "none-of-this-has-escaped-his-notice", "passage": "ACT.26.26", "kind": "phrase", "priority": 2 }
+    ],
+    "27": [
+      { "q": "What was the Euroclydon or northeaster that wrecked Paul's ship?", "slug": "the-northeaster-that-wrecked-pauls-ship", "passage": "ACT.27.14", "kind": "history", "priority": 1 },
+      { "q": "How did the angel's promise fit with Paul's warning about the sailors?", "slug": "the-angels-promise-and-the-sailors", "passage": "ACT.27.22-31", "kind": "tension", "priority": 1 },
+      { "q": "How many people were on the ship with Paul?", "slug": "how-many-were-on-pauls-ship", "passage": "ACT.27.37", "kind": "number", "priority": 1 },
+      { "q": "Why did Paul urge everyone to eat before the shipwreck?", "slug": "paul-urged-them-to-eat", "passage": "ACT.27.33-36", "kind": "practice", "priority": 2 },
+      { "q": "How accurate is Luke's description of ancient seafaring?", "slug": "lukes-accuracy-about-seafaring", "passage": "ACT.27.27-29", "kind": "history", "priority": 1 }
+    ],
+    "28": [
+      { "q": "Why did the viper bite not harm Paul on Malta?", "slug": "the-viper-on-malta", "passage": "ACT.28.3-6", "kind": "history", "priority": 1 },
+      { "q": "Why does Acts end abruptly without telling us what happened to Paul?", "slug": "why-acts-ends-abruptly", "passage": "ACT.28.30-31", "kind": "history", "priority": 1 },
+      { "q": "What happened to Paul after the two years of house arrest?", "slug": "what-happened-to-paul-after-acts", "passage": "ACT.28.30", "kind": "history", "priority": 1 },
+      { "q": "Why did the Maltese first think Paul was a murderer, then a god?", "slug": "the-maltese-thought-paul-was-a-god", "passage": "ACT.28.4-6", "kind": "history", "priority": 1 },
+      { "q": "What does this salvation has been sent to the Gentiles mean?", "slug": "salvation-sent-to-the-gentiles", "passage": "ACT.28.28", "kind": "doctrine", "priority": 1 },
+      { "q": "Why does Paul quote Isaiah about hearts being hardened?", "slug": "paul-quoted-isaiah-about-hardened-hearts", "passage": "ACT.28.26-27", "kind": "doctrine", "priority": 1 },
+      { "q": "What does preaching unhindered mean as the last word of Acts?", "slug": "preaching-unhindered", "passage": "ACT.28.31", "kind": "phrase", "priority": 1 }
+    ]
+  }
+}

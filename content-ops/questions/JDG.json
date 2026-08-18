@@ -1,0 +1,122 @@
+{
+  "book": "JDG",
+  "name": "Judges",
+  "chapters": {
+    "1": [
+      { "q": "Why did Israel cut off Adoni-bezek's thumbs and big toes?", "slug": "adoni-bezeks-thumbs-and-toes", "passage": "JDG.1.6-7", "kind": "history", "priority": 1 },
+      { "q": "Why did the tribes fail to drive out the Canaanites?", "slug": "why-the-tribes-failed-to-drive-out-the-canaanites", "passage": "JDG.1.19-33", "kind": "doctrine", "priority": 1 }
+    ],
+    "2": [
+      { "q": "What is the cycle of sin in the book of Judges?", "slug": "the-cycle-of-sin-in-judges", "passage": "JDG.2.11-19", "kind": "doctrine", "priority": 1 },
+      { "q": "What does a generation arose that did not know the LORD mean?", "slug": "a-generation-that-did-not-know-the-lord", "passage": "JDG.2.10", "kind": "doctrine", "priority": 1 },
+      { "q": "Why did the angel of the LORD weep at Bochim?", "slug": "the-angel-at-bochim", "passage": "JDG.2.1-5", "kind": "phrase", "priority": 1 },
+      { "q": "Why did God leave the nations to test Israel?", "slug": "god-left-the-nations-to-test-israel", "passage": "JDG.2.21-23", "kind": "doctrine", "priority": 1 }
+    ],
+    "3": [
+      { "q": "How did Ehud kill King Eglon?", "slug": "how-ehud-killed-king-eglon", "passage": "JDG.3.20-22", "kind": "history", "priority": 1 },
+      { "q": "Why does Judges describe Eglon's fat closing over the sword?", "slug": "eglons-fat-closed-over-the-sword", "passage": "JDG.3.22", "kind": "phrase", "priority": 1 },
+      { "q": "Was Ehud's assassination of Eglon morally right?", "slug": "was-ehuds-assassination-right", "passage": "JDG.3.15-23", "kind": "ethics", "priority": 1 },
+      { "q": "Who was Shamgar and what is an oxgoad?", "slug": "who-was-shamgar-and-the-oxgoad", "passage": "JDG.3.31", "kind": "identity", "priority": 1 },
+      { "q": "Who was Othniel, Israel's first judge?", "slug": "who-was-othniel", "passage": "JDG.3.9-11", "kind": "identity", "priority": 1 }
+    ],
+    "4": [
+      { "q": "Who was Deborah and how could a woman lead Israel?", "slug": "who-was-deborah", "passage": "JDG.4.4-5", "kind": "identity", "priority": 1 },
+      { "q": "Why did Jael drive a tent peg through Sisera's head?", "slug": "jael-and-the-tent-peg", "passage": "JDG.4.21", "kind": "ethics", "priority": 1 },
+      { "q": "Was Jael's killing of Sisera a betrayal of hospitality?", "slug": "was-jaels-killing-a-betrayal-of-hospitality", "passage": "JDG.4.18-21", "kind": "ethics", "priority": 1 },
+      { "q": "Why did Barak refuse to go without Deborah?", "slug": "why-barak-refused-to-go-without-deborah", "passage": "JDG.4.8-9", "kind": "ethics", "priority": 1 }
+    ],
+    "5": [
+      { "q": "What does the stars fought from heaven mean in Deborah's song?", "slug": "the-stars-fought-from-heaven", "passage": "JDG.5.20", "kind": "phrase", "priority": 1 },
+      { "q": "Why does Deborah's song curse Meroz?", "slug": "the-curse-of-meroz", "passage": "JDG.5.23", "kind": "phrase", "priority": 1 },
+      { "q": "Why does Deborah's song describe Sisera's mother waiting?", "slug": "siseras-mother-waiting-at-the-window", "passage": "JDG.5.28-30", "kind": "phrase", "priority": 1 },
+      { "q": "What does I, Deborah, arose as a mother in Israel mean?", "slug": "a-mother-in-israel", "passage": "JDG.5.7", "kind": "phrase", "priority": 1 }
+    ],
+    "6": [
+      { "q": "Was Gideon's fleece an example to follow or a lack of faith?", "slug": "was-gideons-fleece-faith-or-doubt", "passage": "JDG.6.36-40", "kind": "practice", "priority": 1 },
+      { "q": "Should Christians put out a fleece to find God's will?", "slug": "should-christians-put-out-a-fleece", "passage": "JDG.6.36-40", "kind": "practice", "priority": 1 },
+      { "q": "Why did the angel call Gideon a mighty warrior while he was hiding?", "slug": "the-lord-is-with-you-mighty-warrior", "passage": "JDG.6.12", "kind": "phrase", "priority": 1 },
+      { "q": "Why did Gideon tear down his father's altar to Baal at night?", "slug": "gideon-tore-down-baals-altar-at-night", "passage": "JDG.6.25-27", "kind": "practice", "priority": 1 },
+      { "q": "What does the name Jerubbaal mean?", "slug": "what-jerubbaal-means", "passage": "JDG.6.32", "kind": "phrase", "priority": 1 },
+      { "q": "What does the LORD is peace, Jehovah Shalom, mean?", "slug": "jehovah-shalom-the-lord-is-peace", "passage": "JDG.6.24", "kind": "phrase", "priority": 1 }
+    ],
+    "7": [
+      { "q": "Why did God reduce Gideon's army to 300 men?", "slug": "why-god-reduced-gideons-army-to-300", "passage": "JDG.7.2-7", "kind": "doctrine", "priority": 1 },
+      { "q": "What was the lapping water test in Judges 7?", "slug": "the-lapping-water-test", "passage": "JDG.7.5-7", "kind": "history", "priority": 1 },
+      { "q": "How did trumpets and clay jars win the battle?", "slug": "trumpets-and-clay-jars-won-the-battle", "passage": "JDG.7.19-22", "kind": "history", "priority": 1 },
+      { "q": "Why did God let Gideon overhear an enemy's dream?", "slug": "gideon-overheard-an-enemys-dream", "passage": "JDG.7.13-15", "kind": "phrase", "priority": 1 }
+    ],
+    "8": [
+      { "q": "Why did Gideon make an ephod that became a snare?", "slug": "gideons-ephod-became-a-snare", "passage": "JDG.8.27", "kind": "ethics", "priority": 1 },
+      { "q": "How did Gideon have seventy sons?", "slug": "gideons-seventy-sons", "passage": "JDG.8.30", "kind": "ethics", "priority": 1 },
+      { "q": "Why did Gideon refuse to be king but act like one?", "slug": "gideon-refused-to-be-king-but-acted-like-one", "passage": "JDG.8.22-27", "kind": "ethics", "priority": 1 }
+    ],
+    "9": [
+      { "q": "What does the parable of the trees in Judges 9 mean?", "slug": "the-parable-of-the-trees", "passage": "JDG.9.8-15", "kind": "doctrine", "priority": 1 },
+      { "q": "How did Abimelech die from a millstone dropped by a woman?", "slug": "abimelech-killed-by-a-millstone", "passage": "JDG.9.53-54", "kind": "history", "priority": 1 },
+      { "q": "Why did Abimelech kill his seventy brothers?", "slug": "abimelech-killed-his-seventy-brothers", "passage": "JDG.9.5", "kind": "ethics", "priority": 1 },
+      { "q": "What is the bramble that offers shade in Jotham's parable?", "slug": "the-bramble-in-jothams-parable", "passage": "JDG.9.14-15", "kind": "phrase", "priority": 2 }
+    ],
+    "10": [
+      { "q": "What does the LORD said, I will save you no more mean?", "slug": "i-will-save-you-no-more", "passage": "JDG.10.13-14", "kind": "doctrine", "priority": 1 }
+    ],
+    "11": [
+      { "q": "Did Jephthah actually sacrifice his daughter?", "slug": "did-jephthah-sacrifice-his-daughter", "passage": "JDG.11.30-40", "kind": "ethics", "priority": 1 },
+      { "q": "What was Jephthah's vow and why was it so foolish?", "slug": "jephthahs-vow", "passage": "JDG.11.30-31", "kind": "ethics", "priority": 1 },
+      { "q": "Why is Jephthah praised in Hebrews 11 despite his vow?", "slug": "why-jephthah-is-praised-in-hebrews-11", "passage": "JDG.11.32-33", "kind": "tension", "priority": 1 },
+      { "q": "Why did Jephthah's daughter mourn her virginity?", "slug": "jephthahs-daughter-mourned-her-virginity", "passage": "JDG.11.37-38", "kind": "phrase", "priority": 1 },
+      { "q": "Who was Jephthah and why was he driven out by his brothers?", "slug": "who-was-jephthah", "passage": "JDG.11.1-3", "kind": "identity", "priority": 1 }
+    ],
+    "12": [
+      { "q": "What is a shibboleth and why did it get 42,000 people killed?", "slug": "what-is-a-shibboleth", "passage": "JDG.12.5-6", "kind": "history", "priority": 1 }
+    ],
+    "13": [
+      { "q": "What was Samson's Nazirite vow?", "slug": "samsons-nazirite-vow", "passage": "JDG.13.4-5", "kind": "doctrine", "priority": 1 },
+      { "q": "Who was the angel who appeared to Samson's parents?", "slug": "the-angel-who-appeared-to-samsons-parents", "passage": "JDG.13.17-22", "kind": "identity", "priority": 1 },
+      { "q": "Why would the angel not give his name to Manoah?", "slug": "why-the-angel-would-not-give-his-name", "passage": "JDG.13.18", "kind": "phrase", "priority": 1 }
+    ],
+    "14": [
+      { "q": "What was Samson's riddle about the lion and the honey?", "slug": "samsons-riddle-about-the-lion-and-honey", "passage": "JDG.14.14", "kind": "history", "priority": 1 },
+      { "q": "What does out of the strong came something sweet mean?", "slug": "out-of-the-strong-came-something-sweet", "passage": "JDG.14.14", "kind": "phrase", "priority": 1 },
+      { "q": "Why did Samson marry a Philistine woman?", "slug": "why-samson-married-a-philistine", "passage": "JDG.14.1-4", "kind": "ethics", "priority": 1 },
+      { "q": "What does it was from the LORD mean about Samson's Philistine marriage?", "slug": "it-was-from-the-lord-samsons-marriage", "passage": "JDG.14.4", "kind": "doctrine", "priority": 1 },
+      { "q": "Did Samson break his Nazirite vow by eating honey from a carcass?", "slug": "did-samson-break-his-vow-eating-honey", "passage": "JDG.14.8-9", "kind": "ethics", "priority": 1 }
+    ],
+    "15": [
+      { "q": "Did Samson really tie torches to 300 foxes?", "slug": "samson-and-the-three-hundred-foxes", "passage": "JDG.15.4-5", "kind": "history", "priority": 1 },
+      { "q": "How did Samson kill a thousand men with a donkey's jawbone?", "slug": "the-jawbone-of-a-donkey", "passage": "JDG.15.15-16", "kind": "history", "priority": 1 },
+      { "q": "Why did God give Samson water from a hollow place?", "slug": "water-from-the-hollow-place", "passage": "JDG.15.18-19", "kind": "phrase", "priority": 1 }
+    ],
+    "16": [
+      { "q": "Was Samson's strength really in his hair?", "slug": "was-samsons-strength-in-his-hair", "passage": "JDG.16.17", "kind": "doctrine", "priority": 1 },
+      { "q": "Why did Samson keep going back to Delilah?", "slug": "why-samson-kept-going-back-to-delilah", "passage": "JDG.16.6-17", "kind": "practice", "priority": 1 },
+      { "q": "Who was Delilah and was she a Philistine?", "slug": "who-was-delilah", "passage": "JDG.16.4-5", "kind": "identity", "priority": 1 },
+      { "q": "What does the LORD had left him mean about Samson?", "slug": "the-lord-had-left-him", "passage": "JDG.16.20", "kind": "doctrine", "priority": 1 },
+      { "q": "Was Samson's death a suicide?", "slug": "was-samsons-death-a-suicide", "passage": "JDG.16.28-30", "kind": "ethics", "priority": 1 },
+      { "q": "How did Samson bring down the temple of Dagon?", "slug": "how-samson-brought-down-the-temple", "passage": "JDG.16.29-30", "kind": "history", "priority": 1 },
+      { "q": "Why is Samson listed as a hero of faith in Hebrews 11?", "slug": "why-samson-is-a-hero-of-faith", "passage": "JDG.16.28", "kind": "tension", "priority": 1 }
+    ],
+    "17": [
+      { "q": "What does everyone did what was right in his own eyes mean?", "slug": "everyone-did-what-was-right-in-his-own-eyes", "passage": "JDG.17.6", "kind": "doctrine", "priority": 1 },
+      { "q": "Why did Micah hire a Levite as a personal priest?", "slug": "micah-hired-a-levite-as-a-priest", "passage": "JDG.17.7-13", "kind": "ethics", "priority": 1 },
+      { "q": "How could Micah's mother dedicate silver to the LORD and make an idol?", "slug": "silver-dedicated-to-the-lord-made-into-an-idol", "passage": "JDG.17.3-4", "kind": "ethics", "priority": 1 }
+    ],
+    "18": [
+      { "q": "Why did the tribe of Dan steal Micah's idols and priest?", "slug": "dan-stole-micahs-idols-and-priest", "passage": "JDG.18.14-20", "kind": "ethics", "priority": 1 }
+    ],
+    "19": [
+      { "q": "What happened to the Levite's concubine in Judges 19?", "slug": "the-levites-concubine", "passage": "JDG.19.25-29", "kind": "ethics", "priority": 1 },
+      { "q": "Why is Judges 19 in the Bible at all?", "slug": "why-judges-19-is-in-the-bible", "passage": "JDG.19.29-30", "kind": "doctrine", "priority": 1 },
+      { "q": "How does Judges 19 parallel Genesis 19 and Sodom?", "slug": "judges-19-parallels-sodom", "passage": "JDG.19.22-24", "kind": "doctrine", "priority": 1 },
+      { "q": "Why did the Levite cut his concubine into twelve pieces?", "slug": "cut-into-twelve-pieces", "passage": "JDG.19.29", "kind": "history", "priority": 1 }
+    ],
+    "20": [
+      { "q": "Why did Israel go to war against the tribe of Benjamin?", "slug": "the-civil-war-against-benjamin", "passage": "JDG.20.12-14", "kind": "history", "priority": 1 },
+      { "q": "Why did Israel lose the first two battles if God told them to fight?", "slug": "why-israel-lost-the-first-two-battles", "passage": "JDG.20.18-25", "kind": "tension", "priority": 1 }
+    ],
+    "21": [
+      { "q": "How did Israel find wives for the surviving Benjamites?", "slug": "wives-for-the-benjamites", "passage": "JDG.21.19-23", "kind": "ethics", "priority": 1 },
+      { "q": "Why did Israel destroy Jabesh-gilead to solve their own oath problem?", "slug": "the-destruction-of-jabesh-gilead", "passage": "JDG.21.8-12", "kind": "ethics", "priority": 1 },
+      { "q": "Why does Judges end with everyone doing as they saw fit?", "slug": "why-judges-ends-with-everyone-doing-as-they-saw-fit", "passage": "JDG.21.25", "kind": "doctrine", "priority": 1 }
+    ]
+  }
+}

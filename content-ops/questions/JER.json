@@ -1,0 +1,219 @@
+{
+  "book": "JER",
+  "name": "Jeremiah",
+  "chapters": {
+    "1": [
+      { "q": "What does before I formed you in the womb I knew you mean?", "slug": "before-i-formed-you-in-the-womb-i-knew-you", "passage": "JER.1.5", "kind": "doctrine", "priority": 1 },
+      { "q": "Does Jeremiah 1:5 apply to everyone or only to Jeremiah?", "slug": "does-jeremiah-1-5-apply-to-everyone", "passage": "JER.1.5", "kind": "doctrine", "priority": 1 },
+      { "q": "What does the almond branch vision mean?", "slug": "the-almond-branch-vision", "passage": "JER.1.11-12", "kind": "phrase", "priority": 1 },
+      { "q": "What does the boiling pot tilting from the north mean?", "slug": "the-boiling-pot-from-the-north", "passage": "JER.1.13-15", "kind": "phrase", "priority": 1 },
+      { "q": "What does I am only a youth mean about Jeremiah's calling?", "slug": "i-am-only-a-youth", "passage": "JER.1.6-7", "kind": "practice", "priority": 1 },
+      { "q": "What does I have put my words in your mouth mean?", "slug": "i-have-put-my-words-in-your-mouth", "passage": "JER.1.9", "kind": "doctrine", "priority": 1 }
+    ],
+    "2": [
+      { "q": "What are the broken cisterns in Jeremiah 2:13?", "slug": "broken-cisterns-that-hold-no-water", "passage": "JER.2.13", "kind": "phrase", "priority": 1 },
+      { "q": "What are the two evils Israel committed?", "slug": "the-two-evils-israel-committed", "passage": "JER.2.13", "kind": "doctrine", "priority": 1 },
+      { "q": "What does I remember the devotion of your youth mean?", "slug": "the-devotion-of-your-youth", "passage": "JER.2.2", "kind": "phrase", "priority": 1 }
+    ],
+    "3": [
+      { "q": "How could God take back an unfaithful Israel he had divorced?", "slug": "how-god-could-take-back-a-divorced-israel", "passage": "JER.3.1-8", "kind": "tension", "priority": 1 },
+      { "q": "What does return, faithless Israel mean?", "slug": "return-faithless-israel", "passage": "JER.3.12", "kind": "practice", "priority": 1 }
+    ],
+    "4": [
+      { "q": "Why does Jeremiah 4:23 use the same words as Genesis 1:2 about the earth?", "slug": "the-earth-without-form-and-void-jeremiah-4", "passage": "JER.4.23", "kind": "tension", "priority": 1 },
+      { "q": "What does circumcise yourselves to the LORD mean?", "slug": "circumcise-yourselves-to-the-lord", "passage": "JER.4.4", "kind": "doctrine", "priority": 1 }
+    ],
+    "5": [
+      { "q": "Why could God not find one honest person in Jerusalem?", "slug": "not-one-honest-person-in-jerusalem", "passage": "JER.5.1", "kind": "ethics", "priority": 1 },
+      { "q": "What does my people love to have it so mean?", "slug": "my-people-love-to-have-it-so", "passage": "JER.5.31", "kind": "ethics", "priority": 1 }
+    ],
+    "6": [
+      { "q": "What does ask for the ancient paths mean?", "slug": "ask-for-the-ancient-paths", "passage": "JER.6.16", "kind": "practice", "priority": 1 },
+      { "q": "What does they say peace, peace when there is no peace mean?", "slug": "peace-peace-when-there-is-no-peace", "passage": "JER.6.14", "kind": "ethics", "priority": 1 }
+    ],
+    "7": [
+      { "q": "What does do not trust in deceptive words, the temple of the LORD mean?", "slug": "the-temple-of-the-lord-deceptive-words", "passage": "JER.7.4", "kind": "doctrine", "priority": 1 },
+      { "q": "Why does Jeremiah 7:22 say God did not command burnt offerings?", "slug": "did-god-command-burnt-offerings", "passage": "JER.7.22-23", "kind": "tension", "priority": 1 },
+      { "q": "Who is the queen of heaven in Jeremiah 7:18?", "slug": "the-queen-of-heaven-jeremiah-7", "passage": "JER.7.18", "kind": "identity", "priority": 1 },
+      { "q": "What happened at Shiloh that Jeremiah warns about?", "slug": "what-happened-at-shiloh", "passage": "JER.7.12-14", "kind": "history", "priority": 1 },
+      { "q": "Why did God tell Jeremiah not to pray for the people?", "slug": "do-not-pray-for-this-people", "passage": "JER.7.16", "kind": "doctrine", "priority": 1 }
+    ],
+    "8": [
+      { "q": "What does is there no balm in Gilead mean?", "slug": "is-there-no-balm-in-gilead", "passage": "JER.8.22", "kind": "phrase", "priority": 1 },
+      { "q": "What does the harvest is past, the summer is ended mean?", "slug": "the-harvest-is-past-the-summer-is-ended", "passage": "JER.8.20", "kind": "phrase", "priority": 1 }
+    ],
+    "9": [
+      { "q": "What does let not the wise boast in his wisdom mean?", "slug": "let-not-the-wise-boast-in-his-wisdom", "passage": "JER.9.23-24", "kind": "doctrine", "priority": 1 },
+      { "q": "What does oh that my head were waters and my eyes a fountain of tears mean?", "slug": "my-eyes-a-fountain-of-tears", "passage": "JER.9.1", "kind": "phrase", "priority": 1 },
+      { "q": "Why is Jeremiah called the weeping prophet?", "slug": "why-jeremiah-is-called-the-weeping-prophet", "passage": "JER.9.1", "kind": "history", "priority": 1 }
+    ],
+    "10": [
+      { "q": "Does Jeremiah 10:1-5 forbid Christmas trees?", "slug": "does-jeremiah-10-forbid-christmas-trees", "passage": "JER.10.2-5", "kind": "claim", "priority": 1 },
+      { "q": "What does the way of man is not in himself mean?", "slug": "the-way-of-man-is-not-in-himself", "passage": "JER.10.23", "kind": "doctrine", "priority": 1 },
+      { "q": "What does idols cannot speak, they must be carried mean?", "slug": "idols-must-be-carried", "passage": "JER.10.5", "kind": "doctrine", "priority": 1 }
+    ],
+    "11": [
+      { "q": "What was the conspiracy against Jeremiah in his hometown?", "slug": "the-conspiracy-against-jeremiah", "passage": "JER.11.18-23", "kind": "history", "priority": 1 }
+    ],
+    "12": [
+      { "q": "Why does the way of the wicked prosper?", "slug": "why-does-the-way-of-the-wicked-prosper", "passage": "JER.12.1", "kind": "doctrine", "priority": 1 },
+      { "q": "What does if you stumble in an easy race, what about a hard one mean?", "slug": "if-you-stumble-in-an-easy-race", "passage": "JER.12.5", "kind": "practice", "priority": 1 }
+    ],
+    "13": [
+      { "q": "What does the ruined linen belt mean?", "slug": "the-ruined-linen-belt", "passage": "JER.13.1-11", "kind": "phrase", "priority": 1 },
+      { "q": "What does can the Ethiopian change his skin mean?", "slug": "can-the-ethiopian-change-his-skin", "passage": "JER.13.23", "kind": "doctrine", "priority": 1 }
+    ],
+    "14": [
+      { "q": "Why did God refuse to accept Israel's fasting and prayers?", "slug": "god-refused-their-fasting-and-prayers", "passage": "JER.14.11-12", "kind": "doctrine", "priority": 1 }
+    ],
+    "15": [
+      { "q": "Why does God say even Moses and Samuel could not change his mind?", "slug": "even-moses-and-samuel-could-not-change-his-mind", "passage": "JER.15.1", "kind": "doctrine", "priority": 1 },
+      { "q": "What does your words became a joy and the delight of my heart mean?", "slug": "your-words-became-a-joy-to-me", "passage": "JER.15.16", "kind": "practice", "priority": 1 }
+    ],
+    "16": [
+      { "q": "Why did God tell Jeremiah not to marry or have children?", "slug": "why-jeremiah-was-told-not-to-marry", "passage": "JER.16.1-4", "kind": "practice", "priority": 1 }
+    ],
+    "17": [
+      { "q": "What does the heart is deceitful above all things mean?", "slug": "the-heart-is-deceitful-above-all-things", "passage": "JER.17.9", "kind": "doctrine", "priority": 1 },
+      { "q": "Does Jeremiah 17:9 mean you cannot trust your feelings?", "slug": "does-jeremiah-17-9-mean-you-cannot-trust-your-feelings", "passage": "JER.17.9", "kind": "practice", "priority": 1 },
+      { "q": "What does blessed is the man who trusts in the LORD mean in Jeremiah 17?", "slug": "blessed-is-the-man-who-trusts-in-the-lord-jeremiah-17", "passage": "JER.17.7-8", "kind": "doctrine", "priority": 1 },
+      { "q": "What does cursed is the man who trusts in man mean?", "slug": "cursed-is-the-man-who-trusts-in-man", "passage": "JER.17.5", "kind": "doctrine", "priority": 1 },
+      { "q": "What does the LORD searches the heart and tests the mind mean?", "slug": "the-lord-searches-the-heart-and-tests-the-mind", "passage": "JER.17.10", "kind": "doctrine", "priority": 1 }
+    ],
+    "18": [
+      { "q": "What does the potter and the clay mean in Jeremiah 18?", "slug": "the-potter-and-the-clay-jeremiah-18", "passage": "JER.18.1-6", "kind": "doctrine", "priority": 1 },
+      { "q": "Does Jeremiah 18 mean God changes his plans based on our response?", "slug": "does-god-change-his-plans-based-on-our-response", "passage": "JER.18.7-10", "kind": "doctrine", "priority": 1 }
+    ],
+    "19": [
+      { "q": "What does the broken clay jar at Topheth mean?", "slug": "the-broken-clay-jar-at-topheth", "passage": "JER.19.10-11", "kind": "phrase", "priority": 1 }
+    ],
+    "20": [
+      { "q": "Did Jeremiah accuse God of deceiving him?", "slug": "did-jeremiah-accuse-god-of-deceiving-him", "passage": "JER.20.7", "kind": "practice", "priority": 1 },
+      { "q": "What does his word is like a fire in my bones mean?", "slug": "a-fire-in-my-bones", "passage": "JER.20.9", "kind": "phrase", "priority": 1 },
+      { "q": "Why did Jeremiah curse the day he was born?", "slug": "jeremiah-cursed-the-day-he-was-born", "passage": "JER.20.14-18", "kind": "practice", "priority": 1 }
+    ],
+    "21": [
+      { "q": "Why did God set before Judah the way of life and the way of death?", "slug": "the-way-of-life-and-the-way-of-death", "passage": "JER.21.8", "kind": "doctrine", "priority": 1 }
+    ],
+    "22": [
+      { "q": "What does do justice and righteousness mean for a king?", "slug": "do-justice-and-righteousness-jeremiah-22", "passage": "JER.22.3", "kind": "ethics", "priority": 1 },
+      { "q": "Why would Jehoiakim be buried like a donkey?", "slug": "jehoiakim-buried-like-a-donkey", "passage": "JER.22.18-19", "kind": "history", "priority": 1 }
+    ],
+    "23": [
+      { "q": "Who is the righteous Branch in Jeremiah 23:5?", "slug": "the-righteous-branch-jeremiah-23", "passage": "JER.23.5-6", "kind": "identity", "priority": 1 },
+      { "q": "What does the LORD our righteousness mean?", "slug": "the-lord-our-righteousness", "passage": "JER.23.6", "kind": "doctrine", "priority": 1 },
+      { "q": "What does is not my word like fire and a hammer mean?", "slug": "like-fire-and-a-hammer", "passage": "JER.23.29", "kind": "phrase", "priority": 1 },
+      { "q": "How do you tell a false prophet from a true one in Jeremiah 23?", "slug": "how-to-tell-a-false-prophet-jeremiah-23", "passage": "JER.23.16-22", "kind": "doctrine", "priority": 1 },
+      { "q": "What does am I a God near at hand and not far away mean?", "slug": "am-i-a-god-near-at-hand", "passage": "JER.23.23-24", "kind": "doctrine", "priority": 1 }
+    ],
+    "24": [
+      { "q": "What do the good figs and bad figs mean?", "slug": "the-good-figs-and-bad-figs", "passage": "JER.24.1-10", "kind": "phrase", "priority": 1 }
+    ],
+    "25": [
+      { "q": "What are the seventy years of exile in Jeremiah 25:11?", "slug": "the-seventy-years-of-exile", "passage": "JER.25.11-12", "kind": "number", "priority": 1 },
+      { "q": "What is the cup of God's wrath the nations must drink?", "slug": "the-cup-of-gods-wrath-jeremiah-25", "passage": "JER.25.15-17", "kind": "doctrine", "priority": 1 },
+      { "q": "Why does God call Nebuchadnezzar my servant?", "slug": "nebuchadnezzar-my-servant", "passage": "JER.25.9", "kind": "doctrine", "priority": 1 }
+    ],
+    "26": [
+      { "q": "Who was Uriah the prophet who was killed?", "slug": "who-was-uriah-the-prophet", "passage": "JER.26.20-23", "kind": "identity", "priority": 1 },
+      { "q": "How did the precedent of Micah save Jeremiah's life?", "slug": "how-micahs-precedent-saved-jeremiah", "passage": "JER.26.17-19", "kind": "history", "priority": 1 }
+    ],
+    "27": [
+      { "q": "Why did Jeremiah tell Judah to submit to Babylon?", "slug": "why-jeremiah-told-judah-to-submit-to-babylon", "passage": "JER.27.12", "kind": "ethics", "priority": 1 }
+    ],
+    "28": [
+      { "q": "Who was Hananiah and why did he die?", "slug": "who-was-hananiah-the-false-prophet", "passage": "JER.28.10-17", "kind": "identity", "priority": 1 },
+      { "q": "What do the wooden yoke and the iron yoke mean?", "slug": "the-wooden-yoke-and-the-iron-yoke", "passage": "JER.28.13", "kind": "phrase", "priority": 1 }
+    ],
+    "29": [
+      { "q": "What does I know the plans I have for you mean?", "slug": "i-know-the-plans-i-have-for-you", "passage": "JER.29.11", "kind": "doctrine", "priority": 1 },
+      { "q": "Is Jeremiah 29:11 a promise to individual Christians?", "slug": "is-jeremiah-29-11-a-promise-to-me", "passage": "JER.29.11", "kind": "claim", "priority": 1 },
+      { "q": "What does you will seek me and find me when you seek with all your heart mean?", "slug": "seek-me-with-all-your-heart-jeremiah-29", "passage": "JER.29.13", "kind": "practice", "priority": 1 },
+      { "q": "What does seek the welfare of the city where you live mean?", "slug": "seek-the-welfare-of-the-city", "passage": "JER.29.7", "kind": "practice", "priority": 1 },
+      { "q": "Why did God tell the exiles to build houses and plant gardens?", "slug": "build-houses-and-plant-gardens-in-exile", "passage": "JER.29.5-6", "kind": "practice", "priority": 1 }
+    ],
+    "30": [
+      { "q": "What is the time of Jacob's trouble?", "slug": "the-time-of-jacobs-trouble", "passage": "JER.30.7", "kind": "doctrine", "priority": 1 }
+    ],
+    "31": [
+      { "q": "What is the new covenant in Jeremiah 31:31?", "slug": "the-new-covenant-jeremiah-31", "passage": "JER.31.31-34", "kind": "doctrine", "priority": 1 },
+      { "q": "What does I will write my law on their hearts mean?", "slug": "i-will-write-my-law-on-their-hearts", "passage": "JER.31.33", "kind": "doctrine", "priority": 1 },
+      { "q": "What does I have loved you with an everlasting love mean?", "slug": "i-have-loved-you-with-an-everlasting-love", "passage": "JER.31.3", "kind": "doctrine", "priority": 1 },
+      { "q": "What does Rachel weeping for her children mean in Jeremiah 31:15?", "slug": "rachel-weeping-jeremiah-31", "passage": "JER.31.15", "kind": "doctrine", "priority": 1 },
+      { "q": "What does I will remember their sins no more mean?", "slug": "i-will-remember-their-sins-no-more-jeremiah-31", "passage": "JER.31.34", "kind": "doctrine", "priority": 1 },
+      { "q": "What does a woman shall encompass a man mean in Jeremiah 31:22?", "slug": "a-woman-shall-encompass-a-man", "passage": "JER.31.22", "kind": "phrase", "priority": 1 },
+      { "q": "Does the new covenant replace the old one entirely?", "slug": "does-the-new-covenant-replace-the-old", "passage": "JER.31.31-32", "kind": "doctrine", "priority": 1 }
+    ],
+    "32": [
+      { "q": "Why did Jeremiah buy a field while Jerusalem was falling?", "slug": "why-jeremiah-bought-a-field", "passage": "JER.32.6-15", "kind": "practice", "priority": 1 },
+      { "q": "What does is anything too hard for you mean in Jeremiah 32:17?", "slug": "is-anything-too-hard-for-you-jeremiah-32", "passage": "JER.32.17", "kind": "doctrine", "priority": 1 },
+      { "q": "What does I will give them one heart and one way mean?", "slug": "one-heart-and-one-way", "passage": "JER.32.39", "kind": "doctrine", "priority": 1 }
+    ],
+    "33": [
+      { "q": "What does call to me and I will answer you and tell you great things mean?", "slug": "call-to-me-and-i-will-answer-you", "passage": "JER.33.3", "kind": "practice", "priority": 1 },
+      { "q": "Is Jeremiah 33:3 God's phone number?", "slug": "is-jeremiah-33-3-gods-phone-number", "passage": "JER.33.3", "kind": "claim", "priority": 1 }
+    ],
+    "34": [
+      { "q": "Why did God judge Judah for taking back freed slaves?", "slug": "judah-took-back-freed-slaves", "passage": "JER.34.8-17", "kind": "ethics", "priority": 1 }
+    ],
+    "35": [
+      { "q": "Who were the Rechabites and why did God commend them?", "slug": "who-were-the-rechabites", "passage": "JER.35.1-19", "kind": "identity", "priority": 1 }
+    ],
+    "36": [
+      { "q": "Why did King Jehoiakim burn Jeremiah's scroll?", "slug": "why-jehoiakim-burned-jeremiahs-scroll", "passage": "JER.36.22-23", "kind": "history", "priority": 1 },
+      { "q": "Who was Baruch and what was his role?", "slug": "who-was-baruch", "passage": "JER.36.4", "kind": "identity", "priority": 1 },
+      { "q": "How did rewriting the burned scroll make it longer?", "slug": "the-rewritten-scroll-was-longer", "passage": "JER.36.32", "kind": "history", "priority": 1 }
+    ],
+    "37": [
+      { "q": "Why was Jeremiah accused of deserting to the Babylonians?", "slug": "jeremiah-accused-of-desertion", "passage": "JER.37.13-15", "kind": "history", "priority": 2 }
+    ],
+    "38": [
+      { "q": "Who was Ebed-melech and how did he save Jeremiah?", "slug": "who-was-ebed-melech", "passage": "JER.38.7-13", "kind": "identity", "priority": 1 },
+      { "q": "Why was Jeremiah thrown into a muddy cistern?", "slug": "jeremiah-in-the-muddy-cistern", "passage": "JER.38.6", "kind": "history", "priority": 1 }
+    ],
+    "39": [
+      { "q": "How did Jerusalem finally fall in Jeremiah 39?", "slug": "how-jerusalem-fell-jeremiah-39", "passage": "JER.39.1-10", "kind": "history", "priority": 1 }
+    ],
+    "40": [
+      { "q": "Why did Jeremiah choose to stay in Judah rather than go to Babylon?", "slug": "why-jeremiah-stayed-in-judah", "passage": "JER.40.4-6", "kind": "practice", "priority": 1 }
+    ],
+    "41": [
+      { "q": "Why was Gedaliah assassinated?", "slug": "why-gedaliah-was-assassinated", "passage": "JER.41.1-3", "kind": "history", "priority": 1 }
+    ],
+    "42": [
+      { "q": "Why did the remnant ask Jeremiah for guidance and then ignore it?", "slug": "the-remnant-ignored-jeremiahs-guidance", "passage": "JER.42.5-6", "kind": "practice", "priority": 1 }
+    ],
+    "43": [
+      { "q": "Why did the remnant flee to Egypt against God's word?", "slug": "the-remnant-fled-to-egypt", "passage": "JER.43.4-7", "kind": "ethics", "priority": 1 }
+    ],
+    "44": [
+      { "q": "Why did the exiles in Egypt insist on worshiping the queen of heaven?", "slug": "worshiping-the-queen-of-heaven-in-egypt", "passage": "JER.44.16-19", "kind": "ethics", "priority": 1 }
+    ],
+    "45": [
+      { "q": "What was God's personal word to Baruch?", "slug": "gods-personal-word-to-baruch", "passage": "JER.45.1-5", "kind": "practice", "priority": 1 }
+    ],
+    "46": [
+      { "q": "What was the prophecy against Egypt at Carchemish?", "slug": "the-prophecy-against-egypt-at-carchemish", "passage": "JER.46.2", "kind": "history", "priority": 2 }
+    ],
+    "47": [
+      { "q": "How was the prophecy against the Philistines fulfilled?", "slug": "the-prophecy-against-the-philistines", "passage": "JER.47.1-7", "kind": "history", "priority": 2 }
+    ],
+    "48": [
+      { "q": "What does Moab has been at ease from his youth mean?", "slug": "moab-has-been-at-ease-from-his-youth", "passage": "JER.48.11", "kind": "phrase", "priority": 2 }
+    ],
+    "49": [
+      { "q": "Why does Jeremiah 49 prophesy against so many nations at once?", "slug": "prophecies-against-many-nations", "passage": "JER.49.1-2", "kind": "doctrine", "priority": 2 }
+    ],
+    "50": [
+      { "q": "How was the prophecy of Babylon's fall fulfilled?", "slug": "how-babylons-fall-was-fulfilled", "passage": "JER.50.1-3", "kind": "history", "priority": 1 }
+    ],
+    "51": [
+      { "q": "Why does Jeremiah 51 say Babylon will never be inhabited again?", "slug": "babylon-never-inhabited-again", "passage": "JER.51.37-43", "kind": "history", "priority": 1 },
+      { "q": "What does flee from Babylon, save your lives mean?", "slug": "flee-from-babylon-save-your-lives", "passage": "JER.51.6", "kind": "phrase", "priority": 1 }
+    ],
+    "52": [
+      { "q": "Why does Jeremiah 52 repeat the fall of Jerusalem?", "slug": "why-jeremiah-52-repeats-the-fall", "passage": "JER.52.1-11", "kind": "history", "priority": 1 },
+      { "q": "What temple items were taken to Babylon?", "slug": "temple-items-taken-to-babylon", "passage": "JER.52.17-23", "kind": "history", "priority": 1 }
+    ]
+  }
+}

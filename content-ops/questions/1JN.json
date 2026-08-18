@@ -1,0 +1,58 @@
+{
+  "book": "1JN",
+  "name": "1 John",
+  "chapters": {
+    "1": [
+      { "q": "What does if we confess our sins he is faithful to forgive mean?", "slug": "if-we-confess-our-sins-he-is-faithful", "passage": "1JN.1.9", "kind": "doctrine", "priority": 1 },
+      { "q": "Do Christians need to confess every sin to be forgiven?", "slug": "must-christians-confess-every-sin", "passage": "1JN.1.9", "kind": "doctrine", "priority": 1 },
+      { "q": "What does walk in the light as he is in the light mean?", "slug": "walk-in-the-light-as-he-is-in-the-light", "passage": "1JN.1.7", "kind": "practice", "priority": 1 },
+      { "q": "What does if we say we have no sin we deceive ourselves mean?", "slug": "if-we-say-we-have-no-sin-we-deceive-ourselves", "passage": "1JN.1.8", "kind": "doctrine", "priority": 1 },
+      { "q": "What does the blood of Jesus cleanses us from all sin mean?", "slug": "the-blood-of-jesus-cleanses-us-from-all-sin", "passage": "1JN.1.7", "kind": "doctrine", "priority": 1 },
+      { "q": "What does that which we have seen and touched mean about the Word of life?", "slug": "that-which-we-have-seen-and-touched", "passage": "1JN.1.1", "kind": "doctrine", "priority": 2 }
+    ],
+    "2": [
+      { "q": "Does Jesus die for the sins of the whole world in 1 John 2:2?", "slug": "the-propitiation-for-the-sins-of-the-whole-world", "passage": "1JN.2.2", "kind": "doctrine", "priority": 1 },
+      { "q": "What does do not love the world mean?", "slug": "do-not-love-the-world", "passage": "1JN.2.15", "kind": "practice", "priority": 1 },
+      { "q": "What are the lust of the flesh, the lust of the eyes, and the pride of life?", "slug": "lust-of-the-flesh-eyes-and-pride-of-life", "passage": "1JN.2.16", "kind": "phrase", "priority": 1 },
+      { "q": "Who are the many antichrists in 1 John 2:18?", "slug": "many-antichrists-have-come", "passage": "1JN.2.18", "kind": "identity", "priority": 1 },
+      { "q": "What does the anointing teaches you all things mean?", "slug": "the-anointing-teaches-you-all-things", "passage": "1JN.2.27", "kind": "doctrine", "priority": 1 },
+      { "q": "What does they went out from us but were not of us mean?", "slug": "they-went-out-from-us-but-were-not-of-us", "passage": "1JN.2.19", "kind": "doctrine", "priority": 1 },
+      { "q": "Who is our advocate with the Father?", "slug": "an-advocate-with-the-father", "passage": "1JN.2.1", "kind": "doctrine", "priority": 1 },
+      { "q": "What does the world is passing away mean?", "slug": "the-world-is-passing-away", "passage": "1JN.2.17", "kind": "phrase", "priority": 1 },
+      { "q": "What does it mean that whoever hates his brother is in darkness?", "slug": "whoever-hates-his-brother-is-in-darkness", "passage": "1JN.2.9-11", "kind": "ethics", "priority": 1 },
+      { "q": "What is the last hour in 1 John 2:18?", "slug": "it-is-the-last-hour", "passage": "1JN.2.18", "kind": "tension", "priority": 2 }
+    ],
+    "3": [
+      { "q": "Does 1 John 3:9 mean a Christian cannot sin?", "slug": "no-one-born-of-god-makes-a-practice-of-sinning", "passage": "1JN.3.9", "kind": "doctrine", "priority": 1 },
+      { "q": "What does we shall be like him for we shall see him as he is mean?", "slug": "we-shall-be-like-him-for-we-shall-see-him", "passage": "1JN.3.2", "kind": "doctrine", "priority": 1 },
+      { "q": "What does God is greater than our heart mean when we feel condemned?", "slug": "god-is-greater-than-our-heart", "passage": "1JN.3.20", "kind": "practice", "priority": 1 },
+      { "q": "What does laying down our lives for the brothers mean?", "slug": "laying-down-our-lives-for-the-brothers", "passage": "1JN.3.16", "kind": "practice", "priority": 1 },
+      { "q": "What does whoever does not love abides in death mean?", "slug": "whoever-does-not-love-abides-in-death", "passage": "1JN.3.14", "kind": "doctrine", "priority": 1 },
+      { "q": "What is the seed of God that remains in a believer?", "slug": "gods-seed-remains-in-him", "passage": "1JN.3.9", "kind": "phrase", "priority": 1 },
+      { "q": "Why does John use Cain as an example in 1 John 3?", "slug": "why-john-uses-cain-as-an-example", "passage": "1JN.3.12", "kind": "identity", "priority": 1 },
+      { "q": "What does love in deed and truth, not word and talk mean?", "slug": "love-in-deed-and-truth-not-word-and-talk", "passage": "1JN.3.18", "kind": "practice", "priority": 1 },
+      { "q": "What does see what kind of love the Father has given us mean?", "slug": "see-what-kind-of-love-the-father-has-given", "passage": "1JN.3.1", "kind": "doctrine", "priority": 1 }
+    ],
+    "4": [
+      { "q": "What does God is love mean?", "slug": "god-is-love", "passage": "1JN.4.8", "kind": "doctrine", "priority": 1 },
+      { "q": "What does perfect love casts out fear mean?", "slug": "perfect-love-casts-out-fear", "passage": "1JN.4.18", "kind": "doctrine", "priority": 1 },
+      { "q": "How do you test the spirits according to 1 John 4?", "slug": "how-to-test-the-spirits", "passage": "1JN.4.1-3", "kind": "practice", "priority": 1 },
+      { "q": "What is the spirit of the antichrist in 1 John 4:3?", "slug": "the-spirit-of-the-antichrist", "passage": "1JN.4.3", "kind": "identity", "priority": 1 },
+      { "q": "What does we love because he first loved us mean?", "slug": "we-love-because-he-first-loved-us", "passage": "1JN.4.19", "kind": "doctrine", "priority": 1 },
+      { "q": "What does greater is he who is in you than he who is in the world mean?", "slug": "greater-is-he-who-is-in-you", "passage": "1JN.4.4", "kind": "doctrine", "priority": 1 },
+      { "q": "How can you love God whom you have not seen if you hate your brother?", "slug": "cannot-love-god-and-hate-your-brother", "passage": "1JN.4.20", "kind": "ethics", "priority": 1 },
+      { "q": "What does no one has ever seen God mean in 1 John 4:12?", "slug": "no-one-has-ever-seen-god-1-john-4", "passage": "1JN.4.12", "kind": "tension", "priority": 1 },
+      { "q": "Does God is love mean God would never send anyone to hell?", "slug": "does-god-is-love-rule-out-hell", "passage": "1JN.4.8", "kind": "doctrine", "priority": 1 }
+    ],
+    "5": [
+      { "q": "What is the sin that leads to death in 1 John 5:16?", "slug": "the-sin-that-leads-to-death", "passage": "1JN.5.16-17", "kind": "doctrine", "priority": 1 },
+      { "q": "Why is the Johannine Comma in 1 John 5:7 missing from modern Bibles?", "slug": "the-johannine-comma-1-john-5-7", "passage": "1JN.5.7-8", "kind": "history", "priority": 1 },
+      { "q": "What are the water, the blood, and the Spirit that testify?", "slug": "the-water-the-blood-and-the-spirit", "passage": "1JN.5.6-8", "kind": "doctrine", "priority": 1 },
+      { "q": "What does if we ask anything according to his will he hears us mean?", "slug": "if-we-ask-according-to-his-will-he-hears-us", "passage": "1JN.5.14-15", "kind": "doctrine", "priority": 1 },
+      { "q": "What does the whole world lies in the power of the evil one mean?", "slug": "the-whole-world-lies-in-the-power-of-the-evil-one", "passage": "1JN.5.19", "kind": "doctrine", "priority": 1 },
+      { "q": "How can you know for sure you have eternal life?", "slug": "how-you-can-know-you-have-eternal-life", "passage": "1JN.5.13", "kind": "doctrine", "priority": 1 },
+      { "q": "What does his commandments are not burdensome mean?", "slug": "his-commandments-are-not-burdensome", "passage": "1JN.5.3", "kind": "practice", "priority": 1 },
+      { "q": "What does keep yourselves from idols mean today?", "slug": "keep-yourselves-from-idols", "passage": "1JN.5.21", "kind": "practice", "priority": 2 }
+    ]
+  }
+}

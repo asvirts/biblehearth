@@ -1,0 +1,62 @@
+{
+  "book": "EST",
+  "name": "Esther",
+  "chapters": {
+    "1": [
+      { "q": "Why did Queen Vashti refuse to appear before the king?", "slug": "why-vashti-refused-to-appear", "passage": "EST.1.10-12", "kind": "ethics", "priority": 1 },
+      { "q": "Was Vashti a hero or a rebel?", "slug": "was-vashti-a-hero-or-a-rebel", "passage": "EST.1.12", "kind": "ethics", "priority": 1 },
+      { "q": "Who was King Xerxes, also called Ahasuerus?", "slug": "who-was-king-xerxes-ahasuerus", "passage": "EST.1.1", "kind": "identity", "priority": 1 },
+      { "q": "How long did the king's feast in Esther 1 last?", "slug": "how-long-the-kings-feast-lasted", "passage": "EST.1.4-5", "kind": "number", "priority": 1 }
+    ],
+    "2": [
+      { "q": "Was Esther a willing participant or a victim of the king's harem?", "slug": "was-esther-a-willing-participant-or-a-victim", "passage": "EST.2.8-9", "kind": "ethics", "priority": 1 },
+      { "q": "Why did Esther hide that she was Jewish?", "slug": "why-esther-hid-that-she-was-jewish", "passage": "EST.2.10", "kind": "ethics", "priority": 1 },
+      { "q": "What was the twelve months of beauty treatments in Esther 2?", "slug": "the-twelve-months-of-beauty-treatments", "passage": "EST.2.12", "kind": "history", "priority": 1 },
+      { "q": "Who was Mordecai and how was he related to Esther?", "slug": "who-was-mordecai", "passage": "EST.2.5-7", "kind": "identity", "priority": 1 },
+      { "q": "What does Hadassah, Esther's Hebrew name, mean?", "slug": "what-hadassah-means", "passage": "EST.2.7", "kind": "phrase", "priority": 1 }
+    ],
+    "3": [
+      { "q": "Why did Haman want to kill all the Jews?", "slug": "why-haman-wanted-to-kill-all-the-jews", "passage": "EST.3.5-6", "kind": "history", "priority": 1 },
+      { "q": "Why did Mordecai refuse to bow to Haman?", "slug": "why-mordecai-refused-to-bow-to-haman", "passage": "EST.3.2", "kind": "ethics", "priority": 1 },
+      { "q": "Who were the Agagites, and does it connect Haman to Amalek?", "slug": "haman-the-agagite-and-amalek", "passage": "EST.3.1", "kind": "identity", "priority": 1 },
+      { "q": "What is the pur or lot that gives Purim its name?", "slug": "the-pur-that-gives-purim-its-name", "passage": "EST.3.7", "kind": "phrase", "priority": 1 }
+    ],
+    "4": [
+      { "q": "What does for such a time as this mean?", "slug": "for-such-a-time-as-this", "passage": "EST.4.14", "kind": "practice", "priority": 1 },
+      { "q": "What does if I perish, I perish mean?", "slug": "if-i-perish-i-perish", "passage": "EST.4.16", "kind": "practice", "priority": 1 },
+      { "q": "What does relief will arise from another place mean?", "slug": "relief-will-arise-from-another-place", "passage": "EST.4.14", "kind": "doctrine", "priority": 1 },
+      { "q": "Why was approaching the king uninvited punishable by death?", "slug": "approaching-the-king-uninvited", "passage": "EST.4.11", "kind": "history", "priority": 1 },
+      { "q": "Why does Mordecai's challenge to Esther mention her own survival?", "slug": "mordecais-challenge-about-her-survival", "passage": "EST.4.13-14", "kind": "practice", "priority": 1 }
+    ],
+    "5": [
+      { "q": "What is the golden scepter the king extended to Esther?", "slug": "the-golden-scepter-extended-to-esther", "passage": "EST.5.2", "kind": "history", "priority": 1 },
+      { "q": "Why did Esther delay her request with two banquets?", "slug": "why-esther-delayed-with-two-banquets", "passage": "EST.5.4-8", "kind": "practice", "priority": 1 },
+      { "q": "How tall were the gallows Haman built?", "slug": "how-tall-were-hamans-gallows", "passage": "EST.5.14", "kind": "number", "priority": 1 }
+    ],
+    "6": [
+      { "q": "Why could the king not sleep the night before Haman's plan?", "slug": "why-the-king-could-not-sleep", "passage": "EST.6.1", "kind": "doctrine", "priority": 1 },
+      { "q": "How is the king's sleepless night the turning point of Esther?", "slug": "the-sleepless-night-is-the-turning-point", "passage": "EST.6.1-11", "kind": "doctrine", "priority": 1 },
+      { "q": "Why did Haman have to lead Mordecai through the streets?", "slug": "haman-led-mordecai-through-the-streets", "passage": "EST.6.10-11", "kind": "phrase", "priority": 1 }
+    ],
+    "7": [
+      { "q": "Why was Haman hanged on the gallows he built for Mordecai?", "slug": "haman-hanged-on-his-own-gallows", "passage": "EST.7.9-10", "kind": "doctrine", "priority": 1 },
+      { "q": "Why did the king think Haman was assaulting Esther?", "slug": "the-king-thought-haman-was-assaulting-esther", "passage": "EST.7.8", "kind": "history", "priority": 1 }
+    ],
+    "8": [
+      { "q": "Why could the king not simply cancel Haman's decree?", "slug": "why-the-king-could-not-cancel-the-decree", "passage": "EST.8.8", "kind": "history", "priority": 1 },
+      { "q": "What did the counter-decree actually allow the Jews to do?", "slug": "what-the-counter-decree-allowed", "passage": "EST.8.11", "kind": "ethics", "priority": 1 }
+    ],
+    "9": [
+      { "q": "How is the feast of Purim celebrated?", "slug": "how-purim-is-celebrated", "passage": "EST.9.20-22", "kind": "practice", "priority": 1 },
+      { "q": "Why did the Jews kill 75,000 people in Esther 9?", "slug": "why-the-jews-killed-75000", "passage": "EST.9.16", "kind": "ethics", "priority": 1 },
+      { "q": "Why did Esther ask for a second day of killing in Susa?", "slug": "esther-asked-for-a-second-day", "passage": "EST.9.13", "kind": "ethics", "priority": 1 },
+      { "q": "Why were Haman's ten sons hanged after they were already dead?", "slug": "hamans-ten-sons-hanged", "passage": "EST.9.13-14", "kind": "history", "priority": 1 },
+      { "q": "Why did the Jews take no plunder in Esther 9?", "slug": "why-the-jews-took-no-plunder", "passage": "EST.9.10", "kind": "ethics", "priority": 1 }
+    ],
+    "10": [
+      { "q": "Why is God never mentioned in the book of Esther?", "slug": "why-god-is-never-mentioned-in-esther", "passage": "EST.10.1-3", "kind": "doctrine", "priority": 1 },
+      { "q": "How does Esther teach God's providence without naming him?", "slug": "gods-providence-without-naming-him", "passage": "EST.10.2-3", "kind": "doctrine", "priority": 1 },
+      { "q": "Why was Esther's place in the canon debated?", "slug": "why-esthers-place-in-the-canon-was-debated", "passage": "EST.10.1-3", "kind": "history", "priority": 1 }
+    ]
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "book": "EZR",
+  "name": "Ezra",
+  "chapters": {
+    "1": [
+      { "q": "Why did Cyrus, a pagan king, let the Jews rebuild the temple?", "slug": "why-cyrus-let-the-jews-rebuild", "passage": "EZR.1.1-4", "kind": "doctrine", "priority": 1 },
+      { "q": "What does the LORD stirred up the spirit of Cyrus mean?", "slug": "the-lord-stirred-up-the-spirit-of-cyrus", "passage": "EZR.1.1", "kind": "doctrine", "priority": 1 },
+      { "q": "Is there archaeological evidence for the decree of Cyrus?", "slug": "archaeological-evidence-for-the-cyrus-decree", "passage": "EZR.1.2-3", "kind": "history", "priority": 1 }
+    ],
+    "2": [
+      { "q": "How many exiles returned with Zerubbabel?", "slug": "how-many-exiles-returned-with-zerubbabel", "passage": "EZR.2.64-65", "kind": "number", "priority": 1 },
+      { "q": "Why do the numbers in Ezra 2 differ from Nehemiah 7?", "slug": "why-ezra-2-differs-from-nehemiah-7", "passage": "EZR.2.1-2", "kind": "tension", "priority": 1 },
+      { "q": "Why were priests without genealogical records excluded?", "slug": "priests-without-genealogical-records", "passage": "EZR.2.61-63", "kind": "history", "priority": 1 }
+    ],
+    "3": [
+      { "q": "Why did some shout for joy while others wept at the foundation?", "slug": "some-shouted-while-others-wept", "passage": "EZR.3.11-13", "kind": "phrase", "priority": 1 },
+      { "q": "Why did the returned exiles build the altar before the temple?", "slug": "the-altar-built-before-the-temple", "passage": "EZR.3.2-3", "kind": "practice", "priority": 1 }
+    ],
+    "4": [
+      { "q": "Why did the Samaritans oppose rebuilding the temple?", "slug": "why-the-samaritans-opposed-the-rebuilding", "passage": "EZR.4.1-5", "kind": "history", "priority": 1 },
+      { "q": "Why did the returnees refuse the offer of help from neighbors?", "slug": "why-they-refused-help-from-neighbors", "passage": "EZR.4.3", "kind": "ethics", "priority": 1 }
+    ],
+    "5": [
+      { "q": "How did Haggai and Zechariah restart the temple work?", "slug": "haggai-and-zechariah-restarted-the-work", "passage": "EZR.5.1-2", "kind": "history", "priority": 1 }
+    ],
+    "6": [
+      { "q": "How did Darius's search of the archives save the temple project?", "slug": "darius-searched-the-archives", "passage": "EZR.6.1-12", "kind": "history", "priority": 1 },
+      { "q": "How long did it take to finish the second temple?", "slug": "how-long-the-second-temple-took", "passage": "EZR.6.15", "kind": "number", "priority": 1 }
+    ],
+    "7": [
+      { "q": "What does Ezra set his heart to study and do and teach the law mean?", "slug": "ezra-set-his-heart-to-study-do-and-teach", "passage": "EZR.7.10", "kind": "practice", "priority": 1 },
+      { "q": "Who was Ezra and why does he matter?", "slug": "who-was-ezra", "passage": "EZR.7.1-6", "kind": "identity", "priority": 1 },
+      { "q": "What does the hand of the LORD his God was on him mean?", "slug": "the-hand-of-the-lord-was-on-him", "passage": "EZR.7.6", "kind": "phrase", "priority": 1 }
+    ],
+    "8": [
+      { "q": "Why was Ezra ashamed to ask the king for soldiers?", "slug": "ezra-was-ashamed-to-ask-for-soldiers", "passage": "EZR.8.22", "kind": "practice", "priority": 1 },
+      { "q": "Why did Ezra call a fast at the Ahava canal?", "slug": "the-fast-at-the-ahava-canal", "passage": "EZR.8.21-23", "kind": "practice", "priority": 1 },
+      { "q": "How much silver and gold did Ezra carry back to Jerusalem?", "slug": "how-much-treasure-ezra-carried-back", "passage": "EZR.8.26-27", "kind": "number", "priority": 2 }
+    ],
+    "9": [
+      { "q": "Why was intermarriage such a crisis in Ezra 9?", "slug": "why-intermarriage-was-a-crisis-in-ezra", "passage": "EZR.9.1-2", "kind": "ethics", "priority": 1 },
+      { "q": "Why did Ezra tear his garment and pull out his hair?", "slug": "ezra-tore-his-garment-and-pulled-his-hair", "passage": "EZR.9.3", "kind": "practice", "priority": 1 },
+      { "q": "Why did Ezra confess sins he had not committed?", "slug": "ezra-confessed-sins-he-did-not-commit", "passage": "EZR.9.6-7", "kind": "practice", "priority": 1 }
+    ],
+    "10": [
+      { "q": "Did Ezra really command men to send away their wives and children?", "slug": "did-ezra-command-sending-away-wives-and-children", "passage": "EZR.10.3", "kind": "ethics", "priority": 1 },
+      { "q": "How does Ezra 10 fit with God hating divorce in Malachi 2?", "slug": "how-ezra-10-fits-with-malachi-2", "passage": "EZR.10.10-11", "kind": "tension", "priority": 1 },
+      { "q": "Was Ezra's mass divorce commanded by God or was it his own decision?", "slug": "was-ezras-mass-divorce-commanded-by-god", "passage": "EZR.10.2-5", "kind": "ethics", "priority": 1 },
+      { "q": "What happened to the wives and children who were sent away?", "slug": "what-happened-to-the-wives-sent-away", "passage": "EZR.10.44", "kind": "ethics", "priority": 1 }
+    ]
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "book": "2TH",
+  "name": "2 Thessalonians",
+  "chapters": {
+    "1": [
+      { "q": "What does eternal destruction mean in 2 Thessalonians 1:9?", "slug": "eternal-destruction-2-thessalonians", "passage": "2TH.1.9", "kind": "doctrine", "priority": 1 },
+      { "q": "Does 2 Thessalonians 1:8 mean people are punished for not knowing God?", "slug": "vengeance-on-those-who-do-not-know-god", "passage": "2TH.1.8", "kind": "doctrine", "priority": 1 },
+      { "q": "What does away from the presence of the Lord mean about hell?", "slug": "away-from-the-presence-of-the-lord", "passage": "2TH.1.9", "kind": "doctrine", "priority": 1 }
+    ],
+    "2": [
+      { "q": "Who is the man of lawlessness?", "slug": "who-is-the-man-of-lawlessness", "passage": "2TH.2.3-4", "kind": "identity", "priority": 1 },
+      { "q": "Who or what is the restrainer in 2 Thessalonians 2:6-7?", "slug": "who-is-the-restrainer", "passage": "2TH.2.6-7", "kind": "identity", "priority": 1 },
+      { "q": "What is the rebellion or falling away that comes first?", "slug": "the-rebellion-comes-first", "passage": "2TH.2.3", "kind": "doctrine", "priority": 1 },
+      { "q": "Why does God send a powerful delusion so people believe a lie?", "slug": "god-sends-a-powerful-delusion", "passage": "2TH.2.11", "kind": "doctrine", "priority": 1 },
+      { "q": "What temple does the man of lawlessness sit in?", "slug": "the-man-of-lawlessness-in-the-temple", "passage": "2TH.2.4", "kind": "doctrine", "priority": 1 },
+      { "q": "What is the mystery of lawlessness already at work?", "slug": "the-mystery-of-lawlessness", "passage": "2TH.2.7", "kind": "phrase", "priority": 1 },
+      { "q": "Does 2 Thessalonians 2 rule out a pre-tribulation rapture?", "slug": "does-2-thessalonians-2-rule-out-a-pretrib-rapture", "passage": "2TH.2.1-3", "kind": "doctrine", "priority": 1 },
+      { "q": "What are the traditions Paul says to hold to?", "slug": "hold-to-the-traditions", "passage": "2TH.2.15", "kind": "doctrine", "priority": 1 }
+    ],
+    "3": [
+      { "q": "Does if anyone will not work let him not eat apply to welfare?", "slug": "if-anyone-will-not-work-let-him-not-eat", "passage": "2TH.3.10", "kind": "ethics", "priority": 1 },
+      { "q": "What does keep away from the idle and disruptive mean?", "slug": "keep-away-from-the-idle", "passage": "2TH.3.6", "kind": "practice", "priority": 1 },
+      { "q": "How is a disobedient believer to be treated as a brother, not an enemy?", "slug": "warn-him-but-not-as-an-enemy", "passage": "2TH.3.14-15", "kind": "practice", "priority": 1 },
+      { "q": "What does the Lord is faithful and will guard you from the evil one mean?", "slug": "the-lord-will-guard-you-from-the-evil-one", "passage": "2TH.3.3", "kind": "phrase", "priority": 2 }
+    ]
+  }
+}

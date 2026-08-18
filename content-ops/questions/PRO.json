@@ -1,0 +1,206 @@
+{
+  "book": "PRO",
+  "name": "Proverbs",
+  "chapters": {
+    "1": [
+      { "q": "What does the fear of the LORD is the beginning of knowledge mean?", "slug": "the-fear-of-the-lord-is-the-beginning-of-knowledge", "passage": "PRO.1.7", "kind": "doctrine", "priority": 1 },
+      { "q": "Why does wisdom say she will laugh at their calamity?", "slug": "wisdom-will-laugh-at-their-calamity", "passage": "PRO.1.26", "kind": "ethics", "priority": 1 },
+      { "q": "What does my son, if sinners entice you, do not consent mean?", "slug": "if-sinners-entice-you-do-not-consent", "passage": "PRO.1.10", "kind": "practice", "priority": 1 },
+      { "q": "Why is wisdom pictured as a woman crying out in the street?", "slug": "wisdom-crying-out-in-the-street", "passage": "PRO.1.20-21", "kind": "phrase", "priority": 1 }
+    ],
+    "2": [
+      { "q": "What does search for wisdom as for hidden treasure mean?", "slug": "search-for-wisdom-as-for-hidden-treasure", "passage": "PRO.2.4", "kind": "practice", "priority": 1 },
+      { "q": "Who is the forbidden woman in Proverbs 2?", "slug": "the-forbidden-woman-proverbs-2", "passage": "PRO.2.16-19", "kind": "identity", "priority": 1 }
+    ],
+    "3": [
+      { "q": "What does trust in the LORD with all your heart mean?", "slug": "trust-in-the-lord-with-all-your-heart", "passage": "PRO.3.5", "kind": "practice", "priority": 1 },
+      { "q": "What does lean not on your own understanding mean?", "slug": "lean-not-on-your-own-understanding", "passage": "PRO.3.5", "kind": "practice", "priority": 1 },
+      { "q": "What does he will make your paths straight mean?", "slug": "he-will-make-your-paths-straight", "passage": "PRO.3.6", "kind": "doctrine", "priority": 1 },
+      { "q": "What does honor the LORD with your firstfruits mean?", "slug": "honor-the-lord-with-your-firstfruits", "passage": "PRO.3.9-10", "kind": "practice", "priority": 1 },
+      { "q": "Does Proverbs 3:9-10 promise financial blessing for giving?", "slug": "does-proverbs-3-9-promise-financial-blessing", "passage": "PRO.3.9-10", "kind": "claim", "priority": 1 },
+      { "q": "What does do not despise the LORD's discipline mean?", "slug": "do-not-despise-the-lords-discipline", "passage": "PRO.3.11-12", "kind": "doctrine", "priority": 1 },
+      { "q": "What does do not withhold good from your neighbor mean?", "slug": "do-not-withhold-good-from-your-neighbor", "passage": "PRO.3.27-28", "kind": "ethics", "priority": 1 }
+    ],
+    "4": [
+      { "q": "What does guard your heart, for it is the wellspring of life mean?", "slug": "guard-your-heart", "passage": "PRO.4.23", "kind": "practice", "priority": 1 },
+      { "q": "What does the path of the righteous is like the morning light mean?", "slug": "the-path-of-the-righteous-is-like-morning-light", "passage": "PRO.4.18", "kind": "phrase", "priority": 1 },
+      { "q": "What does do not swerve to the right or the left mean?", "slug": "do-not-swerve-to-the-right-or-left", "passage": "PRO.4.27", "kind": "practice", "priority": 2 },
+      { "q": "What does get wisdom, get understanding mean?", "slug": "get-wisdom-get-understanding", "passage": "PRO.4.5-7", "kind": "practice", "priority": 1 }
+    ],
+    "5": [
+      { "q": "What does the lips of an adulteress drip honey mean?", "slug": "the-lips-of-an-adulteress-drip-honey", "passage": "PRO.5.3-4", "kind": "phrase", "priority": 1 },
+      { "q": "What does drink water from your own cistern mean?", "slug": "drink-water-from-your-own-cistern", "passage": "PRO.5.15", "kind": "phrase", "priority": 1 },
+      { "q": "What does rejoice in the wife of your youth mean?", "slug": "rejoice-in-the-wife-of-your-youth", "passage": "PRO.5.18-19", "kind": "practice", "priority": 1 }
+    ],
+    "6": [
+      { "q": "What are the six things the LORD hates, the seven that are detestable?", "slug": "six-things-the-lord-hates-seven-detestable", "passage": "PRO.6.16-19", "kind": "doctrine", "priority": 1 },
+      { "q": "What does go to the ant, you sluggard mean?", "slug": "go-to-the-ant-you-sluggard", "passage": "PRO.6.6-8", "kind": "practice", "priority": 1 },
+      { "q": "What does a little sleep, a little slumber mean?", "slug": "a-little-sleep-a-little-slumber", "passage": "PRO.6.10-11", "kind": "practice", "priority": 1 },
+      { "q": "Does Proverbs 6 forbid cosigning a loan?", "slug": "does-proverbs-6-forbid-cosigning", "passage": "PRO.6.1-5", "kind": "practice", "priority": 1 },
+      { "q": "What does can a man walk on hot coals and not be burned mean?", "slug": "can-a-man-walk-on-hot-coals", "passage": "PRO.6.28", "kind": "phrase", "priority": 1 }
+    ],
+    "7": [
+      { "q": "Who is the seductress in Proverbs 7?", "slug": "the-seductress-of-proverbs-7", "passage": "PRO.7.10-21", "kind": "identity", "priority": 1 },
+      { "q": "What does like an ox going to the slaughter mean?", "slug": "like-an-ox-going-to-the-slaughter", "passage": "PRO.7.22", "kind": "phrase", "priority": 2 }
+    ],
+    "8": [
+      { "q": "Is the wisdom of Proverbs 8 a picture of Jesus?", "slug": "is-the-wisdom-of-proverbs-8-jesus", "passage": "PRO.8.22-31", "kind": "doctrine", "priority": 1 },
+      { "q": "Does Proverbs 8:22 say wisdom was created, and did Arius use it?", "slug": "proverbs-8-22-and-the-arian-controversy", "passage": "PRO.8.22", "kind": "doctrine", "priority": 1 },
+      { "q": "What does I was there when he set the heavens in place mean?", "slug": "i-was-there-when-he-set-the-heavens", "passage": "PRO.8.27", "kind": "doctrine", "priority": 1 },
+      { "q": "What does whoever finds me finds life mean?", "slug": "whoever-finds-me-finds-life", "passage": "PRO.8.35", "kind": "doctrine", "priority": 2 }
+    ],
+    "9": [
+      { "q": "What are the seven pillars of wisdom's house?", "slug": "the-seven-pillars-of-wisdom", "passage": "PRO.9.1", "kind": "phrase", "priority": 1 },
+      { "q": "What does stolen water is sweet mean?", "slug": "stolen-water-is-sweet", "passage": "PRO.9.17", "kind": "phrase", "priority": 1 },
+      { "q": "Who is Lady Folly in Proverbs 9?", "slug": "who-is-lady-folly", "passage": "PRO.9.13-18", "kind": "identity", "priority": 1 }
+    ],
+    "10": [
+      { "q": "What does love covers all offenses mean?", "slug": "love-covers-all-offenses", "passage": "PRO.10.12", "kind": "practice", "priority": 1 },
+      { "q": "What does the blessing of the LORD makes rich mean?", "slug": "the-blessing-of-the-lord-makes-rich", "passage": "PRO.10.22", "kind": "doctrine", "priority": 1 },
+      { "q": "What does the mouth of the righteous is a fountain of life mean?", "slug": "the-mouth-of-the-righteous-is-a-fountain-of-life", "passage": "PRO.10.11", "kind": "phrase", "priority": 2 }
+    ],
+    "11": [
+      { "q": "What does he who wins souls is wise mean?", "slug": "he-who-wins-souls-is-wise", "passage": "PRO.11.30", "kind": "doctrine", "priority": 1 },
+      { "q": "What does where there is no counsel the people fall mean?", "slug": "where-there-is-no-counsel-the-people-fall", "passage": "PRO.11.14", "kind": "practice", "priority": 1 },
+      { "q": "What does a beautiful woman without discretion is like a gold ring in a pig's snout mean?", "slug": "a-gold-ring-in-a-pigs-snout", "passage": "PRO.11.22", "kind": "phrase", "priority": 1 },
+      { "q": "What does the generous will be enriched mean?", "slug": "the-generous-will-be-enriched", "passage": "PRO.11.25", "kind": "doctrine", "priority": 1 }
+    ],
+    "12": [
+      { "q": "What does the tongue of the wise brings healing mean?", "slug": "the-tongue-of-the-wise-brings-healing", "passage": "PRO.12.18", "kind": "practice", "priority": 1 },
+      { "q": "What does a righteous man cares for his animal mean?", "slug": "a-righteous-man-cares-for-his-animal", "passage": "PRO.12.10", "kind": "ethics", "priority": 1 },
+      { "q": "What does an excellent wife is the crown of her husband mean?", "slug": "an-excellent-wife-is-the-crown-of-her-husband", "passage": "PRO.12.4", "kind": "phrase", "priority": 2 }
+    ],
+    "13": [
+      { "q": "What does hope deferred makes the heart sick mean?", "slug": "hope-deferred-makes-the-heart-sick", "passage": "PRO.13.12", "kind": "phrase", "priority": 1 },
+      { "q": "What does he who walks with the wise becomes wise mean?", "slug": "walk-with-the-wise-and-become-wise", "passage": "PRO.13.20", "kind": "practice", "priority": 1 },
+      { "q": "Does Proverbs 13:24 mean parents must spank their children?", "slug": "does-proverbs-13-24-require-spanking", "passage": "PRO.13.24", "kind": "practice", "priority": 1 },
+      { "q": "What does he who spares the rod hates his son mean?", "slug": "he-who-spares-the-rod-hates-his-son", "passage": "PRO.13.24", "kind": "practice", "priority": 1 },
+      { "q": "What does a good man leaves an inheritance to his children's children mean?", "slug": "an-inheritance-to-his-childrens-children", "passage": "PRO.13.22", "kind": "practice", "priority": 2 }
+    ],
+    "14": [
+      { "q": "What does there is a way that seems right to a man but ends in death mean?", "slug": "a-way-that-seems-right-but-ends-in-death", "passage": "PRO.14.12", "kind": "doctrine", "priority": 1 },
+      { "q": "What does the heart knows its own bitterness mean?", "slug": "the-heart-knows-its-own-bitterness", "passage": "PRO.14.10", "kind": "phrase", "priority": 1 },
+      { "q": "What does righteousness exalts a nation mean?", "slug": "righteousness-exalts-a-nation", "passage": "PRO.14.34", "kind": "ethics", "priority": 1 },
+      { "q": "What does a wise woman builds her house mean?", "slug": "a-wise-woman-builds-her-house", "passage": "PRO.14.1", "kind": "practice", "priority": 2 }
+    ],
+    "15": [
+      { "q": "What does a soft answer turns away wrath mean?", "slug": "a-soft-answer-turns-away-wrath", "passage": "PRO.15.1", "kind": "practice", "priority": 1 },
+      { "q": "What does a gentle tongue is a tree of life mean?", "slug": "a-gentle-tongue-is-a-tree-of-life", "passage": "PRO.15.4", "kind": "phrase", "priority": 1 },
+      { "q": "What does the eyes of the LORD are in every place mean?", "slug": "the-eyes-of-the-lord-are-in-every-place", "passage": "PRO.15.3", "kind": "doctrine", "priority": 1 },
+      { "q": "What does plans fail for lack of counsel mean?", "slug": "plans-fail-for-lack-of-counsel", "passage": "PRO.15.22", "kind": "practice", "priority": 1 },
+      { "q": "Does God really not hear the prayers of the wicked?", "slug": "the-lord-is-far-from-the-wicked", "passage": "PRO.15.29", "kind": "doctrine", "priority": 1 }
+    ],
+    "16": [
+      { "q": "What does pride goes before destruction mean?", "slug": "pride-goes-before-destruction", "passage": "PRO.16.18", "kind": "doctrine", "priority": 1 },
+      { "q": "What does a man plans his way but the LORD directs his steps mean?", "slug": "a-man-plans-his-way-but-the-lord-directs-his-steps", "passage": "PRO.16.9", "kind": "doctrine", "priority": 1 },
+      { "q": "What does commit your work to the LORD and your plans will succeed mean?", "slug": "commit-your-work-to-the-lord", "passage": "PRO.16.3", "kind": "practice", "priority": 1 },
+      { "q": "What does the lot is cast but every decision is from the LORD mean?", "slug": "the-lot-is-cast-but-the-decision-is-from-the-lord", "passage": "PRO.16.33", "kind": "doctrine", "priority": 1 },
+      { "q": "What does gray hair is a crown of glory mean?", "slug": "gray-hair-is-a-crown-of-glory", "passage": "PRO.16.31", "kind": "phrase", "priority": 1 },
+      { "q": "Does Proverbs 16:4 mean God made the wicked for destruction?", "slug": "the-lord-made-the-wicked-for-the-day-of-trouble", "passage": "PRO.16.4", "kind": "doctrine", "priority": 1 }
+    ],
+    "17": [
+      { "q": "What does a joyful heart is good medicine mean?", "slug": "a-joyful-heart-is-good-medicine", "passage": "PRO.17.22", "kind": "practice", "priority": 1 },
+      { "q": "What does whoever covers an offense seeks love mean?", "slug": "whoever-covers-an-offense-seeks-love", "passage": "PRO.17.9", "kind": "practice", "priority": 1 },
+      { "q": "What does a friend loves at all times mean?", "slug": "a-friend-loves-at-all-times", "passage": "PRO.17.17", "kind": "practice", "priority": 1 },
+      { "q": "What does better a dry morsel with quiet than a house full of feasting with strife mean?", "slug": "better-a-dry-morsel-with-quiet", "passage": "PRO.17.1", "kind": "practice", "priority": 2 }
+    ],
+    "18": [
+      { "q": "What does death and life are in the power of the tongue mean?", "slug": "death-and-life-are-in-the-power-of-the-tongue", "passage": "PRO.18.21", "kind": "doctrine", "priority": 1 },
+      { "q": "What does the name of the LORD is a strong tower mean?", "slug": "the-name-of-the-lord-is-a-strong-tower", "passage": "PRO.18.10", "kind": "phrase", "priority": 1 },
+      { "q": "What does he who finds a wife finds a good thing mean?", "slug": "he-who-finds-a-wife-finds-a-good-thing", "passage": "PRO.18.22", "kind": "practice", "priority": 1 },
+      { "q": "What does a brother offended is harder to win than a fortified city mean?", "slug": "a-brother-offended-is-harder-to-win", "passage": "PRO.18.19", "kind": "practice", "priority": 1 },
+      { "q": "What does hearing only one side of a story mean in Proverbs 18:17?", "slug": "the-first-to-state-his-case-seems-right", "passage": "PRO.18.17", "kind": "practice", "priority": 1 },
+      { "q": "What does a man of many companions but a friend who sticks closer mean?", "slug": "a-friend-who-sticks-closer-than-a-brother", "passage": "PRO.18.24", "kind": "practice", "priority": 1 }
+    ],
+    "19": [
+      { "q": "What does whoever is kind to the poor lends to the LORD mean?", "slug": "whoever-is-kind-to-the-poor-lends-to-the-lord", "passage": "PRO.19.17", "kind": "ethics", "priority": 1 },
+      { "q": "What does discipline your son while there is hope mean?", "slug": "discipline-your-son-while-there-is-hope", "passage": "PRO.19.18", "kind": "practice", "priority": 1 },
+      { "q": "What does many plans are in a man's heart but the LORD's purpose prevails mean?", "slug": "the-lords-purpose-prevails", "passage": "PRO.19.21", "kind": "doctrine", "priority": 1 },
+      { "q": "What does a person's own folly ruins them yet they rage against the LORD mean?", "slug": "his-own-folly-ruins-him-yet-he-rages-at-god", "passage": "PRO.19.3", "kind": "practice", "priority": 2 }
+    ],
+    "20": [
+      { "q": "What does wine is a mocker, strong drink a brawler mean?", "slug": "wine-is-a-mocker", "passage": "PRO.20.1", "kind": "practice", "priority": 1 },
+      { "q": "Who can say I have kept my heart pure?", "slug": "who-can-say-i-have-kept-my-heart-pure", "passage": "PRO.20.9", "kind": "doctrine", "priority": 1 },
+      { "q": "What does the glory of young men is their strength mean?", "slug": "the-glory-of-young-men-is-their-strength", "passage": "PRO.20.29", "kind": "phrase", "priority": 2 },
+      { "q": "What does the spirit of man is the lamp of the LORD mean?", "slug": "the-spirit-of-man-is-the-lamp-of-the-lord", "passage": "PRO.20.27", "kind": "phrase", "priority": 2 }
+    ],
+    "21": [
+      { "q": "What does the king's heart is in the hand of the LORD mean?", "slug": "the-kings-heart-is-in-the-hand-of-the-lord", "passage": "PRO.21.1", "kind": "doctrine", "priority": 1 },
+      { "q": "Why does Proverbs say it is better to live in a desert than with a quarrelsome wife?", "slug": "better-to-live-in-a-desert-than-with-a-quarrelsome-wife", "passage": "PRO.21.19", "kind": "ethics", "priority": 1 },
+      { "q": "What does the horse is prepared for battle but victory belongs to the LORD mean?", "slug": "the-horse-is-prepared-for-battle", "passage": "PRO.21.31", "kind": "doctrine", "priority": 1 },
+      { "q": "What does whoever shuts his ear to the cry of the poor mean?", "slug": "whoever-shuts-his-ear-to-the-cry-of-the-poor", "passage": "PRO.21.13", "kind": "ethics", "priority": 1 }
+    ],
+    "22": [
+      { "q": "Does train up a child guarantee they will not leave the faith?", "slug": "train-up-a-child-in-the-way-he-should-go", "passage": "PRO.22.6", "kind": "doctrine", "priority": 1 },
+      { "q": "What does the borrower is slave to the lender mean?", "slug": "the-borrower-is-slave-to-the-lender", "passage": "PRO.22.7", "kind": "practice", "priority": 1 },
+      { "q": "What does a good name is better than great riches mean?", "slug": "a-good-name-is-better-than-riches", "passage": "PRO.22.1", "kind": "practice", "priority": 1 },
+      { "q": "What does do not move an ancient boundary stone mean?", "slug": "do-not-move-an-ancient-boundary-stone", "passage": "PRO.22.28", "kind": "history", "priority": 1 },
+      { "q": "What does the rich and the poor have this in common mean?", "slug": "the-rich-and-poor-have-this-in-common", "passage": "PRO.22.2", "kind": "ethics", "priority": 1 }
+    ],
+    "23": [
+      { "q": "What does as a man thinks in his heart so is he mean?", "slug": "as-a-man-thinks-in-his-heart-so-is-he", "passage": "PRO.23.7", "kind": "claim", "priority": 1 },
+      { "q": "What does do not look at wine when it is red mean?", "slug": "do-not-look-at-wine-when-it-is-red", "passage": "PRO.23.31-32", "kind": "practice", "priority": 1 },
+      { "q": "What does riches sprout wings and fly away mean?", "slug": "riches-sprout-wings-and-fly-away", "passage": "PRO.23.5", "kind": "phrase", "priority": 1 },
+      { "q": "What does do not eat the bread of a stingy man mean?", "slug": "the-bread-of-a-stingy-man", "passage": "PRO.23.6-8", "kind": "practice", "priority": 2 },
+      { "q": "What does the rod will not kill him mean about discipline?", "slug": "the-rod-will-not-kill-him", "passage": "PRO.23.13-14", "kind": "practice", "priority": 1 }
+    ],
+    "24": [
+      { "q": "What does do not gloat when your enemy falls mean?", "slug": "do-not-gloat-when-your-enemy-falls", "passage": "PRO.24.17-18", "kind": "ethics", "priority": 1 },
+      { "q": "What does a righteous man falls seven times and rises again mean?", "slug": "a-righteous-man-falls-seven-times", "passage": "PRO.24.16", "kind": "doctrine", "priority": 1 },
+      { "q": "What does rescue those being led away to death mean?", "slug": "rescue-those-being-led-away-to-death", "passage": "PRO.24.11-12", "kind": "ethics", "priority": 1 },
+      { "q": "What does if you falter in times of trouble how small is your strength mean?", "slug": "if-you-falter-in-times-of-trouble", "passage": "PRO.24.10", "kind": "practice", "priority": 1 }
+    ],
+    "25": [
+      { "q": "What does heaping burning coals on his head mean in Proverbs 25?", "slug": "burning-coals-on-his-head-proverbs-25", "passage": "PRO.25.21-22", "kind": "phrase", "priority": 1 },
+      { "q": "What does a word fitly spoken is like apples of gold mean?", "slug": "apples-of-gold-in-settings-of-silver", "passage": "PRO.25.11", "kind": "phrase", "priority": 1 },
+      { "q": "What does a man without self-control is like a city with broken walls mean?", "slug": "like-a-city-with-broken-walls", "passage": "PRO.25.28", "kind": "practice", "priority": 1 },
+      { "q": "What does it is not good to eat much honey mean?", "slug": "it-is-not-good-to-eat-much-honey", "passage": "PRO.25.16-27", "kind": "practice", "priority": 2 },
+      { "q": "What does let another praise you, not your own mouth mean?", "slug": "let-another-praise-you", "passage": "PRO.25.27", "kind": "practice", "priority": 1 }
+    ],
+    "26": [
+      { "q": "Does Proverbs 26:4-5 contradict itself about answering a fool?", "slug": "does-proverbs-26-4-5-contradict-itself", "passage": "PRO.26.4-5", "kind": "tension", "priority": 1 },
+      { "q": "What does as a dog returns to its vomit mean in Proverbs 26?", "slug": "as-a-dog-returns-to-its-vomit-proverbs-26", "passage": "PRO.26.11", "kind": "phrase", "priority": 1 },
+      { "q": "What does whoever digs a pit will fall into it mean?", "slug": "whoever-digs-a-pit-will-fall-into-it", "passage": "PRO.26.27", "kind": "doctrine", "priority": 1 },
+      { "q": "What does as charcoal to embers and wood to fire, so is a quarrelsome person mean?", "slug": "as-charcoal-to-embers-and-wood-to-fire", "passage": "PRO.26.21", "kind": "phrase", "priority": 2 },
+      { "q": "What does like a thornbush in a drunkard's hand mean?", "slug": "like-a-thornbush-in-a-drunkards-hand", "passage": "PRO.26.9", "kind": "phrase", "priority": 3 }
+    ],
+    "27": [
+      { "q": "What does iron sharpens iron mean?", "slug": "iron-sharpens-iron", "passage": "PRO.27.17", "kind": "practice", "priority": 1 },
+      { "q": "What does faithful are the wounds of a friend mean?", "slug": "faithful-are-the-wounds-of-a-friend", "passage": "PRO.27.6", "kind": "practice", "priority": 1 },
+      { "q": "What does do not boast about tomorrow mean?", "slug": "do-not-boast-about-tomorrow", "passage": "PRO.27.1", "kind": "practice", "priority": 1 },
+      { "q": "What does a quarrelsome wife is like a constant dripping mean?", "slug": "a-quarrelsome-wife-is-like-a-constant-dripping", "passage": "PRO.27.15-16", "kind": "ethics", "priority": 1 },
+      { "q": "What does as water reflects the face, so the heart reflects the person mean?", "slug": "as-water-reflects-the-face", "passage": "PRO.27.19", "kind": "phrase", "priority": 1 }
+    ],
+    "28": [
+      { "q": "What does the wicked flee though no one pursues mean?", "slug": "the-wicked-flee-though-no-one-pursues", "passage": "PRO.28.1", "kind": "phrase", "priority": 1 },
+      { "q": "What does whoever conceals his sins will not prosper mean?", "slug": "whoever-conceals-his-sins-will-not-prosper", "passage": "PRO.28.13", "kind": "doctrine", "priority": 1 },
+      { "q": "What does whoever trusts in his own heart is a fool mean?", "slug": "whoever-trusts-in-his-own-heart-is-a-fool", "passage": "PRO.28.26", "kind": "doctrine", "priority": 1 }
+    ],
+    "29": [
+      { "q": "Does where there is no vision the people perish mean what people think?", "slug": "where-there-is-no-vision-the-people-perish", "passage": "PRO.29.18", "kind": "claim", "priority": 1 },
+      { "q": "What does the fear of man is a snare mean?", "slug": "the-fear-of-man-is-a-snare", "passage": "PRO.29.25", "kind": "practice", "priority": 1 },
+      { "q": "What does a fool gives full vent to his anger mean?", "slug": "a-fool-gives-full-vent-to-his-anger", "passage": "PRO.29.11", "kind": "practice", "priority": 1 },
+      { "q": "What does a child left to himself brings shame to his mother mean?", "slug": "a-child-left-to-himself", "passage": "PRO.29.15", "kind": "practice", "priority": 1 }
+    ],
+    "30": [
+      { "q": "Who was Agur son of Jakeh?", "slug": "who-was-agur-son-of-jakeh", "passage": "PRO.30.1", "kind": "identity", "priority": 1 },
+      { "q": "What does give me neither poverty nor riches mean?", "slug": "give-me-neither-poverty-nor-riches", "passage": "PRO.30.8-9", "kind": "practice", "priority": 1 },
+      { "q": "What are the four things that are never satisfied?", "slug": "four-things-never-satisfied", "passage": "PRO.30.15-16", "kind": "phrase", "priority": 1 },
+      { "q": "What are the four things too wonderful to understand?", "slug": "four-things-too-wonderful", "passage": "PRO.30.18-19", "kind": "phrase", "priority": 1 },
+      { "q": "What are the four small but wise creatures in Proverbs 30?", "slug": "four-small-but-wise-creatures", "passage": "PRO.30.24-28", "kind": "phrase", "priority": 1 },
+      { "q": "What does do not add to his words mean in Proverbs 30:6?", "slug": "do-not-add-to-his-words-proverbs-30", "passage": "PRO.30.6", "kind": "doctrine", "priority": 1 },
+      { "q": "Who has ascended to heaven and come down in Proverbs 30:4?", "slug": "who-has-ascended-to-heaven-proverbs-30", "passage": "PRO.30.4", "kind": "doctrine", "priority": 1 },
+      { "q": "What does the leech has two daughters mean?", "slug": "the-leech-has-two-daughters", "passage": "PRO.30.15", "kind": "phrase", "priority": 2 }
+    ],
+    "31": [
+      { "q": "Who is the Proverbs 31 woman?", "slug": "who-is-the-proverbs-31-woman", "passage": "PRO.31.10-31", "kind": "identity", "priority": 1 },
+      { "q": "Is the Proverbs 31 woman an impossible standard?", "slug": "is-the-proverbs-31-woman-an-impossible-standard", "passage": "PRO.31.10-31", "kind": "practice", "priority": 1 },
+      { "q": "What does charm is deceptive and beauty is fleeting mean?", "slug": "charm-is-deceptive-and-beauty-is-fleeting", "passage": "PRO.31.30", "kind": "practice", "priority": 1 },
+      { "q": "What does her worth is far above rubies mean?", "slug": "her-worth-is-far-above-rubies", "passage": "PRO.31.10", "kind": "phrase", "priority": 1 },
+      { "q": "Does the Proverbs 31 woman run a business?", "slug": "does-the-proverbs-31-woman-run-a-business", "passage": "PRO.31.16-24", "kind": "practice", "priority": 1 },
+      { "q": "Who was King Lemuel?", "slug": "who-was-king-lemuel", "passage": "PRO.31.1", "kind": "identity", "priority": 1 },
+      { "q": "Why does Proverbs 31 say to give strong drink to those who are perishing?", "slug": "give-strong-drink-to-those-who-are-perishing", "passage": "PRO.31.6-7", "kind": "ethics", "priority": 1 },
+      { "q": "What does speak up for those who cannot speak for themselves mean?", "slug": "speak-up-for-those-who-cannot-speak", "passage": "PRO.31.8-9", "kind": "ethics", "priority": 1 }
+    ]
+  }
+}

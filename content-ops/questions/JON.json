@@ -1,0 +1,36 @@
+{
+  "book": "JON",
+  "name": "Jonah",
+  "chapters": {
+    "1": [
+      { "q": "Why did Jonah run away from God?", "slug": "why-jonah-ran-away-from-god", "passage": "JON.1.3", "kind": "phrase", "priority": 1 },
+      { "q": "Where was Tarshish that Jonah fled to?", "slug": "where-was-tarshish", "passage": "JON.1.3", "kind": "history", "priority": 1 },
+      { "q": "Why did the sailors cast lots to find who was guilty?", "slug": "why-the-sailors-cast-lots", "passage": "JON.1.7", "kind": "history", "priority": 1 },
+      { "q": "Why did Jonah tell them to throw him into the sea?", "slug": "throw-me-into-the-sea", "passage": "JON.1.12", "kind": "ethics", "priority": 1 },
+      { "q": "How could Jonah sleep through a storm that terrified sailors?", "slug": "jonah-slept-through-the-storm", "passage": "JON.1.5", "kind": "phrase", "priority": 1 },
+      { "q": "Was it a whale or a great fish that swallowed Jonah?", "slug": "was-it-a-whale-or-a-great-fish", "passage": "JON.1.17", "kind": "history", "priority": 1 }
+    ],
+    "2": [
+      { "q": "Could a person really survive three days inside a fish?", "slug": "could-jonah-survive-three-days-in-a-fish", "passage": "JON.2.1", "kind": "history", "priority": 1 },
+      { "q": "Is the book of Jonah history or a parable?", "slug": "is-jonah-history-or-a-parable", "passage": "JON.2.1-2", "kind": "doctrine", "priority": 1 },
+      { "q": "What does out of the belly of Sheol I cried mean?", "slug": "out-of-the-belly-of-sheol-i-cried", "passage": "JON.2.2", "kind": "phrase", "priority": 1 },
+      { "q": "What does salvation belongs to the LORD mean?", "slug": "salvation-belongs-to-the-lord", "passage": "JON.2.9", "kind": "doctrine", "priority": 1 },
+      { "q": "Did Jonah die inside the fish and come back to life?", "slug": "did-jonah-die-inside-the-fish", "passage": "JON.2.2-6", "kind": "doctrine", "priority": 1 }
+    ],
+    "3": [
+      { "q": "Why did all of Nineveh repent so quickly?", "slug": "why-nineveh-repented-so-quickly", "passage": "JON.3.5", "kind": "history", "priority": 1 },
+      { "q": "Why did the animals of Nineveh fast too?", "slug": "why-the-animals-of-nineveh-fasted", "passage": "JON.3.7-8", "kind": "history", "priority": 1 },
+      { "q": "What does God relented and did not bring the disaster mean?", "slug": "god-relented-and-did-not-bring-disaster", "passage": "JON.3.10", "kind": "tension", "priority": 1 },
+      { "q": "How big was Nineveh, a three days' journey across?", "slug": "how-big-was-nineveh", "passage": "JON.3.3", "kind": "number", "priority": 1 },
+      { "q": "Was Jonah's forty-day warning a real prophecy if it did not happen?", "slug": "was-jonahs-prophecy-unfulfilled", "passage": "JON.3.4", "kind": "doctrine", "priority": 1 }
+    ],
+    "4": [
+      { "q": "Why was Jonah angry that God spared Nineveh?", "slug": "why-jonah-was-angry-god-spared-nineveh", "passage": "JON.4.1-2", "kind": "ethics", "priority": 1 },
+      { "q": "What does I knew you were a gracious and compassionate God mean?", "slug": "i-knew-you-were-a-gracious-god", "passage": "JON.4.2", "kind": "doctrine", "priority": 1 },
+      { "q": "What was the plant or gourd that shaded Jonah?", "slug": "the-plant-that-shaded-jonah", "passage": "JON.4.6", "kind": "identity", "priority": 1 },
+      { "q": "Who are the 120,000 who cannot tell their right hand from their left?", "slug": "the-120000-who-cannot-tell-right-from-left", "passage": "JON.4.11", "kind": "identity", "priority": 1 },
+      { "q": "Why does the book of Jonah end with an unanswered question?", "slug": "why-jonah-ends-with-a-question", "passage": "JON.4.11", "kind": "doctrine", "priority": 1 },
+      { "q": "Why does God care about the cattle of Nineveh?", "slug": "why-god-cares-about-the-cattle-of-nineveh", "passage": "JON.4.11", "kind": "ethics", "priority": 1 }
+    ]
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "book": "PHM",
+  "name": "Philemon",
+  "chapters": {
+    "1": [
+      { "q": "Does the letter to Philemon endorse slavery?", "slug": "does-philemon-endorse-slavery", "passage": "PHM.1.15-16", "kind": "ethics", "priority": 1 },
+      { "q": "Who was Onesimus and what had he done?", "slug": "who-was-onesimus", "passage": "PHM.1.10-11", "kind": "identity", "priority": 1 },
+      { "q": "Why did Paul send Onesimus back instead of freeing him?", "slug": "why-paul-sent-onesimus-back", "passage": "PHM.1.12-14", "kind": "ethics", "priority": 1 },
+      { "q": "What does no longer as a slave but as a beloved brother mean?", "slug": "no-longer-a-slave-but-a-brother", "passage": "PHM.1.16", "kind": "doctrine", "priority": 1 },
+      { "q": "What does charge it to my account mean?", "slug": "charge-it-to-my-account", "passage": "PHM.1.18", "kind": "doctrine", "priority": 1 },
+      { "q": "Was Paul asking Philemon to free Onesimus without saying so?", "slug": "was-paul-asking-philemon-to-free-onesimus", "passage": "PHM.1.21", "kind": "history", "priority": 1 },
+      { "q": "What does the name Onesimus mean and why does the pun matter?", "slug": "the-meaning-of-the-name-onesimus", "passage": "PHM.1.11", "kind": "phrase", "priority": 2 },
+      { "q": "Who was Philemon and where did he live?", "slug": "who-was-philemon", "passage": "PHM.1.1-2", "kind": "identity", "priority": 2 }
+    ]
+  }
+}

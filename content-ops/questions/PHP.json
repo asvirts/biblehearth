@@ -1,0 +1,51 @@
+{
+  "book": "PHP",
+  "name": "Philippians",
+  "chapters": {
+    "1": [
+      { "q": "What does to live is Christ and to die is gain mean?", "slug": "to-live-is-christ-and-to-die-is-gain", "passage": "PHP.1.21", "kind": "doctrine", "priority": 1 },
+      { "q": "What does he who began a good work in you will complete it mean?", "slug": "he-who-began-a-good-work-will-complete-it", "passage": "PHP.1.6", "kind": "doctrine", "priority": 1 },
+      { "q": "Why was Paul okay with people preaching Christ from wrong motives?", "slug": "christ-preached-from-wrong-motives", "passage": "PHP.1.15-18", "kind": "ethics", "priority": 1 },
+      { "q": "What does I am torn between the two mean about Paul wanting to die?", "slug": "paul-torn-between-living-and-dying", "passage": "PHP.1.23-24", "kind": "doctrine", "priority": 1 },
+      { "q": "What does depart and be with Christ tell us about what happens at death?", "slug": "depart-and-be-with-christ", "passage": "PHP.1.23", "kind": "doctrine", "priority": 1 },
+      { "q": "What does partnership in the gospel mean?", "slug": "partnership-in-the-gospel", "passage": "PHP.1.5", "kind": "practice", "priority": 2 },
+      { "q": "What does it has been granted to you to suffer for his sake mean?", "slug": "granted-to-you-to-suffer-for-his-sake", "passage": "PHP.1.29", "kind": "doctrine", "priority": 1 }
+    ],
+    "2": [
+      { "q": "What does Christ emptied himself mean?", "slug": "christ-emptied-himself-kenosis", "passage": "PHP.2.7", "kind": "doctrine", "priority": 1 },
+      { "q": "What does he did not count equality with God a thing to be grasped mean?", "slug": "did-not-count-equality-with-god-to-be-grasped", "passage": "PHP.2.6", "kind": "doctrine", "priority": 1 },
+      { "q": "What does work out your own salvation with fear and trembling mean?", "slug": "work-out-your-own-salvation-with-fear-and-trembling", "passage": "PHP.2.12", "kind": "doctrine", "priority": 1 },
+      { "q": "Does Philippians 2:12 teach salvation by works?", "slug": "does-philippians-2-12-teach-works-salvation", "passage": "PHP.2.12-13", "kind": "doctrine", "priority": 1 },
+      { "q": "What does at the name of Jesus every knee shall bow mean?", "slug": "at-the-name-of-jesus-every-knee-shall-bow", "passage": "PHP.2.10-11", "kind": "doctrine", "priority": 1 },
+      { "q": "What did Christ give up when he took the form of a servant?", "slug": "christ-took-the-form-of-a-servant", "passage": "PHP.2.7", "kind": "doctrine", "priority": 1 },
+      { "q": "What does have this mind among yourselves mean?", "slug": "have-this-mind-among-yourselves", "passage": "PHP.2.5", "kind": "practice", "priority": 1 },
+      { "q": "What does count others more significant than yourselves mean?", "slug": "count-others-more-significant-than-yourselves", "passage": "PHP.2.3", "kind": "practice", "priority": 1 },
+      { "q": "What does God works in you both to will and to work mean?", "slug": "god-works-in-you-to-will-and-to-work", "passage": "PHP.2.13", "kind": "doctrine", "priority": 1 },
+      { "q": "Who was Epaphroditus and why was he almost dead?", "slug": "who-was-epaphroditus", "passage": "PHP.2.25-30", "kind": "identity", "priority": 2 },
+      { "q": "Is Philippians 2:6-11 an early Christian hymn?", "slug": "is-philippians-2-an-early-hymn", "passage": "PHP.2.6-11", "kind": "history", "priority": 1 }
+    ],
+    "3": [
+      { "q": "What does I count everything as loss compared to knowing Christ mean?", "slug": "i-count-everything-as-loss", "passage": "PHP.3.7-8", "kind": "practice", "priority": 1 },
+      { "q": "What does I press on toward the goal mean?", "slug": "i-press-on-toward-the-goal", "passage": "PHP.3.14", "kind": "practice", "priority": 1 },
+      { "q": "What does I want to know the power of his resurrection and share his sufferings mean?", "slug": "the-power-of-his-resurrection-and-fellowship-of-his-sufferings", "passage": "PHP.3.10", "kind": "doctrine", "priority": 1 },
+      { "q": "What does our citizenship is in heaven mean?", "slug": "our-citizenship-is-in-heaven", "passage": "PHP.3.20", "kind": "doctrine", "priority": 1 },
+      { "q": "Who are those whose god is their belly?", "slug": "their-god-is-their-belly", "passage": "PHP.3.19", "kind": "identity", "priority": 1 },
+      { "q": "Why does Paul call his religious achievements rubbish?", "slug": "paul-called-his-achievements-rubbish", "passage": "PHP.3.8", "kind": "phrase", "priority": 1 },
+      { "q": "Why does Paul warn against the dogs and the mutilators of the flesh?", "slug": "the-dogs-and-mutilators-of-the-flesh", "passage": "PHP.3.2", "kind": "identity", "priority": 1 },
+      { "q": "What does forgetting what lies behind mean?", "slug": "forgetting-what-lies-behind", "passage": "PHP.3.13", "kind": "practice", "priority": 1 },
+      { "q": "Was Paul saying he was not yet perfect or not yet saved?", "slug": "not-that-i-have-already-obtained-this", "passage": "PHP.3.12", "kind": "doctrine", "priority": 1 }
+    ],
+    "4": [
+      { "q": "What does I can do all things through Christ who strengthens me mean?", "slug": "i-can-do-all-things-through-christ", "passage": "PHP.4.13", "kind": "doctrine", "priority": 1 },
+      { "q": "Is Philippians 4:13 misused as a motivational verse?", "slug": "is-philippians-4-13-misused", "passage": "PHP.4.13", "kind": "claim", "priority": 1 },
+      { "q": "What does be anxious for nothing mean?", "slug": "be-anxious-for-nothing", "passage": "PHP.4.6", "kind": "practice", "priority": 1 },
+      { "q": "What is the peace of God that surpasses all understanding?", "slug": "the-peace-of-god-that-surpasses-understanding", "passage": "PHP.4.7", "kind": "phrase", "priority": 1 },
+      { "q": "What does whatever is true, honorable, and pure mean in practice?", "slug": "whatever-is-true-honorable-and-pure", "passage": "PHP.4.8", "kind": "practice", "priority": 1 },
+      { "q": "What does I have learned to be content in any situation mean?", "slug": "i-have-learned-to-be-content", "passage": "PHP.4.11-12", "kind": "practice", "priority": 1 },
+      { "q": "Does my God will supply all your needs mean God gives whatever we want?", "slug": "my-god-will-supply-all-your-needs", "passage": "PHP.4.19", "kind": "doctrine", "priority": 1 },
+      { "q": "What does rejoice in the Lord always mean when life is hard?", "slug": "rejoice-in-the-lord-always", "passage": "PHP.4.4", "kind": "practice", "priority": 1 },
+      { "q": "Who were Euodia and Syntyche and what was their conflict?", "slug": "who-were-euodia-and-syntyche", "passage": "PHP.4.2-3", "kind": "identity", "priority": 1 },
+      { "q": "What is the book of life mentioned in Philippians 4:3?", "slug": "the-book-of-life-philippians-4-3", "passage": "PHP.4.3", "kind": "doctrine", "priority": 2 }
+    ]
+  }
+}

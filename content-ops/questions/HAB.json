@@ -1,0 +1,29 @@
+{
+  "book": "HAB",
+  "name": "Habakkuk",
+  "chapters": {
+    "1": [
+      { "q": "What does how long, LORD, must I call for help mean?", "slug": "how-long-lord-must-i-call-for-help", "passage": "HAB.1.2", "kind": "practice", "priority": 1 },
+      { "q": "Why does God tolerate wrongdoing according to Habakkuk 1?", "slug": "why-does-god-tolerate-wrongdoing", "passage": "HAB.1.3", "kind": "doctrine", "priority": 1 },
+      { "q": "Why would God use the wicked Babylonians to judge Judah?", "slug": "why-god-used-the-babylonians", "passage": "HAB.1.6", "kind": "doctrine", "priority": 1 },
+      { "q": "What does your eyes are too pure to look on evil mean?", "slug": "your-eyes-are-too-pure-to-look-on-evil", "passage": "HAB.1.13", "kind": "doctrine", "priority": 1 },
+      { "q": "Is it acceptable to question God the way Habakkuk does?", "slug": "is-it-ok-to-question-god-like-habakkuk", "passage": "HAB.1.2-4", "kind": "practice", "priority": 1 }
+    ],
+    "2": [
+      { "q": "What does the righteous will live by his faith mean?", "slug": "the-righteous-will-live-by-his-faith", "passage": "HAB.2.4", "kind": "doctrine", "priority": 1 },
+      { "q": "Why is Habakkuk 2:4 quoted three times in the New Testament?", "slug": "why-habakkuk-2-4-is-quoted-three-times", "passage": "HAB.2.4", "kind": "doctrine", "priority": 1 },
+      { "q": "What does write the vision and make it plain mean?", "slug": "write-the-vision-and-make-it-plain", "passage": "HAB.2.2", "kind": "practice", "priority": 1 },
+      { "q": "Is Habakkuk 2:2 about writing down your goals?", "slug": "is-habakkuk-2-2-about-writing-goals", "passage": "HAB.2.2", "kind": "claim", "priority": 1 },
+      { "q": "What does the LORD is in his holy temple, let all the earth be silent mean?", "slug": "the-lord-is-in-his-holy-temple", "passage": "HAB.2.20", "kind": "practice", "priority": 1 },
+      { "q": "What does the earth will be filled with the knowledge of his glory mean?", "slug": "filled-with-the-knowledge-of-his-glory", "passage": "HAB.2.14", "kind": "doctrine", "priority": 1 },
+      { "q": "What are the five woes in Habakkuk 2?", "slug": "the-five-woes-of-habakkuk-2", "passage": "HAB.2.6-19", "kind": "ethics", "priority": 1 }
+    ],
+    "3": [
+      { "q": "What does though the fig tree does not bud, yet I will rejoice mean?", "slug": "though-the-fig-tree-does-not-bud", "passage": "HAB.3.17-18", "kind": "practice", "priority": 1 },
+      { "q": "What does he makes my feet like the feet of a deer mean in Habakkuk 3?", "slug": "feet-like-the-feet-of-a-deer-habakkuk", "passage": "HAB.3.19", "kind": "phrase", "priority": 1 },
+      { "q": "What does the joy of the LORD is my strength mean in Habakkuk 3:19?", "slug": "the-lord-is-my-strength-habakkuk-3", "passage": "HAB.3.19", "kind": "practice", "priority": 1 },
+      { "q": "What does revive your work in the midst of the years mean?", "slug": "revive-your-work-in-the-midst-of-the-years", "passage": "HAB.3.2", "kind": "practice", "priority": 1 },
+      { "q": "What does his splendor was like the sunrise mean?", "slug": "his-splendor-was-like-the-sunrise", "passage": "HAB.3.4", "kind": "phrase", "priority": 2 }
+    ]
+  }
+}

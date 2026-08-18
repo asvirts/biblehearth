@@ -1,0 +1,118 @@
+{
+  "book": "JOS",
+  "name": "Joshua",
+  "chapters": {
+    "1": [
+      { "q": "What does be strong and courageous mean?", "slug": "be-strong-and-courageous", "passage": "JOS.1.9", "kind": "practice", "priority": 1 },
+      { "q": "What does meditate on the law day and night mean?", "slug": "meditate-on-the-law-day-and-night", "passage": "JOS.1.8", "kind": "practice", "priority": 1 },
+      { "q": "Does Joshua 1:8 promise success for reading the Bible daily?", "slug": "does-joshua-1-8-promise-success", "passage": "JOS.1.8", "kind": "claim", "priority": 1 },
+      { "q": "What does I will never leave you nor forsake you mean in Joshua 1?", "slug": "i-will-never-leave-you-joshua-1", "passage": "JOS.1.5", "kind": "doctrine", "priority": 1 },
+      { "q": "What does every place your foot treads I have given you mean?", "slug": "every-place-your-foot-treads", "passage": "JOS.1.3", "kind": "doctrine", "priority": 1 }
+    ],
+    "2": [
+      { "q": "Was Rahab right to lie to protect the spies?", "slug": "was-rahab-right-to-lie", "passage": "JOS.2.4-6", "kind": "ethics", "priority": 1 },
+      { "q": "Was Rahab a prostitute or an innkeeper?", "slug": "was-rahab-a-prostitute-or-innkeeper", "passage": "JOS.2.1", "kind": "history", "priority": 1 },
+      { "q": "What does the scarlet cord in Rahab's window mean?", "slug": "the-scarlet-cord-in-rahabs-window", "passage": "JOS.2.18-21", "kind": "doctrine", "priority": 1 },
+      { "q": "How did Rahab know about Israel's God?", "slug": "how-rahab-knew-about-israels-god", "passage": "JOS.2.9-11", "kind": "history", "priority": 1 }
+    ],
+    "3": [
+      { "q": "How did the Jordan River stop flowing?", "slug": "how-the-jordan-river-stopped", "passage": "JOS.3.15-16", "kind": "history", "priority": 1 },
+      { "q": "Why did the priests have to step into the water first?", "slug": "the-priests-stepped-into-the-water-first", "passage": "JOS.3.13-15", "kind": "practice", "priority": 1 }
+    ],
+    "4": [
+      { "q": "What were the twelve memorial stones from the Jordan for?", "slug": "the-twelve-memorial-stones", "passage": "JOS.4.4-7", "kind": "practice", "priority": 1 },
+      { "q": "Why does God want parents to explain memorials to their children?", "slug": "when-your-children-ask-what-these-stones-mean", "passage": "JOS.4.6-7", "kind": "practice", "priority": 1 }
+    ],
+    "5": [
+      { "q": "Who is the commander of the LORD's army Joshua met?", "slug": "the-commander-of-the-lords-army", "passage": "JOS.5.13-15", "kind": "identity", "priority": 1 },
+      { "q": "Why did Israel need to be circumcised again at Gilgal?", "slug": "circumcision-again-at-gilgal", "passage": "JOS.5.2-9", "kind": "history", "priority": 1 },
+      { "q": "Why did the manna stop when Israel entered Canaan?", "slug": "why-the-manna-stopped", "passage": "JOS.5.12", "kind": "doctrine", "priority": 1 },
+      { "q": "What does neither, but as commander of the LORD's army I have come mean?", "slug": "neither-but-as-commander-i-have-come", "passage": "JOS.5.14", "kind": "doctrine", "priority": 1 }
+    ],
+    "6": [
+      { "q": "How did the walls of Jericho fall?", "slug": "how-the-walls-of-jericho-fell", "passage": "JOS.6.20", "kind": "history", "priority": 1 },
+      { "q": "Is there archaeological evidence for the fall of Jericho?", "slug": "archaeological-evidence-for-jericho", "passage": "JOS.6.20", "kind": "history", "priority": 1 },
+      { "q": "Why did Israel march around Jericho seven times on the seventh day?", "slug": "marching-around-jericho-seven-times", "passage": "JOS.6.3-4", "kind": "practice", "priority": 1 },
+      { "q": "Was it right to kill everyone in Jericho including children?", "slug": "was-it-right-to-kill-everyone-in-jericho", "passage": "JOS.6.21", "kind": "ethics", "priority": 1 },
+      { "q": "What was the curse on anyone who rebuilt Jericho?", "slug": "the-curse-on-rebuilding-jericho", "passage": "JOS.6.26", "kind": "doctrine", "priority": 1 }
+    ],
+    "7": [
+      { "q": "What was Achan's sin and why was it so serious?", "slug": "achans-sin", "passage": "JOS.7.20-21", "kind": "ethics", "priority": 1 },
+      { "q": "Why was Achan's whole family stoned with him?", "slug": "why-achans-family-was-stoned", "passage": "JOS.7.24-25", "kind": "ethics", "priority": 1 },
+      { "q": "What does the valley of Achor mean?", "slug": "the-valley-of-achor", "passage": "JOS.7.26", "kind": "phrase", "priority": 1 },
+      { "q": "Why did one man's sin cause Israel to lose a battle?", "slug": "one-mans-sin-caused-israel-to-lose", "passage": "JOS.7.1-5", "kind": "doctrine", "priority": 1 },
+      { "q": "Why did God rebuke Joshua for praying?", "slug": "why-god-rebuked-joshua-for-praying", "passage": "JOS.7.10", "kind": "practice", "priority": 1 }
+    ],
+    "8": [
+      { "q": "Did God approve of Joshua using an ambush at Ai?", "slug": "did-god-approve-the-ambush-at-ai", "passage": "JOS.8.2", "kind": "ethics", "priority": 1 },
+      { "q": "Why did Joshua build an altar on Mount Ebal?", "slug": "the-altar-on-mount-ebal", "passage": "JOS.8.30-32", "kind": "practice", "priority": 1 }
+    ],
+    "9": [
+      { "q": "How did the Gibeonites trick Joshua?", "slug": "how-the-gibeonites-tricked-joshua", "passage": "JOS.9.3-15", "kind": "history", "priority": 1 },
+      { "q": "Why did Israel keep an oath made under deception?", "slug": "why-israel-kept-an-oath-made-under-deception", "passage": "JOS.9.18-20", "kind": "ethics", "priority": 1 },
+      { "q": "What does hewers of wood and drawers of water mean?", "slug": "hewers-of-wood-and-drawers-of-water", "passage": "JOS.9.21", "kind": "phrase", "priority": 1 },
+      { "q": "What went wrong when Israel did not ask the LORD?", "slug": "they-did-not-ask-the-lord", "passage": "JOS.9.14", "kind": "practice", "priority": 1 }
+    ],
+    "10": [
+      { "q": "Did the sun really stand still for Joshua?", "slug": "did-the-sun-stand-still-for-joshua", "passage": "JOS.10.12-14", "kind": "history", "priority": 1 },
+      { "q": "How could the sun stand still if the earth orbits the sun?", "slug": "how-the-sun-standing-still-works-scientifically", "passage": "JOS.10.13", "kind": "tension", "priority": 1 },
+      { "q": "What is the Book of Jashar mentioned in Joshua 10:13?", "slug": "the-book-of-jashar", "passage": "JOS.10.13", "kind": "history", "priority": 1 },
+      { "q": "Why did Joshua make his commanders step on the kings' necks?", "slug": "stepping-on-the-kings-necks", "passage": "JOS.10.24", "kind": "history", "priority": 1 },
+      { "q": "What were the hailstones that killed more than the sword?", "slug": "the-hailstones-that-killed-more-than-the-sword", "passage": "JOS.10.11", "kind": "history", "priority": 1 }
+    ],
+    "11": [
+      { "q": "Why did God harden the Canaanite kings' hearts?", "slug": "god-hardened-the-canaanite-kings-hearts", "passage": "JOS.11.20", "kind": "doctrine", "priority": 1 },
+      { "q": "Did Joshua really conquer all the land, or not?", "slug": "did-joshua-conquer-all-the-land", "passage": "JOS.11.23", "kind": "tension", "priority": 1 }
+    ],
+    "12": [
+      { "q": "Why does Joshua 12 list thirty-one defeated kings?", "slug": "the-thirty-one-defeated-kings", "passage": "JOS.12.9-24", "kind": "history", "priority": 2 }
+    ],
+    "13": [
+      { "q": "What land remained unconquered when Joshua was old?", "slug": "the-land-that-remained-unconquered", "passage": "JOS.13.1-6", "kind": "history", "priority": 1 },
+      { "q": "Why did the tribe of Levi receive no land inheritance?", "slug": "why-levi-received-no-land", "passage": "JOS.13.14", "kind": "doctrine", "priority": 1 }
+    ],
+    "14": [
+      { "q": "What does give me this mountain mean?", "slug": "give-me-this-mountain", "passage": "JOS.14.12", "kind": "practice", "priority": 1 },
+      { "q": "How old was Caleb when he claimed Hebron?", "slug": "how-old-was-caleb-when-he-claimed-hebron", "passage": "JOS.14.10-11", "kind": "number", "priority": 1 },
+      { "q": "What does Caleb followed the LORD wholeheartedly mean?", "slug": "caleb-followed-the-lord-wholeheartedly", "passage": "JOS.14.8-9", "kind": "practice", "priority": 1 }
+    ],
+    "15": [
+      { "q": "Who was Achsah and why did she ask for springs of water?", "slug": "who-was-achsah", "passage": "JOS.15.18-19", "kind": "identity", "priority": 2 }
+    ],
+    "16": [
+      { "q": "Why did Ephraim fail to drive out the Canaanites of Gezer?", "slug": "ephraim-failed-to-drive-out-gezer", "passage": "JOS.16.10", "kind": "history", "priority": 3 }
+    ],
+    "17": [
+      { "q": "Why could Manasseh not drive out the Canaanites with iron chariots?", "slug": "canaanites-with-iron-chariots", "passage": "JOS.17.16-18", "kind": "history", "priority": 2 }
+    ],
+    "18": [
+      { "q": "Why did Joshua rebuke the tribes for delaying to take their land?", "slug": "how-long-will-you-wait-to-take-the-land", "passage": "JOS.18.3", "kind": "practice", "priority": 1 }
+    ],
+    "19": [
+      { "q": "Why did Joshua receive his own inheritance last?", "slug": "joshua-received-his-inheritance-last", "passage": "JOS.19.49-50", "kind": "practice", "priority": 2 }
+    ],
+    "20": [
+      { "q": "What were the cities of refuge and how did they work?", "slug": "the-cities-of-refuge", "passage": "JOS.20.1-6", "kind": "history", "priority": 1 },
+      { "q": "How are the cities of refuge a picture of Christ?", "slug": "cities-of-refuge-as-a-picture-of-christ", "passage": "JOS.20.3", "kind": "doctrine", "priority": 1 }
+    ],
+    "21": [
+      { "q": "Why were the Levites given forty-eight scattered cities?", "slug": "the-forty-eight-levitical-cities", "passage": "JOS.21.41", "kind": "history", "priority": 1 },
+      { "q": "What does not one word of God's promises failed mean?", "slug": "not-one-word-failed", "passage": "JOS.21.45", "kind": "doctrine", "priority": 1 }
+    ],
+    "22": [
+      { "q": "Why did the altar built by the eastern tribes nearly start a civil war?", "slug": "the-altar-that-nearly-started-a-civil-war", "passage": "JOS.22.10-34", "kind": "history", "priority": 1 },
+      { "q": "What can Joshua 22 teach about confronting other believers?", "slug": "how-joshua-22-handles-confrontation", "passage": "JOS.22.13-20", "kind": "practice", "priority": 1 }
+    ],
+    "23": [
+      { "q": "What does one man of you puts to flight a thousand mean?", "slug": "one-man-puts-to-flight-a-thousand", "passage": "JOS.23.10", "kind": "phrase", "priority": 1 },
+      { "q": "Why did Joshua warn against intermarrying with the nations?", "slug": "joshuas-warning-about-intermarriage", "passage": "JOS.23.12-13", "kind": "ethics", "priority": 1 }
+    ],
+    "24": [
+      { "q": "What does choose this day whom you will serve mean?", "slug": "choose-this-day-whom-you-will-serve", "passage": "JOS.24.15", "kind": "practice", "priority": 1 },
+      { "q": "What does as for me and my house, we will serve the LORD mean?", "slug": "as-for-me-and-my-house", "passage": "JOS.24.15", "kind": "practice", "priority": 1 },
+      { "q": "Why did Joshua say you are not able to serve the LORD?", "slug": "you-are-not-able-to-serve-the-lord", "passage": "JOS.24.19", "kind": "doctrine", "priority": 1 },
+      { "q": "What was the covenant renewal at Shechem?", "slug": "the-covenant-renewal-at-shechem", "passage": "JOS.24.25-27", "kind": "history", "priority": 1 },
+      { "q": "Where were Joseph's bones finally buried?", "slug": "where-josephs-bones-were-buried", "passage": "JOS.24.32", "kind": "history", "priority": 1 }
+    ]
+  }
+}

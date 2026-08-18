@@ -1,0 +1,106 @@
+{
+  "book": "DAN",
+  "name": "Daniel",
+  "chapters": {
+    "1": [
+      { "q": "Why did Daniel refuse the king's food and wine?", "slug": "why-daniel-refused-the-kings-food", "passage": "DAN.1.8", "kind": "practice", "priority": 1 },
+      { "q": "What is the Daniel fast and is it biblical?", "slug": "what-is-the-daniel-fast", "passage": "DAN.1.12", "kind": "claim", "priority": 1 },
+      { "q": "What do the Babylonian names Belteshazzar, Shadrach, Meshach, and Abednego mean?", "slug": "the-babylonian-names-of-daniel-and-his-friends", "passage": "DAN.1.7", "kind": "phrase", "priority": 1 },
+      { "q": "Were Daniel and his friends made eunuchs?", "slug": "were-daniel-and-his-friends-eunuchs", "passage": "DAN.1.3", "kind": "history", "priority": 1 },
+      { "q": "How old was Daniel when he was taken to Babylon?", "slug": "how-old-was-daniel-in-babylon", "passage": "DAN.1.4", "kind": "number", "priority": 2 }
+    ],
+    "2": [
+      { "q": "What do the four kingdoms in Nebuchadnezzar's statue represent?", "slug": "the-four-kingdoms-of-nebuchadnezzars-statue", "passage": "DAN.2.31-45", "kind": "doctrine", "priority": 1 },
+      { "q": "What are the feet of iron mixed with clay?", "slug": "the-feet-of-iron-mixed-with-clay", "passage": "DAN.2.41-43", "kind": "doctrine", "priority": 1 },
+      { "q": "What is the stone not cut by human hands?", "slug": "the-stone-not-cut-by-human-hands", "passage": "DAN.2.34-35", "kind": "identity", "priority": 1 },
+      { "q": "Is the fourth kingdom in Daniel 2 Rome or Greece?", "slug": "is-the-fourth-kingdom-rome-or-greece", "passage": "DAN.2.40", "kind": "doctrine", "priority": 1 },
+      { "q": "Why did Nebuchadnezzar demand his wise men tell him the dream itself?", "slug": "why-nebuchadnezzar-demanded-the-dream-itself", "passage": "DAN.2.5-9", "kind": "history", "priority": 1 },
+      { "q": "What does he reveals deep and hidden things mean?", "slug": "he-reveals-deep-and-hidden-things", "passage": "DAN.2.22", "kind": "doctrine", "priority": 1 },
+      { "q": "What does the God of heaven will set up a kingdom that will never end mean?", "slug": "a-kingdom-that-will-never-end", "passage": "DAN.2.44", "kind": "doctrine", "priority": 1 }
+    ],
+    "3": [
+      { "q": "Who was the fourth man in the fiery furnace?", "slug": "the-fourth-man-in-the-fiery-furnace", "passage": "DAN.3.25", "kind": "identity", "priority": 1 },
+      { "q": "What does but if he does not deliver us mean?", "slug": "but-if-he-does-not-deliver-us", "passage": "DAN.3.17-18", "kind": "practice", "priority": 1 },
+      { "q": "How big was Nebuchadnezzar's golden statue?", "slug": "how-big-was-nebuchadnezzars-statue", "passage": "DAN.3.1", "kind": "number", "priority": 1 },
+      { "q": "Where was Daniel during the fiery furnace?", "slug": "where-was-daniel-during-the-fiery-furnace", "passage": "DAN.3.12", "kind": "history", "priority": 1 },
+      { "q": "Why did not even the smell of smoke cling to them?", "slug": "not-even-the-smell-of-smoke", "passage": "DAN.3.27", "kind": "phrase", "priority": 1 },
+      { "q": "What was the furnace heated seven times hotter?", "slug": "the-furnace-heated-seven-times-hotter", "passage": "DAN.3.19", "kind": "number", "priority": 2 }
+    ],
+    "4": [
+      { "q": "What was Nebuchadnezzar's madness in Daniel 4?", "slug": "nebuchadnezzars-madness", "passage": "DAN.4.32-33", "kind": "history", "priority": 1 },
+      { "q": "What are the seven times or seven years of Nebuchadnezzar's judgment?", "slug": "the-seven-times-of-nebuchadnezzar", "passage": "DAN.4.16", "kind": "number", "priority": 1 },
+      { "q": "Who are the watchers in Daniel 4?", "slug": "who-are-the-watchers-in-daniel-4", "passage": "DAN.4.13-17", "kind": "identity", "priority": 1 },
+      { "q": "What does the Most High rules the kingdom of men mean?", "slug": "the-most-high-rules-the-kingdom-of-men", "passage": "DAN.4.17", "kind": "doctrine", "priority": 1 },
+      { "q": "Was Nebuchadnezzar saved at the end of Daniel 4?", "slug": "was-nebuchadnezzar-saved", "passage": "DAN.4.34-37", "kind": "doctrine", "priority": 1 },
+      { "q": "What does the great tree cut down in Daniel 4 represent?", "slug": "the-great-tree-cut-down", "passage": "DAN.4.10-15", "kind": "phrase", "priority": 1 }
+    ],
+    "5": [
+      { "q": "What does mene mene tekel upharsin mean?", "slug": "mene-mene-tekel-upharsin", "passage": "DAN.5.25-28", "kind": "phrase", "priority": 1 },
+      { "q": "What was the writing on the wall?", "slug": "the-writing-on-the-wall", "passage": "DAN.5.5", "kind": "phrase", "priority": 1 },
+      { "q": "Who was Belshazzar and did he really exist?", "slug": "who-was-belshazzar", "passage": "DAN.5.1", "kind": "history", "priority": 1 },
+      { "q": "Why does Daniel 5 call Belshazzar Nebuchadnezzar's son?", "slug": "belshazzar-called-nebuchadnezzars-son", "passage": "DAN.5.2", "kind": "tension", "priority": 1 },
+      { "q": "Who was Darius the Mede?", "slug": "who-was-darius-the-mede", "passage": "DAN.5.31", "kind": "history", "priority": 1 },
+      { "q": "Why was Daniel offered the third highest position and not the second?", "slug": "the-third-highest-position", "passage": "DAN.5.16", "kind": "history", "priority": 1 }
+    ],
+    "6": [
+      { "q": "Why was Daniel thrown into the lions' den?", "slug": "why-daniel-was-thrown-into-the-lions-den", "passage": "DAN.6.6-16", "kind": "history", "priority": 1 },
+      { "q": "Why did Daniel pray three times a day toward Jerusalem?", "slug": "daniel-prayed-three-times-a-day", "passage": "DAN.6.10", "kind": "practice", "priority": 1 },
+      { "q": "What was the law of the Medes and Persians that could not be changed?", "slug": "the-law-of-the-medes-and-persians", "passage": "DAN.6.8", "kind": "history", "priority": 1 },
+      { "q": "How old was Daniel in the lions' den?", "slug": "how-old-was-daniel-in-the-lions-den", "passage": "DAN.6.1-2", "kind": "number", "priority": 1 },
+      { "q": "What happened to Daniel's accusers?", "slug": "what-happened-to-daniels-accusers", "passage": "DAN.6.24", "kind": "ethics", "priority": 1 }
+    ],
+    "7": [
+      { "q": "What are the four beasts in Daniel 7?", "slug": "the-four-beasts-of-daniel-7", "passage": "DAN.7.3-8", "kind": "identity", "priority": 1 },
+      { "q": "Who is the Ancient of Days?", "slug": "who-is-the-ancient-of-days", "passage": "DAN.7.9-10", "kind": "identity", "priority": 1 },
+      { "q": "Who is the one like a son of man in Daniel 7:13?", "slug": "one-like-a-son-of-man-daniel-7", "passage": "DAN.7.13-14", "kind": "identity", "priority": 1 },
+      { "q": "Who is the little horn in Daniel 7?", "slug": "the-little-horn-of-daniel-7", "passage": "DAN.7.8", "kind": "identity", "priority": 1 },
+      { "q": "What does a time, times, and half a time mean in Daniel 7:25?", "slug": "a-time-times-and-half-a-time-daniel-7", "passage": "DAN.7.25", "kind": "number", "priority": 1 },
+      { "q": "Who are the ten horns of the fourth beast?", "slug": "the-ten-horns-of-the-fourth-beast", "passage": "DAN.7.7", "kind": "identity", "priority": 1 },
+      { "q": "What does he will change the set times and the laws mean?", "slug": "he-will-change-the-times-and-the-laws", "passage": "DAN.7.25", "kind": "doctrine", "priority": 1 },
+      { "q": "Who are the saints who will possess the kingdom?", "slug": "the-saints-will-possess-the-kingdom", "passage": "DAN.7.18-27", "kind": "doctrine", "priority": 1 }
+    ],
+    "8": [
+      { "q": "What do the ram and the goat in Daniel 8 represent?", "slug": "the-ram-and-the-goat-of-daniel-8", "passage": "DAN.8.3-8", "kind": "identity", "priority": 1 },
+      { "q": "What are the 2,300 evenings and mornings?", "slug": "the-2300-evenings-and-mornings", "passage": "DAN.8.14", "kind": "number", "priority": 1 },
+      { "q": "Is the little horn in Daniel 8 Antiochus IV Epiphanes?", "slug": "is-the-little-horn-antiochus-iv", "passage": "DAN.8.9-12", "kind": "history", "priority": 1 },
+      { "q": "Why did Gabriel's explanation make Daniel sick?", "slug": "why-the-vision-made-daniel-sick", "passage": "DAN.8.27", "kind": "phrase", "priority": 1 },
+      { "q": "What is the host of heaven the little horn attacks?", "slug": "the-host-of-heaven-daniel-8", "passage": "DAN.8.10", "kind": "identity", "priority": 1 }
+    ],
+    "9": [
+      { "q": "What is the seventy weeks prophecy in Daniel 9?", "slug": "the-seventy-weeks-prophecy", "passage": "DAN.9.24-27", "kind": "doctrine", "priority": 1 },
+      { "q": "How do you calculate the 490 years of Daniel 9?", "slug": "how-to-calculate-the-490-years", "passage": "DAN.9.24-25", "kind": "number", "priority": 1 },
+      { "q": "Who is the Anointed One who will be cut off?", "slug": "the-anointed-one-cut-off", "passage": "DAN.9.26", "kind": "identity", "priority": 1 },
+      { "q": "Who is the prince who is to come in Daniel 9:26?", "slug": "the-prince-who-is-to-come", "passage": "DAN.9.26", "kind": "identity", "priority": 1 },
+      { "q": "What is the gap between the 69th and 70th week?", "slug": "the-gap-between-the-69th-and-70th-week", "passage": "DAN.9.26-27", "kind": "doctrine", "priority": 1 },
+      { "q": "What is the covenant broken in the middle of the week?", "slug": "the-covenant-broken-in-the-middle-of-the-week", "passage": "DAN.9.27", "kind": "doctrine", "priority": 1 },
+      { "q": "How did Daniel know the exile would last seventy years?", "slug": "how-daniel-knew-about-the-seventy-years", "passage": "DAN.9.2", "kind": "history", "priority": 1 },
+      { "q": "What makes Daniel's prayer of confession a model prayer?", "slug": "daniels-prayer-of-confession", "passage": "DAN.9.4-19", "kind": "practice", "priority": 1 }
+    ],
+    "10": [
+      { "q": "Who is the prince of Persia in Daniel 10?", "slug": "the-prince-of-persia", "passage": "DAN.10.13", "kind": "identity", "priority": 1 },
+      { "q": "Who is Michael, your prince, in Daniel 10?", "slug": "michael-your-prince", "passage": "DAN.10.13-21", "kind": "identity", "priority": 1 },
+      { "q": "Why was Daniel's prayer answer delayed twenty-one days?", "slug": "why-daniels-answer-was-delayed-21-days", "passage": "DAN.10.12-13", "kind": "doctrine", "priority": 1 },
+      { "q": "Does Daniel 10 teach territorial spirits over nations?", "slug": "does-daniel-10-teach-territorial-spirits", "passage": "DAN.10.13-20", "kind": "doctrine", "priority": 1 },
+      { "q": "Who is the man dressed in linen in Daniel 10?", "slug": "the-man-dressed-in-linen", "passage": "DAN.10.5-6", "kind": "identity", "priority": 1 },
+      { "q": "Who is the prince of Greece in Daniel 10:20?", "slug": "the-prince-of-greece", "passage": "DAN.10.20", "kind": "identity", "priority": 1 }
+    ],
+    "11": [
+      { "q": "Who are the kings of the north and south in Daniel 11?", "slug": "the-kings-of-the-north-and-south", "passage": "DAN.11.5-20", "kind": "identity", "priority": 1 },
+      { "q": "Why is Daniel 11 so detailed that skeptics date it after the events?", "slug": "why-skeptics-date-daniel-11-after-the-events", "passage": "DAN.11.2-35", "kind": "history", "priority": 1 },
+      { "q": "Who is the king who exalts himself above every god?", "slug": "the-king-who-exalts-himself-above-every-god", "passage": "DAN.11.36-37", "kind": "identity", "priority": 1 },
+      { "q": "What is the abomination that causes desolation in Daniel 11:31?", "slug": "the-abomination-in-daniel-11-31", "passage": "DAN.11.31", "kind": "identity", "priority": 1 },
+      { "q": "What does he shall have no regard for the desire of women mean?", "slug": "no-regard-for-the-desire-of-women", "passage": "DAN.11.37", "kind": "phrase", "priority": 1 },
+      { "q": "Where does Daniel 11 shift from history to the end times?", "slug": "where-daniel-11-shifts-to-the-end-times", "passage": "DAN.11.35-36", "kind": "doctrine", "priority": 1 },
+      { "q": "Who is the god of fortresses in Daniel 11:38?", "slug": "the-god-of-fortresses", "passage": "DAN.11.38", "kind": "identity", "priority": 2 }
+    ],
+    "12": [
+      { "q": "What are the 1,290 and 1,335 days in Daniel 12?", "slug": "the-1290-and-1335-days", "passage": "DAN.12.11-12", "kind": "number", "priority": 1 },
+      { "q": "Does Daniel 12:2 teach a resurrection of both the saved and the lost?", "slug": "does-daniel-12-2-teach-two-resurrections", "passage": "DAN.12.2", "kind": "doctrine", "priority": 1 },
+      { "q": "What does those who are wise will shine like the stars mean?", "slug": "those-who-are-wise-will-shine-like-stars", "passage": "DAN.12.3", "kind": "doctrine", "priority": 1 },
+      { "q": "Does knowledge shall increase predict modern technology?", "slug": "does-knowledge-shall-increase-predict-technology", "passage": "DAN.12.4", "kind": "claim", "priority": 1 },
+      { "q": "What does seal up the book until the time of the end mean?", "slug": "seal-up-the-book-until-the-end", "passage": "DAN.12.4-9", "kind": "doctrine", "priority": 1 },
+      { "q": "What does go your way, Daniel, mean at the end of the book?", "slug": "go-your-way-daniel", "passage": "DAN.12.13", "kind": "phrase", "priority": 1 },
+      { "q": "What is the time of trouble unlike any other in Daniel 12:1?", "slug": "a-time-of-trouble-unlike-any-other", "passage": "DAN.12.1", "kind": "doctrine", "priority": 1 }
+    ]
+  }
+}

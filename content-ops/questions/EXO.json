@@ -1,0 +1,271 @@
+{
+  "book": "EXO",
+  "name": "Exodus",
+  "chapters": {
+    "1": [
+      { "q": "Was it right for the midwives Shiphrah and Puah to lie to Pharaoh?", "slug": "were-the-midwives-right-to-lie", "passage": "EXO.1.19-20", "kind": "ethics", "priority": 1 },
+      { "q": "Why did God bless the midwives for deceiving Pharaoh?", "slug": "why-god-blessed-the-midwives", "passage": "EXO.1.20-21", "kind": "ethics", "priority": 1 },
+      { "q": "Which Pharaoh did not know Joseph?", "slug": "the-pharaoh-who-did-not-know-joseph", "passage": "EXO.1.8", "kind": "history", "priority": 1 },
+      { "q": "Why did Pharaoh order Hebrew baby boys killed?", "slug": "why-pharaoh-ordered-hebrew-boys-killed", "passage": "EXO.1.15-16", "kind": "history", "priority": 1 },
+      { "q": "How did the Israelites multiply so fast in Egypt?", "slug": "how-the-israelites-multiplied-in-egypt", "passage": "EXO.1.7", "kind": "number", "priority": 2 }
+    ],
+    "2": [
+      { "q": "Was Moses right to kill the Egyptian?", "slug": "was-moses-right-to-kill-the-egyptian", "passage": "EXO.2.11-12", "kind": "ethics", "priority": 1 },
+      { "q": "Why did Moses' mother put him in a basket on the Nile?", "slug": "moses-in-the-basket-on-the-nile", "passage": "EXO.2.3", "kind": "phrase", "priority": 1 },
+      { "q": "Who was Pharaoh's daughter who adopted Moses?", "slug": "who-was-pharaohs-daughter", "passage": "EXO.2.5-10", "kind": "identity", "priority": 1 },
+      { "q": "Who was Jethro, also called Reuel?", "slug": "who-was-jethro-reuel", "passage": "EXO.2.18", "kind": "identity", "priority": 1 },
+      { "q": "What does the name Moses mean?", "slug": "what-does-the-name-moses-mean", "passage": "EXO.2.10", "kind": "phrase", "priority": 1 },
+      { "q": "What does God remembered his covenant mean?", "slug": "god-remembered-his-covenant", "passage": "EXO.2.24", "kind": "doctrine", "priority": 1 }
+    ],
+    "3": [
+      { "q": "What does I AM WHO I AM mean?", "slug": "what-does-i-am-who-i-am-mean", "passage": "EXO.3.14", "kind": "doctrine", "priority": 1 },
+      { "q": "Why was the burning bush not consumed?", "slug": "why-the-burning-bush-was-not-consumed", "passage": "EXO.3.2", "kind": "phrase", "priority": 1 },
+      { "q": "Why did God tell Moses to take off his sandals?", "slug": "take-off-your-sandals-holy-ground", "passage": "EXO.3.5", "kind": "practice", "priority": 1 },
+      { "q": "What does a land flowing with milk and honey mean?", "slug": "a-land-flowing-with-milk-and-honey", "passage": "EXO.3.8", "kind": "phrase", "priority": 1 },
+      { "q": "What does who am I that I should go to Pharaoh mean?", "slug": "who-am-i-that-i-should-go-to-pharaoh", "passage": "EXO.3.11", "kind": "practice", "priority": 1 },
+      { "q": "Why is God's name YHWH not pronounced?", "slug": "why-gods-name-yhwh-is-not-pronounced", "passage": "EXO.3.15", "kind": "history", "priority": 1 },
+      { "q": "Where is Mount Horeb and is it the same as Sinai?", "slug": "is-horeb-the-same-as-sinai", "passage": "EXO.3.1", "kind": "history", "priority": 1 },
+      { "q": "Why did God tell Moses to ask for only a three-day journey?", "slug": "the-three-day-journey-request", "passage": "EXO.3.18", "kind": "ethics", "priority": 1 }
+    ],
+    "4": [
+      { "q": "What is the bridegroom of blood in Exodus 4:24-26?", "slug": "the-bridegroom-of-blood", "passage": "EXO.4.24-26", "kind": "phrase", "priority": 1 },
+      { "q": "Why did the LORD seek to kill Moses in Exodus 4:24?", "slug": "why-the-lord-sought-to-kill-moses", "passage": "EXO.4.24", "kind": "ethics", "priority": 1 },
+      { "q": "Did Moses have a speech impediment?", "slug": "did-moses-have-a-speech-impediment", "passage": "EXO.4.10", "kind": "history", "priority": 1 },
+      { "q": "What does who made the human mouth mean?", "slug": "who-made-the-human-mouth", "passage": "EXO.4.11", "kind": "doctrine", "priority": 1 },
+      { "q": "Why was God angry at Moses for asking him to send someone else?", "slug": "god-was-angry-at-moses", "passage": "EXO.4.13-14", "kind": "phrase", "priority": 1 },
+      { "q": "What does I will harden Pharaoh's heart mean in Exodus 4:21?", "slug": "i-will-harden-pharaohs-heart-exodus-4", "passage": "EXO.4.21", "kind": "doctrine", "priority": 1 },
+      { "q": "What does Israel is my firstborn son mean?", "slug": "israel-is-my-firstborn-son", "passage": "EXO.4.22", "kind": "doctrine", "priority": 1 }
+    ],
+    "5": [
+      { "q": "What does who is the LORD that I should obey him mean?", "slug": "who-is-the-lord-that-i-should-obey-him", "passage": "EXO.5.2", "kind": "phrase", "priority": 1 },
+      { "q": "Why did Pharaoh make them gather their own straw?", "slug": "bricks-without-straw", "passage": "EXO.5.7-9", "kind": "history", "priority": 1 },
+      { "q": "Why did things get worse after Moses obeyed God?", "slug": "why-things-got-worse-after-moses-obeyed", "passage": "EXO.5.22-23", "kind": "doctrine", "priority": 1 }
+    ],
+    "6": [
+      { "q": "Why does Exodus 6:3 say God's name was not known to Abraham when Genesis uses it?", "slug": "was-gods-name-known-to-abraham", "passage": "EXO.6.3", "kind": "tension", "priority": 1 },
+      { "q": "What are the seven I will statements in Exodus 6?", "slug": "the-i-will-statements-in-exodus-6", "passage": "EXO.6.6-8", "kind": "doctrine", "priority": 1 },
+      { "q": "Why does a genealogy interrupt the exodus story in Exodus 6?", "slug": "why-a-genealogy-interrupts-exodus-6", "passage": "EXO.6.14-25", "kind": "history", "priority": 2 }
+    ],
+    "7": [
+      { "q": "How did Pharaoh's magicians duplicate Moses' miracles?", "slug": "how-pharaohs-magicians-duplicated-the-miracles", "passage": "EXO.7.11-12", "kind": "doctrine", "priority": 1 },
+      { "q": "Did the Nile actually turn to blood or to red algae?", "slug": "did-the-nile-turn-to-blood-or-algae", "passage": "EXO.7.20-21", "kind": "history", "priority": 1 },
+      { "q": "What does I have made you like God to Pharaoh mean?", "slug": "i-have-made-you-like-god-to-pharaoh", "passage": "EXO.7.1", "kind": "phrase", "priority": 1 },
+      { "q": "How old were Moses and Aaron when they confronted Pharaoh?", "slug": "how-old-were-moses-and-aaron", "passage": "EXO.7.7", "kind": "number", "priority": 2 }
+    ],
+    "8": [
+      { "q": "What does this is the finger of God mean?", "slug": "this-is-the-finger-of-god-exodus-8", "passage": "EXO.8.19", "kind": "phrase", "priority": 1 },
+      { "q": "Why could the magicians not duplicate the gnats?", "slug": "why-the-magicians-could-not-duplicate-the-gnats", "passage": "EXO.8.18", "kind": "doctrine", "priority": 1 },
+      { "q": "What does I will make a distinction between my people and yours mean?", "slug": "i-will-make-a-distinction", "passage": "EXO.8.23", "kind": "doctrine", "priority": 1 },
+      { "q": "Did each plague target a specific Egyptian god?", "slug": "did-the-plagues-target-egyptian-gods", "passage": "EXO.8.1-2", "kind": "history", "priority": 1 }
+    ],
+    "9": [
+      { "q": "What does I have raised you up for this very purpose mean?", "slug": "i-have-raised-you-up-for-this-purpose", "passage": "EXO.9.16", "kind": "doctrine", "priority": 1 },
+      { "q": "Why does Exodus sometimes say Pharaoh hardened his heart and sometimes God did?", "slug": "who-hardened-pharaohs-heart", "passage": "EXO.9.12", "kind": "doctrine", "priority": 1 },
+      { "q": "How could Egyptian livestock die in the fifth plague and again in the seventh?", "slug": "how-livestock-died-twice", "passage": "EXO.9.6", "kind": "tension", "priority": 1 },
+      { "q": "Why did some Egyptians start fearing the word of the LORD?", "slug": "egyptians-who-feared-the-word-of-the-lord", "passage": "EXO.9.20-21", "kind": "phrase", "priority": 2 }
+    ],
+    "10": [
+      { "q": "What is the darkness that could be felt?", "slug": "darkness-that-could-be-felt", "passage": "EXO.10.21-23", "kind": "phrase", "priority": 1 },
+      { "q": "Why did God harden Pharaoh's heart so he could show more signs?", "slug": "god-hardened-pharaoh-to-show-more-signs", "passage": "EXO.10.1-2", "kind": "doctrine", "priority": 1 },
+      { "q": "Why did Pharaoh keep offering partial compromises?", "slug": "pharaohs-partial-compromises", "passage": "EXO.10.8-11", "kind": "practice", "priority": 1 }
+    ],
+    "11": [
+      { "q": "Why did God kill the firstborn of Egypt?", "slug": "why-god-killed-the-firstborn-of-egypt", "passage": "EXO.11.4-5", "kind": "ethics", "priority": 1 },
+      { "q": "Is it just for God to kill children for Pharaoh's sin?", "slug": "is-it-just-to-kill-children-for-pharaohs-sin", "passage": "EXO.11.5", "kind": "ethics", "priority": 1 },
+      { "q": "What does not even a dog will bark mean?", "slug": "not-even-a-dog-will-bark", "passage": "EXO.11.7", "kind": "phrase", "priority": 2 }
+    ],
+    "12": [
+      { "q": "What is the Passover and why does it matter?", "slug": "what-is-the-passover", "passage": "EXO.12.1-14", "kind": "doctrine", "priority": 1 },
+      { "q": "Why was the Passover lamb to be without blemish?", "slug": "why-the-passover-lamb-was-without-blemish", "passage": "EXO.12.5", "kind": "doctrine", "priority": 1 },
+      { "q": "Why was blood put on the doorposts and lintel?", "slug": "blood-on-the-doorposts-and-lintel", "passage": "EXO.12.7", "kind": "doctrine", "priority": 1 },
+      { "q": "Does Exodus 12:40 say 430 years while Genesis 15 says 400?", "slug": "430-years-in-exodus-12", "passage": "EXO.12.40-41", "kind": "tension", "priority": 1 },
+      { "q": "Who was the mixed multitude that left Egypt with Israel?", "slug": "the-mixed-multitude", "passage": "EXO.12.38", "kind": "identity", "priority": 1 },
+      { "q": "Why was no bone of the Passover lamb to be broken?", "slug": "no-bone-of-the-lamb-to-be-broken", "passage": "EXO.12.46", "kind": "doctrine", "priority": 1 },
+      { "q": "Did the Israelites plunder or steal from the Egyptians?", "slug": "did-israel-plunder-or-steal-from-egypt", "passage": "EXO.12.35-36", "kind": "ethics", "priority": 1 },
+      { "q": "How many people actually left Egypt in the exodus?", "slug": "how-many-people-left-egypt", "passage": "EXO.12.37", "kind": "number", "priority": 1 },
+      { "q": "Why must unleavened bread be eaten for seven days?", "slug": "why-unleavened-bread-for-seven-days", "passage": "EXO.12.15", "kind": "practice", "priority": 1 }
+    ],
+    "13": [
+      { "q": "Why does God claim every firstborn as his own?", "slug": "why-god-claims-every-firstborn", "passage": "EXO.13.2", "kind": "doctrine", "priority": 1 },
+      { "q": "What are the pillar of cloud and the pillar of fire?", "slug": "the-pillar-of-cloud-and-fire", "passage": "EXO.13.21-22", "kind": "phrase", "priority": 1 },
+      { "q": "Why did God not lead Israel by the shortest route?", "slug": "why-god-did-not-take-the-shortest-route", "passage": "EXO.13.17-18", "kind": "doctrine", "priority": 1 },
+      { "q": "Why did Moses take Joseph's bones out of Egypt?", "slug": "moses-took-josephs-bones", "passage": "EXO.13.19", "kind": "history", "priority": 1 },
+      { "q": "What does it shall be as a sign on your hand mean?", "slug": "a-sign-on-your-hand-and-forehead", "passage": "EXO.13.9", "kind": "practice", "priority": 2 }
+    ],
+    "14": [
+      { "q": "Where did Israel actually cross the Red Sea?", "slug": "where-israel-crossed-the-red-sea", "passage": "EXO.14.21-22", "kind": "history", "priority": 1 },
+      { "q": "Is it the Red Sea or the Sea of Reeds?", "slug": "red-sea-or-sea-of-reeds", "passage": "EXO.14.2", "kind": "history", "priority": 1 },
+      { "q": "What does the LORD will fight for you, you need only be still mean?", "slug": "the-lord-will-fight-for-you", "passage": "EXO.14.14", "kind": "practice", "priority": 1 },
+      { "q": "Could a natural east wind have parted the sea?", "slug": "could-a-natural-wind-have-parted-the-sea", "passage": "EXO.14.21", "kind": "history", "priority": 1 },
+      { "q": "Did Pharaoh drown in the Red Sea?", "slug": "did-pharaoh-drown-in-the-red-sea", "passage": "EXO.14.28", "kind": "history", "priority": 1 },
+      { "q": "Why did God harden Pharaoh's heart to pursue Israel?", "slug": "god-hardened-pharaoh-to-pursue-israel", "passage": "EXO.14.4", "kind": "doctrine", "priority": 1 }
+    ],
+    "15": [
+      { "q": "What is the Song of Moses in Exodus 15?", "slug": "the-song-of-moses-exodus-15", "passage": "EXO.15.1-18", "kind": "doctrine", "priority": 1 },
+      { "q": "What does the LORD is a man of war mean?", "slug": "the-lord-is-a-man-of-war", "passage": "EXO.15.3", "kind": "doctrine", "priority": 1 },
+      { "q": "What does I am the LORD who heals you mean?", "slug": "i-am-the-lord-who-heals-you", "passage": "EXO.15.26", "kind": "doctrine", "priority": 1 },
+      { "q": "How did the bitter water at Marah become sweet?", "slug": "the-bitter-water-at-marah", "passage": "EXO.15.23-25", "kind": "phrase", "priority": 1 },
+      { "q": "Who was Miriam and why did she lead the women in song?", "slug": "miriam-led-the-women-in-song", "passage": "EXO.15.20-21", "kind": "identity", "priority": 1 },
+      { "q": "What does who is like you among the gods mean?", "slug": "who-is-like-you-among-the-gods", "passage": "EXO.15.11", "kind": "doctrine", "priority": 1 }
+    ],
+    "16": [
+      { "q": "What was manna?", "slug": "what-was-manna", "passage": "EXO.16.14-15", "kind": "identity", "priority": 1 },
+      { "q": "Why did manna rot overnight except before the Sabbath?", "slug": "why-manna-rotted-except-before-the-sabbath", "passage": "EXO.16.20-24", "kind": "doctrine", "priority": 1 },
+      { "q": "How much is an omer of manna?", "slug": "how-much-is-an-omer", "passage": "EXO.16.36", "kind": "number", "priority": 1 },
+      { "q": "Why did Israel complain right after being rescued?", "slug": "why-israel-complained-after-being-rescued", "passage": "EXO.16.2-3", "kind": "practice", "priority": 1 },
+      { "q": "Where does the Sabbath first appear as a command?", "slug": "where-the-sabbath-first-appears-as-a-command", "passage": "EXO.16.23", "kind": "doctrine", "priority": 1 }
+    ],
+    "17": [
+      { "q": "Why did Moses strike the rock to get water?", "slug": "moses-struck-the-rock-at-horeb", "passage": "EXO.17.6", "kind": "phrase", "priority": 1 },
+      { "q": "What do Massah and Meribah mean?", "slug": "what-massah-and-meribah-mean", "passage": "EXO.17.7", "kind": "phrase", "priority": 1 },
+      { "q": "Why did Israel win only while Moses held his hands up?", "slug": "moses-held-his-hands-up-against-amalek", "passage": "EXO.17.11-12", "kind": "doctrine", "priority": 1 },
+      { "q": "Who were the Amalekites and why did God want them blotted out?", "slug": "who-were-the-amalekites", "passage": "EXO.17.14-16", "kind": "identity", "priority": 1 },
+      { "q": "What does the LORD is my banner mean?", "slug": "the-lord-is-my-banner", "passage": "EXO.17.15", "kind": "phrase", "priority": 2 }
+    ],
+    "18": [
+      { "q": "What was Jethro's advice about delegation?", "slug": "jethros-advice-about-delegation", "passage": "EXO.18.17-23", "kind": "practice", "priority": 1 },
+      { "q": "How did Moses set up judges over thousands, hundreds, and tens?", "slug": "judges-over-thousands-hundreds-and-tens", "passage": "EXO.18.21", "kind": "practice", "priority": 1 },
+      { "q": "Was Jethro a believer in the LORD before this?", "slug": "was-jethro-a-believer", "passage": "EXO.18.10-11", "kind": "identity", "priority": 2 }
+    ],
+    "19": [
+      { "q": "What does a kingdom of priests and a holy nation mean?", "slug": "a-kingdom-of-priests-and-a-holy-nation", "passage": "EXO.19.6", "kind": "doctrine", "priority": 1 },
+      { "q": "Why could no one touch Mount Sinai?", "slug": "why-no-one-could-touch-mount-sinai", "passage": "EXO.19.12-13", "kind": "doctrine", "priority": 1 },
+      { "q": "What does I carried you on eagles' wings mean?", "slug": "i-carried-you-on-eagles-wings", "passage": "EXO.19.4", "kind": "phrase", "priority": 1 },
+      { "q": "Why was Israel told to consecrate themselves for three days?", "slug": "consecrate-yourselves-for-three-days", "passage": "EXO.19.10-11", "kind": "practice", "priority": 1 },
+      { "q": "What happened at Mount Sinai when God descended?", "slug": "what-happened-when-god-descended-on-sinai", "passage": "EXO.19.16-19", "kind": "doctrine", "priority": 1 }
+    ],
+    "20": [
+      { "q": "What are the Ten Commandments?", "slug": "what-are-the-ten-commandments", "passage": "EXO.20.1-17", "kind": "doctrine", "priority": 1 },
+      { "q": "Does the second commandment forbid all religious images?", "slug": "does-the-second-commandment-forbid-images", "passage": "EXO.20.4-5", "kind": "practice", "priority": 1 },
+      { "q": "What does visiting the iniquity of the fathers on the children mean?", "slug": "visiting-the-iniquity-of-the-fathers", "passage": "EXO.20.5", "kind": "ethics", "priority": 1 },
+      { "q": "Does God punish children for their parents' sins?", "slug": "does-god-punish-children-for-parents-sins", "passage": "EXO.20.5", "kind": "tension", "priority": 1 },
+      { "q": "What does taking the LORD's name in vain actually mean?", "slug": "taking-the-lords-name-in-vain", "passage": "EXO.20.7", "kind": "practice", "priority": 1 },
+      { "q": "Are Christians required to keep the Sabbath commandment?", "slug": "are-christians-required-to-keep-the-sabbath", "passage": "EXO.20.8-11", "kind": "doctrine", "priority": 1 },
+      { "q": "What does do not covet mean, and how is it different from stealing?", "slug": "what-do-not-covet-means", "passage": "EXO.20.17", "kind": "practice", "priority": 1 },
+      { "q": "Why do Catholics and Protestants number the commandments differently?", "slug": "why-the-commandments-are-numbered-differently", "passage": "EXO.20.2-6", "kind": "history", "priority": 1 },
+      { "q": "Does you shall not murder forbid war and capital punishment?", "slug": "does-you-shall-not-murder-forbid-war", "passage": "EXO.20.13", "kind": "ethics", "priority": 1 },
+      { "q": "Why does the Sabbath command give creation as its reason?", "slug": "the-sabbath-command-and-creation", "passage": "EXO.20.11", "kind": "doctrine", "priority": 1 }
+    ],
+    "21": [
+      { "q": "Why does Exodus 21 regulate slavery instead of forbidding it?", "slug": "why-exodus-21-regulates-slavery", "passage": "EXO.21.2-6", "kind": "ethics", "priority": 1 },
+      { "q": "What does piercing a slave's ear with an awl mean?", "slug": "piercing-a-slaves-ear-with-an-awl", "passage": "EXO.21.6", "kind": "history", "priority": 1 },
+      { "q": "Does Exodus 21:22-25 speak to the abortion debate?", "slug": "exodus-21-22-25-and-abortion", "passage": "EXO.21.22-25", "kind": "ethics", "priority": 1 },
+      { "q": "What does if a man sells his daughter as a servant mean?", "slug": "if-a-man-sells-his-daughter", "passage": "EXO.21.7-11", "kind": "ethics", "priority": 1 },
+      { "q": "What does an eye for an eye, a tooth for a tooth mean?", "slug": "an-eye-for-an-eye-a-tooth-for-a-tooth", "passage": "EXO.21.24", "kind": "ethics", "priority": 1 },
+      { "q": "Why was beating a slave who survived not punished?", "slug": "beating-a-slave-who-survived", "passage": "EXO.21.20-21", "kind": "ethics", "priority": 1 },
+      { "q": "Why was a goring ox stoned to death?", "slug": "why-a-goring-ox-was-stoned", "passage": "EXO.21.28-29", "kind": "history", "priority": 1 }
+    ],
+    "22": [
+      { "q": "Why does Exodus 22:18 say a sorceress must be put to death?", "slug": "a-sorceress-must-be-put-to-death", "passage": "EXO.22.18", "kind": "ethics", "priority": 1 },
+      { "q": "What does do not mistreat a foreigner mean?", "slug": "do-not-mistreat-a-foreigner", "passage": "EXO.22.21", "kind": "ethics", "priority": 1 },
+      { "q": "Does the Bible forbid charging interest on loans?", "slug": "does-the-bible-forbid-charging-interest", "passage": "EXO.22.25", "kind": "ethics", "priority": 1 },
+      { "q": "What does if you take a neighbor's cloak in pledge, return it by sunset mean?", "slug": "return-a-cloak-by-sunset", "passage": "EXO.22.26-27", "kind": "ethics", "priority": 1 },
+      { "q": "What is the restitution law for a stolen animal?", "slug": "restitution-for-a-stolen-animal", "passage": "EXO.22.1-4", "kind": "ethics", "priority": 2 }
+    ],
+    "23": [
+      { "q": "Why does the Bible say do not boil a young goat in its mother's milk?", "slug": "do-not-boil-a-goat-in-its-mothers-milk", "passage": "EXO.23.19", "kind": "practice", "priority": 1 },
+      { "q": "Who is the angel God sends ahead of Israel in Exodus 23:20?", "slug": "the-angel-god-sends-ahead-of-israel", "passage": "EXO.23.20-21", "kind": "identity", "priority": 1 },
+      { "q": "What does I will drive them out little by little mean?", "slug": "i-will-drive-them-out-little-by-little", "passage": "EXO.23.29-30", "kind": "doctrine", "priority": 1 },
+      { "q": "What is the hornet God sends before Israel?", "slug": "the-hornet-god-sends-before-israel", "passage": "EXO.23.28", "kind": "phrase", "priority": 1 },
+      { "q": "What are the three annual feasts commanded in Exodus 23?", "slug": "the-three-annual-feasts", "passage": "EXO.23.14-17", "kind": "practice", "priority": 1 },
+      { "q": "What does do not follow the crowd in doing wrong mean?", "slug": "do-not-follow-the-crowd-in-doing-wrong", "passage": "EXO.23.2", "kind": "practice", "priority": 1 }
+    ],
+    "24": [
+      { "q": "How did the elders see the God of Israel and live?", "slug": "they-saw-the-god-of-israel-and-lived", "passage": "EXO.24.9-11", "kind": "tension", "priority": 1 },
+      { "q": "What is the pavement of sapphire under God's feet?", "slug": "the-pavement-of-sapphire-under-gods-feet", "passage": "EXO.24.10", "kind": "phrase", "priority": 1 },
+      { "q": "Why was blood sprinkled on the people to confirm the covenant?", "slug": "blood-sprinkled-to-confirm-the-covenant", "passage": "EXO.24.8", "kind": "doctrine", "priority": 1 },
+      { "q": "What does all that the LORD has said we will do mean?", "slug": "all-that-the-lord-has-said-we-will-do", "passage": "EXO.24.3", "kind": "phrase", "priority": 1 }
+    ],
+    "25": [
+      { "q": "What was the ark of the covenant?", "slug": "what-was-the-ark-of-the-covenant", "passage": "EXO.25.10-16", "kind": "identity", "priority": 1 },
+      { "q": "What is the mercy seat on the ark?", "slug": "what-is-the-mercy-seat", "passage": "EXO.25.17-22", "kind": "doctrine", "priority": 1 },
+      { "q": "What did the cherubim on the ark look like?", "slug": "the-cherubim-on-the-ark", "passage": "EXO.25.18-20", "kind": "phrase", "priority": 1 },
+      { "q": "What was the table of showbread for?", "slug": "the-table-of-showbread", "passage": "EXO.25.23-30", "kind": "identity", "priority": 1 },
+      { "q": "What was the golden lampstand or menorah?", "slug": "the-golden-lampstand-menorah", "passage": "EXO.25.31-40", "kind": "identity", "priority": 1 },
+      { "q": "What does make it according to the pattern shown you mean?", "slug": "according-to-the-pattern-shown-you", "passage": "EXO.25.40", "kind": "doctrine", "priority": 1 }
+    ],
+    "26": [
+      { "q": "What was the veil that separated the Holy of Holies?", "slug": "the-veil-of-the-holy-of-holies", "passage": "EXO.26.31-33", "kind": "doctrine", "priority": 1 },
+      { "q": "How big was the tabernacle?", "slug": "how-big-was-the-tabernacle", "passage": "EXO.26.1-6", "kind": "number", "priority": 1 },
+      { "q": "Why were the tabernacle curtains made of specific colors?", "slug": "the-colors-of-the-tabernacle-curtains", "passage": "EXO.26.1", "kind": "phrase", "priority": 2 }
+    ],
+    "27": [
+      { "q": "What was the bronze altar of burnt offering?", "slug": "the-bronze-altar-of-burnt-offering", "passage": "EXO.27.1-8", "kind": "identity", "priority": 1 },
+      { "q": "Why did the lamp have to burn continually?", "slug": "why-the-lamp-burned-continually", "passage": "EXO.27.20-21", "kind": "doctrine", "priority": 1 },
+      { "q": "What were the horns of the altar for?", "slug": "the-horns-of-the-altar", "passage": "EXO.27.2", "kind": "history", "priority": 1 }
+    ],
+    "28": [
+      { "q": "What were the Urim and Thummim?", "slug": "what-were-the-urim-and-thummim", "passage": "EXO.28.30", "kind": "identity", "priority": 1 },
+      { "q": "What was the high priest's ephod?", "slug": "what-was-the-ephod", "passage": "EXO.28.6-14", "kind": "identity", "priority": 1 },
+      { "q": "What were the twelve stones on the high priest's breastpiece?", "slug": "the-twelve-stones-on-the-breastpiece", "passage": "EXO.28.17-21", "kind": "phrase", "priority": 1 },
+      { "q": "Why did the high priest's robe have bells on it?", "slug": "why-the-high-priests-robe-had-bells", "passage": "EXO.28.33-35", "kind": "history", "priority": 1 },
+      { "q": "What was engraved on the high priest's turban?", "slug": "engraved-on-the-high-priests-turban", "passage": "EXO.28.36-38", "kind": "phrase", "priority": 2 }
+    ],
+    "29": [
+      { "q": "How were the priests consecrated in Exodus 29?", "slug": "how-the-priests-were-consecrated", "passage": "EXO.29.1-9", "kind": "practice", "priority": 1 },
+      { "q": "Why was blood put on the priest's ear, thumb, and toe?", "slug": "blood-on-the-ear-thumb-and-toe", "passage": "EXO.29.20", "kind": "doctrine", "priority": 1 },
+      { "q": "What was the wave offering and the heave offering?", "slug": "the-wave-offering-and-heave-offering", "passage": "EXO.29.26-28", "kind": "history", "priority": 2 }
+    ],
+    "30": [
+      { "q": "What was the altar of incense for?", "slug": "the-altar-of-incense", "passage": "EXO.30.1-10", "kind": "identity", "priority": 1 },
+      { "q": "What was the half-shekel temple tax?", "slug": "the-half-shekel-temple-tax", "passage": "EXO.30.13-15", "kind": "history", "priority": 1 },
+      { "q": "Why was the holy anointing oil recipe forbidden for personal use?", "slug": "the-holy-anointing-oil-recipe", "passage": "EXO.30.32-33", "kind": "practice", "priority": 1 },
+      { "q": "Why did rich and poor pay the same temple tax?", "slug": "rich-and-poor-paid-the-same-tax", "passage": "EXO.30.15", "kind": "ethics", "priority": 1 }
+    ],
+    "31": [
+      { "q": "Who were Bezalel and Oholiab?", "slug": "who-were-bezalel-and-oholiab", "passage": "EXO.31.1-6", "kind": "identity", "priority": 1 },
+      { "q": "Does Exodus 31 mean artistic skill is a gift of the Spirit?", "slug": "is-artistic-skill-a-gift-of-the-spirit", "passage": "EXO.31.3-5", "kind": "doctrine", "priority": 1 },
+      { "q": "Why is the Sabbath called a sign between God and Israel?", "slug": "the-sabbath-as-a-sign", "passage": "EXO.31.13-17", "kind": "doctrine", "priority": 1 },
+      { "q": "What does written by the finger of God mean?", "slug": "written-by-the-finger-of-god", "passage": "EXO.31.18", "kind": "phrase", "priority": 1 }
+    ],
+    "32": [
+      { "q": "Why did Israel make a golden calf?", "slug": "why-israel-made-a-golden-calf", "passage": "EXO.32.1-4", "kind": "doctrine", "priority": 1 },
+      { "q": "What was Aaron's excuse for the golden calf?", "slug": "aarons-excuse-for-the-golden-calf", "passage": "EXO.32.22-24", "kind": "ethics", "priority": 1 },
+      { "q": "Why did Moses break the tablets of the law?", "slug": "why-moses-broke-the-tablets", "passage": "EXO.32.19", "kind": "phrase", "priority": 1 },
+      { "q": "What does blot me out of your book mean?", "slug": "blot-me-out-of-your-book", "passage": "EXO.32.32", "kind": "doctrine", "priority": 1 },
+      { "q": "How did Moses change God's mind about destroying Israel?", "slug": "how-moses-changed-gods-mind", "passage": "EXO.32.11-14", "kind": "doctrine", "priority": 1 },
+      { "q": "What does the LORD relented mean if God does not change?", "slug": "the-lord-relented", "passage": "EXO.32.14", "kind": "tension", "priority": 1 },
+      { "q": "Why did the Levites kill three thousand of their own people?", "slug": "the-levites-killed-three-thousand", "passage": "EXO.32.27-28", "kind": "ethics", "priority": 1 },
+      { "q": "What does let me alone that my wrath may burn mean?", "slug": "let-me-alone-that-my-wrath-may-burn", "passage": "EXO.32.10", "kind": "doctrine", "priority": 1 }
+    ],
+    "33": [
+      { "q": "What does no one can see my face and live mean?", "slug": "no-one-can-see-my-face-and-live", "passage": "EXO.33.20", "kind": "doctrine", "priority": 1 },
+      { "q": "What does I will show you my back mean?", "slug": "you-shall-see-my-back", "passage": "EXO.33.23", "kind": "phrase", "priority": 1 },
+      { "q": "How did Moses speak to God face to face if no one can see his face?", "slug": "moses-spoke-to-god-face-to-face", "passage": "EXO.33.11", "kind": "tension", "priority": 1 },
+      { "q": "What does if your presence does not go with us mean?", "slug": "if-your-presence-does-not-go-with-us", "passage": "EXO.33.15", "kind": "practice", "priority": 1 },
+      { "q": "What does show me your glory mean?", "slug": "show-me-your-glory", "passage": "EXO.33.18", "kind": "practice", "priority": 1 },
+      { "q": "What is the cleft of the rock Moses was hidden in?", "slug": "the-cleft-of-the-rock", "passage": "EXO.33.22", "kind": "phrase", "priority": 1 }
+    ],
+    "34": [
+      { "q": "What are the attributes of God listed in Exodus 34:6-7?", "slug": "the-attributes-of-god-in-exodus-34", "passage": "EXO.34.6-7", "kind": "doctrine", "priority": 1 },
+      { "q": "How can God forgive iniquity and yet not clear the guilty?", "slug": "forgiving-iniquity-yet-not-clearing-the-guilty", "passage": "EXO.34.7", "kind": "tension", "priority": 1 },
+      { "q": "Why did Moses' face shine after meeting with God?", "slug": "why-moses-face-shone", "passage": "EXO.34.29-30", "kind": "phrase", "priority": 1 },
+      { "q": "Why did Moses veil his face in Exodus 34?", "slug": "why-moses-veiled-his-face-exodus-34", "passage": "EXO.34.33-35", "kind": "doctrine", "priority": 1 },
+      { "q": "Why is God called jealous in Exodus 34:14?", "slug": "why-god-is-called-jealous", "passage": "EXO.34.14", "kind": "doctrine", "priority": 1 },
+      { "q": "Why did God forbid intermarriage with the Canaanites?", "slug": "why-god-forbade-intermarriage-with-canaanites", "passage": "EXO.34.15-16", "kind": "ethics", "priority": 1 },
+      { "q": "Are the ten commandments in Exodus 34 different from Exodus 20?", "slug": "the-commandments-in-exodus-34", "passage": "EXO.34.10-28", "kind": "tension", "priority": 1 }
+    ],
+    "35": [
+      { "q": "What was a freewill offering in Exodus 35?", "slug": "the-freewill-offering-exodus-35", "passage": "EXO.35.21-22", "kind": "practice", "priority": 1 },
+      { "q": "Why does Exodus repeat the Sabbath command before the building project?", "slug": "the-sabbath-before-the-building-project", "passage": "EXO.35.2-3", "kind": "doctrine", "priority": 2 }
+    ],
+    "36": [
+      { "q": "Why did Moses have to tell the people to stop giving?", "slug": "moses-told-them-to-stop-giving", "passage": "EXO.36.5-7", "kind": "practice", "priority": 1 }
+    ],
+    "37": [
+      { "q": "Why does Exodus describe the tabernacle furniture twice?", "slug": "why-exodus-describes-the-furniture-twice", "passage": "EXO.37.1-9", "kind": "history", "priority": 2 }
+    ],
+    "38": [
+      { "q": "How much gold, silver, and bronze went into the tabernacle?", "slug": "how-much-metal-went-into-the-tabernacle", "passage": "EXO.38.24-31", "kind": "number", "priority": 1 },
+      { "q": "What was the bronze basin made from the women's mirrors?", "slug": "the-basin-made-from-mirrors", "passage": "EXO.38.8", "kind": "history", "priority": 2 }
+    ],
+    "39": [
+      { "q": "What does just as the LORD commanded Moses mean, repeated so often?", "slug": "just-as-the-lord-commanded-moses", "passage": "EXO.39.32-43", "kind": "phrase", "priority": 2 }
+    ],
+    "40": [
+      { "q": "Why could Moses not enter the tent when the glory filled it?", "slug": "moses-could-not-enter-the-tent", "passage": "EXO.40.34-35", "kind": "doctrine", "priority": 1 },
+      { "q": "How did the cloud guide Israel's travels?", "slug": "how-the-cloud-guided-israel", "passage": "EXO.40.36-38", "kind": "phrase", "priority": 1 },
+      { "q": "When exactly was the tabernacle set up?", "slug": "when-the-tabernacle-was-set-up", "passage": "EXO.40.17", "kind": "number", "priority": 2 }
+    ]
+  }
+}

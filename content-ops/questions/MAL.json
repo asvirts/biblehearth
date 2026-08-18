@@ -1,0 +1,39 @@
+{
+  "book": "MAL",
+  "name": "Malachi",
+  "chapters": {
+    "1": [
+      { "q": "What does I have loved Jacob but Esau I have hated mean?", "slug": "jacob-i-loved-esau-i-hated-malachi", "passage": "MAL.1.2-3", "kind": "doctrine", "priority": 1 },
+      { "q": "Why does God reject blind and lame animals as offerings?", "slug": "offering-blind-and-lame-animals", "passage": "MAL.1.8", "kind": "ethics", "priority": 1 },
+      { "q": "What does my name will be great among the nations mean?", "slug": "my-name-will-be-great-among-the-nations", "passage": "MAL.1.11", "kind": "doctrine", "priority": 1 },
+      { "q": "What does you say the LORD's table is contemptible mean?", "slug": "the-lords-table-is-contemptible", "passage": "MAL.1.7-12", "kind": "practice", "priority": 1 }
+    ],
+    "2": [
+      { "q": "Does Malachi 2:16 say God hates divorce?", "slug": "does-malachi-2-16-say-god-hates-divorce", "passage": "MAL.2.16", "kind": "ethics", "priority": 1 },
+      { "q": "What does the wife of your youth mean in Malachi 2?", "slug": "the-wife-of-your-youth-malachi-2", "passage": "MAL.2.14-15", "kind": "practice", "priority": 1 },
+      { "q": "What does a priest's lips should preserve knowledge mean?", "slug": "a-priests-lips-should-preserve-knowledge", "passage": "MAL.2.7", "kind": "practice", "priority": 1 },
+      { "q": "What does did he not make them one mean about marriage?", "slug": "did-he-not-make-them-one", "passage": "MAL.2.15", "kind": "doctrine", "priority": 1 },
+      { "q": "What does I will spread dung on your faces mean?", "slug": "i-will-spread-dung-on-your-faces", "passage": "MAL.2.3", "kind": "phrase", "priority": 1 },
+      { "q": "How does divorce cover a garment with violence in Malachi 2:16?", "slug": "covering-a-garment-with-violence", "passage": "MAL.2.16", "kind": "phrase", "priority": 1 }
+    ],
+    "3": [
+      { "q": "Does Malachi 3:8-10 require Christians to tithe?", "slug": "does-malachi-3-require-christians-to-tithe", "passage": "MAL.3.8-10", "kind": "practice", "priority": 1 },
+      { "q": "What does will a man rob God? in tithes and offerings mean?", "slug": "will-a-man-rob-god", "passage": "MAL.3.8", "kind": "practice", "priority": 1 },
+      { "q": "What does open the windows of heaven mean?", "slug": "open-the-windows-of-heaven", "passage": "MAL.3.10", "kind": "doctrine", "priority": 1 },
+      { "q": "What is the devourer God promises to rebuke?", "slug": "the-devourer-god-will-rebuke", "passage": "MAL.3.11", "kind": "identity", "priority": 1 },
+      { "q": "Is Malachi 3:10 the only place God says test me?", "slug": "is-malachi-3-10-the-only-place-god-says-test-me", "passage": "MAL.3.10", "kind": "claim", "priority": 1 },
+      { "q": "What does I the LORD do not change mean?", "slug": "i-the-lord-do-not-change", "passage": "MAL.3.6", "kind": "doctrine", "priority": 1 },
+      { "q": "Who is the messenger who prepares the way in Malachi 3:1?", "slug": "the-messenger-who-prepares-the-way", "passage": "MAL.3.1", "kind": "identity", "priority": 1 },
+      { "q": "What is the refiner's fire in Malachi 3:2-3?", "slug": "the-refiners-fire", "passage": "MAL.3.2-3", "kind": "doctrine", "priority": 1 },
+      { "q": "What is the book of remembrance in Malachi 3:16?", "slug": "the-book-of-remembrance", "passage": "MAL.3.16", "kind": "identity", "priority": 1 },
+      { "q": "What does what do we gain by serving God mean?", "slug": "what-do-we-gain-by-serving-god", "passage": "MAL.3.14", "kind": "practice", "priority": 1 }
+    ],
+    "4": [
+      { "q": "What does the sun of righteousness will rise with healing in its wings mean?", "slug": "the-sun-of-righteousness-with-healing-in-its-wings", "passage": "MAL.4.2", "kind": "doctrine", "priority": 1 },
+      { "q": "Who is the Elijah who comes before the day of the LORD?", "slug": "the-elijah-who-comes-before-the-day-of-the-lord", "passage": "MAL.4.5", "kind": "identity", "priority": 1 },
+      { "q": "What does he will turn the hearts of the fathers to their children mean?", "slug": "turn-the-hearts-of-the-fathers-to-their-children", "passage": "MAL.4.6", "kind": "doctrine", "priority": 1 },
+      { "q": "Why does the Old Testament end with the word curse?", "slug": "why-the-old-testament-ends-with-curse", "passage": "MAL.4.6", "kind": "doctrine", "priority": 1 },
+      { "q": "What does you will trample the wicked like ashes mean?", "slug": "trample-the-wicked-like-ashes", "passage": "MAL.4.3", "kind": "phrase", "priority": 2 }
+    ]
+  }
+}

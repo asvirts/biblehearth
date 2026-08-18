@@ -1,0 +1,14 @@
+{
+  "book": "3JN",
+  "name": "3 John",
+  "chapters": {
+    "1": [
+      { "q": "Does 3 John 2 promise Christians health and prosperity?", "slug": "does-3-john-2-promise-health-and-prosperity", "passage": "3JN.1.2", "kind": "claim", "priority": 1 },
+      { "q": "Who was Diotrephes and what was his problem?", "slug": "who-was-diotrephes", "passage": "3JN.1.9-10", "kind": "identity", "priority": 1 },
+      { "q": "Who was Gaius in 3 John?", "slug": "who-was-gaius-3-john", "passage": "3JN.1.1", "kind": "identity", "priority": 1 },
+      { "q": "What does I have no greater joy than to hear my children walk in truth mean?", "slug": "no-greater-joy-than-my-children-walking-in-truth", "passage": "3JN.1.4", "kind": "phrase", "priority": 1 },
+      { "q": "Who was Demetrius and why does John commend him?", "slug": "who-was-demetrius-3-john", "passage": "3JN.1.12", "kind": "identity", "priority": 2 },
+      { "q": "What does whoever does good is from God mean?", "slug": "whoever-does-good-is-from-god", "passage": "3JN.1.11", "kind": "doctrine", "priority": 2 }
+    ]
+  }
+}

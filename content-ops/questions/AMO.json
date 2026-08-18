@@ -1,0 +1,53 @@
+{
+  "book": "AMO",
+  "name": "Amos",
+  "chapters": {
+    "1": [
+      { "q": "What does for three sins, even for four mean?", "slug": "for-three-sins-even-for-four", "passage": "AMO.1.3", "kind": "phrase", "priority": 1 },
+      { "q": "Why does Amos start with judgment on Israel's neighbors?", "slug": "why-amos-starts-with-israels-neighbors", "passage": "AMO.1.3-15", "kind": "doctrine", "priority": 1 }
+    ],
+    "2": [
+      { "q": "Why did God judge Moab for burning a king's bones?", "slug": "burning-a-kings-bones", "passage": "AMO.2.1", "kind": "ethics", "priority": 1 },
+      { "q": "What does they sell the righteous for silver mean?", "slug": "they-sell-the-righteous-for-silver", "passage": "AMO.2.6", "kind": "ethics", "priority": 1 }
+    ],
+    "3": [
+      { "q": "What does can two walk together unless they agree mean?", "slug": "can-two-walk-together-unless-they-agree", "passage": "AMO.3.3", "kind": "phrase", "priority": 1 },
+      { "q": "Is Amos 3:3 about friendship, marriage, or covenant?", "slug": "is-amos-3-3-about-friendship-or-covenant", "passage": "AMO.3.3", "kind": "claim", "priority": 1 },
+      { "q": "What does the Lord does nothing without revealing it to his prophets mean?", "slug": "he-reveals-his-plan-to-his-prophets", "passage": "AMO.3.7", "kind": "doctrine", "priority": 1 },
+      { "q": "Does Amos 3:6 mean God causes disaster in a city?", "slug": "does-god-cause-disaster-in-a-city", "passage": "AMO.3.6", "kind": "doctrine", "priority": 1 }
+    ],
+    "4": [
+      { "q": "What does prepare to meet your God mean?", "slug": "prepare-to-meet-your-god", "passage": "AMO.4.12", "kind": "doctrine", "priority": 1 },
+      { "q": "What does yet you have not returned to me mean, repeated five times?", "slug": "yet-you-have-not-returned-to-me", "passage": "AMO.4.6-11", "kind": "doctrine", "priority": 1 },
+      { "q": "Why does Amos call the women of Samaria cows of Bashan?", "slug": "cows-of-bashan", "passage": "AMO.4.1", "kind": "ethics", "priority": 1 }
+    ],
+    "5": [
+      { "q": "What does let justice roll down like waters mean?", "slug": "let-justice-roll-down-like-waters", "passage": "AMO.5.24", "kind": "ethics", "priority": 1 },
+      { "q": "Why does God say I hate your religious festivals?", "slug": "i-hate-your-religious-festivals", "passage": "AMO.5.21-23", "kind": "doctrine", "priority": 1 },
+      { "q": "What does woe to you who long for the day of the LORD mean?", "slug": "woe-to-you-who-long-for-the-day-of-the-lord", "passage": "AMO.5.18", "kind": "doctrine", "priority": 1 },
+      { "q": "What does seek good, not evil, that you may live mean?", "slug": "seek-good-not-evil-that-you-may-live", "passage": "AMO.5.14", "kind": "practice", "priority": 1 },
+      { "q": "What does like escaping a lion only to meet a bear mean?", "slug": "escaping-a-lion-only-to-meet-a-bear", "passage": "AMO.5.19", "kind": "phrase", "priority": 1 }
+    ],
+    "6": [
+      { "q": "What does woe to you who are at ease in Zion mean?", "slug": "woe-to-you-who-are-at-ease-in-zion", "passage": "AMO.6.1", "kind": "ethics", "priority": 1 },
+      { "q": "What does you lie on beds inlaid with ivory mean?", "slug": "beds-inlaid-with-ivory", "passage": "AMO.6.4", "kind": "ethics", "priority": 1 }
+    ],
+    "7": [
+      { "q": "What does I was neither a prophet nor a prophet's son mean?", "slug": "neither-a-prophet-nor-a-prophets-son", "passage": "AMO.7.14", "kind": "identity", "priority": 1 },
+      { "q": "What is the plumb line in Amos 7?", "slug": "the-plumb-line-in-amos-7", "passage": "AMO.7.7-8", "kind": "phrase", "priority": 1 },
+      { "q": "Who was Amaziah the priest of Bethel?", "slug": "who-was-amaziah-the-priest-of-bethel", "passage": "AMO.7.10-17", "kind": "identity", "priority": 1 },
+      { "q": "How did Amos's prayer stop two judgments?", "slug": "how-amos-prayer-stopped-two-judgments", "passage": "AMO.7.1-6", "kind": "practice", "priority": 1 }
+    ],
+    "8": [
+      { "q": "What is the famine of hearing the words of the LORD?", "slug": "a-famine-of-hearing-the-words-of-the-lord", "passage": "AMO.8.11", "kind": "doctrine", "priority": 1 },
+      { "q": "What does selling the needy for a pair of sandals mean?", "slug": "selling-the-needy-for-a-pair-of-sandals", "passage": "AMO.8.6", "kind": "ethics", "priority": 1 },
+      { "q": "What does the basket of ripe fruit mean in Amos 8?", "slug": "the-basket-of-ripe-fruit", "passage": "AMO.8.1-2", "kind": "phrase", "priority": 1 },
+      { "q": "How did merchants use dishonest scales to cheat the poor?", "slug": "dishonest-scales-to-cheat-the-poor", "passage": "AMO.8.5", "kind": "ethics", "priority": 1 }
+    ],
+    "9": [
+      { "q": "Why does Acts 15 quote Amos 9 about restoring David's tent?", "slug": "restoring-davids-fallen-tent", "passage": "AMO.9.11-12", "kind": "doctrine", "priority": 1 },
+      { "q": "What does the plowman will overtake the reaper mean?", "slug": "the-plowman-will-overtake-the-reaper", "passage": "AMO.9.13", "kind": "phrase", "priority": 1 },
+      { "q": "What does though they dig down to Sheol, my hand will take them mean?", "slug": "though-they-dig-down-to-sheol", "passage": "AMO.9.2", "kind": "doctrine", "priority": 1 }
+    ]
+  }
+}

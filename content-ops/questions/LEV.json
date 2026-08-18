@@ -1,0 +1,141 @@
+{
+  "book": "LEV",
+  "name": "Leviticus",
+  "chapters": {
+    "1": [
+      { "q": "Why did God require animal sacrifice?", "slug": "why-god-required-animal-sacrifice", "passage": "LEV.1.3-4", "kind": "doctrine", "priority": 1 },
+      { "q": "What was a burnt offering and what did it accomplish?", "slug": "what-was-a-burnt-offering", "passage": "LEV.1.3-9", "kind": "doctrine", "priority": 1 },
+      { "q": "Why did the worshiper lay his hand on the animal's head?", "slug": "laying-hands-on-the-animals-head", "passage": "LEV.1.4", "kind": "doctrine", "priority": 1 }
+    ],
+    "2": [
+      { "q": "What was a grain offering and why was it bloodless?", "slug": "what-was-a-grain-offering", "passage": "LEV.2.1-3", "kind": "doctrine", "priority": 1 },
+      { "q": "Why was leaven forbidden but salt required in offerings?", "slug": "no-leaven-but-salt-required", "passage": "LEV.2.11-13", "kind": "doctrine", "priority": 1 }
+    ],
+    "3": [
+      { "q": "What was a peace or fellowship offering?", "slug": "what-was-a-peace-offering", "passage": "LEV.3.1-5", "kind": "doctrine", "priority": 1 },
+      { "q": "Why was all the fat given to the LORD?", "slug": "why-the-fat-belonged-to-the-lord", "passage": "LEV.3.16-17", "kind": "doctrine", "priority": 2 }
+    ],
+    "4": [
+      { "q": "What was a sin offering for unintentional sin?", "slug": "the-sin-offering-for-unintentional-sin", "passage": "LEV.4.2-3", "kind": "doctrine", "priority": 1 },
+      { "q": "Does God hold people guilty for sins they did not know about?", "slug": "guilty-for-sins-you-did-not-know-about", "passage": "LEV.4.13-14", "kind": "doctrine", "priority": 1 }
+    ],
+    "5": [
+      { "q": "What was a guilt or trespass offering?", "slug": "what-was-a-guilt-offering", "passage": "LEV.5.14-16", "kind": "doctrine", "priority": 1 },
+      { "q": "Why did poor people bring doves instead of lambs?", "slug": "why-the-poor-brought-doves", "passage": "LEV.5.7-11", "kind": "doctrine", "priority": 1 }
+    ],
+    "6": [
+      { "q": "Why did the fire on the altar have to burn continually?", "slug": "the-fire-on-the-altar-burned-continually", "passage": "LEV.6.12-13", "kind": "doctrine", "priority": 1 }
+    ],
+    "7": [
+      { "q": "Why was eating fat or blood punished by being cut off?", "slug": "eating-fat-or-blood-cut-off", "passage": "LEV.7.25-27", "kind": "practice", "priority": 1 }
+    ],
+    "8": [
+      { "q": "How were Aaron and his sons ordained as priests?", "slug": "how-aaron-and-his-sons-were-ordained", "passage": "LEV.8.6-13", "kind": "practice", "priority": 1 }
+    ],
+    "9": [
+      { "q": "Why did fire come out from the LORD to consume the first offering?", "slug": "fire-came-out-from-the-lord", "passage": "LEV.9.24", "kind": "doctrine", "priority": 1 }
+    ],
+    "10": [
+      { "q": "Why did God kill Nadab and Abihu?", "slug": "why-god-killed-nadab-and-abihu", "passage": "LEV.10.1-2", "kind": "ethics", "priority": 1 },
+      { "q": "What was the strange or unauthorized fire Nadab and Abihu offered?", "slug": "the-unauthorized-fire", "passage": "LEV.10.1", "kind": "identity", "priority": 1 },
+      { "q": "Were Nadab and Abihu drunk when they died?", "slug": "were-nadab-and-abihu-drunk", "passage": "LEV.10.8-9", "kind": "history", "priority": 1 },
+      { "q": "Why was Aaron told not to mourn his sons?", "slug": "aaron-told-not-to-mourn-his-sons", "passage": "LEV.10.6-7", "kind": "ethics", "priority": 1 },
+      { "q": "What does among those who approach me I will be treated as holy mean?", "slug": "i-will-be-treated-as-holy", "passage": "LEV.10.3", "kind": "doctrine", "priority": 1 }
+    ],
+    "11": [
+      { "q": "Why did God forbid eating pork?", "slug": "why-god-forbade-eating-pork", "passage": "LEV.11.7-8", "kind": "practice", "priority": 1 },
+      { "q": "Why are shellfish forbidden in Leviticus 11?", "slug": "why-shellfish-are-forbidden", "passage": "LEV.11.9-12", "kind": "practice", "priority": 1 },
+      { "q": "Does Leviticus 11:6 make a scientific error by saying rabbits chew the cud?", "slug": "does-leviticus-11-say-rabbits-chew-the-cud", "passage": "LEV.11.6", "kind": "claim", "priority": 1 },
+      { "q": "Does Leviticus 11 call bats birds and insects four-legged?", "slug": "does-leviticus-11-call-bats-birds", "passage": "LEV.11.19-23", "kind": "claim", "priority": 1 },
+      { "q": "Do Christians have to keep kosher food laws?", "slug": "do-christians-have-to-keep-kosher", "passage": "LEV.11.44-47", "kind": "doctrine", "priority": 1 },
+      { "q": "Were the food laws about health or about holiness?", "slug": "were-the-food-laws-about-health-or-holiness", "passage": "LEV.11.44-45", "kind": "doctrine", "priority": 1 }
+    ],
+    "12": [
+      { "q": "Why was a mother unclean twice as long after having a girl?", "slug": "why-twice-as-long-after-having-a-girl", "passage": "LEV.12.2-5", "kind": "ethics", "priority": 1 },
+      { "q": "Why did childbirth require a purification offering at all?", "slug": "why-childbirth-required-purification", "passage": "LEV.12.6-8", "kind": "doctrine", "priority": 1 }
+    ],
+    "13": [
+      { "q": "Was the leprosy of Leviticus 13 the same as Hansen's disease?", "slug": "was-biblical-leprosy-hansens-disease", "passage": "LEV.13.2-3", "kind": "history", "priority": 1 },
+      { "q": "Why did lepers have to cry out unclean, unclean?", "slug": "unclean-unclean", "passage": "LEV.13.45-46", "kind": "practice", "priority": 1 }
+    ],
+    "14": [
+      { "q": "What did the two birds in the cleansing of a leper mean?", "slug": "the-two-birds-in-the-leprosy-cleansing", "passage": "LEV.14.4-7", "kind": "doctrine", "priority": 1 },
+      { "q": "How could a house have leprosy?", "slug": "how-a-house-could-have-leprosy", "passage": "LEV.14.34-45", "kind": "history", "priority": 1 }
+    ],
+    "15": [
+      { "q": "Why did normal bodily functions make someone ceremonially unclean?", "slug": "why-bodily-functions-made-you-unclean", "passage": "LEV.15.16-19", "kind": "doctrine", "priority": 1 }
+    ],
+    "16": [
+      { "q": "What was the Day of Atonement?", "slug": "what-was-the-day-of-atonement", "passage": "LEV.16.29-34", "kind": "doctrine", "priority": 1 },
+      { "q": "What was the scapegoat and who is Azazel?", "slug": "the-scapegoat-and-azazel", "passage": "LEV.16.8-10", "kind": "identity", "priority": 1 },
+      { "q": "Why were two goats needed on the Day of Atonement?", "slug": "why-two-goats-on-the-day-of-atonement", "passage": "LEV.16.7-10", "kind": "doctrine", "priority": 1 },
+      { "q": "Did the high priest have a rope tied to him in the Holy of Holies?", "slug": "did-the-high-priest-have-a-rope-tied-to-him", "passage": "LEV.16.2", "kind": "claim", "priority": 1 },
+      { "q": "How does the Day of Atonement point to Jesus?", "slug": "the-day-of-atonement-points-to-jesus", "passage": "LEV.16.15-16", "kind": "doctrine", "priority": 1 }
+    ],
+    "17": [
+      { "q": "What does the life of the flesh is in the blood mean?", "slug": "the-life-of-the-flesh-is-in-the-blood", "passage": "LEV.17.11", "kind": "doctrine", "priority": 1 },
+      { "q": "Does Leviticus 17 forbid blood transfusions?", "slug": "does-leviticus-17-forbid-blood-transfusions", "passage": "LEV.17.10-14", "kind": "practice", "priority": 1 }
+    ],
+    "18": [
+      { "q": "What does Leviticus 18:22 say about homosexuality?", "slug": "what-leviticus-18-22-says-about-homosexuality", "passage": "LEV.18.22", "kind": "ethics", "priority": 1 },
+      { "q": "Does Leviticus 18:22 apply to Christians today?", "slug": "does-leviticus-18-22-apply-today", "passage": "LEV.18.22", "kind": "doctrine", "priority": 1 },
+      { "q": "Why did God forbid child sacrifice to Molech specifically?", "slug": "child-sacrifice-to-molech", "passage": "LEV.18.21", "kind": "ethics", "priority": 1 },
+      { "q": "What does the land vomited out its inhabitants mean?", "slug": "the-land-vomited-out-its-inhabitants", "passage": "LEV.18.25", "kind": "phrase", "priority": 1 },
+      { "q": "Why does Leviticus 18 list forbidden family relationships in such detail?", "slug": "the-forbidden-family-relationships", "passage": "LEV.18.6-18", "kind": "ethics", "priority": 1 },
+      { "q": "Does Leviticus 18:19 forbid sex during menstruation?", "slug": "does-leviticus-18-19-forbid-sex-during-menstruation", "passage": "LEV.18.19", "kind": "practice", "priority": 1 }
+    ],
+    "19": [
+      { "q": "What does love your neighbor as yourself mean in Leviticus 19?", "slug": "love-your-neighbor-as-yourself-leviticus-19", "passage": "LEV.19.18", "kind": "doctrine", "priority": 1 },
+      { "q": "Does Leviticus 19:28 forbid tattoos?", "slug": "does-leviticus-19-28-forbid-tattoos", "passage": "LEV.19.28", "kind": "practice", "priority": 1 },
+      { "q": "Why does Leviticus 19:19 forbid wearing mixed fabrics?", "slug": "why-mixed-fabrics-are-forbidden", "passage": "LEV.19.19", "kind": "practice", "priority": 1 },
+      { "q": "Why does Leviticus forbid cutting the corners of your beard?", "slug": "cutting-the-corners-of-your-beard", "passage": "LEV.19.27", "kind": "practice", "priority": 1 },
+      { "q": "What does do not put a stumbling block before the blind mean?", "slug": "a-stumbling-block-before-the-blind", "passage": "LEV.19.14", "kind": "ethics", "priority": 1 },
+      { "q": "Why were farmers told not to harvest the edges of their fields?", "slug": "do-not-harvest-the-edges-of-your-field", "passage": "LEV.19.9-10", "kind": "ethics", "priority": 1 },
+      { "q": "What does do not stand by while your neighbor's blood is shed mean?", "slug": "do-not-stand-by-while-blood-is-shed", "passage": "LEV.19.16", "kind": "ethics", "priority": 1 },
+      { "q": "Why must you not withhold a worker's wages overnight?", "slug": "do-not-withhold-a-workers-wages-overnight", "passage": "LEV.19.13", "kind": "ethics", "priority": 1 },
+      { "q": "Why does Leviticus command love for the foreigner?", "slug": "love-the-foreigner-as-yourself", "passage": "LEV.19.34", "kind": "ethics", "priority": 1 }
+    ],
+    "20": [
+      { "q": "Why did Leviticus 20 prescribe the death penalty for so many sins?", "slug": "why-the-death-penalty-in-leviticus-20", "passage": "LEV.20.9-16", "kind": "ethics", "priority": 1 },
+      { "q": "Why were mediums and spiritists to be put to death?", "slug": "why-mediums-were-put-to-death", "passage": "LEV.20.27", "kind": "ethics", "priority": 1 },
+      { "q": "What does you shall be holy, for I am holy mean?", "slug": "you-shall-be-holy-for-i-am-holy", "passage": "LEV.20.26", "kind": "doctrine", "priority": 1 }
+    ],
+    "21": [
+      { "q": "Why were priests with physical disabilities barred from serving?", "slug": "priests-with-disabilities-barred-from-serving", "passage": "LEV.21.16-23", "kind": "ethics", "priority": 1 },
+      { "q": "Why could a priest not marry a divorced woman?", "slug": "a-priest-could-not-marry-a-divorced-woman", "passage": "LEV.21.7", "kind": "practice", "priority": 1 }
+    ],
+    "22": [
+      { "q": "Why did an offering have to be without defect?", "slug": "why-an-offering-had-to-be-without-defect", "passage": "LEV.22.20-22", "kind": "doctrine", "priority": 1 }
+    ],
+    "23": [
+      { "q": "What are the seven feasts of the LORD in Leviticus 23?", "slug": "the-seven-feasts-of-the-lord", "passage": "LEV.23.1-44", "kind": "doctrine", "priority": 1 },
+      { "q": "What is the Feast of Firstfruits and how does it point to the resurrection?", "slug": "the-feast-of-firstfruits", "passage": "LEV.23.9-14", "kind": "doctrine", "priority": 1 },
+      { "q": "What is the Feast of Trumpets?", "slug": "the-feast-of-trumpets", "passage": "LEV.23.23-25", "kind": "doctrine", "priority": 1 },
+      { "q": "What is the Feast of Booths or Tabernacles?", "slug": "the-feast-of-booths", "passage": "LEV.23.33-43", "kind": "doctrine", "priority": 1 },
+      { "q": "Should Christians celebrate the biblical feasts?", "slug": "should-christians-celebrate-the-biblical-feasts", "passage": "LEV.23.2", "kind": "practice", "priority": 1 }
+    ],
+    "24": [
+      { "q": "Why was the blasphemer stoned in Leviticus 24?", "slug": "why-the-blasphemer-was-stoned", "passage": "LEV.24.10-16", "kind": "ethics", "priority": 1 },
+      { "q": "What does eye for eye, tooth for tooth mean in Leviticus 24?", "slug": "eye-for-eye-leviticus-24", "passage": "LEV.24.19-20", "kind": "ethics", "priority": 1 },
+      { "q": "Why did the same law apply to foreigners and Israelites?", "slug": "the-same-law-for-foreigners-and-israelites", "passage": "LEV.24.22", "kind": "ethics", "priority": 1 }
+    ],
+    "25": [
+      { "q": "What was the Year of Jubilee?", "slug": "what-was-the-year-of-jubilee", "passage": "LEV.25.8-13", "kind": "doctrine", "priority": 1 },
+      { "q": "Was the Year of Jubilee ever actually observed?", "slug": "was-the-jubilee-ever-observed", "passage": "LEV.25.10", "kind": "history", "priority": 1 },
+      { "q": "What was the Sabbath year for the land?", "slug": "the-sabbath-year-for-the-land", "passage": "LEV.25.3-7", "kind": "practice", "priority": 1 },
+      { "q": "Why does Leviticus 25:44-46 permit permanent slavery of foreigners?", "slug": "permanent-slavery-of-foreigners", "passage": "LEV.25.44-46", "kind": "ethics", "priority": 1 },
+      { "q": "Why was charging interest to a poor Israelite forbidden?", "slug": "no-interest-to-a-poor-israelite", "passage": "LEV.25.35-37", "kind": "ethics", "priority": 1 },
+      { "q": "What does the land is mine and you are only tenants mean?", "slug": "the-land-is-mine-you-are-tenants", "passage": "LEV.25.23", "kind": "doctrine", "priority": 1 }
+    ],
+    "26": [
+      { "q": "What are the blessings and curses of Leviticus 26?", "slug": "the-blessings-and-curses-of-leviticus-26", "passage": "LEV.26.3-39", "kind": "doctrine", "priority": 1 },
+      { "q": "What does I will walk among you and be your God mean?", "slug": "i-will-walk-among-you", "passage": "LEV.26.12", "kind": "doctrine", "priority": 1 },
+      { "q": "What does I will punish you seven times more mean?", "slug": "seven-times-more-for-your-sins", "passage": "LEV.26.18-28", "kind": "doctrine", "priority": 1 },
+      { "q": "Why does Leviticus 26:29 warn of eating your own children?", "slug": "eating-your-own-children-leviticus-26", "passage": "LEV.26.29", "kind": "ethics", "priority": 1 }
+    ],
+    "27": [
+      { "q": "Why were people assigned different monetary values in Leviticus 27?", "slug": "why-people-had-different-monetary-values", "passage": "LEV.27.3-7", "kind": "ethics", "priority": 1 },
+      { "q": "What does no devoted thing may be redeemed mean?", "slug": "no-devoted-thing-may-be-redeemed", "passage": "LEV.27.28-29", "kind": "doctrine", "priority": 1 }
+    ]
+  }
+}

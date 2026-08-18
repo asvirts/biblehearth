@@ -1,0 +1,27 @@
+{
+  "book": "JOL",
+  "name": "Joel",
+  "chapters": {
+    "1": [
+      { "q": "Was Joel's locust plague literal or an army?", "slug": "was-joels-locust-plague-literal", "passage": "JOL.1.4", "kind": "history", "priority": 1 },
+      { "q": "What do the four kinds of locusts in Joel 1:4 mean?", "slug": "the-four-kinds-of-locusts", "passage": "JOL.1.4", "kind": "phrase", "priority": 1 },
+      { "q": "When was Joel written?", "slug": "when-was-joel-written", "passage": "JOL.1.1", "kind": "history", "priority": 1 }
+    ],
+    "2": [
+      { "q": "What does I will pour out my Spirit on all flesh mean?", "slug": "i-will-pour-out-my-spirit-on-all-flesh", "passage": "JOL.2.28", "kind": "doctrine", "priority": 1 },
+      { "q": "What does I will restore the years the locusts have eaten mean?", "slug": "restore-the-years-the-locusts-have-eaten", "passage": "JOL.2.25", "kind": "doctrine", "priority": 1 },
+      { "q": "What does rend your heart and not your garments mean?", "slug": "rend-your-heart-and-not-your-garments", "passage": "JOL.2.13", "kind": "practice", "priority": 1 },
+      { "q": "Was Joel 2:28 fulfilled at Pentecost or is it still future?", "slug": "was-joel-2-28-fulfilled-at-pentecost", "passage": "JOL.2.28-32", "kind": "doctrine", "priority": 1 },
+      { "q": "What does the sun turned to darkness and the moon to blood mean in Joel 2?", "slug": "sun-to-darkness-moon-to-blood-joel-2", "passage": "JOL.2.31", "kind": "doctrine", "priority": 1 },
+      { "q": "What does everyone who calls on the name of the LORD will be saved mean in Joel?", "slug": "everyone-who-calls-on-the-name-of-the-lord-joel", "passage": "JOL.2.32", "kind": "doctrine", "priority": 1 },
+      { "q": "What is the day of the LORD in Joel 2?", "slug": "the-day-of-the-lord-joel-2", "passage": "JOL.2.1-2", "kind": "doctrine", "priority": 1 },
+      { "q": "What does he is gracious and compassionate, slow to anger mean in Joel 2:13?", "slug": "gracious-and-compassionate-joel-2", "passage": "JOL.2.13", "kind": "doctrine", "priority": 1 }
+    ],
+    "3": [
+      { "q": "Where is the valley of Jehoshaphat?", "slug": "where-is-the-valley-of-jehoshaphat", "passage": "JOL.3.2", "kind": "history", "priority": 1 },
+      { "q": "Why does Joel 3:10 reverse Isaiah and say beat plowshares into swords?", "slug": "beat-plowshares-into-swords", "passage": "JOL.3.10", "kind": "tension", "priority": 1 },
+      { "q": "What is the valley of decision in Joel 3:14?", "slug": "the-valley-of-decision", "passage": "JOL.3.14", "kind": "identity", "priority": 1 },
+      { "q": "What does the mountains will drip with new wine mean?", "slug": "the-mountains-will-drip-with-new-wine", "passage": "JOL.3.18", "kind": "phrase", "priority": 1 }
+    ]
+  }
+}

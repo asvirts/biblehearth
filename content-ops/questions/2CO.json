@@ -1,0 +1,104 @@
+{
+  "book": "2CO",
+  "name": "2 Corinthians",
+  "chapters": {
+    "1": [
+      { "q": "What does the God of all comfort mean?", "slug": "the-god-of-all-comfort", "passage": "2CO.1.3-4", "kind": "phrase", "priority": 1 },
+      { "q": "What does all God's promises are Yes and Amen in Christ mean?", "slug": "yes-and-amen-in-christ", "passage": "2CO.1.20", "kind": "doctrine", "priority": 1 },
+      { "q": "What does we were burdened beyond our strength mean?", "slug": "burdened-beyond-our-strength", "passage": "2CO.1.8-9", "kind": "practice", "priority": 1 },
+      { "q": "What is the Spirit as a deposit or down payment?", "slug": "the-spirit-as-a-deposit", "passage": "2CO.1.22", "kind": "doctrine", "priority": 1 },
+      { "q": "What does we comfort others with the comfort we received mean?", "slug": "comfort-others-with-the-comfort-we-received", "passage": "2CO.1.4", "kind": "practice", "priority": 1 }
+    ],
+    "2": [
+      { "q": "Why does Paul tell the church to forgive and restore the offender?", "slug": "forgive-and-restore-the-offender", "passage": "2CO.2.6-8", "kind": "practice", "priority": 1 },
+      { "q": "What does so that Satan will not outwit us mean?", "slug": "so-that-satan-will-not-outwit-us", "passage": "2CO.2.11", "kind": "practice", "priority": 1 },
+      { "q": "What does we are the aroma of Christ mean?", "slug": "the-aroma-of-christ", "passage": "2CO.2.15", "kind": "phrase", "priority": 1 },
+      { "q": "How can the same message be a fragrance of life to some and death to others?", "slug": "a-fragrance-of-life-and-of-death", "passage": "2CO.2.16", "kind": "doctrine", "priority": 1 },
+      { "q": "Who are the peddlers of God's word?", "slug": "peddlers-of-gods-word", "passage": "2CO.2.17", "kind": "identity", "priority": 1 }
+    ],
+    "3": [
+      { "q": "What does the letter kills but the Spirit gives life mean?", "slug": "the-letter-kills-but-the-spirit-gives-life", "passage": "2CO.3.6", "kind": "doctrine", "priority": 1 },
+      { "q": "What does where the Spirit of the Lord is there is freedom mean?", "slug": "where-the-spirit-of-the-lord-is-there-is-freedom", "passage": "2CO.3.17", "kind": "doctrine", "priority": 1 },
+      { "q": "What does transformed from glory to glory mean?", "slug": "from-glory-to-glory", "passage": "2CO.3.18", "kind": "doctrine", "priority": 1 },
+      { "q": "Why did Moses veil his face and what does the veil mean now?", "slug": "why-moses-veiled-his-face", "passage": "2CO.3.13-16", "kind": "doctrine", "priority": 1 },
+      { "q": "What does written on tablets of human hearts mean?", "slug": "written-on-tablets-of-human-hearts", "passage": "2CO.3.3", "kind": "phrase", "priority": 1 },
+      { "q": "Why does Paul call the old covenant a ministry of death?", "slug": "the-ministry-of-death", "passage": "2CO.3.7", "kind": "doctrine", "priority": 1 }
+    ],
+    "4": [
+      { "q": "What does we have this treasure in jars of clay mean?", "slug": "treasure-in-jars-of-clay", "passage": "2CO.4.7", "kind": "phrase", "priority": 1 },
+      { "q": "What does our light and momentary troubles mean?", "slug": "our-light-and-momentary-troubles", "passage": "2CO.4.17", "kind": "doctrine", "priority": 1 },
+      { "q": "What does outwardly wasting away, inwardly renewed mean?", "slug": "outwardly-wasting-away-inwardly-renewed", "passage": "2CO.4.16", "kind": "doctrine", "priority": 1 },
+      { "q": "Who is the god of this world who blinds the minds of unbelievers?", "slug": "the-god-of-this-world-blinds-minds", "passage": "2CO.4.4", "kind": "identity", "priority": 1 },
+      { "q": "What does we fix our eyes not on what is seen mean?", "slug": "we-fix-our-eyes-not-on-what-is-seen", "passage": "2CO.4.18", "kind": "practice", "priority": 1 },
+      { "q": "What does we do not lose heart mean?", "slug": "we-do-not-lose-heart", "passage": "2CO.4.1", "kind": "practice", "priority": 1 },
+      { "q": "What does struck down but not destroyed mean?", "slug": "struck-down-but-not-destroyed", "passage": "2CO.4.8-9", "kind": "phrase", "priority": 1 }
+    ],
+    "5": [
+      { "q": "What does God made him who knew no sin to be sin for us mean?", "slug": "made-him-who-knew-no-sin-to-be-sin", "passage": "2CO.5.21", "kind": "doctrine", "priority": 1 },
+      { "q": "What does if anyone is in Christ he is a new creation mean?", "slug": "if-anyone-is-in-christ-a-new-creation", "passage": "2CO.5.17", "kind": "doctrine", "priority": 1 },
+      { "q": "Does absent from the body mean present with the Lord immediately?", "slug": "absent-from-the-body-present-with-the-lord", "passage": "2CO.5.8", "kind": "doctrine", "priority": 1 },
+      { "q": "What is the judgment seat of Christ for believers?", "slug": "the-judgment-seat-of-christ", "passage": "2CO.5.10", "kind": "doctrine", "priority": 1 },
+      { "q": "What does we are ambassadors for Christ mean?", "slug": "ambassadors-for-christ", "passage": "2CO.5.20", "kind": "practice", "priority": 1 },
+      { "q": "What does we walk by faith not by sight mean?", "slug": "we-walk-by-faith-not-by-sight", "passage": "2CO.5.7", "kind": "practice", "priority": 1 },
+      { "q": "What is the ministry of reconciliation?", "slug": "the-ministry-of-reconciliation", "passage": "2CO.5.18-19", "kind": "doctrine", "priority": 1 },
+      { "q": "What is the building from God, an eternal house in heaven?", "slug": "an-eternal-house-in-heaven", "passage": "2CO.5.1", "kind": "doctrine", "priority": 1 }
+    ],
+    "6": [
+      { "q": "What does do not be unequally yoked with unbelievers mean?", "slug": "do-not-be-unequally-yoked", "passage": "2CO.6.14", "kind": "practice", "priority": 1 },
+      { "q": "Does 2 Corinthians 6:14 forbid marrying an unbeliever?", "slug": "does-2-corinthians-6-14-forbid-marrying-an-unbeliever", "passage": "2CO.6.14", "kind": "practice", "priority": 1 },
+      { "q": "What does come out from among them and be separate mean?", "slug": "come-out-from-among-them-and-be-separate", "passage": "2CO.6.17", "kind": "practice", "priority": 1 },
+      { "q": "What does now is the day of salvation mean?", "slug": "now-is-the-day-of-salvation", "passage": "2CO.6.2", "kind": "doctrine", "priority": 1 },
+      { "q": "What does as poor yet making many rich mean?", "slug": "as-poor-yet-making-many-rich", "passage": "2CO.6.10", "kind": "phrase", "priority": 1 },
+      { "q": "Who is Belial in 2 Corinthians 6:15?", "slug": "who-is-belial", "passage": "2CO.6.15", "kind": "identity", "priority": 1 }
+    ],
+    "7": [
+      { "q": "What is the difference between godly sorrow and worldly sorrow?", "slug": "godly-sorrow-versus-worldly-sorrow", "passage": "2CO.7.10", "kind": "doctrine", "priority": 1 },
+      { "q": "What does worldly sorrow brings death mean?", "slug": "worldly-sorrow-brings-death", "passage": "2CO.7.10", "kind": "doctrine", "priority": 1 },
+      { "q": "What does let us cleanse ourselves from every defilement mean?", "slug": "cleanse-ourselves-from-every-defilement", "passage": "2CO.7.1", "kind": "practice", "priority": 2 }
+    ],
+    "8": [
+      { "q": "What does they gave beyond their ability mean about the Macedonians?", "slug": "they-gave-beyond-their-ability", "passage": "2CO.8.3", "kind": "practice", "priority": 1 },
+      { "q": "What does though he was rich he became poor mean?", "slug": "though-he-was-rich-he-became-poor", "passage": "2CO.8.9", "kind": "doctrine", "priority": 1 },
+      { "q": "What does the one who gathered much had nothing left over mean?", "slug": "whoever-gathered-much-had-nothing-left-over", "passage": "2CO.8.15", "kind": "phrase", "priority": 2 },
+      { "q": "Does 2 Corinthians 8 teach equality of possessions among Christians?", "slug": "does-2-corinthians-8-teach-equality-of-possessions", "passage": "2CO.8.13-14", "kind": "ethics", "priority": 1 }
+    ],
+    "9": [
+      { "q": "What does God loves a cheerful giver mean?", "slug": "god-loves-a-cheerful-giver", "passage": "2CO.9.7", "kind": "practice", "priority": 1 },
+      { "q": "What does whoever sows sparingly will reap sparingly mean?", "slug": "whoever-sows-sparingly-will-reap-sparingly", "passage": "2CO.9.6", "kind": "doctrine", "priority": 1 },
+      { "q": "Is 2 Corinthians 9:6 used to promise financial return on giving?", "slug": "is-2-corinthians-9-6-about-financial-return", "passage": "2CO.9.6", "kind": "claim", "priority": 1 },
+      { "q": "What does not under compulsion mean about how much to give?", "slug": "not-under-compulsion-giving", "passage": "2CO.9.7", "kind": "practice", "priority": 1 }
+    ],
+    "10": [
+      { "q": "What does take every thought captive mean?", "slug": "take-every-thought-captive", "passage": "2CO.10.5", "kind": "practice", "priority": 1 },
+      { "q": "What are the strongholds Paul says we demolish?", "slug": "demolishing-strongholds", "passage": "2CO.10.4", "kind": "doctrine", "priority": 1 },
+      { "q": "What does our weapons are not the weapons of the world mean?", "slug": "our-weapons-are-not-of-this-world", "passage": "2CO.10.3-4", "kind": "doctrine", "priority": 1 },
+      { "q": "Why did the Corinthians say Paul was unimpressive in person?", "slug": "paul-was-unimpressive-in-person", "passage": "2CO.10.10", "kind": "history", "priority": 1 },
+      { "q": "What does comparing yourself to others mean in 2 Corinthians 10:12?", "slug": "comparing-yourself-to-others", "passage": "2CO.10.12", "kind": "practice", "priority": 1 }
+    ],
+    "11": [
+      { "q": "Does Satan masquerade as an angel of light?", "slug": "satan-masquerades-as-an-angel-of-light", "passage": "2CO.11.14", "kind": "doctrine", "priority": 1 },
+      { "q": "Who were the false apostles in Corinth?", "slug": "the-false-apostles-in-corinth", "passage": "2CO.11.13", "kind": "identity", "priority": 1 },
+      { "q": "What was Paul's list of sufferings in 2 Corinthians 11?", "slug": "pauls-list-of-sufferings", "passage": "2CO.11.24-27", "kind": "history", "priority": 1 },
+      { "q": "How many times was Paul beaten and shipwrecked?", "slug": "how-many-times-paul-was-beaten-and-shipwrecked", "passage": "2CO.11.24-25", "kind": "number", "priority": 1 },
+      { "q": "What is another Jesus and a different spirit in 2 Corinthians 11:4?", "slug": "another-jesus-and-a-different-spirit", "passage": "2CO.11.4", "kind": "doctrine", "priority": 1 },
+      { "q": "Why was Paul let down over a wall in a basket?", "slug": "paul-let-down-in-a-basket", "passage": "2CO.11.32-33", "kind": "history", "priority": 1 },
+      { "q": "What are the super-apostles Paul refers to?", "slug": "the-super-apostles", "passage": "2CO.11.5", "kind": "identity", "priority": 2 }
+    ],
+    "12": [
+      { "q": "What was Paul's thorn in the flesh?", "slug": "what-was-pauls-thorn-in-the-flesh", "passage": "2CO.12.7", "kind": "identity", "priority": 1 },
+      { "q": "What does my grace is sufficient for you mean?", "slug": "my-grace-is-sufficient-for-you", "passage": "2CO.12.9", "kind": "doctrine", "priority": 1 },
+      { "q": "What does my power is made perfect in weakness mean?", "slug": "my-power-is-made-perfect-in-weakness", "passage": "2CO.12.9", "kind": "doctrine", "priority": 1 },
+      { "q": "What is the third heaven Paul was caught up to?", "slug": "the-third-heaven", "passage": "2CO.12.2", "kind": "identity", "priority": 1 },
+      { "q": "What did Paul see in paradise that he could not tell?", "slug": "what-paul-saw-in-paradise", "passage": "2CO.12.4", "kind": "phrase", "priority": 1 },
+      { "q": "Why did God refuse to remove Paul's thorn?", "slug": "why-god-refused-to-remove-pauls-thorn", "passage": "2CO.12.8-9", "kind": "doctrine", "priority": 1 },
+      { "q": "What are the signs of a true apostle?", "slug": "the-signs-of-a-true-apostle", "passage": "2CO.12.12", "kind": "doctrine", "priority": 1 },
+      { "q": "What does when I am weak then I am strong mean?", "slug": "when-i-am-weak-then-i-am-strong", "passage": "2CO.12.10", "kind": "doctrine", "priority": 1 }
+    ],
+    "13": [
+      { "q": "What does examine yourselves to see whether you are in the faith mean?", "slug": "examine-yourselves-to-see-if-you-are-in-the-faith", "passage": "2CO.13.5", "kind": "practice", "priority": 1 },
+      { "q": "Is 2 Corinthians 13:14 a Trinitarian blessing?", "slug": "is-2-corinthians-13-14-trinitarian", "passage": "2CO.13.14", "kind": "doctrine", "priority": 1 },
+      { "q": "What does every matter must be established by two or three witnesses mean?", "slug": "two-or-three-witnesses-2-corinthians-13", "passage": "2CO.13.1", "kind": "practice", "priority": 1 },
+      { "q": "What does aim for restoration, comfort one another mean?", "slug": "aim-for-restoration", "passage": "2CO.13.11", "kind": "practice", "priority": 2 }
+    ]
+  }
+}

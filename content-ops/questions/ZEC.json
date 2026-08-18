@@ -1,0 +1,85 @@
+{
+  "book": "ZEC",
+  "name": "Zechariah",
+  "chapters": {
+    "1": [
+      { "q": "Who is the man among the myrtle trees in Zechariah 1?", "slug": "the-man-among-the-myrtle-trees", "passage": "ZEC.1.8-11", "kind": "identity", "priority": 1 },
+      { "q": "What does return to me and I will return to you mean?", "slug": "return-to-me-and-i-will-return-to-you", "passage": "ZEC.1.3", "kind": "doctrine", "priority": 1 },
+      { "q": "What are the four horns and four craftsmen in Zechariah 1?", "slug": "the-four-horns-and-four-craftsmen", "passage": "ZEC.1.18-21", "kind": "identity", "priority": 1 }
+    ],
+    "2": [
+      { "q": "What does Jerusalem will be a city without walls mean?", "slug": "a-city-without-walls", "passage": "ZEC.2.4-5", "kind": "doctrine", "priority": 1 },
+      { "q": "What does I will be a wall of fire around it mean?", "slug": "a-wall-of-fire-around-it", "passage": "ZEC.2.5", "kind": "phrase", "priority": 1 },
+      { "q": "What does whoever touches you touches the apple of his eye mean?", "slug": "touches-the-apple-of-his-eye", "passage": "ZEC.2.8", "kind": "phrase", "priority": 1 }
+    ],
+    "3": [
+      { "q": "Why was Satan accusing Joshua the high priest?", "slug": "satan-accusing-joshua-the-high-priest", "passage": "ZEC.3.1-2", "kind": "doctrine", "priority": 1 },
+      { "q": "What does is this not a brand plucked from the fire mean?", "slug": "a-brand-plucked-from-the-fire", "passage": "ZEC.3.2", "kind": "phrase", "priority": 1 },
+      { "q": "What do the filthy garments exchanged for clean ones mean?", "slug": "filthy-garments-exchanged-for-clean", "passage": "ZEC.3.3-5", "kind": "doctrine", "priority": 1 },
+      { "q": "What is the stone with seven eyes in Zechariah 3:9?", "slug": "the-stone-with-seven-eyes", "passage": "ZEC.3.9", "kind": "identity", "priority": 1 }
+    ],
+    "4": [
+      { "q": "What does not by might nor by power but by my Spirit mean?", "slug": "not-by-might-nor-by-power-but-by-my-spirit", "passage": "ZEC.4.6", "kind": "doctrine", "priority": 1 },
+      { "q": "What does who despises the day of small things mean?", "slug": "who-despises-the-day-of-small-things", "passage": "ZEC.4.10", "kind": "practice", "priority": 1 },
+      { "q": "What are the two olive trees and the golden lampstand?", "slug": "the-two-olive-trees-and-the-lampstand", "passage": "ZEC.4.2-14", "kind": "identity", "priority": 1 },
+      { "q": "Are the two olive trees the same as the two witnesses of Revelation?", "slug": "are-the-two-olive-trees-the-two-witnesses", "passage": "ZEC.4.14", "kind": "doctrine", "priority": 1 },
+      { "q": "What is the plumb line in Zerubbabel's hand?", "slug": "the-plumb-line-in-zerubbabels-hand", "passage": "ZEC.4.10", "kind": "phrase", "priority": 1 }
+    ],
+    "5": [
+      { "q": "What is the flying scroll in Zechariah 5?", "slug": "the-flying-scroll", "passage": "ZEC.5.1-4", "kind": "identity", "priority": 1 },
+      { "q": "Who is the woman in the basket in Zechariah 5?", "slug": "the-woman-in-the-basket", "passage": "ZEC.5.5-11", "kind": "identity", "priority": 1 }
+    ],
+    "6": [
+      { "q": "What are the four chariots in Zechariah 6?", "slug": "the-four-chariots-of-zechariah-6", "passage": "ZEC.6.1-8", "kind": "identity", "priority": 1 },
+      { "q": "Who is the Branch who will build the temple in Zechariah 6:12?", "slug": "the-branch-who-will-build-the-temple", "passage": "ZEC.6.12-13", "kind": "identity", "priority": 1 },
+      { "q": "Why was a crown placed on the high priest instead of the king?", "slug": "a-crown-placed-on-the-high-priest", "passage": "ZEC.6.11-13", "kind": "doctrine", "priority": 1 }
+    ],
+    "7": [
+      { "q": "What does was it really for me that you fasted mean?", "slug": "was-it-really-for-me-that-you-fasted", "passage": "ZEC.7.5-6", "kind": "practice", "priority": 1 },
+      { "q": "What does administer true justice and show mercy mean?", "slug": "administer-true-justice-and-show-mercy", "passage": "ZEC.7.9-10", "kind": "ethics", "priority": 1 },
+      { "q": "What does they made their hearts as hard as stone mean?", "slug": "hearts-as-hard-as-stone", "passage": "ZEC.7.12", "kind": "doctrine", "priority": 1 }
+    ],
+    "8": [
+      { "q": "What does old men and women will sit in the streets of Jerusalem mean?", "slug": "old-men-and-women-in-the-streets", "passage": "ZEC.8.4-5", "kind": "phrase", "priority": 1 },
+      { "q": "What does ten men will grab the robe of one Jew mean?", "slug": "ten-men-will-grab-the-robe-of-one-jew", "passage": "ZEC.8.23", "kind": "doctrine", "priority": 1 },
+      { "q": "What does speak the truth to one another mean in Zechariah 8?", "slug": "speak-the-truth-to-one-another-zechariah-8", "passage": "ZEC.8.16", "kind": "practice", "priority": 1 }
+    ],
+    "9": [
+      { "q": "How does Zechariah 9:9 predict Jesus riding a donkey?", "slug": "zechariah-9-9-and-the-donkey", "passage": "ZEC.9.9", "kind": "doctrine", "priority": 1 },
+      { "q": "What does prisoners of hope mean?", "slug": "prisoners-of-hope", "passage": "ZEC.9.12", "kind": "phrase", "priority": 1 },
+      { "q": "What does the blood of the covenant mean in Zechariah 9:11?", "slug": "the-blood-of-the-covenant-zechariah-9", "passage": "ZEC.9.11", "kind": "doctrine", "priority": 1 },
+      { "q": "Why is the king described as lowly and riding a donkey?", "slug": "a-king-lowly-and-riding-a-donkey", "passage": "ZEC.9.9", "kind": "doctrine", "priority": 1 }
+    ],
+    "10": [
+      { "q": "What does ask the LORD for rain in the springtime mean?", "slug": "ask-the-lord-for-rain-in-the-springtime", "passage": "ZEC.10.1", "kind": "practice", "priority": 1 },
+      { "q": "What does the teraphim speak nonsense mean?", "slug": "the-teraphim-speak-nonsense", "passage": "ZEC.10.2", "kind": "doctrine", "priority": 1 }
+    ],
+    "11": [
+      { "q": "How does Zechariah 11:12-13 predict Judas's thirty pieces of silver?", "slug": "zechariah-11-and-the-thirty-pieces-of-silver", "passage": "ZEC.11.12-13", "kind": "doctrine", "priority": 1 },
+      { "q": "Why does Matthew attribute Zechariah 11:13 to Jeremiah?", "slug": "why-matthew-attributes-zechariah-to-jeremiah", "passage": "ZEC.11.13", "kind": "tension", "priority": 1 },
+      { "q": "Who is the worthless shepherd in Zechariah 11?", "slug": "the-worthless-shepherd", "passage": "ZEC.11.15-17", "kind": "identity", "priority": 1 },
+      { "q": "What do the two staffs Favor and Union mean?", "slug": "the-two-staffs-favor-and-union", "passage": "ZEC.11.7-14", "kind": "phrase", "priority": 1 }
+    ],
+    "12": [
+      { "q": "What does they will look on me, the one they have pierced mean?", "slug": "they-will-look-on-me-the-one-they-pierced", "passage": "ZEC.12.10", "kind": "doctrine", "priority": 1 },
+      { "q": "What is the spirit of grace and supplication?", "slug": "the-spirit-of-grace-and-supplication", "passage": "ZEC.12.10", "kind": "doctrine", "priority": 1 },
+      { "q": "What does Jerusalem will be a cup that makes the nations reel mean?", "slug": "a-cup-that-makes-the-nations-reel", "passage": "ZEC.12.2", "kind": "phrase", "priority": 1 },
+      { "q": "What does Jerusalem will be an immovable rock mean?", "slug": "jerusalem-an-immovable-rock", "passage": "ZEC.12.3", "kind": "phrase", "priority": 1 }
+    ],
+    "13": [
+      { "q": "How does Jesus apply strike the shepherd and the sheep will scatter?", "slug": "strike-the-shepherd-and-the-sheep-will-scatter", "passage": "ZEC.13.7", "kind": "doctrine", "priority": 1 },
+      { "q": "What are the wounds on his hands in Zechariah 13:6?", "slug": "the-wounds-on-his-hands-zechariah-13", "passage": "ZEC.13.6", "kind": "doctrine", "priority": 1 },
+      { "q": "What does two-thirds will perish and a third will be refined mean?", "slug": "two-thirds-will-perish-a-third-refined", "passage": "ZEC.13.8-9", "kind": "doctrine", "priority": 1 },
+      { "q": "What is the fountain opened to cleanse from sin?", "slug": "a-fountain-opened-to-cleanse-from-sin", "passage": "ZEC.13.1", "kind": "doctrine", "priority": 1 }
+    ],
+    "14": [
+      { "q": "What does his feet will stand on the Mount of Olives mean?", "slug": "his-feet-will-stand-on-the-mount-of-olives", "passage": "ZEC.14.4", "kind": "doctrine", "priority": 1 },
+      { "q": "What does living water flowing east and west from Jerusalem mean?", "slug": "living-water-flowing-east-and-west", "passage": "ZEC.14.8", "kind": "doctrine", "priority": 1 },
+      { "q": "What does the LORD will be king over the whole earth mean?", "slug": "the-lord-will-be-king-over-the-whole-earth", "passage": "ZEC.14.9", "kind": "doctrine", "priority": 1 },
+      { "q": "Why will all nations keep the Feast of Booths in Zechariah 14?", "slug": "all-nations-will-keep-the-feast-of-booths", "passage": "ZEC.14.16-19", "kind": "doctrine", "priority": 1 },
+      { "q": "What does HOLY TO THE LORD on the horses' bells mean?", "slug": "holy-to-the-lord-on-the-horses-bells", "passage": "ZEC.14.20", "kind": "phrase", "priority": 1 },
+      { "q": "What does the Mount of Olives splitting in two mean?", "slug": "the-mount-of-olives-splitting-in-two", "passage": "ZEC.14.4", "kind": "doctrine", "priority": 1 },
+      { "q": "What is the plague where flesh rots while people still stand?", "slug": "the-plague-where-flesh-rots", "passage": "ZEC.14.12", "kind": "doctrine", "priority": 1 }
+    ]
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "book": "COL",
+  "name": "Colossians",
+  "chapters": {
+    "1": [
+      { "q": "Does firstborn of all creation mean Jesus was created?", "slug": "firstborn-of-all-creation", "passage": "COL.1.15", "kind": "doctrine", "priority": 1 },
+      { "q": "What does the image of the invisible God mean?", "slug": "the-image-of-the-invisible-god", "passage": "COL.1.15", "kind": "doctrine", "priority": 1 },
+      { "q": "What does Paul mean by filling up what is lacking in Christ's afflictions?", "slug": "what-is-lacking-in-christs-afflictions", "passage": "COL.1.24", "kind": "doctrine", "priority": 1 },
+      { "q": "What does Christ in you, the hope of glory mean?", "slug": "christ-in-you-the-hope-of-glory", "passage": "COL.1.27", "kind": "doctrine", "priority": 1 },
+      { "q": "Does God reconcile all things mean everyone will be saved?", "slug": "does-god-reconcile-all-things", "passage": "COL.1.20", "kind": "doctrine", "priority": 1 },
+      { "q": "What does in him all things hold together mean?", "slug": "in-him-all-things-hold-together", "passage": "COL.1.17", "kind": "doctrine", "priority": 1 },
+      { "q": "What are thrones, dominions, rulers, and authorities in Colossians 1:16?", "slug": "thrones-dominions-rulers-and-authorities", "passage": "COL.1.16", "kind": "identity", "priority": 1 },
+      { "q": "What does he has delivered us from the domain of darkness mean?", "slug": "delivered-from-the-domain-of-darkness", "passage": "COL.1.13", "kind": "doctrine", "priority": 2 },
+      { "q": "What does if you continue in the faith mean about assurance?", "slug": "if-you-continue-in-the-faith-colossians-1", "passage": "COL.1.23", "kind": "doctrine", "priority": 1 }
+    ],
+    "2": [
+      { "q": "What does the fullness of deity dwells bodily in Christ mean?", "slug": "the-fullness-of-deity-dwells-bodily", "passage": "COL.2.9", "kind": "doctrine", "priority": 1 },
+      { "q": "What does he canceled the record of debt and nailed it to the cross mean?", "slug": "nailed-it-to-the-cross", "passage": "COL.2.14", "kind": "doctrine", "priority": 1 },
+      { "q": "Does Colossians 2:16 abolish the Sabbath and food laws?", "slug": "does-colossians-2-16-abolish-the-sabbath", "passage": "COL.2.16-17", "kind": "doctrine", "priority": 1 },
+      { "q": "What is the worship of angels Paul warns about?", "slug": "the-worship-of-angels", "passage": "COL.2.18", "kind": "practice", "priority": 1 },
+      { "q": "What does buried with him in baptism mean?", "slug": "buried-with-him-in-baptism", "passage": "COL.2.12", "kind": "doctrine", "priority": 1 },
+      { "q": "What is the circumcision of Christ in Colossians 2:11?", "slug": "the-circumcision-of-christ", "passage": "COL.2.11", "kind": "doctrine", "priority": 1 },
+      { "q": "What does do not handle, do not taste, do not touch mean?", "slug": "do-not-handle-do-not-taste-do-not-touch", "passage": "COL.2.21", "kind": "practice", "priority": 1 },
+      { "q": "What is the philosophy and empty deceit Paul warns against?", "slug": "philosophy-and-empty-deceit", "passage": "COL.2.8", "kind": "identity", "priority": 1 },
+      { "q": "What does he disarmed the rulers and authorities mean?", "slug": "he-disarmed-the-rulers-and-authorities", "passage": "COL.2.15", "kind": "doctrine", "priority": 1 },
+      { "q": "What are the shadows of things to come in Colossians 2:17?", "slug": "a-shadow-of-things-to-come", "passage": "COL.2.17", "kind": "phrase", "priority": 2 }
+    ],
+    "3": [
+      { "q": "What does set your minds on things above mean?", "slug": "set-your-minds-on-things-above", "passage": "COL.3.2", "kind": "practice", "priority": 1 },
+      { "q": "What does your life is hidden with Christ in God mean?", "slug": "your-life-is-hidden-with-christ-in-god", "passage": "COL.3.3", "kind": "doctrine", "priority": 1 },
+      { "q": "What does put to death what is earthly in you mean?", "slug": "put-to-death-what-is-earthly-in-you", "passage": "COL.3.5", "kind": "practice", "priority": 1 },
+      { "q": "What does let the peace of Christ rule in your hearts mean?", "slug": "let-the-peace-of-christ-rule", "passage": "COL.3.15", "kind": "practice", "priority": 1 },
+      { "q": "What does whatever you do, do it heartily as for the Lord mean?", "slug": "whatever-you-do-do-it-for-the-lord", "passage": "COL.3.23", "kind": "practice", "priority": 1 },
+      { "q": "What does put on love, which binds everything together mean?", "slug": "put-on-love-which-binds-everything-together", "passage": "COL.3.14", "kind": "practice", "priority": 1 },
+      { "q": "Does Colossians 3:18 require wives to obey their husbands?", "slug": "wives-submit-colossians-3-18", "passage": "COL.3.18", "kind": "practice", "priority": 1 },
+      { "q": "Why does Paul tell slaves to obey their masters?", "slug": "slaves-obey-your-masters-colossians-3", "passage": "COL.3.22", "kind": "ethics", "priority": 1 },
+      { "q": "What does let the word of Christ dwell in you richly mean?", "slug": "let-the-word-of-christ-dwell-in-you-richly", "passage": "COL.3.16", "kind": "practice", "priority": 1 },
+      { "q": "What does fathers, do not embitter your children mean?", "slug": "do-not-embitter-your-children", "passage": "COL.3.21", "kind": "practice", "priority": 2 }
+    ],
+    "4": [
+      { "q": "What happened to the lost letter to the Laodiceans?", "slug": "the-lost-letter-to-the-laodiceans", "passage": "COL.4.16", "kind": "history", "priority": 1 },
+      { "q": "What does let your speech be seasoned with salt mean?", "slug": "let-your-speech-be-seasoned-with-salt", "passage": "COL.4.6", "kind": "practice", "priority": 1 },
+      { "q": "What does walk in wisdom toward outsiders mean?", "slug": "walk-in-wisdom-toward-outsiders", "passage": "COL.4.5", "kind": "practice", "priority": 1 },
+      { "q": "Who was Luke the beloved physician?", "slug": "luke-the-beloved-physician", "passage": "COL.4.14", "kind": "identity", "priority": 1 },
+      { "q": "Who was Epaphras and what did he do for the Colossians?", "slug": "who-was-epaphras", "passage": "COL.4.12-13", "kind": "identity", "priority": 2 },
+      { "q": "What does devote yourselves to prayer, being watchful mean?", "slug": "devote-yourselves-to-prayer-being-watchful", "passage": "COL.4.2", "kind": "practice", "priority": 2 }
+    ]
+  }
+}

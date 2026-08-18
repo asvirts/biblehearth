@@ -1,0 +1,64 @@
+{
+  "book": "JAS",
+  "name": "James",
+  "chapters": {
+    "1": [
+      { "q": "What does count it all joy when you face trials mean?", "slug": "count-it-all-joy-when-you-face-trials", "passage": "JAS.1.2", "kind": "practice", "priority": 1 },
+      { "q": "What does ask in faith without doubting mean?", "slug": "ask-in-faith-without-doubting", "passage": "JAS.1.6", "kind": "doctrine", "priority": 1 },
+      { "q": "What does double-minded mean in James 1:8?", "slug": "what-does-double-minded-mean", "passage": "JAS.1.8", "kind": "phrase", "priority": 1 },
+      { "q": "Does James 1:13 mean God never tests anyone?", "slug": "god-tempts-no-one", "passage": "JAS.1.13", "kind": "tension", "priority": 1 },
+      { "q": "What does every good and perfect gift comes down from above mean?", "slug": "every-good-and-perfect-gift", "passage": "JAS.1.17", "kind": "phrase", "priority": 1 },
+      { "q": "What does be quick to listen, slow to speak, slow to anger mean?", "slug": "quick-to-listen-slow-to-speak", "passage": "JAS.1.19", "kind": "practice", "priority": 1 },
+      { "q": "What does be doers of the word and not hearers only mean?", "slug": "be-doers-of-the-word-not-hearers-only", "passage": "JAS.1.22", "kind": "practice", "priority": 1 },
+      { "q": "What is pure religion according to James 1:27?", "slug": "pure-religion-james-1-27", "passage": "JAS.1.27", "kind": "doctrine", "priority": 1 },
+      { "q": "What is the perfect law of liberty?", "slug": "the-perfect-law-of-liberty", "passage": "JAS.1.25", "kind": "phrase", "priority": 1 },
+      { "q": "What does desire gives birth to sin and sin to death mean?", "slug": "desire-gives-birth-to-sin", "passage": "JAS.1.14-15", "kind": "doctrine", "priority": 1 },
+      { "q": "What does like a man who looks in a mirror and forgets mean?", "slug": "like-a-man-who-looks-in-a-mirror", "passage": "JAS.1.23-24", "kind": "phrase", "priority": 2 }
+    ],
+    "2": [
+      { "q": "What does faith without works is dead mean?", "slug": "faith-without-works-is-dead", "passage": "JAS.2.17", "kind": "doctrine", "priority": 1 },
+      { "q": "Does James contradict Paul on faith and works?", "slug": "does-james-contradict-paul-on-faith-and-works", "passage": "JAS.2.21-24", "kind": "tension", "priority": 1 },
+      { "q": "How was Abraham justified by works in James 2:21?", "slug": "abraham-justified-by-works-james-2", "passage": "JAS.2.21", "kind": "tension", "priority": 1 },
+      { "q": "What does even the demons believe and shudder mean?", "slug": "even-the-demons-believe-and-shudder", "passage": "JAS.2.19", "kind": "doctrine", "priority": 1 },
+      { "q": "What does if you break one point of the law you are guilty of all mean?", "slug": "guilty-of-breaking-all-the-law", "passage": "JAS.2.10", "kind": "doctrine", "priority": 1 },
+      { "q": "What does mercy triumphs over judgment mean?", "slug": "mercy-triumphs-over-judgment", "passage": "JAS.2.13", "kind": "phrase", "priority": 1 },
+      { "q": "What does show no partiality mean about favoring the rich?", "slug": "show-no-partiality-james-2", "passage": "JAS.2.1-4", "kind": "ethics", "priority": 1 },
+      { "q": "Why is Rahab held up as justified by works?", "slug": "why-rahab-was-justified-by-works", "passage": "JAS.2.25", "kind": "doctrine", "priority": 1 },
+      { "q": "What is the royal law in James 2:8?", "slug": "the-royal-law", "passage": "JAS.2.8", "kind": "phrase", "priority": 2 }
+    ],
+    "3": [
+      { "q": "What does the tongue is a fire mean?", "slug": "the-tongue-is-a-fire", "passage": "JAS.3.6", "kind": "phrase", "priority": 1 },
+      { "q": "What does no one can tame the tongue mean?", "slug": "no-one-can-tame-the-tongue", "passage": "JAS.3.8", "kind": "practice", "priority": 1 },
+      { "q": "Why does James compare the tongue to a ship's rudder and a horse's bit?", "slug": "the-tongue-like-a-rudder-and-a-bit", "passage": "JAS.3.3-4", "kind": "phrase", "priority": 1 },
+      { "q": "What is the difference between wisdom from above and earthly wisdom?", "slug": "wisdom-from-above-versus-earthly-wisdom", "passage": "JAS.3.15-17", "kind": "doctrine", "priority": 1 },
+      { "q": "What does we all stumble in many ways mean?", "slug": "we-all-stumble-in-many-ways", "passage": "JAS.3.2", "kind": "doctrine", "priority": 1 },
+      { "q": "Why does James warn that not many should become teachers?", "slug": "not-many-should-become-teachers", "passage": "JAS.3.1", "kind": "practice", "priority": 1 },
+      { "q": "What does can a fig tree bear olives mean?", "slug": "can-a-fig-tree-bear-olives", "passage": "JAS.3.12", "kind": "phrase", "priority": 2 },
+      { "q": "What does the same mouth blesses and curses mean?", "slug": "the-same-mouth-blesses-and-curses", "passage": "JAS.3.9-10", "kind": "practice", "priority": 1 }
+    ],
+    "4": [
+      { "q": "What does you do not have because you do not ask mean?", "slug": "you-do-not-have-because-you-do-not-ask", "passage": "JAS.4.2", "kind": "doctrine", "priority": 1 },
+      { "q": "Why does God not answer prayers asked with wrong motives?", "slug": "you-ask-with-wrong-motives", "passage": "JAS.4.3", "kind": "doctrine", "priority": 1 },
+      { "q": "What does friendship with the world is enmity with God mean?", "slug": "friendship-with-the-world-is-enmity-with-god", "passage": "JAS.4.4", "kind": "doctrine", "priority": 1 },
+      { "q": "What does resist the devil and he will flee from you mean?", "slug": "resist-the-devil-and-he-will-flee", "passage": "JAS.4.7", "kind": "practice", "priority": 1 },
+      { "q": "What does draw near to God and he will draw near to you mean?", "slug": "draw-near-to-god-and-he-will-draw-near-to-you", "passage": "JAS.4.8", "kind": "practice", "priority": 1 },
+      { "q": "What does God opposes the proud but gives grace to the humble mean?", "slug": "god-opposes-the-proud-gives-grace-to-the-humble", "passage": "JAS.4.6", "kind": "doctrine", "priority": 1 },
+      { "q": "What does if the Lord wills mean about making plans?", "slug": "if-the-lord-wills", "passage": "JAS.4.15", "kind": "practice", "priority": 1 },
+      { "q": "What does your life is a mist that appears and vanishes mean?", "slug": "your-life-is-a-mist", "passage": "JAS.4.14", "kind": "phrase", "priority": 1 },
+      { "q": "What does knowing the right thing and not doing it is sin mean?", "slug": "knowing-the-right-thing-and-not-doing-it", "passage": "JAS.4.17", "kind": "ethics", "priority": 1 },
+      { "q": "Which Scripture says he yearns jealously over the spirit he made?", "slug": "he-yearns-jealously-over-the-spirit", "passage": "JAS.4.5", "kind": "tension", "priority": 1 }
+    ],
+    "5": [
+      { "q": "Should the church still anoint the sick with oil and pray?", "slug": "anointing-the-sick-with-oil", "passage": "JAS.5.14-15", "kind": "practice", "priority": 1 },
+      { "q": "Does James 5:15 promise the sick will always be healed?", "slug": "does-james-5-15-promise-healing", "passage": "JAS.5.15", "kind": "doctrine", "priority": 1 },
+      { "q": "What does the prayer of a righteous person is powerful and effective mean?", "slug": "the-prayer-of-a-righteous-person-is-powerful", "passage": "JAS.5.16", "kind": "doctrine", "priority": 1 },
+      { "q": "Should Christians confess their sins to one another?", "slug": "confess-your-sins-to-one-another", "passage": "JAS.5.16", "kind": "practice", "priority": 1 },
+      { "q": "Why does James use Elijah as an example of prayer?", "slug": "elijah-as-an-example-of-prayer", "passage": "JAS.5.17-18", "kind": "doctrine", "priority": 1 },
+      { "q": "What does your gold and silver have rusted mean?", "slug": "your-gold-and-silver-have-rusted", "passage": "JAS.5.3", "kind": "ethics", "priority": 1 },
+      { "q": "What does the wages of the workers cry out against you mean?", "slug": "the-wages-of-the-workers-cry-out", "passage": "JAS.5.4", "kind": "ethics", "priority": 1 },
+      { "q": "Does James 5:12 forbid taking oaths in court?", "slug": "does-james-5-12-forbid-oaths", "passage": "JAS.5.12", "kind": "practice", "priority": 1 },
+      { "q": "What does the patience of Job mean?", "slug": "the-patience-of-job", "passage": "JAS.5.11", "kind": "phrase", "priority": 1 },
+      { "q": "What does whoever brings back a sinner will save his soul from death mean?", "slug": "bringing-back-a-wandering-sinner", "passage": "JAS.5.19-20", "kind": "doctrine", "priority": 1 }
+    ]
+  }
+}

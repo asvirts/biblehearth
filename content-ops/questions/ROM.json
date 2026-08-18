@@ -1,0 +1,182 @@
+{
+  "book": "ROM",
+  "name": "Romans",
+  "chapters": {
+    "1": [
+      { "q": "What does Romans 1 say about homosexuality?", "slug": "what-romans-1-says-about-homosexuality", "passage": "ROM.1.26-27", "kind": "ethics", "priority": 1 },
+      { "q": "What does God gave them up to their passions mean?", "slug": "god-gave-them-up-to-their-passions", "passage": "ROM.1.24-28", "kind": "doctrine", "priority": 1 },
+      { "q": "What does without excuse mean in Romans 1:20?", "slug": "without-excuse-romans-1-20", "passage": "ROM.1.20", "kind": "doctrine", "priority": 1 },
+      { "q": "Can you know God exists from nature alone?", "slug": "can-you-know-god-from-nature-alone", "passage": "ROM.1.19-20", "kind": "doctrine", "priority": 1 },
+      { "q": "What does the righteous shall live by faith mean?", "slug": "the-righteous-shall-live-by-faith", "passage": "ROM.1.17", "kind": "doctrine", "priority": 1 },
+      { "q": "What does the gospel is the power of God for salvation mean?", "slug": "the-gospel-is-the-power-of-god-for-salvation", "passage": "ROM.1.16", "kind": "doctrine", "priority": 1 },
+      { "q": "What does exchanged the truth of God for a lie mean?", "slug": "exchanged-the-truth-of-god-for-a-lie", "passage": "ROM.1.25", "kind": "phrase", "priority": 2 },
+      { "q": "What is the wrath of God revealed in Romans 1:18?", "slug": "the-wrath-of-god-revealed", "passage": "ROM.1.18", "kind": "doctrine", "priority": 2 },
+      { "q": "What does declared to be the Son of God by his resurrection mean?", "slug": "declared-son-of-god-by-the-resurrection", "passage": "ROM.1.4", "kind": "doctrine", "priority": 2 },
+      { "q": "What does a debased mind mean in Romans 1:28?", "slug": "a-debased-mind", "passage": "ROM.1.28", "kind": "phrase", "priority": 2 }
+    ],
+    "2": [
+      { "q": "Does Romans 2:13 say doers of the law will be justified?", "slug": "doers-of-the-law-will-be-justified", "passage": "ROM.2.13", "kind": "tension", "priority": 1 },
+      { "q": "What is the law written on the heart in Romans 2:15?", "slug": "the-law-written-on-the-heart", "passage": "ROM.2.14-15", "kind": "doctrine", "priority": 1 },
+      { "q": "What is circumcision of the heart?", "slug": "circumcision-of-the-heart", "passage": "ROM.2.28-29", "kind": "doctrine", "priority": 1 },
+      { "q": "Can people be saved without ever hearing the gospel?", "slug": "can-people-be-saved-without-hearing-the-gospel", "passage": "ROM.2.14-16", "kind": "doctrine", "priority": 1 },
+      { "q": "What does God shows no partiality mean?", "slug": "god-shows-no-partiality", "passage": "ROM.2.11", "kind": "doctrine", "priority": 1 },
+      { "q": "What does God's kindness is meant to lead you to repentance mean?", "slug": "gods-kindness-leads-you-to-repentance", "passage": "ROM.2.4", "kind": "phrase", "priority": 1 },
+      { "q": "Why does Paul say you condemn yourself when you judge?", "slug": "you-condemn-yourself-when-you-judge", "passage": "ROM.2.1", "kind": "practice", "priority": 2 },
+      { "q": "What does storing up wrath for the day of judgment mean?", "slug": "storing-up-wrath-for-the-day-of-wrath", "passage": "ROM.2.5", "kind": "phrase", "priority": 2 }
+    ],
+    "3": [
+      { "q": "What does none is righteous, no not one mean?", "slug": "none-is-righteous-no-not-one", "passage": "ROM.3.10-12", "kind": "doctrine", "priority": 1 },
+      { "q": "What does all have sinned and fall short of the glory of God mean?", "slug": "all-have-sinned-and-fall-short", "passage": "ROM.3.23", "kind": "doctrine", "priority": 1 },
+      { "q": "What is propitiation in Romans 3:25?", "slug": "what-is-propitiation", "passage": "ROM.3.25", "kind": "doctrine", "priority": 1 },
+      { "q": "What is the righteousness of God apart from the law?", "slug": "the-righteousness-of-god-apart-from-the-law", "passage": "ROM.3.21-22", "kind": "doctrine", "priority": 1 },
+      { "q": "What does justified by his grace as a gift mean?", "slug": "justified-by-his-grace-as-a-gift", "passage": "ROM.3.24", "kind": "doctrine", "priority": 1 },
+      { "q": "How can God be both just and the one who justifies sinners?", "slug": "how-god-is-just-and-the-justifier", "passage": "ROM.3.26", "kind": "doctrine", "priority": 1 },
+      { "q": "What does no one will be justified by works of the law mean?", "slug": "no-one-justified-by-works-of-the-law", "passage": "ROM.3.20", "kind": "doctrine", "priority": 1 },
+      { "q": "Does faith abolish the law or uphold it?", "slug": "does-faith-abolish-or-uphold-the-law", "passage": "ROM.3.31", "kind": "tension", "priority": 1 },
+      { "q": "What does let us do evil that good may come mean?", "slug": "let-us-do-evil-that-good-may-come", "passage": "ROM.3.8", "kind": "ethics", "priority": 2 },
+      { "q": "What advantage did the Jews have if everyone is guilty?", "slug": "what-advantage-did-the-jews-have", "passage": "ROM.3.1-2", "kind": "phrase", "priority": 2 }
+    ],
+    "4": [
+      { "q": "How was Abraham justified by faith before the law existed?", "slug": "abraham-justified-by-faith-before-the-law", "passage": "ROM.4.9-12", "kind": "doctrine", "priority": 1 },
+      { "q": "What does counted or credited as righteousness mean?", "slug": "counted-as-righteousness", "passage": "ROM.4.3-5", "kind": "doctrine", "priority": 1 },
+      { "q": "What does God justifies the ungodly mean?", "slug": "god-justifies-the-ungodly", "passage": "ROM.4.5", "kind": "doctrine", "priority": 1 },
+      { "q": "What does in hope he believed against hope mean?", "slug": "in-hope-he-believed-against-hope", "passage": "ROM.4.18", "kind": "phrase", "priority": 1 },
+      { "q": "Why does Paul say Abraham was circumcised after he believed?", "slug": "abraham-circumcised-after-he-believed", "passage": "ROM.4.10-11", "kind": "doctrine", "priority": 2 },
+      { "q": "What does God who gives life to the dead and calls into existence things that do not exist mean?", "slug": "god-who-gives-life-to-the-dead", "passage": "ROM.4.17", "kind": "phrase", "priority": 2 },
+      { "q": "Does Romans 4 contradict James 2 about faith and works?", "slug": "does-romans-4-contradict-james-2", "passage": "ROM.4.2-3", "kind": "tension", "priority": 1 }
+    ],
+    "5": [
+      { "q": "What does original sin mean in Romans 5:12?", "slug": "original-sin-romans-5-12", "passage": "ROM.5.12", "kind": "doctrine", "priority": 1 },
+      { "q": "How can everyone be guilty because of Adam's sin?", "slug": "how-can-everyone-be-guilty-for-adams-sin", "passage": "ROM.5.18-19", "kind": "doctrine", "priority": 1 },
+      { "q": "How is Adam a type of Christ in Romans 5?", "slug": "adam-as-a-type-of-christ", "passage": "ROM.5.14", "kind": "doctrine", "priority": 1 },
+      { "q": "What does where sin increased grace abounded all the more mean?", "slug": "where-sin-increased-grace-abounded", "passage": "ROM.5.20", "kind": "doctrine", "priority": 1 },
+      { "q": "What does suffering produces endurance, character, and hope mean?", "slug": "suffering-produces-endurance-character-hope", "passage": "ROM.5.3-4", "kind": "practice", "priority": 1 },
+      { "q": "What does God's love poured into our hearts mean?", "slug": "gods-love-poured-into-our-hearts", "passage": "ROM.5.5", "kind": "phrase", "priority": 1 },
+      { "q": "What does while we were still sinners Christ died for us mean?", "slug": "while-we-were-still-sinners-christ-died", "passage": "ROM.5.8", "kind": "doctrine", "priority": 1 },
+      { "q": "Does Romans 5:18 teach that everyone will be saved?", "slug": "does-romans-5-18-teach-universalism", "passage": "ROM.5.18", "kind": "doctrine", "priority": 1 },
+      { "q": "What does we have peace with God mean?", "slug": "we-have-peace-with-god", "passage": "ROM.5.1", "kind": "doctrine", "priority": 2 },
+      { "q": "What does reconciled to God mean?", "slug": "reconciled-to-god-romans-5", "passage": "ROM.5.10-11", "kind": "doctrine", "priority": 2 }
+    ],
+    "6": [
+      { "q": "What does shall we continue in sin that grace may abound mean?", "slug": "shall-we-continue-in-sin-that-grace-may-abound", "passage": "ROM.6.1-2", "kind": "doctrine", "priority": 1 },
+      { "q": "What does baptized into his death mean?", "slug": "baptized-into-his-death", "passage": "ROM.6.3-4", "kind": "doctrine", "priority": 1 },
+      { "q": "What does consider yourselves dead to sin mean?", "slug": "consider-yourselves-dead-to-sin", "passage": "ROM.6.11", "kind": "practice", "priority": 1 },
+      { "q": "What does the wages of sin is death mean?", "slug": "the-wages-of-sin-is-death", "passage": "ROM.6.23", "kind": "doctrine", "priority": 1 },
+      { "q": "What does sin will have no dominion over you mean?", "slug": "sin-will-have-no-dominion-over-you", "passage": "ROM.6.14", "kind": "doctrine", "priority": 1 },
+      { "q": "What does our old self was crucified with him mean?", "slug": "our-old-self-was-crucified-with-him", "passage": "ROM.6.6", "kind": "doctrine", "priority": 1 },
+      { "q": "What does being a slave to righteousness mean?", "slug": "slaves-to-righteousness", "passage": "ROM.6.18-19", "kind": "practice", "priority": 2 },
+      { "q": "Does Romans 6 teach baptism by immersion?", "slug": "does-romans-6-teach-immersion", "passage": "ROM.6.4", "kind": "practice", "priority": 2 }
+    ],
+    "7": [
+      { "q": "Is Paul describing a Christian or a non-Christian in Romans 7?", "slug": "is-romans-7-about-a-christian", "passage": "ROM.7.14-25", "kind": "doctrine", "priority": 1 },
+      { "q": "What does I do not do the good I want to do mean?", "slug": "i-do-not-do-the-good-i-want-to-do", "passage": "ROM.7.19", "kind": "doctrine", "priority": 1 },
+      { "q": "What does wretched man that I am mean?", "slug": "wretched-man-that-i-am", "passage": "ROM.7.24", "kind": "phrase", "priority": 1 },
+      { "q": "What does sin dwelling in me mean?", "slug": "sin-dwelling-in-me", "passage": "ROM.7.17-20", "kind": "doctrine", "priority": 1 },
+      { "q": "How are Christians released from the law like a widow from marriage?", "slug": "released-from-the-law-like-a-widow", "passage": "ROM.7.1-4", "kind": "doctrine", "priority": 1 },
+      { "q": "What does I would not have known coveting if the law had not said do not covet mean?", "slug": "i-would-not-have-known-coveting", "passage": "ROM.7.7", "kind": "phrase", "priority": 1 },
+      { "q": "Is the law sin according to Romans 7?", "slug": "is-the-law-sin", "passage": "ROM.7.7-12", "kind": "doctrine", "priority": 2 },
+      { "q": "What does the law of my mind versus the law of sin mean?", "slug": "law-of-my-mind-versus-law-of-sin", "passage": "ROM.7.23", "kind": "phrase", "priority": 2 }
+    ],
+    "8": [
+      { "q": "What does all things work together for good actually mean?", "slug": "all-things-work-together-for-good", "passage": "ROM.8.28", "kind": "doctrine", "priority": 1 },
+      { "q": "What does there is now no condemnation mean?", "slug": "there-is-now-no-condemnation", "passage": "ROM.8.1", "kind": "doctrine", "priority": 1 },
+      { "q": "What is the golden chain of salvation in Romans 8:29-30?", "slug": "golden-chain-of-salvation-romans-8", "passage": "ROM.8.29-30", "kind": "doctrine", "priority": 1 },
+      { "q": "What does foreknew mean in Romans 8:29?", "slug": "what-does-foreknew-mean-romans-8-29", "passage": "ROM.8.29", "kind": "doctrine", "priority": 1 },
+      { "q": "How does the Spirit intercede with groanings too deep for words?", "slug": "the-spirit-intercedes-with-groanings", "passage": "ROM.8.26-27", "kind": "doctrine", "priority": 1 },
+      { "q": "What does nothing can separate us from the love of God mean?", "slug": "nothing-can-separate-us-from-the-love-of-god", "passage": "ROM.8.38-39", "kind": "doctrine", "priority": 1 },
+      { "q": "What does creation groans as in childbirth mean?", "slug": "creation-groans-as-in-childbirth", "passage": "ROM.8.22", "kind": "phrase", "priority": 1 },
+      { "q": "What does the revealing of the sons of God mean?", "slug": "the-revealing-of-the-sons-of-god", "passage": "ROM.8.19", "kind": "doctrine", "priority": 1 },
+      { "q": "What does if God is for us who can be against us mean?", "slug": "if-god-is-for-us-who-can-be-against-us", "passage": "ROM.8.31", "kind": "phrase", "priority": 1 },
+      { "q": "What does the Spirit of adoption crying Abba Father mean?", "slug": "the-spirit-of-adoption-abba-father", "passage": "ROM.8.15", "kind": "doctrine", "priority": 1 },
+      { "q": "What does setting the mind on the flesh versus the Spirit mean?", "slug": "mind-set-on-the-flesh-versus-the-spirit", "passage": "ROM.8.5-8", "kind": "practice", "priority": 1 },
+      { "q": "What are the firstfruits of the Spirit?", "slug": "firstfruits-of-the-spirit", "passage": "ROM.8.23", "kind": "phrase", "priority": 2 },
+      { "q": "What does if anyone does not have the Spirit of Christ he is not his mean?", "slug": "if-anyone-does-not-have-the-spirit-of-christ", "passage": "ROM.8.9", "kind": "doctrine", "priority": 1 },
+      { "q": "Does Romans 8:28 mean God causes everything that happens?", "slug": "does-romans-8-28-mean-god-causes-everything", "passage": "ROM.8.28", "kind": "doctrine", "priority": 1 },
+      { "q": "What does the whole creation will be set free from bondage to decay mean?", "slug": "creation-set-free-from-bondage-to-decay", "passage": "ROM.8.21", "kind": "doctrine", "priority": 2 }
+    ],
+    "9": [
+      { "q": "What does Jacob I loved but Esau I hated mean?", "slug": "jacob-i-loved-but-esau-i-hated", "passage": "ROM.9.13", "kind": "doctrine", "priority": 1 },
+      { "q": "What does God hardened Pharaoh's heart mean?", "slug": "god-hardened-pharaohs-heart", "passage": "ROM.9.17-18", "kind": "doctrine", "priority": 1 },
+      { "q": "What is the potter and the clay in Romans 9?", "slug": "the-potter-and-the-clay-romans-9", "passage": "ROM.9.20-21", "kind": "doctrine", "priority": 1 },
+      { "q": "What are vessels of wrath prepared for destruction?", "slug": "vessels-of-wrath-prepared-for-destruction", "passage": "ROM.9.22", "kind": "doctrine", "priority": 1 },
+      { "q": "Is God unjust to choose some people and not others?", "slug": "is-god-unjust-to-choose-some-people", "passage": "ROM.9.14-15", "kind": "doctrine", "priority": 1 },
+      { "q": "What does not all Israel is Israel mean?", "slug": "not-all-israel-is-israel", "passage": "ROM.9.6-8", "kind": "doctrine", "priority": 1 },
+      { "q": "Why did Paul wish he were cursed for the sake of Israel?", "slug": "paul-wished-he-were-cursed-for-israel", "passage": "ROM.9.3", "kind": "phrase", "priority": 1 },
+      { "q": "Is Romans 9 about individual election or national election?", "slug": "romans-9-individual-or-national-election", "passage": "ROM.9.10-13", "kind": "doctrine", "priority": 1 },
+      { "q": "What is the stumbling stone in Romans 9:32-33?", "slug": "the-stumbling-stone-romans-9", "passage": "ROM.9.32-33", "kind": "phrase", "priority": 2 },
+      { "q": "What does it depends not on human will but on God who has mercy mean?", "slug": "not-on-human-will-but-on-god-who-has-mercy", "passage": "ROM.9.16", "kind": "doctrine", "priority": 1 }
+    ],
+    "10": [
+      { "q": "What does confess with your mouth and believe in your heart mean?", "slug": "confess-with-your-mouth-believe-in-your-heart", "passage": "ROM.10.9-10", "kind": "doctrine", "priority": 1 },
+      { "q": "What does faith comes by hearing mean?", "slug": "faith-comes-by-hearing", "passage": "ROM.10.17", "kind": "doctrine", "priority": 1 },
+      { "q": "What does Christ is the end of the law mean?", "slug": "christ-is-the-end-of-the-law", "passage": "ROM.10.4", "kind": "doctrine", "priority": 1 },
+      { "q": "What does everyone who calls on the name of the Lord will be saved mean?", "slug": "everyone-who-calls-on-the-name-of-the-lord", "passage": "ROM.10.13", "kind": "doctrine", "priority": 1 },
+      { "q": "What does beautiful are the feet of those who preach good news mean?", "slug": "beautiful-are-the-feet-of-those-who-preach", "passage": "ROM.10.15", "kind": "phrase", "priority": 1 },
+      { "q": "What is a zeal for God that is not according to knowledge?", "slug": "zeal-for-god-without-knowledge", "passage": "ROM.10.2", "kind": "phrase", "priority": 1 },
+      { "q": "Does Romans 10:9 mean you must say the words out loud to be saved?", "slug": "must-you-say-the-words-out-loud-to-be-saved", "passage": "ROM.10.9", "kind": "practice", "priority": 1 },
+      { "q": "What does seeking to establish your own righteousness mean?", "slug": "establishing-your-own-righteousness", "passage": "ROM.10.3", "kind": "doctrine", "priority": 2 }
+    ],
+    "11": [
+      { "q": "What does all Israel will be saved mean?", "slug": "all-israel-will-be-saved", "passage": "ROM.11.26", "kind": "doctrine", "priority": 1 },
+      { "q": "What is the olive tree grafting in Romans 11?", "slug": "olive-tree-grafting-romans-11", "passage": "ROM.11.17-24", "kind": "doctrine", "priority": 1 },
+      { "q": "Can branches be broken off, meaning can you lose salvation?", "slug": "can-branches-be-broken-off-romans-11", "passage": "ROM.11.20-22", "kind": "doctrine", "priority": 1 },
+      { "q": "What does the gifts and calling of God are irrevocable mean?", "slug": "the-gifts-and-calling-of-god-are-irrevocable", "passage": "ROM.11.29", "kind": "doctrine", "priority": 1 },
+      { "q": "What is the remnant chosen by grace?", "slug": "the-remnant-chosen-by-grace", "passage": "ROM.11.5", "kind": "doctrine", "priority": 1 },
+      { "q": "What is the partial hardening of Israel until the Gentiles come in?", "slug": "partial-hardening-until-the-gentiles-come-in", "passage": "ROM.11.25", "kind": "doctrine", "priority": 1 },
+      { "q": "Has God rejected the Jewish people?", "slug": "has-god-rejected-the-jewish-people", "passage": "ROM.11.1-2", "kind": "doctrine", "priority": 1 },
+      { "q": "Does replacement theology fit Romans 11?", "slug": "does-replacement-theology-fit-romans-11", "passage": "ROM.11.17-24", "kind": "doctrine", "priority": 1 },
+      { "q": "What does how unsearchable are his judgments mean?", "slug": "how-unsearchable-are-his-judgments", "passage": "ROM.11.33-36", "kind": "phrase", "priority": 2 }
+    ],
+    "12": [
+      { "q": "What does present your bodies as a living sacrifice mean?", "slug": "present-your-bodies-as-a-living-sacrifice", "passage": "ROM.12.1", "kind": "practice", "priority": 1 },
+      { "q": "What does be transformed by the renewing of your mind mean?", "slug": "transformed-by-the-renewing-of-your-mind", "passage": "ROM.12.2", "kind": "practice", "priority": 1 },
+      { "q": "What does heap burning coals on his head mean?", "slug": "heap-burning-coals-on-his-head", "passage": "ROM.12.20", "kind": "phrase", "priority": 1 },
+      { "q": "What are the spiritual gifts listed in Romans 12?", "slug": "spiritual-gifts-in-romans-12", "passage": "ROM.12.6-8", "kind": "doctrine", "priority": 1 },
+      { "q": "What does do not be conformed to this world mean?", "slug": "do-not-be-conformed-to-this-world", "passage": "ROM.12.2", "kind": "practice", "priority": 1 },
+      { "q": "What does as far as it depends on you live peaceably mean?", "slug": "as-far-as-it-depends-on-you-live-peaceably", "passage": "ROM.12.18", "kind": "practice", "priority": 1 },
+      { "q": "What does vengeance is mine, I will repay mean?", "slug": "vengeance-is-mine-i-will-repay", "passage": "ROM.12.19", "kind": "doctrine", "priority": 1 },
+      { "q": "What does measure of faith mean in Romans 12:3?", "slug": "measure-of-faith-romans-12-3", "passage": "ROM.12.3", "kind": "phrase", "priority": 2 },
+      { "q": "What does let love be genuine mean?", "slug": "let-love-be-genuine", "passage": "ROM.12.9", "kind": "practice", "priority": 2 },
+      { "q": "What is your spiritual worship or reasonable service?", "slug": "your-spiritual-worship-reasonable-service", "passage": "ROM.12.1", "kind": "phrase", "priority": 2 }
+    ],
+    "13": [
+      { "q": "Does Romans 13 mean Christians must obey every government?", "slug": "must-christians-obey-every-government", "passage": "ROM.13.1-2", "kind": "ethics", "priority": 1 },
+      { "q": "Does Romans 13 apply to unjust governments like Nazi Germany?", "slug": "does-romans-13-apply-to-unjust-governments", "passage": "ROM.13.1-5", "kind": "ethics", "priority": 1 },
+      { "q": "When is civil disobedience allowed under Romans 13?", "slug": "when-is-civil-disobedience-allowed", "passage": "ROM.13.2", "kind": "ethics", "priority": 1 },
+      { "q": "What does the government does not bear the sword in vain mean?", "slug": "does-not-bear-the-sword-in-vain", "passage": "ROM.13.4", "kind": "ethics", "priority": 1 },
+      { "q": "Does Romans 13 require Christians to pay taxes?", "slug": "does-romans-13-require-paying-taxes", "passage": "ROM.13.6-7", "kind": "practice", "priority": 1 },
+      { "q": "What does love is the fulfilling of the law mean?", "slug": "love-is-the-fulfilling-of-the-law", "passage": "ROM.13.10", "kind": "doctrine", "priority": 1 },
+      { "q": "What does owe no one anything except to love mean about debt?", "slug": "owe-no-one-anything-except-to-love", "passage": "ROM.13.8", "kind": "practice", "priority": 1 },
+      { "q": "What does put on the Lord Jesus Christ mean?", "slug": "put-on-the-lord-jesus-christ", "passage": "ROM.13.14", "kind": "practice", "priority": 2 },
+      { "q": "What does salvation is nearer to us now than when we first believed mean?", "slug": "salvation-is-nearer-than-when-we-believed", "passage": "ROM.13.11", "kind": "phrase", "priority": 2 }
+    ],
+    "14": [
+      { "q": "Who are the weak and the strong in Romans 14?", "slug": "who-are-the-weak-and-the-strong", "passage": "ROM.14.1-2", "kind": "identity", "priority": 1 },
+      { "q": "Does Romans 14 mean Christians can eat anything?", "slug": "does-romans-14-mean-christians-can-eat-anything", "passage": "ROM.14.2-3", "kind": "practice", "priority": 1 },
+      { "q": "Does Romans 14:5 abolish the Sabbath?", "slug": "does-romans-14-5-abolish-the-sabbath", "passage": "ROM.14.5-6", "kind": "doctrine", "priority": 1 },
+      { "q": "What does do not destroy the one for whom Christ died mean?", "slug": "do-not-destroy-the-one-for-whom-christ-died", "passage": "ROM.14.15", "kind": "practice", "priority": 1 },
+      { "q": "What does whatever does not proceed from faith is sin mean?", "slug": "whatever-does-not-proceed-from-faith-is-sin", "passage": "ROM.14.23", "kind": "ethics", "priority": 1 },
+      { "q": "What does each be fully convinced in his own mind mean?", "slug": "fully-convinced-in-his-own-mind", "passage": "ROM.14.5", "kind": "practice", "priority": 1 },
+      { "q": "What are disputable matters and how do you tell them from clear commands?", "slug": "what-are-disputable-matters", "passage": "ROM.14.1", "kind": "practice", "priority": 1 },
+      { "q": "What does every knee will bow and every tongue confess mean here?", "slug": "every-knee-will-bow-romans-14", "passage": "ROM.14.11", "kind": "doctrine", "priority": 2 }
+    ],
+    "15": [
+      { "q": "What does bear with the failings of the weak mean?", "slug": "bear-with-the-failings-of-the-weak", "passage": "ROM.15.1", "kind": "practice", "priority": 1 },
+      { "q": "What does the God of hope fill you with all joy and peace mean?", "slug": "the-god-of-hope-fill-you-with-joy-and-peace", "passage": "ROM.15.13", "kind": "phrase", "priority": 1 },
+      { "q": "Why did Paul refuse to build on another man's foundation?", "slug": "not-building-on-another-mans-foundation", "passage": "ROM.15.20", "kind": "practice", "priority": 1 },
+      { "q": "Why was Paul collecting money for the church in Jerusalem?", "slug": "pauls-collection-for-jerusalem", "passage": "ROM.15.25-27", "kind": "history", "priority": 2 },
+      { "q": "Did Paul ever make it to Spain?", "slug": "did-paul-ever-make-it-to-spain", "passage": "ROM.15.24", "kind": "history", "priority": 2 },
+      { "q": "What does whatever was written in former days was written for our instruction mean?", "slug": "written-in-former-days-for-our-instruction", "passage": "ROM.15.4", "kind": "doctrine", "priority": 2 }
+    ],
+    "16": [
+      { "q": "Was Phoebe a deacon?", "slug": "was-phoebe-a-deacon", "passage": "ROM.16.1-2", "kind": "doctrine", "priority": 1 },
+      { "q": "Was Junia a female apostle?", "slug": "was-junia-a-female-apostle", "passage": "ROM.16.7", "kind": "doctrine", "priority": 1 },
+      { "q": "What does greet one another with a holy kiss mean, and should we?", "slug": "greet-one-another-with-a-holy-kiss", "passage": "ROM.16.16", "kind": "practice", "priority": 1 },
+      { "q": "What does the God of peace will soon crush Satan under your feet mean?", "slug": "crush-satan-under-your-feet", "passage": "ROM.16.20", "kind": "phrase", "priority": 1 },
+      { "q": "How many women does Paul name in Romans 16 and why does it matter?", "slug": "women-named-in-romans-16", "passage": "ROM.16.1-15", "kind": "history", "priority": 1 },
+      { "q": "Who was Tertius and what does it mean that he wrote this letter?", "slug": "who-was-tertius", "passage": "ROM.16.22", "kind": "identity", "priority": 2 },
+      { "q": "What does be wise as to what is good and innocent as to what is evil mean?", "slug": "wise-to-good-innocent-to-evil", "passage": "ROM.16.19", "kind": "practice", "priority": 2 },
+      { "q": "Who were the people causing divisions Paul warns about?", "slug": "those-causing-divisions-romans-16", "passage": "ROM.16.17-18", "kind": "identity", "priority": 2 }
+    ]
+  }
+}

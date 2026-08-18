@@ -1,0 +1,121 @@
+{
+  "book": "HEB",
+  "name": "Hebrews",
+  "chapters": {
+    "1": [
+      { "q": "What does the radiance of God's glory and the exact imprint of his nature mean?", "slug": "the-radiance-of-gods-glory", "passage": "HEB.1.3", "kind": "doctrine", "priority": 1 },
+      { "q": "What does to which of the angels did God ever say you are my Son mean?", "slug": "to-which-of-the-angels-did-he-ever-say", "passage": "HEB.1.5", "kind": "doctrine", "priority": 1 },
+      { "q": "What does angels are ministering spirits sent to serve mean?", "slug": "angels-are-ministering-spirits", "passage": "HEB.1.14", "kind": "doctrine", "priority": 1 },
+      { "q": "Why does Hebrews 1:8 call the Son God?", "slug": "hebrews-1-8-calls-the-son-god", "passage": "HEB.1.8", "kind": "doctrine", "priority": 1 },
+      { "q": "What does God spoke in these last days by his Son mean?", "slug": "god-spoke-by-his-son", "passage": "HEB.1.1-2", "kind": "doctrine", "priority": 1 },
+      { "q": "Who wrote the book of Hebrews?", "slug": "who-wrote-the-book-of-hebrews", "passage": "HEB.1.1", "kind": "history", "priority": 1 }
+    ],
+    "2": [
+      { "q": "What does how shall we escape if we neglect such a great salvation mean?", "slug": "how-shall-we-escape-if-we-neglect", "passage": "HEB.2.3", "kind": "doctrine", "priority": 1 },
+      { "q": "What does made lower than the angels for a little while mean?", "slug": "made-lower-than-the-angels-for-a-little-while", "passage": "HEB.2.9", "kind": "doctrine", "priority": 1 },
+      { "q": "How was Jesus made perfect through suffering if he was sinless?", "slug": "made-perfect-through-suffering", "passage": "HEB.2.10", "kind": "tension", "priority": 1 },
+      { "q": "What does he had to be made like his brothers in every respect mean?", "slug": "made-like-his-brothers-in-every-respect", "passage": "HEB.2.17", "kind": "doctrine", "priority": 1 },
+      { "q": "How did Jesus destroy the one who has the power of death?", "slug": "destroy-the-one-who-has-the-power-of-death", "passage": "HEB.2.14", "kind": "doctrine", "priority": 1 },
+      { "q": "Why does Hebrews say Jesus did not come to help angels?", "slug": "he-does-not-help-angels", "passage": "HEB.2.16", "kind": "doctrine", "priority": 2 }
+    ],
+    "3": [
+      { "q": "What does Moses was faithful as a servant but Christ as a Son mean?", "slug": "moses-a-servant-christ-a-son", "passage": "HEB.3.5-6", "kind": "doctrine", "priority": 1 },
+      { "q": "Does Hebrews 3:6 mean you keep salvation only if you hold fast?", "slug": "if-we-hold-fast-our-confidence", "passage": "HEB.3.6", "kind": "doctrine", "priority": 1 },
+      { "q": "What does today, if you hear his voice, do not harden your hearts mean?", "slug": "today-if-you-hear-his-voice", "passage": "HEB.3.15", "kind": "practice", "priority": 1 },
+      { "q": "What does exhort one another every day mean?", "slug": "exhort-one-another-every-day", "passage": "HEB.3.13", "kind": "practice", "priority": 2 }
+    ],
+    "4": [
+      { "q": "What does the word of God is living and active, sharper than a two-edged sword mean?", "slug": "the-word-of-god-is-living-and-active", "passage": "HEB.4.12", "kind": "doctrine", "priority": 1 },
+      { "q": "What does dividing soul and spirit, joints and marrow mean?", "slug": "dividing-soul-and-spirit-joints-and-marrow", "passage": "HEB.4.12", "kind": "doctrine", "priority": 1 },
+      { "q": "What is the Sabbath rest that remains for the people of God?", "slug": "the-sabbath-rest-that-remains", "passage": "HEB.4.9", "kind": "doctrine", "priority": 1 },
+      { "q": "What does let us draw near to the throne of grace with confidence mean?", "slug": "draw-near-to-the-throne-of-grace", "passage": "HEB.4.16", "kind": "practice", "priority": 1 },
+      { "q": "How was Jesus tempted in every way yet without sin?", "slug": "tempted-in-every-way-yet-without-sin", "passage": "HEB.4.15", "kind": "doctrine", "priority": 1 },
+      { "q": "Does Hebrews 4 mean Christians must keep the Sabbath?", "slug": "does-hebrews-4-require-sabbath-keeping", "passage": "HEB.4.9-11", "kind": "practice", "priority": 1 }
+    ],
+    "5": [
+      { "q": "How did Jesus learn obedience through what he suffered?", "slug": "he-learned-obedience-through-suffering", "passage": "HEB.5.8", "kind": "tension", "priority": 1 },
+      { "q": "When did Jesus offer up prayers with loud cries and tears?", "slug": "prayers-with-loud-cries-and-tears", "passage": "HEB.5.7", "kind": "phrase", "priority": 1 },
+      { "q": "What does you need milk, not solid food mean in Hebrews 5?", "slug": "you-need-milk-not-solid-food", "passage": "HEB.5.12-14", "kind": "practice", "priority": 1 },
+      { "q": "Why is Jesus called a priest in the order of Melchizedek?", "slug": "a-priest-in-the-order-of-melchizedek", "passage": "HEB.5.6", "kind": "doctrine", "priority": 1 },
+      { "q": "What does having your senses trained to discern good and evil mean?", "slug": "senses-trained-to-discern-good-and-evil", "passage": "HEB.5.14", "kind": "practice", "priority": 1 }
+    ],
+    "6": [
+      { "q": "Does Hebrews 6:4-6 mean you can lose your salvation?", "slug": "does-hebrews-6-mean-you-can-lose-salvation", "passage": "HEB.6.4-6", "kind": "doctrine", "priority": 1 },
+      { "q": "Who are those who have been enlightened and then fall away?", "slug": "those-enlightened-who-then-fall-away", "passage": "HEB.6.4-6", "kind": "identity", "priority": 1 },
+      { "q": "What does it is impossible to restore them again to repentance mean?", "slug": "impossible-to-restore-them-to-repentance", "passage": "HEB.6.6", "kind": "doctrine", "priority": 1 },
+      { "q": "What are the elementary doctrines listed in Hebrews 6:1-2?", "slug": "the-elementary-doctrines-hebrews-6", "passage": "HEB.6.1-2", "kind": "doctrine", "priority": 1 },
+      { "q": "What is the anchor for the soul in Hebrews 6:19?", "slug": "an-anchor-for-the-soul", "passage": "HEB.6.19", "kind": "phrase", "priority": 1 },
+      { "q": "Why did God swear an oath by himself?", "slug": "god-swore-by-himself", "passage": "HEB.6.13", "kind": "doctrine", "priority": 1 },
+      { "q": "What is the inner place behind the curtain Jesus entered?", "slug": "the-inner-place-behind-the-curtain", "passage": "HEB.6.19-20", "kind": "phrase", "priority": 2 }
+    ],
+    "7": [
+      { "q": "Why does Hebrews say Melchizedek had no father or mother?", "slug": "melchizedek-without-father-or-mother", "passage": "HEB.7.3", "kind": "doctrine", "priority": 1 },
+      { "q": "What does he always lives to make intercession for them mean?", "slug": "he-always-lives-to-make-intercession", "passage": "HEB.7.25", "kind": "doctrine", "priority": 1 },
+      { "q": "Why does a change of priesthood require a change of law?", "slug": "a-change-of-priesthood-requires-a-change-of-law", "passage": "HEB.7.12", "kind": "doctrine", "priority": 1 },
+      { "q": "What does he is able to save to the uttermost mean?", "slug": "able-to-save-to-the-uttermost", "passage": "HEB.7.25", "kind": "doctrine", "priority": 1 },
+      { "q": "How was Levi's priesthood inferior if Abraham tithed to Melchizedek?", "slug": "levi-tithed-through-abraham", "passage": "HEB.7.9-10", "kind": "doctrine", "priority": 1 },
+      { "q": "Why is Jesus' priesthood permanent and not passed on?", "slug": "jesus-priesthood-is-permanent", "passage": "HEB.7.23-24", "kind": "doctrine", "priority": 2 }
+    ],
+    "8": [
+      { "q": "What does the new covenant makes the first one obsolete mean?", "slug": "the-new-covenant-makes-the-first-obsolete", "passage": "HEB.8.13", "kind": "doctrine", "priority": 1 },
+      { "q": "What does I will remember their sins no more mean?", "slug": "i-will-remember-their-sins-no-more", "passage": "HEB.8.12", "kind": "doctrine", "priority": 1 },
+      { "q": "What does a copy and shadow of the heavenly things mean?", "slug": "a-copy-and-shadow-of-heavenly-things", "passage": "HEB.8.5", "kind": "doctrine", "priority": 1 },
+      { "q": "Has the old covenant fully disappeared or is it fading?", "slug": "has-the-old-covenant-disappeared", "passage": "HEB.8.13", "kind": "doctrine", "priority": 1 }
+    ],
+    "9": [
+      { "q": "What does without the shedding of blood there is no forgiveness mean?", "slug": "without-the-shedding-of-blood", "passage": "HEB.9.22", "kind": "doctrine", "priority": 1 },
+      { "q": "What does it is appointed for man to die once, then judgment mean?", "slug": "appointed-for-man-to-die-once-then-judgment", "passage": "HEB.9.27", "kind": "doctrine", "priority": 1 },
+      { "q": "Does Hebrews 9:27 rule out reincarnation and purgatory?", "slug": "does-hebrews-9-27-rule-out-reincarnation", "passage": "HEB.9.27", "kind": "doctrine", "priority": 1 },
+      { "q": "What was inside the ark of the covenant according to Hebrews 9:4?", "slug": "what-was-inside-the-ark-of-the-covenant", "passage": "HEB.9.4", "kind": "tension", "priority": 1 },
+      { "q": "What does he entered once for all into the holy places mean?", "slug": "he-entered-once-for-all", "passage": "HEB.9.12", "kind": "doctrine", "priority": 1 },
+      { "q": "Why does a will only take effect after the death of the one who made it?", "slug": "a-will-takes-effect-after-death", "passage": "HEB.9.16-17", "kind": "doctrine", "priority": 1 },
+      { "q": "Why could the blood of goats and bulls not take away sin?", "slug": "the-blood-of-goats-and-bulls", "passage": "HEB.9.13-14", "kind": "doctrine", "priority": 1 }
+    ],
+    "10": [
+      { "q": "What does do not neglect meeting together mean?", "slug": "do-not-neglect-meeting-together", "passage": "HEB.10.25", "kind": "practice", "priority": 1 },
+      { "q": "Does Hebrews 10:26 mean deliberate sin removes forgiveness?", "slug": "if-we-deliberately-keep-on-sinning", "passage": "HEB.10.26-27", "kind": "doctrine", "priority": 1 },
+      { "q": "What does it is a fearful thing to fall into the hands of the living God mean?", "slug": "a-fearful-thing-to-fall-into-the-hands-of-god", "passage": "HEB.10.31", "kind": "doctrine", "priority": 1 },
+      { "q": "What does we have been sanctified once for all mean?", "slug": "sanctified-once-for-all", "passage": "HEB.10.10", "kind": "doctrine", "priority": 1 },
+      { "q": "What does trampling underfoot the Son of God mean?", "slug": "trampling-underfoot-the-son-of-god", "passage": "HEB.10.29", "kind": "doctrine", "priority": 1 },
+      { "q": "What does stir up one another to love and good works mean?", "slug": "stir-up-one-another-to-love-and-good-works", "passage": "HEB.10.24", "kind": "practice", "priority": 1 },
+      { "q": "What is the new and living way opened through the curtain?", "slug": "the-new-and-living-way-through-the-curtain", "passage": "HEB.10.19-20", "kind": "doctrine", "priority": 1 },
+      { "q": "Why can sacrifices never take away sins?", "slug": "sacrifices-can-never-take-away-sins", "passage": "HEB.10.4", "kind": "doctrine", "priority": 1 }
+    ],
+    "11": [
+      { "q": "What does faith is the substance of things hoped for mean?", "slug": "faith-is-the-substance-of-things-hoped-for", "passage": "HEB.11.1", "kind": "doctrine", "priority": 1 },
+      { "q": "What does without faith it is impossible to please God mean?", "slug": "without-faith-it-is-impossible-to-please-god", "passage": "HEB.11.6", "kind": "doctrine", "priority": 1 },
+      { "q": "Who is in the Hebrews 11 hall of faith?", "slug": "the-hebrews-11-hall-of-faith", "passage": "HEB.11.4-32", "kind": "identity", "priority": 1 },
+      { "q": "Why is Rahab a prostitute listed as a hero of faith?", "slug": "why-rahab-is-a-hero-of-faith", "passage": "HEB.11.31", "kind": "ethics", "priority": 1 },
+      { "q": "Who was sawn in two in Hebrews 11:37?", "slug": "who-was-sawn-in-two", "passage": "HEB.11.37", "kind": "history", "priority": 1 },
+      { "q": "What does the world was not worthy of them mean?", "slug": "the-world-was-not-worthy-of-them", "passage": "HEB.11.38", "kind": "phrase", "priority": 1 },
+      { "q": "What is the better country they were seeking?", "slug": "a-better-country-they-were-seeking", "passage": "HEB.11.16", "kind": "doctrine", "priority": 1 },
+      { "q": "How did Abraham reason that God could raise Isaac from the dead?", "slug": "abraham-reasoned-god-could-raise-isaac", "passage": "HEB.11.19", "kind": "doctrine", "priority": 1 },
+      { "q": "Why does Hebrews 11:35 say some were delivered and others were tortured?", "slug": "some-delivered-and-others-tortured", "passage": "HEB.11.35", "kind": "doctrine", "priority": 1 },
+      { "q": "Why does Hebrews say Moses chose mistreatment over Egypt's treasures?", "slug": "moses-chose-mistreatment-over-egypts-treasures", "passage": "HEB.11.24-26", "kind": "practice", "priority": 1 }
+    ],
+    "12": [
+      { "q": "Who is the great cloud of witnesses?", "slug": "the-great-cloud-of-witnesses", "passage": "HEB.12.1", "kind": "identity", "priority": 1 },
+      { "q": "What does the Lord disciplines those he loves mean?", "slug": "the-lord-disciplines-those-he-loves", "passage": "HEB.12.6", "kind": "doctrine", "priority": 1 },
+      { "q": "What does lay aside every weight and the sin that clings mean?", "slug": "lay-aside-every-weight", "passage": "HEB.12.1", "kind": "practice", "priority": 1 },
+      { "q": "What does our God is a consuming fire mean?", "slug": "our-god-is-a-consuming-fire", "passage": "HEB.12.29", "kind": "doctrine", "priority": 1 },
+      { "q": "What does Esau found no chance to repent though he sought it with tears mean?", "slug": "esau-found-no-chance-to-repent", "passage": "HEB.12.17", "kind": "doctrine", "priority": 1 },
+      { "q": "What does looking to Jesus, the founder and perfecter of our faith mean?", "slug": "looking-to-jesus-the-founder-and-perfecter", "passage": "HEB.12.2", "kind": "practice", "priority": 1 },
+      { "q": "What is the joy set before Jesus that made him endure the cross?", "slug": "the-joy-set-before-him", "passage": "HEB.12.2", "kind": "doctrine", "priority": 1 },
+      { "q": "What does without holiness no one will see the Lord mean?", "slug": "without-holiness-no-one-will-see-the-lord", "passage": "HEB.12.14", "kind": "doctrine", "priority": 1 },
+      { "q": "Who are the spirits of the righteous made perfect?", "slug": "the-spirits-of-the-righteous-made-perfect", "passage": "HEB.12.23", "kind": "identity", "priority": 1 },
+      { "q": "What is the difference between Mount Sinai and Mount Zion in Hebrews 12?", "slug": "mount-sinai-versus-mount-zion", "passage": "HEB.12.18-22", "kind": "doctrine", "priority": 1 },
+      { "q": "What does a root of bitterness mean?", "slug": "a-root-of-bitterness", "passage": "HEB.12.15", "kind": "phrase", "priority": 1 }
+    ],
+    "13": [
+      { "q": "What does some have entertained angels without knowing it mean?", "slug": "entertained-angels-without-knowing-it", "passage": "HEB.13.2", "kind": "phrase", "priority": 1 },
+      { "q": "What does Jesus Christ is the same yesterday, today, and forever mean?", "slug": "jesus-christ-the-same-yesterday-today-and-forever", "passage": "HEB.13.8", "kind": "doctrine", "priority": 1 },
+      { "q": "What does I will never leave you nor forsake you mean?", "slug": "i-will-never-leave-you-nor-forsake-you", "passage": "HEB.13.5", "kind": "doctrine", "priority": 1 },
+      { "q": "What does let marriage be held in honor among all mean?", "slug": "let-marriage-be-held-in-honor", "passage": "HEB.13.4", "kind": "practice", "priority": 1 },
+      { "q": "What does going to him outside the camp mean?", "slug": "outside-the-camp", "passage": "HEB.13.13", "kind": "phrase", "priority": 1 },
+      { "q": "What does obey your leaders, for they keep watch over your souls mean?", "slug": "obey-your-leaders-who-keep-watch-over-your-souls", "passage": "HEB.13.17", "kind": "practice", "priority": 1 },
+      { "q": "What does here we have no lasting city mean?", "slug": "here-we-have-no-lasting-city", "passage": "HEB.13.14", "kind": "doctrine", "priority": 1 },
+      { "q": "What is the sacrifice of praise in Hebrews 13:15?", "slug": "the-sacrifice-of-praise", "passage": "HEB.13.15", "kind": "practice", "priority": 1 },
+      { "q": "What does keep your life free from love of money mean?", "slug": "keep-your-life-free-from-love-of-money", "passage": "HEB.13.5", "kind": "practice", "priority": 2 }
+    ]
+  }
+}

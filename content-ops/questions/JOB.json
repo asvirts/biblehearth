@@ -1,0 +1,202 @@
+{
+  "book": "JOB",
+  "name": "Job",
+  "chapters": {
+    "1": [
+      { "q": "Why did God let Satan test Job?", "slug": "why-god-let-satan-test-job", "passage": "JOB.1.12", "kind": "doctrine", "priority": 1 },
+      { "q": "Who is the Satan in Job 1, and is it the devil?", "slug": "who-is-the-satan-in-job-1", "passage": "JOB.1.6-7", "kind": "identity", "priority": 1 },
+      { "q": "What does does Job fear God for nothing mean?", "slug": "does-job-fear-god-for-nothing", "passage": "JOB.1.9", "kind": "doctrine", "priority": 1 },
+      { "q": "What does the LORD gave and the LORD has taken away mean?", "slug": "the-lord-gave-and-the-lord-has-taken-away", "passage": "JOB.1.21", "kind": "doctrine", "priority": 1 },
+      { "q": "What is the heavenly council where the sons of God present themselves?", "slug": "the-heavenly-council-in-job-1", "passage": "JOB.1.6", "kind": "doctrine", "priority": 1 },
+      { "q": "Was it fair for Job's children to die as part of his test?", "slug": "was-it-fair-for-jobs-children-to-die", "passage": "JOB.1.18-19", "kind": "ethics", "priority": 1 },
+      { "q": "Why did Job offer sacrifices for his children's possible sins?", "slug": "job-sacrificed-for-his-childrens-sins", "passage": "JOB.1.5", "kind": "practice", "priority": 2 }
+    ],
+    "2": [
+      { "q": "Why did Job's wife tell him to curse God and die?", "slug": "curse-god-and-die", "passage": "JOB.2.9", "kind": "ethics", "priority": 1 },
+      { "q": "What does skin for skin mean in Job 2:4?", "slug": "skin-for-skin", "passage": "JOB.2.4", "kind": "phrase", "priority": 1 },
+      { "q": "What disease did Job have?", "slug": "what-disease-did-job-have", "passage": "JOB.2.7", "kind": "history", "priority": 1 },
+      { "q": "Why did Job's friends sit in silence for seven days?", "slug": "seven-days-of-silence", "passage": "JOB.2.13", "kind": "practice", "priority": 1 },
+      { "q": "Who were Eliphaz, Bildad, and Zophar?", "slug": "who-were-eliphaz-bildad-and-zophar", "passage": "JOB.2.11", "kind": "identity", "priority": 1 }
+    ],
+    "3": [
+      { "q": "Why did Job curse the day he was born?", "slug": "why-job-cursed-the-day-he-was-born", "passage": "JOB.3.1-3", "kind": "practice", "priority": 1 },
+      { "q": "Is Job 3 an expression of suicidal thoughts?", "slug": "is-job-3-about-suicidal-thoughts", "passage": "JOB.3.11-22", "kind": "practice", "priority": 1 },
+      { "q": "What does why did I not perish at birth mean?", "slug": "why-did-i-not-perish-at-birth", "passage": "JOB.3.11", "kind": "phrase", "priority": 1 }
+    ],
+    "4": [
+      { "q": "What was the spirit that passed before Eliphaz's face?", "slug": "the-spirit-that-passed-before-eliphaz", "passage": "JOB.4.15-16", "kind": "identity", "priority": 1 },
+      { "q": "Was Eliphaz's vision from God or from a deceiving spirit?", "slug": "was-eliphaz-vision-from-god", "passage": "JOB.4.12-21", "kind": "doctrine", "priority": 1 },
+      { "q": "What does can a mortal be more righteous than God mean?", "slug": "can-a-mortal-be-more-righteous-than-god", "passage": "JOB.4.17", "kind": "doctrine", "priority": 1 }
+    ],
+    "5": [
+      { "q": "What does man is born to trouble as sparks fly upward mean?", "slug": "born-to-trouble-as-sparks-fly-upward", "passage": "JOB.5.7", "kind": "phrase", "priority": 1 },
+      { "q": "Why does Paul quote Job 5:13 about catching the wise in their craftiness?", "slug": "he-catches-the-wise-in-their-craftiness", "passage": "JOB.5.13", "kind": "doctrine", "priority": 1 },
+      { "q": "What does whom the LORD loves he corrects mean in Job 5:17?", "slug": "whom-the-lord-corrects-job-5", "passage": "JOB.5.17", "kind": "doctrine", "priority": 2 }
+    ],
+    "6": [
+      { "q": "What does my words have been rash mean about Job's complaints?", "slug": "my-words-have-been-rash", "passage": "JOB.6.3", "kind": "practice", "priority": 1 },
+      { "q": "What does a despairing man should have the devotion of his friends mean?", "slug": "a-despairing-man-should-have-devotion", "passage": "JOB.6.14", "kind": "practice", "priority": 1 }
+    ],
+    "7": [
+      { "q": "Why does Job say what is man that you make so much of him?", "slug": "what-is-man-that-you-make-so-much-of-him", "passage": "JOB.7.17", "kind": "tension", "priority": 1 },
+      { "q": "What does my days are swifter than a weaver's shuttle mean?", "slug": "swifter-than-a-weavers-shuttle", "passage": "JOB.7.6", "kind": "phrase", "priority": 1 },
+      { "q": "What does I would choose strangling rather than this life mean?", "slug": "i-would-choose-strangling", "passage": "JOB.7.15", "kind": "practice", "priority": 1 }
+    ],
+    "8": [
+      { "q": "What is Bildad's argument that suffering proves sin?", "slug": "bildads-argument-that-suffering-proves-sin", "passage": "JOB.8.3-6", "kind": "doctrine", "priority": 1 },
+      { "q": "What does can papyrus grow where there is no water mean?", "slug": "can-papyrus-grow-without-water", "passage": "JOB.8.11", "kind": "phrase", "priority": 2 }
+    ],
+    "9": [
+      { "q": "What does he destroys both the blameless and the wicked mean?", "slug": "he-destroys-both-the-blameless-and-the-wicked", "passage": "JOB.9.22", "kind": "doctrine", "priority": 1 },
+      { "q": "Why does Job wish for an arbiter between himself and God?", "slug": "an-arbiter-between-me-and-god", "passage": "JOB.9.33", "kind": "doctrine", "priority": 1 },
+      { "q": "What does he treads on the waves of the sea mean?", "slug": "he-treads-on-the-waves-of-the-sea", "passage": "JOB.9.8", "kind": "phrase", "priority": 1 },
+      { "q": "What are the Pleiades, Orion, and the Bear in Job 9:9?", "slug": "pleiades-orion-and-the-bear-job-9", "passage": "JOB.9.9", "kind": "history", "priority": 1 }
+    ],
+    "10": [
+      { "q": "What does you knit me together with bone and sinew mean?", "slug": "you-knit-me-together-with-bone-and-sinew", "passage": "JOB.10.11", "kind": "phrase", "priority": 2 },
+      { "q": "Is it wrong to ask God why like Job does?", "slug": "is-it-wrong-to-ask-god-why", "passage": "JOB.10.2-3", "kind": "practice", "priority": 1 }
+    ],
+    "11": [
+      { "q": "What does can you fathom the mysteries of God mean?", "slug": "can-you-fathom-the-mysteries-of-god", "passage": "JOB.11.7", "kind": "doctrine", "priority": 1 }
+    ],
+    "12": [
+      { "q": "What does ask the animals and they will teach you mean?", "slug": "ask-the-animals-and-they-will-teach-you", "passage": "JOB.12.7-8", "kind": "phrase", "priority": 1 },
+      { "q": "What does with God are wisdom and might mean?", "slug": "with-god-are-wisdom-and-might", "passage": "JOB.12.13", "kind": "doctrine", "priority": 2 }
+    ],
+    "13": [
+      { "q": "Does Job 13:15 say though he slay me yet will I trust him, or I have no hope?", "slug": "though-he-slay-me-yet-will-i-trust-him", "passage": "JOB.13.15", "kind": "history", "priority": 1 },
+      { "q": "What does you are worthless physicians mean?", "slug": "you-are-worthless-physicians", "passage": "JOB.13.4", "kind": "phrase", "priority": 1 },
+      { "q": "Why does Job accuse his friends of lying for God?", "slug": "will-you-lie-for-god", "passage": "JOB.13.7-8", "kind": "ethics", "priority": 1 }
+    ],
+    "14": [
+      { "q": "What does if a man dies, will he live again mean?", "slug": "if-a-man-dies-will-he-live-again", "passage": "JOB.14.14", "kind": "doctrine", "priority": 1 },
+      { "q": "What does there is hope for a tree mean in Job 14?", "slug": "there-is-hope-for-a-tree", "passage": "JOB.14.7-9", "kind": "phrase", "priority": 1 },
+      { "q": "What does man born of woman is of few days and full of trouble mean?", "slug": "of-few-days-and-full-of-trouble", "passage": "JOB.14.1", "kind": "phrase", "priority": 1 }
+    ],
+    "15": [
+      { "q": "Why does Eliphaz say even the heavens are not pure in God's sight?", "slug": "even-the-heavens-are-not-pure", "passage": "JOB.15.15", "kind": "doctrine", "priority": 1 }
+    ],
+    "16": [
+      { "q": "What does miserable comforters are you all mean?", "slug": "miserable-comforters-are-you-all", "passage": "JOB.16.2", "kind": "phrase", "priority": 1 },
+      { "q": "Who is Job's witness in heaven and his advocate on high?", "slug": "my-witness-is-in-heaven", "passage": "JOB.16.19", "kind": "identity", "priority": 1 }
+    ],
+    "17": [
+      { "q": "What does the grave is ready for me mean?", "slug": "the-grave-is-ready-for-me", "passage": "JOB.17.1", "kind": "phrase", "priority": 2 }
+    ],
+    "18": [
+      { "q": "What does the lamp of the wicked is snuffed out mean?", "slug": "the-lamp-of-the-wicked-is-snuffed-out", "passage": "JOB.18.5-6", "kind": "phrase", "priority": 2 },
+      { "q": "What is the king of terrors in Job 18:14?", "slug": "the-king-of-terrors", "passage": "JOB.18.14", "kind": "identity", "priority": 1 }
+    ],
+    "19": [
+      { "q": "What does I know that my Redeemer lives mean?", "slug": "i-know-that-my-redeemer-lives", "passage": "JOB.19.25", "kind": "doctrine", "priority": 1 },
+      { "q": "Does Job 19:26 predict bodily resurrection?", "slug": "in-my-flesh-i-shall-see-god", "passage": "JOB.19.26", "kind": "doctrine", "priority": 1 },
+      { "q": "What does I have escaped by the skin of my teeth mean?", "slug": "by-the-skin-of-my-teeth", "passage": "JOB.19.20", "kind": "phrase", "priority": 1 },
+      { "q": "What does engraved with an iron pen on rock forever mean?", "slug": "engraved-with-an-iron-pen-on-rock", "passage": "JOB.19.23-24", "kind": "phrase", "priority": 1 },
+      { "q": "Who is the Redeemer or goel Job speaks of?", "slug": "who-is-jobs-redeemer", "passage": "JOB.19.25", "kind": "identity", "priority": 1 }
+    ],
+    "20": [
+      { "q": "What does the joy of the godless is brief mean?", "slug": "the-joy-of-the-godless-is-brief", "passage": "JOB.20.5", "kind": "phrase", "priority": 2 }
+    ],
+    "21": [
+      { "q": "Why does Job say the wicked live long and prosper?", "slug": "why-do-the-wicked-live-on-and-prosper", "passage": "JOB.21.7-13", "kind": "doctrine", "priority": 1 },
+      { "q": "What does they say to God, leave us alone mean?", "slug": "they-say-to-god-leave-us-alone", "passage": "JOB.21.14-15", "kind": "phrase", "priority": 1 }
+    ],
+    "22": [
+      { "q": "Why does Eliphaz accuse Job of specific sins he did not commit?", "slug": "eliphaz-accuses-job-of-specific-sins", "passage": "JOB.22.5-9", "kind": "ethics", "priority": 1 },
+      { "q": "What does can a man be of benefit to God mean?", "slug": "can-a-man-be-of-benefit-to-god", "passage": "JOB.22.2-3", "kind": "doctrine", "priority": 1 }
+    ],
+    "23": [
+      { "q": "What does he knows the way that I take mean?", "slug": "he-knows-the-way-that-i-take", "passage": "JOB.23.10", "kind": "doctrine", "priority": 1 },
+      { "q": "What does if only I knew where to find him mean?", "slug": "if-only-i-knew-where-to-find-him", "passage": "JOB.23.3", "kind": "practice", "priority": 1 },
+      { "q": "What does I shall come forth as gold mean?", "slug": "i-shall-come-forth-as-gold", "passage": "JOB.23.10", "kind": "doctrine", "priority": 1 }
+    ],
+    "24": [
+      { "q": "Why does God seem to ignore injustice in Job 24?", "slug": "why-god-seems-to-ignore-injustice-job-24", "passage": "JOB.24.1-12", "kind": "doctrine", "priority": 1 }
+    ],
+    "25": [
+      { "q": "Why is Bildad's third speech only six verses long?", "slug": "why-bildads-third-speech-is-so-short", "passage": "JOB.25.1-6", "kind": "history", "priority": 2 },
+      { "q": "What does how can a man be righteous before God mean in Job 25?", "slug": "how-can-a-man-be-righteous-before-god-job-25", "passage": "JOB.25.4", "kind": "doctrine", "priority": 1 }
+    ],
+    "26": [
+      { "q": "Does Job 26:7 say the earth hangs on nothing?", "slug": "he-hangs-the-earth-on-nothing", "passage": "JOB.26.7", "kind": "claim", "priority": 1 },
+      { "q": "Does Job 26 show scientific knowledge ahead of its time?", "slug": "does-job-26-show-advanced-science", "passage": "JOB.26.7-10", "kind": "claim", "priority": 1 },
+      { "q": "Who is Rahab that God cut to pieces in Job 26:12?", "slug": "who-is-rahab-in-job-26", "passage": "JOB.26.12", "kind": "identity", "priority": 1 }
+    ],
+    "27": [
+      { "q": "What does as long as I have life, my lips will not speak falsehood mean?", "slug": "my-lips-will-not-speak-falsehood", "passage": "JOB.27.3-4", "kind": "practice", "priority": 2 }
+    ],
+    "28": [
+      { "q": "Where can wisdom be found according to Job 28?", "slug": "where-can-wisdom-be-found", "passage": "JOB.28.12-28", "kind": "doctrine", "priority": 1 },
+      { "q": "What does the fear of the Lord, that is wisdom mean in Job 28:28?", "slug": "the-fear-of-the-lord-that-is-wisdom-job-28", "passage": "JOB.28.28", "kind": "doctrine", "priority": 1 },
+      { "q": "What does the mining imagery in Job 28 describe?", "slug": "the-mining-imagery-in-job-28", "passage": "JOB.28.1-11", "kind": "history", "priority": 1 }
+    ],
+    "29": [
+      { "q": "What does I was eyes to the blind and feet to the lame mean?", "slug": "i-was-eyes-to-the-blind-and-feet-to-the-lame", "passage": "JOB.29.15", "kind": "practice", "priority": 1 }
+    ],
+    "30": [
+      { "q": "What does I cry to you but you do not answer mean?", "slug": "i-cry-to-you-but-you-do-not-answer", "passage": "JOB.30.20", "kind": "practice", "priority": 1 },
+      { "q": "What does my harp is tuned to mourning mean?", "slug": "my-harp-is-tuned-to-mourning", "passage": "JOB.30.31", "kind": "phrase", "priority": 2 }
+    ],
+    "31": [
+      { "q": "What does I made a covenant with my eyes mean?", "slug": "i-made-a-covenant-with-my-eyes", "passage": "JOB.31.1", "kind": "practice", "priority": 1 },
+      { "q": "How can a covenant with your eyes help with lust today?", "slug": "how-a-covenant-with-your-eyes-works", "passage": "JOB.31.1", "kind": "practice", "priority": 1 },
+      { "q": "How did Job treat his servants as equals before God?", "slug": "job-treated-his-servants-as-equals", "passage": "JOB.31.13-15", "kind": "ethics", "priority": 1 }
+    ],
+    "32": [
+      { "q": "Who was Elihu and why does he appear so suddenly?", "slug": "who-was-elihu", "passage": "JOB.32.1-6", "kind": "identity", "priority": 1 },
+      { "q": "Is Elihu right or wrong in the book of Job?", "slug": "is-elihu-right-or-wrong", "passage": "JOB.32.6-22", "kind": "doctrine", "priority": 1 }
+    ],
+    "33": [
+      { "q": "What does God speaks in dreams and visions to turn people from sin mean?", "slug": "god-speaks-in-dreams-to-turn-people-from-sin", "passage": "JOB.33.14-18", "kind": "doctrine", "priority": 1 },
+      { "q": "Who is the mediator or ransom Elihu describes?", "slug": "the-mediator-elihu-describes", "passage": "JOB.33.23-24", "kind": "identity", "priority": 1 }
+    ],
+    "34": [
+      { "q": "What does God does no wrong mean in Elihu's argument?", "slug": "god-does-no-wrong-job-34", "passage": "JOB.34.10-12", "kind": "doctrine", "priority": 1 }
+    ],
+    "35": [
+      { "q": "What does your sin does not harm God and your righteousness does not help him mean?", "slug": "your-sin-does-not-harm-god", "passage": "JOB.35.6-8", "kind": "doctrine", "priority": 1 }
+    ],
+    "36": [
+      { "q": "What does God is exalted in his power, who is a teacher like him mean?", "slug": "who-is-a-teacher-like-him", "passage": "JOB.36.22", "kind": "phrase", "priority": 2 }
+    ],
+    "37": [
+      { "q": "What does he says to the snow, fall on the earth mean?", "slug": "he-says-to-the-snow-fall-on-the-earth", "passage": "JOB.37.6", "kind": "phrase", "priority": 2 }
+    ],
+    "38": [
+      { "q": "What does where were you when I laid the earth's foundation mean?", "slug": "where-were-you-when-i-laid-the-earths-foundation", "passage": "JOB.38.4", "kind": "doctrine", "priority": 1 },
+      { "q": "Why does God answer Job with questions instead of explanations?", "slug": "why-god-answered-job-with-questions", "passage": "JOB.38.1-3", "kind": "doctrine", "priority": 1 },
+      { "q": "What does can you bind the Pleiades or loose the belt of Orion mean?", "slug": "can-you-bind-the-pleiades", "passage": "JOB.38.31", "kind": "phrase", "priority": 1 },
+      { "q": "What does the morning stars sang together mean?", "slug": "the-morning-stars-sang-together", "passage": "JOB.38.7", "kind": "identity", "priority": 1 },
+      { "q": "What are the storehouses of snow and hail in Job 38?", "slug": "the-storehouses-of-snow-and-hail", "passage": "JOB.38.22", "kind": "phrase", "priority": 1 },
+      { "q": "What does who shut up the sea behind doors mean?", "slug": "who-shut-up-the-sea-behind-doors", "passage": "JOB.38.8-11", "kind": "phrase", "priority": 1 },
+      { "q": "Does God ever tell Job why he suffered?", "slug": "does-god-tell-job-why-he-suffered", "passage": "JOB.38.1-2", "kind": "doctrine", "priority": 1 }
+    ],
+    "39": [
+      { "q": "Why does God describe wild animals to answer Job?", "slug": "why-god-described-wild-animals-to-job", "passage": "JOB.39.1-30", "kind": "doctrine", "priority": 1 },
+      { "q": "What does the horse laughs at fear mean?", "slug": "the-horse-laughs-at-fear", "passage": "JOB.39.19-25", "kind": "phrase", "priority": 1 },
+      { "q": "Why does God say the ostrich is foolish?", "slug": "why-god-says-the-ostrich-is-foolish", "passage": "JOB.39.13-17", "kind": "phrase", "priority": 2 }
+    ],
+    "40": [
+      { "q": "What is Behemoth in Job 40?", "slug": "what-is-behemoth", "passage": "JOB.40.15-24", "kind": "identity", "priority": 1 },
+      { "q": "Is Behemoth a hippopotamus or a dinosaur?", "slug": "is-behemoth-a-hippo-or-a-dinosaur", "passage": "JOB.40.15-19", "kind": "claim", "priority": 1 },
+      { "q": "What does do you have an arm like God mean?", "slug": "do-you-have-an-arm-like-god", "passage": "JOB.40.9", "kind": "phrase", "priority": 1 },
+      { "q": "What does his tail sways like a cedar mean about Behemoth?", "slug": "his-tail-sways-like-a-cedar", "passage": "JOB.40.17", "kind": "phrase", "priority": 1 }
+    ],
+    "41": [
+      { "q": "What is Leviathan in Job 41?", "slug": "what-is-leviathan-in-job-41", "passage": "JOB.41.1-34", "kind": "identity", "priority": 1 },
+      { "q": "Is Leviathan a crocodile, a whale, or a dragon?", "slug": "is-leviathan-a-crocodile-or-a-dragon", "passage": "JOB.41.14-21", "kind": "claim", "priority": 1 },
+      { "q": "What does can you draw out Leviathan with a fishhook mean?", "slug": "can-you-draw-out-leviathan-with-a-hook", "passage": "JOB.41.1", "kind": "phrase", "priority": 1 },
+      { "q": "Does Leviathan breathe fire in Job 41?", "slug": "does-leviathan-breathe-fire", "passage": "JOB.41.19-21", "kind": "phrase", "priority": 1 },
+      { "q": "What does nothing on earth is his equal mean?", "slug": "nothing-on-earth-is-his-equal", "passage": "JOB.41.33", "kind": "phrase", "priority": 1 }
+    ],
+    "42": [
+      { "q": "What does I have heard of you but now my eye sees you mean?", "slug": "now-my-eye-sees-you", "passage": "JOB.42.5", "kind": "doctrine", "priority": 1 },
+      { "q": "What was Job repenting of in dust and ashes?", "slug": "what-job-repented-of", "passage": "JOB.42.6", "kind": "doctrine", "priority": 1 },
+      { "q": "Why did God rebuke Job's friends for not speaking rightly?", "slug": "why-god-rebuked-jobs-friends", "passage": "JOB.42.7-8", "kind": "doctrine", "priority": 1 },
+      { "q": "Does the restoration at the end of Job undo the point of the book?", "slug": "does-jobs-restoration-undo-the-point", "passage": "JOB.42.10-12", "kind": "doctrine", "priority": 1 },
+      { "q": "Why does Job name his daughters but not his sons?", "slug": "why-job-named-his-daughters", "passage": "JOB.42.14-15", "kind": "phrase", "priority": 1 },
+      { "q": "Why did Job's daughters receive an inheritance with their brothers?", "slug": "jobs-daughters-received-an-inheritance", "passage": "JOB.42.15", "kind": "history", "priority": 1 },
+      { "q": "How long did Job live after his restoration?", "slug": "how-long-job-lived-after-his-restoration", "passage": "JOB.42.16", "kind": "number", "priority": 2 }
+    ]
+  }
+}

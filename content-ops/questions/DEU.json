@@ -1,0 +1,207 @@
+{
+  "book": "DEU",
+  "name": "Deuteronomy",
+  "chapters": {
+    "1": [
+      { "q": "Why does Deuteronomy retell the journey Israel just took?", "slug": "why-deuteronomy-retells-the-journey", "passage": "DEU.1.1-5", "kind": "history", "priority": 1 },
+      { "q": "What does the LORD carried you as a father carries his son mean?", "slug": "the-lord-carried-you-as-a-father-carries-his-son", "passage": "DEU.1.31", "kind": "phrase", "priority": 1 },
+      { "q": "Why does Moses blame the people for his own barred entry?", "slug": "moses-blamed-the-people-for-his-barred-entry", "passage": "DEU.1.37", "kind": "tension", "priority": 1 }
+    ],
+    "2": [
+      { "q": "Why did God tell Israel not to attack Edom, Moab, or Ammon?", "slug": "do-not-attack-edom-moab-or-ammon", "passage": "DEU.2.4-19", "kind": "ethics", "priority": 1 },
+      { "q": "Who were the Anakim, Emim, and Zamzummim?", "slug": "the-anakim-emim-and-zamzummim", "passage": "DEU.2.10-21", "kind": "identity", "priority": 1 }
+    ],
+    "3": [
+      { "q": "How big was King Og's bed?", "slug": "how-big-was-king-ogs-bed", "passage": "DEU.3.11", "kind": "number", "priority": 1 },
+      { "q": "Why did God tell Moses to stop asking to enter the land?", "slug": "do-not-speak-to-me-of-this-again", "passage": "DEU.3.26", "kind": "doctrine", "priority": 1 }
+    ],
+    "4": [
+      { "q": "What does do not add to or subtract from the word mean?", "slug": "do-not-add-to-or-subtract-from-the-word", "passage": "DEU.4.2", "kind": "doctrine", "priority": 1 },
+      { "q": "What does the LORD your God is a consuming fire mean?", "slug": "the-lord-is-a-consuming-fire-deuteronomy-4", "passage": "DEU.4.24", "kind": "doctrine", "priority": 1 },
+      { "q": "Why is God called a jealous God in Deuteronomy 4:24?", "slug": "why-god-is-called-jealous-deuteronomy-4", "passage": "DEU.4.24", "kind": "doctrine", "priority": 1 },
+      { "q": "Why did God show no form at Sinai, only a voice?", "slug": "you-saw-no-form-only-heard-a-voice", "passage": "DEU.4.12-15", "kind": "doctrine", "priority": 1 },
+      { "q": "What does if you seek him with all your heart you will find him mean?", "slug": "seek-him-with-all-your-heart-deuteronomy-4", "passage": "DEU.4.29", "kind": "practice", "priority": 1 }
+    ],
+    "5": [
+      { "q": "Why does Deuteronomy 5 give a different reason for the Sabbath than Exodus 20?", "slug": "why-the-sabbath-reason-differs", "passage": "DEU.5.15", "kind": "tension", "priority": 1 },
+      { "q": "What are the differences between the Ten Commandments in Exodus and Deuteronomy?", "slug": "differences-in-the-ten-commandments", "passage": "DEU.5.6-21", "kind": "tension", "priority": 1 },
+      { "q": "What does oh that they had such a heart as this always mean?", "slug": "oh-that-they-had-such-a-heart-always", "passage": "DEU.5.29", "kind": "doctrine", "priority": 1 }
+    ],
+    "6": [
+      { "q": "What is the Shema in Deuteronomy 6:4?", "slug": "what-is-the-shema", "passage": "DEU.6.4", "kind": "doctrine", "priority": 1 },
+      { "q": "What does love the LORD with all your heart, soul, and strength mean?", "slug": "love-the-lord-with-all-your-heart-soul-and-strength", "passage": "DEU.6.5", "kind": "practice", "priority": 1 },
+      { "q": "How do you teach God's words to your children diligently?", "slug": "teach-them-diligently-to-your-children", "passage": "DEU.6.6-9", "kind": "practice", "priority": 1 },
+      { "q": "What are the phylacteries and mezuzah from Deuteronomy 6:8-9?", "slug": "phylacteries-and-mezuzah", "passage": "DEU.6.8-9", "kind": "practice", "priority": 1 },
+      { "q": "What does do not put the LORD your God to the test mean?", "slug": "do-not-put-the-lord-to-the-test", "passage": "DEU.6.16", "kind": "practice", "priority": 1 },
+      { "q": "Does the Shema rule out the Trinity?", "slug": "does-the-shema-rule-out-the-trinity", "passage": "DEU.6.4", "kind": "doctrine", "priority": 1 }
+    ],
+    "7": [
+      { "q": "Why did God command the utter destruction of the Canaanites?", "slug": "why-god-commanded-the-destruction-of-the-canaanites", "passage": "DEU.7.1-2", "kind": "ethics", "priority": 1 },
+      { "q": "Is the conquest of Canaan genocide?", "slug": "is-the-conquest-of-canaan-genocide", "passage": "DEU.7.2", "kind": "ethics", "priority": 1 },
+      { "q": "Why did God choose Israel if they were the smallest nation?", "slug": "why-god-chose-israel", "passage": "DEU.7.7-8", "kind": "doctrine", "priority": 1 },
+      { "q": "Why did God forbid intermarriage with the Canaanites?", "slug": "why-intermarriage-was-forbidden-deuteronomy-7", "passage": "DEU.7.3-4", "kind": "ethics", "priority": 1 },
+      { "q": "What does he repays to their face those who hate him mean?", "slug": "he-repays-to-their-face", "passage": "DEU.7.10", "kind": "doctrine", "priority": 1 }
+    ],
+    "8": [
+      { "q": "What does man does not live by bread alone mean in Deuteronomy 8?", "slug": "man-does-not-live-by-bread-alone-deuteronomy-8", "passage": "DEU.8.3", "kind": "doctrine", "priority": 1 },
+      { "q": "Why did God humble Israel with hunger in the wilderness?", "slug": "why-god-humbled-israel-with-hunger", "passage": "DEU.8.2-3", "kind": "doctrine", "priority": 1 },
+      { "q": "What does it is he who gives you the power to get wealth mean?", "slug": "he-gives-you-the-power-to-get-wealth", "passage": "DEU.8.18", "kind": "doctrine", "priority": 1 },
+      { "q": "Did Israel's clothes really not wear out for forty years?", "slug": "their-clothes-did-not-wear-out", "passage": "DEU.8.4", "kind": "history", "priority": 1 },
+      { "q": "What does beware lest you forget the LORD when you are full mean?", "slug": "beware-lest-you-forget-when-you-are-full", "passage": "DEU.8.11-14", "kind": "practice", "priority": 1 }
+    ],
+    "9": [
+      { "q": "What does not because of your righteousness mean?", "slug": "not-because-of-your-righteousness", "passage": "DEU.9.4-6", "kind": "doctrine", "priority": 1 },
+      { "q": "What does you are a stubborn people mean?", "slug": "you-are-a-stubborn-people", "passage": "DEU.9.6", "kind": "phrase", "priority": 1 }
+    ],
+    "10": [
+      { "q": "What does circumcise your hearts mean?", "slug": "circumcise-your-hearts", "passage": "DEU.10.16", "kind": "doctrine", "priority": 1 },
+      { "q": "What does God shows no partiality and takes no bribe mean?", "slug": "god-shows-no-partiality-deuteronomy-10", "passage": "DEU.10.17", "kind": "doctrine", "priority": 1 },
+      { "q": "What does he loves the sojourner, giving him food and clothing mean?", "slug": "he-loves-the-sojourner", "passage": "DEU.10.18-19", "kind": "ethics", "priority": 1 },
+      { "q": "What does what does the LORD require of you mean in Deuteronomy 10:12?", "slug": "what-does-the-lord-require-of-you", "passage": "DEU.10.12", "kind": "practice", "priority": 1 }
+    ],
+    "11": [
+      { "q": "What does the eyes of the LORD are always on the land mean?", "slug": "the-eyes-of-the-lord-are-on-the-land", "passage": "DEU.11.12", "kind": "phrase", "priority": 1 },
+      { "q": "What are the blessing and the curse set before Israel?", "slug": "the-blessing-and-the-curse-deuteronomy-11", "passage": "DEU.11.26-28", "kind": "doctrine", "priority": 1 }
+    ],
+    "12": [
+      { "q": "Why could Israel only worship at the place God chose?", "slug": "worship-only-at-the-place-god-chose", "passage": "DEU.12.5-14", "kind": "doctrine", "priority": 1 },
+      { "q": "Why does Deuteronomy 12 allow eating meat outside the sanctuary?", "slug": "eating-meat-outside-the-sanctuary", "passage": "DEU.12.15-16", "kind": "practice", "priority": 1 },
+      { "q": "What does do not add to it or take away from it mean in Deuteronomy 12:32?", "slug": "do-not-add-or-take-away-deuteronomy-12", "passage": "DEU.12.32", "kind": "doctrine", "priority": 1 }
+    ],
+    "13": [
+      { "q": "Why should a prophet who does real signs still be rejected?", "slug": "a-prophet-who-does-signs-but-leads-astray", "passage": "DEU.13.1-3", "kind": "doctrine", "priority": 1 },
+      { "q": "Does Deuteronomy 13 really command killing a family member who leads you to idols?", "slug": "killing-a-family-member-who-leads-to-idols", "passage": "DEU.13.6-10", "kind": "ethics", "priority": 1 },
+      { "q": "What does the LORD is testing you mean about false prophets?", "slug": "the-lord-is-testing-you-deuteronomy-13", "passage": "DEU.13.3", "kind": "doctrine", "priority": 1 }
+    ],
+    "14": [
+      { "q": "Why does Deuteronomy 14 repeat the clean and unclean food laws?", "slug": "why-deuteronomy-14-repeats-the-food-laws", "passage": "DEU.14.3-21", "kind": "practice", "priority": 1 },
+      { "q": "What was the tithe you eat in God's presence?", "slug": "the-tithe-you-eat-in-gods-presence", "passage": "DEU.14.22-27", "kind": "practice", "priority": 1 },
+      { "q": "How many tithes did Israel actually pay?", "slug": "how-many-tithes-israel-paid", "passage": "DEU.14.28-29", "kind": "number", "priority": 1 }
+    ],
+    "15": [
+      { "q": "What was the seven-year cancellation of debts?", "slug": "the-seven-year-cancellation-of-debts", "passage": "DEU.15.1-2", "kind": "ethics", "priority": 1 },
+      { "q": "Does Deuteronomy 15 contradict itself about whether the poor will cease?", "slug": "will-there-be-no-poor-or-always-poor", "passage": "DEU.15.4-11", "kind": "tension", "priority": 1 },
+      { "q": "Why was a Hebrew slave freed in the seventh year?", "slug": "a-hebrew-slave-freed-in-the-seventh-year", "passage": "DEU.15.12-15", "kind": "ethics", "priority": 1 },
+      { "q": "What does piercing the ear with an awl signify?", "slug": "piercing-the-ear-with-an-awl-deuteronomy-15", "passage": "DEU.15.16-17", "kind": "history", "priority": 1 },
+      { "q": "What does open your hand wide to your brother mean?", "slug": "open-your-hand-wide-to-your-brother", "passage": "DEU.15.11", "kind": "ethics", "priority": 1 }
+    ],
+    "16": [
+      { "q": "What are the three pilgrimage feasts in Deuteronomy 16?", "slug": "the-three-pilgrimage-feasts", "passage": "DEU.16.16", "kind": "practice", "priority": 1 },
+      { "q": "What does justice, and only justice, you shall pursue mean?", "slug": "justice-and-only-justice-you-shall-pursue", "passage": "DEU.16.20", "kind": "ethics", "priority": 1 },
+      { "q": "Why does a bribe blind the eyes of the wise?", "slug": "a-bribe-blinds-the-eyes-of-the-wise", "passage": "DEU.16.19", "kind": "ethics", "priority": 1 }
+    ],
+    "17": [
+      { "q": "What three things was a king forbidden to accumulate?", "slug": "three-things-a-king-was-forbidden", "passage": "DEU.17.16-17", "kind": "doctrine", "priority": 1 },
+      { "q": "Did Solomon break every rule for kings in Deuteronomy 17?", "slug": "did-solomon-break-every-rule-for-kings", "passage": "DEU.17.16-17", "kind": "history", "priority": 1 },
+      { "q": "Why did a king have to write out his own copy of the law?", "slug": "the-king-wrote-his-own-copy-of-the-law", "passage": "DEU.17.18-20", "kind": "practice", "priority": 1 },
+      { "q": "Why did a death sentence require two or three witnesses?", "slug": "two-or-three-witnesses-deuteronomy-17", "passage": "DEU.17.6", "kind": "ethics", "priority": 1 }
+    ],
+    "18": [
+      { "q": "Who is the prophet like Moses in Deuteronomy 18:15?", "slug": "the-prophet-like-moses-deuteronomy-18", "passage": "DEU.18.15-18", "kind": "identity", "priority": 1 },
+      { "q": "What forms of divination does Deuteronomy 18 forbid?", "slug": "forms-of-divination-forbidden", "passage": "DEU.18.10-12", "kind": "practice", "priority": 1 },
+      { "q": "Does Deuteronomy 18 forbid astrology, tarot, and psychics today?", "slug": "does-deuteronomy-18-forbid-astrology-and-tarot", "passage": "DEU.18.10-11", "kind": "practice", "priority": 1 },
+      { "q": "How do you test whether a prophet is from God?", "slug": "how-to-test-a-prophet", "passage": "DEU.18.21-22", "kind": "doctrine", "priority": 1 },
+      { "q": "What does passing your son through the fire mean?", "slug": "passing-your-son-through-the-fire", "passage": "DEU.18.10", "kind": "history", "priority": 1 }
+    ],
+    "19": [
+      { "q": "Why was a false witness punished with the sentence he sought?", "slug": "a-false-witness-punished-with-the-sentence-he-sought", "passage": "DEU.19.16-21", "kind": "ethics", "priority": 1 },
+      { "q": "What does do not move your neighbor's boundary stone mean?", "slug": "do-not-move-your-neighbors-boundary-stone", "passage": "DEU.19.14", "kind": "ethics", "priority": 1 }
+    ],
+    "20": [
+      { "q": "Why were some soldiers exempt from going to war?", "slug": "exemptions-from-going-to-war", "passage": "DEU.20.5-8", "kind": "history", "priority": 1 },
+      { "q": "Why did God command not to cut down fruit trees in war?", "slug": "do-not-cut-down-fruit-trees-in-war", "passage": "DEU.20.19-20", "kind": "ethics", "priority": 1 },
+      { "q": "Why were the rules of war different for Canaanite cities?", "slug": "different-rules-for-canaanite-cities", "passage": "DEU.20.16-18", "kind": "ethics", "priority": 1 },
+      { "q": "Why was a newly married man excused from war for a year?", "slug": "a-newly-married-man-excused-from-war", "passage": "DEU.20.7", "kind": "practice", "priority": 1 }
+    ],
+    "21": [
+      { "q": "What was the unsolved murder ritual with the heifer?", "slug": "the-unsolved-murder-heifer-ritual", "passage": "DEU.21.1-9", "kind": "history", "priority": 1 },
+      { "q": "Does Deuteronomy 21 permit marrying a captive woman?", "slug": "marrying-a-captive-woman", "passage": "DEU.21.10-14", "kind": "ethics", "priority": 1 },
+      { "q": "Did Israel really stone rebellious sons?", "slug": "did-israel-really-stone-rebellious-sons", "passage": "DEU.21.18-21", "kind": "ethics", "priority": 1 },
+      { "q": "What does cursed is everyone who hangs on a tree mean?", "slug": "cursed-is-everyone-who-hangs-on-a-tree-deuteronomy-21", "passage": "DEU.21.23", "kind": "doctrine", "priority": 1 },
+      { "q": "Why could the firstborn's double portion not be taken away?", "slug": "the-firstborns-double-portion", "passage": "DEU.21.15-17", "kind": "ethics", "priority": 1 }
+    ],
+    "22": [
+      { "q": "What does Deuteronomy 22:5 say about women wearing men's clothing?", "slug": "does-deuteronomy-22-5-forbid-women-wearing-pants", "passage": "DEU.22.5", "kind": "practice", "priority": 1 },
+      { "q": "Why did houses need a parapet on the roof?", "slug": "why-houses-needed-a-parapet", "passage": "DEU.22.8", "kind": "ethics", "priority": 1 },
+      { "q": "What was the test of a bride's virginity in Deuteronomy 22?", "slug": "the-test-of-a-brides-virginity", "passage": "DEU.22.13-21", "kind": "ethics", "priority": 1 },
+      { "q": "Does Deuteronomy 22:28-29 make a rape victim marry her rapist?", "slug": "does-deuteronomy-22-make-a-victim-marry-her-rapist", "passage": "DEU.22.28-29", "kind": "ethics", "priority": 1 },
+      { "q": "Why does Deuteronomy 22 distinguish rape in the city from rape in the field?", "slug": "rape-in-the-city-versus-in-the-field", "passage": "DEU.22.23-27", "kind": "ethics", "priority": 1 },
+      { "q": "Why could you not plow with an ox and donkey yoked together?", "slug": "an-ox-and-donkey-yoked-together", "passage": "DEU.22.10", "kind": "practice", "priority": 1 },
+      { "q": "Why must you help your enemy's lost animal?", "slug": "help-your-enemys-lost-animal", "passage": "DEU.22.1-4", "kind": "ethics", "priority": 1 }
+    ],
+    "23": [
+      { "q": "Why were eunuchs and those born illegitimately excluded from the assembly?", "slug": "who-was-excluded-from-the-assembly", "passage": "DEU.23.1-2", "kind": "ethics", "priority": 1 },
+      { "q": "Why does Deuteronomy 23 give rules for latrines outside the camp?", "slug": "the-latrine-rules-outside-the-camp", "passage": "DEU.23.12-14", "kind": "practice", "priority": 1 },
+      { "q": "Why did Israel not have to return a runaway slave?", "slug": "do-not-return-a-runaway-slave", "passage": "DEU.23.15-16", "kind": "ethics", "priority": 1 },
+      { "q": "Why could you eat from a neighbor's field but not carry any away?", "slug": "eat-from-a-neighbors-field-but-carry-none-away", "passage": "DEU.23.24-25", "kind": "ethics", "priority": 1 }
+    ],
+    "24": [
+      { "q": "What was the certificate of divorce in Deuteronomy 24?", "slug": "the-certificate-of-divorce", "passage": "DEU.24.1-4", "kind": "ethics", "priority": 1 },
+      { "q": "Why could a divorced woman not return to her first husband?", "slug": "why-a-divorced-woman-could-not-return", "passage": "DEU.24.4", "kind": "ethics", "priority": 1 },
+      { "q": "Why could you not take a millstone or a widow's cloak as a pledge?", "slug": "a-millstone-or-widows-cloak-as-a-pledge", "passage": "DEU.24.6-17", "kind": "ethics", "priority": 1 },
+      { "q": "Why does Deuteronomy 24:16 say children shall not die for their parents' sin?", "slug": "children-shall-not-die-for-their-parents-sin", "passage": "DEU.24.16", "kind": "tension", "priority": 1 },
+      { "q": "Why must a day laborer be paid the same day?", "slug": "a-day-laborer-paid-the-same-day", "passage": "DEU.24.14-15", "kind": "ethics", "priority": 1 }
+    ],
+    "25": [
+      { "q": "What was levirate marriage in Deuteronomy 25?", "slug": "levirate-marriage-deuteronomy-25", "passage": "DEU.25.5-10", "kind": "history", "priority": 1 },
+      { "q": "Why is the penalty for a woman grabbing a man's genitals so severe?", "slug": "the-woman-who-grabs-a-mans-genitals", "passage": "DEU.25.11-12", "kind": "ethics", "priority": 1 },
+      { "q": "What does do not muzzle an ox while it treads out the grain mean?", "slug": "do-not-muzzle-an-ox-while-it-treads", "passage": "DEU.25.4", "kind": "ethics", "priority": 1 },
+      { "q": "Why was the sandal removed in the refusal ceremony?", "slug": "the-sandal-removed-in-the-refusal-ceremony", "passage": "DEU.25.9-10", "kind": "history", "priority": 1 },
+      { "q": "Why was flogging limited to forty lashes?", "slug": "flogging-limited-to-forty-lashes", "passage": "DEU.25.3", "kind": "ethics", "priority": 1 }
+    ],
+    "26": [
+      { "q": "What does my father was a wandering Aramean mean?", "slug": "my-father-was-a-wandering-aramean", "passage": "DEU.26.5", "kind": "phrase", "priority": 1 },
+      { "q": "What was the firstfruits confession Israel recited?", "slug": "the-firstfruits-confession", "passage": "DEU.26.1-11", "kind": "practice", "priority": 1 }
+    ],
+    "27": [
+      { "q": "What were the curses recited on Mount Ebal?", "slug": "the-curses-recited-on-mount-ebal", "passage": "DEU.27.15-26", "kind": "doctrine", "priority": 1 },
+      { "q": "Why does Deuteronomy 27:26 curse anyone who does not keep the whole law?", "slug": "cursed-is-anyone-who-does-not-keep-the-whole-law", "passage": "DEU.27.26", "kind": "doctrine", "priority": 1 }
+    ],
+    "28": [
+      { "q": "What are the blessings for obedience in Deuteronomy 28?", "slug": "the-blessings-for-obedience-deuteronomy-28", "passage": "DEU.28.1-14", "kind": "doctrine", "priority": 1 },
+      { "q": "Why are the curses in Deuteronomy 28 four times longer than the blessings?", "slug": "why-the-curses-are-longer-than-the-blessings", "passage": "DEU.28.15-68", "kind": "doctrine", "priority": 1 },
+      { "q": "Does Deuteronomy 28 promise Christians health and wealth for obedience?", "slug": "does-deuteronomy-28-promise-health-and-wealth", "passage": "DEU.28.1-14", "kind": "claim", "priority": 1 },
+      { "q": "Why does Deuteronomy 28:53 predict parents eating their own children?", "slug": "parents-eating-their-own-children-deuteronomy-28", "passage": "DEU.28.53", "kind": "ethics", "priority": 1 },
+      { "q": "What does you will be scattered among all nations mean?", "slug": "scattered-among-all-nations", "passage": "DEU.28.64", "kind": "doctrine", "priority": 1 },
+      { "q": "What does the LORD will make you the head and not the tail mean?", "slug": "the-head-and-not-the-tail", "passage": "DEU.28.13", "kind": "phrase", "priority": 1 }
+    ],
+    "29": [
+      { "q": "What does the secret things belong to the LORD mean?", "slug": "the-secret-things-belong-to-the-lord", "passage": "DEU.29.29", "kind": "doctrine", "priority": 1 },
+      { "q": "What does to this day the LORD has not given you a heart to understand mean?", "slug": "not-given-you-a-heart-to-understand", "passage": "DEU.29.4", "kind": "doctrine", "priority": 1 }
+    ],
+    "30": [
+      { "q": "What does choose life so that you and your children may live mean?", "slug": "choose-life-so-that-you-may-live", "passage": "DEU.30.19", "kind": "practice", "priority": 1 },
+      { "q": "What does the word is very near you, in your mouth and heart mean?", "slug": "the-word-is-very-near-you", "passage": "DEU.30.14", "kind": "doctrine", "priority": 1 },
+      { "q": "What does the LORD will circumcise your heart mean?", "slug": "the-lord-will-circumcise-your-heart", "passage": "DEU.30.6", "kind": "doctrine", "priority": 1 },
+      { "q": "What does it is not too hard for you, nor is it far off mean?", "slug": "it-is-not-too-hard-for-you", "passage": "DEU.30.11", "kind": "doctrine", "priority": 1 }
+    ],
+    "31": [
+      { "q": "What does be strong and courageous, he will not leave you mean in Deuteronomy 31?", "slug": "be-strong-and-courageous-deuteronomy-31", "passage": "DEU.31.6", "kind": "practice", "priority": 1 },
+      { "q": "Why did God predict Israel would break the covenant before they did?", "slug": "god-predicted-israel-would-break-the-covenant", "passage": "DEU.31.16-21", "kind": "doctrine", "priority": 1 },
+      { "q": "Why was the book of the law placed beside the ark?", "slug": "the-book-placed-beside-the-ark", "passage": "DEU.31.26", "kind": "history", "priority": 1 },
+      { "q": "Why was the law to be read publicly every seven years?", "slug": "the-law-read-publicly-every-seven-years", "passage": "DEU.31.10-13", "kind": "practice", "priority": 1 }
+    ],
+    "32": [
+      { "q": "What is the Song of Moses in Deuteronomy 32?", "slug": "the-song-of-moses-deuteronomy-32", "passage": "DEU.32.1-43", "kind": "doctrine", "priority": 1 },
+      { "q": "Does Deuteronomy 32:8 say sons of God or sons of Israel?", "slug": "does-deuteronomy-32-8-say-sons-of-god", "passage": "DEU.32.8", "kind": "history", "priority": 1 },
+      { "q": "What does vengeance is mine, I will repay mean in Deuteronomy 32:35?", "slug": "vengeance-is-mine-deuteronomy-32", "passage": "DEU.32.35", "kind": "doctrine", "priority": 1 },
+      { "q": "What does Jeshurun grew fat and kicked mean?", "slug": "jeshurun-grew-fat-and-kicked", "passage": "DEU.32.15", "kind": "phrase", "priority": 1 },
+      { "q": "What does they sacrificed to demons, not to God mean?", "slug": "they-sacrificed-to-demons-not-to-god", "passage": "DEU.32.17", "kind": "doctrine", "priority": 1 },
+      { "q": "Why is God called the Rock in Deuteronomy 32?", "slug": "why-god-is-called-the-rock", "passage": "DEU.32.4", "kind": "doctrine", "priority": 1 },
+      { "q": "What does there is no god besides me mean?", "slug": "there-is-no-god-besides-me-deuteronomy-32", "passage": "DEU.32.39", "kind": "doctrine", "priority": 1 }
+    ],
+    "33": [
+      { "q": "What does the eternal God is your refuge and underneath are the everlasting arms mean?", "slug": "the-everlasting-arms", "passage": "DEU.33.27", "kind": "phrase", "priority": 1 },
+      { "q": "How do Moses' blessings on the tribes compare to Jacob's?", "slug": "moses-blessings-compared-to-jacobs", "passage": "DEU.33.6-25", "kind": "tension", "priority": 1 },
+      { "q": "Why is Simeon missing from Moses' blessing of the tribes?", "slug": "why-simeon-is-missing-from-the-blessing", "passage": "DEU.33.6-7", "kind": "tension", "priority": 1 }
+    ],
+    "34": [
+      { "q": "Where is Moses buried?", "slug": "where-is-moses-buried", "passage": "DEU.34.6", "kind": "history", "priority": 1 },
+      { "q": "Why did God bury Moses himself in an unknown place?", "slug": "why-god-buried-moses-in-an-unknown-place", "passage": "DEU.34.6", "kind": "doctrine", "priority": 1 },
+      { "q": "If Moses wrote Deuteronomy, who wrote about his death?", "slug": "who-wrote-about-moses-death", "passage": "DEU.34.5-12", "kind": "history", "priority": 1 },
+      { "q": "Where is Mount Nebo and what did Moses see from it?", "slug": "mount-nebo-and-what-moses-saw", "passage": "DEU.34.1-4", "kind": "history", "priority": 1 },
+      { "q": "How was Moses' eyesight and strength undiminished at 120?", "slug": "moses-eyesight-undiminished-at-120", "passage": "DEU.34.7", "kind": "phrase", "priority": 1 },
+      { "q": "What does no prophet has risen like Moses mean?", "slug": "no-prophet-has-risen-like-moses", "passage": "DEU.34.10", "kind": "doctrine", "priority": 1 }
+    ]
+  }
+}

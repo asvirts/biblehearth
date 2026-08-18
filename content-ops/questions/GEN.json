@@ -1,0 +1,394 @@
+{
+  "book": "GEN",
+  "name": "Genesis",
+  "chapters": {
+    "1": [
+      { "q": "Are the days of creation in Genesis 1 literal 24-hour days?", "slug": "are-the-days-of-creation-literal-days", "passage": "GEN.1.5", "kind": "doctrine", "priority": 1 },
+      { "q": "Who is God speaking to when he says let us make man in our image?", "slug": "let-us-make-man-in-our-image", "passage": "GEN.1.26", "kind": "doctrine", "priority": 1 },
+      { "q": "What does it mean to be made in the image of God?", "slug": "made-in-the-image-of-god", "passage": "GEN.1.27", "kind": "doctrine", "priority": 1 },
+      { "q": "What are the waters above and below the expanse in Genesis 1?", "slug": "waters-above-and-below-the-expanse", "passage": "GEN.1.6-7", "kind": "phrase", "priority": 1 },
+      { "q": "Why is there light on day one if the sun was made on day four?", "slug": "light-before-the-sun-genesis-1", "passage": "GEN.1.3-19", "kind": "tension", "priority": 1 },
+      { "q": "What does without form and void mean in Genesis 1:2?", "slug": "without-form-and-void", "passage": "GEN.1.2", "kind": "phrase", "priority": 1 },
+      { "q": "Is there a gap of time between Genesis 1:1 and Genesis 1:2?", "slug": "gap-theory-genesis-1-1-and-1-2", "passage": "GEN.1.1-2", "kind": "doctrine", "priority": 2 },
+      { "q": "What does it mean to have dominion over the earth?", "slug": "have-dominion-over-the-earth", "passage": "GEN.1.28", "kind": "practice", "priority": 2 },
+      { "q": "Does Genesis 1 teach that God created out of nothing?", "slug": "did-god-create-out-of-nothing", "passage": "GEN.1.1", "kind": "doctrine", "priority": 2 },
+      { "q": "Were people vegetarian before the flood?", "slug": "were-people-vegetarian-before-the-flood", "passage": "GEN.1.29-30", "kind": "practice", "priority": 2 },
+      { "q": "What does the Spirit of God hovering over the waters mean?", "slug": "spirit-of-god-hovering-over-the-waters", "passage": "GEN.1.2", "kind": "phrase", "priority": 2 },
+      { "q": "Why does God call creation very good instead of good on the sixth day?", "slug": "creation-was-very-good", "passage": "GEN.1.31", "kind": "phrase", "priority": 3 }
+    ],
+    "2": [
+      { "q": "Are Genesis 1 and Genesis 2 two different creation accounts?", "slug": "genesis-1-and-2-two-creation-accounts", "passage": "GEN.2.4-7", "kind": "tension", "priority": 1 },
+      { "q": "What was the tree of the knowledge of good and evil?", "slug": "tree-of-the-knowledge-of-good-and-evil", "passage": "GEN.2.17", "kind": "identity", "priority": 1 },
+      { "q": "What is the tree of life in Genesis 2?", "slug": "tree-of-life-genesis-2", "passage": "GEN.2.9", "kind": "identity", "priority": 1 },
+      { "q": "What does a helper fit for him mean in Genesis 2:18?", "slug": "a-helper-fit-for-him", "passage": "GEN.2.18", "kind": "doctrine", "priority": 1 },
+      { "q": "Why did God make Eve from Adam's rib?", "slug": "why-was-eve-made-from-adams-rib", "passage": "GEN.2.21-22", "kind": "phrase", "priority": 1 },
+      { "q": "Where was the Garden of Eden?", "slug": "where-was-the-garden-of-eden", "passage": "GEN.2.10-14", "kind": "history", "priority": 1 },
+      { "q": "Did Adam and Eve die the day they ate the fruit?", "slug": "did-adam-and-eve-die-that-day", "passage": "GEN.2.17", "kind": "tension", "priority": 1 },
+      { "q": "What does it mean that the two become one flesh?", "slug": "the-two-shall-become-one-flesh", "passage": "GEN.2.24", "kind": "doctrine", "priority": 1 },
+      { "q": "What does the breath of life mean in Genesis 2:7?", "slug": "breath-of-life-genesis-2-7", "passage": "GEN.2.7", "kind": "phrase", "priority": 2 },
+      { "q": "Why did God rest on the seventh day if he does not get tired?", "slug": "why-did-god-rest-on-the-seventh-day", "passage": "GEN.2.2-3", "kind": "tension", "priority": 2 },
+      { "q": "What does it mean that Adam named the animals?", "slug": "adam-named-the-animals", "passage": "GEN.2.19-20", "kind": "phrase", "priority": 3 }
+    ],
+    "3": [
+      { "q": "Was the serpent in Genesis 3 Satan?", "slug": "was-the-serpent-in-genesis-3-satan", "passage": "GEN.3.1", "kind": "identity", "priority": 1 },
+      { "q": "Who is the offspring of the woman who will crush the serpent's head?", "slug": "offspring-of-the-woman-genesis-3-15", "passage": "GEN.3.15", "kind": "doctrine", "priority": 1 },
+      { "q": "What does your desire shall be for your husband mean in Genesis 3:16?", "slug": "your-desire-shall-be-for-your-husband", "passage": "GEN.3.16", "kind": "doctrine", "priority": 1 },
+      { "q": "Why did God curse the ground instead of Adam?", "slug": "why-did-god-curse-the-ground", "passage": "GEN.3.17-19", "kind": "phrase", "priority": 1 },
+      { "q": "What was the fruit Adam and Eve ate, and was it an apple?", "slug": "was-the-forbidden-fruit-an-apple", "passage": "GEN.3.6", "kind": "claim", "priority": 1 },
+      { "q": "Why did God make garments of skin for Adam and Eve?", "slug": "garments-of-skin-genesis-3-21", "passage": "GEN.3.21", "kind": "phrase", "priority": 1 },
+      { "q": "What are the cherubim and the flaming sword guarding Eden?", "slug": "cherubim-and-flaming-sword-guarding-eden", "passage": "GEN.3.24", "kind": "identity", "priority": 1 },
+      { "q": "Did Eve add to God's command when she said do not touch the tree?", "slug": "did-eve-add-to-gods-command", "passage": "GEN.3.2-3", "kind": "phrase", "priority": 2 },
+      { "q": "What does you will be like God, knowing good and evil mean?", "slug": "you-will-be-like-god-knowing-good-and-evil", "passage": "GEN.3.5", "kind": "phrase", "priority": 2 },
+      { "q": "Why did God ask Adam where are you if he already knew?", "slug": "why-did-god-ask-adam-where-are-you", "passage": "GEN.3.9", "kind": "tension", "priority": 2 },
+      { "q": "Why were Adam and Eve ashamed of being naked after they sinned?", "slug": "why-were-adam-and-eve-ashamed", "passage": "GEN.3.7", "kind": "phrase", "priority": 2 },
+      { "q": "Was the fall part of God's plan?", "slug": "was-the-fall-part-of-gods-plan", "passage": "GEN.3.15", "kind": "doctrine", "priority": 2 }
+    ],
+    "4": [
+      { "q": "Where did Cain's wife come from?", "slug": "where-did-cains-wife-come-from", "passage": "GEN.4.17", "kind": "tension", "priority": 1 },
+      { "q": "What was the mark of Cain?", "slug": "what-was-the-mark-of-cain", "passage": "GEN.4.15", "kind": "identity", "priority": 1 },
+      { "q": "Why did God reject Cain's offering and accept Abel's?", "slug": "why-did-god-reject-cains-offering", "passage": "GEN.4.3-5", "kind": "doctrine", "priority": 1 },
+      { "q": "What does sin is crouching at your door mean?", "slug": "sin-is-crouching-at-your-door", "passage": "GEN.4.7", "kind": "phrase", "priority": 1 },
+      { "q": "What does am I my brother's keeper mean?", "slug": "am-i-my-brothers-keeper", "passage": "GEN.4.9", "kind": "phrase", "priority": 1 },
+      { "q": "Who was Cain afraid would kill him if he was one of the first people?", "slug": "who-was-cain-afraid-of", "passage": "GEN.4.14", "kind": "tension", "priority": 1 },
+      { "q": "What does Abel's blood crying out from the ground mean?", "slug": "abels-blood-crying-out-from-the-ground", "passage": "GEN.4.10", "kind": "phrase", "priority": 2 },
+      { "q": "Who was Lamech and why did he boast about killing a man?", "slug": "lamech-boast-genesis-4", "passage": "GEN.4.23-24", "kind": "identity", "priority": 2 },
+      { "q": "What does it mean that people began to call on the name of the LORD?", "slug": "began-to-call-on-the-name-of-the-lord", "passage": "GEN.4.26", "kind": "phrase", "priority": 3 },
+      { "q": "What is the land of Nod?", "slug": "land-of-nod", "passage": "GEN.4.16", "kind": "history", "priority": 3 }
+    ],
+    "5": [
+      { "q": "Why did people in Genesis 5 live over 900 years?", "slug": "why-did-people-live-900-years", "passage": "GEN.5.5", "kind": "number", "priority": 1 },
+      { "q": "What happened to Enoch when God took him?", "slug": "what-happened-to-enoch", "passage": "GEN.5.24", "kind": "identity", "priority": 1 },
+      { "q": "Who was Methuselah and why is he the oldest man in the Bible?", "slug": "who-was-methuselah", "passage": "GEN.5.27", "kind": "identity", "priority": 1 },
+      { "q": "Can you calculate the age of the earth from the Genesis 5 genealogy?", "slug": "age-of-the-earth-from-genesis-5", "passage": "GEN.5.3-32", "kind": "number", "priority": 1 },
+      { "q": "Are there gaps in the Genesis 5 genealogy?", "slug": "gaps-in-the-genesis-5-genealogy", "passage": "GEN.5.6-20", "kind": "tension", "priority": 2 },
+      { "q": "What does it mean that Enoch walked with God?", "slug": "enoch-walked-with-god", "passage": "GEN.5.22", "kind": "phrase", "priority": 2 }
+    ],
+    "6": [
+      { "q": "Who are the sons of God in Genesis 6?", "slug": "sons-of-god-genesis-6", "passage": "GEN.6.1-4", "kind": "identity", "priority": 1 },
+      { "q": "Who were the Nephilim?", "slug": "nephilim-in-the-bible", "passage": "GEN.6.4", "kind": "identity", "priority": 1 },
+      { "q": "What does his days shall be 120 years mean in Genesis 6:3?", "slug": "his-days-shall-be-120-years", "passage": "GEN.6.3", "kind": "number", "priority": 1 },
+      { "q": "How could God regret making humanity if he knows everything?", "slug": "did-god-regret-making-humanity", "passage": "GEN.6.6", "kind": "tension", "priority": 1 },
+      { "q": "How big was Noah's ark?", "slug": "how-big-was-noahs-ark", "passage": "GEN.6.15", "kind": "number", "priority": 1 },
+      { "q": "What does it mean that Noah found favor in the eyes of the LORD?", "slug": "noah-found-favor-in-the-eyes-of-the-lord", "passage": "GEN.6.8", "kind": "phrase", "priority": 2 },
+      { "q": "What was gopher wood?", "slug": "what-was-gopher-wood", "passage": "GEN.6.14", "kind": "history", "priority": 2 },
+      { "q": "Was Noah sinless, or just righteous compared to his generation?", "slug": "was-noah-righteous-or-sinless", "passage": "GEN.6.9", "kind": "doctrine", "priority": 2 }
+    ],
+    "7": [
+      { "q": "Was Noah's flood global or local?", "slug": "was-noahs-flood-global-or-local", "passage": "GEN.7.19-20", "kind": "doctrine", "priority": 1 },
+      { "q": "Were the animals taken two by two or seven by seven?", "slug": "animals-two-by-two-or-seven-by-seven", "passage": "GEN.7.2-3", "kind": "tension", "priority": 1 },
+      { "q": "How did all the animals fit on the ark?", "slug": "how-did-the-animals-fit-on-the-ark", "passage": "GEN.7.8-9", "kind": "number", "priority": 1 },
+      { "q": "How long did the flood actually last?", "slug": "how-long-did-the-flood-last", "passage": "GEN.7.24", "kind": "number", "priority": 1 },
+      { "q": "What are the fountains of the great deep in Genesis 7:11?", "slug": "fountains-of-the-great-deep", "passage": "GEN.7.11", "kind": "phrase", "priority": 2 },
+      { "q": "What does it mean that the LORD shut them in?", "slug": "the-lord-shut-them-in", "passage": "GEN.7.16", "kind": "phrase", "priority": 3 }
+    ],
+    "8": [
+      { "q": "Why did Noah send out a raven and then a dove?", "slug": "why-did-noah-send-a-raven-and-a-dove", "passage": "GEN.8.7-9", "kind": "phrase", "priority": 1 },
+      { "q": "Where is Mount Ararat and has the ark been found?", "slug": "mount-ararat-and-the-search-for-the-ark", "passage": "GEN.8.4", "kind": "history", "priority": 1 },
+      { "q": "What does God remembered Noah mean if God never forgets?", "slug": "god-remembered-noah", "passage": "GEN.8.1", "kind": "tension", "priority": 2 },
+      { "q": "Why does God say he will never again curse the ground?", "slug": "never-again-curse-the-ground", "passage": "GEN.8.21", "kind": "doctrine", "priority": 2 },
+      { "q": "What does the intention of man's heart is evil from his youth mean?", "slug": "intention-of-mans-heart-is-evil-from-youth", "passage": "GEN.8.21", "kind": "doctrine", "priority": 2 }
+    ],
+    "9": [
+      { "q": "Why did Noah curse Canaan instead of Ham?", "slug": "why-did-noah-curse-canaan-instead-of-ham", "passage": "GEN.9.25", "kind": "ethics", "priority": 1 },
+      { "q": "Has the curse of Ham been used to justify slavery?", "slug": "curse-of-ham-and-slavery", "passage": "GEN.9.25-27", "kind": "claim", "priority": 1 },
+      { "q": "What did Ham actually do to Noah in Genesis 9?", "slug": "what-did-ham-do-to-noah", "passage": "GEN.9.22", "kind": "phrase", "priority": 1 },
+      { "q": "Was the rainbow the first rainbow ever?", "slug": "was-the-rainbow-the-first-rainbow", "passage": "GEN.9.13", "kind": "claim", "priority": 1 },
+      { "q": "Why did God allow people to eat meat after the flood?", "slug": "why-did-god-allow-eating-meat-after-the-flood", "passage": "GEN.9.3", "kind": "practice", "priority": 1 },
+      { "q": "Does Genesis 9:6 establish the death penalty?", "slug": "does-genesis-9-6-establish-the-death-penalty", "passage": "GEN.9.6", "kind": "ethics", "priority": 1 },
+      { "q": "Why does the Bible forbid eating blood?", "slug": "why-does-the-bible-forbid-eating-blood", "passage": "GEN.9.4", "kind": "practice", "priority": 2 },
+      { "q": "What is the Noahic covenant and does it still apply?", "slug": "noahic-covenant", "passage": "GEN.9.8-17", "kind": "doctrine", "priority": 2 }
+    ],
+    "10": [
+      { "q": "Who was Nimrod in the Bible?", "slug": "who-was-nimrod", "passage": "GEN.10.8-12", "kind": "identity", "priority": 1 },
+      { "q": "What is the Table of Nations in Genesis 10?", "slug": "table-of-nations-genesis-10", "passage": "GEN.10.1-32", "kind": "history", "priority": 1 },
+      { "q": "Are all races descended from Noah's three sons?", "slug": "are-all-races-descended-from-noahs-sons", "passage": "GEN.10.32", "kind": "doctrine", "priority": 1 },
+      { "q": "What does a mighty hunter before the LORD mean?", "slug": "mighty-hunter-before-the-lord", "passage": "GEN.10.9", "kind": "phrase", "priority": 2 },
+      { "q": "Who were the Philistines and where did they come from?", "slug": "where-did-the-philistines-come-from", "passage": "GEN.10.14", "kind": "history", "priority": 2 }
+    ],
+    "11": [
+      { "q": "Why did God stop the Tower of Babel?", "slug": "why-did-god-stop-the-tower-of-babel", "passage": "GEN.11.6-8", "kind": "ethics", "priority": 1 },
+      { "q": "Did all languages really come from the Tower of Babel?", "slug": "did-all-languages-come-from-babel", "passage": "GEN.11.9", "kind": "doctrine", "priority": 1 },
+      { "q": "Who is God speaking to when he says let us go down at Babel?", "slug": "let-us-go-down-babel", "passage": "GEN.11.7", "kind": "doctrine", "priority": 1 },
+      { "q": "Where was the Tower of Babel and was it a ziggurat?", "slug": "where-was-the-tower-of-babel", "passage": "GEN.11.4", "kind": "history", "priority": 2 },
+      { "q": "Why do lifespans drop so sharply in Genesis 11?", "slug": "why-do-lifespans-drop-in-genesis-11", "passage": "GEN.11.10-26", "kind": "number", "priority": 2 },
+      { "q": "Why does Genesis 11 say Abram's father Terah left for Canaan?", "slug": "terah-left-for-canaan", "passage": "GEN.11.31", "kind": "history", "priority": 3 }
+    ],
+    "12": [
+      { "q": "What is the Abrahamic covenant in Genesis 12?", "slug": "abrahamic-covenant-genesis-12", "passage": "GEN.12.1-3", "kind": "doctrine", "priority": 1 },
+      { "q": "Does I will bless those who bless you still apply to Israel today?", "slug": "i-will-bless-those-who-bless-you", "passage": "GEN.12.3", "kind": "doctrine", "priority": 1 },
+      { "q": "Why did Abram lie about Sarai being his sister?", "slug": "why-did-abram-say-sarai-was-his-sister", "passage": "GEN.12.11-13", "kind": "ethics", "priority": 1 },
+      { "q": "Why did God punish Pharaoh for Abram's lie?", "slug": "why-did-god-punish-pharaoh-for-abrams-lie", "passage": "GEN.12.17", "kind": "ethics", "priority": 1 },
+      { "q": "What does in you all the families of the earth shall be blessed mean?", "slug": "all-the-families-of-the-earth-shall-be-blessed", "passage": "GEN.12.3", "kind": "doctrine", "priority": 2 },
+      { "q": "How old was Abram when God called him?", "slug": "how-old-was-abram-when-god-called-him", "passage": "GEN.12.4", "kind": "number", "priority": 3 }
+    ],
+    "13": [
+      { "q": "Why did Abram let Lot choose the land first?", "slug": "why-did-abram-let-lot-choose-first", "passage": "GEN.13.8-9", "kind": "practice", "priority": 1 },
+      { "q": "What was wrong with Lot choosing the Jordan Valley?", "slug": "lot-chose-the-jordan-valley", "passage": "GEN.13.10-13", "kind": "phrase", "priority": 1 },
+      { "q": "What does God's promise of land as far as you can see mean?", "slug": "land-as-far-as-you-can-see", "passage": "GEN.13.14-15", "kind": "doctrine", "priority": 2 },
+      { "q": "What does offspring as numerous as the dust of the earth mean?", "slug": "offspring-as-the-dust-of-the-earth", "passage": "GEN.13.16", "kind": "phrase", "priority": 3 }
+    ],
+    "14": [
+      { "q": "Who was Melchizedek?", "slug": "who-was-melchizedek", "passage": "GEN.14.18-20", "kind": "identity", "priority": 1 },
+      { "q": "Was Melchizedek Jesus?", "slug": "was-melchizedek-jesus", "passage": "GEN.14.18", "kind": "doctrine", "priority": 1 },
+      { "q": "Is Abram's gift to Melchizedek the first tithe in the Bible?", "slug": "is-abrams-tithe-the-first-tithe", "passage": "GEN.14.20", "kind": "doctrine", "priority": 1 },
+      { "q": "Why did Abram refuse the king of Sodom's reward?", "slug": "why-did-abram-refuse-the-king-of-sodom", "passage": "GEN.14.22-23", "kind": "practice", "priority": 2 },
+      { "q": "Who were the four kings Abram defeated in Genesis 14?", "slug": "four-kings-abram-defeated", "passage": "GEN.14.1-2", "kind": "history", "priority": 2 },
+      { "q": "What does God Most High, possessor of heaven and earth mean?", "slug": "god-most-high-possessor-of-heaven-and-earth", "passage": "GEN.14.19", "kind": "phrase", "priority": 3 }
+    ],
+    "15": [
+      { "q": "Why did God have Abram cut animals in half?", "slug": "why-did-god-have-abram-cut-animals-in-half", "passage": "GEN.15.9-10", "kind": "phrase", "priority": 1 },
+      { "q": "What does it mean that Abram's faith was counted as righteousness?", "slug": "abrams-faith-counted-as-righteousness", "passage": "GEN.15.6", "kind": "doctrine", "priority": 1 },
+      { "q": "Why did God say Abram's descendants would be slaves for 400 years?", "slug": "abrams-descendants-slaves-400-years", "passage": "GEN.15.13", "kind": "number", "priority": 1 },
+      { "q": "Is the 400 years in Genesis 15 the same as the 430 years in Exodus 12?", "slug": "400-years-versus-430-years", "passage": "GEN.15.13", "kind": "tension", "priority": 1 },
+      { "q": "What is the smoking firepot and flaming torch in Genesis 15?", "slug": "smoking-firepot-and-flaming-torch", "passage": "GEN.15.17", "kind": "phrase", "priority": 1 },
+      { "q": "What does the iniquity of the Amorites is not yet complete mean?", "slug": "iniquity-of-the-amorites-not-yet-complete", "passage": "GEN.15.16", "kind": "ethics", "priority": 2 },
+      { "q": "What was the dreadful darkness that fell on Abram?", "slug": "dreadful-darkness-that-fell-on-abram", "passage": "GEN.15.12", "kind": "phrase", "priority": 2 }
+    ],
+    "16": [
+      { "q": "Was Sarai wrong to give Hagar to Abram?", "slug": "was-sarai-wrong-to-give-hagar-to-abram", "passage": "GEN.16.2-3", "kind": "ethics", "priority": 1 },
+      { "q": "Who is the angel of the LORD who appeared to Hagar?", "slug": "angel-of-the-lord-who-appeared-to-hagar", "passage": "GEN.16.7-13", "kind": "identity", "priority": 1 },
+      { "q": "What does El Roi, the God who sees me, mean?", "slug": "el-roi-the-god-who-sees-me", "passage": "GEN.16.13", "kind": "phrase", "priority": 1 },
+      { "q": "Why did God tell Hagar to go back to a woman who mistreated her?", "slug": "why-did-god-send-hagar-back", "passage": "GEN.16.9", "kind": "ethics", "priority": 1 },
+      { "q": "What does Ishmael's hand against everyone mean?", "slug": "ishmaels-hand-against-everyone", "passage": "GEN.16.12", "kind": "phrase", "priority": 2 },
+      { "q": "Are Arabs descended from Ishmael?", "slug": "are-arabs-descended-from-ishmael", "passage": "GEN.16.10-12", "kind": "history", "priority": 2 }
+    ],
+    "17": [
+      { "q": "Why did God change Abram's name to Abraham?", "slug": "why-did-god-change-abrams-name", "passage": "GEN.17.5", "kind": "phrase", "priority": 1 },
+      { "q": "Why did God require circumcision as the sign of the covenant?", "slug": "why-did-god-require-circumcision", "passage": "GEN.17.10-11", "kind": "doctrine", "priority": 1 },
+      { "q": "Do Christians need to be circumcised?", "slug": "do-christians-need-to-be-circumcised", "passage": "GEN.17.10", "kind": "practice", "priority": 1 },
+      { "q": "What does El Shaddai, God Almighty, mean?", "slug": "el-shaddai-god-almighty", "passage": "GEN.17.1", "kind": "phrase", "priority": 1 },
+      { "q": "Why did Abraham laugh when God promised him a son?", "slug": "why-did-abraham-laugh", "passage": "GEN.17.17", "kind": "phrase", "priority": 2 },
+      { "q": "What does an everlasting covenant mean if the covenant changed?", "slug": "everlasting-covenant-genesis-17", "passage": "GEN.17.7", "kind": "tension", "priority": 2 },
+      { "q": "Why was Sarai renamed Sarah?", "slug": "why-was-sarai-renamed-sarah", "passage": "GEN.17.15", "kind": "phrase", "priority": 2 }
+    ],
+    "18": [
+      { "q": "Were the three visitors to Abraham God, angels, or the Trinity?", "slug": "three-visitors-to-abraham", "passage": "GEN.18.1-2", "kind": "identity", "priority": 1 },
+      { "q": "Why does Abraham bargain with God over Sodom?", "slug": "abraham-bargains-with-god-over-sodom", "passage": "GEN.18.23-32", "kind": "doctrine", "priority": 1 },
+      { "q": "Can prayer really change God's mind?", "slug": "can-prayer-change-gods-mind", "passage": "GEN.18.26-32", "kind": "doctrine", "priority": 1 },
+      { "q": "Why did Sarah laugh and then deny it?", "slug": "why-did-sarah-laugh-and-deny-it", "passage": "GEN.18.12-15", "kind": "phrase", "priority": 1 },
+      { "q": "What does is anything too hard for the LORD mean?", "slug": "is-anything-too-hard-for-the-lord", "passage": "GEN.18.14", "kind": "phrase", "priority": 1 },
+      { "q": "Did God really not know what was happening in Sodom?", "slug": "did-god-not-know-what-was-happening-in-sodom", "passage": "GEN.18.20-21", "kind": "tension", "priority": 2 },
+      { "q": "Why did the visitors eat if they were not human?", "slug": "why-did-the-visitors-eat", "passage": "GEN.18.8", "kind": "tension", "priority": 3 }
+    ],
+    "19": [
+      { "q": "What was the sin of Sodom?", "slug": "what-was-the-sin-of-sodom", "passage": "GEN.19.4-5", "kind": "ethics", "priority": 1 },
+      { "q": "Why did Lot offer his daughters to the mob?", "slug": "why-did-lot-offer-his-daughters", "passage": "GEN.19.8", "kind": "ethics", "priority": 1 },
+      { "q": "Why was Lot's wife turned into a pillar of salt?", "slug": "why-was-lots-wife-turned-to-salt", "passage": "GEN.19.26", "kind": "ethics", "priority": 1 },
+      { "q": "Why did Lot's daughters sleep with their father?", "slug": "why-did-lots-daughters-sleep-with-their-father", "passage": "GEN.19.30-38", "kind": "ethics", "priority": 1 },
+      { "q": "Why does 2 Peter call Lot righteous after Genesis 19?", "slug": "why-is-lot-called-righteous", "passage": "GEN.19.16", "kind": "tension", "priority": 1 },
+      { "q": "Has Sodom been found by archaeologists?", "slug": "has-sodom-been-found", "passage": "GEN.19.24-25", "kind": "history", "priority": 2 },
+      { "q": "What was the sulfur and fire that destroyed Sodom?", "slug": "sulfur-and-fire-that-destroyed-sodom", "passage": "GEN.19.24", "kind": "history", "priority": 2 },
+      { "q": "Who were the Moabites and Ammonites?", "slug": "who-were-the-moabites-and-ammonites", "passage": "GEN.19.37-38", "kind": "history", "priority": 2 }
+    ],
+    "20": [
+      { "q": "Why did Abraham lie about Sarah a second time?", "slug": "why-did-abraham-lie-about-sarah-again", "passage": "GEN.20.2", "kind": "ethics", "priority": 1 },
+      { "q": "Was Sarah really Abraham's half sister?", "slug": "was-sarah-abrahams-half-sister", "passage": "GEN.20.12", "kind": "history", "priority": 1 },
+      { "q": "Why does God call Abraham a prophet in Genesis 20?", "slug": "abraham-called-a-prophet", "passage": "GEN.20.7", "kind": "phrase", "priority": 2 },
+      { "q": "Why did God protect Abimelech from sinning?", "slug": "god-kept-abimelech-from-sinning", "passage": "GEN.20.6", "kind": "doctrine", "priority": 2 }
+    ],
+    "21": [
+      { "q": "Why did Abraham send Hagar and Ishmael away?", "slug": "why-did-abraham-send-hagar-and-ishmael-away", "passage": "GEN.21.10-14", "kind": "ethics", "priority": 1 },
+      { "q": "What does the name Isaac mean?", "slug": "what-does-the-name-isaac-mean", "passage": "GEN.21.6", "kind": "phrase", "priority": 1 },
+      { "q": "How old was Abraham when Isaac was born?", "slug": "how-old-was-abraham-when-isaac-was-born", "passage": "GEN.21.5", "kind": "number", "priority": 2 },
+      { "q": "How did Ishmael mock Isaac, and why did it matter?", "slug": "how-did-ishmael-mock-isaac", "passage": "GEN.21.9", "kind": "phrase", "priority": 2 },
+      { "q": "What is Beersheba and why is it called the well of the oath?", "slug": "beersheba-well-of-the-oath", "passage": "GEN.21.31", "kind": "history", "priority": 3 }
+    ],
+    "22": [
+      { "q": "Why did God tell Abraham to sacrifice Isaac?", "slug": "why-did-god-tell-abraham-to-sacrifice-isaac", "passage": "GEN.22.2", "kind": "ethics", "priority": 1 },
+      { "q": "Does Genesis 22 mean God approves of child sacrifice?", "slug": "does-genesis-22-approve-child-sacrifice", "passage": "GEN.22.2-12", "kind": "ethics", "priority": 1 },
+      { "q": "Why does God test people if he already knows their hearts?", "slug": "why-does-god-test-people", "passage": "GEN.22.1", "kind": "tension", "priority": 1 },
+      { "q": "What does the LORD will provide, Jehovah Jireh, mean?", "slug": "jehovah-jireh-the-lord-will-provide", "passage": "GEN.22.14", "kind": "phrase", "priority": 1 },
+      { "q": "How old was Isaac when Abraham almost sacrificed him?", "slug": "how-old-was-isaac-on-mount-moriah", "passage": "GEN.22.6", "kind": "number", "priority": 1 },
+      { "q": "Where is Mount Moriah and is it the temple mount?", "slug": "where-is-mount-moriah", "passage": "GEN.22.2", "kind": "history", "priority": 1 },
+      { "q": "How is the binding of Isaac a picture of Jesus?", "slug": "binding-of-isaac-and-jesus", "passage": "GEN.22.8-13", "kind": "doctrine", "priority": 1 },
+      { "q": "What does God will provide the lamb mean when a ram was provided?", "slug": "god-will-provide-the-lamb-but-a-ram-appeared", "passage": "GEN.22.8", "kind": "tension", "priority": 2 }
+    ],
+    "23": [
+      { "q": "Why did Abraham insist on paying full price for Sarah's burial cave?", "slug": "why-did-abraham-pay-full-price-for-the-cave", "passage": "GEN.23.13", "kind": "practice", "priority": 1 },
+      { "q": "Where is the cave of Machpelah today?", "slug": "cave-of-machpelah", "passage": "GEN.23.19", "kind": "history", "priority": 2 },
+      { "q": "How old was Sarah when she died?", "slug": "how-old-was-sarah-when-she-died", "passage": "GEN.23.1", "kind": "number", "priority": 3 }
+    ],
+    "24": [
+      { "q": "Why did Abraham's servant swear with his hand under Abraham's thigh?", "slug": "oath-with-hand-under-the-thigh", "passage": "GEN.24.2-3", "kind": "phrase", "priority": 1 },
+      { "q": "Was the servant's test at the well putting out a fleece?", "slug": "abrahams-servant-prayer-at-the-well", "passage": "GEN.24.12-14", "kind": "practice", "priority": 1 },
+      { "q": "Why couldn't Isaac marry a Canaanite woman?", "slug": "why-couldnt-isaac-marry-a-canaanite", "passage": "GEN.24.3", "kind": "doctrine", "priority": 1 },
+      { "q": "Did Rebekah have a choice about marrying Isaac?", "slug": "did-rebekah-have-a-choice", "passage": "GEN.24.57-58", "kind": "history", "priority": 2 },
+      { "q": "Who was Abraham's servant, and was he Eliezer?", "slug": "was-abrahams-servant-eliezer", "passage": "GEN.24.2", "kind": "identity", "priority": 3 }
+    ],
+    "25": [
+      { "q": "Why did Esau sell his birthright for a bowl of stew?", "slug": "esau-sold-his-birthright-for-stew", "passage": "GEN.25.29-34", "kind": "phrase", "priority": 1 },
+      { "q": "What was a birthright in the Old Testament?", "slug": "what-was-a-birthright", "passage": "GEN.25.31", "kind": "history", "priority": 1 },
+      { "q": "What does the older will serve the younger mean?", "slug": "the-older-will-serve-the-younger", "passage": "GEN.25.23", "kind": "doctrine", "priority": 1 },
+      { "q": "Why were Jacob and Esau struggling in the womb?", "slug": "jacob-and-esau-struggling-in-the-womb", "passage": "GEN.25.22-23", "kind": "phrase", "priority": 1 },
+      { "q": "Who was Keturah and who were her children?", "slug": "who-was-keturah", "passage": "GEN.25.1-4", "kind": "identity", "priority": 2 },
+      { "q": "What does Jacob grabbing Esau's heel mean?", "slug": "jacob-grabbing-esaus-heel", "passage": "GEN.25.26", "kind": "phrase", "priority": 2 }
+    ],
+    "26": [
+      { "q": "Why did Isaac repeat his father's lie about his wife?", "slug": "isaac-repeated-abrahams-lie", "passage": "GEN.26.7", "kind": "ethics", "priority": 1 },
+      { "q": "Why did God tell Isaac not to go to Egypt?", "slug": "why-did-god-tell-isaac-not-to-go-to-egypt", "passage": "GEN.26.2-3", "kind": "phrase", "priority": 2 },
+      { "q": "Why does Isaac keep digging wells that others take?", "slug": "isaac-digging-wells", "passage": "GEN.26.18-22", "kind": "practice", "priority": 2 },
+      { "q": "What does the covenant being confirmed to Isaac mean?", "slug": "covenant-confirmed-to-isaac", "passage": "GEN.26.3-5", "kind": "doctrine", "priority": 3 }
+    ],
+    "27": [
+      { "q": "Why did God bless Jacob after he lied to get the blessing?", "slug": "why-did-god-bless-jacob-after-he-lied", "passage": "GEN.27.19-29", "kind": "ethics", "priority": 1 },
+      { "q": "Why couldn't Isaac take back the blessing he gave Jacob?", "slug": "why-couldnt-isaac-take-back-the-blessing", "passage": "GEN.27.33-37", "kind": "doctrine", "priority": 1 },
+      { "q": "Was Rebekah right to help Jacob deceive Isaac?", "slug": "was-rebekah-right-to-help-jacob-deceive", "passage": "GEN.27.5-13", "kind": "ethics", "priority": 1 },
+      { "q": "What blessing did Esau actually receive?", "slug": "what-blessing-did-esau-receive", "passage": "GEN.27.39-40", "kind": "phrase", "priority": 2 },
+      { "q": "Why did a spoken blessing carry so much weight?", "slug": "why-did-a-spoken-blessing-carry-weight", "passage": "GEN.27.27-29", "kind": "history", "priority": 2 }
+    ],
+    "28": [
+      { "q": "What is Jacob's ladder and what does it mean?", "slug": "jacobs-ladder", "passage": "GEN.28.12", "kind": "phrase", "priority": 1 },
+      { "q": "Why did Jesus refer to Jacob's ladder in John 1:51?", "slug": "jacobs-ladder-and-jesus", "passage": "GEN.28.12", "kind": "doctrine", "priority": 1 },
+      { "q": "What does surely the LORD is in this place and I did not know it mean?", "slug": "surely-the-lord-is-in-this-place", "passage": "GEN.28.16", "kind": "phrase", "priority": 1 },
+      { "q": "Was Jacob's vow at Bethel bargaining with God?", "slug": "was-jacobs-vow-at-bethel-bargaining", "passage": "GEN.28.20-22", "kind": "practice", "priority": 1 },
+      { "q": "What is Bethel and why is it called the house of God?", "slug": "bethel-house-of-god", "passage": "GEN.28.17-19", "kind": "history", "priority": 2 },
+      { "q": "Why did Jacob set up a stone pillar and pour oil on it?", "slug": "jacob-set-up-a-stone-pillar", "passage": "GEN.28.18", "kind": "practice", "priority": 3 }
+    ],
+    "29": [
+      { "q": "How did Laban trick Jacob into marrying Leah?", "slug": "how-did-laban-trick-jacob", "passage": "GEN.29.23-25", "kind": "phrase", "priority": 1 },
+      { "q": "Did Jacob really work 14 years for Rachel?", "slug": "did-jacob-work-14-years-for-rachel", "passage": "GEN.29.27-30", "kind": "number", "priority": 1 },
+      { "q": "Why does the Bible allow Jacob to have two wives?", "slug": "why-did-god-allow-jacob-two-wives", "passage": "GEN.29.28", "kind": "ethics", "priority": 1 },
+      { "q": "What does the LORD saw that Leah was hated mean?", "slug": "the-lord-saw-that-leah-was-hated", "passage": "GEN.29.31", "kind": "phrase", "priority": 1 },
+      { "q": "What do the names of Leah's sons mean?", "slug": "meaning-of-leahs-sons-names", "passage": "GEN.29.32-35", "kind": "phrase", "priority": 2 }
+    ],
+    "30": [
+      { "q": "What were the mandrakes Rachel and Leah argued over?", "slug": "what-were-the-mandrakes", "passage": "GEN.30.14-16", "kind": "history", "priority": 1 },
+      { "q": "How did Jacob's striped branches change the color of the flocks?", "slug": "jacobs-striped-branches-and-the-flocks", "passage": "GEN.30.37-39", "kind": "claim", "priority": 1 },
+      { "q": "Why did Rachel and Leah use their servants to have children?", "slug": "rachel-and-leah-used-their-servants", "passage": "GEN.30.3-9", "kind": "ethics", "priority": 1 },
+      { "q": "What do the names of Jacob's twelve sons mean?", "slug": "meaning-of-jacobs-twelve-sons-names", "passage": "GEN.30.6-24", "kind": "phrase", "priority": 2 },
+      { "q": "Does God open and close the womb?", "slug": "does-god-open-and-close-the-womb", "passage": "GEN.30.22", "kind": "doctrine", "priority": 2 }
+    ],
+    "31": [
+      { "q": "What were the household gods Rachel stole from Laban?", "slug": "household-gods-rachel-stole", "passage": "GEN.31.19", "kind": "identity", "priority": 1 },
+      { "q": "Why did Rachel steal her father's idols?", "slug": "why-did-rachel-steal-the-idols", "passage": "GEN.31.19-35", "kind": "history", "priority": 1 },
+      { "q": "What is the Mizpah covenant and is it a blessing?", "slug": "mizpah-covenant", "passage": "GEN.31.49", "kind": "claim", "priority": 1 },
+      { "q": "Was Jacob honest about how he got Laban's flocks?", "slug": "was-jacob-honest-about-labans-flocks", "passage": "GEN.31.7-12", "kind": "ethics", "priority": 2 },
+      { "q": "What is the Fear of Isaac in Genesis 31:53?", "slug": "the-fear-of-isaac", "passage": "GEN.31.53", "kind": "phrase", "priority": 3 }
+    ],
+    "32": [
+      { "q": "Who did Jacob wrestle with all night?", "slug": "who-did-jacob-wrestle-with", "passage": "GEN.32.24-30", "kind": "identity", "priority": 1 },
+      { "q": "Why did God change Jacob's name to Israel?", "slug": "why-was-jacob-renamed-israel", "passage": "GEN.32.28", "kind": "phrase", "priority": 1 },
+      { "q": "Why did the man dislocate Jacob's hip?", "slug": "why-was-jacobs-hip-dislocated", "passage": "GEN.32.25", "kind": "phrase", "priority": 1 },
+      { "q": "How could Jacob see God face to face and live?", "slug": "jacob-saw-god-face-to-face-and-lived", "passage": "GEN.32.30", "kind": "tension", "priority": 1 },
+      { "q": "What does I will not let you go unless you bless me mean?", "slug": "i-will-not-let-you-go-unless-you-bless-me", "passage": "GEN.32.26", "kind": "phrase", "priority": 1 },
+      { "q": "Why do Israelites not eat the sinew of the hip?", "slug": "why-israelites-do-not-eat-the-hip-sinew", "passage": "GEN.32.32", "kind": "practice", "priority": 2 },
+      { "q": "What is Peniel and what does the name mean?", "slug": "peniel-meaning", "passage": "GEN.32.30", "kind": "phrase", "priority": 3 }
+    ],
+    "33": [
+      { "q": "Why did Esau forgive Jacob so easily?", "slug": "why-did-esau-forgive-jacob", "passage": "GEN.33.4", "kind": "phrase", "priority": 1 },
+      { "q": "What does seeing your face is like seeing the face of God mean?", "slug": "seeing-your-face-is-like-seeing-god", "passage": "GEN.33.10", "kind": "phrase", "priority": 2 },
+      { "q": "Why did Jacob go to Shechem instead of following Esau to Seir?", "slug": "why-did-jacob-go-to-shechem", "passage": "GEN.33.17-18", "kind": "history", "priority": 3 }
+    ],
+    "34": [
+      { "q": "What happened to Dinah in Genesis 34?", "slug": "what-happened-to-dinah", "passage": "GEN.34.1-2", "kind": "ethics", "priority": 1 },
+      { "q": "Were Simeon and Levi right to kill the men of Shechem?", "slug": "were-simeon-and-levi-right-to-kill-shechem", "passage": "GEN.34.25-31", "kind": "ethics", "priority": 1 },
+      { "q": "Why did Jacob stay silent about what happened to Dinah?", "slug": "why-was-jacob-silent-about-dinah", "passage": "GEN.34.5", "kind": "ethics", "priority": 1 },
+      { "q": "How did Simeon and Levi use circumcision as a weapon?", "slug": "circumcision-used-as-a-trap-at-shechem", "passage": "GEN.34.13-24", "kind": "phrase", "priority": 2 }
+    ],
+    "35": [
+      { "q": "Why did Jacob bury the foreign gods under a tree?", "slug": "jacob-buried-the-foreign-gods", "passage": "GEN.35.4", "kind": "practice", "priority": 1 },
+      { "q": "Why did Rachel name her son Ben-oni and Jacob rename him Benjamin?", "slug": "ben-oni-renamed-benjamin", "passage": "GEN.35.18", "kind": "phrase", "priority": 1 },
+      { "q": "Where is Rachel's tomb?", "slug": "where-is-rachels-tomb", "passage": "GEN.35.19-20", "kind": "history", "priority": 2 },
+      { "q": "Why is Jacob renamed Israel a second time in Genesis 35?", "slug": "jacob-renamed-israel-a-second-time", "passage": "GEN.35.10", "kind": "tension", "priority": 2 },
+      { "q": "What did Reuben do with Bilhah and why does it matter later?", "slug": "reuben-and-bilhah", "passage": "GEN.35.22", "kind": "ethics", "priority": 2 }
+    ],
+    "36": [
+      { "q": "Who were the Edomites and why does Genesis list their kings?", "slug": "who-were-the-edomites", "passage": "GEN.36.1-8", "kind": "history", "priority": 2 },
+      { "q": "Why does Genesis 36 list kings of Edom before Israel had kings?", "slug": "kings-of-edom-before-israel-had-kings", "passage": "GEN.36.31", "kind": "tension", "priority": 2 },
+      { "q": "Who were the Horites in Genesis 36?", "slug": "who-were-the-horites", "passage": "GEN.36.20-21", "kind": "identity", "priority": 3 }
+    ],
+    "37": [
+      { "q": "Was Joseph's coat of many colors really multicolored?", "slug": "josephs-coat-of-many-colors", "passage": "GEN.37.3", "kind": "claim", "priority": 1 },
+      { "q": "What did Joseph's dreams of the sheaves and stars mean?", "slug": "josephs-dreams-of-sheaves-and-stars", "passage": "GEN.37.5-11", "kind": "phrase", "priority": 1 },
+      { "q": "Why did Joseph's brothers hate him so much?", "slug": "why-did-josephs-brothers-hate-him", "passage": "GEN.37.3-11", "kind": "phrase", "priority": 1 },
+      { "q": "Did Reuben or Judah save Joseph's life?", "slug": "did-reuben-or-judah-save-joseph", "passage": "GEN.37.21-27", "kind": "tension", "priority": 1 },
+      { "q": "Were Joseph's buyers Midianites or Ishmaelites?", "slug": "midianites-or-ishmaelites-bought-joseph", "passage": "GEN.37.28", "kind": "tension", "priority": 1 },
+      { "q": "How much was Joseph sold for and what was it worth?", "slug": "how-much-was-joseph-sold-for", "passage": "GEN.37.28", "kind": "number", "priority": 2 }
+    ],
+    "38": [
+      { "q": "Why is the story of Judah and Tamar in the middle of Joseph's story?", "slug": "why-is-judah-and-tamar-in-josephs-story", "passage": "GEN.38.1-2", "kind": "phrase", "priority": 1 },
+      { "q": "What was Onan's sin and does it forbid contraception?", "slug": "what-was-onans-sin", "passage": "GEN.38.9-10", "kind": "ethics", "priority": 1 },
+      { "q": "What is levirate marriage?", "slug": "what-is-levirate-marriage", "passage": "GEN.38.8", "kind": "history", "priority": 1 },
+      { "q": "Why does Judah say Tamar is more righteous than he is?", "slug": "tamar-was-more-righteous-than-judah", "passage": "GEN.38.26", "kind": "ethics", "priority": 1 },
+      { "q": "Why is Tamar in the genealogy of Jesus?", "slug": "why-is-tamar-in-the-genealogy-of-jesus", "passage": "GEN.38.29", "kind": "doctrine", "priority": 1 },
+      { "q": "Why did Tamar disguise herself as a prostitute?", "slug": "why-did-tamar-disguise-herself", "passage": "GEN.38.14-15", "kind": "phrase", "priority": 2 }
+    ],
+    "39": [
+      { "q": "Why did Joseph run from Potiphar's wife instead of arguing?", "slug": "joseph-ran-from-potiphars-wife", "passage": "GEN.39.12", "kind": "practice", "priority": 1 },
+      { "q": "What does how then can I do this great wickedness and sin against God mean?", "slug": "sin-against-god-genesis-39-9", "passage": "GEN.39.9", "kind": "phrase", "priority": 1 },
+      { "q": "Why did God let Joseph go to prison for something he did not do?", "slug": "why-did-god-let-joseph-go-to-prison", "passage": "GEN.39.20-21", "kind": "doctrine", "priority": 1 },
+      { "q": "What does the LORD was with Joseph mean when everything went wrong?", "slug": "the-lord-was-with-joseph", "passage": "GEN.39.2-3", "kind": "phrase", "priority": 2 },
+      { "q": "Who was Potiphar and what was a captain of the guard?", "slug": "who-was-potiphar", "passage": "GEN.39.1", "kind": "history", "priority": 3 }
+    ],
+    "40": [
+      { "q": "What did the cupbearer's and baker's dreams mean?", "slug": "cupbearer-and-baker-dreams", "passage": "GEN.40.9-19", "kind": "phrase", "priority": 1 },
+      { "q": "Does Genesis 40 mean God still speaks through dreams?", "slug": "does-god-speak-through-dreams-today", "passage": "GEN.40.8", "kind": "doctrine", "priority": 1 },
+      { "q": "Why did the cupbearer forget Joseph for two years?", "slug": "why-did-the-cupbearer-forget-joseph", "passage": "GEN.40.23", "kind": "phrase", "priority": 2 },
+      { "q": "What was a cupbearer in ancient Egypt?", "slug": "what-was-a-cupbearer", "passage": "GEN.40.1-2", "kind": "history", "priority": 3 }
+    ],
+    "41": [
+      { "q": "What did Pharaoh's dream of seven cows and seven ears of grain mean?", "slug": "pharaohs-dream-of-seven-cows", "passage": "GEN.41.1-7", "kind": "phrase", "priority": 1 },
+      { "q": "How did Joseph go from prison to second in command of Egypt?", "slug": "joseph-from-prison-to-ruler-of-egypt", "passage": "GEN.41.39-44", "kind": "phrase", "priority": 1 },
+      { "q": "Is there evidence of a seven-year famine in Egyptian records?", "slug": "evidence-for-the-seven-year-famine", "passage": "GEN.41.53-57", "kind": "history", "priority": 1 },
+      { "q": "Why did Joseph name his sons Manasseh and Ephraim?", "slug": "why-joseph-named-his-sons-manasseh-and-ephraim", "passage": "GEN.41.51-52", "kind": "phrase", "priority": 2 },
+      { "q": "Who was Asenath, Joseph's Egyptian wife?", "slug": "who-was-asenath", "passage": "GEN.41.45", "kind": "identity", "priority": 2 },
+      { "q": "Which Pharaoh did Joseph serve?", "slug": "which-pharaoh-did-joseph-serve", "passage": "GEN.41.14", "kind": "history", "priority": 2 }
+    ],
+    "42": [
+      { "q": "Why did Joseph accuse his brothers of being spies?", "slug": "why-did-joseph-accuse-his-brothers-of-spying", "passage": "GEN.42.9", "kind": "phrase", "priority": 1 },
+      { "q": "Why did Joseph hide his identity from his brothers?", "slug": "why-did-joseph-hide-his-identity", "passage": "GEN.42.7-8", "kind": "phrase", "priority": 1 },
+      { "q": "Why did Joseph put the silver back in his brothers' sacks?", "slug": "silver-returned-in-the-sacks", "passage": "GEN.42.25", "kind": "phrase", "priority": 2 },
+      { "q": "Why did Jacob refuse to let Benjamin go to Egypt?", "slug": "why-jacob-refused-to-send-benjamin", "passage": "GEN.42.36-38", "kind": "phrase", "priority": 3 }
+    ],
+    "43": [
+      { "q": "Why did Judah offer himself as a guarantee for Benjamin?", "slug": "judah-offered-himself-for-benjamin", "passage": "GEN.43.8-9", "kind": "phrase", "priority": 1 },
+      { "q": "Why did Egyptians refuse to eat with Hebrews?", "slug": "why-egyptians-would-not-eat-with-hebrews", "passage": "GEN.43.32", "kind": "history", "priority": 1 },
+      { "q": "Why did Joseph give Benjamin five times as much food?", "slug": "benjamin-given-five-times-as-much", "passage": "GEN.43.34", "kind": "phrase", "priority": 2 }
+    ],
+    "44": [
+      { "q": "Why did Joseph plant his silver cup in Benjamin's sack?", "slug": "josephs-silver-cup-in-benjamins-sack", "passage": "GEN.44.2", "kind": "phrase", "priority": 1 },
+      { "q": "Did Joseph practice divination with his cup?", "slug": "did-joseph-practice-divination", "passage": "GEN.44.5", "kind": "ethics", "priority": 1 },
+      { "q": "Why is Judah's speech in Genesis 44 the turning point of the story?", "slug": "judahs-speech-genesis-44", "passage": "GEN.44.18-34", "kind": "phrase", "priority": 2 }
+    ],
+    "45": [
+      { "q": "What does it was not you who sent me here but God mean?", "slug": "not-you-but-god-sent-me-here", "passage": "GEN.45.8", "kind": "doctrine", "priority": 1 },
+      { "q": "How can God send Joseph to Egypt if his brothers chose to sell him?", "slug": "gods-sovereignty-and-human-choice-in-joseph", "passage": "GEN.45.5-8", "kind": "doctrine", "priority": 1 },
+      { "q": "Why did Joseph tell his brothers not to quarrel on the way home?", "slug": "do-not-quarrel-on-the-way", "passage": "GEN.45.24", "kind": "phrase", "priority": 2 }
+    ],
+    "46": [
+      { "q": "Why does Genesis say 70 people went to Egypt but Acts says 75?", "slug": "70-or-75-people-went-to-egypt", "passage": "GEN.46.27", "kind": "tension", "priority": 1 },
+      { "q": "Why did God tell Jacob it was safe to go to Egypt?", "slug": "god-told-jacob-to-go-to-egypt", "passage": "GEN.46.2-4", "kind": "phrase", "priority": 2 },
+      { "q": "Where was Goshen in Egypt?", "slug": "where-was-goshen", "passage": "GEN.46.28", "kind": "history", "priority": 2 }
+    ],
+    "47": [
+      { "q": "Did Joseph enslave the Egyptians during the famine?", "slug": "did-joseph-enslave-the-egyptians", "passage": "GEN.47.20-25", "kind": "ethics", "priority": 1 },
+      { "q": "Why were shepherds detestable to the Egyptians?", "slug": "why-shepherds-were-detestable-to-egyptians", "passage": "GEN.47.3-6", "kind": "history", "priority": 1 },
+      { "q": "Why did Jacob bless Pharaoh?", "slug": "why-did-jacob-bless-pharaoh", "passage": "GEN.47.7-10", "kind": "phrase", "priority": 2 },
+      { "q": "What does Jacob mean by calling his years few and evil?", "slug": "jacob-called-his-years-few-and-evil", "passage": "GEN.47.9", "kind": "phrase", "priority": 2 }
+    ],
+    "48": [
+      { "q": "Why did Jacob cross his hands when blessing Ephraim and Manasseh?", "slug": "jacob-crossed-his-hands-blessing", "passage": "GEN.48.13-14", "kind": "phrase", "priority": 1 },
+      { "q": "Why did Jacob give the greater blessing to the younger son again?", "slug": "greater-blessing-to-the-younger-son", "passage": "GEN.48.19", "kind": "doctrine", "priority": 1 },
+      { "q": "Why did Jacob adopt Joseph's two sons as his own?", "slug": "jacob-adopted-ephraim-and-manasseh", "passage": "GEN.48.5", "kind": "phrase", "priority": 1 },
+      { "q": "Why are there 13 tribes if there were 12 sons?", "slug": "why-are-there-13-tribes-of-israel", "passage": "GEN.48.5", "kind": "number", "priority": 1 },
+      { "q": "What is the Angel who redeemed me in Genesis 48:16?", "slug": "the-angel-who-redeemed-me", "passage": "GEN.48.16", "kind": "identity", "priority": 2 }
+    ],
+    "49": [
+      { "q": "What does the scepter will not depart from Judah mean?", "slug": "the-scepter-will-not-depart-from-judah", "passage": "GEN.49.10", "kind": "doctrine", "priority": 1 },
+      { "q": "Who or what is Shiloh in Genesis 49:10?", "slug": "who-is-shiloh-genesis-49-10", "passage": "GEN.49.10", "kind": "identity", "priority": 1 },
+      { "q": "Why did Jacob curse Simeon and Levi in his final blessing?", "slug": "why-jacob-cursed-simeon-and-levi", "passage": "GEN.49.5-7", "kind": "ethics", "priority": 1 },
+      { "q": "Why did Reuben lose his firstborn blessing?", "slug": "why-reuben-lost-the-firstborn-blessing", "passage": "GEN.49.3-4", "kind": "phrase", "priority": 1 },
+      { "q": "What does Judah is a lion's cub mean?", "slug": "judah-is-a-lions-cub", "passage": "GEN.49.9", "kind": "phrase", "priority": 2 },
+      { "q": "What do the blessings on each of the twelve tribes mean?", "slug": "blessings-on-the-twelve-tribes-genesis-49", "passage": "GEN.49.13-27", "kind": "phrase", "priority": 2 },
+      { "q": "What does Dan will be a serpent by the way mean?", "slug": "dan-will-be-a-serpent-by-the-way", "passage": "GEN.49.17", "kind": "phrase", "priority": 2 }
+    ],
+    "50": [
+      { "q": "What does you meant it for evil but God meant it for good mean?", "slug": "you-meant-it-for-evil-god-meant-it-for-good", "passage": "GEN.50.20", "kind": "doctrine", "priority": 1 },
+      { "q": "Does Genesis 50:20 mean God causes evil?", "slug": "does-genesis-50-20-mean-god-causes-evil", "passage": "GEN.50.20", "kind": "doctrine", "priority": 1 },
+      { "q": "Why was Jacob embalmed like an Egyptian?", "slug": "why-was-jacob-embalmed", "passage": "GEN.50.2-3", "kind": "history", "priority": 1 },
+      { "q": "Why did Joseph want his bones carried out of Egypt?", "slug": "why-joseph-wanted-his-bones-carried-out-of-egypt", "passage": "GEN.50.24-25", "kind": "phrase", "priority": 1 },
+      { "q": "Why were Joseph's brothers still afraid after he forgave them?", "slug": "why-josephs-brothers-were-still-afraid", "passage": "GEN.50.15-18", "kind": "phrase", "priority": 2 },
+      { "q": "What does am I in the place of God mean?", "slug": "am-i-in-the-place-of-god", "passage": "GEN.50.19", "kind": "phrase", "priority": 2 }
+    ]
+  }
+}

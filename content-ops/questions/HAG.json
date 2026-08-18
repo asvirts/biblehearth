@@ -1,0 +1,21 @@
+{
+  "book": "HAG",
+  "name": "Haggai",
+  "chapters": {
+    "1": [
+      { "q": "What does is it a time for you to live in paneled houses mean?", "slug": "paneled-houses-while-the-temple-lies-in-ruins", "passage": "HAG.1.4", "kind": "practice", "priority": 1 },
+      { "q": "What does you earn wages only to put them in a purse with holes mean?", "slug": "a-purse-with-holes", "passage": "HAG.1.6", "kind": "phrase", "priority": 1 },
+      { "q": "What does give careful thought to your ways mean?", "slug": "give-careful-thought-to-your-ways", "passage": "HAG.1.5-7", "kind": "practice", "priority": 1 },
+      { "q": "Why did God withhold rain and harvest from the returned exiles?", "slug": "why-god-withheld-rain-and-harvest", "passage": "HAG.1.9-11", "kind": "doctrine", "priority": 1 },
+      { "q": "Who was Zerubbabel?", "slug": "who-was-zerubbabel", "passage": "HAG.1.1", "kind": "identity", "priority": 1 }
+    ],
+    "2": [
+      { "q": "What does the glory of this latter house will be greater mean?", "slug": "the-glory-of-this-latter-house", "passage": "HAG.2.9", "kind": "doctrine", "priority": 1 },
+      { "q": "Who or what is the desire of all nations in Haggai 2:7?", "slug": "the-desire-of-all-nations", "passage": "HAG.2.7", "kind": "identity", "priority": 1 },
+      { "q": "What does I will shake the heavens and the earth mean?", "slug": "i-will-shake-the-heavens-and-the-earth", "passage": "HAG.2.6-7", "kind": "doctrine", "priority": 1 },
+      { "q": "What does the priestly ruling about holiness and defilement teach?", "slug": "the-priestly-ruling-on-holiness-and-defilement", "passage": "HAG.2.11-14", "kind": "doctrine", "priority": 1 },
+      { "q": "What does I will make you like my signet ring mean?", "slug": "like-my-signet-ring", "passage": "HAG.2.23", "kind": "phrase", "priority": 1 },
+      { "q": "Why did the old men weep when they saw the new temple?", "slug": "the-old-men-wept-at-the-new-temple", "passage": "HAG.2.3", "kind": "phrase", "priority": 1 }
+    ]
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "book": "2JN",
+  "name": "2 John",
+  "chapters": {
+    "1": [
+      { "q": "Who is the elect lady in 2 John?", "slug": "who-is-the-elect-lady", "passage": "2JN.1.1", "kind": "identity", "priority": 1 },
+      { "q": "Does 2 John 10 mean Christians should not welcome false teachers into their homes?", "slug": "do-not-receive-him-into-your-house", "passage": "2JN.1.10", "kind": "practice", "priority": 1 },
+      { "q": "Who is the deceiver and the antichrist in 2 John 7?", "slug": "the-deceiver-and-the-antichrist-2-john", "passage": "2JN.1.7", "kind": "identity", "priority": 1 },
+      { "q": "What does whoever greets him shares in his wicked work mean?", "slug": "whoever-greets-him-shares-in-his-wicked-work", "passage": "2JN.1.11", "kind": "ethics", "priority": 1 },
+      { "q": "What does denying that Jesus came in the flesh mean?", "slug": "denying-that-jesus-came-in-the-flesh", "passage": "2JN.1.7", "kind": "doctrine", "priority": 1 },
+      { "q": "What does walking in truth mean in 2 John?", "slug": "walking-in-truth-2-john", "passage": "2JN.1.4", "kind": "practice", "priority": 2 },
+      { "q": "Why did John prefer to speak face to face rather than write?", "slug": "john-preferred-to-speak-face-to-face", "passage": "2JN.1.12", "kind": "history", "priority": 3 }
+    ]
+  }
+}

@@ -1,0 +1,174 @@
+{
+  "book": "1SA",
+  "name": "1 Samuel",
+  "chapters": {
+    "1": [
+      { "q": "Why did Hannah want a child so badly?", "slug": "why-hannah-wanted-a-child-so-badly", "passage": "1SA.1.5-11", "kind": "history", "priority": 1 },
+      { "q": "Why did Eli think Hannah was drunk?", "slug": "why-eli-thought-hannah-was-drunk", "passage": "1SA.1.13-14", "kind": "phrase", "priority": 1 },
+      { "q": "What does I have lent him to the LORD mean about Samuel?", "slug": "i-have-lent-him-to-the-lord", "passage": "1SA.1.28", "kind": "practice", "priority": 1 },
+      { "q": "What was Hannah's vow and was it a Nazirite vow?", "slug": "hannahs-vow", "passage": "1SA.1.11", "kind": "doctrine", "priority": 1 },
+      { "q": "Why did Elkanah have two wives?", "slug": "why-elkanah-had-two-wives", "passage": "1SA.1.2", "kind": "ethics", "priority": 1 }
+    ],
+    "2": [
+      { "q": "What does Hannah's song in 1 Samuel 2 mean?", "slug": "hannahs-song", "passage": "1SA.2.1-10", "kind": "doctrine", "priority": 1 },
+      { "q": "What did Hophni and Phinehas do that was so wicked?", "slug": "the-sins-of-hophni-and-phinehas", "passage": "1SA.2.12-17", "kind": "ethics", "priority": 1 },
+      { "q": "What does those who honor me I will honor mean?", "slug": "those-who-honor-me-i-will-honor", "passage": "1SA.2.30", "kind": "doctrine", "priority": 1 },
+      { "q": "Why did God hold Eli responsible for his sons?", "slug": "why-god-held-eli-responsible", "passage": "1SA.2.29", "kind": "ethics", "priority": 1 },
+      { "q": "What does the LORD kills and brings to life mean?", "slug": "the-lord-kills-and-brings-to-life", "passage": "1SA.2.6", "kind": "doctrine", "priority": 1 },
+      { "q": "Who is the faithful priest promised in 1 Samuel 2:35?", "slug": "the-faithful-priest-promised", "passage": "1SA.2.35", "kind": "identity", "priority": 2 }
+    ],
+    "3": [
+      { "q": "What does speak, for your servant is listening mean?", "slug": "speak-for-your-servant-is-listening", "passage": "1SA.3.10", "kind": "practice", "priority": 1 },
+      { "q": "Why did Samuel not recognize God's voice at first?", "slug": "why-samuel-did-not-recognize-gods-voice", "passage": "1SA.3.7", "kind": "doctrine", "priority": 1 },
+      { "q": "What does the word of the LORD was rare in those days mean?", "slug": "the-word-of-the-lord-was-rare", "passage": "1SA.3.1", "kind": "phrase", "priority": 1 },
+      { "q": "How old was Samuel when God first called him?", "slug": "how-old-was-samuel-when-god-called-him", "passage": "1SA.3.1", "kind": "number", "priority": 2 }
+    ],
+    "4": [
+      { "q": "Why did God let the ark of the covenant be captured?", "slug": "why-god-let-the-ark-be-captured", "passage": "1SA.4.10-11", "kind": "doctrine", "priority": 1 },
+      { "q": "What does Ichabod, the glory has departed, mean?", "slug": "ichabod-the-glory-has-departed", "passage": "1SA.4.21", "kind": "phrase", "priority": 1 },
+      { "q": "Why did Israel treat the ark like a lucky charm?", "slug": "israel-treated-the-ark-like-a-lucky-charm", "passage": "1SA.4.3-5", "kind": "practice", "priority": 1 },
+      { "q": "How did Eli die?", "slug": "how-eli-died", "passage": "1SA.4.18", "kind": "history", "priority": 1 }
+    ],
+    "5": [
+      { "q": "Why did the statue of Dagon fall before the ark?", "slug": "why-dagon-fell-before-the-ark", "passage": "1SA.5.3-4", "kind": "doctrine", "priority": 1 },
+      { "q": "What were the tumors the Philistines got from the ark?", "slug": "the-tumors-the-philistines-got", "passage": "1SA.5.6", "kind": "history", "priority": 1 },
+      { "q": "Who was Dagon, the Philistine god?", "slug": "who-was-dagon", "passage": "1SA.5.2", "kind": "identity", "priority": 1 }
+    ],
+    "6": [
+      { "q": "Why did the Philistines send golden tumors and mice with the ark?", "slug": "the-golden-tumors-and-mice", "passage": "1SA.6.4-5", "kind": "history", "priority": 1 },
+      { "q": "Why did God strike the men of Beth-shemesh for looking into the ark?", "slug": "why-god-struck-the-men-of-beth-shemesh", "passage": "1SA.6.19", "kind": "ethics", "priority": 1 }
+    ],
+    "7": [
+      { "q": "What does Ebenezer, thus far the LORD has helped us, mean?", "slug": "ebenezer-thus-far-the-lord-has-helped-us", "passage": "1SA.7.12", "kind": "phrase", "priority": 1 },
+      { "q": "What happened at Mizpah when Israel repented?", "slug": "what-happened-at-mizpah", "passage": "1SA.7.3-11", "kind": "history", "priority": 1 }
+    ],
+    "8": [
+      { "q": "Why was it wrong for Israel to ask for a king?", "slug": "why-it-was-wrong-to-ask-for-a-king", "passage": "1SA.8.4-7", "kind": "doctrine", "priority": 1 },
+      { "q": "What does they have rejected me as their king mean?", "slug": "they-have-rejected-me-as-their-king", "passage": "1SA.8.7", "kind": "doctrine", "priority": 1 },
+      { "q": "What did Samuel warn a king would do to Israel?", "slug": "samuels-warning-about-a-king", "passage": "1SA.8.11-18", "kind": "history", "priority": 1 },
+      { "q": "Why did God give Israel a king if it was rejection?", "slug": "why-god-gave-israel-a-king-anyway", "passage": "1SA.8.9-22", "kind": "doctrine", "priority": 1 }
+    ],
+    "9": [
+      { "q": "What is a seer, and how is it different from a prophet?", "slug": "what-is-a-seer", "passage": "1SA.9.9", "kind": "history", "priority": 1 },
+      { "q": "How did looking for lost donkeys lead Saul to the throne?", "slug": "saul-looking-for-lost-donkeys", "passage": "1SA.9.3-20", "kind": "phrase", "priority": 1 },
+      { "q": "Why was Saul described as a head taller than everyone?", "slug": "saul-a-head-taller-than-everyone", "passage": "1SA.9.2", "kind": "phrase", "priority": 1 }
+    ],
+    "10": [
+      { "q": "What does is Saul also among the prophets mean?", "slug": "is-saul-also-among-the-prophets", "passage": "1SA.10.11-12", "kind": "phrase", "priority": 1 },
+      { "q": "What does God changed Saul's heart mean?", "slug": "god-changed-sauls-heart", "passage": "1SA.10.9", "kind": "doctrine", "priority": 1 },
+      { "q": "Why was Saul hiding among the baggage?", "slug": "saul-hiding-among-the-baggage", "passage": "1SA.10.22", "kind": "phrase", "priority": 1 }
+    ],
+    "11": [
+      { "q": "Why did Nahash want to gouge out the right eye of every man?", "slug": "nahash-and-the-right-eye", "passage": "1SA.11.2", "kind": "history", "priority": 1 },
+      { "q": "Why did Saul cut up oxen and send the pieces through Israel?", "slug": "saul-cut-up-oxen-and-sent-the-pieces", "passage": "1SA.11.7", "kind": "history", "priority": 1 }
+    ],
+    "12": [
+      { "q": "Why did God send thunder and rain during the wheat harvest?", "slug": "thunder-and-rain-during-the-wheat-harvest", "passage": "1SA.12.17-18", "kind": "phrase", "priority": 1 },
+      { "q": "What does far be it from me that I should sin by ceasing to pray mean?", "slug": "sin-by-ceasing-to-pray-for-you", "passage": "1SA.12.23", "kind": "practice", "priority": 1 }
+    ],
+    "13": [
+      { "q": "Why was Saul's sacrifice such a serious sin?", "slug": "why-sauls-sacrifice-was-a-serious-sin", "passage": "1SA.13.8-14", "kind": "ethics", "priority": 1 },
+      { "q": "What does a man after his own heart mean?", "slug": "a-man-after-his-own-heart", "passage": "1SA.13.14", "kind": "phrase", "priority": 1 },
+      { "q": "Why were there no blacksmiths in Israel?", "slug": "why-there-were-no-blacksmiths-in-israel", "passage": "1SA.13.19-22", "kind": "history", "priority": 1 }
+    ],
+    "14": [
+      { "q": "What does nothing can hinder the LORD from saving by many or by few mean?", "slug": "by-many-or-by-few", "passage": "1SA.14.6", "kind": "doctrine", "priority": 1 },
+      { "q": "Why did Saul's oath about eating nearly kill Jonathan?", "slug": "sauls-oath-nearly-killed-jonathan", "passage": "1SA.14.24-45", "kind": "ethics", "priority": 1 },
+      { "q": "Why did the army eat meat with the blood still in it?", "slug": "the-army-ate-meat-with-the-blood", "passage": "1SA.14.32-34", "kind": "practice", "priority": 1 }
+    ],
+    "15": [
+      { "q": "What does to obey is better than sacrifice mean?", "slug": "to-obey-is-better-than-sacrifice", "passage": "1SA.15.22", "kind": "doctrine", "priority": 1 },
+      { "q": "Why did God command the total destruction of the Amalekites?", "slug": "why-god-commanded-the-destruction-of-the-amalekites", "passage": "1SA.15.3", "kind": "ethics", "priority": 1 },
+      { "q": "How can God regret making Saul if he does not change his mind?", "slug": "god-regretted-making-saul", "passage": "1SA.15.11", "kind": "tension", "priority": 1 },
+      { "q": "What does rebellion is like the sin of divination mean?", "slug": "rebellion-is-like-the-sin-of-divination", "passage": "1SA.15.23", "kind": "doctrine", "priority": 1 },
+      { "q": "Why did Samuel kill Agag himself?", "slug": "why-samuel-killed-agag-himself", "passage": "1SA.15.33", "kind": "ethics", "priority": 1 },
+      { "q": "Was Saul's excuse about saving animals for sacrifice reasonable?", "slug": "sauls-excuse-about-saving-animals", "passage": "1SA.15.15-21", "kind": "ethics", "priority": 1 }
+    ],
+    "16": [
+      { "q": "What does man looks at the outward appearance but the LORD looks at the heart mean?", "slug": "the-lord-looks-at-the-heart", "passage": "1SA.16.7", "kind": "doctrine", "priority": 1 },
+      { "q": "Why did an evil spirit from the LORD torment Saul?", "slug": "an-evil-spirit-from-the-lord", "passage": "1SA.16.14", "kind": "doctrine", "priority": 1 },
+      { "q": "Did God send Samuel to lie about why he came to Bethlehem?", "slug": "did-god-tell-samuel-to-lie", "passage": "1SA.16.2", "kind": "ethics", "priority": 1 },
+      { "q": "Why was David not called in with his brothers?", "slug": "why-david-was-not-called-with-his-brothers", "passage": "1SA.16.11", "kind": "phrase", "priority": 1 },
+      { "q": "How did David's harp playing calm Saul?", "slug": "davids-harp-playing-calmed-saul", "passage": "1SA.16.23", "kind": "history", "priority": 1 }
+    ],
+    "17": [
+      { "q": "How tall was Goliath really?", "slug": "how-tall-was-goliath", "passage": "1SA.17.4", "kind": "number", "priority": 1 },
+      { "q": "Why did David pick up five smooth stones?", "slug": "why-david-picked-up-five-stones", "passage": "1SA.17.40", "kind": "phrase", "priority": 1 },
+      { "q": "What does the battle is the LORD's mean?", "slug": "the-battle-is-the-lords", "passage": "1SA.17.47", "kind": "doctrine", "priority": 1 },
+      { "q": "Why did Saul not recognize David if David was his armor bearer?", "slug": "why-saul-did-not-recognize-david", "passage": "1SA.17.55-58", "kind": "tension", "priority": 1 },
+      { "q": "What does who is this uncircumcised Philistine mean?", "slug": "who-is-this-uncircumcised-philistine", "passage": "1SA.17.26", "kind": "phrase", "priority": 1 },
+      { "q": "How heavy was Goliath's armor and spear?", "slug": "how-heavy-was-goliaths-armor", "passage": "1SA.17.5-7", "kind": "number", "priority": 1 },
+      { "q": "How old was David when he fought Goliath?", "slug": "how-old-was-david-when-he-fought-goliath", "passage": "1SA.17.33", "kind": "number", "priority": 1 },
+      { "q": "Is it right to use David and Goliath as an underdog story?", "slug": "is-david-and-goliath-an-underdog-story", "passage": "1SA.17.45-47", "kind": "claim", "priority": 1 },
+      { "q": "Why did David take Goliath's head to Jerusalem?", "slug": "why-david-took-goliaths-head-to-jerusalem", "passage": "1SA.17.54", "kind": "history", "priority": 2 }
+    ],
+    "18": [
+      { "q": "What was the relationship between David and Jonathan?", "slug": "the-relationship-between-david-and-jonathan", "passage": "1SA.18.1-4", "kind": "doctrine", "priority": 1 },
+      { "q": "Why did Saul demand a hundred Philistine foreskins as a bride price?", "slug": "a-hundred-philistine-foreskins", "passage": "1SA.18.25", "kind": "history", "priority": 1 },
+      { "q": "Why was Saul so jealous of David?", "slug": "why-saul-was-jealous-of-david", "passage": "1SA.18.7-9", "kind": "phrase", "priority": 1 },
+      { "q": "Why did Jonathan give David his robe and weapons?", "slug": "jonathan-gave-david-his-robe-and-weapons", "passage": "1SA.18.4", "kind": "history", "priority": 1 }
+    ],
+    "19": [
+      { "q": "Why did Michal put an idol in David's bed?", "slug": "michal-put-an-idol-in-davids-bed", "passage": "1SA.19.13", "kind": "ethics", "priority": 1 },
+      { "q": "Why did Saul lie naked prophesying all day?", "slug": "why-saul-lay-naked-prophesying", "passage": "1SA.19.23-24", "kind": "phrase", "priority": 1 }
+    ],
+    "20": [
+      { "q": "What was the covenant between David and Jonathan?", "slug": "the-covenant-between-david-and-jonathan", "passage": "1SA.20.14-17", "kind": "doctrine", "priority": 1 },
+      { "q": "What was the sign of the arrows between David and Jonathan?", "slug": "the-sign-of-the-arrows", "passage": "1SA.20.20-22", "kind": "history", "priority": 1 }
+    ],
+    "21": [
+      { "q": "Why was David allowed to eat the consecrated showbread?", "slug": "why-david-ate-the-showbread", "passage": "1SA.21.4-6", "kind": "doctrine", "priority": 1 },
+      { "q": "Why did David pretend to be insane before Achish?", "slug": "why-david-pretended-to-be-insane", "passage": "1SA.21.13", "kind": "ethics", "priority": 1 },
+      { "q": "Was David wrong to lie to Ahimelech the priest?", "slug": "was-david-wrong-to-lie-to-ahimelech", "passage": "1SA.21.2", "kind": "ethics", "priority": 1 }
+    ],
+    "22": [
+      { "q": "Why did Doeg the Edomite kill 85 priests?", "slug": "doeg-killed-eighty-five-priests", "passage": "1SA.22.18-19", "kind": "ethics", "priority": 1 },
+      { "q": "Did David feel responsible for the deaths at Nob?", "slug": "did-david-feel-responsible-for-nob", "passage": "1SA.22.22", "kind": "ethics", "priority": 1 },
+      { "q": "Who joined David at the cave of Adullam?", "slug": "who-joined-david-at-adullam", "passage": "1SA.22.2", "kind": "identity", "priority": 1 }
+    ],
+    "23": [
+      { "q": "Why did God tell David the men of Keilah would betray him?", "slug": "the-men-of-keilah-would-betray-him", "passage": "1SA.23.11-12", "kind": "doctrine", "priority": 1 },
+      { "q": "Does 1 Samuel 23:12 mean God knows what would have happened?", "slug": "does-god-know-what-would-have-happened", "passage": "1SA.23.12", "kind": "doctrine", "priority": 1 },
+      { "q": "How did Jonathan strengthen David's hand in God?", "slug": "jonathan-strengthened-davids-hand-in-god", "passage": "1SA.23.16", "kind": "practice", "priority": 1 }
+    ],
+    "24": [
+      { "q": "Why did David refuse to kill Saul in the cave?", "slug": "why-david-refused-to-kill-saul", "passage": "1SA.24.6", "kind": "ethics", "priority": 1 },
+      { "q": "What does do not touch the LORD's anointed mean?", "slug": "do-not-touch-the-lords-anointed", "passage": "1SA.24.6", "kind": "doctrine", "priority": 1 },
+      { "q": "Why did David's conscience bother him for cutting Saul's robe?", "slug": "davids-conscience-over-cutting-sauls-robe", "passage": "1SA.24.5", "kind": "ethics", "priority": 1 },
+      { "q": "What was Saul doing in the cave when David found him?", "slug": "what-saul-was-doing-in-the-cave", "passage": "1SA.24.3", "kind": "history", "priority": 1 }
+    ],
+    "25": [
+      { "q": "Who was Abigail and how did she stop David from murder?", "slug": "who-was-abigail", "passage": "1SA.25.23-31", "kind": "identity", "priority": 1 },
+      { "q": "Was David about to commit murder in 1 Samuel 25?", "slug": "was-david-about-to-commit-murder", "passage": "1SA.25.21-22", "kind": "ethics", "priority": 1 },
+      { "q": "Who was Nabal and what does his name mean?", "slug": "who-was-nabal", "passage": "1SA.25.3", "kind": "identity", "priority": 1 },
+      { "q": "What does the bundle of the living mean in 1 Samuel 25:29?", "slug": "the-bundle-of-the-living", "passage": "1SA.25.29", "kind": "phrase", "priority": 1 },
+      { "q": "Did Abigail go behind her husband's back wrongly?", "slug": "did-abigail-wrongly-go-behind-nabals-back", "passage": "1SA.25.18-19", "kind": "ethics", "priority": 1 }
+    ],
+    "26": [
+      { "q": "Why did David spare Saul a second time?", "slug": "why-david-spared-saul-a-second-time", "passage": "1SA.26.9-11", "kind": "ethics", "priority": 1 },
+      { "q": "What is the deep sleep from the LORD that fell on Saul's camp?", "slug": "the-deep-sleep-from-the-lord", "passage": "1SA.26.12", "kind": "phrase", "priority": 1 }
+    ],
+    "27": [
+      { "q": "Was David wrong to lie to Achish about his raids?", "slug": "david-lied-to-achish-about-his-raids", "passage": "1SA.27.10-12", "kind": "ethics", "priority": 1 }
+    ],
+    "28": [
+      { "q": "Did the witch of Endor really bring up Samuel?", "slug": "did-the-witch-of-endor-bring-up-samuel", "passage": "1SA.28.11-15", "kind": "doctrine", "priority": 1 },
+      { "q": "Why did Saul consult a medium after banning them?", "slug": "why-saul-consulted-a-medium", "passage": "1SA.28.3-8", "kind": "ethics", "priority": 1 },
+      { "q": "What does why have you disturbed me mean?", "slug": "why-have-you-disturbed-me", "passage": "1SA.28.15", "kind": "phrase", "priority": 1 },
+      { "q": "Does 1 Samuel 28 mean the dead can be contacted?", "slug": "can-the-dead-be-contacted", "passage": "1SA.28.7-19", "kind": "doctrine", "priority": 1 }
+    ],
+    "29": [
+      { "q": "Why did the Philistine commanders distrust David?", "slug": "why-the-philistine-commanders-distrusted-david", "passage": "1SA.29.3-5", "kind": "history", "priority": 2 }
+    ],
+    "30": [
+      { "q": "What does David strengthened himself in the LORD his God mean?", "slug": "david-strengthened-himself-in-the-lord", "passage": "1SA.30.6", "kind": "practice", "priority": 1 },
+      { "q": "Why did David insist those who stayed behind share the spoil equally?", "slug": "sharing-the-spoil-equally", "passage": "1SA.30.23-25", "kind": "ethics", "priority": 1 },
+      { "q": "Why did David's own men talk of stoning him?", "slug": "davids-men-talked-of-stoning-him", "passage": "1SA.30.6", "kind": "history", "priority": 1 }
+    ],
+    "31": [
+      { "q": "Did Saul commit suicide?", "slug": "did-saul-commit-suicide", "passage": "1SA.31.4", "kind": "ethics", "priority": 1 },
+      { "q": "Is Saul in heaven or hell?", "slug": "is-saul-in-heaven-or-hell", "passage": "1SA.31.4-6", "kind": "doctrine", "priority": 1 },
+      { "q": "Why did the men of Jabesh-gilead recover Saul's body?", "slug": "the-men-of-jabesh-gilead-recovered-sauls-body", "passage": "1SA.31.11-13", "kind": "history", "priority": 1 }
+    ]
+  }
+}

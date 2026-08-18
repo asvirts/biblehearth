@@ -1,0 +1,161 @@
+{
+  "book": "1CO",
+  "name": "1 Corinthians",
+  "chapters": {
+    "1": [
+      { "q": "What does the message of the cross is foolishness to those who are perishing mean?", "slug": "the-message-of-the-cross-is-foolishness", "passage": "1CO.1.18", "kind": "doctrine", "priority": 1 },
+      { "q": "What does God chose the foolish things to shame the wise mean?", "slug": "god-chose-the-foolish-things", "passage": "1CO.1.27", "kind": "doctrine", "priority": 1 },
+      { "q": "What were the divisions over Paul, Apollos, and Cephas?", "slug": "divisions-over-paul-apollos-and-cephas", "passage": "1CO.1.12", "kind": "history", "priority": 1 },
+      { "q": "Why does Paul say he was not sent to baptize?", "slug": "christ-did-not-send-me-to-baptize", "passage": "1CO.1.17", "kind": "doctrine", "priority": 1 },
+      { "q": "What does Christ the power of God and the wisdom of God mean?", "slug": "christ-the-power-and-wisdom-of-god", "passage": "1CO.1.24", "kind": "doctrine", "priority": 1 },
+      { "q": "What does let the one who boasts boast in the Lord mean?", "slug": "let-the-one-who-boasts-boast-in-the-lord", "passage": "1CO.1.31", "kind": "phrase", "priority": 2 },
+      { "q": "Why do Jews demand signs and Greeks seek wisdom?", "slug": "jews-demand-signs-and-greeks-seek-wisdom", "passage": "1CO.1.22", "kind": "history", "priority": 2 }
+    ],
+    "2": [
+      { "q": "What does I decided to know nothing except Christ crucified mean?", "slug": "nothing-except-christ-crucified", "passage": "1CO.2.2", "kind": "practice", "priority": 1 },
+      { "q": "What does the natural person does not accept the things of the Spirit mean?", "slug": "the-natural-person-does-not-accept-spiritual-things", "passage": "1CO.2.14", "kind": "doctrine", "priority": 1 },
+      { "q": "What does we have the mind of Christ mean?", "slug": "we-have-the-mind-of-christ", "passage": "1CO.2.16", "kind": "doctrine", "priority": 1 },
+      { "q": "What does no eye has seen, no ear has heard mean?", "slug": "no-eye-has-seen-no-ear-has-heard", "passage": "1CO.2.9", "kind": "phrase", "priority": 1 },
+      { "q": "Who are the rulers of this age who crucified the Lord of glory?", "slug": "the-rulers-of-this-age", "passage": "1CO.2.8", "kind": "identity", "priority": 1 },
+      { "q": "What does spiritual things are spiritually discerned mean?", "slug": "spiritually-discerned", "passage": "1CO.2.13-14", "kind": "doctrine", "priority": 2 }
+    ],
+    "3": [
+      { "q": "What does each person's work will be tested by fire mean?", "slug": "each-persons-work-tested-by-fire", "passage": "1CO.3.13", "kind": "doctrine", "priority": 1 },
+      { "q": "What are the gold, silver, wood, hay, and straw in 1 Corinthians 3?", "slug": "gold-silver-wood-hay-and-straw", "passage": "1CO.3.12", "kind": "phrase", "priority": 1 },
+      { "q": "Can you be saved but lose your rewards according to 1 Corinthians 3:15?", "slug": "saved-but-suffering-loss-of-reward", "passage": "1CO.3.15", "kind": "doctrine", "priority": 1 },
+      { "q": "What does you are God's temple mean?", "slug": "you-are-gods-temple", "passage": "1CO.3.16", "kind": "doctrine", "priority": 1 },
+      { "q": "What does I planted, Apollos watered, but God gave the growth mean?", "slug": "i-planted-apollos-watered-god-gave-the-growth", "passage": "1CO.3.6", "kind": "practice", "priority": 1 },
+      { "q": "What does milk not solid food mean about spiritual maturity?", "slug": "milk-not-solid-food-1-corinthians-3", "passage": "1CO.3.2", "kind": "practice", "priority": 1 },
+      { "q": "What does the wisdom of this world is folly with God mean?", "slug": "the-wisdom-of-this-world-is-folly", "passage": "1CO.3.19", "kind": "doctrine", "priority": 2 }
+    ],
+    "4": [
+      { "q": "What does stewards of the mysteries of God mean?", "slug": "stewards-of-the-mysteries-of-god", "passage": "1CO.4.1", "kind": "phrase", "priority": 1 },
+      { "q": "Why does Paul say he does not even judge himself?", "slug": "i-do-not-even-judge-myself", "passage": "1CO.4.3-4", "kind": "practice", "priority": 1 },
+      { "q": "What does we are fools for Christ's sake mean?", "slug": "we-are-fools-for-christs-sake", "passage": "1CO.4.10", "kind": "phrase", "priority": 1 },
+      { "q": "What does do not go beyond what is written mean?", "slug": "do-not-go-beyond-what-is-written", "passage": "1CO.4.6", "kind": "doctrine", "priority": 1 },
+      { "q": "What does I became your father in the gospel mean?", "slug": "i-became-your-father-in-the-gospel", "passage": "1CO.4.15", "kind": "phrase", "priority": 2 },
+      { "q": "What does shall I come to you with a rod mean?", "slug": "shall-i-come-to-you-with-a-rod", "passage": "1CO.4.21", "kind": "phrase", "priority": 3 }
+    ],
+    "5": [
+      { "q": "What was the sexual sin in the Corinthian church?", "slug": "the-sexual-sin-in-1-corinthians-5", "passage": "1CO.5.1", "kind": "history", "priority": 1 },
+      { "q": "What does hand this man over to Satan mean?", "slug": "hand-this-man-over-to-satan", "passage": "1CO.5.5", "kind": "practice", "priority": 1 },
+      { "q": "Does 1 Corinthians 5:5 mean the man lost his salvation?", "slug": "did-the-man-in-1-corinthians-5-lose-salvation", "passage": "1CO.5.5", "kind": "doctrine", "priority": 1 },
+      { "q": "Should Christians stop associating with sinning believers?", "slug": "do-not-associate-with-sinning-believers", "passage": "1CO.5.11", "kind": "practice", "priority": 1 },
+      { "q": "Why does Paul say to judge those inside the church, not outside?", "slug": "judge-those-inside-not-outside-the-church", "passage": "1CO.5.12-13", "kind": "practice", "priority": 1 },
+      { "q": "What does a little leaven leavens the whole batch mean here?", "slug": "purge-the-old-leaven-1-corinthians-5", "passage": "1CO.5.6-7", "kind": "phrase", "priority": 2 }
+    ],
+    "6": [
+      { "q": "Does 1 Corinthians 6:9 say homosexuals will not inherit the kingdom?", "slug": "does-1-corinthians-6-9-exclude-homosexuals", "passage": "1CO.6.9", "kind": "ethics", "priority": 1 },
+      { "q": "What do the Greek words malakoi and arsenokoitai mean?", "slug": "malakoi-and-arsenokoitai", "passage": "1CO.6.9", "kind": "phrase", "priority": 1 },
+      { "q": "Should Christians take other Christians to court?", "slug": "should-christians-sue-other-christians", "passage": "1CO.6.1-6", "kind": "ethics", "priority": 1 },
+      { "q": "What does your body is a temple of the Holy Spirit mean?", "slug": "your-body-is-a-temple-of-the-holy-spirit", "passage": "1CO.6.19", "kind": "doctrine", "priority": 1 },
+      { "q": "What does flee sexual immorality mean?", "slug": "flee-sexual-immorality", "passage": "1CO.6.18", "kind": "practice", "priority": 1 },
+      { "q": "What does all things are lawful but not all are helpful mean?", "slug": "all-things-are-lawful-but-not-all-are-helpful", "passage": "1CO.6.12", "kind": "practice", "priority": 1 },
+      { "q": "What does you were bought with a price mean?", "slug": "you-were-bought-with-a-price", "passage": "1CO.6.20", "kind": "doctrine", "priority": 1 },
+      { "q": "How do the saints judge the world?", "slug": "the-saints-will-judge-the-world", "passage": "1CO.6.2-3", "kind": "doctrine", "priority": 1 },
+      { "q": "What does joining with a prostitute makes you one flesh mean?", "slug": "joining-with-a-prostitute-makes-one-flesh", "passage": "1CO.6.16", "kind": "doctrine", "priority": 1 }
+    ],
+    "7": [
+      { "q": "What does it is better to marry than to burn with passion mean?", "slug": "better-to-marry-than-to-burn", "passage": "1CO.7.9", "kind": "practice", "priority": 1 },
+      { "q": "What is the Pauline privilege about a deserting unbelieving spouse?", "slug": "the-pauline-privilege", "passage": "1CO.7.15", "kind": "ethics", "priority": 1 },
+      { "q": "How is an unbelieving spouse sanctified by a believing one?", "slug": "the-unbelieving-spouse-is-sanctified", "passage": "1CO.7.14", "kind": "doctrine", "priority": 1 },
+      { "q": "What does do not deprive one another mean about sex in marriage?", "slug": "do-not-deprive-one-another", "passage": "1CO.7.5", "kind": "practice", "priority": 1 },
+      { "q": "Why does Paul say I, not the Lord, say this?", "slug": "i-not-the-lord-say-this", "passage": "1CO.7.12", "kind": "doctrine", "priority": 1 },
+      { "q": "Does 1 Corinthians 7 say singleness is better than marriage?", "slug": "is-singleness-better-than-marriage", "passage": "1CO.7.38", "kind": "practice", "priority": 1 },
+      { "q": "What does the appointed time has grown very short mean?", "slug": "the-time-has-grown-very-short", "passage": "1CO.7.29", "kind": "tension", "priority": 1 },
+      { "q": "Can a divorced Christian remarry according to 1 Corinthians 7?", "slug": "can-a-divorced-christian-remarry-1-corinthians-7", "passage": "1CO.7.10-11", "kind": "ethics", "priority": 1 },
+      { "q": "What does remain in the situation you were called in mean?", "slug": "remain-in-the-condition-you-were-called-in", "passage": "1CO.7.20", "kind": "practice", "priority": 1 },
+      { "q": "What does the gift of singleness or celibacy mean?", "slug": "the-gift-of-singleness", "passage": "1CO.7.7", "kind": "doctrine", "priority": 1 }
+    ],
+    "8": [
+      { "q": "Can Christians eat food offered to idols?", "slug": "can-christians-eat-food-offered-to-idols", "passage": "1CO.8.4-8", "kind": "practice", "priority": 1 },
+      { "q": "What does knowledge puffs up but love builds up mean?", "slug": "knowledge-puffs-up-but-love-builds-up", "passage": "1CO.8.1", "kind": "practice", "priority": 1 },
+      { "q": "What does causing a weaker brother to stumble mean?", "slug": "causing-a-weaker-brother-to-stumble", "passage": "1CO.8.9-13", "kind": "ethics", "priority": 1 },
+      { "q": "What is a weak conscience in 1 Corinthians 8?", "slug": "a-weak-conscience-1-corinthians-8", "passage": "1CO.8.7", "kind": "phrase", "priority": 1 }
+    ],
+    "9": [
+      { "q": "What does I have become all things to all people mean?", "slug": "all-things-to-all-people", "passage": "1CO.9.22", "kind": "practice", "priority": 1 },
+      { "q": "What does I discipline my body lest I be disqualified mean?", "slug": "lest-i-be-disqualified", "passage": "1CO.9.27", "kind": "doctrine", "priority": 1 },
+      { "q": "Does 1 Corinthians 9:27 mean Paul feared losing his salvation?", "slug": "did-paul-fear-losing-his-salvation", "passage": "1CO.9.27", "kind": "doctrine", "priority": 1 },
+      { "q": "What does do not muzzle the ox mean about paying pastors?", "slug": "do-not-muzzle-the-ox", "passage": "1CO.9.9-10", "kind": "practice", "priority": 1 },
+      { "q": "What does run in such a way as to get the prize mean?", "slug": "run-in-such-a-way-as-to-get-the-prize", "passage": "1CO.9.24", "kind": "practice", "priority": 1 },
+      { "q": "What does woe to me if I do not preach the gospel mean?", "slug": "woe-to-me-if-i-do-not-preach", "passage": "1CO.9.16", "kind": "phrase", "priority": 1 },
+      { "q": "Why did Paul refuse financial support from the Corinthians?", "slug": "why-paul-refused-support-from-corinth", "passage": "1CO.9.15-18", "kind": "history", "priority": 2 }
+    ],
+    "10": [
+      { "q": "Does God never give you more than you can handle?", "slug": "god-will-not-let-you-be-tempted-beyond-what-you-can-bear", "passage": "1CO.10.13", "kind": "claim", "priority": 1 },
+      { "q": "What does the rock was Christ mean in 1 Corinthians 10:4?", "slug": "the-rock-was-christ", "passage": "1CO.10.4", "kind": "doctrine", "priority": 1 },
+      { "q": "What does you cannot drink the cup of the Lord and the cup of demons mean?", "slug": "the-cup-of-the-lord-and-the-cup-of-demons", "passage": "1CO.10.21", "kind": "practice", "priority": 1 },
+      { "q": "What does do everything to the glory of God mean?", "slug": "do-everything-to-the-glory-of-god", "passage": "1CO.10.31", "kind": "practice", "priority": 1 },
+      { "q": "What does these things happened as examples for us mean?", "slug": "these-things-happened-as-examples", "passage": "1CO.10.11", "kind": "doctrine", "priority": 1 },
+      { "q": "Are idols real spiritual beings according to 1 Corinthians 10:20?", "slug": "are-idols-real-demons", "passage": "1CO.10.20", "kind": "doctrine", "priority": 1 },
+      { "q": "What does eat whatever is set before you without asking mean?", "slug": "eat-whatever-is-set-before-you", "passage": "1CO.10.27", "kind": "practice", "priority": 2 },
+      { "q": "What does let him who thinks he stands take heed lest he fall mean?", "slug": "let-him-who-thinks-he-stands-take-heed", "passage": "1CO.10.12", "kind": "doctrine", "priority": 1 }
+    ],
+    "11": [
+      { "q": "Should women wear head coverings in church today?", "slug": "should-women-wear-head-coverings", "passage": "1CO.11.5-6", "kind": "practice", "priority": 1 },
+      { "q": "What does because of the angels mean in 1 Corinthians 11:10?", "slug": "because-of-the-angels", "passage": "1CO.11.10", "kind": "phrase", "priority": 1 },
+      { "q": "What does the head of the woman is man mean?", "slug": "the-head-of-the-woman-is-man", "passage": "1CO.11.3", "kind": "doctrine", "priority": 1 },
+      { "q": "What does taking communion in an unworthy manner mean?", "slug": "taking-communion-in-an-unworthy-manner", "passage": "1CO.11.27", "kind": "doctrine", "priority": 1 },
+      { "q": "Did people die from taking communion wrongly in Corinth?", "slug": "did-people-die-from-taking-communion-wrongly", "passage": "1CO.11.30", "kind": "doctrine", "priority": 1 },
+      { "q": "How should you examine yourself before communion?", "slug": "examine-yourself-before-communion", "passage": "1CO.11.28", "kind": "practice", "priority": 1 },
+      { "q": "Is a woman's long hair her covering, making cloth veils unnecessary?", "slug": "is-a-womans-hair-her-covering", "passage": "1CO.11.15", "kind": "doctrine", "priority": 1 },
+      { "q": "How were the Corinthians abusing the Lord's Supper?", "slug": "how-corinth-abused-the-lords-supper", "passage": "1CO.11.20-22", "kind": "history", "priority": 1 },
+      { "q": "What does do this in remembrance of me mean?", "slug": "do-this-in-remembrance-of-me", "passage": "1CO.11.24-25", "kind": "doctrine", "priority": 1 }
+    ],
+    "12": [
+      { "q": "What are the spiritual gifts listed in 1 Corinthians 12?", "slug": "spiritual-gifts-in-1-corinthians-12", "passage": "1CO.12.8-10", "kind": "doctrine", "priority": 1 },
+      { "q": "Does everyone speak in tongues according to 1 Corinthians 12:30?", "slug": "does-everyone-speak-in-tongues", "passage": "1CO.12.30", "kind": "doctrine", "priority": 1 },
+      { "q": "What does one body with many members mean?", "slug": "one-body-with-many-members", "passage": "1CO.12.12-14", "kind": "doctrine", "priority": 1 },
+      { "q": "What is the gift of discerning of spirits?", "slug": "the-gift-of-discerning-of-spirits", "passage": "1CO.12.10", "kind": "doctrine", "priority": 1 },
+      { "q": "What does no one can say Jesus is Lord except by the Holy Spirit mean?", "slug": "no-one-can-say-jesus-is-lord-except-by-the-spirit", "passage": "1CO.12.3", "kind": "doctrine", "priority": 1 },
+      { "q": "What are the greater gifts Paul says to desire?", "slug": "desire-the-greater-gifts", "passage": "1CO.12.31", "kind": "doctrine", "priority": 1 },
+      { "q": "What is the difference between a gift, a ministry, and an office?", "slug": "gifts-ministries-and-offices", "passage": "1CO.12.28", "kind": "doctrine", "priority": 1 },
+      { "q": "What does baptized by one Spirit into one body mean?", "slug": "baptized-by-one-spirit-into-one-body", "passage": "1CO.12.13", "kind": "doctrine", "priority": 1 }
+    ],
+    "13": [
+      { "q": "What does love is patient, love is kind mean line by line?", "slug": "love-is-patient-love-is-kind", "passage": "1CO.13.4-7", "kind": "practice", "priority": 1 },
+      { "q": "What does when the perfect comes the partial will pass away mean?", "slug": "when-the-perfect-comes", "passage": "1CO.13.10", "kind": "doctrine", "priority": 1 },
+      { "q": "Does 1 Corinthians 13:8 mean tongues and prophecy have ceased?", "slug": "have-tongues-and-prophecy-ceased", "passage": "1CO.13.8", "kind": "doctrine", "priority": 1 },
+      { "q": "What does seeing through a glass darkly mean?", "slug": "through-a-glass-darkly", "passage": "1CO.13.12", "kind": "phrase", "priority": 1 },
+      { "q": "What does the tongues of angels mean in 1 Corinthians 13:1?", "slug": "the-tongues-of-angels", "passage": "1CO.13.1", "kind": "phrase", "priority": 1 },
+      { "q": "Why is love greater than faith and hope?", "slug": "why-love-is-greater-than-faith-and-hope", "passage": "1CO.13.13", "kind": "doctrine", "priority": 1 },
+      { "q": "Is 1 Corinthians 13 appropriate to read at weddings?", "slug": "is-1-corinthians-13-a-wedding-passage", "passage": "1CO.13.4-8", "kind": "practice", "priority": 1 },
+      { "q": "What does love keeps no record of wrongs mean?", "slug": "love-keeps-no-record-of-wrongs", "passage": "1CO.13.5", "kind": "practice", "priority": 1 }
+    ],
+    "14": [
+      { "q": "Does let the women keep silent in the churches apply today?", "slug": "let-the-women-keep-silent-in-the-churches", "passage": "1CO.14.34-35", "kind": "doctrine", "priority": 1 },
+      { "q": "How does 1 Corinthians 14:34 fit with women prophesying in chapter 11?", "slug": "women-silent-but-prophesying", "passage": "1CO.14.34", "kind": "tension", "priority": 1 },
+      { "q": "What is the difference between tongues and prophecy?", "slug": "difference-between-tongues-and-prophecy", "passage": "1CO.14.2-5", "kind": "doctrine", "priority": 1 },
+      { "q": "Should tongues always be interpreted in church?", "slug": "should-tongues-always-be-interpreted", "passage": "1CO.14.27-28", "kind": "practice", "priority": 1 },
+      { "q": "What does God is not a God of disorder but of peace mean?", "slug": "god-is-not-a-god-of-disorder", "passage": "1CO.14.33", "kind": "doctrine", "priority": 1 },
+      { "q": "What does let all things be done decently and in order mean?", "slug": "let-all-things-be-done-decently-and-in-order", "passage": "1CO.14.40", "kind": "practice", "priority": 1 },
+      { "q": "How are tongues a sign for unbelievers?", "slug": "tongues-as-a-sign-for-unbelievers", "passage": "1CO.14.22", "kind": "doctrine", "priority": 1 },
+      { "q": "What does I would rather speak five words with my understanding mean?", "slug": "five-words-with-my-understanding", "passage": "1CO.14.19", "kind": "phrase", "priority": 1 },
+      { "q": "What does praying in the spirit but my mind is unfruitful mean?", "slug": "my-mind-is-unfruitful", "passage": "1CO.14.14", "kind": "doctrine", "priority": 1 }
+    ],
+    "15": [
+      { "q": "What is baptism for the dead in 1 Corinthians 15:29?", "slug": "baptism-for-the-dead", "passage": "1CO.15.29", "kind": "doctrine", "priority": 1 },
+      { "q": "What does if Christ has not been raised our faith is useless mean?", "slug": "if-christ-has-not-been-raised", "passage": "1CO.15.14-17", "kind": "doctrine", "priority": 1 },
+      { "q": "What does flesh and blood cannot inherit the kingdom mean?", "slug": "flesh-and-blood-cannot-inherit-the-kingdom", "passage": "1CO.15.50", "kind": "doctrine", "priority": 1 },
+      { "q": "What is a spiritual body in the resurrection?", "slug": "what-is-a-spiritual-body", "passage": "1CO.15.44", "kind": "doctrine", "priority": 1 },
+      { "q": "Who is the last Adam in 1 Corinthians 15:45?", "slug": "the-last-adam", "passage": "1CO.15.45", "kind": "doctrine", "priority": 1 },
+      { "q": "What does O death, where is your sting mean?", "slug": "o-death-where-is-your-sting", "passage": "1CO.15.55", "kind": "phrase", "priority": 1 },
+      { "q": "What does bad company corrupts good character mean?", "slug": "bad-company-corrupts-good-character", "passage": "1CO.15.33", "kind": "practice", "priority": 1 },
+      { "q": "Who were the 500 witnesses to the resurrection?", "slug": "the-500-witnesses-to-the-resurrection", "passage": "1CO.15.6", "kind": "history", "priority": 1 },
+      { "q": "What does the last enemy to be destroyed is death mean?", "slug": "the-last-enemy-to-be-destroyed-is-death", "passage": "1CO.15.26", "kind": "doctrine", "priority": 1 },
+      { "q": "What does we will not all sleep but we will all be changed mean?", "slug": "we-will-all-be-changed", "passage": "1CO.15.51-52", "kind": "doctrine", "priority": 1 },
+      { "q": "What does then the Son himself will be subject to the Father mean?", "slug": "the-son-will-be-subject-to-the-father", "passage": "1CO.15.28", "kind": "doctrine", "priority": 1 },
+      { "q": "What does one sown in dishonor, raised in glory mean about our bodies?", "slug": "sown-in-dishonor-raised-in-glory", "passage": "1CO.15.42-43", "kind": "doctrine", "priority": 1 },
+      { "q": "Why does Paul call himself one untimely born?", "slug": "one-untimely-born", "passage": "1CO.15.8", "kind": "phrase", "priority": 2 }
+    ],
+    "16": [
+      { "q": "Does 1 Corinthians 16:2 establish Sunday as the day of worship?", "slug": "does-1-corinthians-16-2-establish-sunday-worship", "passage": "1CO.16.2", "kind": "practice", "priority": 1 },
+      { "q": "What does Maranatha mean?", "slug": "what-does-maranatha-mean", "passage": "1CO.16.22", "kind": "phrase", "priority": 1 },
+      { "q": "What does let all that you do be done in love mean?", "slug": "let-all-that-you-do-be-done-in-love", "passage": "1CO.16.14", "kind": "practice", "priority": 1 },
+      { "q": "Does 1 Corinthians 16:2 teach tithing or proportional giving?", "slug": "does-1-corinthians-16-2-teach-tithing", "passage": "1CO.16.2", "kind": "practice", "priority": 1 },
+      { "q": "What is the wide door for effective work Paul mentions?", "slug": "a-wide-door-for-effective-work", "passage": "1CO.16.9", "kind": "phrase", "priority": 2 },
+      { "q": "Who was the household of Stephanas?", "slug": "the-household-of-stephanas", "passage": "1CO.16.15-17", "kind": "identity", "priority": 3 }
+    ]
+  }
+}

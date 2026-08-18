@@ -1,0 +1,30 @@
+{
+  "book": "TIT",
+  "name": "Titus",
+  "chapters": {
+    "1": [
+      { "q": "Why does Paul quote that Cretans are always liars?", "slug": "cretans-are-always-liars", "passage": "TIT.1.12", "kind": "ethics", "priority": 1 },
+      { "q": "What does to the pure all things are pure mean?", "slug": "to-the-pure-all-things-are-pure", "passage": "TIT.1.15", "kind": "doctrine", "priority": 1 },
+      { "q": "How do the elder qualifications in Titus 1 differ from 1 Timothy 3?", "slug": "elder-qualifications-titus-1-versus-1-timothy-3", "passage": "TIT.1.6-9", "kind": "tension", "priority": 1 },
+      { "q": "Which prophet of their own was Paul quoting in Titus 1:12?", "slug": "which-prophet-paul-quoted-in-titus-1", "passage": "TIT.1.12", "kind": "history", "priority": 1 },
+      { "q": "What does they profess to know God but deny him by their works mean?", "slug": "they-profess-to-know-god-but-deny-him", "passage": "TIT.1.16", "kind": "doctrine", "priority": 2 }
+    ],
+    "2": [
+      { "q": "What is the blessed hope in Titus 2:13?", "slug": "the-blessed-hope", "passage": "TIT.2.13", "kind": "doctrine", "priority": 1 },
+      { "q": "Does Titus 2:13 call Jesus our great God and Savior?", "slug": "our-great-god-and-savior-jesus-christ", "passage": "TIT.2.13", "kind": "doctrine", "priority": 1 },
+      { "q": "What is a Titus 2 woman?", "slug": "what-is-a-titus-2-woman", "passage": "TIT.2.3-5", "kind": "practice", "priority": 1 },
+      { "q": "What does older women should teach younger women mean?", "slug": "older-women-teach-younger-women", "passage": "TIT.2.3-4", "kind": "practice", "priority": 1 },
+      { "q": "Does Titus 2:5 say women must stay home?", "slug": "does-titus-2-5-say-women-must-stay-home", "passage": "TIT.2.5", "kind": "practice", "priority": 1 },
+      { "q": "What does the grace of God has appeared, training us mean?", "slug": "the-grace-of-god-trains-us", "passage": "TIT.2.11-12", "kind": "doctrine", "priority": 1 },
+      { "q": "What does a people for his own possession mean?", "slug": "a-people-for-his-own-possession", "passage": "TIT.2.14", "kind": "phrase", "priority": 2 }
+    ],
+    "3": [
+      { "q": "What is the washing of regeneration in Titus 3:5?", "slug": "the-washing-of-regeneration", "passage": "TIT.3.5", "kind": "doctrine", "priority": 1 },
+      { "q": "Does Titus 3:5 refer to baptism?", "slug": "does-titus-3-5-refer-to-baptism", "passage": "TIT.3.5", "kind": "doctrine", "priority": 1 },
+      { "q": "What does he saved us not because of works we had done mean?", "slug": "not-because-of-works-we-had-done", "passage": "TIT.3.5", "kind": "doctrine", "priority": 1 },
+      { "q": "How do you handle a divisive person after two warnings?", "slug": "a-divisive-person-after-two-warnings", "passage": "TIT.3.10-11", "kind": "practice", "priority": 1 },
+      { "q": "What are the foolish controversies Christians should avoid?", "slug": "avoid-foolish-controversies", "passage": "TIT.3.9", "kind": "practice", "priority": 1 },
+      { "q": "What does be ready for every good work mean?", "slug": "be-ready-for-every-good-work", "passage": "TIT.3.1", "kind": "practice", "priority": 2 }
+    ]
+  }
+}

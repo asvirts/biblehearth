@@ -1,0 +1,43 @@
+{
+  "book": "2TI",
+  "name": "2 Timothy",
+  "chapters": {
+    "1": [
+      { "q": "What does God has not given us a spirit of fear mean?", "slug": "not-a-spirit-of-fear-but-of-power", "passage": "2TI.1.7", "kind": "doctrine", "priority": 1 },
+      { "q": "What does fan into flame the gift of God mean?", "slug": "fan-into-flame-the-gift-of-god", "passage": "2TI.1.6", "kind": "practice", "priority": 1 },
+      { "q": "Who were Lois and Eunice?", "slug": "who-were-lois-and-eunice", "passage": "2TI.1.5", "kind": "identity", "priority": 1 },
+      { "q": "Who was Onesiphorus and why does Paul single him out?", "slug": "who-was-onesiphorus", "passage": "2TI.1.16-18", "kind": "identity", "priority": 2 },
+      { "q": "What does I know whom I have believed mean?", "slug": "i-know-whom-i-have-believed", "passage": "2TI.1.12", "kind": "doctrine", "priority": 1 }
+    ],
+    "2": [
+      { "q": "What does rightly handling the word of truth mean?", "slug": "rightly-handling-the-word-of-truth", "passage": "2TI.2.15", "kind": "practice", "priority": 1 },
+      { "q": "What does a workman who does not need to be ashamed mean?", "slug": "a-workman-who-need-not-be-ashamed", "passage": "2TI.2.15", "kind": "practice", "priority": 1 },
+      { "q": "What does the Lord knows those who are his mean?", "slug": "the-lord-knows-those-who-are-his", "passage": "2TI.2.19", "kind": "doctrine", "priority": 1 },
+      { "q": "What are the vessels of gold and clay in 2 Timothy 2:20-21?", "slug": "vessels-of-gold-and-clay", "passage": "2TI.2.20-21", "kind": "phrase", "priority": 1 },
+      { "q": "What does flee youthful passions mean?", "slug": "flee-youthful-passions", "passage": "2TI.2.22", "kind": "practice", "priority": 1 },
+      { "q": "Who were Hymenaeus and Philetus, and what did they teach?", "slug": "hymenaeus-and-philetus", "passage": "2TI.2.17-18", "kind": "identity", "priority": 1 },
+      { "q": "What does if we deny him he will deny us mean?", "slug": "if-we-deny-him-he-will-deny-us", "passage": "2TI.2.12", "kind": "doctrine", "priority": 1 },
+      { "q": "What does if we are faithless he remains faithful mean?", "slug": "if-we-are-faithless-he-remains-faithful", "passage": "2TI.2.13", "kind": "doctrine", "priority": 1 },
+      { "q": "What does a soldier does not get entangled in civilian affairs mean?", "slug": "a-soldier-does-not-get-entangled", "passage": "2TI.2.4", "kind": "practice", "priority": 2 }
+    ],
+    "3": [
+      { "q": "What does all Scripture is breathed out by God mean?", "slug": "all-scripture-is-breathed-out-by-god", "passage": "2TI.3.16", "kind": "doctrine", "priority": 1 },
+      { "q": "What Scripture did Paul mean in 2 Timothy 3:16 if the New Testament was not finished?", "slug": "what-scripture-paul-meant-in-2-timothy-3-16", "passage": "2TI.3.16", "kind": "doctrine", "priority": 1 },
+      { "q": "What are the signs of the last days in 2 Timothy 3?", "slug": "signs-of-the-last-days-2-timothy-3", "passage": "2TI.3.1-5", "kind": "doctrine", "priority": 1 },
+      { "q": "What does having a form of godliness but denying its power mean?", "slug": "a-form-of-godliness-denying-its-power", "passage": "2TI.3.5", "kind": "phrase", "priority": 1 },
+      { "q": "Does everyone who wants to live godly will be persecuted apply today?", "slug": "all-who-desire-to-live-godly-will-be-persecuted", "passage": "2TI.3.12", "kind": "doctrine", "priority": 1 },
+      { "q": "Who were Jannes and Jambres?", "slug": "who-were-jannes-and-jambres", "passage": "2TI.3.8", "kind": "identity", "priority": 1 },
+      { "q": "What does lovers of self mean in 2 Timothy 3:2?", "slug": "lovers-of-self", "passage": "2TI.3.2", "kind": "phrase", "priority": 2 }
+    ],
+    "4": [
+      { "q": "What does I have fought the good fight, I have finished the race mean?", "slug": "i-have-fought-the-good-fight-finished-the-race", "passage": "2TI.4.7", "kind": "phrase", "priority": 1 },
+      { "q": "What does preach the word in season and out of season mean?", "slug": "preach-the-word-in-season-and-out-of-season", "passage": "2TI.4.2", "kind": "practice", "priority": 1 },
+      { "q": "What does people with itching ears mean?", "slug": "people-with-itching-ears", "passage": "2TI.4.3", "kind": "phrase", "priority": 1 },
+      { "q": "What is the crown of righteousness Paul expects?", "slug": "the-crown-of-righteousness", "passage": "2TI.4.8", "kind": "doctrine", "priority": 1 },
+      { "q": "Why did Demas desert Paul?", "slug": "why-demas-deserted-paul", "passage": "2TI.4.10", "kind": "identity", "priority": 1 },
+      { "q": "Why did Paul ask for his cloak and the parchments?", "slug": "pauls-cloak-and-the-parchments", "passage": "2TI.4.13", "kind": "history", "priority": 1 },
+      { "q": "Who was Alexander the coppersmith?", "slug": "alexander-the-coppersmith", "passage": "2TI.4.14", "kind": "identity", "priority": 2 },
+      { "q": "What does the Lord rescued me from the lion's mouth mean?", "slug": "rescued-from-the-lions-mouth", "passage": "2TI.4.17", "kind": "phrase", "priority": 2 }
+    ]
+  }
+}

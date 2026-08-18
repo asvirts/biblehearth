@@ -1,0 +1,239 @@
+{
+  "book": "REV",
+  "name": "Revelation",
+  "chapters": {
+    "1": [
+      { "q": "What does Alpha and Omega mean?", "slug": "what-does-alpha-and-omega-mean", "passage": "REV.1.8", "kind": "phrase", "priority": 1 },
+      { "q": "What is the Lord's day in Revelation 1:10?", "slug": "the-lords-day-revelation-1-10", "passage": "REV.1.10", "kind": "phrase", "priority": 1 },
+      { "q": "Who are the seven spirits of God?", "slug": "who-are-the-seven-spirits-of-god", "passage": "REV.1.4", "kind": "identity", "priority": 1 },
+      { "q": "What do the seven stars and seven lampstands mean?", "slug": "seven-stars-and-seven-lampstands", "passage": "REV.1.20", "kind": "phrase", "priority": 1 },
+      { "q": "What are the keys of death and Hades?", "slug": "keys-of-death-and-hades", "passage": "REV.1.18", "kind": "phrase", "priority": 1 },
+      { "q": "Why is Jesus described with white hair and eyes like fire?", "slug": "jesus-with-white-hair-and-eyes-like-fire", "passage": "REV.1.14-15", "kind": "phrase", "priority": 1 },
+      { "q": "Who are the angels of the seven churches?", "slug": "angels-of-the-seven-churches", "passage": "REV.1.20", "kind": "identity", "priority": 1 },
+      { "q": "What does every eye will see him, even those who pierced him mean?", "slug": "even-those-who-pierced-him", "passage": "REV.1.7", "kind": "doctrine", "priority": 1 },
+      { "q": "Where is Patmos and why was John exiled there?", "slug": "where-is-patmos", "passage": "REV.1.9", "kind": "history", "priority": 2 },
+      { "q": "What does the sharp two-edged sword from his mouth mean?", "slug": "two-edged-sword-from-his-mouth", "passage": "REV.1.16", "kind": "phrase", "priority": 2 }
+    ],
+    "2": [
+      { "q": "What does it mean that Ephesus lost its first love?", "slug": "ephesus-lost-its-first-love", "passage": "REV.2.4", "kind": "phrase", "priority": 1 },
+      { "q": "Who were the Nicolaitans?", "slug": "who-were-the-nicolaitans", "passage": "REV.2.6", "kind": "identity", "priority": 1 },
+      { "q": "Who is the Jezebel in the church at Thyatira?", "slug": "jezebel-in-thyatira", "passage": "REV.2.20", "kind": "identity", "priority": 1 },
+      { "q": "Where is Satan's throne in Pergamum?", "slug": "satans-throne-in-pergamum", "passage": "REV.2.13", "kind": "history", "priority": 1 },
+      { "q": "What is the hidden manna and the white stone with a new name?", "slug": "hidden-manna-and-white-stone", "passage": "REV.2.17", "kind": "phrase", "priority": 1 },
+      { "q": "What is the morning star given to the one who conquers?", "slug": "the-morning-star-revelation-2-28", "passage": "REV.2.28", "kind": "phrase", "priority": 1 },
+      { "q": "What was the teaching of Balaam in Revelation 2:14?", "slug": "the-teaching-of-balaam-revelation-2", "passage": "REV.2.14", "kind": "identity", "priority": 1 },
+      { "q": "What does the second death mean in Revelation 2:11?", "slug": "the-second-death-revelation-2-11", "passage": "REV.2.11", "kind": "doctrine", "priority": 1 },
+      { "q": "What is the synagogue of Satan?", "slug": "synagogue-of-satan", "passage": "REV.2.9", "kind": "phrase", "priority": 1 },
+      { "q": "What does I will remove your lampstand mean?", "slug": "i-will-remove-your-lampstand", "passage": "REV.2.5", "kind": "phrase", "priority": 2 },
+      { "q": "What is the crown of life promised to Smyrna?", "slug": "the-crown-of-life-revelation-2-10", "passage": "REV.2.10", "kind": "phrase", "priority": 2 }
+    ],
+    "3": [
+      { "q": "What does lukewarm mean in Revelation 3:16?", "slug": "what-does-lukewarm-mean", "passage": "REV.3.16", "kind": "phrase", "priority": 1 },
+      { "q": "What does I will spit you out of my mouth mean?", "slug": "i-will-spit-you-out-of-my-mouth", "passage": "REV.3.16", "kind": "phrase", "priority": 1 },
+      { "q": "What does behold I stand at the door and knock mean?", "slug": "i-stand-at-the-door-and-knock", "passage": "REV.3.20", "kind": "doctrine", "priority": 1 },
+      { "q": "Is Revelation 3:20 about salvation or about the church?", "slug": "is-revelation-3-20-about-salvation", "passage": "REV.3.20", "kind": "doctrine", "priority": 1 },
+      { "q": "Can your name be blotted out of the book of life?", "slug": "can-your-name-be-blotted-out-of-the-book-of-life", "passage": "REV.3.5", "kind": "doctrine", "priority": 1 },
+      { "q": "What is the key of David in Revelation 3:7?", "slug": "the-key-of-david", "passage": "REV.3.7", "kind": "phrase", "priority": 1 },
+      { "q": "What is the open door no one can shut?", "slug": "the-open-door-no-one-can-shut", "passage": "REV.3.8", "kind": "phrase", "priority": 1 },
+      { "q": "What is the hour of trial Philadelphia is kept from?", "slug": "the-hour-of-trial", "passage": "REV.3.10", "kind": "doctrine", "priority": 1 },
+      { "q": "What does buy gold refined in the fire and white garments mean?", "slug": "buy-gold-refined-in-the-fire", "passage": "REV.3.18", "kind": "phrase", "priority": 1 },
+      { "q": "What is the salve for the eyes Jesus tells Laodicea to buy?", "slug": "salve-for-the-eyes-laodicea", "passage": "REV.3.18", "kind": "history", "priority": 2 },
+      { "q": "What does the beginning of God's creation mean about Jesus?", "slug": "the-beginning-of-gods-creation", "passage": "REV.3.14", "kind": "doctrine", "priority": 1 }
+    ],
+    "4": [
+      { "q": "Who are the twenty-four elders?", "slug": "who-are-the-twenty-four-elders", "passage": "REV.4.4", "kind": "identity", "priority": 1 },
+      { "q": "What are the four living creatures in Revelation 4?", "slug": "four-living-creatures-revelation-4", "passage": "REV.4.6-8", "kind": "identity", "priority": 1 },
+      { "q": "What is the sea of glass like crystal?", "slug": "the-sea-of-glass-like-crystal", "passage": "REV.4.6", "kind": "phrase", "priority": 1 },
+      { "q": "Is come up here in Revelation 4:1 about the rapture?", "slug": "is-come-up-here-the-rapture", "passage": "REV.4.1", "kind": "doctrine", "priority": 1 },
+      { "q": "Why do the living creatures say holy, holy, holy three times?", "slug": "why-holy-holy-holy-three-times", "passage": "REV.4.8", "kind": "doctrine", "priority": 1 },
+      { "q": "Why do the elders throw their crowns before the throne?", "slug": "elders-cast-their-crowns", "passage": "REV.4.10", "kind": "phrase", "priority": 2 },
+      { "q": "What do the jasper, carnelian, and rainbow around the throne mean?", "slug": "jasper-carnelian-and-rainbow-around-the-throne", "passage": "REV.4.3", "kind": "phrase", "priority": 2 }
+    ],
+    "5": [
+      { "q": "What is the scroll with seven seals?", "slug": "the-scroll-with-seven-seals", "passage": "REV.5.1", "kind": "phrase", "priority": 1 },
+      { "q": "Why is Jesus called both the Lion of Judah and the Lamb?", "slug": "lion-of-judah-and-the-lamb", "passage": "REV.5.5-6", "kind": "doctrine", "priority": 1 },
+      { "q": "What do the Lamb's seven horns and seven eyes mean?", "slug": "seven-horns-and-seven-eyes", "passage": "REV.5.6", "kind": "phrase", "priority": 1 },
+      { "q": "Why did John weep that no one could open the scroll?", "slug": "why-john-wept-over-the-scroll", "passage": "REV.5.4", "kind": "phrase", "priority": 1 },
+      { "q": "What are the golden bowls of incense that are the prayers of the saints?", "slug": "golden-bowls-of-incense-prayers-of-the-saints", "passage": "REV.5.8", "kind": "phrase", "priority": 1 },
+      { "q": "What does you have made them a kingdom and priests mean?", "slug": "a-kingdom-and-priests-revelation-5", "passage": "REV.5.10", "kind": "doctrine", "priority": 2 },
+      { "q": "What is the new song sung to the Lamb?", "slug": "the-new-song-revelation-5", "passage": "REV.5.9", "kind": "phrase", "priority": 2 }
+    ],
+    "6": [
+      { "q": "Who are the four horsemen of the apocalypse?", "slug": "four-horsemen-of-the-apocalypse", "passage": "REV.6.1-8", "kind": "identity", "priority": 1 },
+      { "q": "Who is the rider on the white horse in Revelation 6?", "slug": "rider-on-the-white-horse-revelation-6", "passage": "REV.6.2", "kind": "identity", "priority": 1 },
+      { "q": "What does the pale horse and Death mean?", "slug": "the-pale-horse-and-death", "passage": "REV.6.8", "kind": "identity", "priority": 1 },
+      { "q": "Who are the souls under the altar crying how long?", "slug": "souls-under-the-altar", "passage": "REV.6.9-10", "kind": "identity", "priority": 1 },
+      { "q": "Is it right for the martyrs to pray for vengeance?", "slug": "martyrs-praying-for-vengeance", "passage": "REV.6.10", "kind": "ethics", "priority": 1 },
+      { "q": "What does the sun turning black and the moon like blood mean?", "slug": "sun-black-and-moon-like-blood", "passage": "REV.6.12", "kind": "phrase", "priority": 1 },
+      { "q": "What does a denarius for a quart of wheat tell us about the famine?", "slug": "a-denarius-for-a-quart-of-wheat", "passage": "REV.6.6", "kind": "number", "priority": 2 },
+      { "q": "What does hide us from the wrath of the Lamb mean?", "slug": "hide-us-from-the-wrath-of-the-lamb", "passage": "REV.6.16-17", "kind": "phrase", "priority": 2 }
+    ],
+    "7": [
+      { "q": "Who are the 144,000 in Revelation 7?", "slug": "who-are-the-144000", "passage": "REV.7.4", "kind": "identity", "priority": 1 },
+      { "q": "Is the 144,000 a literal number?", "slug": "is-the-144000-a-literal-number", "passage": "REV.7.4-8", "kind": "number", "priority": 1 },
+      { "q": "Why is Dan missing from the tribes in Revelation 7?", "slug": "why-dan-is-missing-from-revelation-7", "passage": "REV.7.5-8", "kind": "tension", "priority": 1 },
+      { "q": "Who is the great multitude no one could number?", "slug": "the-great-multitude-no-one-could-number", "passage": "REV.7.9", "kind": "identity", "priority": 1 },
+      { "q": "What does washed their robes in the blood of the Lamb mean?", "slug": "washed-their-robes-in-the-blood-of-the-lamb", "passage": "REV.7.14", "kind": "phrase", "priority": 1 },
+      { "q": "What is the seal on the foreheads of God's servants?", "slug": "the-seal-on-their-foreheads", "passage": "REV.7.3", "kind": "phrase", "priority": 1 },
+      { "q": "Who are the four angels holding back the four winds?", "slug": "four-angels-holding-the-four-winds", "passage": "REV.7.1", "kind": "identity", "priority": 2 },
+      { "q": "What is the great tribulation in Revelation 7:14?", "slug": "the-great-tribulation-revelation-7-14", "passage": "REV.7.14", "kind": "doctrine", "priority": 1 }
+    ],
+    "8": [
+      { "q": "What is Wormwood in Revelation 8?", "slug": "what-is-wormwood-revelation-8", "passage": "REV.8.10-11", "kind": "identity", "priority": 1 },
+      { "q": "Why is there silence in heaven for half an hour?", "slug": "silence-in-heaven-for-half-an-hour", "passage": "REV.8.1", "kind": "phrase", "priority": 1 },
+      { "q": "What are the seven trumpets in Revelation?", "slug": "the-seven-trumpets-revelation", "passage": "REV.8.6-7", "kind": "doctrine", "priority": 1 },
+      { "q": "Why does a third of everything get destroyed in the trumpet judgments?", "slug": "why-a-third-in-the-trumpet-judgments", "passage": "REV.8.7-12", "kind": "number", "priority": 1 },
+      { "q": "What is the great mountain thrown into the sea?", "slug": "great-mountain-thrown-into-the-sea", "passage": "REV.8.8", "kind": "phrase", "priority": 2 },
+      { "q": "Who is the eagle crying woe, woe, woe?", "slug": "the-eagle-crying-woe-woe-woe", "passage": "REV.8.13", "kind": "identity", "priority": 2 }
+    ],
+    "9": [
+      { "q": "Who is Abaddon or Apollyon?", "slug": "who-is-abaddon-apollyon", "passage": "REV.9.11", "kind": "identity", "priority": 1 },
+      { "q": "What are the locusts from the bottomless pit?", "slug": "locusts-from-the-bottomless-pit", "passage": "REV.9.3-10", "kind": "identity", "priority": 1 },
+      { "q": "What is the bottomless pit or abyss in Revelation 9?", "slug": "the-bottomless-pit-abyss", "passage": "REV.9.1-2", "kind": "identity", "priority": 1 },
+      { "q": "Who is the star fallen from heaven with the key to the pit?", "slug": "star-fallen-from-heaven-with-the-key", "passage": "REV.9.1", "kind": "identity", "priority": 1 },
+      { "q": "What is the army of 200 million in Revelation 9:16?", "slug": "army-of-200-million", "passage": "REV.9.16", "kind": "number", "priority": 1 },
+      { "q": "Why do people seek death but cannot find it?", "slug": "they-will-seek-death-but-not-find-it", "passage": "REV.9.6", "kind": "phrase", "priority": 1 },
+      { "q": "Who are the four angels bound at the Euphrates?", "slug": "four-angels-bound-at-the-euphrates", "passage": "REV.9.14", "kind": "identity", "priority": 2 },
+      { "q": "What are the five months the locusts torment people?", "slug": "the-five-months-of-torment", "passage": "REV.9.5", "kind": "number", "priority": 2 }
+    ],
+    "10": [
+      { "q": "Who is the mighty angel with the little scroll?", "slug": "mighty-angel-with-the-little-scroll", "passage": "REV.10.1-2", "kind": "identity", "priority": 1 },
+      { "q": "What did the seven thunders say?", "slug": "what-did-the-seven-thunders-say", "passage": "REV.10.4", "kind": "phrase", "priority": 1 },
+      { "q": "Why did John eat the scroll and why was it bitter?", "slug": "john-ate-the-scroll-sweet-then-bitter", "passage": "REV.10.9-10", "kind": "phrase", "priority": 1 },
+      { "q": "What does there will be no more delay mean?", "slug": "there-will-be-no-more-delay", "passage": "REV.10.6", "kind": "phrase", "priority": 2 }
+    ],
+    "11": [
+      { "q": "Who are the two witnesses in Revelation 11?", "slug": "who-are-the-two-witnesses", "passage": "REV.11.3-4", "kind": "identity", "priority": 1 },
+      { "q": "What is the 1,260 days in Revelation 11?", "slug": "the-1260-days", "passage": "REV.11.3", "kind": "number", "priority": 1 },
+      { "q": "What does forty-two months mean in Revelation 11:2?", "slug": "forty-two-months-revelation-11", "passage": "REV.11.2", "kind": "number", "priority": 1 },
+      { "q": "Why does John measure the temple in Revelation 11?", "slug": "measuring-the-temple-revelation-11", "passage": "REV.11.1-2", "kind": "phrase", "priority": 1 },
+      { "q": "What is the beast from the abyss that kills the two witnesses?", "slug": "the-beast-from-the-abyss", "passage": "REV.11.7", "kind": "identity", "priority": 1 },
+      { "q": "Why do the two witnesses lie unburied for three and a half days?", "slug": "two-witnesses-unburied-three-and-a-half-days", "passage": "REV.11.9", "kind": "number", "priority": 1 },
+      { "q": "Why is the ark of the covenant seen in heaven?", "slug": "ark-of-the-covenant-seen-in-heaven", "passage": "REV.11.19", "kind": "phrase", "priority": 1 },
+      { "q": "What happens at the seventh trumpet?", "slug": "what-happens-at-the-seventh-trumpet", "passage": "REV.11.15", "kind": "doctrine", "priority": 1 },
+      { "q": "Why is Jerusalem called Sodom and Egypt in Revelation 11:8?", "slug": "jerusalem-called-sodom-and-egypt", "passage": "REV.11.8", "kind": "phrase", "priority": 2 }
+    ],
+    "12": [
+      { "q": "Who is the woman clothed with the sun?", "slug": "the-woman-clothed-with-the-sun", "passage": "REV.12.1", "kind": "identity", "priority": 1 },
+      { "q": "Who is the great red dragon in Revelation 12?", "slug": "the-great-red-dragon", "passage": "REV.12.3-9", "kind": "identity", "priority": 1 },
+      { "q": "What is the war in heaven between Michael and the dragon?", "slug": "war-in-heaven-michael-and-the-dragon", "passage": "REV.12.7-9", "kind": "doctrine", "priority": 1 },
+      { "q": "Does a third of the stars mean a third of the angels fell?", "slug": "did-a-third-of-the-angels-fall", "passage": "REV.12.4", "kind": "doctrine", "priority": 1 },
+      { "q": "What does they overcame him by the blood of the Lamb and the word of their testimony mean?", "slug": "overcame-by-the-blood-and-the-word-of-their-testimony", "passage": "REV.12.11", "kind": "phrase", "priority": 1 },
+      { "q": "Where is the wilderness the woman flees to for 1,260 days?", "slug": "the-woman-flees-to-the-wilderness", "passage": "REV.12.6", "kind": "phrase", "priority": 1 },
+      { "q": "What does the accuser of our brothers has been thrown down mean?", "slug": "the-accuser-thrown-down", "passage": "REV.12.10", "kind": "doctrine", "priority": 1 },
+      { "q": "What does a time, times, and half a time mean?", "slug": "a-time-times-and-half-a-time", "passage": "REV.12.14", "kind": "number", "priority": 1 },
+      { "q": "Who is the male child the woman gives birth to?", "slug": "the-male-child-revelation-12", "passage": "REV.12.5", "kind": "identity", "priority": 1 },
+      { "q": "What is the flood from the dragon's mouth?", "slug": "the-flood-from-the-dragons-mouth", "passage": "REV.12.15-16", "kind": "phrase", "priority": 2 }
+    ],
+    "13": [
+      { "q": "What does 666 mean?", "slug": "what-does-666-mean", "passage": "REV.13.18", "kind": "number", "priority": 1 },
+      { "q": "What is the mark of the beast?", "slug": "what-is-the-mark-of-the-beast", "passage": "REV.13.16-17", "kind": "identity", "priority": 1 },
+      { "q": "Who is the beast from the sea?", "slug": "the-beast-from-the-sea", "passage": "REV.13.1-2", "kind": "identity", "priority": 1 },
+      { "q": "Who is the second beast, the false prophet?", "slug": "the-second-beast-false-prophet", "passage": "REV.13.11-12", "kind": "identity", "priority": 1 },
+      { "q": "Is 666 a code for Nero?", "slug": "is-666-a-code-for-nero", "passage": "REV.13.18", "kind": "history", "priority": 1 },
+      { "q": "Could the mark of the beast be a microchip or a barcode?", "slug": "is-the-mark-of-the-beast-a-microchip", "passage": "REV.13.16", "kind": "claim", "priority": 1 },
+      { "q": "What is the mortal wound on the beast that was healed?", "slug": "the-beasts-mortal-wound-that-was-healed", "passage": "REV.13.3", "kind": "phrase", "priority": 1 },
+      { "q": "Can you take the mark of the beast accidentally and be lost?", "slug": "can-you-take-the-mark-accidentally", "passage": "REV.13.16-17", "kind": "doctrine", "priority": 1 },
+      { "q": "What are the beast's seven heads and ten horns?", "slug": "seven-heads-and-ten-horns", "passage": "REV.13.1", "kind": "phrase", "priority": 1 },
+      { "q": "What does the Lamb slain from the foundation of the world mean?", "slug": "the-lamb-slain-from-the-foundation-of-the-world", "passage": "REV.13.8", "kind": "doctrine", "priority": 1 },
+      { "q": "Why is the beast allowed to conquer the saints?", "slug": "why-the-beast-is-allowed-to-conquer-the-saints", "passage": "REV.13.7", "kind": "doctrine", "priority": 2 }
+    ],
+    "14": [
+      { "q": "Why are the 144,000 described as virgins who never lied?", "slug": "the-144000-as-virgins", "passage": "REV.14.4-5", "kind": "phrase", "priority": 1 },
+      { "q": "What are the three angels' messages in Revelation 14?", "slug": "three-angels-messages", "passage": "REV.14.6-11", "kind": "doctrine", "priority": 1 },
+      { "q": "What does the smoke of their torment goes up forever mean?", "slug": "the-smoke-of-their-torment-goes-up-forever", "passage": "REV.14.11", "kind": "doctrine", "priority": 1 },
+      { "q": "What is the winepress of the wrath of God?", "slug": "winepress-of-the-wrath-of-god", "passage": "REV.14.19-20", "kind": "phrase", "priority": 1 },
+      { "q": "What does blessed are the dead who die in the Lord mean?", "slug": "blessed-are-the-dead-who-die-in-the-lord", "passage": "REV.14.13", "kind": "phrase", "priority": 1 },
+      { "q": "What is the harvest of the earth with a sharp sickle?", "slug": "harvest-of-the-earth-with-a-sickle", "passage": "REV.14.14-16", "kind": "phrase", "priority": 1 },
+      { "q": "What is the new song only the 144,000 can learn?", "slug": "the-song-only-the-144000-can-learn", "passage": "REV.14.3", "kind": "phrase", "priority": 2 },
+      { "q": "Why is the blood as high as a horse's bridle for 184 miles?", "slug": "blood-as-high-as-a-horses-bridle", "passage": "REV.14.20", "kind": "number", "priority": 2 }
+    ],
+    "15": [
+      { "q": "What is the song of Moses and the song of the Lamb?", "slug": "song-of-moses-and-song-of-the-lamb", "passage": "REV.15.3-4", "kind": "phrase", "priority": 1 },
+      { "q": "What is the sea of glass mixed with fire?", "slug": "sea-of-glass-mixed-with-fire", "passage": "REV.15.2", "kind": "phrase", "priority": 1 },
+      { "q": "What are the seven bowls of God's wrath?", "slug": "seven-bowls-of-gods-wrath", "passage": "REV.15.7", "kind": "doctrine", "priority": 1 },
+      { "q": "Why could no one enter the temple until the plagues were finished?", "slug": "no-one-could-enter-the-temple", "passage": "REV.15.8", "kind": "phrase", "priority": 2 }
+    ],
+    "16": [
+      { "q": "What is Armageddon?", "slug": "what-is-armageddon", "passage": "REV.16.16", "kind": "identity", "priority": 1 },
+      { "q": "Where is Armageddon and is it a real place?", "slug": "where-is-armageddon", "passage": "REV.16.16", "kind": "history", "priority": 1 },
+      { "q": "Why does the Euphrates dry up in Revelation 16?", "slug": "the-euphrates-dries-up", "passage": "REV.16.12", "kind": "phrase", "priority": 1 },
+      { "q": "What are the three unclean spirits like frogs?", "slug": "three-unclean-spirits-like-frogs", "passage": "REV.16.13-14", "kind": "identity", "priority": 1 },
+      { "q": "What does behold I am coming like a thief mean?", "slug": "coming-like-a-thief-revelation-16", "passage": "REV.16.15", "kind": "phrase", "priority": 1 },
+      { "q": "What are the kings from the east?", "slug": "the-kings-from-the-east", "passage": "REV.16.12", "kind": "identity", "priority": 1 },
+      { "q": "How big were the hailstones in Revelation 16:21?", "slug": "hailstones-in-revelation-16", "passage": "REV.16.21", "kind": "number", "priority": 2 },
+      { "q": "What does it is done mean at the seventh bowl?", "slug": "it-is-done-revelation-16-17", "passage": "REV.16.17", "kind": "phrase", "priority": 2 }
+    ],
+    "17": [
+      { "q": "Who is the great prostitute of Babylon?", "slug": "the-great-prostitute-of-babylon", "passage": "REV.17.1-5", "kind": "identity", "priority": 1 },
+      { "q": "What is Mystery Babylon?", "slug": "what-is-mystery-babylon", "passage": "REV.17.5", "kind": "identity", "priority": 1 },
+      { "q": "What are the seven mountains the woman sits on?", "slug": "seven-mountains-the-woman-sits-on", "passage": "REV.17.9", "kind": "phrase", "priority": 1 },
+      { "q": "Is Mystery Babylon Rome, the Catholic Church, or America?", "slug": "is-mystery-babylon-rome-or-america", "passage": "REV.17.9-18", "kind": "doctrine", "priority": 1 },
+      { "q": "Who are the seven kings and the eighth king in Revelation 17?", "slug": "seven-kings-and-the-eighth", "passage": "REV.17.10-11", "kind": "identity", "priority": 1 },
+      { "q": "What is the scarlet beast the woman rides?", "slug": "the-scarlet-beast-the-woman-rides", "passage": "REV.17.3", "kind": "identity", "priority": 1 },
+      { "q": "Who are the ten kings who give their power to the beast?", "slug": "ten-kings-who-give-power-to-the-beast", "passage": "REV.17.12-13", "kind": "identity", "priority": 1 },
+      { "q": "What does the beast was, and is not, and is to come mean?", "slug": "was-and-is-not-and-is-to-come", "passage": "REV.17.8", "kind": "phrase", "priority": 1 }
+    ],
+    "18": [
+      { "q": "What does come out of her, my people mean?", "slug": "come-out-of-her-my-people", "passage": "REV.18.4", "kind": "practice", "priority": 1 },
+      { "q": "Why do the merchants of the earth weep over Babylon's fall?", "slug": "merchants-weep-over-babylons-fall", "passage": "REV.18.11-17", "kind": "phrase", "priority": 1 },
+      { "q": "What does the millstone thrown into the sea mean?", "slug": "millstone-thrown-into-the-sea", "passage": "REV.18.21", "kind": "phrase", "priority": 1 },
+      { "q": "Why does the list of Babylon's cargo end with human souls?", "slug": "babylons-cargo-ends-with-human-souls", "passage": "REV.18.13", "kind": "ethics", "priority": 1 },
+      { "q": "What does pay her back double mean?", "slug": "pay-her-back-double", "passage": "REV.18.6", "kind": "ethics", "priority": 2 },
+      { "q": "What does fallen, fallen is Babylon the great mean?", "slug": "fallen-fallen-is-babylon-the-great", "passage": "REV.18.2", "kind": "phrase", "priority": 2 }
+    ],
+    "19": [
+      { "q": "What is the marriage supper of the Lamb?", "slug": "marriage-supper-of-the-lamb", "passage": "REV.19.7-9", "kind": "doctrine", "priority": 1 },
+      { "q": "Who is the rider on the white horse in Revelation 19?", "slug": "rider-on-the-white-horse-revelation-19", "passage": "REV.19.11-16", "kind": "identity", "priority": 1 },
+      { "q": "What is the name written on his thigh, King of kings and Lord of lords?", "slug": "king-of-kings-and-lord-of-lords-on-his-thigh", "passage": "REV.19.16", "kind": "phrase", "priority": 1 },
+      { "q": "What does the testimony of Jesus is the spirit of prophecy mean?", "slug": "the-testimony-of-jesus-is-the-spirit-of-prophecy", "passage": "REV.19.10", "kind": "phrase", "priority": 1 },
+      { "q": "Why is his robe dipped in blood?", "slug": "his-robe-dipped-in-blood", "passage": "REV.19.13", "kind": "phrase", "priority": 1 },
+      { "q": "What is the great supper of God where birds eat flesh?", "slug": "the-great-supper-of-god", "passage": "REV.19.17-18", "kind": "phrase", "priority": 1 },
+      { "q": "Why does the angel tell John not to worship him?", "slug": "do-not-worship-me-worship-god", "passage": "REV.19.10", "kind": "doctrine", "priority": 1 },
+      { "q": "What is the fine linen that is the righteous deeds of the saints?", "slug": "fine-linen-righteous-deeds-of-the-saints", "passage": "REV.19.8", "kind": "doctrine", "priority": 2 },
+      { "q": "Why is his secret name one that no one knows?", "slug": "a-name-written-that-no-one-knows", "passage": "REV.19.12", "kind": "phrase", "priority": 2 }
+    ],
+    "20": [
+      { "q": "What is the millennium in Revelation 20?", "slug": "what-is-the-millennium", "passage": "REV.20.1-6", "kind": "doctrine", "priority": 1 },
+      { "q": "Are the thousand years literal?", "slug": "are-the-thousand-years-literal", "passage": "REV.20.2-7", "kind": "number", "priority": 1 },
+      { "q": "What is the first resurrection in Revelation 20:5?", "slug": "the-first-resurrection", "passage": "REV.20.5-6", "kind": "doctrine", "priority": 1 },
+      { "q": "Who are Gog and Magog in Revelation 20?", "slug": "gog-and-magog-revelation-20", "passage": "REV.20.8", "kind": "identity", "priority": 1 },
+      { "q": "What is the great white throne judgment?", "slug": "great-white-throne-judgment", "passage": "REV.20.11-12", "kind": "doctrine", "priority": 1 },
+      { "q": "What is the lake of fire?", "slug": "what-is-the-lake-of-fire", "passage": "REV.20.14-15", "kind": "doctrine", "priority": 1 },
+      { "q": "What is the second death in Revelation 20:14?", "slug": "the-second-death-revelation-20", "passage": "REV.20.14", "kind": "doctrine", "priority": 1 },
+      { "q": "Why is Satan released after the thousand years?", "slug": "why-satan-is-released-after-the-thousand-years", "passage": "REV.20.7-8", "kind": "doctrine", "priority": 1 },
+      { "q": "Are people judged by their works at the great white throne?", "slug": "judged-by-works-at-the-great-white-throne", "passage": "REV.20.12-13", "kind": "doctrine", "priority": 1 },
+      { "q": "What are the books opened at the judgment, and how is the book of life different?", "slug": "the-books-and-the-book-of-life", "passage": "REV.20.12", "kind": "doctrine", "priority": 1 },
+      { "q": "What is the difference between premillennial, postmillennial, and amillennial views?", "slug": "premillennial-postmillennial-amillennial", "passage": "REV.20.4-6", "kind": "doctrine", "priority": 1 },
+      { "q": "Why are death and Hades thrown into the lake of fire?", "slug": "death-and-hades-thrown-into-the-lake-of-fire", "passage": "REV.20.14", "kind": "phrase", "priority": 2 }
+    ],
+    "21": [
+      { "q": "What is the new heaven and new earth?", "slug": "new-heaven-and-new-earth", "passage": "REV.21.1", "kind": "doctrine", "priority": 1 },
+      { "q": "What is the New Jerusalem?", "slug": "what-is-the-new-jerusalem", "passage": "REV.21.2", "kind": "identity", "priority": 1 },
+      { "q": "How big is the New Jerusalem?", "slug": "how-big-is-the-new-jerusalem", "passage": "REV.21.16", "kind": "number", "priority": 1 },
+      { "q": "What does God will wipe away every tear mean?", "slug": "god-will-wipe-away-every-tear", "passage": "REV.21.4", "kind": "phrase", "priority": 1 },
+      { "q": "Why is there no sea in the new earth?", "slug": "why-there-is-no-sea-in-the-new-earth", "passage": "REV.21.1", "kind": "phrase", "priority": 1 },
+      { "q": "Why is there no temple in the New Jerusalem?", "slug": "why-there-is-no-temple-in-the-new-jerusalem", "passage": "REV.21.22", "kind": "doctrine", "priority": 1 },
+      { "q": "Are the streets of gold literal?", "slug": "are-the-streets-of-gold-literal", "passage": "REV.21.21", "kind": "number", "priority": 1 },
+      { "q": "Who are the nations that walk by the city's light if everyone is saved?", "slug": "nations-walking-by-the-citys-light", "passage": "REV.21.24-26", "kind": "tension", "priority": 1 },
+      { "q": "What does nothing unclean will ever enter it mean?", "slug": "nothing-unclean-will-ever-enter-it", "passage": "REV.21.27", "kind": "doctrine", "priority": 1 },
+      { "q": "What are the twelve foundations and twelve gates of the city?", "slug": "twelve-foundations-and-twelve-gates", "passage": "REV.21.12-14", "kind": "phrase", "priority": 1 },
+      { "q": "Who are those thrown into the lake of fire in Revelation 21:8?", "slug": "the-list-in-revelation-21-8", "passage": "REV.21.8", "kind": "doctrine", "priority": 1 },
+      { "q": "What does behold I am making all things new mean?", "slug": "i-am-making-all-things-new", "passage": "REV.21.5", "kind": "doctrine", "priority": 1 },
+      { "q": "Why are the gates never shut?", "slug": "the-gates-are-never-shut", "passage": "REV.21.25", "kind": "phrase", "priority": 2 }
+    ],
+    "22": [
+      { "q": "What is the river of the water of life?", "slug": "river-of-the-water-of-life", "passage": "REV.22.1", "kind": "phrase", "priority": 1 },
+      { "q": "Why are the leaves of the tree of life for the healing of the nations?", "slug": "leaves-for-the-healing-of-the-nations", "passage": "REV.22.2", "kind": "phrase", "priority": 1 },
+      { "q": "What does do not add to or take away from these words mean?", "slug": "do-not-add-to-or-take-away-from-these-words", "passage": "REV.22.18-19", "kind": "doctrine", "priority": 1 },
+      { "q": "Does Revelation 22:18 mean the Bible is closed to new revelation?", "slug": "does-revelation-22-18-close-the-bible", "passage": "REV.22.18-19", "kind": "doctrine", "priority": 1 },
+      { "q": "What does behold I am coming soon mean if it has been 2,000 years?", "slug": "behold-i-am-coming-soon", "passage": "REV.22.7", "kind": "tension", "priority": 1 },
+      { "q": "Who are the dogs outside the city in Revelation 22:15?", "slug": "the-dogs-outside-the-city", "passage": "REV.22.15", "kind": "identity", "priority": 1 },
+      { "q": "What does the Spirit and the Bride say come mean?", "slug": "the-spirit-and-the-bride-say-come", "passage": "REV.22.17", "kind": "phrase", "priority": 1 },
+      { "q": "What does blessed are those who wash their robes mean?", "slug": "blessed-are-those-who-wash-their-robes", "passage": "REV.22.14", "kind": "phrase", "priority": 1 },
+      { "q": "Why will we see God's face when no one can see God and live?", "slug": "they-will-see-his-face", "passage": "REV.22.4", "kind": "tension", "priority": 1 },
+      { "q": "What does let the evildoer still do evil mean?", "slug": "let-the-evildoer-still-do-evil", "passage": "REV.22.11", "kind": "phrase", "priority": 2 },
+      { "q": "Why does John call Jesus both the root and the descendant of David?", "slug": "the-root-and-the-descendant-of-david", "passage": "REV.22.16", "kind": "doctrine", "priority": 2 }
+    ]
+  }
+}

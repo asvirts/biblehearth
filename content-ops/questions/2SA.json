@@ -1,0 +1,133 @@
+{
+  "book": "2SA",
+  "name": "2 Samuel",
+  "chapters": {
+    "1": [
+      { "q": "Why does the Amalekite's story of Saul's death contradict 1 Samuel 31?", "slug": "the-amalekites-contradictory-story-of-sauls-death", "passage": "2SA.1.6-10", "kind": "tension", "priority": 1 },
+      { "q": "What does how the mighty have fallen mean?", "slug": "how-the-mighty-have-fallen", "passage": "2SA.1.19-27", "kind": "phrase", "priority": 1 },
+      { "q": "What does your love to me was more wonderful than that of women mean?", "slug": "your-love-was-more-wonderful-than-that-of-women", "passage": "2SA.1.26", "kind": "doctrine", "priority": 1 },
+      { "q": "Why did David execute the man who claimed to kill Saul?", "slug": "why-david-executed-the-amalekite", "passage": "2SA.1.14-16", "kind": "ethics", "priority": 1 }
+    ],
+    "2": [
+      { "q": "Why did Israel split between David and Ish-bosheth?", "slug": "israel-split-between-david-and-ish-bosheth", "passage": "2SA.2.8-11", "kind": "history", "priority": 1 },
+      { "q": "Why did Joab kill Asahel's killer later?", "slug": "asahels-death-and-joabs-revenge", "passage": "2SA.2.18-23", "kind": "ethics", "priority": 1 }
+    ],
+    "3": [
+      { "q": "Why did Joab murder Abner?", "slug": "why-joab-murdered-abner", "passage": "2SA.3.27", "kind": "ethics", "priority": 1 },
+      { "q": "Why did David take Michal back from her second husband?", "slug": "david-took-michal-back", "passage": "2SA.3.14-16", "kind": "ethics", "priority": 1 }
+    ],
+    "4": [
+      { "q": "Why did David execute the men who killed Ish-bosheth?", "slug": "why-david-executed-ish-bosheths-killers", "passage": "2SA.4.9-12", "kind": "ethics", "priority": 1 }
+    ],
+    "5": [
+      { "q": "How did David capture Jerusalem from the Jebusites?", "slug": "how-david-captured-jerusalem", "passage": "2SA.5.6-9", "kind": "history", "priority": 1 },
+      { "q": "What does the blind and the lame will not enter the house mean?", "slug": "the-blind-and-the-lame", "passage": "2SA.5.8", "kind": "phrase", "priority": 1 },
+      { "q": "How long did David reign as king?", "slug": "how-long-david-reigned", "passage": "2SA.5.4-5", "kind": "number", "priority": 1 },
+      { "q": "What was the sound of marching in the tops of the balsam trees?", "slug": "marching-in-the-tops-of-the-balsam-trees", "passage": "2SA.5.24", "kind": "phrase", "priority": 1 }
+    ],
+    "6": [
+      { "q": "Why did God strike Uzzah dead for touching the ark?", "slug": "why-god-struck-uzzah-dead", "passage": "2SA.6.6-7", "kind": "ethics", "priority": 1 },
+      { "q": "Was David naked when he danced before the ark?", "slug": "was-david-naked-when-he-danced", "passage": "2SA.6.14-20", "kind": "history", "priority": 1 },
+      { "q": "Why did Michal despise David for dancing?", "slug": "why-michal-despised-david", "passage": "2SA.6.16-23", "kind": "ethics", "priority": 1 },
+      { "q": "Why was Michal childless after criticizing David?", "slug": "why-michal-was-childless", "passage": "2SA.6.23", "kind": "ethics", "priority": 1 },
+      { "q": "What was the right way to transport the ark?", "slug": "the-right-way-to-transport-the-ark", "passage": "2SA.6.3-6", "kind": "practice", "priority": 1 }
+    ],
+    "7": [
+      { "q": "What is the Davidic covenant in 2 Samuel 7?", "slug": "the-davidic-covenant", "passage": "2SA.7.12-16", "kind": "doctrine", "priority": 1 },
+      { "q": "What does your throne will be established forever mean?", "slug": "your-throne-established-forever", "passage": "2SA.7.16", "kind": "doctrine", "priority": 1 },
+      { "q": "Why did God not let David build the temple?", "slug": "why-god-did-not-let-david-build-the-temple", "passage": "2SA.7.5-13", "kind": "doctrine", "priority": 1 },
+      { "q": "Is 2 Samuel 7:14 about Solomon or about Jesus?", "slug": "is-2-samuel-7-14-about-solomon-or-jesus", "passage": "2SA.7.14", "kind": "doctrine", "priority": 1 },
+      { "q": "What does who am I, O Lord GOD, and what is my house mean?", "slug": "who-am-i-o-lord-god", "passage": "2SA.7.18", "kind": "practice", "priority": 1 }
+    ],
+    "8": [
+      { "q": "Why did David hamstring the captured horses?", "slug": "why-david-hamstrung-the-horses", "passage": "2SA.8.4", "kind": "ethics", "priority": 1 },
+      { "q": "Why did David kill two-thirds of the Moabite captives?", "slug": "david-killed-two-thirds-of-the-moabites", "passage": "2SA.8.2", "kind": "ethics", "priority": 1 }
+    ],
+    "9": [
+      { "q": "Who was Mephibosheth and why did David show him kindness?", "slug": "who-was-mephibosheth", "passage": "2SA.9.1-13", "kind": "identity", "priority": 1 },
+      { "q": "How is David's kindness to Mephibosheth a picture of grace?", "slug": "mephibosheth-as-a-picture-of-grace", "passage": "2SA.9.7-8", "kind": "doctrine", "priority": 1 },
+      { "q": "What does I am but a dead dog mean?", "slug": "i-am-but-a-dead-dog", "passage": "2SA.9.8", "kind": "phrase", "priority": 1 }
+    ],
+    "10": [
+      { "q": "Why did shaving half the beards of David's envoys start a war?", "slug": "shaving-half-the-beards-of-davids-envoys", "passage": "2SA.10.4-5", "kind": "history", "priority": 1 }
+    ],
+    "11": [
+      { "q": "Was Bathsheba a victim or a willing participant?", "slug": "was-bathsheba-a-victim", "passage": "2SA.11.2-4", "kind": "ethics", "priority": 1 },
+      { "q": "How did David arrange Uriah's death?", "slug": "how-david-arranged-uriahs-death", "passage": "2SA.11.14-17", "kind": "ethics", "priority": 1 },
+      { "q": "What does the time when kings go off to war mean?", "slug": "the-time-when-kings-go-off-to-war", "passage": "2SA.11.1", "kind": "phrase", "priority": 1 },
+      { "q": "Why did Uriah refuse to go home to his wife?", "slug": "why-uriah-refused-to-go-home", "passage": "2SA.11.11", "kind": "ethics", "priority": 1 },
+      { "q": "What does the thing David had done displeased the LORD mean?", "slug": "the-thing-david-had-done-displeased-the-lord", "passage": "2SA.11.27", "kind": "doctrine", "priority": 1 },
+      { "q": "Was Bathsheba bathing publicly on purpose?", "slug": "was-bathsheba-bathing-publicly-on-purpose", "passage": "2SA.11.2", "kind": "claim", "priority": 1 }
+    ],
+    "12": [
+      { "q": "What was Nathan's parable of the lamb about?", "slug": "nathans-parable-of-the-lamb", "passage": "2SA.12.1-6", "kind": "doctrine", "priority": 1 },
+      { "q": "What does you are the man mean?", "slug": "you-are-the-man", "passage": "2SA.12.7", "kind": "phrase", "priority": 1 },
+      { "q": "Why did David's baby die for David's sin?", "slug": "why-davids-baby-died", "passage": "2SA.12.14-18", "kind": "ethics", "priority": 1 },
+      { "q": "What does I will go to him but he will not return to me mean?", "slug": "i-will-go-to-him-but-he-will-not-return", "passage": "2SA.12.23", "kind": "doctrine", "priority": 1 },
+      { "q": "Do babies who die go to heaven, based on 2 Samuel 12:23?", "slug": "do-babies-who-die-go-to-heaven", "passage": "2SA.12.23", "kind": "doctrine", "priority": 1 },
+      { "q": "What does Jedidiah, Solomon's other name, mean?", "slug": "jedidiah-solomons-other-name", "passage": "2SA.12.25", "kind": "phrase", "priority": 1 },
+      { "q": "Why did David worship after his child died instead of mourning?", "slug": "why-david-worshiped-after-his-child-died", "passage": "2SA.12.20", "kind": "practice", "priority": 1 }
+    ],
+    "13": [
+      { "q": "What happened to Tamar in 2 Samuel 13?", "slug": "what-happened-to-tamar-2-samuel-13", "passage": "2SA.13.11-14", "kind": "ethics", "priority": 1 },
+      { "q": "Why did David do nothing after Amnon raped Tamar?", "slug": "why-david-did-nothing-after-tamars-rape", "passage": "2SA.13.21", "kind": "ethics", "priority": 1 },
+      { "q": "Why did Absalom kill Amnon?", "slug": "why-absalom-killed-amnon", "passage": "2SA.13.28-29", "kind": "ethics", "priority": 1 },
+      { "q": "Who was Jonadab and what role did he play?", "slug": "who-was-jonadab", "passage": "2SA.13.3-5", "kind": "identity", "priority": 1 }
+    ],
+    "14": [
+      { "q": "What was the wise woman of Tekoa's parable?", "slug": "the-wise-woman-of-tekoa", "passage": "2SA.14.4-11", "kind": "history", "priority": 1 },
+      { "q": "Why was Absalom's hair so remarkable?", "slug": "why-absaloms-hair-was-remarkable", "passage": "2SA.14.25-26", "kind": "phrase", "priority": 1 }
+    ],
+    "15": [
+      { "q": "How did Absalom steal the hearts of Israel?", "slug": "absalom-stole-the-hearts-of-israel", "passage": "2SA.15.1-6", "kind": "history", "priority": 1 },
+      { "q": "Who was Ahithophel and why did he betray David?", "slug": "who-was-ahithophel", "passage": "2SA.15.12", "kind": "identity", "priority": 1 },
+      { "q": "Why did David flee Jerusalem barefoot and weeping?", "slug": "david-fled-jerusalem-barefoot", "passage": "2SA.15.30", "kind": "phrase", "priority": 1 }
+    ],
+    "16": [
+      { "q": "Why did David let Shimei curse him?", "slug": "why-david-let-shimei-curse-him", "passage": "2SA.16.10-12", "kind": "practice", "priority": 1 },
+      { "q": "Why did Absalom sleep with David's concubines publicly?", "slug": "absalom-and-davids-concubines", "passage": "2SA.16.21-22", "kind": "ethics", "priority": 1 },
+      { "q": "Was Ziba lying about Mephibosheth?", "slug": "was-ziba-lying-about-mephibosheth", "passage": "2SA.16.1-4", "kind": "ethics", "priority": 1 }
+    ],
+    "17": [
+      { "q": "Why did God frustrate Ahithophel's good advice?", "slug": "why-god-frustrated-ahithophels-advice", "passage": "2SA.17.14", "kind": "doctrine", "priority": 1 },
+      { "q": "Why did Ahithophel hang himself?", "slug": "why-ahithophel-hanged-himself", "passage": "2SA.17.23", "kind": "history", "priority": 1 }
+    ],
+    "18": [
+      { "q": "How did Absalom die?", "slug": "how-absalom-died", "passage": "2SA.18.9-15", "kind": "history", "priority": 1 },
+      { "q": "Was Absalom really caught by his hair in a tree?", "slug": "was-absalom-caught-by-his-hair", "passage": "2SA.18.9", "kind": "claim", "priority": 1 },
+      { "q": "What does O Absalom, my son, my son mean?", "slug": "o-absalom-my-son-my-son", "passage": "2SA.18.33", "kind": "phrase", "priority": 1 },
+      { "q": "Why did Joab disobey David's order to spare Absalom?", "slug": "why-joab-disobeyed-and-killed-absalom", "passage": "2SA.18.5-14", "kind": "ethics", "priority": 1 }
+    ],
+    "19": [
+      { "q": "Why did Joab rebuke David for mourning Absalom?", "slug": "joab-rebuked-david-for-mourning", "passage": "2SA.19.5-7", "kind": "ethics", "priority": 1 },
+      { "q": "Why did David spare Shimei after all?", "slug": "why-david-spared-shimei", "passage": "2SA.19.21-23", "kind": "ethics", "priority": 1 }
+    ],
+    "20": [
+      { "q": "Why did Joab murder Amasa?", "slug": "why-joab-murdered-amasa", "passage": "2SA.20.9-10", "kind": "ethics", "priority": 1 },
+      { "q": "Who was the wise woman of Abel who saved her city?", "slug": "the-wise-woman-of-abel", "passage": "2SA.20.16-22", "kind": "identity", "priority": 1 }
+    ],
+    "21": [
+      { "q": "Why did David hand over seven of Saul's sons to be killed?", "slug": "seven-of-sauls-sons-handed-over", "passage": "2SA.21.6-9", "kind": "ethics", "priority": 1 },
+      { "q": "Why did God send a famine over Saul's broken oath to the Gibeonites?", "slug": "the-famine-over-sauls-broken-oath", "passage": "2SA.21.1", "kind": "ethics", "priority": 1 },
+      { "q": "Who were the giants and descendants of Rapha in 2 Samuel 21?", "slug": "the-descendants-of-rapha", "passage": "2SA.21.16-22", "kind": "identity", "priority": 1 },
+      { "q": "Why does 2 Samuel 21:19 say Elhanan killed Goliath?", "slug": "did-elhanan-kill-goliath", "passage": "2SA.21.19", "kind": "tension", "priority": 1 }
+    ],
+    "22": [
+      { "q": "Why is David's song in 2 Samuel 22 almost identical to Psalm 18?", "slug": "why-2-samuel-22-matches-psalm-18", "passage": "2SA.22.1-51", "kind": "history", "priority": 1 },
+      { "q": "What does he rescued me because he delighted in me mean?", "slug": "he-rescued-me-because-he-delighted-in-me", "passage": "2SA.22.20", "kind": "doctrine", "priority": 1 }
+    ],
+    "23": [
+      { "q": "Who were David's mighty men?", "slug": "who-were-davids-mighty-men", "passage": "2SA.23.8-39", "kind": "identity", "priority": 1 },
+      { "q": "Why did David pour out the water three men risked their lives for?", "slug": "david-poured-out-the-water", "passage": "2SA.23.15-17", "kind": "practice", "priority": 1 },
+      { "q": "What were David's last words?", "slug": "davids-last-words", "passage": "2SA.23.1-7", "kind": "doctrine", "priority": 1 },
+      { "q": "Who was Benaiah who killed a lion in a pit on a snowy day?", "slug": "benaiah-killed-a-lion-in-a-pit", "passage": "2SA.23.20", "kind": "identity", "priority": 1 }
+    ],
+    "24": [
+      { "q": "Why was taking a census such a serious sin?", "slug": "why-davids-census-was-a-sin", "passage": "2SA.24.10", "kind": "doctrine", "priority": 1 },
+      { "q": "Did God or Satan incite David to take the census?", "slug": "did-god-or-satan-incite-the-census", "passage": "2SA.24.1", "kind": "tension", "priority": 1 },
+      { "q": "Why did 70,000 people die for David's sin?", "slug": "why-70000-died-for-davids-sin", "passage": "2SA.24.15", "kind": "ethics", "priority": 1 },
+      { "q": "What does I will not offer what costs me nothing mean?", "slug": "i-will-not-offer-what-costs-me-nothing", "passage": "2SA.24.24", "kind": "practice", "priority": 1 },
+      { "q": "Where was the threshing floor of Araunah?", "slug": "the-threshing-floor-of-araunah", "passage": "2SA.24.18", "kind": "history", "priority": 1 }
+    ]
+  }
+}

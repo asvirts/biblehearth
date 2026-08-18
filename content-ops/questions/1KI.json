@@ -1,0 +1,136 @@
+{
+  "book": "1KI",
+  "name": "1 Kings",
+  "chapters": {
+    "1": [
+      { "q": "Who was Abishag and why was she brought to David?", "slug": "who-was-abishag", "passage": "1KI.1.1-4", "kind": "identity", "priority": 1 },
+      { "q": "Why did Adonijah try to make himself king?", "slug": "why-adonijah-tried-to-make-himself-king", "passage": "1KI.1.5-10", "kind": "history", "priority": 1 },
+      { "q": "What does grabbing the horns of the altar mean?", "slug": "grabbing-the-horns-of-the-altar", "passage": "1KI.1.50-51", "kind": "history", "priority": 1 }
+    ],
+    "2": [
+      { "q": "Why did Solomon execute Adonijah, Joab, and Shimei?", "slug": "why-solomon-executed-adonijah-joab-and-shimei", "passage": "1KI.2.24-46", "kind": "ethics", "priority": 1 },
+      { "q": "Was David's dying charge to settle scores godly?", "slug": "was-davids-dying-charge-godly", "passage": "1KI.2.5-9", "kind": "ethics", "priority": 1 },
+      { "q": "Why was Adonijah's request for Abishag treated as treason?", "slug": "why-asking-for-abishag-was-treason", "passage": "1KI.2.17-22", "kind": "history", "priority": 1 }
+    ],
+    "3": [
+      { "q": "Why did Solomon ask for wisdom instead of wealth?", "slug": "why-solomon-asked-for-wisdom", "passage": "1KI.3.5-9", "kind": "practice", "priority": 1 },
+      { "q": "How did Solomon settle the case of the two women and one baby?", "slug": "solomon-and-the-two-women-and-one-baby", "passage": "1KI.3.16-28", "kind": "history", "priority": 1 },
+      { "q": "What does ask what I shall give you mean?", "slug": "ask-what-i-shall-give-you", "passage": "1KI.3.5", "kind": "doctrine", "priority": 1 },
+      { "q": "What is a discerning heart in 1 Kings 3:9?", "slug": "a-discerning-heart", "passage": "1KI.3.9", "kind": "practice", "priority": 1 }
+    ],
+    "4": [
+      { "q": "How wise was Solomon compared to everyone else?", "slug": "how-wise-was-solomon", "passage": "1KI.4.29-34", "kind": "history", "priority": 1 },
+      { "q": "How many proverbs and songs did Solomon write?", "slug": "how-many-proverbs-and-songs-solomon-wrote", "passage": "1KI.4.32", "kind": "number", "priority": 1 }
+    ],
+    "5": [
+      { "q": "Why did Solomon buy cedar from Hiram of Tyre?", "slug": "cedar-from-hiram-of-tyre", "passage": "1KI.5.6-10", "kind": "history", "priority": 2 },
+      { "q": "How many workers did Solomon conscript for the temple?", "slug": "how-many-workers-solomon-conscripted", "passage": "1KI.5.13-16", "kind": "number", "priority": 2 }
+    ],
+    "6": [
+      { "q": "How does the 480 years in 1 Kings 6:1 date the exodus?", "slug": "the-480-years-of-1-kings-6-1", "passage": "1KI.6.1", "kind": "number", "priority": 1 },
+      { "q": "How big was Solomon's temple?", "slug": "how-big-was-solomons-temple", "passage": "1KI.6.2", "kind": "number", "priority": 1 },
+      { "q": "How long did it take to build Solomon's temple?", "slug": "how-long-solomons-temple-took-to-build", "passage": "1KI.6.38", "kind": "number", "priority": 1 },
+      { "q": "Why was no hammer or iron tool heard at the temple site?", "slug": "no-hammer-or-iron-tool-was-heard", "passage": "1KI.6.7", "kind": "phrase", "priority": 1 }
+    ],
+    "7": [
+      { "q": "What were the pillars Jachin and Boaz?", "slug": "the-pillars-jachin-and-boaz", "passage": "1KI.7.21", "kind": "identity", "priority": 1 },
+      { "q": "What was the bronze Sea in Solomon's temple?", "slug": "the-bronze-sea-in-the-temple", "passage": "1KI.7.23-26", "kind": "identity", "priority": 1 },
+      { "q": "Does the bronze Sea's measurements make pi equal three?", "slug": "does-the-bronze-sea-make-pi-equal-three", "passage": "1KI.7.23", "kind": "claim", "priority": 1 }
+    ],
+    "8": [
+      { "q": "What does will God really dwell on earth mean?", "slug": "will-god-really-dwell-on-earth", "passage": "1KI.8.27", "kind": "doctrine", "priority": 1 },
+      { "q": "Why did the cloud fill the temple so the priests could not serve?", "slug": "the-cloud-filled-the-temple", "passage": "1KI.8.10-11", "kind": "doctrine", "priority": 1 },
+      { "q": "What does when they sin and pray toward this place mean?", "slug": "when-they-pray-toward-this-place", "passage": "1KI.8.46-50", "kind": "practice", "priority": 1 },
+      { "q": "Why did Solomon pray for foreigners at the temple dedication?", "slug": "solomon-prayed-for-foreigners", "passage": "1KI.8.41-43", "kind": "doctrine", "priority": 1 },
+      { "q": "How many animals were sacrificed at the temple dedication?", "slug": "animals-sacrificed-at-the-dedication", "passage": "1KI.8.63", "kind": "number", "priority": 2 }
+    ],
+    "9": [
+      { "q": "What warning did God give Solomon after the temple was built?", "slug": "gods-warning-to-solomon", "passage": "1KI.9.6-9", "kind": "doctrine", "priority": 1 },
+      { "q": "Why did Hiram reject the cities Solomon gave him?", "slug": "hiram-rejected-solomons-cities", "passage": "1KI.9.11-13", "kind": "history", "priority": 3 }
+    ],
+    "10": [
+      { "q": "Who was the Queen of Sheba?", "slug": "who-was-the-queen-of-sheba", "passage": "1KI.10.1-10", "kind": "identity", "priority": 1 },
+      { "q": "What does the half was not told me mean?", "slug": "the-half-was-not-told-me", "passage": "1KI.10.7", "kind": "phrase", "priority": 1 },
+      { "q": "Why did Solomon receive exactly 666 talents of gold a year?", "slug": "solomons-666-talents-of-gold", "passage": "1KI.10.14", "kind": "number", "priority": 1 },
+      { "q": "Did Solomon and the Queen of Sheba have a child together?", "slug": "did-solomon-and-sheba-have-a-child", "passage": "1KI.10.13", "kind": "claim", "priority": 1 },
+      { "q": "How rich was Solomon in modern terms?", "slug": "how-rich-was-solomon", "passage": "1KI.10.21-27", "kind": "number", "priority": 1 }
+    ],
+    "11": [
+      { "q": "Why did Solomon have 700 wives and 300 concubines?", "slug": "solomons-700-wives-and-300-concubines", "passage": "1KI.11.3", "kind": "ethics", "priority": 1 },
+      { "q": "Did Solomon lose his salvation when his heart turned away?", "slug": "did-solomon-lose-his-salvation", "passage": "1KI.11.4-9", "kind": "doctrine", "priority": 1 },
+      { "q": "Who were Ashtoreth, Molech, and Chemosh?", "slug": "ashtoreth-molech-and-chemosh", "passage": "1KI.11.5-7", "kind": "identity", "priority": 1 },
+      { "q": "Why did God tear ten tribes away from Solomon's son?", "slug": "ten-tribes-torn-away", "passage": "1KI.11.31-35", "kind": "doctrine", "priority": 1 },
+      { "q": "Who was Jeroboam and why did Ahijah tear his cloak into twelve pieces?", "slug": "ahijah-tore-jeroboams-cloak", "passage": "1KI.11.29-31", "kind": "identity", "priority": 1 }
+    ],
+    "12": [
+      { "q": "Why did the kingdom of Israel split in two?", "slug": "why-the-kingdom-split-in-two", "passage": "1KI.12.16-20", "kind": "history", "priority": 1 },
+      { "q": "What was Rehoboam's harsh answer to the people?", "slug": "rehoboams-harsh-answer", "passage": "1KI.12.10-14", "kind": "ethics", "priority": 1 },
+      { "q": "Why did Jeroboam set up golden calves at Bethel and Dan?", "slug": "jeroboams-golden-calves", "passage": "1KI.12.28-30", "kind": "ethics", "priority": 1 },
+      { "q": "What does my little finger is thicker than my father's waist mean?", "slug": "my-little-finger-is-thicker-than-my-fathers-waist", "passage": "1KI.12.10", "kind": "phrase", "priority": 1 },
+      { "q": "Was the division of the kingdom God's will or Rehoboam's fault?", "slug": "was-the-division-gods-will-or-rehoboams-fault", "passage": "1KI.12.15", "kind": "doctrine", "priority": 1 }
+    ],
+    "13": [
+      { "q": "Why did God let a lion kill the man of God who was deceived?", "slug": "the-man-of-god-killed-by-a-lion", "passage": "1KI.13.23-26", "kind": "ethics", "priority": 1 },
+      { "q": "Why did the old prophet lie to the man of God?", "slug": "why-the-old-prophet-lied", "passage": "1KI.13.18", "kind": "ethics", "priority": 1 },
+      { "q": "How did Jeroboam's hand wither and get healed?", "slug": "jeroboams-withered-hand", "passage": "1KI.13.4-6", "kind": "history", "priority": 1 },
+      { "q": "How was the prophecy naming Josiah fulfilled 300 years later?", "slug": "the-prophecy-naming-josiah", "passage": "1KI.13.2", "kind": "doctrine", "priority": 1 }
+    ],
+    "14": [
+      { "q": "Why did Ahijah recognize Jeroboam's wife in disguise?", "slug": "ahijah-recognized-jeroboams-disguised-wife", "passage": "1KI.14.5-6", "kind": "phrase", "priority": 1 },
+      { "q": "Who was Shishak and what did he take from Jerusalem?", "slug": "who-was-shishak", "passage": "1KI.14.25-26", "kind": "history", "priority": 1 }
+    ],
+    "15": [
+      { "q": "Why is Asa called good even though he did not remove the high places?", "slug": "why-asa-is-called-good", "passage": "1KI.15.11-14", "kind": "ethics", "priority": 1 },
+      { "q": "What does he walked in the ways of David his father mean?", "slug": "he-walked-in-the-ways-of-david", "passage": "1KI.15.11", "kind": "phrase", "priority": 2 }
+    ],
+    "16": [
+      { "q": "Who was Omri and why does archaeology know him so well?", "slug": "who-was-omri", "passage": "1KI.16.23-28", "kind": "history", "priority": 1 },
+      { "q": "Who was Jezebel and why did Ahab marry her?", "slug": "who-was-jezebel", "passage": "1KI.16.31", "kind": "identity", "priority": 1 },
+      { "q": "Why did Zimri only reign seven days?", "slug": "why-zimri-reigned-seven-days", "passage": "1KI.16.15-18", "kind": "history", "priority": 2 },
+      { "q": "Why did Ahab's reign get called more evil than all before him?", "slug": "why-ahab-was-the-most-evil-king", "passage": "1KI.16.30-33", "kind": "ethics", "priority": 1 }
+    ],
+    "17": [
+      { "q": "How did ravens feed Elijah?", "slug": "how-ravens-fed-elijah", "passage": "1KI.17.4-6", "kind": "history", "priority": 1 },
+      { "q": "Why did God send Elijah to a Gentile widow in Zarephath?", "slug": "why-god-sent-elijah-to-a-gentile-widow", "passage": "1KI.17.9", "kind": "doctrine", "priority": 1 },
+      { "q": "How did the widow's flour and oil not run out?", "slug": "the-widows-flour-and-oil", "passage": "1KI.17.14-16", "kind": "doctrine", "priority": 1 },
+      { "q": "How did Elijah raise the widow's son from the dead?", "slug": "elijah-raised-the-widows-son", "passage": "1KI.17.21-22", "kind": "history", "priority": 1 },
+      { "q": "Why did Elijah ask the widow for her last meal?", "slug": "elijah-asked-for-her-last-meal", "passage": "1KI.17.11-13", "kind": "ethics", "priority": 1 }
+    ],
+    "18": [
+      { "q": "What happened on Mount Carmel between Elijah and the prophets of Baal?", "slug": "elijah-on-mount-carmel", "passage": "1KI.18.20-40", "kind": "history", "priority": 1 },
+      { "q": "What does how long will you waver between two opinions mean?", "slug": "how-long-will-you-waver-between-two-opinions", "passage": "1KI.18.21", "kind": "practice", "priority": 1 },
+      { "q": "Did Elijah really mock Baal by saying he might be relieving himself?", "slug": "did-elijah-mock-baal-crudely", "passage": "1KI.18.27", "kind": "phrase", "priority": 1 },
+      { "q": "Why did Elijah pour water on the altar before the fire fell?", "slug": "elijah-poured-water-on-the-altar", "passage": "1KI.18.33-35", "kind": "phrase", "priority": 1 },
+      { "q": "Was Elijah right to have 450 prophets of Baal killed?", "slug": "was-elijah-right-to-kill-the-prophets-of-baal", "passage": "1KI.18.40", "kind": "ethics", "priority": 1 },
+      { "q": "What is the cloud the size of a man's hand?", "slug": "a-cloud-the-size-of-a-mans-hand", "passage": "1KI.18.44", "kind": "phrase", "priority": 1 },
+      { "q": "How did Elijah outrun Ahab's chariot?", "slug": "elijah-outran-ahabs-chariot", "passage": "1KI.18.46", "kind": "history", "priority": 1 }
+    ],
+    "19": [
+      { "q": "What is the still small voice or gentle whisper?", "slug": "the-still-small-voice", "passage": "1KI.19.11-13", "kind": "doctrine", "priority": 1 },
+      { "q": "Was Elijah depressed under the broom tree?", "slug": "was-elijah-depressed-under-the-broom-tree", "passage": "1KI.19.4", "kind": "practice", "priority": 1 },
+      { "q": "How did God treat Elijah's despair with food and sleep?", "slug": "god-gave-elijah-food-and-sleep", "passage": "1KI.19.5-8", "kind": "practice", "priority": 1 },
+      { "q": "Why did Elijah say I alone am left when 7,000 remained?", "slug": "i-alone-am-left", "passage": "1KI.19.10-18", "kind": "tension", "priority": 1 },
+      { "q": "Who are the 7,000 who had not bowed to Baal?", "slug": "the-seven-thousand-who-had-not-bowed", "passage": "1KI.19.18", "kind": "identity", "priority": 1 },
+      { "q": "Why did Elisha burn his plow when Elijah called him?", "slug": "elisha-burned-his-plow", "passage": "1KI.19.19-21", "kind": "practice", "priority": 1 },
+      { "q": "Why did God ask Elijah what are you doing here?", "slug": "what-are-you-doing-here-elijah", "passage": "1KI.19.9", "kind": "phrase", "priority": 1 }
+    ],
+    "20": [
+      { "q": "Why was Ahab condemned for sparing Ben-hadad?", "slug": "why-ahab-was-condemned-for-sparing-ben-hadad", "passage": "1KI.20.42", "kind": "ethics", "priority": 1 },
+      { "q": "Why did a prophet ask to be struck to make a point?", "slug": "the-prophet-who-asked-to-be-struck", "passage": "1KI.20.35-37", "kind": "history", "priority": 2 }
+    ],
+    "21": [
+      { "q": "What happened with Naboth's vineyard?", "slug": "naboths-vineyard", "passage": "1KI.21.1-16", "kind": "ethics", "priority": 1 },
+      { "q": "Why would Naboth not sell his vineyard to the king?", "slug": "why-naboth-would-not-sell-his-vineyard", "passage": "1KI.21.3", "kind": "history", "priority": 1 },
+      { "q": "What does have you found me, my enemy mean?", "slug": "have-you-found-me-my-enemy", "passage": "1KI.21.20", "kind": "phrase", "priority": 1 },
+      { "q": "Was Ahab's repentance genuine?", "slug": "was-ahabs-repentance-genuine", "passage": "1KI.21.27-29", "kind": "doctrine", "priority": 1 },
+      { "q": "How did Jezebel arrange Naboth's murder legally?", "slug": "how-jezebel-arranged-naboths-murder", "passage": "1KI.21.8-13", "kind": "ethics", "priority": 1 }
+    ],
+    "22": [
+      { "q": "Why did God send a lying spirit to deceive Ahab?", "slug": "the-lying-spirit-sent-to-ahab", "passage": "1KI.22.19-23", "kind": "doctrine", "priority": 1 },
+      { "q": "Who was Micaiah and why did he stand alone against 400 prophets?", "slug": "who-was-micaiah", "passage": "1KI.22.7-28", "kind": "identity", "priority": 1 },
+      { "q": "How did a random arrow kill Ahab exactly as prophesied?", "slug": "a-random-arrow-killed-ahab", "passage": "1KI.22.34", "kind": "doctrine", "priority": 1 },
+      { "q": "How can God be behind deception without being a liar?", "slug": "how-god-can-be-behind-deception", "passage": "1KI.22.22-23", "kind": "doctrine", "priority": 1 },
+      { "q": "Why did dogs lick Ahab's blood where Naboth died?", "slug": "dogs-licked-ahabs-blood", "passage": "1KI.22.38", "kind": "doctrine", "priority": 1 }
+    ]
+  }
+}

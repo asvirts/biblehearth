@@ -1,0 +1,143 @@
+{
+  "book": "2KI",
+  "name": "2 Kings",
+  "chapters": {
+    "1": [
+      { "q": "Why did fire from heaven kill 100 of the king's men?", "slug": "fire-from-heaven-killed-the-kings-men", "passage": "2KI.1.10-12", "kind": "ethics", "priority": 1 },
+      { "q": "Who is Baal-zebub, the god of Ekron?", "slug": "who-is-baal-zebub", "passage": "2KI.1.2", "kind": "identity", "priority": 1 },
+      { "q": "Why did the third captain's plea change the outcome?", "slug": "the-third-captains-plea", "passage": "2KI.1.13-14", "kind": "practice", "priority": 1 }
+    ],
+    "2": [
+      { "q": "How was Elijah taken up to heaven?", "slug": "how-elijah-was-taken-up-to-heaven", "passage": "2KI.2.11", "kind": "history", "priority": 1 },
+      { "q": "Did Elijah go to heaven without dying?", "slug": "did-elijah-go-to-heaven-without-dying", "passage": "2KI.2.11", "kind": "doctrine", "priority": 1 },
+      { "q": "What was the double portion of Elijah's spirit Elisha asked for?", "slug": "a-double-portion-of-elijahs-spirit", "passage": "2KI.2.9-10", "kind": "doctrine", "priority": 1 },
+      { "q": "Why did God send bears to maul the boys who mocked Elisha?", "slug": "the-bears-that-mauled-the-boys", "passage": "2KI.2.23-24", "kind": "ethics", "priority": 1 },
+      { "q": "Were the boys who mocked Elisha children or young men?", "slug": "were-the-mockers-children-or-young-men", "passage": "2KI.2.23", "kind": "phrase", "priority": 1 },
+      { "q": "What are the chariots of fire and horses of fire?", "slug": "the-chariots-of-fire", "passage": "2KI.2.11-12", "kind": "identity", "priority": 1 },
+      { "q": "How did Elisha heal the bad water with salt?", "slug": "elisha-healed-the-water-with-salt", "passage": "2KI.2.19-22", "kind": "history", "priority": 1 }
+    ],
+    "3": [
+      { "q": "Why did Elisha call for a harpist before prophesying?", "slug": "elisha-called-for-a-harpist", "passage": "2KI.3.15", "kind": "practice", "priority": 1 },
+      { "q": "Why did Moab's king sacrifice his own son on the wall?", "slug": "moabs-king-sacrificed-his-son", "passage": "2KI.3.27", "kind": "history", "priority": 1 },
+      { "q": "How did the water look like blood to the Moabites?", "slug": "the-water-looked-like-blood", "passage": "2KI.3.22-23", "kind": "history", "priority": 1 }
+    ],
+    "4": [
+      { "q": "How did the widow's small jar of oil fill many vessels?", "slug": "the-widows-jar-of-oil", "passage": "2KI.4.1-7", "kind": "history", "priority": 1 },
+      { "q": "Who was the Shunammite woman?", "slug": "who-was-the-shunammite-woman", "passage": "2KI.4.8-17", "kind": "identity", "priority": 1 },
+      { "q": "How did Elisha raise the Shunammite's son?", "slug": "elisha-raised-the-shunammites-son", "passage": "2KI.4.32-35", "kind": "history", "priority": 1 },
+      { "q": "What does there is death in the pot mean?", "slug": "there-is-death-in-the-pot", "passage": "2KI.4.40", "kind": "phrase", "priority": 1 },
+      { "q": "How did Elisha feed a hundred men with twenty loaves?", "slug": "elisha-fed-a-hundred-with-twenty-loaves", "passage": "2KI.4.42-44", "kind": "history", "priority": 1 },
+      { "q": "What does it is well mean when the Shunammite's son had died?", "slug": "it-is-well-2-kings-4", "passage": "2KI.4.23-26", "kind": "practice", "priority": 1 }
+    ],
+    "5": [
+      { "q": "Why did Naaman have to wash seven times in the Jordan?", "slug": "why-naaman-washed-seven-times", "passage": "2KI.5.10-14", "kind": "doctrine", "priority": 1 },
+      { "q": "Who was Naaman and what was his leprosy?", "slug": "who-was-naaman", "passage": "2KI.5.1", "kind": "identity", "priority": 1 },
+      { "q": "Why was Naaman angry that the cure was so simple?", "slug": "why-naaman-was-angry-at-a-simple-cure", "passage": "2KI.5.11-12", "kind": "practice", "priority": 1 },
+      { "q": "Why did Gehazi get Naaman's leprosy?", "slug": "why-gehazi-got-naamans-leprosy", "passage": "2KI.5.20-27", "kind": "ethics", "priority": 1 },
+      { "q": "Why did Elisha allow Naaman to bow in Rimmon's temple?", "slug": "naaman-bowing-in-rimmons-temple", "passage": "2KI.5.18-19", "kind": "ethics", "priority": 1 },
+      { "q": "Who was the little Israelite servant girl who pointed Naaman to the prophet?", "slug": "the-servant-girl-who-pointed-naaman-to-the-prophet", "passage": "2KI.5.2-3", "kind": "identity", "priority": 1 }
+    ],
+    "6": [
+      { "q": "Did an iron axe head really float?", "slug": "did-an-iron-axe-head-really-float", "passage": "2KI.6.5-7", "kind": "history", "priority": 1 },
+      { "q": "What does those who are with us are more than those with them mean?", "slug": "those-with-us-are-more-than-those-with-them", "passage": "2KI.6.16", "kind": "doctrine", "priority": 1 },
+      { "q": "What were the horses and chariots of fire around Elisha?", "slug": "horses-and-chariots-of-fire-around-elisha", "passage": "2KI.6.17", "kind": "identity", "priority": 1 },
+      { "q": "Why did Elisha feed the enemy army he had blinded?", "slug": "elisha-fed-the-army-he-blinded", "passage": "2KI.6.22-23", "kind": "ethics", "priority": 1 },
+      { "q": "Did mothers really eat their children during the siege of Samaria?", "slug": "cannibalism-during-the-siege-of-samaria", "passage": "2KI.6.28-29", "kind": "history", "priority": 1 }
+    ],
+    "7": [
+      { "q": "What does why sit here until we die mean?", "slug": "why-sit-here-until-we-die", "passage": "2KI.7.3-4", "kind": "practice", "priority": 1 },
+      { "q": "How did four lepers discover the abandoned Aramean camp?", "slug": "the-four-lepers-and-the-abandoned-camp", "passage": "2KI.7.5-10", "kind": "history", "priority": 1 },
+      { "q": "Why was the doubting officer trampled to death?", "slug": "the-officer-trampled-in-the-gate", "passage": "2KI.7.17-20", "kind": "ethics", "priority": 1 }
+    ],
+    "8": [
+      { "q": "Why did Elisha weep when he anointed Hazael?", "slug": "why-elisha-wept-over-hazael", "passage": "2KI.8.11-13", "kind": "phrase", "priority": 1 },
+      { "q": "Did Elisha tell Hazael to lie to Ben-hadad?", "slug": "did-elisha-tell-hazael-to-lie", "passage": "2KI.8.10", "kind": "ethics", "priority": 1 }
+    ],
+    "9": [
+      { "q": "How did Jezebel die?", "slug": "how-jezebel-died", "passage": "2KI.9.30-37", "kind": "history", "priority": 1 },
+      { "q": "Why did Jezebel put on makeup before Jehu arrived?", "slug": "why-jezebel-put-on-makeup", "passage": "2KI.9.30", "kind": "phrase", "priority": 1 },
+      { "q": "What does driving like Jehu mean?", "slug": "driving-like-jehu", "passage": "2KI.9.20", "kind": "phrase", "priority": 1 },
+      { "q": "What does what peace, when your mother Jezebel's idolatry continues mean?", "slug": "what-peace-with-jezebels-idolatry", "passage": "2KI.9.22", "kind": "phrase", "priority": 1 }
+    ],
+    "10": [
+      { "q": "Why did Jehu have Ahab's seventy sons beheaded?", "slug": "jehu-beheaded-ahabs-seventy-sons", "passage": "2KI.10.6-8", "kind": "ethics", "priority": 1 },
+      { "q": "Why did Jehu keep the golden calves after destroying Baal worship?", "slug": "jehu-kept-the-golden-calves", "passage": "2KI.10.28-31", "kind": "ethics", "priority": 1 },
+      { "q": "Was Jehu's deception of the Baal worshipers justified?", "slug": "was-jehus-deception-justified", "passage": "2KI.10.18-25", "kind": "ethics", "priority": 1 }
+    ],
+    "11": [
+      { "q": "How did Jehoiada hide the boy king Joash for six years?", "slug": "jehoiada-hid-the-boy-king-joash", "passage": "2KI.11.2-3", "kind": "history", "priority": 1 },
+      { "q": "Who was Athaliah and why was she killed?", "slug": "who-was-athaliah", "passage": "2KI.11.1-16", "kind": "identity", "priority": 1 },
+      { "q": "How old was Joash when he became king?", "slug": "how-old-was-joash-when-he-became-king", "passage": "2KI.11.21", "kind": "number", "priority": 1 }
+    ],
+    "12": [
+      { "q": "How did the collection chest for temple repairs work?", "slug": "the-collection-chest-for-temple-repairs", "passage": "2KI.12.9-15", "kind": "history", "priority": 1 },
+      { "q": "Why did Joash turn bad after Jehoiada died?", "slug": "why-joash-turned-bad-after-jehoiada-died", "passage": "2KI.12.17-18", "kind": "practice", "priority": 1 }
+    ],
+    "13": [
+      { "q": "Why was Elisha angry that the king only struck the ground three times?", "slug": "the-king-struck-the-ground-three-times", "passage": "2KI.13.18-19", "kind": "doctrine", "priority": 1 },
+      { "q": "Did a dead man really come back to life touching Elisha's bones?", "slug": "a-dead-man-revived-by-elishas-bones", "passage": "2KI.13.20-21", "kind": "history", "priority": 1 }
+    ],
+    "14": [
+      { "q": "What does the parable of the thistle and the cedar mean?", "slug": "the-thistle-and-the-cedar", "passage": "2KI.14.9-10", "kind": "phrase", "priority": 1 },
+      { "q": "Why does 2 Kings 14:6 cite the law that children not die for parents' sins?", "slug": "children-shall-not-die-for-parents-sins", "passage": "2KI.14.6", "kind": "ethics", "priority": 1 }
+    ],
+    "15": [
+      { "q": "Why did God strike King Azariah with leprosy?", "slug": "why-god-struck-azariah-with-leprosy", "passage": "2KI.15.5", "kind": "ethics", "priority": 1 },
+      { "q": "Why do the reigns of Israel's kings get shorter and more violent?", "slug": "why-israels-kings-got-more-violent", "passage": "2KI.15.8-31", "kind": "history", "priority": 2 }
+    ],
+    "16": [
+      { "q": "Why did Ahaz sacrifice his own son in the fire?", "slug": "ahaz-sacrificed-his-son-in-the-fire", "passage": "2KI.16.3", "kind": "ethics", "priority": 1 },
+      { "q": "Why did Ahaz copy an altar he saw in Damascus?", "slug": "ahaz-copied-an-altar-from-damascus", "passage": "2KI.16.10-16", "kind": "ethics", "priority": 1 }
+    ],
+    "17": [
+      { "q": "Why did the northern kingdom of Israel fall to Assyria?", "slug": "why-the-northern-kingdom-fell", "passage": "2KI.17.7-23", "kind": "doctrine", "priority": 1 },
+      { "q": "What happened to the ten lost tribes of Israel?", "slug": "what-happened-to-the-ten-lost-tribes", "passage": "2KI.17.6", "kind": "history", "priority": 1 },
+      { "q": "Where did the Samaritans come from?", "slug": "where-the-samaritans-came-from", "passage": "2KI.17.24-33", "kind": "history", "priority": 1 },
+      { "q": "What does they feared the LORD and served their own gods mean?", "slug": "they-feared-the-lord-and-served-their-own-gods", "passage": "2KI.17.33", "kind": "doctrine", "priority": 1 }
+    ],
+    "18": [
+      { "q": "Why did Hezekiah destroy the bronze serpent Moses made?", "slug": "why-hezekiah-destroyed-the-bronze-serpent", "passage": "2KI.18.4", "kind": "practice", "priority": 1 },
+      { "q": "What does Nehushtan mean?", "slug": "what-does-nehushtan-mean", "passage": "2KI.18.4", "kind": "phrase", "priority": 1 },
+      { "q": "Why did Hezekiah strip the temple gold to pay Assyria?", "slug": "hezekiah-stripped-the-temple-gold", "passage": "2KI.18.14-16", "kind": "ethics", "priority": 1 },
+      { "q": "What was Hezekiah's tunnel and has it been found?", "slug": "hezekiahs-tunnel", "passage": "2KI.18.17", "kind": "history", "priority": 1 }
+    ],
+    "19": [
+      { "q": "How did one angel kill 185,000 Assyrian soldiers?", "slug": "one-angel-killed-185000-assyrians", "passage": "2KI.19.35", "kind": "history", "priority": 1 },
+      { "q": "Why did Hezekiah spread the letter out before the LORD?", "slug": "hezekiah-spread-the-letter-before-the-lord", "passage": "2KI.19.14", "kind": "practice", "priority": 1 },
+      { "q": "How was Sennacherib assassinated by his own sons?", "slug": "sennacherib-assassinated-by-his-sons", "passage": "2KI.19.37", "kind": "history", "priority": 1 }
+    ],
+    "20": [
+      { "q": "Why did God add fifteen years to Hezekiah's life in 2 Kings 20?", "slug": "fifteen-years-added-2-kings-20", "passage": "2KI.20.6", "kind": "doctrine", "priority": 1 },
+      { "q": "How did the shadow move backwards on the stairway of Ahaz?", "slug": "the-shadow-moved-backwards", "passage": "2KI.20.9-11", "kind": "history", "priority": 1 },
+      { "q": "Would Hezekiah have been better off dying on schedule?", "slug": "would-hezekiah-have-been-better-off-dying", "passage": "2KI.20.16-19", "kind": "doctrine", "priority": 1 }
+    ],
+    "21": [
+      { "q": "Why was Manasseh the worst king of Judah?", "slug": "why-manasseh-was-the-worst-king", "passage": "2KI.21.2-9", "kind": "ethics", "priority": 1 },
+      { "q": "Did Manasseh really repent at the end of his life?", "slug": "did-manasseh-really-repent", "passage": "2KI.21.16-18", "kind": "doctrine", "priority": 1 },
+      { "q": "Did Manasseh have Isaiah sawn in two?", "slug": "did-manasseh-have-isaiah-sawn-in-two", "passage": "2KI.21.16", "kind": "history", "priority": 1 }
+    ],
+    "22": [
+      { "q": "What was the Book of the Law found in the temple?", "slug": "the-book-of-the-law-found-in-the-temple", "passage": "2KI.22.8-11", "kind": "history", "priority": 1 },
+      { "q": "Who was Huldah the prophetess?", "slug": "who-was-huldah-the-prophetess", "passage": "2KI.22.14-20", "kind": "identity", "priority": 1 },
+      { "q": "Why did Josiah tear his clothes when the law was read?", "slug": "why-josiah-tore-his-clothes", "passage": "2KI.22.11", "kind": "practice", "priority": 1 },
+      { "q": "How could the law be lost in the temple for so long?", "slug": "how-the-law-was-lost-in-the-temple", "passage": "2KI.22.8", "kind": "history", "priority": 1 }
+    ],
+    "23": [
+      { "q": "What were Josiah's reforms?", "slug": "josiahs-reforms", "passage": "2KI.23.4-20", "kind": "history", "priority": 1 },
+      { "q": "Why did Josiah die in battle if he was the most faithful king?", "slug": "why-josiah-died-in-battle", "passage": "2KI.23.29", "kind": "tension", "priority": 1 },
+      { "q": "What was the Topheth in the Valley of Hinnom that Josiah destroyed?", "slug": "the-topheth-in-the-valley-of-hinnom", "passage": "2KI.23.10", "kind": "history", "priority": 1 },
+      { "q": "Why was Josiah's Passover called the greatest since the judges?", "slug": "josiahs-passover", "passage": "2KI.23.21-23", "kind": "history", "priority": 1 }
+    ],
+    "24": [
+      { "q": "How many deportations to Babylon were there?", "slug": "how-many-deportations-to-babylon", "passage": "2KI.24.14-16", "kind": "history", "priority": 1 },
+      { "q": "Why did God refuse to forgive Judah because of Manasseh?", "slug": "god-refused-to-forgive-because-of-manasseh", "passage": "2KI.24.3-4", "kind": "doctrine", "priority": 1 }
+    ],
+    "25": [
+      { "q": "How did Jerusalem fall to Babylon?", "slug": "how-jerusalem-fell-to-babylon", "passage": "2KI.25.1-10", "kind": "history", "priority": 1 },
+      { "q": "Why were Zedekiah's eyes put out after watching his sons die?", "slug": "zedekiahs-eyes-put-out", "passage": "2KI.25.7", "kind": "history", "priority": 1 },
+      { "q": "Who was Gedaliah and why was he murdered?", "slug": "who-was-gedaliah", "passage": "2KI.25.22-25", "kind": "identity", "priority": 1 },
+      { "q": "Why does 2 Kings end with Jehoiachin eating at the king's table?", "slug": "why-2-kings-ends-with-jehoiachin", "passage": "2KI.25.27-30", "kind": "doctrine", "priority": 1 },
+      { "q": "What happened to the ark of the covenant when the temple was destroyed?", "slug": "what-happened-to-the-ark-of-the-covenant", "passage": "2KI.25.13-17", "kind": "history", "priority": 1 }
+    ]
+  }
+}

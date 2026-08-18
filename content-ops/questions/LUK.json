@@ -1,0 +1,249 @@
+{
+  "book": "LUK",
+  "name": "Luke",
+  "chapters": {
+    "1": [
+      { "q": "What does the Magnificat mean line by line?", "slug": "the-magnificat-explained", "passage": "LUK.1.46-55", "kind": "doctrine", "priority": 1 },
+      { "q": "How can this be, since I am a virgin?", "slug": "how-can-this-be-since-i-am-a-virgin", "passage": "LUK.1.34", "kind": "doctrine", "priority": 1 },
+      { "q": "Why was Zechariah struck mute but Mary was not?", "slug": "why-zechariah-was-struck-mute-but-not-mary", "passage": "LUK.1.18-20", "kind": "tension", "priority": 1 },
+      { "q": "What does nothing will be impossible with God mean?", "slug": "nothing-will-be-impossible-with-god", "passage": "LUK.1.37", "kind": "doctrine", "priority": 1 },
+      { "q": "Why did John leap in Elizabeth's womb?", "slug": "john-leaped-in-elizabeths-womb", "passage": "LUK.1.41", "kind": "phrase", "priority": 1 },
+      { "q": "What does hail, full of grace, or greatly favored, mean?", "slug": "hail-full-of-grace", "passage": "LUK.1.28", "kind": "doctrine", "priority": 1 },
+      { "q": "Who was Theophilus that Luke wrote to?", "slug": "who-was-theophilus", "passage": "LUK.1.3", "kind": "identity", "priority": 1 },
+      { "q": "What is the Benedictus, Zechariah's song?", "slug": "the-benedictus-zechariahs-song", "passage": "LUK.1.68-79", "kind": "doctrine", "priority": 1 },
+      { "q": "What does he will go before him in the spirit and power of Elijah mean?", "slug": "in-the-spirit-and-power-of-elijah", "passage": "LUK.1.17", "kind": "doctrine", "priority": 2 },
+      { "q": "How did Mary conceive by the Holy Spirit overshadowing her?", "slug": "the-holy-spirit-will-come-upon-you", "passage": "LUK.1.35", "kind": "doctrine", "priority": 1 }
+    ],
+    "2": [
+      { "q": "Was there really a census under Quirinius when Jesus was born?", "slug": "the-census-of-quirinius", "passage": "LUK.2.1-2", "kind": "history", "priority": 1 },
+      { "q": "Was there really no room at the inn?", "slug": "was-there-really-no-room-at-the-inn", "passage": "LUK.2.7", "kind": "claim", "priority": 1 },
+      { "q": "Does Luke 2:14 say peace and good will to all, or peace to those God favors?", "slug": "peace-on-earth-good-will-toward-men", "passage": "LUK.2.14", "kind": "history", "priority": 1 },
+      { "q": "What did Simeon mean that a sword would pierce Mary's soul?", "slug": "a-sword-will-pierce-your-soul", "passage": "LUK.2.35", "kind": "phrase", "priority": 1 },
+      { "q": "Who was Anna the prophetess?", "slug": "who-was-anna-the-prophetess", "passage": "LUK.2.36-38", "kind": "identity", "priority": 1 },
+      { "q": "What was Jesus doing in the temple at age twelve?", "slug": "jesus-in-the-temple-at-twelve", "passage": "LUK.2.46-47", "kind": "phrase", "priority": 1 },
+      { "q": "How could Jesus grow in wisdom if he was God?", "slug": "jesus-grew-in-wisdom", "passage": "LUK.2.52", "kind": "tension", "priority": 1 },
+      { "q": "What is a manger and what did it actually look like?", "slug": "what-is-a-manger", "passage": "LUK.2.7", "kind": "history", "priority": 1 },
+      { "q": "Why did the angels appear to shepherds first?", "slug": "why-the-angels-appeared-to-shepherds-first", "passage": "LUK.2.8-12", "kind": "phrase", "priority": 1 },
+      { "q": "What does I must be about my Father's business mean?", "slug": "about-my-fathers-business", "passage": "LUK.2.49", "kind": "phrase", "priority": 1 },
+      { "q": "What is the Nunc Dimittis, Simeon's song?", "slug": "the-nunc-dimittis-simeons-song", "passage": "LUK.2.29-32", "kind": "doctrine", "priority": 2 }
+    ],
+    "3": [
+      { "q": "Why does Luke's genealogy differ from Matthew's?", "slug": "why-lukes-genealogy-differs-from-matthews", "passage": "LUK.3.23-38", "kind": "tension", "priority": 1 },
+      { "q": "Is Luke's genealogy through Mary rather than Joseph?", "slug": "is-lukes-genealogy-through-mary", "passage": "LUK.3.23", "kind": "doctrine", "priority": 1 },
+      { "q": "What does bear fruits in keeping with repentance mean in Luke 3?", "slug": "bear-fruits-in-keeping-with-repentance-luke-3", "passage": "LUK.3.8", "kind": "practice", "priority": 1 },
+      { "q": "What did John tell tax collectors and soldiers to do?", "slug": "what-john-told-tax-collectors-and-soldiers", "passage": "LUK.3.12-14", "kind": "practice", "priority": 1 },
+      { "q": "What does the axe is already at the root of the trees mean?", "slug": "the-axe-is-at-the-root-of-the-trees", "passage": "LUK.3.9", "kind": "phrase", "priority": 1 },
+      { "q": "How does the fifteenth year of Tiberius date Jesus' ministry?", "slug": "the-fifteenth-year-of-tiberius", "passage": "LUK.3.1", "kind": "history", "priority": 1 },
+      { "q": "Why were both Annas and Caiaphas called high priest?", "slug": "why-both-annas-and-caiaphas-were-high-priest", "passage": "LUK.3.2", "kind": "history", "priority": 2 }
+    ],
+    "4": [
+      { "q": "Why is the order of the temptations different in Luke and Matthew?", "slug": "why-the-temptation-order-differs", "passage": "LUK.4.5-12", "kind": "tension", "priority": 1 },
+      { "q": "Why did Jesus stop mid-sentence when reading Isaiah 61?", "slug": "why-jesus-stopped-reading-isaiah-61", "passage": "LUK.4.18-20", "kind": "doctrine", "priority": 1 },
+      { "q": "What does today this Scripture is fulfilled in your hearing mean?", "slug": "today-this-scripture-is-fulfilled", "passage": "LUK.4.21", "kind": "doctrine", "priority": 1 },
+      { "q": "Why did the people of Nazareth try to throw Jesus off a cliff?", "slug": "why-nazareth-tried-to-throw-jesus-off-a-cliff", "passage": "LUK.4.28-29", "kind": "phrase", "priority": 1 },
+      { "q": "What does physician, heal yourself mean?", "slug": "physician-heal-yourself", "passage": "LUK.4.23", "kind": "phrase", "priority": 1 },
+      { "q": "What is the year of the Lord's favor Jesus proclaimed?", "slug": "the-year-of-the-lords-favor", "passage": "LUK.4.19", "kind": "doctrine", "priority": 1 },
+      { "q": "Why did Jesus silence the demons who identified him?", "slug": "why-jesus-silenced-the-demons", "passage": "LUK.4.41", "kind": "doctrine", "priority": 1 },
+      { "q": "Why does Jesus mention the widow of Zarephath and Naaman?", "slug": "the-widow-of-zarephath-and-naaman", "passage": "LUK.4.25-27", "kind": "doctrine", "priority": 1 }
+    ],
+    "5": [
+      { "q": "Why did Peter say depart from me, I am a sinful man?", "slug": "depart-from-me-i-am-a-sinful-man", "passage": "LUK.5.8", "kind": "phrase", "priority": 1 },
+      { "q": "What does launch out into the deep mean?", "slug": "launch-out-into-the-deep", "passage": "LUK.5.4", "kind": "phrase", "priority": 1 },
+      { "q": "Why did Jesus often withdraw to lonely places to pray?", "slug": "jesus-withdrew-to-lonely-places-to-pray", "passage": "LUK.5.16", "kind": "practice", "priority": 1 },
+      { "q": "What does no one pours new wine into old wineskins mean in Luke 5?", "slug": "new-wine-old-wineskins-luke-5", "passage": "LUK.5.37-38", "kind": "phrase", "priority": 1 },
+      { "q": "What does the old wine is better mean in Luke 5:39?", "slug": "the-old-wine-is-better", "passage": "LUK.5.39", "kind": "phrase", "priority": 2 }
+    ],
+    "6": [
+      { "q": "Is the Sermon on the Plain the same as the Sermon on the Mount?", "slug": "sermon-on-the-plain-versus-the-mount", "passage": "LUK.6.17-20", "kind": "tension", "priority": 1 },
+      { "q": "What are the four woes in Luke 6?", "slug": "the-four-woes-in-luke-6", "passage": "LUK.6.24-26", "kind": "doctrine", "priority": 1 },
+      { "q": "Why does Luke say blessed are the poor and Matthew says poor in spirit?", "slug": "blessed-are-the-poor-versus-poor-in-spirit", "passage": "LUK.6.20", "kind": "tension", "priority": 1 },
+      { "q": "What does give and it will be given to you, pressed down and shaken together mean?", "slug": "pressed-down-shaken-together-running-over", "passage": "LUK.6.38", "kind": "doctrine", "priority": 1 },
+      { "q": "Is Luke 6:38 misused to promise financial return on giving?", "slug": "is-luke-6-38-about-money", "passage": "LUK.6.38", "kind": "claim", "priority": 1 },
+      { "q": "What does lend expecting nothing in return mean?", "slug": "lend-expecting-nothing-in-return", "passage": "LUK.6.35", "kind": "practice", "priority": 1 },
+      { "q": "What does a good tree does not bear bad fruit mean?", "slug": "a-good-tree-does-not-bear-bad-fruit", "passage": "LUK.6.43-44", "kind": "practice", "priority": 1 },
+      { "q": "What does out of the abundance of the heart the mouth speaks mean?", "slug": "out-of-the-abundance-of-the-heart", "passage": "LUK.6.45", "kind": "practice", "priority": 1 },
+      { "q": "Why did Jesus pray all night before choosing the twelve?", "slug": "jesus-prayed-all-night-before-choosing-the-twelve", "passage": "LUK.6.12-13", "kind": "practice", "priority": 1 }
+    ],
+    "7": [
+      { "q": "What does her many sins are forgiven, for she loved much mean?", "slug": "her-many-sins-are-forgiven-for-she-loved-much", "passage": "LUK.7.47", "kind": "doctrine", "priority": 1 },
+      { "q": "Who was the sinful woman who anointed Jesus' feet?", "slug": "the-sinful-woman-who-anointed-jesus-feet", "passage": "LUK.7.37-38", "kind": "identity", "priority": 1 },
+      { "q": "Why did Jesus raise the widow of Nain's son?", "slug": "the-widow-of-nains-son", "passage": "LUK.7.11-15", "kind": "phrase", "priority": 1 },
+      { "q": "Why did Jesus say the centurion had greater faith than Israel?", "slug": "the-centurions-faith-luke-7", "passage": "LUK.7.9", "kind": "doctrine", "priority": 1 },
+      { "q": "What does wisdom is justified by all her children mean?", "slug": "wisdom-is-justified-by-her-children", "passage": "LUK.7.35", "kind": "phrase", "priority": 2 },
+      { "q": "Why did the Pharisees reject John's baptism?", "slug": "the-pharisees-rejected-johns-baptism", "passage": "LUK.7.30", "kind": "phrase", "priority": 2 }
+    ],
+    "8": [
+      { "q": "Who were the women who financially supported Jesus' ministry?", "slug": "the-women-who-supported-jesus-ministry", "passage": "LUK.8.1-3", "kind": "identity", "priority": 1 },
+      { "q": "Who was Mary Magdalene and what were her seven demons?", "slug": "mary-magdalene-and-her-seven-demons", "passage": "LUK.8.2", "kind": "identity", "priority": 1 },
+      { "q": "Was Mary Magdalene a prostitute?", "slug": "was-mary-magdalene-a-prostitute", "passage": "LUK.8.2", "kind": "claim", "priority": 1 },
+      { "q": "What does a noble and good heart in the parable of the sower mean?", "slug": "a-noble-and-good-heart", "passage": "LUK.8.15", "kind": "doctrine", "priority": 1 },
+      { "q": "What does where is your faith mean when Jesus calmed the storm?", "slug": "where-is-your-faith", "passage": "LUK.8.25", "kind": "phrase", "priority": 1 },
+      { "q": "Why did the demons beg not to be sent into the abyss?", "slug": "the-demons-begged-not-to-go-into-the-abyss", "passage": "LUK.8.31", "kind": "doctrine", "priority": 1 }
+    ],
+    "9": [
+      { "q": "What does no one who puts his hand to the plow and looks back mean?", "slug": "no-one-who-puts-his-hand-to-the-plow", "passage": "LUK.9.62", "kind": "practice", "priority": 1 },
+      { "q": "Why did Jesus rebuke James and John for wanting to call down fire?", "slug": "wanting-to-call-down-fire-on-samaritans", "passage": "LUK.9.54-55", "kind": "ethics", "priority": 1 },
+      { "q": "What does deny yourself and take up your cross daily mean?", "slug": "take-up-your-cross-daily", "passage": "LUK.9.23", "kind": "practice", "priority": 1 },
+      { "q": "Why were the disciples sleepy at the transfiguration?", "slug": "the-disciples-were-sleepy-at-the-transfiguration", "passage": "LUK.9.32", "kind": "phrase", "priority": 1 },
+      { "q": "What were Moses and Elijah talking with Jesus about?", "slug": "what-moses-and-elijah-discussed-with-jesus", "passage": "LUK.9.31", "kind": "doctrine", "priority": 1 },
+      { "q": "What does whoever is least among you is the greatest mean?", "slug": "whoever-is-least-among-you-is-the-greatest", "passage": "LUK.9.48", "kind": "practice", "priority": 1 },
+      { "q": "What does the Son of Man has nowhere to lay his head mean in Luke 9?", "slug": "nowhere-to-lay-his-head-luke-9", "passage": "LUK.9.58", "kind": "phrase", "priority": 1 },
+      { "q": "What does he set his face to go to Jerusalem mean?", "slug": "he-set-his-face-to-go-to-jerusalem", "passage": "LUK.9.51", "kind": "phrase", "priority": 1 }
+    ],
+    "10": [
+      { "q": "What does the parable of the Good Samaritan mean?", "slug": "the-parable-of-the-good-samaritan", "passage": "LUK.10.30-37", "kind": "doctrine", "priority": 1 },
+      { "q": "Who is my neighbor according to Jesus?", "slug": "who-is-my-neighbor", "passage": "LUK.10.29", "kind": "ethics", "priority": 1 },
+      { "q": "Why did the priest and Levite pass by the injured man?", "slug": "why-the-priest-and-levite-passed-by", "passage": "LUK.10.31-32", "kind": "history", "priority": 1 },
+      { "q": "What does I saw Satan fall like lightning from heaven mean?", "slug": "i-saw-satan-fall-like-lightning", "passage": "LUK.10.18", "kind": "doctrine", "priority": 1 },
+      { "q": "What does Mary chose the one necessary thing mean?", "slug": "mary-chose-the-one-necessary-thing", "passage": "LUK.10.41-42", "kind": "practice", "priority": 1 },
+      { "q": "Was Martha wrong to be busy serving?", "slug": "was-martha-wrong-to-be-busy-serving", "passage": "LUK.10.40-42", "kind": "practice", "priority": 1 },
+      { "q": "Did Jesus send out seventy or seventy-two disciples?", "slug": "seventy-or-seventy-two-disciples", "passage": "LUK.10.1", "kind": "tension", "priority": 1 },
+      { "q": "What does rejoice that your names are written in heaven mean?", "slug": "your-names-are-written-in-heaven", "passage": "LUK.10.20", "kind": "doctrine", "priority": 1 },
+      { "q": "What does authority to tread on serpents and scorpions mean?", "slug": "authority-to-tread-on-serpents-and-scorpions", "passage": "LUK.10.19", "kind": "doctrine", "priority": 1 }
+    ],
+    "11": [
+      { "q": "Why is Luke's version of the Lord's Prayer shorter than Matthew's?", "slug": "why-lukes-lords-prayer-is-shorter", "passage": "LUK.11.2-4", "kind": "tension", "priority": 1 },
+      { "q": "What does the parable of the persistent friend at midnight mean?", "slug": "the-persistent-friend-at-midnight", "passage": "LUK.11.5-8", "kind": "doctrine", "priority": 1 },
+      { "q": "What does ask, seek, knock mean in Luke 11?", "slug": "ask-seek-knock-luke-11", "passage": "LUK.11.9-10", "kind": "doctrine", "priority": 1 },
+      { "q": "What does if you who are evil give good gifts mean?", "slug": "if-you-who-are-evil-give-good-gifts", "passage": "LUK.11.13", "kind": "doctrine", "priority": 1 },
+      { "q": "What does the finger of God mean in Luke 11:20?", "slug": "the-finger-of-god", "passage": "LUK.11.20", "kind": "phrase", "priority": 1 },
+      { "q": "What does your eye is the lamp of your body mean?", "slug": "your-eye-is-the-lamp-of-your-body", "passage": "LUK.11.34", "kind": "phrase", "priority": 1 },
+      { "q": "What are the woes on the lawyers in Luke 11?", "slug": "the-woes-on-the-lawyers", "passage": "LUK.11.46-52", "kind": "ethics", "priority": 1 },
+      { "q": "What is the key of knowledge the lawyers took away?", "slug": "the-key-of-knowledge", "passage": "LUK.11.52", "kind": "phrase", "priority": 1 },
+      { "q": "Who was the Zechariah killed between the altar and the sanctuary in Luke 11:51?", "slug": "zechariah-killed-between-altar-and-sanctuary", "passage": "LUK.11.51", "kind": "identity", "priority": 2 }
+    ],
+    "12": [
+      { "q": "What does the parable of the rich fool mean?", "slug": "the-parable-of-the-rich-fool", "passage": "LUK.12.16-21", "kind": "doctrine", "priority": 1 },
+      { "q": "What does you fool, this night your soul is required of you mean?", "slug": "this-night-your-soul-is-required-of-you", "passage": "LUK.12.20", "kind": "phrase", "priority": 1 },
+      { "q": "Why will the servant who knew be beaten with more blows?", "slug": "beaten-with-many-or-few-blows", "passage": "LUK.12.47-48", "kind": "doctrine", "priority": 1 },
+      { "q": "What does I came to cast fire on the earth mean?", "slug": "i-came-to-cast-fire-on-the-earth", "passage": "LUK.12.49", "kind": "phrase", "priority": 1 },
+      { "q": "Why does Jesus say he came to bring division, not peace?", "slug": "i-came-to-bring-division-not-peace", "passage": "LUK.12.51-53", "kind": "ethics", "priority": 1 },
+      { "q": "What does to whom much is given much will be required mean?", "slug": "to-whom-much-is-given-much-is-required", "passage": "LUK.12.48", "kind": "doctrine", "priority": 1 },
+      { "q": "What does sell your possessions and give to the poor mean?", "slug": "sell-your-possessions-and-give-to-the-poor", "passage": "LUK.12.33", "kind": "practice", "priority": 1 },
+      { "q": "What does where your treasure is there your heart will be mean?", "slug": "where-your-treasure-is-there-your-heart-will-be", "passage": "LUK.12.34", "kind": "practice", "priority": 1 },
+      { "q": "What does even the hairs of your head are numbered mean in Luke 12?", "slug": "hairs-numbered-luke-12", "passage": "LUK.12.7", "kind": "phrase", "priority": 1 },
+      { "q": "What does do not worry about what to say when on trial mean?", "slug": "do-not-worry-about-what-to-say-on-trial", "passage": "LUK.12.11-12", "kind": "practice", "priority": 1 },
+      { "q": "What does settle with your adversary on the way to court mean?", "slug": "settle-with-your-adversary-on-the-way", "passage": "LUK.12.58", "kind": "practice", "priority": 2 }
+    ],
+    "13": [
+      { "q": "Why does Jesus say unless you repent you will all likewise perish?", "slug": "unless-you-repent-you-will-likewise-perish", "passage": "LUK.13.3-5", "kind": "doctrine", "priority": 1 },
+      { "q": "What happened to the eighteen killed by the tower of Siloam?", "slug": "the-tower-of-siloam", "passage": "LUK.13.4", "kind": "history", "priority": 1 },
+      { "q": "Does suffering mean someone sinned more than others?", "slug": "does-suffering-mean-greater-sin", "passage": "LUK.13.2-3", "kind": "doctrine", "priority": 1 },
+      { "q": "What does the parable of the barren fig tree mean?", "slug": "the-parable-of-the-barren-fig-tree", "passage": "LUK.13.6-9", "kind": "doctrine", "priority": 1 },
+      { "q": "What does strive to enter through the narrow door mean?", "slug": "strive-to-enter-through-the-narrow-door", "passage": "LUK.13.24", "kind": "doctrine", "priority": 1 },
+      { "q": "What does I do not know you, depart from me mean in Luke 13?", "slug": "i-do-not-know-where-you-come-from", "passage": "LUK.13.25-27", "kind": "doctrine", "priority": 1 },
+      { "q": "Why did Jesus call Herod that fox?", "slug": "go-tell-that-fox", "passage": "LUK.13.32", "kind": "phrase", "priority": 1 },
+      { "q": "Why was the woman bent over for eighteen years called bound by Satan?", "slug": "the-woman-bound-by-satan-eighteen-years", "passage": "LUK.13.16", "kind": "doctrine", "priority": 1 }
+    ],
+    "14": [
+      { "q": "Does Jesus really say to hate your father and mother?", "slug": "unless-you-hate-your-father-and-mother", "passage": "LUK.14.26", "kind": "ethics", "priority": 1 },
+      { "q": "What does count the cost mean in Luke 14?", "slug": "count-the-cost", "passage": "LUK.14.28-30", "kind": "practice", "priority": 1 },
+      { "q": "What does the parable of the great banquet mean?", "slug": "the-parable-of-the-great-banquet", "passage": "LUK.14.16-24", "kind": "doctrine", "priority": 1 },
+      { "q": "What does compel them to come in mean?", "slug": "compel-them-to-come-in", "passage": "LUK.14.23", "kind": "doctrine", "priority": 1 },
+      { "q": "Why does Jesus say invite the poor, crippled, lame, and blind?", "slug": "invite-the-poor-crippled-lame-and-blind", "passage": "LUK.14.13-14", "kind": "practice", "priority": 1 },
+      { "q": "What does do not take the place of honor at a banquet mean?", "slug": "do-not-take-the-place-of-honor", "passage": "LUK.14.8-11", "kind": "practice", "priority": 1 },
+      { "q": "What does salt that has lost its taste mean in Luke 14?", "slug": "salt-that-has-lost-its-taste-luke-14", "passage": "LUK.14.34-35", "kind": "phrase", "priority": 1 }
+    ],
+    "15": [
+      { "q": "What does the parable of the prodigal son mean?", "slug": "the-parable-of-the-prodigal-son", "passage": "LUK.15.11-32", "kind": "doctrine", "priority": 1 },
+      { "q": "Why did the father run to meet the prodigal son?", "slug": "why-the-father-ran-to-meet-his-son", "passage": "LUK.15.20", "kind": "history", "priority": 1 },
+      { "q": "What does the robe, the ring, and the sandals mean?", "slug": "the-robe-the-ring-and-the-sandals", "passage": "LUK.15.22", "kind": "phrase", "priority": 1 },
+      { "q": "Who does the older brother in the prodigal son represent?", "slug": "who-the-older-brother-represents", "passage": "LUK.15.25-30", "kind": "identity", "priority": 1 },
+      { "q": "Why was asking for his inheritance early so offensive?", "slug": "asking-for-his-inheritance-early", "passage": "LUK.15.12", "kind": "history", "priority": 1 },
+      { "q": "What does the parable of the lost coin mean?", "slug": "the-parable-of-the-lost-coin", "passage": "LUK.15.8-10", "kind": "doctrine", "priority": 1 },
+      { "q": "What does there is rejoicing in heaven over one sinner who repents mean?", "slug": "rejoicing-in-heaven-over-one-sinner", "passage": "LUK.15.7", "kind": "doctrine", "priority": 1 },
+      { "q": "Why did the prodigal son long to eat the pigs' food?", "slug": "the-prodigal-longed-to-eat-the-pigs-food", "passage": "LUK.15.16", "kind": "history", "priority": 1 },
+      { "q": "What does the fattened calf mean in the prodigal son?", "slug": "the-fattened-calf", "passage": "LUK.15.23", "kind": "phrase", "priority": 2 }
+    ],
+    "16": [
+      { "q": "Why did Jesus praise the dishonest manager?", "slug": "why-jesus-praised-the-dishonest-manager", "passage": "LUK.16.8", "kind": "ethics", "priority": 1 },
+      { "q": "What does make friends with unrighteous wealth mean?", "slug": "make-friends-with-unrighteous-wealth", "passage": "LUK.16.9", "kind": "practice", "priority": 1 },
+      { "q": "Is the rich man and Lazarus a parable or a real account?", "slug": "is-the-rich-man-and-lazarus-a-parable", "passage": "LUK.16.19-31", "kind": "doctrine", "priority": 1 },
+      { "q": "What is Abraham's bosom in Luke 16:22?", "slug": "what-is-abrahams-bosom", "passage": "LUK.16.22", "kind": "identity", "priority": 1 },
+      { "q": "What is the great chasm between the rich man and Lazarus?", "slug": "the-great-chasm-luke-16", "passage": "LUK.16.26", "kind": "doctrine", "priority": 1 },
+      { "q": "What does they have Moses and the Prophets mean?", "slug": "they-have-moses-and-the-prophets", "passage": "LUK.16.29-31", "kind": "doctrine", "priority": 1 },
+      { "q": "Does Luke 16 teach that hell is conscious torment?", "slug": "does-luke-16-teach-conscious-torment", "passage": "LUK.16.23-24", "kind": "doctrine", "priority": 1 },
+      { "q": "What does whoever is faithful with little is faithful with much mean?", "slug": "faithful-with-little-faithful-with-much", "passage": "LUK.16.10", "kind": "practice", "priority": 1 },
+      { "q": "What does the law and the prophets were until John mean?", "slug": "the-law-and-the-prophets-were-until-john", "passage": "LUK.16.16", "kind": "doctrine", "priority": 1 }
+    ],
+    "17": [
+      { "q": "Is the kingdom of God within you or among you?", "slug": "is-the-kingdom-of-god-within-you-or-among-you", "passage": "LUK.17.21", "kind": "doctrine", "priority": 1 },
+      { "q": "Why did only one of the ten lepers come back to thank Jesus?", "slug": "only-one-of-ten-lepers-returned", "passage": "LUK.17.15-18", "kind": "practice", "priority": 1 },
+      { "q": "What does remember Lot's wife mean?", "slug": "remember-lots-wife", "passage": "LUK.17.32", "kind": "phrase", "priority": 1 },
+      { "q": "What does we are unworthy servants, we have only done our duty mean?", "slug": "we-are-unworthy-servants", "passage": "LUK.17.10", "kind": "doctrine", "priority": 1 },
+      { "q": "What does faith like a mustard seed can uproot a tree mean?", "slug": "faith-can-uproot-a-mulberry-tree", "passage": "LUK.17.6", "kind": "doctrine", "priority": 1 },
+      { "q": "Does forgive seven times a day mean unlimited forgiveness?", "slug": "forgive-seven-times-a-day", "passage": "LUK.17.4", "kind": "practice", "priority": 1 },
+      { "q": "What does one will be taken and the other left mean in Luke 17?", "slug": "one-taken-the-other-left-luke-17", "passage": "LUK.17.34-35", "kind": "doctrine", "priority": 1 },
+      { "q": "What does where the corpse is the vultures gather mean in Luke 17?", "slug": "where-the-body-is-the-vultures-gather-luke-17", "passage": "LUK.17.37", "kind": "phrase", "priority": 1 },
+      { "q": "What does whoever seeks to save his life will lose it mean?", "slug": "whoever-seeks-to-save-his-life-will-lose-it", "passage": "LUK.17.33", "kind": "doctrine", "priority": 2 }
+    ],
+    "18": [
+      { "q": "What does the parable of the persistent widow mean?", "slug": "the-parable-of-the-persistent-widow", "passage": "LUK.18.1-8", "kind": "doctrine", "priority": 1 },
+      { "q": "Does God really act like the unjust judge?", "slug": "is-god-like-the-unjust-judge", "passage": "LUK.18.6-8", "kind": "doctrine", "priority": 1 },
+      { "q": "What does the parable of the Pharisee and the tax collector mean?", "slug": "the-pharisee-and-the-tax-collector", "passage": "LUK.18.9-14", "kind": "doctrine", "priority": 1 },
+      { "q": "What does God, have mercy on me, a sinner mean?", "slug": "god-have-mercy-on-me-a-sinner", "passage": "LUK.18.13", "kind": "practice", "priority": 1 },
+      { "q": "What does when the Son of Man comes will he find faith on earth mean?", "slug": "will-he-find-faith-on-earth", "passage": "LUK.18.8", "kind": "doctrine", "priority": 1 },
+      { "q": "Why did the rich ruler go away sad?", "slug": "why-the-rich-ruler-went-away-sad", "passage": "LUK.18.22-23", "kind": "phrase", "priority": 1 },
+      { "q": "What does receive the kingdom of God like a little child mean?", "slug": "receive-the-kingdom-like-a-little-child", "passage": "LUK.18.17", "kind": "practice", "priority": 1 }
+    ],
+    "19": [
+      { "q": "Who was Zacchaeus and why did he climb a tree?", "slug": "who-was-zacchaeus", "passage": "LUK.19.1-4", "kind": "identity", "priority": 1 },
+      { "q": "Did Zacchaeus promise to repay or was he already repaying?", "slug": "did-zacchaeus-promise-or-was-he-already-repaying", "passage": "LUK.19.8", "kind": "phrase", "priority": 1 },
+      { "q": "What does the Son of Man came to seek and save the lost mean?", "slug": "came-to-seek-and-save-the-lost", "passage": "LUK.19.10", "kind": "doctrine", "priority": 1 },
+      { "q": "What does the stones would cry out mean?", "slug": "the-stones-would-cry-out", "passage": "LUK.19.40", "kind": "phrase", "priority": 1 },
+      { "q": "Why did Jesus weep over Jerusalem?", "slug": "why-jesus-wept-over-jerusalem", "passage": "LUK.19.41-44", "kind": "phrase", "priority": 1 },
+      { "q": "What does the parable of the minas mean?", "slug": "the-parable-of-the-minas", "passage": "LUK.19.12-27", "kind": "doctrine", "priority": 1 },
+      { "q": "Why does the nobleman in the parable of the minas kill his enemies?", "slug": "the-nobleman-killed-his-enemies", "passage": "LUK.19.27", "kind": "ethics", "priority": 1 },
+      { "q": "What does you did not recognize the time of your visitation mean?", "slug": "the-time-of-your-visitation", "passage": "LUK.19.44", "kind": "phrase", "priority": 1 }
+    ],
+    "20": [
+      { "q": "Why did Jesus refuse to answer the question about his authority?", "slug": "jesus-refused-to-answer-about-his-authority", "passage": "LUK.20.3-8", "kind": "phrase", "priority": 1 },
+      { "q": "What does whoever falls on this stone will be broken mean?", "slug": "whoever-falls-on-this-stone-will-be-broken", "passage": "LUK.20.18", "kind": "phrase", "priority": 1 },
+      { "q": "What does they are equal to angels and are sons of God mean?", "slug": "equal-to-angels-and-sons-of-god", "passage": "LUK.20.36", "kind": "doctrine", "priority": 1 },
+      { "q": "Why does Jesus say to render to Caesar what is Caesar's in Luke 20?", "slug": "render-to-caesar-luke-20", "passage": "LUK.20.25", "kind": "ethics", "priority": 1 },
+      { "q": "How can the Christ be David's son if David called him Lord?", "slug": "davids-son-and-lord-luke-20", "passage": "LUK.20.41-44", "kind": "doctrine", "priority": 1 }
+    ],
+    "21": [
+      { "q": "What does she out of her poverty put in all she had to live on mean?", "slug": "she-put-in-all-she-had-to-live-on", "passage": "LUK.21.4", "kind": "practice", "priority": 1 },
+      { "q": "What does when you see Jerusalem surrounded by armies mean?", "slug": "when-you-see-jerusalem-surrounded-by-armies", "passage": "LUK.21.20", "kind": "doctrine", "priority": 1 },
+      { "q": "What are the times of the Gentiles in Luke 21:24?", "slug": "the-times-of-the-gentiles", "passage": "LUK.21.24", "kind": "doctrine", "priority": 1 },
+      { "q": "What does lift up your heads, your redemption is drawing near mean?", "slug": "your-redemption-is-drawing-near", "passage": "LUK.21.28", "kind": "phrase", "priority": 1 },
+      { "q": "What does heaven and earth will pass away but my words will not mean?", "slug": "heaven-and-earth-will-pass-away", "passage": "LUK.21.33", "kind": "doctrine", "priority": 1 },
+      { "q": "What does not a hair of your head will perish mean if they are killed?", "slug": "not-a-hair-of-your-head-will-perish", "passage": "LUK.21.16-18", "kind": "tension", "priority": 1 },
+      { "q": "What does watch and pray that you may escape all these things mean?", "slug": "watch-and-pray-that-you-may-escape", "passage": "LUK.21.36", "kind": "practice", "priority": 1 }
+    ],
+    "22": [
+      { "q": "Why did Jesus tell the disciples to buy a sword?", "slug": "let-him-buy-a-sword", "passage": "LUK.22.36", "kind": "ethics", "priority": 1 },
+      { "q": "Did Jesus really sweat blood in Gethsemane?", "slug": "did-jesus-sweat-blood", "passage": "LUK.22.44", "kind": "history", "priority": 1 },
+      { "q": "Why are Luke 22:43-44 about the angel and the sweat missing from some Bibles?", "slug": "why-luke-22-43-44-is-missing", "passage": "LUK.22.43-44", "kind": "history", "priority": 1 },
+      { "q": "What does Satan has asked to sift you like wheat mean?", "slug": "satan-has-asked-to-sift-you-like-wheat", "passage": "LUK.22.31", "kind": "doctrine", "priority": 1 },
+      { "q": "Why does Luke's Last Supper have two cups?", "slug": "why-lukes-last-supper-has-two-cups", "passage": "LUK.22.17-20", "kind": "tension", "priority": 1 },
+      { "q": "What does the greatest among you must be like the youngest mean?", "slug": "the-greatest-among-you-must-be-like-the-youngest", "passage": "LUK.22.26", "kind": "practice", "priority": 1 },
+      { "q": "What happened when the Lord turned and looked at Peter?", "slug": "the-lord-turned-and-looked-at-peter", "passage": "LUK.22.61", "kind": "phrase", "priority": 1 },
+      { "q": "Why does only Luke record Jesus healing the servant's ear?", "slug": "jesus-healed-the-servants-ear", "passage": "LUK.22.51", "kind": "phrase", "priority": 1 },
+      { "q": "What does this is your hour, and the power of darkness mean?", "slug": "this-is-your-hour-and-the-power-of-darkness", "passage": "LUK.22.53", "kind": "phrase", "priority": 1 }
+    ],
+    "23": [
+      { "q": "What does today you will be with me in paradise mean?", "slug": "today-you-will-be-with-me-in-paradise", "passage": "LUK.23.43", "kind": "doctrine", "priority": 1 },
+      { "q": "Was the thief on the cross saved without baptism?", "slug": "was-the-thief-on-the-cross-saved-without-baptism", "passage": "LUK.23.42-43", "kind": "doctrine", "priority": 1 },
+      { "q": "What does Father, forgive them, for they know not what they do mean?", "slug": "father-forgive-them-for-they-know-not", "passage": "LUK.23.34", "kind": "doctrine", "priority": 1 },
+      { "q": "Why is Father, forgive them missing from some manuscripts?", "slug": "why-father-forgive-them-is-missing", "passage": "LUK.23.34", "kind": "history", "priority": 1 },
+      { "q": "What does daughters of Jerusalem, do not weep for me mean?", "slug": "daughters-of-jerusalem-do-not-weep-for-me", "passage": "LUK.23.28", "kind": "phrase", "priority": 1 },
+      { "q": "What does if they do this when the wood is green mean?", "slug": "if-they-do-this-when-the-wood-is-green", "passage": "LUK.23.31", "kind": "phrase", "priority": 1 },
+      { "q": "Why does only Luke record Jesus' trial before Herod?", "slug": "jesus-trial-before-herod", "passage": "LUK.23.8-12", "kind": "history", "priority": 1 },
+      { "q": "Why does Luke's centurion say a righteous man instead of Son of God?", "slug": "certainly-this-was-a-righteous-man", "passage": "LUK.23.47", "kind": "tension", "priority": 1 },
+      { "q": "What does Father, into your hands I commit my spirit mean?", "slug": "into-your-hands-i-commit-my-spirit-luke-23", "passage": "LUK.23.46", "kind": "doctrine", "priority": 1 }
+    ],
+    "24": [
+      { "q": "What happened on the road to Emmaus?", "slug": "the-road-to-emmaus", "passage": "LUK.24.13-35", "kind": "doctrine", "priority": 1 },
+      { "q": "What does were not our hearts burning within us mean?", "slug": "were-not-our-hearts-burning-within-us", "passage": "LUK.24.32", "kind": "phrase", "priority": 1 },
+      { "q": "Why did the disciples not recognize Jesus on the road to Emmaus?", "slug": "why-they-did-not-recognize-jesus-at-emmaus", "passage": "LUK.24.16", "kind": "phrase", "priority": 1 },
+      { "q": "What did Jesus explain from Moses and all the Prophets about himself?", "slug": "beginning-with-moses-and-all-the-prophets", "passage": "LUK.24.27", "kind": "doctrine", "priority": 1 },
+      { "q": "Why did Jesus eat fish to prove he was not a ghost?", "slug": "jesus-ate-fish-to-prove-he-was-not-a-ghost", "passage": "LUK.24.41-43", "kind": "doctrine", "priority": 1 },
+      { "q": "What does a spirit does not have flesh and bones mean?", "slug": "a-spirit-does-not-have-flesh-and-bones", "passage": "LUK.24.39", "kind": "doctrine", "priority": 1 },
+      { "q": "What is the promise of the Father they were to wait for?", "slug": "the-promise-of-the-father", "passage": "LUK.24.49", "kind": "doctrine", "priority": 1 },
+      { "q": "Why did the women's report seem like nonsense to the apostles?", "slug": "the-womens-report-seemed-like-nonsense", "passage": "LUK.24.11", "kind": "history", "priority": 1 },
+      { "q": "Where is Emmaus and has it been identified?", "slug": "where-is-emmaus", "passage": "LUK.24.13", "kind": "history", "priority": 2 }
+    ]
+  }
+}

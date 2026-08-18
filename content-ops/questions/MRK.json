@@ -1,0 +1,161 @@
+{
+  "book": "MRK",
+  "name": "Mark",
+  "chapters": {
+    "1": [
+      { "q": "Why does Mark begin without a birth story?", "slug": "why-mark-begins-without-a-birth-story", "passage": "MRK.1.1", "kind": "history", "priority": 1 },
+      { "q": "What does the kingdom of God is at hand mean?", "slug": "the-kingdom-of-god-is-at-hand", "passage": "MRK.1.15", "kind": "doctrine", "priority": 1 },
+      { "q": "Why does Mark say the Spirit drove Jesus into the wilderness?", "slug": "the-spirit-drove-jesus-into-the-wilderness", "passage": "MRK.1.12", "kind": "phrase", "priority": 1 },
+      { "q": "Why does Mark use the word immediately so often?", "slug": "why-mark-uses-immediately-so-often", "passage": "MRK.1.18", "kind": "history", "priority": 1 },
+      { "q": "Why did Jesus tell the healed leper not to tell anyone?", "slug": "the-messianic-secret-in-mark", "passage": "MRK.1.43-44", "kind": "doctrine", "priority": 1 },
+      { "q": "Why did the unclean spirit know who Jesus was?", "slug": "the-unclean-spirit-knew-who-jesus-was", "passage": "MRK.1.24", "kind": "doctrine", "priority": 1 },
+      { "q": "Why does Mark 1:2 attribute a Malachi quote to Isaiah?", "slug": "mark-1-2-attributes-malachi-to-isaiah", "passage": "MRK.1.2-3", "kind": "tension", "priority": 1 },
+      { "q": "Why did Jesus get up early to pray in a solitary place?", "slug": "jesus-prayed-in-a-solitary-place", "passage": "MRK.1.35", "kind": "practice", "priority": 1 }
+    ],
+    "2": [
+      { "q": "What does the Sabbath was made for man, not man for the Sabbath mean?", "slug": "the-sabbath-was-made-for-man", "passage": "MRK.2.27", "kind": "doctrine", "priority": 1 },
+      { "q": "Why does Mark 2:26 say Abiathar was high priest when 1 Samuel says Ahimelech?", "slug": "abiathar-or-ahimelech", "passage": "MRK.2.26", "kind": "tension", "priority": 1 },
+      { "q": "Why did the friends dig through the roof to reach Jesus?", "slug": "digging-through-the-roof", "passage": "MRK.2.4", "kind": "history", "priority": 1 },
+      { "q": "Why did the scribes say only God can forgive sins?", "slug": "only-god-can-forgive-sins", "passage": "MRK.2.7", "kind": "doctrine", "priority": 1 },
+      { "q": "What does I came not to call the righteous but sinners mean?", "slug": "i-came-not-to-call-the-righteous-but-sinners", "passage": "MRK.2.17", "kind": "doctrine", "priority": 1 },
+      { "q": "Why did Jesus' disciples not fast?", "slug": "why-jesus-disciples-did-not-fast", "passage": "MRK.2.18-20", "kind": "practice", "priority": 1 },
+      { "q": "What was David eating the consecrated bread meant to prove?", "slug": "david-ate-the-consecrated-bread", "passage": "MRK.2.25-26", "kind": "doctrine", "priority": 1 }
+    ],
+    "3": [
+      { "q": "Why did Jesus' family think he was out of his mind?", "slug": "jesus-family-thought-he-was-out-of-his-mind", "passage": "MRK.3.21", "kind": "phrase", "priority": 1 },
+      { "q": "Who is Beelzebul in Mark 3?", "slug": "who-is-beelzebul", "passage": "MRK.3.22", "kind": "identity", "priority": 1 },
+      { "q": "What is the eternal sin in Mark 3:29?", "slug": "the-eternal-sin-mark-3-29", "passage": "MRK.3.29", "kind": "doctrine", "priority": 1 },
+      { "q": "Why was Jesus angry and grieved at their hardness of heart?", "slug": "jesus-angry-at-their-hardness-of-heart", "passage": "MRK.3.5", "kind": "phrase", "priority": 1 },
+      { "q": "What does binding the strong man mean?", "slug": "binding-the-strong-man", "passage": "MRK.3.27", "kind": "doctrine", "priority": 1 },
+      { "q": "What does whoever does the will of God is my brother and sister mean?", "slug": "whoever-does-the-will-of-god-is-my-brother", "passage": "MRK.3.35", "kind": "phrase", "priority": 1 },
+      { "q": "Is it lawful to do good on the Sabbath?", "slug": "is-it-lawful-to-do-good-on-the-sabbath", "passage": "MRK.3.4", "kind": "practice", "priority": 1 }
+    ],
+    "4": [
+      { "q": "Why did Jesus say the parables were meant to hide the truth?", "slug": "parables-meant-to-hide-the-truth", "passage": "MRK.4.11-12", "kind": "doctrine", "priority": 1 },
+      { "q": "What does do you not care that we are perishing mean?", "slug": "do-you-not-care-that-we-are-perishing", "passage": "MRK.4.38", "kind": "practice", "priority": 1 },
+      { "q": "What does who then is this that even the wind obeys him mean?", "slug": "who-then-is-this", "passage": "MRK.4.41", "kind": "doctrine", "priority": 1 },
+      { "q": "What does the parable of the growing seed mean?", "slug": "parable-of-the-growing-seed", "passage": "MRK.4.26-29", "kind": "doctrine", "priority": 1 },
+      { "q": "What does no one lights a lamp and puts it under a basket mean?", "slug": "a-lamp-under-a-basket", "passage": "MRK.4.21", "kind": "phrase", "priority": 1 },
+      { "q": "What does with the measure you use it will be measured to you mean?", "slug": "with-the-measure-you-use", "passage": "MRK.4.24", "kind": "phrase", "priority": 2 },
+      { "q": "How could Jesus sleep through a storm that terrified fishermen?", "slug": "jesus-slept-through-the-storm", "passage": "MRK.4.38", "kind": "phrase", "priority": 1 }
+    ],
+    "5": [
+      { "q": "Who or what was Legion in Mark 5?", "slug": "who-was-legion", "passage": "MRK.5.9", "kind": "identity", "priority": 1 },
+      { "q": "Why did Jesus ask the demon its name?", "slug": "why-jesus-asked-the-demon-its-name", "passage": "MRK.5.9", "kind": "phrase", "priority": 1 },
+      { "q": "Why did the people ask Jesus to leave after he healed the demoniac?", "slug": "why-they-asked-jesus-to-leave", "passage": "MRK.5.17", "kind": "phrase", "priority": 1 },
+      { "q": "What does Talitha koum mean?", "slug": "what-does-talitha-koum-mean", "passage": "MRK.5.41", "kind": "phrase", "priority": 1 },
+      { "q": "Why did Jesus ask who touched me if he knew everything?", "slug": "who-touched-me", "passage": "MRK.5.30-32", "kind": "tension", "priority": 1 },
+      { "q": "What does your faith has made you well mean?", "slug": "your-faith-has-made-you-well", "passage": "MRK.5.34", "kind": "doctrine", "priority": 1 },
+      { "q": "Why did Jesus tell the healed demoniac to stay and testify?", "slug": "go-home-and-tell-what-god-has-done", "passage": "MRK.5.19", "kind": "practice", "priority": 1 },
+      { "q": "Why had the bleeding woman spent all she had on doctors?", "slug": "the-bleeding-woman-spent-all-on-doctors", "passage": "MRK.5.26", "kind": "history", "priority": 2 }
+    ],
+    "6": [
+      { "q": "Why could Jesus do no mighty work in his hometown?", "slug": "he-could-do-no-mighty-work-there", "passage": "MRK.6.5", "kind": "tension", "priority": 1 },
+      { "q": "Why does Mark say Jesus was about to pass them by on the water?", "slug": "he-meant-to-pass-them-by", "passage": "MRK.6.48", "kind": "phrase", "priority": 1 },
+      { "q": "What does their hearts were hardened mean about the disciples?", "slug": "their-hearts-were-hardened", "passage": "MRK.6.52", "kind": "phrase", "priority": 1 },
+      { "q": "Why did Jesus send the disciples out with no bread or money?", "slug": "sent-out-with-no-bread-or-money", "passage": "MRK.6.8-9", "kind": "practice", "priority": 1 },
+      { "q": "Why did Herodias want John the Baptist dead?", "slug": "why-herodias-wanted-john-dead", "passage": "MRK.6.19", "kind": "history", "priority": 1 },
+      { "q": "Why does Mark call Jesus the carpenter, son of Mary?", "slug": "the-carpenter-son-of-mary", "passage": "MRK.6.3", "kind": "history", "priority": 1 },
+      { "q": "What does like sheep without a shepherd mean?", "slug": "like-sheep-without-a-shepherd", "passage": "MRK.6.34", "kind": "phrase", "priority": 1 },
+      { "q": "Why did Jesus have compassion instead of sending the crowd away?", "slug": "why-jesus-had-compassion-on-the-crowd", "passage": "MRK.6.34-37", "kind": "practice", "priority": 2 }
+    ],
+    "7": [
+      { "q": "Does Mark 7:19 mean Jesus declared all foods clean?", "slug": "thus-he-declared-all-foods-clean", "passage": "MRK.7.19", "kind": "doctrine", "priority": 1 },
+      { "q": "Why did Jesus call the Syrophoenician woman's people dogs?", "slug": "why-jesus-called-them-dogs-mark-7", "passage": "MRK.7.27", "kind": "ethics", "priority": 1 },
+      { "q": "What does Ephphatha mean?", "slug": "what-does-ephphatha-mean", "passage": "MRK.7.34", "kind": "phrase", "priority": 1 },
+      { "q": "Why did Jesus put his fingers in the deaf man's ears and spit?", "slug": "jesus-put-his-fingers-in-his-ears", "passage": "MRK.7.33", "kind": "phrase", "priority": 1 },
+      { "q": "What is corban and how did it break the fifth commandment?", "slug": "corban-and-the-fifth-commandment", "passage": "MRK.7.11-12", "kind": "history", "priority": 1 },
+      { "q": "What comes out of a person that defiles them?", "slug": "what-comes-out-of-a-person-defiles-them", "passage": "MRK.7.20-23", "kind": "doctrine", "priority": 1 },
+      { "q": "What does you nullify the word of God by your tradition mean?", "slug": "you-nullify-the-word-of-god-by-tradition", "passage": "MRK.7.13", "kind": "doctrine", "priority": 1 }
+    ],
+    "8": [
+      { "q": "Why did the blind man see men like trees before being fully healed?", "slug": "i-see-men-like-trees-walking", "passage": "MRK.8.24", "kind": "phrase", "priority": 1 },
+      { "q": "Why did Jesus heal this blind man in two stages?", "slug": "why-jesus-healed-in-two-stages", "passage": "MRK.8.23-25", "kind": "doctrine", "priority": 1 },
+      { "q": "Why did Jesus sigh deeply and refuse to give a sign?", "slug": "he-sighed-deeply-and-refused-a-sign", "passage": "MRK.8.12", "kind": "phrase", "priority": 1 },
+      { "q": "What does what does it profit a man to gain the world and lose his soul mean?", "slug": "gain-the-world-and-lose-his-soul-mark-8", "passage": "MRK.8.36", "kind": "doctrine", "priority": 1 },
+      { "q": "Why did Jesus rebuke Peter as Satan in Mark 8?", "slug": "get-behind-me-satan-mark-8", "passage": "MRK.8.33", "kind": "phrase", "priority": 1 },
+      { "q": "What does deny yourself and take up your cross mean?", "slug": "deny-yourself-and-take-up-your-cross", "passage": "MRK.8.34", "kind": "practice", "priority": 1 },
+      { "q": "What does whoever is ashamed of me mean?", "slug": "whoever-is-ashamed-of-me", "passage": "MRK.8.38", "kind": "doctrine", "priority": 1 },
+      { "q": "What is the yeast of the Pharisees and of Herod?", "slug": "the-yeast-of-the-pharisees-and-of-herod", "passage": "MRK.8.15", "kind": "phrase", "priority": 2 }
+    ],
+    "9": [
+      { "q": "What does I believe, help my unbelief mean?", "slug": "i-believe-help-my-unbelief", "passage": "MRK.9.24", "kind": "practice", "priority": 1 },
+      { "q": "Why did this kind of spirit come out only by prayer?", "slug": "this-kind-comes-out-only-by-prayer", "passage": "MRK.9.29", "kind": "doctrine", "priority": 1 },
+      { "q": "What does everything is possible for one who believes mean?", "slug": "everything-is-possible-for-one-who-believes", "passage": "MRK.9.23", "kind": "doctrine", "priority": 1 },
+      { "q": "What does where the worm does not die and the fire is not quenched mean?", "slug": "where-the-worm-does-not-die", "passage": "MRK.9.48", "kind": "doctrine", "priority": 1 },
+      { "q": "What does whoever is not against us is for us mean?", "slug": "whoever-is-not-against-us-is-for-us", "passage": "MRK.9.40", "kind": "phrase", "priority": 1 },
+      { "q": "What does everyone will be salted with fire mean?", "slug": "salted-with-fire", "passage": "MRK.9.49", "kind": "phrase", "priority": 1 },
+      { "q": "What does have salt in yourselves and be at peace mean?", "slug": "have-salt-in-yourselves", "passage": "MRK.9.50", "kind": "phrase", "priority": 1 },
+      { "q": "Why did the disciples argue about who was greatest?", "slug": "the-disciples-argued-about-who-was-greatest", "passage": "MRK.9.33-35", "kind": "practice", "priority": 1 },
+      { "q": "Why did Peter not know what to say at the transfiguration?", "slug": "peter-did-not-know-what-to-say", "passage": "MRK.9.6", "kind": "phrase", "priority": 2 }
+    ],
+    "10": [
+      { "q": "Why did Jesus ask why do you call me good?", "slug": "why-do-you-call-me-good", "passage": "MRK.10.18", "kind": "doctrine", "priority": 1 },
+      { "q": "Does Mark 10 allow no exception for divorce?", "slug": "does-mark-10-allow-no-exception-for-divorce", "passage": "MRK.10.11-12", "kind": "tension", "priority": 1 },
+      { "q": "What does what God has joined together let no one separate mean?", "slug": "what-god-has-joined-together", "passage": "MRK.10.9", "kind": "doctrine", "priority": 1 },
+      { "q": "Why did Jesus tell the rich man to sell everything he had?", "slug": "sell-everything-you-have-mark-10", "passage": "MRK.10.21", "kind": "practice", "priority": 1 },
+      { "q": "What does the Son of Man came to serve and give his life as a ransom mean?", "slug": "the-son-of-man-came-to-serve", "passage": "MRK.10.45", "kind": "doctrine", "priority": 1 },
+      { "q": "Why did Jesus promise persecutions along with rewards?", "slug": "a-hundredfold-and-persecutions", "passage": "MRK.10.29-30", "kind": "doctrine", "priority": 1 },
+      { "q": "Who was blind Bartimaeus?", "slug": "who-was-blind-bartimaeus", "passage": "MRK.10.46-52", "kind": "identity", "priority": 1 },
+      { "q": "Why did Jesus become indignant when the disciples blocked the children?", "slug": "jesus-was-indignant-about-the-children", "passage": "MRK.10.14", "kind": "phrase", "priority": 1 },
+      { "q": "Why did James and John ask to sit at Jesus' right and left?", "slug": "james-and-john-asked-for-the-best-seats", "passage": "MRK.10.35-37", "kind": "phrase", "priority": 2 }
+    ],
+    "11": [
+      { "q": "Why did Jesus curse a fig tree that had no figs out of season?", "slug": "why-jesus-cursed-a-fig-tree-out-of-season", "passage": "MRK.11.13-14", "kind": "ethics", "priority": 1 },
+      { "q": "What does if you have faith you can move mountains mean?", "slug": "faith-can-move-mountains-mark-11", "passage": "MRK.11.23", "kind": "doctrine", "priority": 1 },
+      { "q": "Does Mark 11:24 mean God grants whatever you ask in faith?", "slug": "whatever-you-ask-in-prayer-believe", "passage": "MRK.11.24", "kind": "doctrine", "priority": 1 },
+      { "q": "What does forgive when you pray, so your Father may forgive you mean?", "slug": "forgive-when-you-pray", "passage": "MRK.11.25", "kind": "doctrine", "priority": 1 },
+      { "q": "Why is the fig tree story split around the temple cleansing?", "slug": "the-fig-tree-and-the-temple-sandwich", "passage": "MRK.11.12-21", "kind": "phrase", "priority": 1 },
+      { "q": "What does a house of prayer for all nations mean?", "slug": "a-house-of-prayer-for-all-nations", "passage": "MRK.11.17", "kind": "doctrine", "priority": 1 }
+    ],
+    "12": [
+      { "q": "What does the widow's mite teach about giving?", "slug": "the-widows-mite", "passage": "MRK.12.41-44", "kind": "practice", "priority": 1 },
+      { "q": "How much was the widow's offering actually worth?", "slug": "how-much-was-the-widows-offering-worth", "passage": "MRK.12.42", "kind": "number", "priority": 1 },
+      { "q": "What is the greatest commandment according to Mark 12?", "slug": "the-greatest-commandment-mark-12", "passage": "MRK.12.29-31", "kind": "doctrine", "priority": 1 },
+      { "q": "What does the Lord our God, the Lord is one mean?", "slug": "the-lord-our-god-the-lord-is-one", "passage": "MRK.12.29", "kind": "doctrine", "priority": 1 },
+      { "q": "What does you are not far from the kingdom of God mean?", "slug": "you-are-not-far-from-the-kingdom-of-god", "passage": "MRK.12.34", "kind": "phrase", "priority": 1 },
+      { "q": "Why does Jesus say God is the God of the living?", "slug": "the-god-of-the-living-mark-12", "passage": "MRK.12.27", "kind": "doctrine", "priority": 1 },
+      { "q": "What does beware of the scribes who devour widows' houses mean?", "slug": "scribes-who-devour-widows-houses", "passage": "MRK.12.38-40", "kind": "ethics", "priority": 1 }
+    ],
+    "13": [
+      { "q": "Why does Jesus say not even the Son knows the day or hour?", "slug": "not-even-the-son-knows-the-day-or-hour", "passage": "MRK.13.32", "kind": "doctrine", "priority": 1 },
+      { "q": "What does not one stone will be left on another mean?", "slug": "not-one-stone-will-be-left-on-another", "passage": "MRK.13.2", "kind": "doctrine", "priority": 1 },
+      { "q": "What is the abomination of desolation in Mark 13:14?", "slug": "the-abomination-of-desolation-mark-13", "passage": "MRK.13.14", "kind": "identity", "priority": 1 },
+      { "q": "What does let the reader understand mean in Mark 13:14?", "slug": "let-the-reader-understand", "passage": "MRK.13.14", "kind": "phrase", "priority": 1 },
+      { "q": "What does this generation will not pass away mean in Mark 13:30?", "slug": "this-generation-will-not-pass-away-mark-13", "passage": "MRK.13.30", "kind": "tension", "priority": 1 },
+      { "q": "Who are the elect God gathers from the four winds?", "slug": "the-elect-gathered-from-the-four-winds", "passage": "MRK.13.27", "kind": "identity", "priority": 1 },
+      { "q": "What does watch, for you do not know when the master returns mean?", "slug": "watch-you-do-not-know-when-he-returns", "passage": "MRK.13.35-37", "kind": "practice", "priority": 1 },
+      { "q": "What does the Holy Spirit will give you words when you are on trial mean?", "slug": "the-spirit-will-give-you-words", "passage": "MRK.13.11", "kind": "doctrine", "priority": 1 }
+    ],
+    "14": [
+      { "q": "Who was the young man who ran away naked in Mark 14?", "slug": "the-young-man-who-ran-away-naked", "passage": "MRK.14.51-52", "kind": "identity", "priority": 1 },
+      { "q": "Why does Mark say the cock crowed twice when other Gospels say once?", "slug": "did-the-cock-crow-once-or-twice", "passage": "MRK.14.30", "kind": "tension", "priority": 1 },
+      { "q": "What does Abba, Father, everything is possible for you mean?", "slug": "abba-father-everything-is-possible-for-you", "passage": "MRK.14.36", "kind": "doctrine", "priority": 1 },
+      { "q": "What does the spirit is willing but the body is weak mean in Mark 14?", "slug": "the-spirit-is-willing-mark-14", "passage": "MRK.14.38", "kind": "phrase", "priority": 1 },
+      { "q": "What does Jesus mean by I am when the high priest asks?", "slug": "jesus-said-i-am-to-the-high-priest", "passage": "MRK.14.62", "kind": "doctrine", "priority": 1 },
+      { "q": "What does she has done a beautiful thing to me mean about the anointing?", "slug": "she-has-done-a-beautiful-thing", "passage": "MRK.14.6-9", "kind": "phrase", "priority": 1 },
+      { "q": "What does this is my blood of the covenant mean?", "slug": "this-is-my-blood-of-the-covenant", "passage": "MRK.14.24", "kind": "doctrine", "priority": 1 },
+      { "q": "What does I will not drink of the fruit of the vine again mean?", "slug": "i-will-not-drink-of-the-vine-again", "passage": "MRK.14.25", "kind": "doctrine", "priority": 1 },
+      { "q": "Why did the false witnesses at Jesus' trial disagree?", "slug": "the-false-witnesses-disagreed", "passage": "MRK.14.56-59", "kind": "history", "priority": 1 }
+    ],
+    "15": [
+      { "q": "Does Mark's third-hour crucifixion contradict John's sixth hour?", "slug": "mark-third-hour-versus-john-sixth-hour", "passage": "MRK.15.25", "kind": "tension", "priority": 1 },
+      { "q": "What does Eloi, Eloi, lema sabachthani mean?", "slug": "eloi-eloi-lema-sabachthani", "passage": "MRK.15.34", "kind": "phrase", "priority": 1 },
+      { "q": "Why did the temple curtain tear from top to bottom?", "slug": "the-curtain-torn-from-top-to-bottom", "passage": "MRK.15.38", "kind": "doctrine", "priority": 1 },
+      { "q": "Why did the centurion call Jesus the Son of God?", "slug": "the-centurion-called-him-the-son-of-god", "passage": "MRK.15.39", "kind": "phrase", "priority": 1 },
+      { "q": "Why was Jesus offered wine mixed with myrrh?", "slug": "wine-mixed-with-myrrh", "passage": "MRK.15.23", "kind": "history", "priority": 1 },
+      { "q": "Who was Joseph of Arimathea and why did he take a risk?", "slug": "joseph-of-arimathea-took-a-risk", "passage": "MRK.15.43", "kind": "identity", "priority": 1 },
+      { "q": "Why was Pilate surprised that Jesus died so quickly?", "slug": "pilate-was-surprised-jesus-died-so-quickly", "passage": "MRK.15.44", "kind": "history", "priority": 1 },
+      { "q": "Who were Alexander and Rufus, sons of Simon of Cyrene?", "slug": "alexander-and-rufus", "passage": "MRK.15.21", "kind": "identity", "priority": 2 }
+    ],
+    "16": [
+      { "q": "Is Mark 16:9-20 part of the original Bible?", "slug": "is-mark-16-9-20-original", "passage": "MRK.16.9-20", "kind": "history", "priority": 1 },
+      { "q": "Why does Mark's Gospel appear to end mid-sentence at 16:8?", "slug": "why-mark-ends-at-16-8", "passage": "MRK.16.8", "kind": "history", "priority": 1 },
+      { "q": "Does Mark 16:18 mean Christians can handle snakes and drink poison?", "slug": "picking-up-snakes-and-drinking-poison", "passage": "MRK.16.18", "kind": "practice", "priority": 1 },
+      { "q": "Does Mark 16:16 mean baptism is required for salvation?", "slug": "does-mark-16-16-require-baptism", "passage": "MRK.16.16", "kind": "doctrine", "priority": 1 },
+      { "q": "Why did the angel say go tell Peter specifically?", "slug": "go-tell-his-disciples-and-peter", "passage": "MRK.16.7", "kind": "phrase", "priority": 1 },
+      { "q": "Who was the young man in white at the tomb?", "slug": "the-young-man-in-white-at-the-tomb", "passage": "MRK.16.5", "kind": "identity", "priority": 1 },
+      { "q": "What does they said nothing to anyone because they were afraid mean?", "slug": "they-said-nothing-because-they-were-afraid", "passage": "MRK.16.8", "kind": "phrase", "priority": 1 }
+    ]
+  }
+}

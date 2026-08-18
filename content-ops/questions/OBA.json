@@ -1,0 +1,15 @@
+{
+  "book": "OBA",
+  "name": "Obadiah",
+  "chapters": {
+    "1": [
+      { "q": "Why is the whole book of Obadiah about Edom?", "slug": "why-obadiah-is-all-about-edom", "passage": "OBA.1.1-4", "kind": "history", "priority": 1 },
+      { "q": "What does though you soar like the eagle mean?", "slug": "though-you-soar-like-the-eagle", "passage": "OBA.1.4", "kind": "phrase", "priority": 1 },
+      { "q": "What does as you have done, it will be done to you mean?", "slug": "as-you-have-done-it-will-be-done-to-you", "passage": "OBA.1.15", "kind": "doctrine", "priority": 1 },
+      { "q": "What was Edom's sin of gloating over Jerusalem's fall?", "slug": "edoms-sin-of-gloating", "passage": "OBA.1.12-14", "kind": "ethics", "priority": 1 },
+      { "q": "Who was Obadiah and when did he write?", "slug": "who-was-obadiah", "passage": "OBA.1.1", "kind": "identity", "priority": 1 },
+      { "q": "Where was Edom and what happened to it?", "slug": "where-was-edom-and-what-happened-to-it", "passage": "OBA.1.3", "kind": "history", "priority": 1 },
+      { "q": "Why is Obadiah the shortest book in the Old Testament?", "slug": "why-obadiah-is-the-shortest-ot-book", "passage": "OBA.1.1-21", "kind": "history", "priority": 1 }
+    ]
+  }
+}

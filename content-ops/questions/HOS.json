@@ -1,0 +1,67 @@
+{
+  "book": "HOS",
+  "name": "Hosea",
+  "chapters": {
+    "1": [
+      { "q": "Why did God tell Hosea to marry a prostitute?", "slug": "why-god-told-hosea-to-marry-a-prostitute", "passage": "HOS.1.2", "kind": "ethics", "priority": 1 },
+      { "q": "Who was Gomer, Hosea's wife?", "slug": "who-was-gomer", "passage": "HOS.1.3", "kind": "identity", "priority": 1 },
+      { "q": "What do the names Jezreel, Lo-ruhamah, and Lo-ammi mean?", "slug": "jezreel-lo-ruhamah-and-lo-ammi", "passage": "HOS.1.4-9", "kind": "phrase", "priority": 1 },
+      { "q": "Was Hosea's marriage a real marriage or a vision?", "slug": "was-hoseas-marriage-real-or-a-vision", "passage": "HOS.1.2-3", "kind": "history", "priority": 1 }
+    ],
+    "2": [
+      { "q": "What does I will allure her into the wilderness mean?", "slug": "i-will-allure-her-into-the-wilderness", "passage": "HOS.2.14", "kind": "doctrine", "priority": 1 },
+      { "q": "What does the valley of Achor as a door of hope mean?", "slug": "the-valley-of-achor-a-door-of-hope", "passage": "HOS.2.15", "kind": "phrase", "priority": 1 },
+      { "q": "What does you will call me husband and no longer master mean?", "slug": "you-will-call-me-husband-not-master", "passage": "HOS.2.16", "kind": "phrase", "priority": 1 }
+    ],
+    "3": [
+      { "q": "Why did Hosea have to buy his own wife back?", "slug": "why-hosea-bought-his-wife-back", "passage": "HOS.3.1-2", "kind": "doctrine", "priority": 1 },
+      { "q": "How much did Hosea pay to buy Gomer back?", "slug": "how-much-hosea-paid-for-gomer", "passage": "HOS.3.2", "kind": "number", "priority": 1 }
+    ],
+    "4": [
+      { "q": "What does my people are destroyed for lack of knowledge mean?", "slug": "destroyed-for-lack-of-knowledge", "passage": "HOS.4.6", "kind": "doctrine", "priority": 1 },
+      { "q": "What does like priest, like people mean?", "slug": "like-priest-like-people", "passage": "HOS.4.9", "kind": "phrase", "priority": 1 },
+      { "q": "What does a spirit of prostitution leads them astray mean?", "slug": "a-spirit-of-prostitution", "passage": "HOS.4.12", "kind": "doctrine", "priority": 1 }
+    ],
+    "5": [
+      { "q": "What does I will be like a lion to Ephraim mean?", "slug": "like-a-lion-to-ephraim", "passage": "HOS.5.14", "kind": "phrase", "priority": 2 }
+    ],
+    "6": [
+      { "q": "What does I desire mercy, not sacrifice mean in Hosea 6:6?", "slug": "i-desire-mercy-not-sacrifice-hosea-6", "passage": "HOS.6.6", "kind": "doctrine", "priority": 1 },
+      { "q": "Does Hosea 6:2 predict the resurrection on the third day?", "slug": "does-hosea-6-2-predict-the-third-day", "passage": "HOS.6.2", "kind": "doctrine", "priority": 1 },
+      { "q": "What does your love is like the morning mist mean?", "slug": "your-love-is-like-the-morning-mist", "passage": "HOS.6.4", "kind": "phrase", "priority": 1 }
+    ],
+    "7": [
+      { "q": "What does Ephraim is a cake not turned mean?", "slug": "ephraim-is-a-cake-not-turned", "passage": "HOS.7.8", "kind": "phrase", "priority": 1 },
+      { "q": "What does they are like a faulty bow mean?", "slug": "like-a-faulty-bow", "passage": "HOS.7.16", "kind": "phrase", "priority": 2 }
+    ],
+    "8": [
+      { "q": "What does they sow the wind and reap the whirlwind mean?", "slug": "sow-the-wind-reap-the-whirlwind", "passage": "HOS.8.7", "kind": "phrase", "priority": 1 }
+    ],
+    "9": [
+      { "q": "Why does Hosea 9:14 pray for miscarriage and dry breasts?", "slug": "hosea-prayed-for-miscarriage", "passage": "HOS.9.14", "kind": "ethics", "priority": 1 }
+    ],
+    "10": [
+      { "q": "What does break up your unplowed ground mean?", "slug": "break-up-your-unplowed-ground", "passage": "HOS.10.12", "kind": "practice", "priority": 1 },
+      { "q": "What does you have plowed wickedness and reaped injustice mean?", "slug": "you-have-plowed-wickedness", "passage": "HOS.10.13", "kind": "phrase", "priority": 2 }
+    ],
+    "11": [
+      { "q": "What does out of Egypt I called my son mean in Hosea 11:1?", "slug": "out-of-egypt-i-called-my-son-hosea-11", "passage": "HOS.11.1", "kind": "doctrine", "priority": 1 },
+      { "q": "What does how can I give you up, Ephraim mean?", "slug": "how-can-i-give-you-up-ephraim", "passage": "HOS.11.8", "kind": "doctrine", "priority": 1 },
+      { "q": "What does I led them with cords of human kindness mean?", "slug": "cords-of-human-kindness", "passage": "HOS.11.4", "kind": "phrase", "priority": 1 },
+      { "q": "What does my heart is changed within me mean about God?", "slug": "my-heart-is-changed-within-me", "passage": "HOS.11.8", "kind": "tension", "priority": 1 },
+      { "q": "What does I am God and not a man mean in Hosea 11:9?", "slug": "i-am-god-and-not-a-man", "passage": "HOS.11.9", "kind": "doctrine", "priority": 1 }
+    ],
+    "12": [
+      { "q": "What does Jacob struggled with God and prevailed mean in Hosea 12?", "slug": "jacob-struggled-with-god-hosea-12", "passage": "HOS.12.3-4", "kind": "doctrine", "priority": 1 }
+    ],
+    "13": [
+      { "q": "Why does Paul quote where, O death, is your victory from Hosea 13:14?", "slug": "where-o-death-is-your-victory-hosea-13", "passage": "HOS.13.14", "kind": "doctrine", "priority": 1 },
+      { "q": "Why does Hosea 13:16 describe pregnant women being ripped open?", "slug": "pregnant-women-ripped-open-hosea-13", "passage": "HOS.13.16", "kind": "ethics", "priority": 1 }
+    ],
+    "14": [
+      { "q": "What does I will heal their waywardness mean?", "slug": "i-will-heal-their-waywardness", "passage": "HOS.14.4", "kind": "doctrine", "priority": 1 },
+      { "q": "What does I will be like the dew to Israel mean?", "slug": "i-will-be-like-the-dew-to-israel", "passage": "HOS.14.5", "kind": "phrase", "priority": 1 },
+      { "q": "What does take words with you and return to the LORD mean?", "slug": "take-words-with-you-and-return", "passage": "HOS.14.2", "kind": "practice", "priority": 1 }
+    ]
+  }
+}

@@ -1,0 +1,219 @@
+{
+  "book": "EZK",
+  "name": "Ezekiel",
+  "chapters": {
+    "1": [
+      { "q": "What did Ezekiel see in his vision of the wheels?", "slug": "ezekiels-vision-of-the-wheels", "passage": "EZK.1.15-21", "kind": "identity", "priority": 1 },
+      { "q": "Was Ezekiel's wheel a UFO?", "slug": "was-ezekiels-wheel-a-ufo", "passage": "EZK.1.16", "kind": "claim", "priority": 1 },
+      { "q": "What are the four living creatures in Ezekiel 1?", "slug": "the-four-living-creatures-ezekiel-1", "passage": "EZK.1.5-11", "kind": "identity", "priority": 1 },
+      { "q": "What does wheels within wheels full of eyes mean?", "slug": "wheels-within-wheels-full-of-eyes", "passage": "EZK.1.16-18", "kind": "phrase", "priority": 1 },
+      { "q": "Are the living creatures in Ezekiel 1 the same as the cherubim?", "slug": "are-the-living-creatures-cherubim", "passage": "EZK.1.5", "kind": "identity", "priority": 1 },
+      { "q": "What is the figure on the throne like a man in Ezekiel 1:26?", "slug": "the-figure-on-the-throne-ezekiel-1", "passage": "EZK.1.26-28", "kind": "identity", "priority": 1 }
+    ],
+    "2": [
+      { "q": "Why does God call Ezekiel son of man over ninety times?", "slug": "why-god-calls-ezekiel-son-of-man", "passage": "EZK.2.1", "kind": "phrase", "priority": 1 },
+      { "q": "What does whether they listen or not mean about Ezekiel's mission?", "slug": "whether-they-listen-or-not", "passage": "EZK.2.5-7", "kind": "practice", "priority": 1 }
+    ],
+    "3": [
+      { "q": "Why did Ezekiel eat a scroll and why was it sweet?", "slug": "ezekiel-ate-a-scroll", "passage": "EZK.3.1-3", "kind": "phrase", "priority": 1 },
+      { "q": "What is the watchman's responsibility in Ezekiel 3?", "slug": "the-watchmans-responsibility", "passage": "EZK.3.17-21", "kind": "doctrine", "priority": 1 },
+      { "q": "Does Ezekiel 3:18 mean I am responsible if someone dies unwarned?", "slug": "am-i-responsible-if-someone-dies-unwarned", "passage": "EZK.3.18", "kind": "doctrine", "priority": 1 },
+      { "q": "What does I will make your forehead like the hardest stone mean?", "slug": "your-forehead-like-the-hardest-stone", "passage": "EZK.3.8-9", "kind": "phrase", "priority": 1 }
+    ],
+    "4": [
+      { "q": "Why did Ezekiel lie on his side for 390 days and then 40?", "slug": "ezekiel-lay-on-his-side-390-days", "passage": "EZK.4.4-6", "kind": "number", "priority": 1 },
+      { "q": "What is Ezekiel 4:9 bread and is the commercial version accurate?", "slug": "ezekiel-4-9-bread", "passage": "EZK.4.9", "kind": "claim", "priority": 1 },
+      { "q": "Why did God tell Ezekiel to cook his food over human dung?", "slug": "cooking-food-over-human-dung", "passage": "EZK.4.12-15", "kind": "ethics", "priority": 1 }
+    ],
+    "5": [
+      { "q": "Why did Ezekiel shave his head and divide the hair three ways?", "slug": "ezekiel-shaved-and-divided-his-hair", "passage": "EZK.5.1-4", "kind": "phrase", "priority": 1 },
+      { "q": "Why does Ezekiel 5:10 say fathers will eat their sons?", "slug": "fathers-will-eat-their-sons-ezekiel-5", "passage": "EZK.5.10", "kind": "ethics", "priority": 1 }
+    ],
+    "6": [
+      { "q": "What were the high places God said he would destroy?", "slug": "the-high-places-god-would-destroy", "passage": "EZK.6.3-6", "kind": "history", "priority": 1 }
+    ],
+    "7": [
+      { "q": "What does the end has come mean in Ezekiel 7?", "slug": "the-end-has-come-ezekiel-7", "passage": "EZK.7.2-6", "kind": "doctrine", "priority": 1 }
+    ],
+    "8": [
+      { "q": "What were the abominations Ezekiel saw in the temple?", "slug": "the-abominations-in-the-temple", "passage": "EZK.8.5-16", "kind": "history", "priority": 1 },
+      { "q": "Who was Tammuz that the women wept for?", "slug": "who-was-tammuz", "passage": "EZK.8.14", "kind": "identity", "priority": 1 },
+      { "q": "Why were men worshiping the sun with their backs to the temple?", "slug": "sun-worship-with-backs-to-the-temple", "passage": "EZK.8.16", "kind": "history", "priority": 1 },
+      { "q": "What was the image of jealousy at the temple gate?", "slug": "the-image-of-jealousy", "passage": "EZK.8.3-5", "kind": "identity", "priority": 1 }
+    ],
+    "9": [
+      { "q": "What is the mark on the foreheads in Ezekiel 9:4?", "slug": "the-mark-on-the-foreheads-ezekiel-9", "passage": "EZK.9.4", "kind": "identity", "priority": 1 },
+      { "q": "Who is the man with the writing kit in Ezekiel 9?", "slug": "the-man-with-the-writing-kit", "passage": "EZK.9.2-3", "kind": "identity", "priority": 1 },
+      { "q": "Why does judgment begin at the sanctuary in Ezekiel 9:6?", "slug": "judgment-begins-at-the-sanctuary", "passage": "EZK.9.6", "kind": "doctrine", "priority": 1 }
+    ],
+    "10": [
+      { "q": "What does the glory of the LORD departing from the temple mean?", "slug": "the-glory-departed-from-the-temple", "passage": "EZK.10.18-19", "kind": "doctrine", "priority": 1 },
+      { "q": "Why does Ezekiel 10 call the living creatures cherubim?", "slug": "the-living-creatures-called-cherubim", "passage": "EZK.10.20", "kind": "identity", "priority": 1 }
+    ],
+    "11": [
+      { "q": "What does I will give you a heart of flesh instead of stone mean?", "slug": "a-heart-of-flesh-instead-of-stone", "passage": "EZK.11.19", "kind": "doctrine", "priority": 1 },
+      { "q": "What does I have been a sanctuary to them in exile mean?", "slug": "a-sanctuary-to-them-in-exile", "passage": "EZK.11.16", "kind": "doctrine", "priority": 1 }
+    ],
+    "12": [
+      { "q": "Why did Ezekiel dig through a wall and carry baggage out?", "slug": "ezekiel-dug-through-a-wall", "passage": "EZK.12.3-7", "kind": "phrase", "priority": 1 },
+      { "q": "How was the prophecy that Zedekiah would not see Babylon fulfilled?", "slug": "zedekiah-would-not-see-babylon", "passage": "EZK.12.13", "kind": "doctrine", "priority": 1 }
+    ],
+    "13": [
+      { "q": "What does whitewashing a flimsy wall mean about false prophets?", "slug": "whitewashing-a-flimsy-wall", "passage": "EZK.13.10-12", "kind": "phrase", "priority": 1 },
+      { "q": "Who were the women with magic charms on their wrists?", "slug": "the-women-with-magic-charms", "passage": "EZK.13.17-21", "kind": "identity", "priority": 1 }
+    ],
+    "14": [
+      { "q": "Why does Ezekiel 14 name Noah, Daniel, and Job together?", "slug": "noah-daniel-and-job", "passage": "EZK.14.14", "kind": "identity", "priority": 1 },
+      { "q": "What does even Noah, Daniel, and Job could only save themselves mean?", "slug": "they-could-only-save-themselves", "passage": "EZK.14.14-20", "kind": "doctrine", "priority": 1 },
+      { "q": "What are the idols people set up in their hearts?", "slug": "idols-set-up-in-their-hearts", "passage": "EZK.14.3", "kind": "doctrine", "priority": 1 }
+    ],
+    "15": [
+      { "q": "What does the useless vine wood mean about Israel?", "slug": "the-useless-vine-wood", "passage": "EZK.15.1-8", "kind": "phrase", "priority": 2 }
+    ],
+    "16": [
+      { "q": "Why is Ezekiel 16 so sexually graphic?", "slug": "why-ezekiel-16-is-so-graphic", "passage": "EZK.16.23-34", "kind": "ethics", "priority": 1 },
+      { "q": "What was the sin of your sister Sodom according to Ezekiel 16:49?", "slug": "the-sin-of-sodom-ezekiel-16-49", "passage": "EZK.16.49-50", "kind": "ethics", "priority": 1 },
+      { "q": "Does Ezekiel 16:49 say Sodom's sin was neglecting the poor?", "slug": "was-sodoms-sin-neglecting-the-poor", "passage": "EZK.16.49", "kind": "doctrine", "priority": 1 },
+      { "q": "What does the abandoned baby in a field mean in Ezekiel 16?", "slug": "the-abandoned-baby-in-a-field", "passage": "EZK.16.4-6", "kind": "phrase", "priority": 1 },
+      { "q": "Why does God promise to restore Sodom in Ezekiel 16:53?", "slug": "god-promises-to-restore-sodom", "passage": "EZK.16.53", "kind": "doctrine", "priority": 1 }
+    ],
+    "17": [
+      { "q": "What does the parable of the two eagles and the vine mean?", "slug": "the-two-eagles-and-the-vine", "passage": "EZK.17.1-10", "kind": "phrase", "priority": 1 }
+    ],
+    "18": [
+      { "q": "What does the soul who sins shall die mean?", "slug": "the-soul-who-sins-shall-die", "passage": "EZK.18.4", "kind": "doctrine", "priority": 1 },
+      { "q": "Does Ezekiel 18:20 contradict Exodus 20:5 about children bearing sin?", "slug": "does-ezekiel-18-contradict-exodus-20", "passage": "EZK.18.20", "kind": "tension", "priority": 1 },
+      { "q": "What does I take no pleasure in the death of the wicked mean?", "slug": "i-take-no-pleasure-in-the-death-of-the-wicked", "passage": "EZK.18.23", "kind": "doctrine", "priority": 1 },
+      { "q": "What does the proverb about fathers eating sour grapes mean?", "slug": "the-fathers-eat-sour-grapes", "passage": "EZK.18.2-3", "kind": "phrase", "priority": 1 },
+      { "q": "Does Ezekiel 18:24 teach that a righteous person can be lost?", "slug": "can-a-righteous-person-turn-and-be-lost", "passage": "EZK.18.24", "kind": "doctrine", "priority": 1 }
+    ],
+    "19": [
+      { "q": "What does the lament of the lioness and her cubs mean?", "slug": "the-lioness-and-her-cubs", "passage": "EZK.19.1-9", "kind": "phrase", "priority": 2 }
+    ],
+    "20": [
+      { "q": "Why does Ezekiel 20:25 say God gave statutes that were not good?", "slug": "statutes-that-were-not-good", "passage": "EZK.20.25-26", "kind": "tension", "priority": 1 },
+      { "q": "What does I acted for the sake of my name mean?", "slug": "i-acted-for-the-sake-of-my-name", "passage": "EZK.20.9-22", "kind": "doctrine", "priority": 1 }
+    ],
+    "21": [
+      { "q": "What is the song of the sword in Ezekiel 21?", "slug": "the-song-of-the-sword", "passage": "EZK.21.9-17", "kind": "phrase", "priority": 1 },
+      { "q": "Why did the king of Babylon use divination to pick his target?", "slug": "babylons-king-used-divination", "passage": "EZK.21.21-22", "kind": "history", "priority": 1 }
+    ],
+    "22": [
+      { "q": "What does I sought for someone to stand in the gap mean?", "slug": "someone-to-stand-in-the-gap", "passage": "EZK.22.30", "kind": "doctrine", "priority": 1 },
+      { "q": "Does standing in the gap mean intercessory prayer?", "slug": "does-standing-in-the-gap-mean-intercession", "passage": "EZK.22.30", "kind": "practice", "priority": 1 }
+    ],
+    "23": [
+      { "q": "Who are Oholah and Oholibah in Ezekiel 23?", "slug": "who-are-oholah-and-oholibah", "passage": "EZK.23.1-4", "kind": "identity", "priority": 1 },
+      { "q": "Why does Ezekiel 23 use such explicit sexual imagery?", "slug": "why-ezekiel-23-is-so-explicit", "passage": "EZK.23.19-21", "kind": "ethics", "priority": 1 }
+    ],
+    "24": [
+      { "q": "Why did God forbid Ezekiel from mourning his wife's death?", "slug": "ezekiel-forbidden-to-mourn-his-wife", "passage": "EZK.24.15-18", "kind": "ethics", "priority": 1 },
+      { "q": "What does the boiling pot with the rusty scum mean?", "slug": "the-boiling-pot-with-rusty-scum", "passage": "EZK.24.3-13", "kind": "phrase", "priority": 1 }
+    ],
+    "25": [
+      { "q": "Why does God judge Ammon, Moab, Edom, and Philistia together?", "slug": "judgment-on-ammon-moab-edom-philistia", "passage": "EZK.25.1-17", "kind": "doctrine", "priority": 2 }
+    ],
+    "26": [
+      { "q": "How exactly was the prophecy against Tyre fulfilled?", "slug": "how-the-prophecy-against-tyre-was-fulfilled", "passage": "EZK.26.3-14", "kind": "history", "priority": 1 },
+      { "q": "Did Alexander the Great fulfill Ezekiel's prophecy about Tyre?", "slug": "did-alexander-fulfill-the-tyre-prophecy", "passage": "EZK.26.12", "kind": "history", "priority": 1 }
+    ],
+    "27": [
+      { "q": "What does the lament over Tyre's trade reveal about the ancient world?", "slug": "the-lament-over-tyres-trade", "passage": "EZK.27.12-25", "kind": "history", "priority": 1 }
+    ],
+    "28": [
+      { "q": "Is the king of Tyre in Ezekiel 28 actually Satan?", "slug": "is-the-king-of-tyre-satan", "passage": "EZK.28.11-19", "kind": "doctrine", "priority": 1 },
+      { "q": "What does you were in Eden, the garden of God mean?", "slug": "you-were-in-eden-the-garden-of-god", "passage": "EZK.28.13", "kind": "doctrine", "priority": 1 },
+      { "q": "What is the anointed cherub who guards in Ezekiel 28:14?", "slug": "the-anointed-cherub-who-guards", "passage": "EZK.28.14", "kind": "identity", "priority": 1 },
+      { "q": "What does you were blameless until unrighteousness was found in you mean?", "slug": "blameless-until-unrighteousness-was-found", "passage": "EZK.28.15", "kind": "doctrine", "priority": 1 },
+      { "q": "What does your heart was proud because of your beauty mean?", "slug": "your-heart-was-proud-because-of-your-beauty", "passage": "EZK.28.17", "kind": "doctrine", "priority": 1 }
+    ],
+    "29": [
+      { "q": "Why is Pharaoh called the great dragon in the Nile?", "slug": "pharaoh-the-great-dragon-in-the-nile", "passage": "EZK.29.3", "kind": "phrase", "priority": 1 },
+      { "q": "Why did God give Egypt to Nebuchadnezzar as wages?", "slug": "egypt-given-to-nebuchadnezzar-as-wages", "passage": "EZK.29.18-20", "kind": "doctrine", "priority": 1 }
+    ],
+    "30": [
+      { "q": "What is the day of the LORD against Egypt?", "slug": "the-day-of-the-lord-against-egypt", "passage": "EZK.30.3", "kind": "doctrine", "priority": 2 }
+    ],
+    "31": [
+      { "q": "What does the great cedar of Assyria being cut down mean?", "slug": "the-great-cedar-of-assyria", "passage": "EZK.31.3-14", "kind": "phrase", "priority": 2 }
+    ],
+    "32": [
+      { "q": "What is the pit where the uncircumcised lie in Ezekiel 32?", "slug": "the-pit-where-the-uncircumcised-lie", "passage": "EZK.32.18-32", "kind": "doctrine", "priority": 1 }
+    ],
+    "33": [
+      { "q": "How does the watchman in Ezekiel 33 differ from chapter 3?", "slug": "the-watchman-in-ezekiel-33", "passage": "EZK.33.1-9", "kind": "doctrine", "priority": 1 },
+      { "q": "What does turn from your evil ways, why will you die mean?", "slug": "why-will-you-die-o-house-of-israel", "passage": "EZK.33.11", "kind": "doctrine", "priority": 1 },
+      { "q": "Why did people listen to Ezekiel like entertainment without obeying?", "slug": "they-listened-to-ezekiel-like-entertainment", "passage": "EZK.33.30-32", "kind": "practice", "priority": 1 }
+    ],
+    "34": [
+      { "q": "Who are the shepherds of Israel God condemns?", "slug": "the-shepherds-of-israel-condemned", "passage": "EZK.34.1-10", "kind": "identity", "priority": 1 },
+      { "q": "What does I myself will be their shepherd mean?", "slug": "i-myself-will-be-their-shepherd", "passage": "EZK.34.15", "kind": "doctrine", "priority": 1 },
+      { "q": "What does I will judge between the fat sheep and the lean mean?", "slug": "between-the-fat-sheep-and-the-lean", "passage": "EZK.34.20-22", "kind": "doctrine", "priority": 1 },
+      { "q": "How does Ezekiel 34 connect to Jesus as the good shepherd?", "slug": "ezekiel-34-and-the-good-shepherd", "passage": "EZK.34.23", "kind": "doctrine", "priority": 1 }
+    ],
+    "35": [
+      { "q": "Why is Edom singled out in Ezekiel 35?", "slug": "why-edom-is-singled-out-ezekiel-35", "passage": "EZK.35.5", "kind": "ethics", "priority": 2 }
+    ],
+    "36": [
+      { "q": "What does I will give you a new heart and a new spirit mean?", "slug": "a-new-heart-and-a-new-spirit", "passage": "EZK.36.26", "kind": "doctrine", "priority": 1 },
+      { "q": "What does I will sprinkle clean water on you mean?", "slug": "i-will-sprinkle-clean-water-on-you", "passage": "EZK.36.25", "kind": "doctrine", "priority": 1 },
+      { "q": "What does I will remove your heart of stone mean?", "slug": "i-will-remove-your-heart-of-stone", "passage": "EZK.36.26", "kind": "doctrine", "priority": 1 },
+      { "q": "Why does God say he acts for the sake of his holy name, not for Israel?", "slug": "not-for-your-sake-but-for-my-holy-name", "passage": "EZK.36.22", "kind": "doctrine", "priority": 1 },
+      { "q": "What does I will put my Spirit within you mean?", "slug": "i-will-put-my-spirit-within-you", "passage": "EZK.36.27", "kind": "doctrine", "priority": 1 }
+    ],
+    "37": [
+      { "q": "What does the valley of dry bones mean?", "slug": "the-valley-of-dry-bones", "passage": "EZK.37.1-14", "kind": "doctrine", "priority": 1 },
+      { "q": "What does can these bones live mean?", "slug": "can-these-bones-live", "passage": "EZK.37.3", "kind": "doctrine", "priority": 1 },
+      { "q": "Is the valley of dry bones about resurrection or about Israel's restoration?", "slug": "is-the-dry-bones-vision-about-resurrection", "passage": "EZK.37.11-14", "kind": "doctrine", "priority": 1 },
+      { "q": "What do the two sticks joined into one mean?", "slug": "the-two-sticks-joined-into-one", "passage": "EZK.37.15-22", "kind": "phrase", "priority": 1 },
+      { "q": "Does Ezekiel 37 predict the modern state of Israel?", "slug": "does-ezekiel-37-predict-modern-israel", "passage": "EZK.37.21-22", "kind": "claim", "priority": 1 },
+      { "q": "What does prophesy to the breath mean in Ezekiel 37:9?", "slug": "prophesy-to-the-breath", "passage": "EZK.37.9", "kind": "phrase", "priority": 1 }
+    ],
+    "38": [
+      { "q": "Who are Gog and Magog in Ezekiel 38?", "slug": "who-are-gog-and-magog-ezekiel-38", "passage": "EZK.38.1-3", "kind": "identity", "priority": 1 },
+      { "q": "Is Gog of Magog Russia?", "slug": "is-gog-of-magog-russia", "passage": "EZK.38.2", "kind": "claim", "priority": 1 },
+      { "q": "Who are Meshech, Tubal, Persia, Cush, and Put in Ezekiel 38?", "slug": "meshech-tubal-persia-cush-and-put", "passage": "EZK.38.2-5", "kind": "identity", "priority": 1 },
+      { "q": "When does the war of Gog and Magog happen?", "slug": "when-the-war-of-gog-and-magog-happens", "passage": "EZK.38.8", "kind": "doctrine", "priority": 1 },
+      { "q": "What does I will put hooks in your jaws mean?", "slug": "i-will-put-hooks-in-your-jaws", "passage": "EZK.38.4", "kind": "phrase", "priority": 1 }
+    ],
+    "39": [
+      { "q": "Why will it take seven years to burn Gog's weapons?", "slug": "seven-years-to-burn-gogs-weapons", "passage": "EZK.39.9-10", "kind": "number", "priority": 1 },
+      { "q": "Why will it take seven months to bury Gog's dead?", "slug": "seven-months-to-bury-gogs-dead", "passage": "EZK.39.12", "kind": "number", "priority": 1 },
+      { "q": "How is the Gog and Magog of Ezekiel 39 different from Revelation 20?", "slug": "gog-in-ezekiel-versus-revelation", "passage": "EZK.39.1-6", "kind": "tension", "priority": 1 }
+    ],
+    "40": [
+      { "q": "Is the temple in Ezekiel 40-48 literal or symbolic?", "slug": "is-ezekiels-temple-literal-or-symbolic", "passage": "EZK.40.1-4", "kind": "doctrine", "priority": 1 },
+      { "q": "Why are the temple measurements given in such detail?", "slug": "why-the-temple-measurements-are-so-detailed", "passage": "EZK.40.5-49", "kind": "doctrine", "priority": 1 }
+    ],
+    "41": [
+      { "q": "How does Ezekiel's temple differ from Solomon's?", "slug": "how-ezekiels-temple-differs-from-solomons", "passage": "EZK.41.1-4", "kind": "history", "priority": 1 }
+    ],
+    "42": [
+      { "q": "What were the priests' chambers in Ezekiel's temple for?", "slug": "the-priests-chambers-in-ezekiels-temple", "passage": "EZK.42.13-14", "kind": "history", "priority": 2 }
+    ],
+    "43": [
+      { "q": "Why does Ezekiel's temple include sin offerings if Christ died once?", "slug": "why-ezekiels-temple-has-sin-offerings", "passage": "EZK.43.18-27", "kind": "tension", "priority": 1 },
+      { "q": "What does the glory of the LORD returning to the temple mean?", "slug": "the-glory-returned-to-the-temple", "passage": "EZK.43.1-5", "kind": "doctrine", "priority": 1 }
+    ],
+    "44": [
+      { "q": "Why is the east gate shut permanently in Ezekiel 44?", "slug": "why-the-east-gate-is-shut", "passage": "EZK.44.1-3", "kind": "doctrine", "priority": 1 },
+      { "q": "Who are the sons of Zadok in Ezekiel 44?", "slug": "who-are-the-sons-of-zadok", "passage": "EZK.44.15-16", "kind": "identity", "priority": 1 }
+    ],
+    "45": [
+      { "q": "Who is the prince in Ezekiel 45 and 46?", "slug": "who-is-the-prince-in-ezekiel", "passage": "EZK.45.7-9", "kind": "identity", "priority": 1 }
+    ],
+    "46": [
+      { "q": "Why does the prince offer sacrifices in Ezekiel 46?", "slug": "why-the-prince-offers-sacrifices", "passage": "EZK.46.2-4", "kind": "tension", "priority": 1 }
+    ],
+    "47": [
+      { "q": "What is the river flowing from the temple in Ezekiel 47?", "slug": "the-river-flowing-from-the-temple", "passage": "EZK.47.1-12", "kind": "identity", "priority": 1 },
+      { "q": "Why does the river get deeper as it flows in Ezekiel 47?", "slug": "why-the-river-gets-deeper", "passage": "EZK.47.3-5", "kind": "phrase", "priority": 1 },
+      { "q": "How does the river heal the Dead Sea?", "slug": "the-river-heals-the-dead-sea", "passage": "EZK.47.8-10", "kind": "doctrine", "priority": 1 },
+      { "q": "What are the trees whose leaves are for healing in Ezekiel 47?", "slug": "trees-whose-leaves-are-for-healing-ezekiel-47", "passage": "EZK.47.12", "kind": "phrase", "priority": 1 }
+    ],
+    "48": [
+      { "q": "What does the LORD is there, the city's new name, mean?", "slug": "the-lord-is-there", "passage": "EZK.48.35", "kind": "phrase", "priority": 1 },
+      { "q": "Why is the land divided in equal horizontal strips in Ezekiel 48?", "slug": "why-the-land-is-divided-in-equal-strips", "passage": "EZK.48.1-29", "kind": "doctrine", "priority": 1 }
+    ]
+  }
+}

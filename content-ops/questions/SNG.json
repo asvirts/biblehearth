@@ -1,0 +1,53 @@
+{
+  "book": "SNG",
+  "name": "Song of Songs",
+  "chapters": {
+    "1": [
+      { "q": "Is Song of Songs about human love or an allegory of Christ and the church?", "slug": "is-song-of-songs-allegory-or-love-poetry", "passage": "SNG.1.2", "kind": "doctrine", "priority": 1 },
+      { "q": "What does I am dark but lovely mean?", "slug": "i-am-dark-but-lovely", "passage": "SNG.1.5-6", "kind": "phrase", "priority": 1 },
+      { "q": "What does your love is better than wine mean?", "slug": "your-love-is-better-than-wine", "passage": "SNG.1.2", "kind": "phrase", "priority": 1 },
+      { "q": "Who are the daughters of Jerusalem in Song of Songs?", "slug": "who-are-the-daughters-of-jerusalem", "passage": "SNG.1.5", "kind": "identity", "priority": 1 },
+      { "q": "Why is Song of Songs in the Bible at all?", "slug": "why-song-of-songs-is-in-the-bible", "passage": "SNG.1.1", "kind": "doctrine", "priority": 1 }
+    ],
+    "2": [
+      { "q": "Who is the rose of Sharon and the lily of the valleys?", "slug": "the-rose-of-sharon-and-lily-of-the-valleys", "passage": "SNG.2.1", "kind": "identity", "priority": 1 },
+      { "q": "What does his banner over me is love mean?", "slug": "his-banner-over-me-is-love", "passage": "SNG.2.4", "kind": "phrase", "priority": 1 },
+      { "q": "What does catch the little foxes that ruin the vineyards mean?", "slug": "the-little-foxes-that-ruin-the-vineyards", "passage": "SNG.2.15", "kind": "phrase", "priority": 1 },
+      { "q": "What does do not awaken love before it pleases mean?", "slug": "do-not-awaken-love-before-it-pleases", "passage": "SNG.2.7", "kind": "practice", "priority": 1 },
+      { "q": "What does the winter is past, the voice of the turtledove is heard mean?", "slug": "the-winter-is-past", "passage": "SNG.2.11-12", "kind": "phrase", "priority": 1 }
+    ],
+    "3": [
+      { "q": "What does I sought him but did not find him mean?", "slug": "i-sought-him-but-did-not-find-him", "passage": "SNG.3.1-2", "kind": "phrase", "priority": 1 },
+      { "q": "What was Solomon's palanquin or carriage?", "slug": "solomons-palanquin", "passage": "SNG.3.9-10", "kind": "history", "priority": 2 },
+      { "q": "Who were the sixty warriors around Solomon's bed?", "slug": "the-sixty-warriors-around-solomons-bed", "passage": "SNG.3.7-8", "kind": "history", "priority": 2 }
+    ],
+    "4": [
+      { "q": "Why does the man compare his bride's teeth to a flock of sheep?", "slug": "teeth-like-a-flock-of-sheep", "passage": "SNG.4.2", "kind": "phrase", "priority": 1 },
+      { "q": "What does a garden locked, a spring sealed mean about virginity?", "slug": "a-garden-locked-a-spring-sealed", "passage": "SNG.4.12", "kind": "phrase", "priority": 1 },
+      { "q": "What does you are altogether beautiful, there is no flaw in you mean?", "slug": "you-are-altogether-beautiful", "passage": "SNG.4.7", "kind": "phrase", "priority": 1 },
+      { "q": "Why does the Song describe a woman's body in such detail?", "slug": "why-the-song-describes-the-body-in-detail", "passage": "SNG.4.1-5", "kind": "doctrine", "priority": 1 },
+      { "q": "What does your neck is like the tower of David mean?", "slug": "your-neck-is-like-the-tower-of-david", "passage": "SNG.4.4", "kind": "phrase", "priority": 2 }
+    ],
+    "5": [
+      { "q": "What does I slept but my heart was awake mean?", "slug": "i-slept-but-my-heart-was-awake", "passage": "SNG.5.2", "kind": "phrase", "priority": 1 },
+      { "q": "Why did the watchmen beat the woman in Song of Songs 5?", "slug": "the-watchmen-beat-the-woman", "passage": "SNG.5.7", "kind": "history", "priority": 1 },
+      { "q": "What does my beloved is radiant and ruddy mean?", "slug": "my-beloved-is-radiant-and-ruddy", "passage": "SNG.5.10", "kind": "phrase", "priority": 2 }
+    ],
+    "6": [
+      { "q": "Who is she who appears like the dawn, fair as the moon?", "slug": "who-appears-like-the-dawn", "passage": "SNG.6.10", "kind": "phrase", "priority": 1 },
+      { "q": "Why does Song of Songs 6:8 mention sixty queens and eighty concubines?", "slug": "sixty-queens-and-eighty-concubines", "passage": "SNG.6.8-9", "kind": "tension", "priority": 1 },
+      { "q": "Who is the Shulammite?", "slug": "who-is-the-shulammite", "passage": "SNG.6.13", "kind": "identity", "priority": 1 }
+    ],
+    "7": [
+      { "q": "What does your nose is like the tower of Lebanon mean?", "slug": "your-nose-is-like-the-tower-of-lebanon", "passage": "SNG.7.4", "kind": "phrase", "priority": 1 },
+      { "q": "What are the mandrakes in Song of Songs 7:13?", "slug": "mandrakes-in-song-of-songs", "passage": "SNG.7.13", "kind": "history", "priority": 2 }
+    ],
+    "8": [
+      { "q": "What does love is as strong as death mean?", "slug": "love-is-as-strong-as-death", "passage": "SNG.8.6", "kind": "phrase", "priority": 1 },
+      { "q": "What does set me as a seal upon your heart mean?", "slug": "set-me-as-a-seal-upon-your-heart", "passage": "SNG.8.6", "kind": "phrase", "priority": 1 },
+      { "q": "What does many waters cannot quench love mean?", "slug": "many-waters-cannot-quench-love", "passage": "SNG.8.7", "kind": "phrase", "priority": 1 },
+      { "q": "What does jealousy is as unyielding as the grave mean?", "slug": "jealousy-is-as-unyielding-as-the-grave", "passage": "SNG.8.6", "kind": "phrase", "priority": 1 },
+      { "q": "What does we have a little sister mean in Song of Songs 8:8?", "slug": "we-have-a-little-sister", "passage": "SNG.8.8-9", "kind": "phrase", "priority": 2 }
+    ]
+  }
+}

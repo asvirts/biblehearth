@@ -1,0 +1,41 @@
+{
+  "book": "MIC",
+  "name": "Micah",
+  "chapters": {
+    "1": [
+      { "q": "Why does Micah say he will go about barefoot and naked?", "slug": "micah-went-barefoot-and-naked", "passage": "MIC.1.8", "kind": "phrase", "priority": 1 },
+      { "q": "What does Samaria's wound is incurable mean?", "slug": "samarias-wound-is-incurable", "passage": "MIC.1.9", "kind": "phrase", "priority": 2 }
+    ],
+    "2": [
+      { "q": "What does they covet fields and seize them mean?", "slug": "they-covet-fields-and-seize-them", "passage": "MIC.2.2", "kind": "ethics", "priority": 1 },
+      { "q": "Who are the prophets who preach only what people want to hear?", "slug": "prophets-who-preach-what-people-want-to-hear", "passage": "MIC.2.11", "kind": "identity", "priority": 1 }
+    ],
+    "3": [
+      { "q": "What does you who hate good and love evil mean?", "slug": "you-who-hate-good-and-love-evil", "passage": "MIC.3.2", "kind": "ethics", "priority": 1 },
+      { "q": "What does they tear the skin from my people mean?", "slug": "they-tear-the-skin-from-my-people", "passage": "MIC.3.2-3", "kind": "phrase", "priority": 1 },
+      { "q": "What does her prophets tell fortunes for money mean?", "slug": "prophets-who-tell-fortunes-for-money", "passage": "MIC.3.11", "kind": "ethics", "priority": 1 }
+    ],
+    "4": [
+      { "q": "What does every man under his own vine and fig tree mean?", "slug": "under-his-own-vine-and-fig-tree", "passage": "MIC.4.4", "kind": "phrase", "priority": 1 },
+      { "q": "Why does Micah 4:3 repeat Isaiah's swords into plowshares?", "slug": "why-micah-repeats-swords-into-plowshares", "passage": "MIC.4.3", "kind": "tension", "priority": 1 }
+    ],
+    "5": [
+      { "q": "How does Micah 5:2 predict Jesus' birth in Bethlehem?", "slug": "micah-5-2-and-bethlehem", "passage": "MIC.5.2", "kind": "doctrine", "priority": 1 },
+      { "q": "What does whose origins are from of old, from ancient days mean?", "slug": "whose-origins-are-from-of-old", "passage": "MIC.5.2", "kind": "doctrine", "priority": 1 },
+      { "q": "Why is Bethlehem called Ephrathah in Micah 5:2?", "slug": "why-bethlehem-is-called-ephrathah", "passage": "MIC.5.2", "kind": "history", "priority": 1 },
+      { "q": "What does he will be their peace mean?", "slug": "he-will-be-their-peace", "passage": "MIC.5.5", "kind": "doctrine", "priority": 1 }
+    ],
+    "6": [
+      { "q": "What does act justly, love mercy, and walk humbly with your God mean?", "slug": "act-justly-love-mercy-walk-humbly", "passage": "MIC.6.8", "kind": "practice", "priority": 1 },
+      { "q": "Does Micah 6:8 summarize the whole law?", "slug": "does-micah-6-8-summarize-the-whole-law", "passage": "MIC.6.8", "kind": "doctrine", "priority": 1 },
+      { "q": "Why does Micah 6:7 ask about sacrificing a firstborn child?", "slug": "shall-i-give-my-firstborn-for-my-sin", "passage": "MIC.6.7", "kind": "ethics", "priority": 1 },
+      { "q": "What does what does the LORD require of you mean in Micah 6?", "slug": "what-does-the-lord-require-of-you-micah-6", "passage": "MIC.6.8", "kind": "practice", "priority": 1 }
+    ],
+    "7": [
+      { "q": "What does he will hurl our iniquities into the depths of the sea mean?", "slug": "hurl-our-iniquities-into-the-depths-of-the-sea", "passage": "MIC.7.19", "kind": "doctrine", "priority": 1 },
+      { "q": "What does who is a God like you, who pardons sin mean?", "slug": "who-is-a-god-like-you-who-pardons-sin", "passage": "MIC.7.18", "kind": "doctrine", "priority": 1 },
+      { "q": "Why did Jesus quote Micah 7:6 about family becoming enemies?", "slug": "a-mans-enemies-are-his-own-household", "passage": "MIC.7.6", "kind": "doctrine", "priority": 1 },
+      { "q": "What does but as for me, I will look to the LORD mean?", "slug": "as-for-me-i-will-look-to-the-lord", "passage": "MIC.7.7", "kind": "practice", "priority": 1 }
+    ]
+  }
+}

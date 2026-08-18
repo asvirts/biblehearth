@@ -1,0 +1,86 @@
+{
+  "book": "EPH",
+  "name": "Ephesians",
+  "chapters": {
+    "1": [
+      { "q": "What does it mean that God chose us before the foundation of the world?", "slug": "chosen-before-the-foundation-of-the-world", "passage": "EPH.1.4", "kind": "doctrine", "priority": 1 },
+      { "q": "What does predestined mean in Ephesians 1:5?", "slug": "predestined-ephesians-1-5", "passage": "EPH.1.5", "kind": "doctrine", "priority": 1 },
+      { "q": "What does it mean to be sealed with the Holy Spirit?", "slug": "sealed-with-the-holy-spirit", "passage": "EPH.1.13", "kind": "phrase", "priority": 1 },
+      { "q": "What is the Holy Spirit as a guarantee of our inheritance?", "slug": "holy-spirit-guarantee-of-our-inheritance", "passage": "EPH.1.14", "kind": "phrase", "priority": 2 },
+      { "q": "What does in the heavenly places mean in Ephesians?", "slug": "in-the-heavenly-places-ephesians", "passage": "EPH.1.3", "kind": "phrase", "priority": 2 },
+      { "q": "What is the mystery of God's will in Ephesians 1:9?", "slug": "mystery-of-gods-will-ephesians-1-9", "passage": "EPH.1.9", "kind": "phrase", "priority": 2 },
+      { "q": "What does redemption through his blood mean?", "slug": "redemption-through-his-blood", "passage": "EPH.1.7", "kind": "doctrine", "priority": 2 },
+      { "q": "What are the riches of his glorious inheritance in the saints?", "slug": "riches-of-his-glorious-inheritance", "passage": "EPH.1.18", "kind": "phrase", "priority": 3 },
+      { "q": "What does it mean that the church is the fullness of him who fills all in all?", "slug": "fullness-of-him-who-fills-all-in-all", "passage": "EPH.1.23", "kind": "phrase", "priority": 3 }
+    ],
+    "2": [
+      { "q": "What are the good works God prepared in advance in Ephesians 2:10?", "slug": "good-works-prepared-in-advance", "passage": "EPH.2.10", "kind": "phrase", "priority": 1 },
+      { "q": "What does dead in trespasses and sins mean?", "slug": "dead-in-trespasses-and-sins", "passage": "EPH.2.1", "kind": "doctrine", "priority": 1 },
+      { "q": "Who is the prince of the power of the air?", "slug": "prince-of-the-power-of-the-air", "passage": "EPH.2.2", "kind": "identity", "priority": 1 },
+      { "q": "Is faith itself the gift of God in Ephesians 2:8?", "slug": "is-faith-the-gift-of-god", "passage": "EPH.2.8", "kind": "doctrine", "priority": 1 },
+      { "q": "What is the dividing wall of hostility in Ephesians 2:14?", "slug": "dividing-wall-of-hostility", "passage": "EPH.2.14", "kind": "phrase", "priority": 1 },
+      { "q": "How did Christ abolish the law of commandments in Ephesians 2:15?", "slug": "christ-abolished-the-law-ephesians-2-15", "passage": "EPH.2.15", "kind": "doctrine", "priority": 1 },
+      { "q": "What does it mean that we are by nature children of wrath?", "slug": "by-nature-children-of-wrath", "passage": "EPH.2.3", "kind": "doctrine", "priority": 2 },
+      { "q": "How are we already seated with Christ in the heavenly places?", "slug": "seated-with-christ-in-the-heavenly-places", "passage": "EPH.2.6", "kind": "doctrine", "priority": 2 },
+      { "q": "What is the foundation of the apostles and prophets?", "slug": "foundation-of-the-apostles-and-prophets", "passage": "EPH.2.20", "kind": "phrase", "priority": 2 },
+      { "q": "What does it mean that Christ is the cornerstone?", "slug": "christ-is-the-cornerstone", "passage": "EPH.2.20", "kind": "phrase", "priority": 2 },
+      { "q": "If salvation is not by works, why does Ephesians 2:10 say we were made for good works?", "slug": "not-by-works-but-for-good-works", "passage": "EPH.2.8-10", "kind": "tension", "priority": 1 },
+      { "q": "Who are the uncircumcision and the circumcision in Ephesians 2:11?", "slug": "uncircumcision-and-circumcision-ephesians-2-11", "passage": "EPH.2.11", "kind": "phrase", "priority": 3 }
+    ],
+    "3": [
+      { "q": "What is the mystery that was revealed to Paul in Ephesians 3?", "slug": "mystery-revealed-to-paul-ephesians-3", "passage": "EPH.3.3-6", "kind": "phrase", "priority": 1 },
+      { "q": "What are the breadth, length, height, and depth of Christ's love?", "slug": "breadth-length-height-depth-of-christs-love", "passage": "EPH.3.18", "kind": "phrase", "priority": 1 },
+      { "q": "What does it mean to be filled with all the fullness of God?", "slug": "filled-with-all-the-fullness-of-god", "passage": "EPH.3.19", "kind": "phrase", "priority": 1 },
+      { "q": "What does able to do far more abundantly than all we ask mean?", "slug": "far-more-abundantly-than-all-we-ask", "passage": "EPH.3.20", "kind": "phrase", "priority": 2 },
+      { "q": "How is God's wisdom made known to the rulers and authorities through the church?", "slug": "gods-wisdom-made-known-to-rulers-and-authorities", "passage": "EPH.3.10", "kind": "phrase", "priority": 2 },
+      { "q": "Why does Paul call himself a prisoner of Christ Jesus?", "slug": "paul-prisoner-of-christ-jesus", "passage": "EPH.3.1", "kind": "history", "priority": 3 },
+      { "q": "What does every family in heaven and on earth mean in Ephesians 3:15?", "slug": "every-family-in-heaven-and-on-earth", "passage": "EPH.3.15", "kind": "phrase", "priority": 3 }
+    ],
+    "4": [
+      { "q": "What does he led a host of captives mean in Ephesians 4:8?", "slug": "led-a-host-of-captives", "passage": "EPH.4.8", "kind": "phrase", "priority": 1 },
+      { "q": "What does it mean that Christ descended into the lower parts of the earth?", "slug": "christ-descended-into-the-lower-parts-of-the-earth", "passage": "EPH.4.9", "kind": "doctrine", "priority": 1 },
+      { "q": "What are the five roles in Ephesians 4:11?", "slug": "five-roles-ephesians-4-11", "passage": "EPH.4.11", "kind": "doctrine", "priority": 1 },
+      { "q": "Are there still apostles and prophets today?", "slug": "are-there-still-apostles-and-prophets-today", "passage": "EPH.4.11", "kind": "doctrine", "priority": 1 },
+      { "q": "What does it mean to grieve the Holy Spirit?", "slug": "grieve-the-holy-spirit", "passage": "EPH.4.30", "kind": "phrase", "priority": 1 },
+      { "q": "What does be angry and do not sin mean?", "slug": "be-angry-and-do-not-sin", "passage": "EPH.4.26", "kind": "practice", "priority": 1 },
+      { "q": "Does do not let the sun go down on your anger mean you must resolve every conflict the same day?", "slug": "do-not-let-the-sun-go-down-on-your-anger", "passage": "EPH.4.26", "kind": "practice", "priority": 2 },
+      { "q": "What is the one baptism in Ephesians 4:5?", "slug": "one-baptism-ephesians-4-5", "passage": "EPH.4.5", "kind": "doctrine", "priority": 2 },
+      { "q": "What does putting off the old self and putting on the new self mean?", "slug": "put-off-the-old-self-put-on-the-new-self", "passage": "EPH.4.22-24", "kind": "phrase", "priority": 2 },
+      { "q": "What does speaking the truth in love actually look like?", "slug": "speaking-the-truth-in-love", "passage": "EPH.4.15", "kind": "practice", "priority": 2 },
+      { "q": "What does give no opportunity to the devil mean?", "slug": "give-no-opportunity-to-the-devil", "passage": "EPH.4.27", "kind": "phrase", "priority": 3 },
+      { "q": "What is the measure of the stature of the fullness of Christ?", "slug": "measure-of-the-stature-of-the-fullness-of-christ", "passage": "EPH.4.13", "kind": "phrase", "priority": 3 }
+    ],
+    "5": [
+      { "q": "What does wives submit to your husbands mean?", "slug": "wives-submit-to-your-husbands", "passage": "EPH.5.22", "kind": "practice", "priority": 1 },
+      { "q": "What does it mean that the husband is the head of the wife?", "slug": "husband-is-the-head-of-the-wife", "passage": "EPH.5.23", "kind": "doctrine", "priority": 1 },
+      { "q": "Does submitting to one another in Ephesians 5:21 change what verse 22 asks of wives?", "slug": "submitting-to-one-another-ephesians-5-21", "passage": "EPH.5.21", "kind": "doctrine", "priority": 1 },
+      { "q": "What does loving your wife as Christ loved the church look like in practice?", "slug": "love-your-wife-as-christ-loved-the-church", "passage": "EPH.5.25", "kind": "practice", "priority": 1 },
+      { "q": "What is the washing of water with the word in Ephesians 5:26?", "slug": "washing-of-water-with-the-word", "passage": "EPH.5.26", "kind": "phrase", "priority": 1 },
+      { "q": "What is the great mystery of marriage in Ephesians 5:32?", "slug": "great-mystery-of-marriage-ephesians-5-32", "passage": "EPH.5.32", "kind": "phrase", "priority": 1 },
+      { "q": "What does it mean to be filled with the Spirit in Ephesians 5:18?", "slug": "be-filled-with-the-spirit-ephesians-5-18", "passage": "EPH.5.18", "kind": "doctrine", "priority": 1 },
+      { "q": "Does Ephesians 5:18 forbid drinking alcohol?", "slug": "does-ephesians-5-18-forbid-alcohol", "passage": "EPH.5.18", "kind": "practice", "priority": 1 },
+      { "q": "What are psalms, hymns, and spiritual songs?", "slug": "psalms-hymns-and-spiritual-songs", "passage": "EPH.5.19", "kind": "practice", "priority": 2 },
+      { "q": "What does redeeming the time mean in Ephesians 5:16?", "slug": "redeeming-the-time", "passage": "EPH.5.16", "kind": "phrase", "priority": 2 },
+      { "q": "What are the unfruitful works of darkness we are told to expose?", "slug": "unfruitful-works-of-darkness", "passage": "EPH.5.11", "kind": "practice", "priority": 2 },
+      { "q": "Does Ephesians 5:4 forbid joking and crude humor?", "slug": "does-ephesians-5-4-forbid-joking", "passage": "EPH.5.4", "kind": "practice", "priority": 2 },
+      { "q": "Where does Paul quote awake, O sleeper, and arise from the dead from?", "slug": "awake-o-sleeper-and-arise-from-the-dead", "passage": "EPH.5.14", "kind": "history", "priority": 3 }
+    ],
+    "6": [
+      { "q": "What is each piece of the armor of God in Ephesians 6?", "slug": "armor-of-god-pieces-explained", "passage": "EPH.6.14-17", "kind": "phrase", "priority": 1 },
+      { "q": "What is the belt of truth?", "slug": "belt-of-truth", "passage": "EPH.6.14", "kind": "phrase", "priority": 1 },
+      { "q": "What is the breastplate of righteousness?", "slug": "breastplate-of-righteousness", "passage": "EPH.6.14", "kind": "phrase", "priority": 1 },
+      { "q": "What is the shield of faith?", "slug": "shield-of-faith", "passage": "EPH.6.16", "kind": "phrase", "priority": 1 },
+      { "q": "What are the flaming darts of the evil one?", "slug": "flaming-darts-of-the-evil-one", "passage": "EPH.6.16", "kind": "phrase", "priority": 1 },
+      { "q": "What is the helmet of salvation?", "slug": "helmet-of-salvation", "passage": "EPH.6.17", "kind": "phrase", "priority": 1 },
+      { "q": "What is the sword of the Spirit?", "slug": "sword-of-the-spirit", "passage": "EPH.6.17", "kind": "phrase", "priority": 1 },
+      { "q": "Who are the rulers, authorities, and cosmic powers in Ephesians 6:12?", "slug": "rulers-authorities-cosmic-powers-ephesians-6-12", "passage": "EPH.6.12", "kind": "identity", "priority": 1 },
+      { "q": "Does Ephesians 6:5 endorse slavery?", "slug": "does-ephesians-6-5-endorse-slavery", "passage": "EPH.6.5", "kind": "ethics", "priority": 1 },
+      { "q": "What does fathers, do not provoke your children to anger mean?", "slug": "do-not-provoke-your-children-to-anger", "passage": "EPH.6.4", "kind": "practice", "priority": 1 },
+      { "q": "Is it true that the armor of God has no covering for the back?", "slug": "armor-of-god-no-covering-for-the-back", "passage": "EPH.6.11", "kind": "claim", "priority": 2 },
+      { "q": "What are the shoes of the gospel of peace?", "slug": "shoes-of-the-gospel-of-peace", "passage": "EPH.6.15", "kind": "phrase", "priority": 2 },
+      { "q": "What does we do not wrestle against flesh and blood mean?", "slug": "we-do-not-wrestle-against-flesh-and-blood", "passage": "EPH.6.12", "kind": "phrase", "priority": 2 },
+      { "q": "What does praying at all times in the Spirit mean?", "slug": "praying-at-all-times-in-the-spirit", "passage": "EPH.6.18", "kind": "practice", "priority": 2 },
+      { "q": "Why is honor your father and mother called the first commandment with a promise?", "slug": "first-commandment-with-a-promise", "passage": "EPH.6.2", "kind": "phrase", "priority": 2 }
+    ]
+  }
+}

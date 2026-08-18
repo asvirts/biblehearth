@@ -1,0 +1,22 @@
+{
+  "book": "JUD",
+  "name": "Jude",
+  "chapters": {
+    "1": [
+      { "q": "Why does Jude quote the Book of Enoch?", "slug": "why-jude-quotes-the-book-of-enoch", "passage": "JUD.1.14-15", "kind": "history", "priority": 1 },
+      { "q": "Does Jude quoting Enoch make it Scripture?", "slug": "does-jude-quoting-enoch-make-it-scripture", "passage": "JUD.1.14", "kind": "doctrine", "priority": 1 },
+      { "q": "Why did Michael and the devil dispute over the body of Moses?", "slug": "michael-and-the-devil-disputed-over-moses-body", "passage": "JUD.1.9", "kind": "history", "priority": 1 },
+      { "q": "What does contend for the faith once delivered mean?", "slug": "contend-for-the-faith", "passage": "JUD.1.3", "kind": "practice", "priority": 1 },
+      { "q": "What are the angels who did not stay within their own position?", "slug": "angels-who-did-not-stay-in-their-position", "passage": "JUD.1.6", "kind": "identity", "priority": 1 },
+      { "q": "How does Jude 6-7 connect the fallen angels to Sodom?", "slug": "fallen-angels-and-sodom-in-jude", "passage": "JUD.1.6-7", "kind": "doctrine", "priority": 1 },
+      { "q": "What are wandering stars and clouds without water?", "slug": "wandering-stars-and-clouds-without-water", "passage": "JUD.1.12-13", "kind": "phrase", "priority": 1 },
+      { "q": "What do Cain, Balaam, and Korah have in common in Jude 11?", "slug": "cain-balaam-and-korah-in-jude", "passage": "JUD.1.11", "kind": "identity", "priority": 1 },
+      { "q": "What does snatching some from the fire mean?", "slug": "snatching-some-from-the-fire", "passage": "JUD.1.23", "kind": "practice", "priority": 1 },
+      { "q": "What does keep yourselves in the love of God mean?", "slug": "keep-yourselves-in-the-love-of-god", "passage": "JUD.1.21", "kind": "practice", "priority": 1 },
+      { "q": "What does hating even the garment stained by the flesh mean?", "slug": "hating-even-the-garment-stained-by-the-flesh", "passage": "JUD.1.23", "kind": "phrase", "priority": 1 },
+      { "q": "Was Jude the brother of Jesus?", "slug": "was-jude-the-brother-of-jesus", "passage": "JUD.1.1", "kind": "identity", "priority": 1 },
+      { "q": "What does him who is able to keep you from stumbling mean?", "slug": "able-to-keep-you-from-stumbling", "passage": "JUD.1.24", "kind": "doctrine", "priority": 1 },
+      { "q": "What are the love feasts Jude mentions?", "slug": "what-are-the-love-feasts", "passage": "JUD.1.12", "kind": "history", "priority": 2 }
+    ]
+  }
+}

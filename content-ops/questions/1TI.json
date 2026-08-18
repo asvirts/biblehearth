@@ -1,0 +1,61 @@
+{
+  "book": "1TI",
+  "name": "1 Timothy",
+  "chapters": {
+    "1": [
+      { "q": "Why does Paul call himself the chief of sinners?", "slug": "paul-the-chief-of-sinners", "passage": "1TI.1.15", "kind": "phrase", "priority": 1 },
+      { "q": "What does the law is not laid down for the just mean?", "slug": "the-law-is-not-laid-down-for-the-just", "passage": "1TI.1.9", "kind": "doctrine", "priority": 1 },
+      { "q": "What does handed over to Satan mean in 1 Timothy 1:20?", "slug": "handed-over-to-satan", "passage": "1TI.1.20", "kind": "practice", "priority": 1 },
+      { "q": "What are the myths and endless genealogies Paul warns about?", "slug": "myths-and-endless-genealogies", "passage": "1TI.1.4", "kind": "identity", "priority": 2 },
+      { "q": "What does I acted in ignorance and unbelief mean about Paul's guilt?", "slug": "paul-acted-in-ignorance-and-unbelief", "passage": "1TI.1.13", "kind": "ethics", "priority": 2 }
+    ],
+    "2": [
+      { "q": "Does I do not permit a woman to teach apply to churches today?", "slug": "i-do-not-permit-a-woman-to-teach", "passage": "1TI.2.12", "kind": "doctrine", "priority": 1 },
+      { "q": "What does women will be saved through childbearing mean?", "slug": "saved-through-childbearing", "passage": "1TI.2.15", "kind": "doctrine", "priority": 1 },
+      { "q": "Why does Paul say Adam was not deceived but Eve was?", "slug": "adam-was-not-deceived-but-eve-was", "passage": "1TI.2.14", "kind": "doctrine", "priority": 1 },
+      { "q": "Does God desire all people to be saved mean everyone will be?", "slug": "god-desires-all-people-to-be-saved", "passage": "1TI.2.4", "kind": "doctrine", "priority": 1 },
+      { "q": "What does there is one mediator between God and men mean?", "slug": "one-mediator-between-god-and-men", "passage": "1TI.2.5", "kind": "doctrine", "priority": 1 },
+      { "q": "Does 1 Timothy 2:9 forbid jewelry, makeup, and braided hair?", "slug": "does-1-timothy-2-9-forbid-jewelry", "passage": "1TI.2.9", "kind": "practice", "priority": 1 },
+      { "q": "What does women should learn in quietness mean?", "slug": "women-should-learn-in-quietness", "passage": "1TI.2.11", "kind": "doctrine", "priority": 1 },
+      { "q": "What does lifting holy hands without anger mean?", "slug": "lifting-holy-hands-without-anger", "passage": "1TI.2.8", "kind": "practice", "priority": 2 },
+      { "q": "Why should Christians pray for kings and those in authority?", "slug": "pray-for-kings-and-those-in-authority", "passage": "1TI.2.1-2", "kind": "practice", "priority": 2 }
+    ],
+    "3": [
+      { "q": "What are the qualifications for an elder or overseer?", "slug": "qualifications-for-an-elder", "passage": "1TI.3.1-7", "kind": "doctrine", "priority": 1 },
+      { "q": "What does husband of one wife mean, and does it exclude divorced men?", "slug": "husband-of-one-wife", "passage": "1TI.3.2", "kind": "doctrine", "priority": 1 },
+      { "q": "Can women be deacons according to 1 Timothy 3:11?", "slug": "can-women-be-deacons", "passage": "1TI.3.11", "kind": "doctrine", "priority": 1 },
+      { "q": "What is the difference between an elder and a deacon?", "slug": "difference-between-elder-and-deacon", "passage": "1TI.3.8-13", "kind": "doctrine", "priority": 1 },
+      { "q": "What is the mystery of godliness in 1 Timothy 3:16?", "slug": "the-mystery-of-godliness", "passage": "1TI.3.16", "kind": "doctrine", "priority": 1 },
+      { "q": "Must an elder's children be believers?", "slug": "must-an-elders-children-be-believers", "passage": "1TI.3.4-5", "kind": "doctrine", "priority": 1 },
+      { "q": "Why must an overseer not be a recent convert?", "slug": "an-overseer-must-not-be-a-recent-convert", "passage": "1TI.3.6", "kind": "practice", "priority": 2 }
+    ],
+    "4": [
+      { "q": "What does in later times some will depart from the faith mean?", "slug": "some-will-depart-from-the-faith", "passage": "1TI.4.1", "kind": "doctrine", "priority": 1 },
+      { "q": "Who forbids marriage and requires abstaining from foods?", "slug": "forbidding-marriage-and-abstaining-from-foods", "passage": "1TI.4.3", "kind": "identity", "priority": 1 },
+      { "q": "What does bodily training is of some value mean about exercise?", "slug": "bodily-training-is-of-some-value", "passage": "1TI.4.8", "kind": "practice", "priority": 1 },
+      { "q": "What does let no one despise you for your youth mean?", "slug": "let-no-one-despise-you-for-your-youth", "passage": "1TI.4.12", "kind": "practice", "priority": 1 },
+      { "q": "What are the deceitful spirits and teachings of demons?", "slug": "deceitful-spirits-and-teachings-of-demons", "passage": "1TI.4.1", "kind": "identity", "priority": 1 },
+      { "q": "What does do not neglect the gift given you by prophecy mean?", "slug": "do-not-neglect-the-gift-given-by-prophecy", "passage": "1TI.4.14", "kind": "doctrine", "priority": 1 },
+      { "q": "What does seared conscience mean?", "slug": "a-seared-conscience", "passage": "1TI.4.2", "kind": "phrase", "priority": 2 }
+    ],
+    "5": [
+      { "q": "Does a little wine for your stomach permit drinking alcohol?", "slug": "a-little-wine-for-your-stomach", "passage": "1TI.5.23", "kind": "practice", "priority": 1 },
+      { "q": "What does anyone who does not provide for his family is worse than an unbeliever mean?", "slug": "worse-than-an-unbeliever", "passage": "1TI.5.8", "kind": "ethics", "priority": 1 },
+      { "q": "What does an elder is worthy of double honor mean about pastor salaries?", "slug": "an-elder-is-worthy-of-double-honor", "passage": "1TI.5.17-18", "kind": "practice", "priority": 1 },
+      { "q": "Who qualifies as a widow the church should support?", "slug": "widows-the-church-should-support", "passage": "1TI.5.3-10", "kind": "practice", "priority": 1 },
+      { "q": "What does do not lay hands on anyone hastily mean?", "slug": "do-not-lay-hands-on-anyone-hastily", "passage": "1TI.5.22", "kind": "practice", "priority": 1 },
+      { "q": "How should an accusation against an elder be handled?", "slug": "an-accusation-against-an-elder", "passage": "1TI.5.19-20", "kind": "practice", "priority": 1 },
+      { "q": "What does treat older women as mothers and younger women as sisters mean?", "slug": "treat-younger-women-as-sisters", "passage": "1TI.5.1-2", "kind": "practice", "priority": 2 }
+    ],
+    "6": [
+      { "q": "Is money the root of all evil, or the love of money?", "slug": "the-love-of-money-is-the-root-of-all-evil", "passage": "1TI.6.10", "kind": "claim", "priority": 1 },
+      { "q": "What does godliness with contentment is great gain mean?", "slug": "godliness-with-contentment-is-great-gain", "passage": "1TI.6.6", "kind": "practice", "priority": 1 },
+      { "q": "What does we brought nothing into the world mean?", "slug": "we-brought-nothing-into-the-world", "passage": "1TI.6.7", "kind": "phrase", "priority": 1 },
+      { "q": "What does fight the good fight of faith mean?", "slug": "fight-the-good-fight-of-faith", "passage": "1TI.6.12", "kind": "practice", "priority": 1 },
+      { "q": "What does God alone has immortality and dwells in unapproachable light mean?", "slug": "god-alone-has-immortality", "passage": "1TI.6.16", "kind": "doctrine", "priority": 1 },
+      { "q": "Is it wrong for a Christian to be rich according to 1 Timothy 6?", "slug": "is-it-wrong-for-a-christian-to-be-rich", "passage": "1TI.6.17-19", "kind": "ethics", "priority": 1 },
+      { "q": "Who teaches that godliness is a means of financial gain?", "slug": "godliness-as-a-means-of-gain", "passage": "1TI.6.5", "kind": "identity", "priority": 1 },
+      { "q": "What does take hold of eternal life mean?", "slug": "take-hold-of-eternal-life", "passage": "1TI.6.12", "kind": "doctrine", "priority": 2 }
+    ]
+  }
+}

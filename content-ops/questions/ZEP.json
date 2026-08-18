@@ -1,0 +1,23 @@
+{
+  "book": "ZEP",
+  "name": "Zephaniah",
+  "chapters": {
+    "1": [
+      { "q": "What does I will search Jerusalem with lamps mean?", "slug": "i-will-search-jerusalem-with-lamps", "passage": "ZEP.1.12", "kind": "phrase", "priority": 1 },
+      { "q": "Who are those who say the LORD will do nothing?", "slug": "those-who-say-the-lord-will-do-nothing", "passage": "ZEP.1.12", "kind": "identity", "priority": 1 },
+      { "q": "What is the day of the LORD in Zephaniah 1?", "slug": "the-day-of-the-lord-zephaniah-1", "passage": "ZEP.1.14-18", "kind": "doctrine", "priority": 1 },
+      { "q": "Why does Zephaniah 1:2 say God will sweep away everything?", "slug": "i-will-sweep-away-everything", "passage": "ZEP.1.2-3", "kind": "doctrine", "priority": 1 }
+    ],
+    "2": [
+      { "q": "What does seek the LORD, all you humble of the land mean?", "slug": "seek-the-lord-all-you-humble", "passage": "ZEP.2.3", "kind": "practice", "priority": 1 },
+      { "q": "What does perhaps you will be sheltered on the day of the LORD's anger mean?", "slug": "perhaps-you-will-be-sheltered", "passage": "ZEP.2.3", "kind": "doctrine", "priority": 1 }
+    ],
+    "3": [
+      { "q": "What does he will rejoice over you with singing mean?", "slug": "he-will-rejoice-over-you-with-singing", "passage": "ZEP.3.17", "kind": "doctrine", "priority": 1 },
+      { "q": "What does he will quiet you with his love mean?", "slug": "he-will-quiet-you-with-his-love", "passage": "ZEP.3.17", "kind": "doctrine", "priority": 1 },
+      { "q": "What does I will purify their lips mean?", "slug": "i-will-purify-their-lips", "passage": "ZEP.3.9", "kind": "doctrine", "priority": 1 },
+      { "q": "What does the LORD your God is with you, mighty to save mean?", "slug": "the-lord-your-god-is-with-you-mighty-to-save", "passage": "ZEP.3.17", "kind": "doctrine", "priority": 1 },
+      { "q": "What does I will leave a humble and meek remnant mean?", "slug": "a-humble-and-meek-remnant", "passage": "ZEP.3.12", "kind": "doctrine", "priority": 1 }
+    ]
+  }
+}
