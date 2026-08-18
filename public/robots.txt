@@ -13,8 +13,10 @@ Crawl-delay: 5
 #
 # These spend an upstream Scripture fetch per page and send no readers back.
 # Our own Site Audit is deliberately absent from this list: AhrefsSiteAudit is a
-# separate user agent from AhrefsBot and stays allowed under * above.
+# separate user agent from AhrefsBot and stays allowed under * above. The one
+# exception is the IndexNow key file, which Ahrefs verifies with AhrefsBot.
 User-agent: AhrefsBot
+Allow: /b9zhe4216jw7by1m5t2xrskks6hye75g.txt
 Disallow: /
 
 User-agent: SemrushBot
