@@ -10,11 +10,7 @@ import { loadPassages } from '../../lib/bible/passages';
 import { formatReference } from '../../lib/bible/refs';
 import { truncateWords } from '../../lib/bible/text';
 import { absoluteUrl, chapterPath } from '../../lib/bible/urls';
-import {
-	ERROR_CACHE_CONTROL,
-	READER_CACHE_CONTROL,
-	setCacheControl,
-} from '../../lib/http';
+import { READER_CACHE_CONTROL, setPageHeaders } from '../../lib/http';
 import {
 	articleJsonLd,
 	breadcrumbJsonLd,
@@ -69,10 +65,7 @@ try {
 }
 
 Astro.response.status = status;
-setCacheControl(
-	Astro.response,
-	status === 200 ? READER_CACHE_CONTROL : ERROR_CACHE_CONTROL,
-);
+setPageHeaders(Astro.response, status, READER_CACHE_CONTROL);
 
 /**
  * Single verses link to the version-agnostic hub — that is the indexable page

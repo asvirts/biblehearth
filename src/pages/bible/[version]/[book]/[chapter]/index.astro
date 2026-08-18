@@ -28,11 +28,7 @@ import {
 	chapterPath,
 	versionPath,
 } from '../../../../../lib/bible/urls';
-import {
-	ERROR_CACHE_CONTROL,
-	READER_CACHE_CONTROL,
-	setCacheControl,
-} from '../../../../../lib/http';
+import { READER_CACHE_CONTROL, setPageHeaders } from '../../../../../lib/http';
 import { breadcrumbJsonLd, creativeWorkJsonLd } from '../../../../../lib/seo';
 import {
 	adjacentReadableChapter,
@@ -109,10 +105,7 @@ try {
 }
 
 Astro.response.status = status;
-setCacheControl(
-	Astro.response,
-	status === 200 ? READER_CACHE_CONTROL : ERROR_CACHE_CONTROL,
-);
+setPageHeaders(Astro.response, status, READER_CACHE_CONTROL);
 
 // Reverse index: which topics and answers cite this chapter. Computed, never
 // hand-kept, so a citation added to a topic or answer surfaces here on deploy.

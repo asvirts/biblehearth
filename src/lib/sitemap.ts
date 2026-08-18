@@ -2,7 +2,6 @@ import type { BibleIndex } from '@youversion/platform-core';
 import {
 	bookSlugFromUsfm,
 	isNumericChapter,
-	isNumericVerse,
 	usfmFromBookSlug,
 } from './bible/usfm';
 import {
@@ -10,7 +9,6 @@ import {
 	bookPath,
 	chapterPath,
 	normalizePath,
-	versePath,
 	versionPath,
 } from './bible/urls';
 import { SITEMAP_CACHE_CONTROL } from './http';
@@ -34,10 +32,25 @@ export function pageSitemapPaths(versionSlugs: readonly string[]): string[] {
 	];
 }
 
+/**
+ * Books and chapters for one version — deliberately not its verses.
+ *
+ * Every verse page is a real, routable page and stays crawlable; the question
+ * here is only what the site actively submits. A full Bible is roughly 31,000
+ * verses, so a per-version verse listing asks Google to fetch more URLs for one
+ * translation than the whole rest of the site combined, and each one is a single
+ * verse of text that the chapter page already covers better.
+ *
+ * Verse-level coverage is submitted through `/sitemap-verses.xml` instead: the
+ * version-agnostic `/verse/...` hubs, seeded from the curated set in lib/seed.ts.
+ * One hub per verse, rather than one per verse per translation.
+ *
+ * Every crawled URL here is also an upstream passage fetch against a rate-limited
+ * app key, which is what makes the distinction operational and not just tidy.
+ */
 export function bibleSitemapPaths(versionSlug: string, index: BibleIndex): string[] {
 	const books: string[] = [];
 	const chapters: string[] = [];
-	const verses: string[] = [];
 
 	for (const book of index.books) {
 		if (!isRoutableBook(book.id)) {
@@ -52,16 +65,10 @@ export function bibleSitemapPaths(versionSlug: string, index: BibleIndex): strin
 			}
 
 			chapters.push(chapterPath(versionSlug, book.id, chapter.id));
-
-			for (const verse of chapter.verses) {
-				if (isNumericVerse(verse.id)) {
-					verses.push(versePath(versionSlug, book.id, chapter.id, verse.id));
-				}
-			}
 		}
 	}
 
-	return [...books, ...chapters, ...verses].slice(0, SITEMAP_URL_LIMIT);
+	return [...books, ...chapters].slice(0, SITEMAP_URL_LIMIT);
 }
 
 export function urlsetXml(site: URL | undefined, paths: readonly string[]): string {

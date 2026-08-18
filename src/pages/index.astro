@@ -8,11 +8,7 @@ import { answerPath, listAnswers } from '../lib/answers';
 import { isNumericChapter, parsePassageId } from '../lib/bible/usfm';
 import { scriptureToPlainText, truncateWords } from '../lib/bible/text';
 import { chapterPath, versePath, versionPath } from '../lib/bible/urls';
-import {
-	ERROR_CACHE_CONTROL,
-	HOME_CACHE_CONTROL,
-	setCacheControl,
-} from '../lib/http';
+import { HOME_CACHE_CONTROL, setPageHeaders } from '../lib/http';
 import { breadcrumbJsonLd } from '../lib/seo';
 import {
 	BibleUnavailableError,
@@ -79,10 +75,7 @@ try {
 }
 
 Astro.response.status = status;
-setCacheControl(
-	Astro.response,
-	status === 200 ? HOME_CACHE_CONTROL : ERROR_CACHE_CONTROL,
-);
+setPageHeaders(Astro.response, status, HOME_CACHE_CONTROL);
 
 const versionLabel = defaultVersion ? displayAbbreviation(defaultVersion) : '';
 const parsedVotd = votd ? parsePassageId(votd.passage_id) : null;

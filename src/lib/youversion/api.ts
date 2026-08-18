@@ -16,6 +16,7 @@ import {
 } from '../bible/usfm';
 import { isExcludedVersion } from '../bible/catalog';
 import { sanitizePassageHtml } from '../bible/sanitize';
+import { isTripped, trip } from '../cache/breaker';
 import { loadCached } from '../cache/store';
 import { getBibleClient, PlatformConfigError } from './client';
 
@@ -28,6 +29,8 @@ const INDEX_CACHE_MS = 30 * 60 * 1000;
  */
 const PASSAGE_CACHE_MS = 24 * 60 * 60 * 1000;
 const STALE_GRACE_MS = 7 * 24 * 60 * 60 * 1000;
+
+const THROTTLED_MESSAGE = 'Too many requests. Please try again shortly.';
 
 export class BibleNotFoundError extends Error {
 	constructor(message = 'Bible resource not found') {
@@ -60,16 +63,31 @@ function rethrowPlatformError(error: unknown): never {
 		throw new PlatformConfigError();
 	}
 	if (status === 429) {
-		throw new BibleUnavailableError('Too many requests. Please try again shortly.');
+		throw new BibleUnavailableError(THROTTLED_MESSAGE);
 	}
 
 	throw new BibleUnavailableError();
 }
 
+/**
+ * The single door to the upstream API.
+ *
+ * Every call passes the breaker first, so one 429 stands the whole site down
+ * from calling out for a cooldown instead of every request re-spending a limit
+ * that is already exhausted. Failing here rather than at the API is what lets
+ * `loadCached` fall back to a stale value — and what lets the key recover.
+ */
 async function withPlatform<T>(operation: () => Promise<T>): Promise<T> {
+	if (await isTripped()) {
+		throw new BibleUnavailableError(THROTTLED_MESSAGE);
+	}
+
 	try {
 		return await operation();
 	} catch (error) {
+		if (getHttpStatus(error) === 429) {
+			trip();
+		}
 		rethrowPlatformError(error);
 	}
 }
@@ -325,19 +343,36 @@ export async function getPassageText(
 	);
 }
 
+/**
+ * Today's verse.
+ *
+ * Keyed by day-of-year, which makes each entry immutable — today's verse never
+ * changes — and rolls over to a fresh key at midnight UTC on its own. Caching
+ * this matters more than the key count suggests: it is the home page's only
+ * upstream dependency that is not shared with another route, so while it was
+ * uncached a single throttled call took down `/` no matter how warm the rest of
+ * the cache was.
+ */
 export async function getVerseOfTheDay(): Promise<VOTD | null> {
 	const now = new Date();
 	const start = Date.UTC(now.getUTCFullYear(), 0, 0);
 	const day = Math.floor((Date.now() - start) / 86_400_000);
 
-	try {
-		return await withPlatform(() => getBibleClient().getVOTD(day));
-	} catch (error) {
-		if (error instanceof BibleNotFoundError) {
-			return null;
-		}
-		throw error;
-	}
+	return loadCached(
+		`votd:day:${day}`,
+		PASSAGE_CACHE_MS,
+		STALE_GRACE_MS,
+		async () => {
+			try {
+				return await withPlatform(() => getBibleClient().getVOTD(day));
+			} catch (error) {
+				if (error instanceof BibleNotFoundError) {
+					return null;
+				}
+				throw error;
+			}
+		},
+	);
 }
 
 /**
@@ -348,21 +383,26 @@ export async function getVerseOfTheDay(): Promise<VOTD | null> {
  * first. Cached for a day; the calendar is effectively static.
  */
 export async function getVerseOfTheDayCalendar(): Promise<VOTD[]> {
-	return loadCached(
-		'votd:calendar',
-		PASSAGE_CACHE_MS,
-		STALE_GRACE_MS,
-		async () => {
-			try {
+	try {
+		return await loadCached(
+			'votd:calendar',
+			PASSAGE_CACHE_MS,
+			STALE_GRACE_MS,
+			async () => {
 				const page = await withPlatform(() => getBibleClient().getAllVOTDs());
 				return [...page.data];
-			} catch {
-				// A missing calendar must not break the sitemap; topic verses
-				// still provide a usable seed set on their own.
-				return [];
-			}
-		},
-	);
+			},
+		);
+	} catch {
+		// A missing calendar must not break the sitemap; topic verses still
+		// provide a usable seed set on their own.
+		//
+		// The fallback sits outside `loadCached` on purpose. Returned from inside
+		// the loader it would be cached as if it were a real answer, and one
+		// throttled read would then hold an empty calendar — and a sitemap missing
+		// its 366 seed hubs — for a full day.
+		return [];
+	}
 }
 
 export function chapterExists(

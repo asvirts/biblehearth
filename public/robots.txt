@@ -1,6 +1,35 @@
+# Search engines and AI answer engines: full access, at a measured pace.
+#
+# Crawl-delay is here because an uncached page is not just a render — it is a
+# licensed Scripture fetch against a rate-limited app key. Googlebot ignores the
+# directive and paces itself from Search Console; Bing, Ahrefs Site Audit and
+# most others honour it.
 User-agent: *
 Allow: /
-
 Disallow: /read
+Crawl-delay: 5
+
+# Backlink and marketing crawlers.
+#
+# These spend an upstream Scripture fetch per page and send no readers back.
+# Our own Site Audit is deliberately absent from this list: AhrefsSiteAudit is a
+# separate user agent from AhrefsBot and stays allowed under * above.
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: DataForSeoBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+User-agent: BLEXBot
+Disallow: /
 
 Sitemap: https://biblehearth.online/sitemap.xml

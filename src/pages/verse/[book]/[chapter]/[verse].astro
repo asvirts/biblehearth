@@ -23,11 +23,7 @@ import {
 	versePath,
 	versionPath,
 } from '../../../../lib/bible/urls';
-import {
-	ERROR_CACHE_CONTROL,
-	READER_CACHE_CONTROL,
-	setCacheControl,
-} from '../../../../lib/http';
+import { READER_CACHE_CONTROL, setPageHeaders } from '../../../../lib/http';
 import {
 	breadcrumbJsonLd,
 	creativeWorkJsonLd,
@@ -109,10 +105,7 @@ try {
 }
 
 Astro.response.status = status;
-setCacheControl(
-	Astro.response,
-	status === 200 ? READER_CACHE_CONTROL : ERROR_CACHE_CONTROL,
-);
+setPageHeaders(Astro.response, status, READER_CACHE_CONTROL);
 
 const primary = renderings[0];
 const verseText = primary ? scriptureToPlainText(primary.passage.content) : '';

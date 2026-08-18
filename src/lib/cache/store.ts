@@ -1,4 +1,4 @@
-import { getCache, waitUntil } from '@vercel/functions';
+import { runtimeGet, runtimeSet } from './runtime';
 
 /**
  * Two-tier cache with a stale fallback.
@@ -13,6 +13,10 @@ import { getCache, waitUntil } from '@vercel/functions';
  * expiry (how long the value stays usable as a fallback). When the upstream
  * fails, a stale-but-correct value is served instead of an error. Scripture is
  * immutable, so a stale verse is indistinguishable from a fresh one.
+ *
+ * This is the only layer that provides that fallback. Vercel ignores
+ * `stale-if-error`, so the CDN will not serve a known-good page through an
+ * upstream failure however the response is labelled — see lib/http.ts.
  */
 
 type Entry<T> = { value: T; soft: number; hard: number };
@@ -24,30 +28,6 @@ const MAX_LOCAL_ENTRIES = 500;
 const MAX_REMOTE_BYTES = 1_500_000;
 
 const local = new Map<string, Entry<unknown>>();
-
-type RuntimeCacheLike = {
-	get: (key: string) => Promise<unknown | null>;
-	set: (
-		key: string,
-		value: unknown,
-		options?: { name?: string; tags?: string[]; ttl?: number },
-	) => Promise<void>;
-};
-
-let runtime: RuntimeCacheLike | null | undefined;
-
-function runtimeCache(): RuntimeCacheLike | null {
-	if (runtime !== undefined) {
-		return runtime;
-	}
-	try {
-		runtime = getCache({ namespace: 'biblehearth' }) as RuntimeCacheLike;
-	} catch {
-		// No cache in this context (e.g. plain `astro build`). L1 still applies.
-		runtime = null;
-	}
-	return runtime;
-}
 
 function localGet<T>(key: string): Entry<T> | undefined {
 	const entry = local.get(key) as Entry<T> | undefined;
@@ -84,19 +64,11 @@ function isEnvelope<T>(value: unknown): value is Entry<T> {
 }
 
 async function remoteGet<T>(key: string): Promise<Entry<T> | undefined> {
-	const cache = runtimeCache();
-	if (!cache) {
+	const raw = await runtimeGet(key);
+	if (!isEnvelope<T>(raw)) {
 		return undefined;
 	}
-	try {
-		const raw = await cache.get(key);
-		if (!isEnvelope<T>(raw)) {
-			return undefined;
-		}
-		return raw.hard < Date.now() ? undefined : raw;
-	} catch {
-		return undefined;
-	}
+	return raw.hard < Date.now() ? undefined : raw;
 }
 
 function remoteSet<T>(
@@ -105,11 +77,6 @@ function remoteSet<T>(
 	tags: string[],
 	ttlSeconds: number,
 ): void {
-	const cache = runtimeCache();
-	if (!cache) {
-		return;
-	}
-
 	let payload: string;
 	try {
 		payload = JSON.stringify(entry);
@@ -120,14 +87,7 @@ function remoteSet<T>(
 		return;
 	}
 
-	// Writing must never add latency to the response, and a cache failure must
-	// never fail the request.
-	const write = cache.set(key, entry, { tags, ttl: ttlSeconds }).catch(() => {});
-	try {
-		waitUntil(write);
-	} catch {
-		void write;
-	}
+	runtimeSet(key, entry, ttlSeconds, tags);
 }
 
 /**

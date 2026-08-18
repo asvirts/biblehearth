@@ -6,11 +6,7 @@ import CopyrightNotice from '../../../../components/CopyrightNotice.astro';
 import StatusMessage from '../../../../components/StatusMessage.astro';
 import { usfmFromBookSlug } from '../../../../lib/bible/usfm';
 import { bookPath, versionPath } from '../../../../lib/bible/urls';
-import {
-	ERROR_CACHE_CONTROL,
-	READER_CACHE_CONTROL,
-	setCacheControl,
-} from '../../../../lib/http';
+import { READER_CACHE_CONTROL, setPageHeaders } from '../../../../lib/http';
 import { breadcrumbJsonLd } from '../../../../lib/seo';
 import {
 	displayAbbreviation,
@@ -62,10 +58,7 @@ try {
 }
 
 Astro.response.status = status;
-setCacheControl(
-	Astro.response,
-	status === 200 ? READER_CACHE_CONTROL : ERROR_CACHE_CONTROL,
-);
+setPageHeaders(Astro.response, status, READER_CACHE_CONTROL);
 
 const bookTitle = book?.title ?? bookSlug;
 const versionLabel = version ? displayAbbreviation(version) : '';
