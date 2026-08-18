@@ -17,6 +17,7 @@ import {
 import { isExcludedVersion } from '../bible/catalog';
 import { sanitizePassageHtml } from '../bible/sanitize';
 import { isTripped, trip } from '../cache/breaker';
+import { limitUpstream, UpstreamBusyError } from '../cache/limiter';
 import { loadCached } from '../cache/store';
 import { getBibleClient, PlatformConfigError } from './client';
 
@@ -83,8 +84,14 @@ async function withPlatform<T>(operation: () => Promise<T>): Promise<T> {
 	}
 
 	try {
-		return await operation();
+		return await limitUpstream(operation);
 	} catch (error) {
+		// A saturated queue is the limiter doing its job, not an upstream fault:
+		// nothing was sent, so the breaker must not trip on it. Reported as
+		// unavailable so `loadCached` reaches for a stale value the same way.
+		if (error instanceof UpstreamBusyError) {
+			throw new BibleUnavailableError();
+		}
 		if (getHttpStatus(error) === 429) {
 			trip();
 		}
@@ -115,6 +122,23 @@ async function listAllEnglishVersions(): Promise<BibleVersion[]> {
 					versions.push(...page.data);
 					pageToken = page.next_page_token ?? undefined;
 				} while (pageToken && versions.length < 2000);
+
+				/**
+				 * An empty catalog is a failure wearing a 200.
+				 *
+				 * It has to throw rather than return, because everything
+				 * downstream reads an absent version as a missing one:
+				 * `resolveVersion` finds no match, returns null, and every
+				 * reader page rewrites to /404. Cached — and the envelope holds
+				 * for a week past its refresh point — one degraded response
+				 * would 404 the entire site until it aged out, which is not a
+				 * state that recovers on its own. Thrown, it is just another
+				 * unavailable upstream: `loadCached` keeps serving the last
+				 * good catalog, and a 503 invites the crawler back.
+				 */
+				if (versions.length === 0) {
+					throw new BibleUnavailableError();
+				}
 
 				return versions;
 			}),

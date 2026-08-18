@@ -17,14 +17,18 @@ import {
  * the book pages, which is the right amount of discovery for them.
  *
  * A chapter earns its sitemap entry the moment someone writes it up.
+ *
+ * `/commentary` and `/attributions` belong to the section but are submitted by
+ * sitemap-pages.xml, which is where every hand-written page lives. Listing them
+ * here as well put two URLs in two sitemaps for no gain — it does not help them
+ * get crawled, and it makes per-sitemap coverage in Search Console read as
+ * though those pages belong to whichever report is being looked at.
  */
 export const GET: APIRoute = async ({ site }) => {
 	const briefed = await briefedChapters();
 
 	return xmlResponse(
 		urlsetXmlWithLastmod(site, [
-			{ path: '/commentary' },
-			{ path: '/attributions' },
 			...CANON_ORDER.map((book) => ({ path: commentaryBookPath(book) })),
 			...briefed.map((chapter) => {
 				const [book, number] = chapter.usfm.split('.');

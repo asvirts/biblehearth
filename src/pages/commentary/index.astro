@@ -22,7 +22,7 @@ setCacheControl(Astro.response, READER_CACHE_CONTROL);
 const briefs = await listChapterBriefs();
 
 const title = 'Bible Commentary — Free Chapter-by-Chapter Study Notes';
-const description = `Free commentary on every chapter of the Bible: what each chapter says, what it means, and notes from three commentaries. ${TOTAL_CHAPTERS} chapters, written to be understood by someone reading the Bible for the first time.`;
+const description = `Free commentary on all ${TOTAL_CHAPTERS} chapters of the Bible: what each chapter says, what it means, and notes from three commentaries, in plain English.`;
 
 const books = [
 	{ heading: 'Old Testament', ids: OLD_TESTAMENT_BOOKS },

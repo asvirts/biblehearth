@@ -20,6 +20,17 @@ export default defineConfig({
 				optional: true,
 			}),
 			/**
+			 * Set by Vercel on every scheduled invocation of /api/warm, and
+			 * checked there before the endpoint spends any API quota. Optional
+			 * so a build without it still succeeds; the endpoint refuses to run
+			 * rather than running unsecured.
+			 */
+			CRON_SECRET: envField.string({
+				context: 'server',
+				access: 'secret',
+				optional: true,
+			}),
+			/**
 			 * The version the site reads in by default: the home page CTA, the
 			 * Verse of the Day, and anywhere a version is not named in the URL.
 			 * 111 is the NIV — the most-read English translation, so it is what

@@ -17,6 +17,11 @@ import { runtimeGet, runtimeSet } from './runtime';
  * This is the only layer that provides that fallback. Vercel ignores
  * `stale-if-error`, so the CDN will not serve a known-good page through an
  * upstream failure however the response is labelled — see lib/http.ts.
+ *
+ * Loads are also single-flighted per key. A crawler arriving on a cold cache
+ * asks for many distinct URLs at once, and Fluid Compute hands several of them
+ * to the same instance; without this, two requests for the same chapter each
+ * spend a call against a rate-limited app key to compute the same value.
  */
 
 type Entry<T> = { value: T; soft: number; hard: number };
@@ -28,6 +33,35 @@ const MAX_LOCAL_ENTRIES = 500;
 const MAX_REMOTE_BYTES = 1_500_000;
 
 const local = new Map<string, Entry<unknown>>();
+
+/**
+ * Loads currently in progress, keyed the same way as the cache itself.
+ *
+ * Per-instance, like L1: it collapses the duplicates one instance can see, not
+ * the ones spread across the region. Entries remove themselves on settle, so
+ * this never holds more than the concurrent miss count.
+ */
+const inFlight = new Map<string, Promise<unknown>>();
+
+/**
+ * Run `load` once per key, however many callers ask for it concurrently.
+ *
+ * Only the load is shared. Each caller still applies its own stale fallback on
+ * rejection, so a shared failure degrades every waiter exactly as an unshared
+ * one would.
+ */
+function singleFlight<T>(key: string, load: () => Promise<T>): Promise<T> {
+	const existing = inFlight.get(key) as Promise<T> | undefined;
+	if (existing) {
+		return existing;
+	}
+
+	const pending = load().finally(() => {
+		inFlight.delete(key);
+	});
+	inFlight.set(key, pending);
+	return pending;
+}
 
 function localGet<T>(key: string): Entry<T> | undefined {
 	const entry = local.get(key) as Entry<T> | undefined;
@@ -117,15 +151,20 @@ export async function loadCached<T>(
 	}
 
 	try {
-		const value = await load();
-		localSet(key, value, ttlMs, graceMs);
-		remoteSet(
-			key,
-			{ value, soft: now + ttlMs, hard: now + ttlMs + graceMs },
-			tags,
-			Math.ceil((ttlMs + graceMs) / 1000),
-		);
-		return value;
+		// Writes live inside the flight: N waiters on one load should produce one
+		// set of cache writes, not N.
+		return await singleFlight(key, async () => {
+			const value = await load();
+			const wrote = Date.now();
+			localSet(key, value, ttlMs, graceMs);
+			remoteSet(
+				key,
+				{ value, soft: wrote + ttlMs, hard: wrote + ttlMs + graceMs },
+				tags,
+				Math.ceil((ttlMs + graceMs) / 1000),
+			);
+			return value;
+		});
 	} catch (error) {
 		// Stale beats a 503 — this is what keeps the site up through a 429.
 		if (hit) {
