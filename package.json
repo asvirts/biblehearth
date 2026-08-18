@@ -15,6 +15,7 @@
   },
   "dependencies": {
     "@astrojs/vercel": "^11.0.5",
+    "@vercel/analytics": "^2.0.1",
     "@vercel/functions": "^3.9.3",
     "@youversion/platform-core": "^2.6.2",
     "astro": "^7.2.2"

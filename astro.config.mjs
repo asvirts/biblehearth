@@ -11,7 +11,9 @@ export default defineConfig({
 	image: {
 		service: passthroughImageService(),
 	},
-	adapter: vercel(),
+	adapter: vercel({
+		webAnalytics: { enabled: true }
+	}),
 	env: {
 		schema: {
 			YVP_APP_KEY: envField.string({
