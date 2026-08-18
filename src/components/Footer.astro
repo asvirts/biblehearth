@@ -1,9 +1,10 @@
 ---
+import { answerPath, listAnswers } from '../lib/answers';
 import { listTopics, topicPath } from '../lib/topics';
 
-// Footer links appear on every page, so this is how /topics stays discoverable
-// from deep inside the reader tree.
-const topics = (await listTopics()).slice(0, 5);
+// Footer links appear on every page, so this is how /topics and /answers stay
+// discoverable from deep inside the reader tree.
+const [topics, answers] = await Promise.all([listTopics(), listAnswers()]);
 ---
 
 <footer class="site-footer">
@@ -13,20 +14,33 @@ const topics = (await listTopics()).slice(0, 5);
 				<h2>Read</h2>
 				<ul>
 					<li><a href="/versions">Bible versions</a></li>
-					<li><a href="/">Verse of the day</a></li>
+					<li><a href="/verse-of-the-day">Verse of the day</a></li>
 				</ul>
 			</div>
 			<div class="footer-col">
 				<h2>Topics</h2>
 				<ul>
 					{
-						topics.map((topic) => (
+						topics.slice(0, 5).map((topic) => (
 							<li>
 								<a href={topicPath(topic.id)}>{topic.data.title}</a>
 							</li>
 						))
 					}
 					<li><a href="/topics">All topics</a></li>
+				</ul>
+			</div>
+			<div class="footer-col">
+				<h2>Answers</h2>
+				<ul>
+					{
+						answers.slice(0, 5).map((answer) => (
+							<li>
+								<a href={answerPath(answer.id)}>{answer.data.label}</a>
+							</li>
+						))
+					}
+					<li><a href="/answers">All questions</a></li>
 				</ul>
 			</div>
 		</nav>

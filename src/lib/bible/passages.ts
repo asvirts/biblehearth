@@ -4,10 +4,10 @@ import { getPassageHtml } from '../youversion/api';
 /**
  * Run tasks with a ceiling on how many are in flight.
  *
- * A topic cites a dozen or more passages. Firing them all at once turns one
- * page view into a burst against the YouVersion API, which is exactly how the
- * rate limit was tripped before. Results are cached after the first render, so
- * the cost of the cap is paid once.
+ * A topic or answer page cites a dozen or more passages. Firing them all at
+ * once turns one page view into a burst against the YouVersion API, which is
+ * exactly how the rate limit was tripped before. Results are cached after the
+ * first render, so the cost of the cap is paid once.
  */
 async function mapWithConcurrency<T, R>(
 	items: readonly T[],
@@ -39,7 +39,7 @@ export type LoadedPassage = {
 	passage: BiblePassage | null;
 };
 
-export async function loadTopicPassages(
+export async function loadPassages(
 	versionId: number,
 	refs: readonly string[],
 ): Promise<Map<string, BiblePassage | null>> {

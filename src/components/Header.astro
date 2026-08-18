@@ -12,6 +12,9 @@ const path = Astro.url.pathname;
 			<a href="/topics" aria-current={path.startsWith('/topics') ? 'page' : undefined}>
 				Topics
 			</a>
+			<a href="/answers" aria-current={path.startsWith('/answers') ? 'page' : undefined}>
+				Answers
+			</a>
 			<a href="/versions" aria-current={path.startsWith('/versions') ? 'page' : undefined}>
 				Versions
 			</a>

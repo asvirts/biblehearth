@@ -435,6 +435,59 @@ h1 {
 	flex-wrap: wrap;
 	gap: 0.5rem 1.25rem;
 }
+/* --- Answers --- */
+.answer-passage {
+	margin-block: 2rem;
+}
+.answer-notes {
+	max-width: 42rem;
+}
+.answer-view {
+	margin-block: 2.5rem;
+	padding-block-start: 1.75rem;
+	border-block-start: 1px solid var(--rule, #e6ddd0);
+}
+.answer-view h3 {
+	font-size: clamp(1.25rem, 4.5vw, 1.6rem);
+	margin-block: 0 0.4rem;
+}
+.answer-claim {
+	font-size: 1.05rem;
+	color: var(--muted);
+	max-width: 42rem;
+	margin-block-end: 1.5rem;
+}
+/* Sub-labels inside a view. Distinct from the verse-card headings, which are
+   references and carry the links. */
+.answer-view .answer-label {
+	font-family: var(--serif);
+	font-size: 0.85rem;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+	color: var(--muted);
+	margin-block: 1.75rem 0.4rem;
+}
+.answer-view p:not(.answer-claim):not(.gloss):not(.answer-held) {
+	max-width: 42rem;
+}
+.answer-held {
+	font-size: 0.9rem;
+	max-width: 42rem;
+}
+.answer-bottom-line p {
+	max-width: 42rem;
+}
+.answer-elsewhere {
+	margin-block-start: 2.5rem;
+}
+.answer-view .verse-card h4 {
+	margin-block: 0 0.35rem;
+	font-family: var(--serif);
+	font-size: 1rem;
+	letter-spacing: 0.02em;
+	text-transform: uppercase;
+}
+
 .footer-nav {
 	display: flex;
 	flex-wrap: wrap;

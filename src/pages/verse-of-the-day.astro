@@ -15,6 +15,7 @@ import type { BiblePassage, BibleVersion, VOTD } from '@youversion/platform-core
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Passage from '../components/Passage.astro';
 import CopyrightNotice from '../components/CopyrightNotice.astro';
+import RelatedQuestions from '../components/RelatedQuestions.astro';
 import StatusMessage from '../components/StatusMessage.astro';
 import {
 	bookNameFromUsfm,
@@ -37,6 +38,7 @@ import {
 	creativeWorkJsonLd,
 } from '../lib/seo';
 import { topicPath, verseTopicIndex } from '../lib/topics';
+import { verseAnswerIndex } from '../lib/answers';
 import {
 	BibleUnavailableError,
 	displayAbbreviation,
@@ -129,11 +131,14 @@ const compareHref =
 		? `/verse/${bookSlugFromUsfm(bookUsfm)}/${chapterId}/${anchorVerse}`
 		: null;
 
-const { byVerse } = await verseTopicIndex();
-const relatedTopics =
+const [{ byVerse: topicsByVerse }, { byVerse: answersByVerse }] =
+	await Promise.all([verseTopicIndex(), verseAnswerIndex()]);
+const todayUsfm =
 	bookUsfm && chapterId && anchorVerse
-		? (byVerse.get(verseUsfm(bookUsfm, chapterId, anchorVerse)) ?? [])
-		: [];
+		? verseUsfm(bookUsfm, chapterId, anchorVerse)
+		: null;
+const relatedTopics = todayUsfm ? (topicsByVerse.get(todayUsfm) ?? []) : [];
+const relatedAnswers = todayUsfm ? (answersByVerse.get(todayUsfm) ?? []) : [];
 
 // UTC, because `getVerseOfTheDay` picks the day from the UTC day-of-year. A
 // local-time label would name the wrong day for part of every day.
@@ -239,6 +244,11 @@ const description =
 
 					{version ? <CopyrightNotice version={version} /> : null}
 				</section>
+
+				<RelatedQuestions
+					heading="Questions about this verse"
+					answers={relatedAnswers}
+				/>
 
 				{relatedTopics.length ? (
 					<section>

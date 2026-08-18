@@ -1,13 +1,15 @@
 ---
-import type { BibleVersion } from '@youversion/platform-core';
+import type { BiblePassage, BibleVersion } from '@youversion/platform-core';
 import { getEntry, render } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import CopyrightNotice from '../../components/CopyrightNotice.astro';
 import Passage from '../../components/Passage.astro';
 import StatusMessage from '../../components/StatusMessage.astro';
-import { bookNameFromUsfm, bookSlugFromUsfm } from '../../lib/bible/usfm';
+import { bookSlugFromUsfm } from '../../lib/bible/usfm';
+import { loadPassages } from '../../lib/bible/passages';
+import { formatReference } from '../../lib/bible/refs';
 import { truncateWords } from '../../lib/bible/text';
-import { absoluteUrl, chapterPath, versePath } from '../../lib/bible/urls';
+import { absoluteUrl, chapterPath } from '../../lib/bible/urls';
 import {
 	ERROR_CACHE_CONTROL,
 	READER_CACHE_CONTROL,
@@ -20,13 +22,11 @@ import {
 	itemListJsonLd,
 } from '../../lib/seo';
 import {
-	formatReference,
 	listTopics,
 	topicPath,
 	topicVerseCount,
 	topicVerses,
 } from '../../lib/topics';
-import { loadTopicPassages } from '../../lib/topics/passages';
 import {
 	errorStatus,
 	getDefaultVersion,
@@ -48,7 +48,7 @@ const { Content } = await render(topic);
 
 let version: BibleVersion | null = null;
 let readerSlug = '';
-let passages = new Map<string, Awaited<ReturnType<typeof loadTopicPassages>> extends Map<string, infer V> ? V : never>();
+let passages = new Map<string, BiblePassage | null>();
 let status = 200;
 
 try {
@@ -59,7 +59,7 @@ try {
 	version = defaultVersion;
 	if (version) {
 		readerSlug = versionSlug(version, catalog.length ? catalog : [version]);
-		passages = await loadTopicPassages(
+		passages = await loadPassages(
 			version.id,
 			topicVerses(topic).map((verse) => verse.usfm),
 		);
@@ -90,7 +90,7 @@ function readerHref(usfm: string): string {
 	return chapterPath(readerSlug, book, chapter);
 }
 
-const reference = (usfm: string) => formatReference(usfm, bookNameFromUsfm);
+const reference = formatReference;
 
 const verseCount = topicVerseCount(topic);
 const canonicalPath = topicPath(topic.id);

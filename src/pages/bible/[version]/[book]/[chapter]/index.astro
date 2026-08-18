@@ -9,7 +9,9 @@ import BaseLayout from '../../../../../layouts/BaseLayout.astro';
 import CopyrightNotice from '../../../../../components/CopyrightNotice.astro';
 import Passage from '../../../../../components/Passage.astro';
 import ReaderToolbar from '../../../../../components/ReaderToolbar.astro';
+import RelatedQuestions from '../../../../../components/RelatedQuestions.astro';
 import StatusMessage from '../../../../../components/StatusMessage.astro';
+import { verseAnswerIndex } from '../../../../../lib/answers';
 import {
 	chapterUsfm,
 	isNumericChapter,
@@ -111,9 +113,13 @@ setCacheControl(
 	status === 200 ? READER_CACHE_CONTROL : ERROR_CACHE_CONTROL,
 );
 
-// Reverse index: which topics cite this chapter. Computed, never hand-kept.
-const { byChapter } = await verseTopicIndex();
-const chapterTopics = book ? (byChapter.get(`${book.id}.${chapterId}`) ?? []) : [];
+// Reverse index: which topics and answers cite this chapter. Computed, never
+// hand-kept, so a citation added to a topic or answer surfaces here on deploy.
+const chapterKey = book ? `${book.id}.${chapterId}` : '';
+const [{ byChapter: topicsByChapter }, { byChapter: answersByChapter }] =
+	await Promise.all([verseTopicIndex(), verseAnswerIndex()]);
+const chapterTopics = book ? (topicsByChapter.get(chapterKey) ?? []) : [];
+const chapterAnswers = book ? (answersByChapter.get(chapterKey) ?? []) : [];
 
 const reference = book ? `${book.title} ${chapterId}` : 'Chapter';
 const abbreviation = version ? displayAbbreviation(version) : '';
@@ -192,6 +198,10 @@ const description = snippet
 					)}
 					{nextHref ? <a href={nextHref}>Next chapter</a> : <span />}
 				</nav>
+				<RelatedQuestions
+					heading="Questions about this chapter"
+					answers={chapterAnswers}
+				/>
 				{chapterTopics.length ? (
 					<section class="chapter-topics">
 						<h2>Topics in this chapter</h2>

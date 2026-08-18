@@ -20,10 +20,11 @@ export const GET: APIRoute = async ({ site }) => {
 
 	return xmlResponse(
 		sitemapIndexXml(site, [
-			// Neither of these touches the upstream, so they survive a throttle.
+			// None of these touch the upstream, so they survive a throttle.
 			'/sitemap-pages.xml',
 			'/sitemap-topics.xml',
-			// Curated seed set only — see lib/topics/seed.ts for why.
+			'/sitemap-answers.xml',
+			// Curated seed set only — see lib/seed.ts for why.
 			'/sitemap-verses.xml',
 			...versionSitemaps,
 		]),

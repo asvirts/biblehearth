@@ -1,0 +1,25 @@
+---
+import { answerPath, type AnswerRef } from '../lib/answers';
+
+type Props = {
+	heading: string;
+	answers: readonly AnswerRef[];
+};
+
+const { heading, answers } = Astro.props;
+---
+
+{
+	answers.length ? (
+		<section class="chapter-topics">
+			<h2>{heading}</h2>
+			<ul class="topic-links">
+				{answers.map((answer) => (
+					<li>
+						<a href={answerPath(answer.slug)}>{answer.question}</a>
+					</li>
+				))}
+			</ul>
+		</section>
+	) : null
+}

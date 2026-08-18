@@ -2,7 +2,9 @@
 import type { BiblePassage, BibleVersion } from '@youversion/platform-core';
 import BaseLayout from '../../../../layouts/BaseLayout.astro';
 import Passage from '../../../../components/Passage.astro';
+import RelatedQuestions from '../../../../components/RelatedQuestions.astro';
 import StatusMessage from '../../../../components/StatusMessage.astro';
+import { verseAnswerIndex } from '../../../../lib/answers';
 import {
 	bookNameFromUsfm,
 	isNumericChapter,
@@ -126,8 +128,10 @@ const description = verseText
 		)
 	: `Compare ${reference} across Bible translations on BibleHearth.`;
 
-const { byVerse } = await verseTopicIndex();
-const relatedTopics = byVerse.get(usfm) ?? [];
+const [{ byVerse: topicsByVerse }, { byVerse: answersByVerse }] =
+	await Promise.all([verseTopicIndex(), verseAnswerIndex()]);
+const relatedTopics = topicsByVerse.get(usfm) ?? [];
+const relatedAnswers = answersByVerse.get(usfm) ?? [];
 
 const previousVerse = Number(verseId) > 1 ? String(Number(verseId) - 1) : null;
 const nextVerse = String(Number(verseId) + 1);
@@ -220,6 +224,11 @@ const nextVerse = String(Number(verseId) + 1);
 						{reference.replace(/:\d+$/, `:${nextVerse}`)}
 					</a>
 				</nav>
+
+				<RelatedQuestions
+					heading="Questions about this verse"
+					answers={relatedAnswers}
+				/>
 
 				{relatedTopics.length ? (
 					<section class="chapter-topics">

@@ -1,0 +1,319 @@
+---
+import type { BiblePassage, BibleVersion } from '@youversion/platform-core';
+import { getEntry, render } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CopyrightNotice from '../../components/CopyrightNotice.astro';
+import Passage from '../../components/Passage.astro';
+import StatusMessage from '../../components/StatusMessage.astro';
+import { answerPath, answerRefs, listAnswers } from '../../lib/answers';
+import { loadPassages } from '../../lib/bible/passages';
+import { expandUsfm, formatReference } from '../../lib/bible/refs';
+import { truncateWords } from '../../lib/bible/text';
+import { bookSlugFromUsfm } from '../../lib/bible/usfm';
+import { absoluteUrl, chapterPath } from '../../lib/bible/urls';
+import {
+	ERROR_CACHE_CONTROL,
+	READER_CACHE_CONTROL,
+	setCacheControl,
+} from '../../lib/http';
+import {
+	articleJsonLd,
+	breadcrumbJsonLd,
+	faqJsonLd,
+	itemListJsonLd,
+} from '../../lib/seo';
+import { listTopics, topicPath } from '../../lib/topics';
+import {
+	displayAbbreviation,
+	errorStatus,
+	getDefaultVersion,
+	listEnglishVersions,
+	versionSlug,
+} from '../../lib/youversion/api';
+
+const slug = Astro.params.slug;
+if (!slug) {
+	return Astro.rewrite('/404');
+}
+
+const answer = await getEntry('answers', slug);
+if (!answer || answer.data.draft) {
+	return Astro.rewrite('/404');
+}
+
+const { Content } = await render(answer);
+const { anchor, views } = answer.data;
+
+let version: BibleVersion | null = null;
+let readerSlug = '';
+let passages = new Map<string, BiblePassage | null>();
+let status = 200;
+
+try {
+	const [defaultVersion, catalog] = await Promise.all([
+		getDefaultVersion(),
+		listEnglishVersions(),
+	]);
+	version = defaultVersion;
+	if (version) {
+		readerSlug = versionSlug(version, catalog.length ? catalog : [version]);
+		passages = await loadPassages(version.id, answerRefs(answer));
+	}
+} catch (error) {
+	status = errorStatus(error);
+}
+
+Astro.response.status = status;
+setCacheControl(
+	Astro.response,
+	status === 200 ? READER_CACHE_CONTROL : ERROR_CACHE_CONTROL,
+);
+
+/**
+ * Single verses go to the version-agnostic hub; ranges have none, so they fall
+ * back to the chapter. Same rule the topic pages use.
+ *
+ * The chapter route needs a version slug, and this page still renders its whole
+ * argument when the upstream is down — at which point there is no slug to
+ * build with. Sending those links to /versions beats emitting `/bible//...`.
+ */
+function readerHref(usfm: string): string {
+	const [book, chapter, verse] = usfm.split('.');
+	if (!book || !chapter) {
+		return '/versions';
+	}
+	if (verse && !verse.includes('-')) {
+		return `/verse/${bookSlugFromUsfm(book)}/${chapter}/${verse}`;
+	}
+	return readerSlug ? chapterPath(readerSlug, book, chapter) : '/versions';
+}
+
+const [anchorBook, anchorChapter] = anchor.chapter.split('.');
+const anchorReference = formatReference(anchor.passage);
+const anchorChapterReference = formatReference(anchor.chapter);
+const anchorChapterHref =
+	anchorBook && anchorChapter && readerSlug
+		? chapterPath(readerSlug, anchorBook, anchorChapter)
+		: '/versions';
+// Every verse in the range gets its own hub link. Those hubs link back here
+// through the reverse index, so the pair reinforces rather than dangles.
+const anchorVerses = expandUsfm(anchor.passage);
+
+const canonicalPath = answerPath(answer.id);
+const title = `${answer.data.question} Meaning and ${views.length} Main Views`;
+const description = truncateWords(answer.data.shortAnswer, 155);
+
+const citedRefs = views.flatMap((view) =>
+	view.verses.map((verse) => verse.usfm),
+);
+
+const allTopics = await listTopics();
+const relatedTopics = answer.data.relatedTopics
+	.map((ref) => allTopics.find((item) => item.id === ref.id))
+	.filter((item): item is (typeof allTopics)[number] => Boolean(item));
+
+const otherAnswers = (await listAnswers()).filter(
+	(item) => item.id !== answer.id,
+);
+
+const reviewed = answer.data.reviewedAt.toLocaleDateString('en-US', {
+	year: 'numeric',
+	month: 'long',
+});
+---
+
+<BaseLayout
+	title={title}
+	description={description}
+	canonicalPath={canonicalPath}
+	jsonLd={[
+		breadcrumbJsonLd(Astro.site, [
+			{ name: 'BibleHearth', path: '/' },
+			{ name: 'Answers', path: '/answers' },
+			{ name: answer.data.label, path: canonicalPath },
+		]),
+		articleJsonLd({
+			site: Astro.site,
+			path: canonicalPath,
+			headline: title,
+			description,
+			datePublished: answer.data.publishedAt,
+			dateModified: answer.data.reviewedAt,
+			about: answer.data.entity,
+		}),
+		itemListJsonLd({
+			name: `Readings of ${anchorReference}`,
+			items: views.map((view) => ({
+				name: view.name,
+				url: `${absoluteUrl(Astro.site, canonicalPath)}#${view.id}`,
+			})),
+		}),
+		...(answer.data.faqs.length ? [faqJsonLd(answer.data.faqs)] : []),
+	]}
+>
+	<nav class="crumbs" aria-label="Breadcrumb">
+		<a href="/">Home</a>
+		<span>/</span>
+		<a href="/answers">Answers</a>
+		<span>/</span>
+		<span>{answer.data.label}</span>
+	</nav>
+
+	<h1>{answer.data.question}</h1>
+
+	{/* Answer-first: this is the chunk a snippet or retrieval model lifts whole. */}
+	<p class="lede">{answer.data.shortAnswer}</p>
+
+	{
+		status !== 200 || !version ? (
+			<StatusMessage
+				title="Scripture is temporarily unavailable"
+				message="The passages for this page could not be loaded. The explanations below are still available."
+			/>
+		) : null
+	}
+
+	<section class="answer-passage">
+		<h2>The passage: {anchorReference}</h2>
+		{
+			passages.get(anchor.passage) ? (
+				<Passage html={passages.get(anchor.passage)!.content} />
+			) : null
+		}
+		<p class="muted">
+			<a href={anchorChapterHref}>
+				Read {anchorChapterReference}
+				{version ? ` in ${displayAbbreviation(version)}` : ''}
+			</a>
+		</p>
+		<p class="muted">
+			Compare translations:{' '}
+			{
+				anchorVerses.map((usfm, i) => (
+					<>
+						{i > 0 ? ' · ' : ''}
+						<a href={readerHref(usfm)}>{formatReference(usfm)}</a>
+					</>
+				))
+			}
+		</p>
+	</section>
+
+	<section class="answer-notes">
+		<Content />
+	</section>
+
+	<h2 id="views">The {views.length} main readings, compared</h2>
+
+	{
+		views.map((view) => (
+			<section class="answer-view" id={view.id}>
+				<h3>{view.name}</h3>
+				<p class="answer-claim">{view.claim}</p>
+
+				{view.verses.map((verse) => {
+					const passage = passages.get(verse.usfm);
+					return (
+						<article class="verse-card">
+							<h4>
+								<a href={readerHref(verse.usfm)}>
+									{formatReference(verse.usfm)}
+								</a>
+							</h4>
+							{passage ? <Passage html={passage.content} /> : null}
+							<p class="gloss">{verse.gloss}</p>
+						</article>
+					);
+				})}
+
+				<h4 class="answer-label">What supports it</h4>
+				<p>{view.support}</p>
+
+				<h4 class="answer-label">The strongest objection</h4>
+				<p>{view.objection}</p>
+
+				{view.held ? <p class="muted answer-held">Held by: {view.held}</p> : null}
+			</section>
+		))
+	}
+
+	{
+		answer.data.bottomLine ? (
+			<section class="answer-bottom-line">
+				<h2>Where the evidence leaves it</h2>
+				<p>{answer.data.bottomLine}</p>
+			</section>
+		) : null
+	}
+
+	{
+		answer.data.caution.length ? (
+			<section class="topic-misuse">
+				<h2>What {anchorReference} does not say</h2>
+				{answer.data.caution.map((paragraph) => (
+					<p>{paragraph}</p>
+				))}
+			</section>
+		) : null
+	}
+
+	{
+		answer.data.faqs.length ? (
+			<section class="topic-faq">
+				{/* No .toLowerCase() here: the label is a proper-noun phrase
+				    ("Sons of God in Genesis 6"), not a common noun like a topic. */}
+				<h2>Common questions about the {answer.data.label}</h2>
+				{answer.data.faqs.map((faq) => (
+					<div class="faq-item">
+						<h3>{faq.q}</h3>
+						<p>{faq.a}</p>
+					</div>
+				))}
+			</section>
+		) : null
+	}
+
+	<section class="answer-elsewhere">
+		<h2>Every passage cited on this page</h2>
+		<ul class="topic-links">
+			{
+				citedRefs.map((usfm) => (
+					<li>
+						<a href={readerHref(usfm)}>{formatReference(usfm)}</a>
+					</li>
+				))
+			}
+		</ul>
+	</section>
+
+	{
+		relatedTopics.length || otherAnswers.length ? (
+			<section>
+				<h2>Keep reading</h2>
+				<div class="version-grid">
+					{otherAnswers.map((item) => (
+						<a class="tile" href={answerPath(item.id)}>
+							<span class="tile-kicker">Answer</span>
+							{item.data.question}
+						</a>
+					))}
+					{relatedTopics.map((item) => (
+						<a class="tile" href={topicPath(item.id)}>
+							<span class="tile-kicker">Topic</span>
+							Bible verses about {item.data.title.toLowerCase()}
+						</a>
+					))}
+				</div>
+			</section>
+		) : null
+	}
+
+	<footer class="topic-provenance">
+		<p class="muted">
+			Reviewed {reviewed}. This page sets out the main readings of a disputed
+			passage and the evidence each rests on; it does not advocate a
+			denominational position.
+		</p>
+		{version ? <CopyrightNotice version={version} /> : null}
+	</footer>
+</BaseLayout>

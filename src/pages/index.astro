@@ -4,6 +4,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import Passage from '../components/Passage.astro';
 import CopyrightNotice from '../components/CopyrightNotice.astro';
 import StatusMessage from '../components/StatusMessage.astro';
+import { answerPath, listAnswers } from '../lib/answers';
 import { isNumericChapter, parsePassageId } from '../lib/bible/usfm';
 import { scriptureToPlainText, truncateWords } from '../lib/bible/text';
 import { chapterPath, versePath, versionPath } from '../lib/bible/urls';
@@ -101,6 +102,9 @@ const votdHref =
 				)
 		: startHref;
 
+// The home page is the strongest internal-link donor on the site, so the
+// editorial pages get a slot here rather than relying on the footer alone.
+const answers = await listAnswers();
 const featured = catalog.slice(0, 8);
 const description = votdPassage
 	? truncateWords(
@@ -148,6 +152,27 @@ const description = votdPassage
 								<a href="/verse-of-the-day">Today's verse in context</a>
 							</p>
 							{defaultVersion ? <CopyrightNotice version={defaultVersion} /> : null}
+						</section>
+					) : null
+				}
+
+				{
+					answers.length > 0 ? (
+						<section>
+							<h2>Questions people ask</h2>
+							<div class="version-grid">
+								{answers.map((answer) => (
+									<a class="tile" href={answerPath(answer.id)}>
+										<span class="tile-kicker">Answer</span>
+										{answer.data.question}
+									</a>
+								))}
+							</div>
+							<p>
+								<a href="/answers">All questions</a>
+								{' · '}
+								<a href="/topics">Bible verses by topic</a>
+							</p>
 						</section>
 					) : null
 				}

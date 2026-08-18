@@ -1,6 +1,6 @@
 import type { APIRoute } from 'astro';
 import { urlsetXml, xmlResponse } from '../lib/sitemap';
-import { verseHubSeedPaths } from '../lib/topics/seed';
+import { verseHubSeedPaths } from '../lib/seed';
 
 export const GET: APIRoute = async ({ site }) => {
 	try {

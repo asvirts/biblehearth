@@ -1,6 +1,8 @@
-import { bookSlugFromUsfm, isKnownBookId } from '../bible/usfm';
-import { getVerseOfTheDayCalendar } from '../youversion/api';
-import { expandUsfm, listTopics, topicVerses } from './index';
+import { answerRefs, listAnswers } from './answers';
+import { expandUsfm } from './bible/refs';
+import { bookSlugFromUsfm, isKnownBookId } from './bible/usfm';
+import { listTopics, topicVerses } from './topics';
+import { getVerseOfTheDayCalendar } from './youversion/api';
 
 /**
  * The verse hubs we ask Google to index.
@@ -10,9 +12,13 @@ import { expandUsfm, listTopics, topicVerses } from './index';
  * would spend the entire crawl budget on pages that cannot yet rank, and would
  * present the site as mostly thin. Expand once these are actually indexed.
  *
- * Two sources, both meaningful rather than arbitrary:
+ * Three sources, all meaningful rather than arbitrary:
  *  - the YouVersion Verse of the Day calendar (366 curated references)
- *  - every verse cited by a topic page, so the two systems reinforce each other
+ *  - every verse cited by a topic page
+ *  - every verse cited by an answer page
+ *
+ * The editorial sources matter most: those hubs link back to the page that
+ * cites them, so each one arrives with an internal link already pointing at it.
  */
 export async function verseHubSeedPaths(): Promise<string[]> {
 	const refs = new Set<string>();
@@ -26,6 +32,14 @@ export async function verseHubSeedPaths(): Promise<string[]> {
 
 	for (const topic of await listTopics()) {
 		for (const { usfm } of topicVerses(topic)) {
+			for (const single of expandUsfm(usfm)) {
+				refs.add(single);
+			}
+		}
+	}
+
+	for (const answer of await listAnswers()) {
+		for (const usfm of answerRefs(answer)) {
 			for (const single of expandUsfm(usfm)) {
 				refs.add(single);
 			}
