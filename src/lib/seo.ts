@@ -73,6 +73,20 @@ export function articleJsonLd(options: {
 	datePublished: Date;
 	dateModified: Date;
 	about?: { name: string; sameAs?: string[] };
+	/**
+	 * Works quoted on the page, as `CreativeWork` nodes.
+	 *
+	 * Chapter study pages carry three commentaries by named authors, and naming
+	 * them in the markup is the difference between a page that looks scraped and
+	 * one that shows its sources. It is also the only machine-readable place the
+	 * Tyndale licence can be stated.
+	 */
+	citation?: readonly {
+		name: string;
+		author?: string;
+		license?: string;
+		url?: string;
+	}[];
 }): Record<string, unknown> {
 	const url = absoluteUrl(options.site, options.path);
 	return {
@@ -95,6 +109,19 @@ export function articleJsonLd(options: {
 							? { sameAs: options.about.sameAs }
 							: {}),
 					},
+				}
+			: {}),
+		...(options.citation?.length
+			? {
+					citation: options.citation.map((source) => ({
+						'@type': 'CreativeWork',
+						name: source.name,
+						...(source.author
+							? { author: { '@type': 'Person', name: source.author } }
+							: {}),
+						...(source.license ? { license: source.license } : {}),
+						...(source.url ? { url: source.url } : {}),
+					})),
 				}
 			: {}),
 	};

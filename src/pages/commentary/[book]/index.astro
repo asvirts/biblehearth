@@ -1,0 +1,188 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import StatusMessage from '../../../components/StatusMessage.astro';
+import ExternalStudyLinks from '../../../components/ExternalStudyLinks.astro';
+import { attributionLine } from '../../../lib/commentary/sources';
+import {
+	chapterCount,
+	isCanonicalBook,
+} from '../../../lib/bible/chapters';
+import { bookNameFromUsfm, usfmFromBookSlug } from '../../../lib/bible/usfm';
+import {
+	chapterBriefIndex,
+	commentaryBookPath,
+	commentaryPath,
+	externalStudyLinks,
+	loadBookOverviews,
+	type BookOverview,
+} from '../../../lib/commentary';
+import { READER_CACHE_CONTROL, setCacheControl } from '../../../lib/http';
+import { breadcrumbJsonLd, creativeWorkJsonLd } from '../../../lib/seo';
+
+const bookSlug = Astro.params.book;
+if (!bookSlug) {
+	return Astro.rewrite('/404');
+}
+
+const bookUsfm = usfmFromBookSlug(bookSlug);
+if (!bookUsfm || !isCanonicalBook(bookUsfm)) {
+	return Astro.rewrite('/404');
+}
+
+const bookName = bookNameFromUsfm(bookUsfm);
+const total = chapterCount(bookUsfm);
+const canonicalPath = commentaryBookPath(bookUsfm);
+
+/**
+ * The book introductions are the reason this page exists.
+ *
+ * "What is the book of Romans about" is a bigger question than any single
+ * chapter of it, and all three sources wrote a real introduction to every book
+ * they covered — several thousand words of licensed, on-topic prose that would
+ * otherwise sit unread behind a chapter route.
+ */
+let overviews: BookOverview[] = [];
+try {
+	overviews = await loadBookOverviews(bookUsfm);
+} catch {
+	overviews = [];
+}
+
+setCacheControl(Astro.response, READER_CACHE_CONTROL);
+
+const briefs = await chapterBriefIndex();
+const chapters = Array.from({ length: total }, (_, index) => {
+	const id = String(index + 1);
+	return { id, brief: briefs.get(`${bookUsfm}.${id}`) };
+});
+const briefedCount = chapters.filter((chapter) => chapter.brief).length;
+
+const externalLinks = externalStudyLinks(bookUsfm, 1);
+
+const title = `${bookName} Commentary — Chapter Summaries and Study Notes`;
+const description = `Chapter-by-chapter commentary on ${bookName}: what each of its ${total} ${total === 1 ? 'chapter' : 'chapters'} says and means, with notes from three commentaries.`;
+---
+
+<BaseLayout
+	title={title}
+	description={description}
+	canonicalPath={canonicalPath}
+	jsonLd={[
+		breadcrumbJsonLd(Astro.site, [
+			{ name: 'BibleHearth', path: '/' },
+			{ name: 'Commentary', path: '/commentary' },
+			{ name: bookName, path: canonicalPath },
+		]),
+		creativeWorkJsonLd({
+			name: `${bookName} commentary`,
+			description,
+			inLanguage: 'en',
+		}),
+	]}
+>
+	<nav class="crumbs" aria-label="Breadcrumb">
+		<a href="/">Home</a>
+		<span>/</span>
+		<a href="/commentary">Commentary</a>
+		<span>/</span>
+		<span>{bookName}</span>
+	</nav>
+
+	<h1>{bookName} Commentary</h1>
+
+	<p class="lede">
+		{bookName} has {total} {total === 1 ? 'chapter' : 'chapters'}. Each one has
+		its own study page with the chapter in outline and the notes three
+		commentaries wrote on it.
+		{
+			briefedCount
+				? ` ${briefedCount} ${briefedCount === 1 ? 'chapter has' : 'chapters have'} a written summary in our own words.`
+				: ''
+		}
+	</p>
+
+	<section>
+		<h2>Chapters in {bookName}</h2>
+		<div class="chapter-grid">
+			{
+				chapters.map((chapter) => (
+					<a
+						class:list={['tile', { 'tile-briefed': Boolean(chapter.brief) }]}
+						href={commentaryPath(bookUsfm, chapter.id)}
+						title={chapter.brief?.data.title}
+					>
+						{chapter.id}
+					</a>
+				))
+			}
+		</div>
+		{
+			briefedCount ? (
+				<p class="muted">
+					Highlighted chapters have a full written summary. The rest carry the
+					commentary notes.
+				</p>
+			) : null
+		}
+	</section>
+
+	{
+		briefedCount ? (
+			<section>
+				<h2>Written summaries in {bookName}</h2>
+				<ul class="topic-links">
+					{chapters
+						.filter((chapter) => chapter.brief)
+						.map((chapter) => (
+							<li>
+								<a href={commentaryPath(bookUsfm, chapter.id)}>
+									{chapter.brief?.data.title}
+								</a>
+							</li>
+						))}
+				</ul>
+			</section>
+		) : null
+	}
+
+	{
+		overviews.length ? (
+			<section class="book-overviews">
+				<h2>What the book of {bookName} is about</h2>
+				<p class="muted">
+					Each commentary's own introduction to {bookName}, in full. Tyndale is
+					the plainest read; the other two are older.
+				</p>
+				{overviews.map((overview) => (
+					<section class="commentary-source">
+						<h3>{overview.source.name}</h3>
+						<p class="source-byline">{overview.source.byline}</p>
+						<details class="commentary-body">
+							<summary>Read the introduction to {bookName}</summary>
+							{overview.introduction.map((paragraph) => (
+								<p set:html={paragraph} />
+							))}
+						</details>
+						<p class="commentary-attribution">
+							{attributionLine(overview.source)}{' '}
+							<a
+								href={overview.source.license.url}
+								rel="license nofollow noopener"
+								target="_blank"
+							>
+								{overview.source.license.name}
+							</a>
+						</p>
+					</section>
+				))}
+			</section>
+		) : (
+			<StatusMessage
+				title="Book introductions are temporarily unavailable"
+				message="The commentary introductions could not be loaded. The chapter pages above still work."
+			/>
+		)
+	}
+
+	<ExternalStudyLinks links={externalLinks} reference={bookName} />
+</BaseLayout>

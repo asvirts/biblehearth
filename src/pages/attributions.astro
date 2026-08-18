@@ -1,0 +1,158 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { COMMENTARY_SOURCES } from '../lib/commentary/sources';
+import { READER_CACHE_CONTROL, setCacheControl } from '../lib/http';
+import { breadcrumbJsonLd } from '../lib/seo';
+
+setCacheControl(Astro.response, READER_CACHE_CONTROL);
+
+const title = 'Attributions and Licences · BibleHearth';
+const description =
+	'Every source BibleHearth reproduces or links to, who holds it, and the licence it is used under.';
+---
+
+<BaseLayout
+	title={title}
+	description={description}
+	canonicalPath="/attributions"
+	jsonLd={[
+		breadcrumbJsonLd(Astro.site, [
+			{ name: 'BibleHearth', path: '/' },
+			{ name: 'Attributions', path: '/attributions' },
+		]),
+	]}
+>
+	<nav class="crumbs" aria-label="Breadcrumb">
+		<a href="/">Home</a>
+		<span>/</span>
+		<span>Attributions</span>
+	</nav>
+
+	<h1>Attributions and Licences</h1>
+
+	<p class="lede">
+		BibleHearth reproduces other people's work on its commentary pages. This page
+		says whose, under what licence, and what we changed. Where a work is not
+		openly licensed we link to it instead of copying it — which is why some
+		excellent commentaries appear here as links rather than text.
+	</p>
+
+	<section>
+		<h2>Commentaries reproduced on this site</h2>
+		{
+			COMMENTARY_SOURCES.map((source) => (
+				<div class="theme-item">
+					<h3>{source.name}</h3>
+					<dl class="glossary-list">
+						<div class="glossary-item">
+							<dt>Author</dt>
+							<dd>{source.byline}</dd>
+						</div>
+						<div class="glossary-item">
+							<dt>Licence</dt>
+							<dd>
+								<a
+									href={source.license.url}
+									rel="license nofollow noopener"
+									target="_blank"
+								>
+									{source.license.name}
+								</a>
+								{source.license.holder ? ` — © ${source.license.holder}` : ''}
+							</dd>
+						</div>
+						<div class="glossary-item">
+							<dt>Changes we made</dt>
+							<dd>
+								Converted to web markup and split into paragraphs, and scripture
+								references were turned into links. No wording was altered,
+								abridged or added to.
+							</dd>
+						</div>
+						<div class="glossary-item">
+							<dt>Original</dt>
+							<dd>
+								<a href={source.homepage} rel="nofollow noopener" target="_blank">
+									{source.homepage}
+								</a>
+							</dd>
+						</div>
+					</dl>
+					{
+						source.license.shareAlike ? (
+							<p class="muted">
+								This licence is share-alike. The {source.name} text on this site,
+								and any adaptation of it, stays available under the same licence.
+								Our own summaries, outlines and answers are separate work and are
+								not covered by it.
+							</p>
+						) : null
+					}
+				</div>
+			))
+		}
+	</section>
+
+	<section>
+		<h2>Commentaries we link to but do not reproduce</h2>
+		<div class="theme-item">
+			<h3>The Gospel Coalition Bible Commentary</h3>
+			<p>
+				Free to read and genuinely good, but not openly licensed. The Gospel
+				Coalition permits unaltered excerpts with a backlink; it does not permit
+				republishing a commentary wholesale, so we link to the relevant book from
+				every chapter page instead.
+			</p>
+			<p class="muted">
+				<a
+					href="https://www.thegospelcoalition.org/commentary/"
+					rel="nofollow noopener"
+					target="_blank">thegospelcoalition.org/commentary</a
+				>
+			</p>
+		</div>
+		<div class="theme-item">
+			<h3>BibleProject</h3>
+			<p>
+				Their animated book overviews are the single best free introduction to a
+				book of the Bible. Their terms of use permit embedding and linking with
+				attribution and prohibit derivative works, so we link to the video that
+				covers the chapter you are reading.
+			</p>
+			<p class="muted">
+				<a href="https://bibleproject.com/" rel="nofollow noopener" target="_blank"
+					>bibleproject.com</a
+				>
+			</p>
+		</div>
+	</section>
+
+	<section>
+		<h2>Scripture</h2>
+		<p>
+			Bible text is served from the YouVersion Platform under licence from each
+			translation's publisher. The required copyright notice for a translation
+			appears on every page that shows its text. Scripture is never reproduced on
+			this site outside those licensed surfaces.
+		</p>
+	</section>
+
+	<section>
+		<h2>Topical verse lists</h2>
+		<p>
+			Verse selections and explanations on the topic pages are our own, informed
+			by Nave's Topical Bible (1897) and Torrey's New Topical Textbook (1897),
+			both public domain.
+		</p>
+	</section>
+
+	<section>
+		<h2>Our own writing</h2>
+		<p>
+			Chapter summaries, outlines, glossaries, cautions and question answers are
+			written by BibleHearth. Where they sit on the same page as a share-alike
+			source they remain separate work: they are grounded in the commentaries but
+			are not adaptations of them.
+		</p>
+	</section>
+</BaseLayout>

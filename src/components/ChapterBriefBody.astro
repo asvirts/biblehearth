@@ -1,0 +1,165 @@
+---
+import type { BiblePassage } from '@youversion/platform-core';
+import Passage from './Passage.astro';
+import type { ChapterBrief } from '../lib/commentary';
+import { formatReference } from '../lib/bible/refs';
+import { bookSlugFromUsfm } from '../lib/bible/usfm';
+import { topicPath } from '../lib/topics';
+
+type Props = {
+	brief: ChapterBrief;
+	/** Scripture for `keyVerses`, keyed by USFM. Loaded by the page. */
+	passages: Map<string, BiblePassage | null>;
+	/** "Genesis 1" — used in headings so each one reads standalone. */
+	reference: string;
+	/** Resolved related topics, already filtered to published ones. */
+	relatedTopics: readonly { slug: string; title: string }[];
+	/** Anchor href for the commentary section, for the outline's jump link. */
+	firstSourceAnchor: string | null;
+};
+
+const { brief, passages, reference, relatedTopics, firstSourceAnchor } =
+	Astro.props;
+const { data } = brief;
+
+const [bookUsfm, chapterId = '1'] = data.usfm.split('.');
+// Routes take the URL slug, never the USFM id: `1CO` addresses
+// /verse/1-corinthians/..., and deriving it from the filename would split
+// `1-corinthians-13` at the first hyphen and produce `/verse/1/...`.
+const bookSlug = bookSlugFromUsfm(bookUsfm ?? '');
+---
+
+{/* Answer-first. This paragraph is what a featured snippet quotes and what an
+    AI answer lifts whole, so it says what the chapter is about in its first
+    sentence and never warms up to the point. */}
+<p class="lede">{data.shortAnswer}</p>
+
+<nav class="brief-jump" aria-label="On this page">
+	<a href="#outline">Outline</a>
+	<a href="#themes">Main ideas</a>
+	{data.glossary.length ? <a href="#words">Words explained</a> : null}
+	{data.keyVerses.length ? <a href="#key-verses">Key verses</a> : null}
+	{data.caution ? <a href="#caution">Common misreadings</a> : null}
+	<a href="#questions">Questions</a>
+	{firstSourceAnchor ? <a href={firstSourceAnchor}>Full commentary</a> : null}
+</nav>
+
+<section class="chapter-outline" id="outline">
+	<h2>{reference} outline, verse by verse</h2>
+	<ol class="outline-list">
+		{
+			data.outline.map((entry) => (
+				<li>
+					<a
+						class="outline-ref"
+						href={`/verse/${bookSlug}/${chapterId}/${entry.verses.split('-')[0]}`}
+					>
+						{chapterId}:{entry.verses}
+					</a>
+					<h3>{entry.heading}</h3>
+					<p>{entry.note}</p>
+				</li>
+			))
+		}
+	</ol>
+</section>
+
+<section class="chapter-themes" id="themes">
+	<h2>The main ideas in {reference}</h2>
+	{
+		data.themes.map((theme) => (
+			<div class="theme-item">
+				<h3>{theme.name}</h3>
+				<p>{theme.explanation}</p>
+			</div>
+		))
+	}
+</section>
+
+{
+	data.glossary.length ? (
+		<section class="chapter-glossary" id="words">
+			<h2>Words in {reference}, explained simply</h2>
+			<p class="muted">
+				Church language, in ordinary English. Nothing here assumes you have
+				heard the word before.
+			</p>
+			<dl class="glossary-list">
+				{data.glossary.map((item) => (
+					<div class="glossary-item">
+						<dt>{item.term}</dt>
+						<dd>{item.plain}</dd>
+					</div>
+				))}
+			</dl>
+		</section>
+	) : null
+}
+
+{
+	data.keyVerses.length ? (
+		<section class="chapter-key-verses" id="key-verses">
+			<h2>Key verses in {reference}</h2>
+			{data.keyVerses.map((verse) => {
+				const passage = passages.get(verse.usfm);
+				const [book, chapter, versePart] = verse.usfm.split('.');
+				const first = versePart?.split('-')[0];
+				const href =
+					book && chapter && first
+						? `/verse/${bookSlugFromUsfm(book)}/${chapter}/${first}`
+						: null;
+				return (
+					<article class="verse-card">
+						<h3>
+							{href ? (
+								<a href={href}>{formatReference(verse.usfm)}</a>
+							) : (
+								formatReference(verse.usfm)
+							)}
+						</h3>
+						{passage ? <Passage html={passage.content} /> : null}
+						<p class="gloss">{verse.why}</p>
+					</article>
+				);
+			})}
+		</section>
+	) : null
+}
+
+{
+	data.caution ? (
+		<section class="chapter-caution" id="caution">
+			<h2>What {reference} is often made to say, and does not</h2>
+			<p>{data.caution}</p>
+		</section>
+	) : null
+}
+
+<section class="chapter-faq" id="questions">
+	<h2>Common questions about {reference}</h2>
+	{
+		data.faqs.map((faq) => (
+			<div class="faq-item">
+				<h3>{faq.q}</h3>
+				<p>{faq.a}</p>
+			</div>
+		))
+	}
+</section>
+
+{
+	relatedTopics.length ? (
+		<section class="chapter-topics">
+			<h2>Related topics</h2>
+			<ul class="topic-links">
+				{relatedTopics.map((topic) => (
+					<li>
+						<a href={topicPath(topic.slug)}>
+							Bible verses about {topic.title.toLowerCase()}
+						</a>
+					</li>
+				))}
+			</ul>
+		</section>
+	) : null
+}

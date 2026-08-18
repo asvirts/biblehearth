@@ -28,6 +28,8 @@ export function pageSitemapPaths(versionSlugs: readonly string[]): string[] {
 		'/',
 		'/verse-of-the-day',
 		'/versions',
+		'/commentary',
+		'/attributions',
 		...unique.map(versionPath),
 	];
 }

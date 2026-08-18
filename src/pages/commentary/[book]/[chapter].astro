@@ -1,0 +1,377 @@
+---
+import type { BiblePassage, BibleVersion } from '@youversion/platform-core';
+import { render } from 'astro:content';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import ChapterBriefBody from '../../../components/ChapterBriefBody.astro';
+import CommentarySourceBlock from '../../../components/CommentarySourceBlock.astro';
+import ExternalStudyLinks from '../../../components/ExternalStudyLinks.astro';
+import RelatedQuestions from '../../../components/RelatedQuestions.astro';
+import StatusMessage from '../../../components/StatusMessage.astro';
+import { verseAnswerIndex } from '../../../lib/answers';
+import { chapterInRange } from '../../../lib/bible/chapters';
+import { truncateWords } from '../../../lib/bible/text';
+import { loadPassages } from '../../../lib/bible/passages';
+import { HUB_TRANSLATION_SLUGS } from '../../../lib/bible/translations';
+import { chapterPath } from '../../../lib/bible/urls';
+import {
+	bookNameFromUsfm,
+	isNumericChapter,
+	usfmFromBookSlug,
+} from '../../../lib/bible/usfm';
+import {
+	chapterBriefIndex,
+	commentaryBookPath,
+	commentaryGist,
+	commentaryPath,
+	externalStudyLinks,
+	loadChapterCommentaries,
+	type ChapterBrief,
+	type ChapterCommentary,
+} from '../../../lib/commentary';
+import { READER_CACHE_CONTROL, setCacheControl } from '../../../lib/http';
+import {
+	articleJsonLd,
+	breadcrumbJsonLd,
+	creativeWorkJsonLd,
+	faqJsonLd,
+} from '../../../lib/seo';
+import { listTopics, topicPath } from '../../../lib/topics';
+import {
+	displayAbbreviation,
+	getDefaultVersion,
+	listEnglishVersions,
+	versionSlug,
+} from '../../../lib/youversion/api';
+
+const bookSlug = Astro.params.book;
+const chapterId = Astro.params.chapter;
+
+if (!bookSlug || !chapterId || !isNumericChapter(chapterId)) {
+	return Astro.rewrite('/404');
+}
+
+const bookUsfm = usfmFromBookSlug(bookSlug);
+// Bounds-checked here rather than downstream, so `/commentary/genesis/51` is a
+// 404 without spending three upstream requests to discover it is empty.
+if (!bookUsfm || !chapterInRange(bookUsfm, chapterId)) {
+	return Astro.rewrite('/404');
+}
+
+const usfm = `${bookUsfm}.${chapterId}`;
+const bookName = bookNameFromUsfm(bookUsfm);
+const reference = `${bookName} ${chapterId}`;
+const canonicalPath = commentaryPath(bookUsfm, chapterId);
+
+/**
+ * The commentaries come first and they are the existence check.
+ *
+ * They do not depend on the licensed-scripture upstream, so a chapter page keeps
+ * working through a YouVersion throttle — which matters more here than on a
+ * reader page, because the value of this page is the commentary, not the text.
+ * If no source has ever written on this reference and we have no brief for it,
+ * the chapter does not exist and this is a 404 rather than an empty page.
+ */
+let commentaries: ChapterCommentary[] = [];
+try {
+	commentaries = await loadChapterCommentaries(bookUsfm, chapterId);
+} catch {
+	commentaries = [];
+}
+
+const briefs = await chapterBriefIndex();
+const brief: ChapterBrief | undefined = briefs.get(usfm);
+
+if (commentaries.length === 0 && !brief) {
+	return Astro.rewrite('/404');
+}
+
+// The markdown body is the "if this is your first time reading it" note. Kept
+// out of the frontmatter because it is prose with headings, and rendering it
+// last means the reader meets the structured summary before the aside.
+const Body = brief ? (await render(brief)).Content : null;
+
+// Scripture is a nice-to-have on this page, never a requirement. Key verses
+// render without their text rather than taking the page down.
+let version: BibleVersion | null = null;
+let readerLinks: { slug: string; label: string }[] = [];
+let passages = new Map<string, BiblePassage | null>();
+
+try {
+	const [defaultVersion, catalog] = await Promise.all([
+		getDefaultVersion(),
+		listEnglishVersions(),
+	]);
+	version = defaultVersion;
+
+	readerLinks = HUB_TRANSLATION_SLUGS.map((wanted) =>
+		catalog.find((item) => versionSlug(item, catalog) === wanted),
+	)
+		.filter((item): item is BibleVersion => Boolean(item))
+		.slice(0, 5)
+		.map((item) => ({
+			slug: versionSlug(item, catalog),
+			label: displayAbbreviation(item),
+		}));
+
+	if (brief?.data.keyVerses.length && version) {
+		passages = await loadPassages(
+			version.id,
+			brief.data.keyVerses.map((verse) => verse.usfm),
+		);
+	}
+} catch {
+	// Reader links and key-verse text drop out; everything else still renders.
+}
+
+setCacheControl(Astro.response, READER_CACHE_CONTROL);
+
+const [allTopics, { byChapter: answersByChapter }] = await Promise.all([
+	listTopics(),
+	verseAnswerIndex(),
+]);
+const chapterAnswers = answersByChapter.get(usfm) ?? [];
+const relatedTopics = (brief?.data.relatedTopics ?? [])
+	.map((ref) => allTopics.find((topic) => topic.id === ref.id))
+	.filter((topic): topic is (typeof allTopics)[number] => Boolean(topic))
+	.map((topic) => ({ slug: topic.id, title: topic.data.title }));
+
+const externalLinks = externalStudyLinks(bookUsfm, Number(chapterId));
+const firstSourceAnchor = commentaries[0]
+	? `#notes-${commentaries[0].source.id}`
+	: null;
+
+const heading = brief?.data.title ?? `${reference}: Summary and Commentary`;
+
+/**
+ * Titles chase the way people actually phrase a chapter question — "genesis 1
+ * summary", "what does romans 8 mean", "psalm 23 explained" — without stacking
+ * every variant into one string. A briefed chapter leads with its own claim,
+ * which is the more clickable and more distinctive half.
+ */
+const title = brief
+	? `${brief.data.title} | Summary, Meaning & Commentary`
+	: `${reference} — Summary, Meaning, and Verse-by-Verse Commentary`;
+
+const gist = commentaryGist(commentaries);
+// Longer than the 155 characters a SERP shows, deliberately. Google truncates
+// the display and never penalises the extra, while answer engines quoting the
+// page get the whole first thought rather than half of it. The field is
+// front-loaded either way, so the first sentence survives any cut.
+const description = brief
+	? truncateWords(brief.data.shortAnswer, 300)
+	: gist ||
+		`A verse-by-verse study of ${reference}: what the chapter says, what it means, and notes from three commentaries.`;
+
+/**
+ * A chapter with no brief carries only other people's text. Those pages stay
+ * live and linked — they are genuinely useful, and three commentaries side by
+ * side is something no other site puts on one page — but they are held out of
+ * the index. Publishing eleven hundred pages whose substance is a public-domain
+ * commentary already mirrored across BibleHub, StudyLight, CCEL and Blue Letter
+ * Bible is the textbook shape of scaled content abuse, and it would put the
+ * pages that *do* have original writing at risk alongside them. Writing a brief
+ * is what earns a chapter its place in the index.
+ */
+const indexable = Boolean(brief);
+
+const citations = commentaries.map((entry) => ({
+	name: entry.source.name,
+	author: entry.source.author,
+	license: entry.source.license.url,
+	url: entry.source.homepage,
+}));
+
+const jsonLd: Record<string, unknown>[] = [
+	breadcrumbJsonLd(Astro.site, [
+		{ name: 'BibleHearth', path: '/' },
+		{ name: 'Commentary', path: '/commentary' },
+		{ name: bookName, path: commentaryBookPath(bookUsfm) },
+		{ name: `Chapter ${chapterId}`, path: canonicalPath },
+	]),
+];
+
+if (brief) {
+	jsonLd.push(
+		articleJsonLd({
+			site: Astro.site,
+			path: canonicalPath,
+			headline: heading,
+			description,
+			datePublished: brief.data.publishedAt,
+			dateModified: brief.data.reviewedAt,
+			about: brief.data.entity,
+			citation: citations,
+		}),
+		faqJsonLd(brief.data.faqs),
+	);
+} else {
+	jsonLd.push(
+		creativeWorkJsonLd({
+			name: `${reference} commentary`,
+			description,
+			inLanguage: 'en',
+		}),
+	);
+}
+
+const reviewed = brief
+	? brief.data.reviewedAt.toLocaleDateString('en-US', {
+			year: 'numeric',
+			month: 'long',
+		})
+	: null;
+---
+
+<BaseLayout
+	title={title}
+	description={description}
+	canonicalPath={canonicalPath}
+	noindex={!indexable}
+	jsonLd={jsonLd}
+>
+	<nav class="crumbs" aria-label="Breadcrumb">
+		<a href="/">Home</a>
+		<span>/</span>
+		<a href="/commentary">Commentary</a>
+		<span>/</span>
+		<a href={commentaryBookPath(bookUsfm)}>{bookName}</a>
+		<span>/</span>
+		<span>{chapterId}</span>
+	</nav>
+
+	<h1>{heading}</h1>
+
+	{
+		readerLinks.length ? (
+			<p class="read-in">
+				Read {reference} in{' '}
+				{readerLinks.map((link, index) => (
+					<>
+						{index > 0 ? ' · ' : ''}
+						<a href={chapterPath(link.slug, bookUsfm, chapterId)}>
+							{link.label}
+						</a>
+					</>
+				))}
+			</p>
+		) : null
+	}
+
+	{
+		brief ? (
+			<ChapterBriefBody
+				brief={brief}
+				passages={passages}
+				reference={reference}
+				relatedTopics={relatedTopics}
+				firstSourceAnchor={firstSourceAnchor}
+			/>
+		) : (
+			<p class="lede">
+				{reference} has not been written up in our own words yet. Below are the
+				notes on it from three commentaries — start with Tyndale, which is
+				written in modern English for readers new to the Bible.
+			</p>
+		)
+	}
+
+	{
+		Body ? (
+			<section class="chapter-notes">
+				<Body />
+			</section>
+		) : null
+	}
+
+	{
+		commentaries.length ? (
+			<div class="commentary-stack">
+				<h2 class="commentary-stack-heading">
+					What the commentaries say about {reference}
+				</h2>
+				<p class="muted">
+					Three commentaries, oldest last. Each is shown in full with its author
+					and licence, and every scripture reference inside them links through to
+					the verse.
+				</p>
+				{commentaries.map((entry, index) => (
+					<CommentarySourceBlock
+						entry={entry}
+						bookUsfm={bookUsfm}
+						chapterId={chapterId}
+						reference={reference}
+						expanded={index === 0}
+					/>
+				))}
+			</div>
+		) : (
+			<StatusMessage
+				title="Commentary is temporarily unavailable"
+				message="The commentary notes for this chapter could not be loaded. Please try again shortly."
+			/>
+		)
+	}
+
+	<ExternalStudyLinks links={externalLinks} reference={reference} />
+
+	<RelatedQuestions
+		heading={`Questions about ${reference}`}
+		answers={chapterAnswers}
+	/>
+
+	{
+		!brief && relatedTopics.length ? (
+			<section class="chapter-topics">
+				<h2>Related topics</h2>
+				<ul class="topic-links">
+					{relatedTopics.map((topic) => (
+						<li>
+							<a href={topicPath(topic.slug)}>
+								Bible verses about {topic.title.toLowerCase()}
+							</a>
+						</li>
+					))}
+				</ul>
+			</section>
+		) : null
+	}
+
+	<nav class="pager">
+		{
+			Number(chapterId) > 1 ? (
+				<a href={commentaryPath(bookUsfm, Number(chapterId) - 1)}>
+					{bookName} {Number(chapterId) - 1}
+				</a>
+			) : (
+				<span />
+			)
+		}
+		{
+			chapterInRange(bookUsfm, Number(chapterId) + 1) ? (
+				<a href={commentaryPath(bookUsfm, Number(chapterId) + 1)}>
+					{bookName} {Number(chapterId) + 1}
+				</a>
+			) : (
+				<span />
+			)
+		}
+	</nav>
+
+	<footer class="topic-provenance">
+		{
+			reviewed ? (
+				<p class="muted">
+					Summary, outline and questions written and reviewed by BibleHearth,
+					{' '}
+					{reviewed}. Grounded in the commentaries above; wording is our own.
+				</p>
+			) : null
+		}
+		<p class="muted">
+			Commentary text belongs to the authors named beside it. Tyndale Open Study
+			Notes are used under CC BY-SA 4.0; Matthew Henry and
+			Jamieson-Fausset-Brown are public domain. See{' '}
+			<a href="/attributions">attributions</a> for the full list.
+		</p>
+	</footer>
+</BaseLayout>

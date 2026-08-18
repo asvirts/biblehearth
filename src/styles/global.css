@@ -508,3 +508,256 @@ h1 {
 	display: grid;
 	gap: 0.35rem;
 }
+
+/* --- Commentary --- */
+
+/*
+ * The study call to action on a reader page.
+ *
+ * Deliberately loud. A reader who has just finished a chapter is at the exact
+ * moment they are most likely to want it explained, and this is the only link
+ * from the version-scoped reader tree into the version-agnostic study pages.
+ */
+.study-cta {
+	margin-block: 2.5rem;
+}
+.study-cta h2 {
+	margin-block-start: 0;
+	font-size: 1.15rem;
+}
+.study-cta p {
+	color: var(--muted);
+	max-width: 42rem;
+}
+
+.brief-jump {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.4rem 1rem;
+	margin-block: 1.5rem 2rem;
+	padding-block: 0.75rem;
+	border-block: 1px solid var(--line);
+	font-size: 0.95rem;
+}
+
+.outline-list {
+	list-style: none;
+	padding: 0;
+	counter-reset: none;
+}
+.outline-list > li {
+	margin-block: 1.4rem;
+	border-inline-start: 3px solid var(--rule, #e6ddd0);
+	padding-inline-start: 1rem;
+}
+.outline-list h3 {
+	margin-block: 0.2rem 0.35rem;
+	font-size: 1.05rem;
+}
+.outline-list p {
+	margin-block: 0;
+	color: var(--muted);
+}
+/* The verse range is the scannable part, so it reads as a label not prose. */
+.outline-ref {
+	font-family: var(--sans);
+	font-size: 0.8rem;
+	font-weight: 700;
+	letter-spacing: 0.06em;
+	text-decoration: none;
+	color: var(--ember-dark);
+}
+.outline-ref:hover {
+	text-decoration: underline;
+}
+
+.theme-item {
+	margin-block: 1.5rem;
+}
+.theme-item h3 {
+	margin-block-end: 0.35rem;
+	font-size: 1.05rem;
+}
+
+.glossary-list {
+	margin: 0;
+}
+.glossary-item {
+	margin-block: 1rem;
+	border-inline-start: 3px solid var(--rule, #e6ddd0);
+	padding-inline-start: 1rem;
+}
+.glossary-item dt {
+	font-weight: 700;
+}
+.glossary-item dd {
+	margin: 0.2rem 0 0;
+	color: var(--muted);
+}
+
+.chapter-caution {
+	margin-block: 2.5rem;
+	padding: 1.25rem 1.5rem;
+	border-radius: 10px;
+	background: rgb(0 0 0 / 0.035);
+}
+
+.chapter-faq .faq-item {
+	margin-block: 1.5rem;
+}
+.chapter-faq h3 {
+	font-size: 1.05rem;
+	margin-block-end: 0.4rem;
+}
+
+.commentary-stack {
+	margin-block-start: 3rem;
+	padding-block-start: 1.5rem;
+	border-block-start: 1px solid var(--line);
+}
+.commentary-stack-heading {
+	margin-block-start: 0;
+}
+
+.commentary-source {
+	margin-block: 2.5rem;
+}
+.commentary-source h2 {
+	margin-block-end: 0.2rem;
+}
+.source-byline {
+	margin-block: 0 0.6rem;
+	font-size: 0.85rem;
+	letter-spacing: 0.06em;
+	text-transform: uppercase;
+	color: var(--muted);
+}
+.source-about {
+	max-width: 42rem;
+}
+/*
+ * The difficulty warning on the older commentaries. Set apart rather than
+ * folded into the description, because it is the sentence that stops a new
+ * reader concluding the problem is them.
+ */
+.source-reading-note {
+	max-width: 42rem;
+	padding: 0.75rem 1rem;
+	border-inline-start: 3px solid var(--ember);
+	background: rgb(181 74 44 / 0.05);
+	font-size: 0.95rem;
+}
+
+.commentary-body > summary {
+	cursor: pointer;
+	padding-block: 0.5rem;
+	font-weight: 700;
+	color: var(--ember-dark);
+	min-height: var(--tap);
+	display: flex;
+	align-items: center;
+}
+.commentary-body[open] > summary {
+	margin-block-end: 0.5rem;
+	border-block-end: 1px solid var(--line);
+}
+
+.commentary-intro {
+	margin-block-end: 1.5rem;
+	padding: 1rem 1.25rem;
+	border-radius: 10px;
+	background: var(--bg-raised);
+	border: 1px solid var(--line);
+}
+.commentary-intro h3,
+.commentary-note h3 {
+	margin-block: 0 0.4rem;
+	font-size: 0.85rem;
+	letter-spacing: 0.06em;
+	text-transform: uppercase;
+	color: var(--muted);
+}
+.commentary-note {
+	margin-block: 1.5rem;
+}
+.commentary-note p,
+.commentary-intro p {
+	max-width: 40rem;
+}
+
+/*
+ * Cross-references inside commentary text.
+ *
+ * Underlined on hover only: a chapter of Matthew Henry can carry sixty of these,
+ * and sixty underlines turns a paragraph into a hedge. The dotted border keeps
+ * them discoverable without shredding the line.
+ */
+.xref {
+	text-decoration: none;
+	border-block-end: 1px dotted var(--line);
+}
+.xref:hover {
+	border-block-end-color: var(--ember);
+	text-decoration: underline;
+}
+
+.commentary-attribution {
+	margin-block-start: 1rem;
+	font-size: 0.85rem;
+	color: var(--muted);
+	max-width: 42rem;
+}
+
+.external-study {
+	margin-block-start: 3rem;
+}
+.external-links {
+	list-style: none;
+	padding: 0;
+}
+.external-links > li {
+	margin-block: 1.25rem;
+	border-inline-start: 3px solid var(--rule, #e6ddd0);
+	padding-inline-start: 1rem;
+}
+.external-links a {
+	font-weight: 700;
+}
+.external-publisher {
+	display: block;
+	font-size: 0.8rem;
+	letter-spacing: 0.06em;
+	text-transform: uppercase;
+	color: var(--muted);
+}
+.external-links p {
+	margin-block: 0.35rem 0;
+	color: var(--muted);
+	max-width: 42rem;
+}
+
+.read-in {
+	color: var(--muted);
+}
+
+/* Chapters with original writing, marked in the book grid. */
+.tile-briefed {
+	border-color: var(--ember);
+	box-shadow: inset 0 0 0 1px var(--ember);
+}
+
+.book-overviews {
+	margin-block-start: 3rem;
+}
+
+/*
+ * The markdown aside on a chapter study page. Narrower measure than the rest of
+ * the page because it is continuous prose rather than scannable structure.
+ */
+.chapter-notes {
+	margin-block: 2.5rem;
+	max-width: 40rem;
+}
+.chapter-notes h2 {
+	font-size: 1.15rem;
+}

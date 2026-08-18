@@ -156,4 +156,139 @@ const answers = defineCollection({
 	}),
 });
 
-export const collections = { topics, answers };
+/**
+ * The original layer on a chapter study page.
+ *
+ * Everything else on that page is somebody else's work: three licensed
+ * commentaries and two outbound links. This collection is the part that is ours,
+ * and it is the only part that can rank. Matthew Henry is already published
+ * verbatim on BibleHub, StudyLight, CCEL, Blue Letter Bible and Bible Study
+ * Tools; republishing him again adds a reader service and zero search value. A
+ * chapter competes on the strength of the fields below or it does not compete.
+ *
+ * Two rules run through every field, and they are the same rule twice:
+ *
+ * 1. Write for someone in their first month of reading the Bible. Short
+ *    sentences. No term used before it is explained. "Propitiation",
+ *    "eschatology" and "federal headship" are not clarifications, they are new
+ *    problems. If a sentence needs a seminary word, the sentence is wrong, not
+ *    the reader.
+ * 2. Simple is not the same as vague. "God is in control" explains nothing.
+ *    "Nothing that happens to you is outside God's reach, including the parts
+ *    that feel random" says the same thing and can actually be disagreed with.
+ *    Plain language means concrete, not soft.
+ */
+const chapterOutlineEntry = z.object({
+	/** Verse range within this chapter: `1`, `3-13`. */
+	verses: z.string().regex(/^\d+(-\d+)?$/),
+	/** What happens in these verses. A sentence, not a label. */
+	heading: z.string().min(6).max(90),
+	/** Why it matters, in plain words. 1-2 sentences. */
+	note: z.string().min(40).max(400),
+});
+
+const chapters = defineCollection({
+	loader: glob({ pattern: '**/*.md', base: './src/content/chapters' }),
+	schema: z.object({
+		/** Chapter USFM: `GEN.1`. The route, the reverse index and the sitemap
+		 * entry all derive from this, so it is the only id the file carries. */
+		usfm: z.string().regex(/^[A-Z0-9]{3}\.\d+$/),
+		/**
+		 * The <h1>. Leads with the reference, because that is what people type,
+		 * then says what the chapter is about rather than repeating "commentary".
+		 */
+		title: z.string().min(10).max(95),
+		/**
+		 * 40-90 words, rendered directly under the <h1> and reused as the meta
+		 * description. The highest-leverage text on the page: it is the chunk a
+		 * featured snippet quotes and the paragraph an AI answer lifts whole.
+		 * Answer the question "what is this chapter about?" in the first sentence
+		 * and do not warm up to it.
+		 */
+		shortAnswer: z.string().min(200).max(750),
+		/**
+		 * The chapter in order, in verse ranges.
+		 *
+		 * This is the field that earns the "summary" and "outline" queries, and it
+		 * is the one a reader scrolls to first. Ranges must cover the chapter
+		 * without gaps — a reader using this to find a verse should never fall
+		 * into a hole.
+		 */
+		outline: z.array(chapterOutlineEntry).min(2).max(14),
+		/** The ideas worth carrying out of the chapter. */
+		themes: z
+			.array(
+				z.object({
+					name: z.string().min(3).max(70),
+					explanation: z.string().min(80).max(700),
+				}),
+			)
+			.min(2)
+			.max(6),
+		/**
+		 * Church words this chapter forces on a reader, defined in one plain
+		 * sentence each.
+		 *
+		 * A newcomer meets "covenant" and "atonement" here for the first time and
+		 * every other site assumes they already know. Defining them in place is
+		 * the single kindest thing this page does — and definitions happen to be
+		 * exactly what retrieval models quote, so the kindness is free.
+		 */
+		glossary: z
+			.array(
+				z.object({
+					term: z.string().min(2).max(50),
+					/** No jargon inside the definition. That defeats the purpose. */
+					plain: z.string().min(50).max(400),
+				}),
+			)
+			.max(8)
+			.default([]),
+		/** The verses people arrive looking for, rendered in full. */
+		keyVerses: z
+			.array(
+				z.object({
+					usfm: z.string().regex(USFM_REF),
+					/** Why this verse, and what it means where it sits. */
+					why: z.string().min(60).max(500),
+				}),
+			)
+			.max(6)
+			.default([]),
+		/**
+		 * What this chapter is routinely made to say and does not say.
+		 *
+		 * The most-quoted chapters are the most-misquoted ones, and a newcomer is
+		 * the person least equipped to spot it. Saying so plainly is the highest
+		 * trust signal on the page and nobody else writes it.
+		 */
+		caution: z.string().min(150).max(1500).optional(),
+		/**
+		 * Questions people actually type, answered so the answer stands alone.
+		 * No "as mentioned above" — each one may be read in isolation.
+		 */
+		faqs: z
+			.array(
+				z.object({
+					q: z.string().min(10).max(150),
+					a: z.string().min(120).max(900),
+				}),
+			)
+			.min(2)
+			.max(8),
+		relatedTopics: z.array(reference('topics')).max(6).default([]),
+		/** Entity linking: cheapest, highest-value AEO field in this schema. */
+		entity: z
+			.object({
+				name: z.string(),
+				sameAs: z.array(z.string().url()).default([]),
+			})
+			.optional(),
+		publishedAt: z.coerce.date(),
+		reviewedAt: z.coerce.date(),
+		/** Draft briefs render noindex and stay out of sitemaps. */
+		draft: z.boolean().default(false),
+	}),
+});
+
+export const collections = { topics, answers, chapters };

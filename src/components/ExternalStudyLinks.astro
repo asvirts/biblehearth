@@ -1,0 +1,35 @@
+---
+import type { ExternalStudyLink } from '../lib/commentary/links';
+
+type Props = {
+	links: readonly ExternalStudyLink[];
+	reference: string;
+};
+
+const { links, reference } = Astro.props;
+---
+
+{
+	links.length ? (
+		<section class="external-study">
+			<h2>Where to go deeper on {reference}</h2>
+			<p class="muted">
+				Both of these are free to read and neither can be reproduced here — The
+				Gospel Coalition and BibleProject keep their work under their own
+				copyright. They are worth the click, especially if you are new to
+				reading the Bible.
+			</p>
+			<ul class="external-links">
+				{links.map((link) => (
+					<li>
+						<a href={link.href} rel="noopener" target="_blank">
+							{link.label}
+						</a>
+						<span class="external-publisher">{link.publisher}</span>
+						<p>{link.note}</p>
+					</li>
+				))}
+			</ul>
+		</section>
+	) : null
+}

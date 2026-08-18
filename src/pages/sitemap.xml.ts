@@ -24,6 +24,7 @@ export const GET: APIRoute = async ({ site }) => {
 			'/sitemap-pages.xml',
 			'/sitemap-topics.xml',
 			'/sitemap-answers.xml',
+			'/sitemap-commentary.xml',
 			// Curated seed set only — see lib/seed.ts for why.
 			'/sitemap-verses.xml',
 			...versionSitemaps,
