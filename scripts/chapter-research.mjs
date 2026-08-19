@@ -153,9 +153,13 @@ const { usfm, chapter, slug, name } = ref;
 const reference = `${name.endsWith('s') && usfm === 'PSA' ? 'Psalm' : name} ${chapter}`;
 const target = `src/content/chapters/${slug}-${chapter}.md`;
 
+// 404 is the only miss that means "this source has no notes" — getJson
+// already returns null for that. Timeouts, 429s and 5xx must fail the
+// script; swallowing them here used to print "no notes" and an author
+// would write from an incomplete dossier.
 const [scripture, ...commentaries] = await Promise.all([
-	getJson(`/api/BSB/${usfm}/${chapter}.json`).catch(() => null),
-	...SOURCES.map(([id]) => getJson(`/api/c/${id}/${usfm}/${chapter}.json`).catch(() => null)),
+	getJson(`/api/BSB/${usfm}/${chapter}.json`),
+	...SOURCES.map(([id]) => getJson(`/api/c/${id}/${usfm}/${chapter}.json`)),
 ]);
 
 const existing = await access(target).then(() => true, () => false);

@@ -92,11 +92,17 @@ let failed = 0;
 
 for (let start = 0; start < urls.length; start += BATCH_LIMIT) {
 	const batch = urls.slice(start, start + BATCH_LIMIT);
-	const response = await fetch(ENDPOINT, {
+	const submit = () => fetch(ENDPOINT, {
 		method: 'POST',
 		headers: { 'Content-Type': 'application/json; charset=utf-8' },
 		body: JSON.stringify({ host: site.host, key, keyLocation, urlList: batch }),
 	});
+	let response = await submit();
+	// First-ever submissions can 403 while IndexNow is still fetching the
+	// key file; the same payload then succeeds. Retry once, then report.
+	if (response.status === 403) {
+		response = await submit();
+	}
 
 	const meaning = MEANING[response.status] ?? (await response.text()).trim();
 	const line = `${batch.length} URLs → ${response.status} ${meaning}`;
