@@ -48,6 +48,30 @@ npm run chapter:research -- "psalm 28"
 `src/lib/bible/usfm.ts` is the only place that distinction lives; use it rather
 than interpolating a book name in front of a number.
 
+## llms.txt and markdown twins
+
+`/llms.txt` follows the [llmstxt.org](https://llmstxt.org) convention: a curated
+index of the pages whose substance is ours, generated in
+`src/pages/llms.txt.ts` from the same `listChapterBriefs()` the sitemap uses. It
+is not a sitemap — the ~1,180 chapter URLs and ~31,000 verse hubs stay out, and
+reach agents through the hubs listed under `## Optional`.
+
+Chapter studies, topics and answers each serve a **markdown twin** at
+`<url>.md`, linked from the page by `rel="alternate" type="text/markdown"`. One
+rule governs them, in `src/lib/markdown.ts`:
+
+**A twin carries the original writing and never the Scripture.** Reproducing
+licensed passages as plain text would strip the publisher's required copyright
+notice, turn a static file into a bulk-text endpoint for a translation we may
+only display, and spend a metered fetch per crawl. Citations become links to the
+verse hub instead — so a twin costs nothing upstream and is cheaper to serve
+than the page it mirrors.
+
+Twins are `noindex` (`X-Robots-Tag`, not robots.txt — a blocked URL is one whose
+`noindex` is never read) so they never compete with their own canonical page. A
+chapter with no brief 404s its twin, on the same terms that make its page
+`noindex`.
+
 ## IndexNow
 
 Bing, Yandex, Seznam and Naver share one submission endpoint. The key file that

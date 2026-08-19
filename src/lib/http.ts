@@ -24,6 +24,17 @@ export const SITEMAP_CACHE_CONTROL =
 	'public, max-age=3600, s-maxage=86400, stale-while-revalidate=604800, stale-if-error=604800';
 
 /**
+ * Markdown twins of the editorial pages: cached as hard as the sitemaps.
+ *
+ * These are assembled entirely from `src/content/*` and never touch the
+ * licensed-scripture upstream, so unlike a reader page there is nothing here
+ * that a throttle can take away and nothing that goes stale between deploys.
+ * Vercel purges its cache on every deploy, which is also the only moment the
+ * content collections can have changed.
+ */
+export const MARKDOWN_CACHE_CONTROL = SITEMAP_CACHE_CONTROL;
+
+/**
  * 404 is a cacheable status on Vercel. Serving it `no-store` means every dead
  * link, stale scraper URL, and malformed crawl path re-invokes the function.
  */

@@ -216,6 +216,10 @@ const description = brief
  * Bible is the textbook shape of scaled content abuse, and it would put the
  * pages that *do* have original writing at risk alongside them. Writing a brief
  * is what earns a chapter its place in the index.
+ *
+ * It earns the markdown twin at `<url>.md` on the same terms, which is why one
+ * flag drives both props below — a twin with no original writing in it would be
+ * the same page, republished in a second format.
  */
 const indexable = Boolean(brief);
 
@@ -272,6 +276,7 @@ const reviewed = brief
 	description={description}
 	canonicalPath={canonicalPath}
 	noindex={!indexable}
+	markdown={indexable}
 	jsonLd={jsonLd}
 >
 	<nav class="crumbs" aria-label="Breadcrumb">
