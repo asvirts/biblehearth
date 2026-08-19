@@ -11,7 +11,11 @@ import { expandUsfm, formatReference } from '../../lib/bible/refs';
 import { truncateWords } from '../../lib/bible/text';
 import { bookSlugFromUsfm } from '../../lib/bible/usfm';
 import { absoluteUrl, chapterPath } from '../../lib/bible/urls';
-import { READER_CACHE_CONTROL, setPageHeaders } from '../../lib/http';
+import {
+	READER_CACHE_CONTROL,
+	setLastModified,
+	setPageHeaders,
+} from '../../lib/http';
 import {
 	articleJsonLd,
 	breadcrumbJsonLd,
@@ -61,6 +65,9 @@ try {
 
 Astro.response.status = status;
 setPageHeaders(Astro.response, status, READER_CACHE_CONTROL);
+if (status === 200) {
+	setLastModified(Astro.response, answer.data.reviewedAt);
+}
 
 /**
  * Single verses go to the version-agnostic hub; ranges have none, so they fall
@@ -119,6 +126,7 @@ const reviewed = answer.data.reviewedAt.toLocaleDateString('en-US', {
 	title={title}
 	description={description}
 	canonicalPath={canonicalPath}
+	markdown
 	jsonLd={[
 		breadcrumbJsonLd(Astro.site, [
 			{ name: 'BibleHearth', path: '/' },

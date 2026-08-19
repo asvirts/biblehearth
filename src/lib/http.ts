@@ -24,6 +24,17 @@ export const SITEMAP_CACHE_CONTROL =
 	'public, max-age=3600, s-maxage=86400, stale-while-revalidate=604800, stale-if-error=604800';
 
 /**
+ * Markdown twins of the editorial pages: cached as hard as the sitemaps.
+ *
+ * These are assembled entirely from `src/content/*` and never touch the
+ * licensed-scripture upstream, so unlike a reader page there is nothing here
+ * that a throttle can take away and nothing that goes stale between deploys.
+ * Vercel purges its cache on every deploy, which is also the only moment the
+ * content collections can have changed.
+ */
+export const MARKDOWN_CACHE_CONTROL = SITEMAP_CACHE_CONTROL;
+
+/**
  * 404 is a cacheable status on Vercel. Serving it `no-store` means every dead
  * link, stale scraper URL, and malformed crawl path re-invokes the function.
  */
@@ -54,6 +65,28 @@ export function setCacheControl(
 	value: string,
 ): void {
 	response.headers.set('Cache-Control', value);
+}
+
+/**
+ * The editorial date of a page, as a validator a crawler can ask against.
+ *
+ * Bing's guidelines name `lastmod` and HTTP validators in the same breath as
+ * the things that let it detect a change without re-reading the page. The
+ * sitemap half of that is already honest — `<lastmod>` is emitted only where a
+ * real review date exists (see lib/sitemap.ts) — and this is the same rule
+ * applied to the response: only pages carrying a `reviewedAt` set it.
+ *
+ * Reader pages deliberately do not. Their content is scripture, which does not
+ * change, wrapped in markup that changes only on deploy — and a `Last-Modified`
+ * of "whenever we last shipped" is the fabricated freshness signal the sitemap
+ * comment already refuses to emit. Those pages get an ETag from the middleware
+ * instead, which is derived from the bytes and therefore cannot lie.
+ */
+export function setLastModified(
+	response: { headers: Headers },
+	date: Date,
+): void {
+	response.headers.set('Last-Modified', date.toUTCString());
 }
 
 /**

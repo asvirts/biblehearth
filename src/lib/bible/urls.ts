@@ -25,6 +25,23 @@ export function versePath(
 	return `${chapterPath(versionSlug, bookUsfm, chapterId)}/${verseId}`;
 }
 
+/**
+ * The version-agnostic verse hub for a citation: `PHP.4.6-7` → `/verse/philippians/4/6`.
+ *
+ * A range resolves to its first verse, because that is the hub a reader who
+ * followed the citation wants to land on and there is no hub for a span. Null
+ * for a chapter-only reference, which has no verse hub at all — callers send
+ * those to the study page instead.
+ */
+export function verseHubPath(usfm: string): string | null {
+	const [book, chapter, verse] = usfm.split('.');
+	const first = verse?.split('-')[0];
+	if (!book || !chapter || !first) {
+		return null;
+	}
+	return `/verse/${bookSlugFromUsfm(book)}/${chapter}/${first}`;
+}
+
 const FALLBACK_ORIGIN = 'https://biblehearth.online';
 
 export function siteOrigin(site?: URL): string {

@@ -3,6 +3,8 @@ import '../styles/global.css';
 import '../styles/scripture.css';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import Analytics from '../components/Analytics.astro';
+import { BING_SITE_VERIFICATION } from 'astro:env/server';
 import { absoluteUrl } from '../lib/bible/urls';
 
 type Props = {
@@ -12,6 +14,14 @@ type Props = {
 	noindex?: boolean;
 	/** BCP-47 tag. Wrong the moment a non-English version is served. */
 	lang?: string;
+	/**
+	 * Whether this page has a markdown twin at `<canonical>.md`.
+	 *
+	 * Set it only where a route actually serves one, and only where the twin is
+	 * substantially the page: a reader page has no twin because its substance is
+	 * licensed Scripture we do not republish as text. See lib/markdown.ts.
+	 */
+	markdown?: boolean;
 	/** Root-relative or absolute. Defaults to the brand card. */
 	image?: string;
 	imageAlt?: string;
@@ -23,6 +33,7 @@ const {
 	description,
 	canonicalPath,
 	noindex = false,
+	markdown = false,
 	lang = 'en',
 	image = '/og-default.png',
 	imageAlt = 'BibleHearth — read the Bible online, free',
@@ -57,8 +68,23 @@ const documents = jsonLd ? (Array.isArray(jsonLd) ? jsonLd : [jsonLd]) : [];
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 		<meta name="description" content={description} />
+		{
+			BING_SITE_VERIFICATION ? (
+				<meta name="msvalidate.01" content={BING_SITE_VERIFICATION} />
+			) : null
+		}
 		{noindex ? <meta name="robots" content="noindex, follow" /> : null}
 		{canonical ? <link rel="canonical" href={canonical} /> : null}
+		{/* llms.txt link relations. `alternate` is how an agent finds the markdown
+		    twin without guessing at the convention; `describedby` points at the
+		    index that says which pages have one. Both are advisory — nothing on
+		    the site depends on either being followed. */}
+		{
+			markdown && canonical ? (
+				<link rel="alternate" type="text/markdown" href={`${canonical}.md`} />
+			) : null
+		}
+		<link rel="describedby" href={absoluteUrl(Astro.site, '/llms.txt')} />
 		<meta property="og:title" content={title} />
 		<meta property="og:description" content={description} />
 		{canonical ? <meta property="og:url" content={canonical} /> : null}
@@ -87,5 +113,6 @@ const documents = jsonLd ? (Array.isArray(jsonLd) ? jsonLd : [jsonLd]) : [];
 			<slot />
 		</main>
 		<Footer />
+		<Analytics />
 	</body>
 </html>

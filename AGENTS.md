@@ -48,6 +48,30 @@ npm run chapter:research -- "psalm 28"
 `src/lib/bible/usfm.ts` is the only place that distinction lives; use it rather
 than interpolating a book name in front of a number.
 
+## llms.txt and markdown twins
+
+`/llms.txt` follows the [llmstxt.org](https://llmstxt.org) convention: a curated
+index of the pages whose substance is ours, generated in
+`src/pages/llms.txt.ts` from the same `listChapterBriefs()` the sitemap uses. It
+is not a sitemap — the ~1,180 chapter URLs and ~31,000 verse hubs stay out, and
+reach agents through the hubs listed under `## Optional`.
+
+Chapter studies, topics and answers each serve a **markdown twin** at
+`<url>.md`, linked from the page by `rel="alternate" type="text/markdown"`. One
+rule governs them, in `src/lib/markdown.ts`:
+
+**A twin carries the original writing and never the Scripture.** Reproducing
+licensed passages as plain text would strip the publisher's required copyright
+notice, turn a static file into a bulk-text endpoint for a translation we may
+only display, and spend a metered fetch per crawl. Citations become links to the
+verse hub instead — so a twin costs nothing upstream and is cheaper to serve
+than the page it mirrors.
+
+Twins are `noindex` (`X-Robots-Tag`, not robots.txt — a blocked URL is one whose
+`noindex` is never read) so they never compete with their own canonical page. A
+chapter with no brief 404s its twin, on the same terms that make its page
+`noindex`.
+
 ## IndexNow
 
 Bing, Yandex, Seznam and Naver share one submission endpoint. The key file that
@@ -56,11 +80,25 @@ lives in the repo rather than in an env var, and `robots.txt` carves out an
 `Allow` for it under the blanket `AhrefsBot` block because Ahrefs verifies the
 key with that agent.
 
-Submit URLs that have **changed**:
+**Production deploys submit themselves.** `postbuild` runs
+`indexnow --changed --if-production`, which fingerprints everything under
+`src/content/` and compares it with the manifest the previous build left in
+`node_modules/.cache` — the one directory Vercel restores between builds. Only
+what actually changed is sent, plus the book page of any changed chapter brief.
+Nothing to do after shipping a brief.
+
+Two things it will not do: submit anything from a preview deploy, and submit
+anything when the manifest is missing. A cleared build cache re-records the
+baseline and sends nothing, because reading an empty baseline as "every page is
+new" is the mass submission this is all built to avoid. It also never fails a
+deploy — a failed submission just leaves the manifest unwritten, so the next
+build retries.
+
+Submit by hand when the change is not a content file:
 
 ```
 npm run indexnow -- /topics/anxiety /answers/what-is-grace
-npm run indexnow -- --sitemap --dry-run
+npm run indexnow -- --changed --dry-run
 ```
 
 `--sitemap` submits everything the sitemaps currently list. It is for seeding a
@@ -70,4 +108,37 @@ resubmitting unchanged pages buys a mass crawl for nothing — and a 429 from
 IndexNow on top of it. `--dry-run` prints the payload and sends nothing.
 
 Confirm receipt in [Bing Webmaster Tools](https://www.bing.com/webmasters) under
-Indexing → IndexNow.
+Indexing → IndexNow. Verifying the site there needs `BING_SITE_VERIFICATION`
+set in Vercel — the `content` value of the `msvalidate.01` tag it offers — which
+BaseLayout emits into every page. It is also what unlocks Crawl Control, which
+is where Bingbot's pace belongs; `robots.txt` gives it a `Crawl-delay: 1` group
+in the meantime, separate from the slower one the long tail gets.
+
+## Custom events
+
+Vercel Web Analytics is on (`webAnalytics` in `astro.config.mjs`), and custom
+events are declared in markup rather than written in code: `data-va` names an
+event that fires on click, `data-va-view` one that fires when the element first
+reaches the viewport, and every `data-va-*` beside them becomes a property.
+`src/components/Analytics.astro` is the one delegated listener behind all of
+that, and its frontmatter is where the rules live — the script itself is bare,
+because an inline script is served to every reader on every page.
+
+Two rules decide whether an event is worth adding. **Never record what the URL
+already says**: the page view carries the path, so an event earns its keep only
+by carrying the dimension the path is missing. And **two properties, no more** —
+the Pro plan's ceiling, where a third is dropped rather than reported. Events
+are billed like page views, so nothing fires on a timer or on scroll, and a view
+event fires once per page load.
+
+Client-side is deliberate too. Most of what requests this site is a crawler, and
+the beacon only runs where there is a JavaScript engine, so these counts are
+people in a way nothing measured on the server can be.
+
+Three are wired. `chapter-tile` carries `briefed`, and is the only demand signal
+a chapter with no brief has — those pages are `noindex`, so nobody reaches them
+from search and their traffic says nothing. `brief-end` fires when the FAQ
+section comes into view, which is a reader who stayed to the end of our own
+writing; its `text` property is there to answer whether spending a passage fetch
+on the full chapter changes that. `translation-switch` measures what
+`DEFAULT_VERSION_ID` and `HUB_TRANSLATION_SLUGS` currently guess at.

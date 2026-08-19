@@ -18,6 +18,7 @@ import { HUB_TRANSLATION_SLUGS } from '../../lib/bible/translations';
 import { chapterPath } from '../../lib/bible/urls';
 import {
 	bookNameFromUsfm,
+	isCanonicalBookSlug,
 	isNumericChapter,
 	usfmFromBookSlug,
 } from '../../lib/bible/usfm';
@@ -32,7 +33,11 @@ import {
 	type ChapterBrief,
 	type ChapterCommentary,
 } from '../../lib/commentary';
-import { READER_CACHE_CONTROL, setCacheControl } from '../../lib/http';
+import {
+	READER_CACHE_CONTROL,
+	setCacheControl,
+	setLastModified,
+} from '../../lib/http';
 import {
 	articleJsonLd,
 	breadcrumbJsonLd,
@@ -60,6 +65,12 @@ const bookUsfm = usfmFromBookSlug(bookSlug);
 // without spending three upstream requests to discover it is empty.
 if (!bookUsfm || !chapterInRange(bookUsfm, chapterId)) {
 	return Astro.rewrite('/404');
+}
+
+// `/psa/28` resolves to the same chapter as `/psalms/28`. Only one of them is
+// the page; see isCanonicalBookSlug.
+if (!isCanonicalBookSlug(bookSlug, bookUsfm)) {
+	return Astro.redirect(chapterStudyPath(bookUsfm, chapterId), 301);
 }
 
 const usfm = `${bookUsfm}.${chapterId}`;
@@ -169,6 +180,11 @@ try {
 const otherVersions = readerLinks.filter((link) => link.slug !== shownSlug);
 
 setCacheControl(Astro.response, READER_CACHE_CONTROL);
+// Only the briefed chapters have a date worth stating. The rest are `noindex`
+// commentary whose "last modified" would mean nothing but the deploy.
+if (brief) {
+	setLastModified(Astro.response, brief.data.reviewedAt);
+}
 
 const [allTopics, { byChapter: answersByChapter }] = await Promise.all([
 	listTopics(),
@@ -216,6 +232,10 @@ const description = brief
  * Bible is the textbook shape of scaled content abuse, and it would put the
  * pages that *do* have original writing at risk alongside them. Writing a brief
  * is what earns a chapter its place in the index.
+ *
+ * It earns the markdown twin at `<url>.md` on the same terms, which is why one
+ * flag drives both props below — a twin with no original writing in it would be
+ * the same page, republished in a second format.
  */
 const indexable = Boolean(brief);
 
@@ -272,6 +292,7 @@ const reviewed = brief
 	description={description}
 	canonicalPath={canonicalPath}
 	noindex={!indexable}
+	markdown={indexable}
 	jsonLd={jsonLd}
 >
 	<nav class="crumbs" aria-label="Breadcrumb">
@@ -296,7 +317,18 @@ const reviewed = brief
 				{readerLinks.map((link, index) => (
 					<>
 						{index > 0 ? ' · ' : ''}
-						<a href={chapterPath(link.slug, bookUsfm, chapterId)}>
+						{/* `from` is "none" because this block only renders on a page
+						    with no scripture on it: the reader is not switching
+						    translation, they are leaving to find one. Worth the same
+						    event name either way — both answer which translation
+						    people pick, which is what DEFAULT_VERSION_ID and
+						    HUB_TRANSLATION_SLUGS currently guess at. */}
+						<a
+							href={chapterPath(link.slug, bookUsfm, chapterId)}
+							data-va="translation-switch"
+							data-va-to={link.slug}
+							data-va-from="none"
+						>
 							{link.label}
 						</a>
 					</>
@@ -328,7 +360,12 @@ const reviewed = brief
 								{otherVersions.map((link, index) => (
 									<>
 										{index > 0 ? ' · ' : ''}
-										<a href={chapterPath(link.slug, bookUsfm, chapterId)}>
+										<a
+											href={chapterPath(link.slug, bookUsfm, chapterId)}
+											data-va="translation-switch"
+											data-va-to={link.slug}
+											data-va-from={shownSlug}
+										>
 											{link.label}
 										</a>
 									</>

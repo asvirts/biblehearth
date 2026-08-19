@@ -8,6 +8,7 @@
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
+    "postbuild": "node scripts/indexnow.mjs --changed --if-production",
     "preview": "astro preview",
     "astro": "astro",
     "indexnow": "node scripts/indexnow.mjs",

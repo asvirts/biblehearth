@@ -1,0 +1,49 @@
+import type { APIRoute } from 'astro';
+import {
+	isCanonicalBookSlug,
+	isNumericChapter,
+	usfmFromBookSlug,
+} from '../../lib/bible/usfm';
+import { chapterBriefIndex, chapterStudyPath } from '../../lib/commentary';
+import {
+	chapterBriefMarkdown,
+	markdownNotFound,
+	markdownResponse,
+} from '../../lib/markdown';
+
+/**
+ * `/romans/8.md` — the study page's original writing, without the Scripture.
+ *
+ * Static `.md` beats the bare `[chapter]` segment in Astro's route ranking, the
+ * same way `/sitemap-bible/[version].xml` does, so this never shadows the page
+ * it mirrors.
+ */
+export const GET: APIRoute = async ({ params, site, url }) => {
+	const bookSlug = params.book;
+	const chapterId = params.chapter;
+	if (!bookSlug || !chapterId || !isNumericChapter(chapterId)) {
+		return markdownNotFound();
+	}
+
+	const bookUsfm = usfmFromBookSlug(bookSlug);
+	if (!bookUsfm) {
+		return markdownNotFound();
+	}
+
+	// The twin inherits the page's alias problem, so it inherits the fix: see
+	// isCanonicalBookSlug. `/psa/28.md` is a redirect, not a second copy.
+	if (!isCanonicalBookSlug(bookSlug, bookUsfm)) {
+		const canonical = `${chapterStudyPath(bookUsfm, chapterId)}.md`;
+		return Response.redirect(new URL(canonical, site ?? url), 301);
+	}
+
+	// No bounds check and no upstream call: a brief cannot exist for a chapter
+	// that does not, so the lookup below is the only gate this route needs.
+	const briefs = await chapterBriefIndex();
+	const brief = briefs.get(`${bookUsfm}.${chapterId}`);
+	if (!brief) {
+		return markdownNotFound();
+	}
+
+	return markdownResponse(await chapterBriefMarkdown(brief, site));
+};

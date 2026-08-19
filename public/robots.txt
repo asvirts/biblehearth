@@ -2,13 +2,33 @@
 #
 # Crawl-delay is here because an uncached page is not just a render — it is a
 # licensed Scripture fetch against a rate-limited app key. Googlebot ignores the
-# directive and paces itself from Search Console; Bing, Ahrefs Site Audit and
-# most others honour it.
+# directive and paces itself from Search Console; Ahrefs Site Audit and most
+# others honour it. Bingbot honours it too, which is why it has its own group
+# below rather than being paced from here.
 User-agent: *
 Allow: /
 Disallow: /read
 Disallow: /api/
 Crawl-delay: 5
+
+# Bingbot, paced faster than the long tail.
+#
+# Bing's guidelines treat crawl capacity as something it allocates from site
+# health and crawl value, and ask that pacing be shaped in Bing Webmaster Tools
+# (Crawl Control, which is hour-by-hour) rather than flattened by robots.txt.
+# Five seconds is a ceiling of ~17k URLs a day applied to a crawler we actively
+# want; one second is still bounded — well under what the app key can absorb —
+# and lets a newly briefed chapter be picked up the day it ships.
+#
+# The two Disallow lines are repeated on purpose, not by accident. Robots.txt
+# group matching is winner-takes-all: the moment a crawler finds a group naming
+# it, the `*` group stops applying entirely. Without these lines here, giving
+# Bingbot its own group would have handed it /read and /api/.
+User-agent: bingbot
+Allow: /
+Disallow: /read
+Disallow: /api/
+Crawl-delay: 1
 
 # Backlink and marketing crawlers.
 #
