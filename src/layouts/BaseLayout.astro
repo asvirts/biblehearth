@@ -3,6 +3,7 @@ import '../styles/global.css';
 import '../styles/scripture.css';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import Analytics from '../components/Analytics.astro';
 import { BING_SITE_VERIFICATION } from 'astro:env/server';
 import { absoluteUrl } from '../lib/bible/urls';
 
@@ -112,5 +113,6 @@ const documents = jsonLd ? (Array.isArray(jsonLd) ? jsonLd : [jsonLd]) : [];
 			<slot />
 		</main>
 		<Footer />
+		<Analytics />
 	</body>
 </html>

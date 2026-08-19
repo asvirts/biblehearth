@@ -113,3 +113,32 @@ set in Vercel — the `content` value of the `msvalidate.01` tag it offers — w
 BaseLayout emits into every page. It is also what unlocks Crawl Control, which
 is where Bingbot's pace belongs; `robots.txt` gives it a `Crawl-delay: 1` group
 in the meantime, separate from the slower one the long tail gets.
+
+## Custom events
+
+Vercel Web Analytics is on (`webAnalytics` in `astro.config.mjs`), and custom
+events are declared in markup rather than written in code: `data-va` names an
+event that fires on click, `data-va-view` one that fires when the element first
+reaches the viewport, and every `data-va-*` beside them becomes a property.
+`src/components/Analytics.astro` is the one delegated listener behind all of
+that, and its frontmatter is where the rules live — the script itself is bare,
+because an inline script is served to every reader on every page.
+
+Two rules decide whether an event is worth adding. **Never record what the URL
+already says**: the page view carries the path, so an event earns its keep only
+by carrying the dimension the path is missing. And **two properties, no more** —
+the Pro plan's ceiling, where a third is dropped rather than reported. Events
+are billed like page views, so nothing fires on a timer or on scroll, and a view
+event fires once per page load.
+
+Client-side is deliberate too. Most of what requests this site is a crawler, and
+the beacon only runs where there is a JavaScript engine, so these counts are
+people in a way nothing measured on the server can be.
+
+Three are wired. `chapter-tile` carries `briefed`, and is the only demand signal
+a chapter with no brief has — those pages are `noindex`, so nobody reaches them
+from search and their traffic says nothing. `brief-end` fires when the FAQ
+section comes into view, which is a reader who stayed to the end of our own
+writing; its `text` property is there to answer whether spending a passage fetch
+on the full chapter changes that. `translation-switch` measures what
+`DEFAULT_VERSION_ID` and `HUB_TRANSLATION_SLUGS` currently guess at.

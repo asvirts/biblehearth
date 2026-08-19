@@ -152,7 +152,19 @@ const bookSlug = bookSlugFromUsfm(bookUsfm ?? '');
 	) : null
 }
 
-<section class="chapter-faq" id="questions">
+{/* The last section of our own writing, so the moment it comes into view is
+    the closest thing this site has to a conversion: the reader came for the
+    chapter and stayed through the summary, the outline and the rest. `text`
+    rides along because it answers a question nothing else can — whether
+    spending a metered passage fetch on the full chapter changes how far down
+    the page people get. */}
+<section
+	class="chapter-faq"
+	id="questions"
+	data-va-view="brief-end"
+	data-va-chapter={`${bookSlug}/${chapterId}`}
+	data-va-text={hasFullText ? 'yes' : 'no'}
+>
 	<h2>Common questions about {reference}</h2>
 	{
 		data.faqs.map((faq) => (

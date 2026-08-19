@@ -317,7 +317,18 @@ const reviewed = brief
 				{readerLinks.map((link, index) => (
 					<>
 						{index > 0 ? ' · ' : ''}
-						<a href={chapterPath(link.slug, bookUsfm, chapterId)}>
+						{/* `from` is "none" because this block only renders on a page
+						    with no scripture on it: the reader is not switching
+						    translation, they are leaving to find one. Worth the same
+						    event name either way — both answer which translation
+						    people pick, which is what DEFAULT_VERSION_ID and
+						    HUB_TRANSLATION_SLUGS currently guess at. */}
+						<a
+							href={chapterPath(link.slug, bookUsfm, chapterId)}
+							data-va="translation-switch"
+							data-va-to={link.slug}
+							data-va-from="none"
+						>
 							{link.label}
 						</a>
 					</>
@@ -349,7 +360,12 @@ const reviewed = brief
 								{otherVersions.map((link, index) => (
 									<>
 										{index > 0 ? ' · ' : ''}
-										<a href={chapterPath(link.slug, bookUsfm, chapterId)}>
+										<a
+											href={chapterPath(link.slug, bookUsfm, chapterId)}
+											data-va="translation-switch"
+											data-va-to={link.slug}
+											data-va-from={shownSlug}
+										>
 											{link.label}
 										</a>
 									</>

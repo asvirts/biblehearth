@@ -116,11 +116,22 @@ const description = `The book of ${bookName}, chapter by chapter: what each of i
 		<h2>Chapters in {bookName}</h2>
 		<div class="chapter-grid">
 			{
+				/* `briefed` is the whole reason this is an event rather than a
+				   page view. An un-briefed chapter is `noindex`, so nobody
+				   reaches it from search and its traffic says nothing about
+				   demand — this click is the only signal there is for a chapter
+				   nobody has written up yet, and it ranks the backlog by what
+				   readers actually reach for. */
+			}
+			{
 				chapters.map((chapter) => (
 					<a
 						class:list={['tile', { 'tile-briefed': Boolean(chapter.brief) }]}
 						href={chapterStudyPath(bookUsfm, chapter.id)}
 						title={chapter.brief?.data.title}
+						data-va="chapter-tile"
+						data-va-chapter={`${bookSlug}/${chapter.id}`}
+						data-va-briefed={chapter.brief ? 'yes' : 'no'}
 					>
 						{chapter.id}
 					</a>
