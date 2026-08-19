@@ -12,8 +12,9 @@ import ReaderToolbar from '../../../../../components/ReaderToolbar.astro';
 import RelatedQuestions from '../../../../../components/RelatedQuestions.astro';
 import StatusMessage from '../../../../../components/StatusMessage.astro';
 import { verseAnswerIndex } from '../../../../../lib/answers';
-import { chapterBriefIndex, commentaryPath } from '../../../../../lib/commentary';
+import { chapterBriefIndex, chapterStudyPath } from '../../../../../lib/commentary';
 import {
+	chapterBookTitle,
 	chapterUsfm,
 	isNumericChapter,
 	usfmFromBookSlug,
@@ -119,7 +120,9 @@ const chapterAnswers = book ? (answersByChapter.get(chapterKey) ?? []) : [];
 // a written summary is waiting or only the commentary notes.
 const chapterBrief = book ? briefs.get(chapterKey) : undefined;
 
-const reference = book ? `${book.title} ${chapterId}` : 'Chapter';
+const reference = book
+	? `${chapterBookTitle(book.id, book.title, version?.language_tag)} ${chapterId}`
+	: 'Chapter';
 const abbreviation = version ? displayAbbreviation(version) : '';
 const heading =
 	book && version ? `${reference} (${abbreviation})` : 'Chapter';
@@ -203,7 +206,7 @@ const description = snippet
 							? `${chapterBrief.data.title} — a plain-English summary, an outline of what happens where, the words that need explaining, and notes from three commentaries.`
 							: `A verse-by-verse study of ${reference}: what the chapter is doing, and what three commentaries say about it. Written to be readable if this is new to you.`}
 					</p>
-					<a class="cta" href={commentaryPath(book.id, chapterId)}>
+					<a class="cta" href={chapterStudyPath(book.id, chapterId)}>
 						Read the {reference} commentary
 					</a>
 				</section>

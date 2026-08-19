@@ -26,7 +26,7 @@ export function pageSitemapPaths(versionSlugs: readonly string[]): string[] {
 		'/',
 		'/verse-of-the-day',
 		'/versions',
-		'/commentary',
+		'/study',
 		'/attributions',
 		...unique.map(versionPath),
 	];

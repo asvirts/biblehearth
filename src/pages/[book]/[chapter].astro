@@ -1,47 +1,52 @@
 ---
 import type { BiblePassage, BibleVersion } from '@youversion/platform-core';
 import { render } from 'astro:content';
-import BaseLayout from '../../../layouts/BaseLayout.astro';
-import ChapterBriefBody from '../../../components/ChapterBriefBody.astro';
-import CommentarySourceBlock from '../../../components/CommentarySourceBlock.astro';
-import ExternalStudyLinks from '../../../components/ExternalStudyLinks.astro';
-import RelatedQuestions from '../../../components/RelatedQuestions.astro';
-import StatusMessage from '../../../components/StatusMessage.astro';
-import { verseAnswerIndex } from '../../../lib/answers';
-import { chapterInRange } from '../../../lib/bible/chapters';
-import { truncateWords } from '../../../lib/bible/text';
-import { loadPassages } from '../../../lib/bible/passages';
-import { HUB_TRANSLATION_SLUGS } from '../../../lib/bible/translations';
-import { chapterPath } from '../../../lib/bible/urls';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ChapterBriefBody from '../../components/ChapterBriefBody.astro';
+import CommentarySourceBlock from '../../components/CommentarySourceBlock.astro';
+import CopyrightNotice from '../../components/CopyrightNotice.astro';
+import ExternalStudyLinks from '../../components/ExternalStudyLinks.astro';
+import Passage from '../../components/Passage.astro';
+import RelatedQuestions from '../../components/RelatedQuestions.astro';
+import StatusMessage from '../../components/StatusMessage.astro';
+import { verseAnswerIndex } from '../../lib/answers';
+import { chapterInRange } from '../../lib/bible/chapters';
+import { chapterReference } from '../../lib/bible/refs';
+import { truncateWords } from '../../lib/bible/text';
+import { loadPassages } from '../../lib/bible/passages';
+import { HUB_TRANSLATION_SLUGS } from '../../lib/bible/translations';
+import { chapterPath } from '../../lib/bible/urls';
 import {
 	bookNameFromUsfm,
 	isNumericChapter,
 	usfmFromBookSlug,
-} from '../../../lib/bible/usfm';
+} from '../../lib/bible/usfm';
 import {
+	STUDY_HUB_PATH,
+	bookStudyPath,
 	chapterBriefIndex,
-	commentaryBookPath,
+	chapterStudyPath,
 	commentaryGist,
-	commentaryPath,
 	externalStudyLinks,
 	loadChapterCommentaries,
 	type ChapterBrief,
 	type ChapterCommentary,
-} from '../../../lib/commentary';
-import { READER_CACHE_CONTROL, setCacheControl } from '../../../lib/http';
+} from '../../lib/commentary';
+import { READER_CACHE_CONTROL, setCacheControl } from '../../lib/http';
 import {
 	articleJsonLd,
 	breadcrumbJsonLd,
 	creativeWorkJsonLd,
 	faqJsonLd,
-} from '../../../lib/seo';
-import { listTopics, topicPath } from '../../../lib/topics';
+} from '../../lib/seo';
+import { listTopics, topicPath } from '../../lib/topics';
 import {
 	displayAbbreviation,
 	getDefaultVersion,
+	getPassageHtml,
 	listEnglishVersions,
 	versionSlug,
-} from '../../../lib/youversion/api';
+} from '../../lib/youversion/api';
 
 const bookSlug = Astro.params.book;
 const chapterId = Astro.params.chapter;
@@ -51,16 +56,16 @@ if (!bookSlug || !chapterId || !isNumericChapter(chapterId)) {
 }
 
 const bookUsfm = usfmFromBookSlug(bookSlug);
-// Bounds-checked here rather than downstream, so `/commentary/genesis/51` is a
-// 404 without spending three upstream requests to discover it is empty.
+// Bounds-checked here rather than downstream, so `/genesis/51` is a 404
+// without spending three upstream requests to discover it is empty.
 if (!bookUsfm || !chapterInRange(bookUsfm, chapterId)) {
 	return Astro.rewrite('/404');
 }
 
 const usfm = `${bookUsfm}.${chapterId}`;
 const bookName = bookNameFromUsfm(bookUsfm);
-const reference = `${bookName} ${chapterId}`;
-const canonicalPath = commentaryPath(bookUsfm, chapterId);
+const reference = chapterReference(bookUsfm, chapterId);
+const canonicalPath = chapterStudyPath(bookUsfm, chapterId);
 
 /**
  * The commentaries come first and they are the existence check.
@@ -90,11 +95,19 @@ if (commentaries.length === 0 && !brief) {
 // last means the reader meets the structured summary before the aside.
 const Body = brief ? (await render(brief)).Content : null;
 
-// Scripture is a nice-to-have on this page, never a requirement. Key verses
-// render without their text rather than taking the page down.
+/**
+ * Scripture is a nice-to-have here, never a requirement — every fetch below is
+ * allowed to fail and the page still renders.
+ *
+ * That is a deliberate inversion of the reader page, where the text *is* the
+ * page. Here the text is one section among nine, so a throttled upstream costs
+ * the reader a paragraph rather than the whole answer.
+ */
 let version: BibleVersion | null = null;
 let readerLinks: { slug: string; label: string }[] = [];
 let passages = new Map<string, BiblePassage | null>();
+let chapterText: BiblePassage | null = null;
+let shownSlug = '';
 
 try {
 	const [defaultVersion, catalog] = await Promise.all([
@@ -102,6 +115,7 @@ try {
 		listEnglishVersions(),
 	]);
 	version = defaultVersion;
+	shownSlug = defaultVersion ? versionSlug(defaultVersion, catalog) : '';
 
 	readerLinks = HUB_TRANSLATION_SLUGS.map((wanted) =>
 		catalog.find((item) => versionSlug(item, catalog) === wanted),
@@ -113,15 +127,46 @@ try {
 			label: displayAbbreviation(item),
 		}));
 
-	if (brief?.data.keyVerses.length && version) {
-		passages = await loadPassages(
-			version.id,
-			brief.data.keyVerses.map((verse) => verse.usfm),
-		);
-	}
+	/**
+	 * The full chapter, but only on a page that carries a brief.
+	 *
+	 * Someone searching "Psalm 28" wants to read Psalm 28, and sending them to a
+	 * different URL for the one thing they asked for is how this page lost the
+	 * query to BibleGateway. So a briefed chapter renders in full.
+	 *
+	 * The other eleven hundred chapters do not, and that is the same call made
+	 * for the same reason as `indexable` below: those pages are `noindex`, so
+	 * the fetch would buy no ranking, and it is precisely the URLs nobody has
+	 * requested yet that a crawler on a cold cache turns into a rate-limit
+	 * incident. Write a brief and the chapter earns its text along with its
+	 * place in the index.
+	 */
+	[chapterText, passages] = await Promise.all([
+		brief && version
+			? // `headings: true, notes: true` is not a display preference — it is
+				// the reader page's options, and the cache key is built from them
+				// (see getPassageHtml). Ask for anything else and this becomes a
+				// second entry for the same chapter that pages/api/warm.ts does not
+				// fill, so every crawl hits it cold. Which is the exact shape of the
+				// 2026-08-18 incident the warmer exists to prevent.
+				getPassageHtml(version.id, usfm, {
+					headings: true,
+					notes: true,
+				}).catch(() => null)
+			: null,
+		brief?.data.keyVerses.length && version
+			? loadPassages(
+					version.id,
+					brief.data.keyVerses.map((verse) => verse.usfm),
+				)
+			: passages,
+	]);
 } catch {
-	// Reader links and key-verse text drop out; everything else still renders.
+	// Reader links and scripture drop out; everything else still renders.
 }
+
+// A version is not an alternative to itself.
+const otherVersions = readerLinks.filter((link) => link.slug !== shownSlug);
 
 setCacheControl(Astro.response, READER_CACHE_CONTROL);
 
@@ -184,9 +229,9 @@ const citations = commentaries.map((entry) => ({
 const jsonLd: Record<string, unknown>[] = [
 	breadcrumbJsonLd(Astro.site, [
 		{ name: 'BibleHearth', path: '/' },
-		{ name: 'Commentary', path: '/commentary' },
-		{ name: bookName, path: commentaryBookPath(bookUsfm) },
-		{ name: `Chapter ${chapterId}`, path: canonicalPath },
+		{ name: 'Bible study', path: STUDY_HUB_PATH },
+		{ name: bookName, path: bookStudyPath(bookUsfm) },
+		{ name: reference, path: canonicalPath },
 	]),
 ];
 
@@ -232,17 +277,20 @@ const reviewed = brief
 	<nav class="crumbs" aria-label="Breadcrumb">
 		<a href="/">Home</a>
 		<span>/</span>
-		<a href="/commentary">Commentary</a>
+		<a href={STUDY_HUB_PATH}>Bible study</a>
 		<span>/</span>
-		<a href={commentaryBookPath(bookUsfm)}>{bookName}</a>
+		<a href={bookStudyPath(bookUsfm)}>{bookName}</a>
 		<span>/</span>
 		<span>{chapterId}</span>
 	</nav>
 
 	<h1>{heading}</h1>
 
+	{/* Without the chapter on the page these links are the only way to read it,
+	    so they sit above the fold. With it, they belong under the text as an
+	    afterthought — see the scripture slot below. */}
 	{
-		readerLinks.length ? (
+		!chapterText && readerLinks.length ? (
 			<p class="read-in">
 				Read {reference} in{' '}
 				{readerLinks.map((link, index) => (
@@ -265,7 +313,32 @@ const reviewed = brief
 				reference={reference}
 				relatedTopics={relatedTopics}
 				firstSourceAnchor={firstSourceAnchor}
-			/>
+				hasFullText={Boolean(chapterText)}
+			>
+				{chapterText ? (
+					<section class="chapter-text" id="text" slot="scripture">
+						<h2>
+							{reference}
+							{version ? ` (${displayAbbreviation(version)})` : ''}
+						</h2>
+						<Passage html={chapterText.content} />
+						{otherVersions.length ? (
+							<p class="read-in">
+								Read {reference} in another translation:{' '}
+								{otherVersions.map((link, index) => (
+									<>
+										{index > 0 ? ' · ' : ''}
+										<a href={chapterPath(link.slug, bookUsfm, chapterId)}>
+											{link.label}
+										</a>
+									</>
+								))}
+							</p>
+						) : null}
+						{version ? <CopyrightNotice version={version} /> : null}
+					</section>
+				) : null}
+			</ChapterBriefBody>
 		) : (
 			<p class="lede">
 				{reference} has not been written up in our own words yet. Below are the
@@ -339,7 +412,7 @@ const reviewed = brief
 	<nav class="pager">
 		{
 			Number(chapterId) > 1 ? (
-				<a href={commentaryPath(bookUsfm, Number(chapterId) - 1)}>
+				<a href={chapterStudyPath(bookUsfm, Number(chapterId) - 1)}>
 					{bookName} {Number(chapterId) - 1}
 				</a>
 			) : (
@@ -348,7 +421,7 @@ const reviewed = brief
 		}
 		{
 			chapterInRange(bookUsfm, Number(chapterId) + 1) ? (
-				<a href={commentaryPath(bookUsfm, Number(chapterId) + 1)}>
+				<a href={chapterStudyPath(bookUsfm, Number(chapterId) + 1)}>
 					{bookName} {Number(chapterId) + 1}
 				</a>
 			) : (

@@ -132,6 +132,40 @@ export function bookNameFromUsfm(usfm: string): string {
 	return byUsfm.get(id as BookId)?.name ?? id;
 }
 
+/**
+ * The book name as it reads in front of a chapter number.
+ *
+ * "Psalms" is the book; one of them is a "Psalm". Every publisher prints
+ * "Psalm 23" and every reader types "psalm 23" — "Psalms 23" is a form nobody
+ * writes, and it was the h2, the FAQ headings and the meta description on 150
+ * of this site's chapters, which happen to be its highest-demand ones. No other
+ * book of the Bible differs between the two positions, so this is the whole of
+ * the special case.
+ */
+export function bookNameForChapter(usfm: string): string {
+	return usfm.toUpperCase() === 'PSA' ? 'Psalm' : bookNameFromUsfm(usfm);
+}
+
+/**
+ * The same rule, applied to a title that came from the Bible index rather than
+ * from the table above.
+ *
+ * Reader pages show the publisher's own book title so a non-English version
+ * reads in its own language. We have no grammar for singularising a title in a
+ * language we do not know, so the rule is scoped to English and everything else
+ * keeps the publisher's wording untouched.
+ */
+export function chapterBookTitle(
+	bookId: string,
+	title: string,
+	languageTag = 'en',
+): string {
+	return bookId.toUpperCase() === 'PSA' &&
+		languageTag.toLowerCase().startsWith('en')
+		? 'Psalm'
+		: title;
+}
+
 export function usfmFromBookSlug(slug: string): string | null {
 	const exact = bySlug.get(slug);
 	if (exact) {

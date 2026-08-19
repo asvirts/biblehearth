@@ -18,7 +18,7 @@ import CopyrightNotice from '../components/CopyrightNotice.astro';
 import RelatedQuestions from '../components/RelatedQuestions.astro';
 import StatusMessage from '../components/StatusMessage.astro';
 import {
-	bookNameFromUsfm,
+	bookNameForChapter,
 	bookSlugFromUsfm,
 	isNumericChapter,
 	isNumericVerse,
@@ -110,7 +110,7 @@ const abbreviation = version ? displayAbbreviation(version) : '';
 const reference =
 	passage?.reference ??
 	(bookUsfm && chapterId
-		? `${bookNameFromUsfm(bookUsfm)} ${chapterId}${parsed?.verse ? `:${parsed.verse}` : ''}`
+		? `${bookNameForChapter(bookUsfm)} ${chapterId}${parsed?.verse ? `:${parsed.verse}` : ''}`
 		: '');
 
 const chapterHref =
@@ -226,7 +226,7 @@ const description =
 					<p>
 						{chapterHref ? (
 							<a href={chapterHref}>
-								Read {bookUsfm ? bookNameFromUsfm(bookUsfm) : 'the'} {chapterId} in full
+								Read {bookUsfm ? bookNameForChapter(bookUsfm) : 'the'} {chapterId} in full
 							</a>
 						) : null}
 						{chapterHref && compareHref ? ' · ' : null}

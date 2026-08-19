@@ -740,6 +740,31 @@ h1 {
 	color: var(--muted);
 }
 
+/*
+ * The chapter itself on a study page.
+ *
+ * Raised, so that on a page of nine sections the one a reader searched for
+ * reads as the page's subject rather than as another block of commentary. The
+ * copyright notice sits inside it, next to the text it covers.
+ */
+.chapter-text {
+	margin-block: 0 2.5rem;
+	padding: clamp(1rem, 4vw, 1.5rem);
+	background: var(--bg-raised);
+	border: 1px solid var(--line);
+	border-radius: clamp(0.8rem, 3vw, 1rem);
+}
+.chapter-text > h2 {
+	margin-block-start: 0;
+}
+.chapter-text .read-in {
+	margin-block-end: 0;
+	font-size: 0.95rem;
+}
+.chapter-text .copyright {
+	margin-top: 1.25rem;
+}
+
 /* Chapters with original writing, marked in the book grid. */
 .tile-briefed {
 	border-color: var(--ember);

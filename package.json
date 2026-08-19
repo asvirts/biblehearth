@@ -10,8 +10,10 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
+    "indexnow": "node scripts/indexnow.mjs",
     "questions:audit": "node scripts/questions-audit.mjs",
-    "questions:export": "node scripts/questions-export.mjs"
+    "questions:export": "node scripts/questions-export.mjs",
+    "chapter:research": "node scripts/chapter-research.mjs"
   },
   "dependencies": {
     "@astrojs/vercel": "^11.0.5",

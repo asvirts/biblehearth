@@ -1,27 +1,28 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
 import {
 	NEW_TESTAMENT_BOOKS,
 	OLD_TESTAMENT_BOOKS,
 	TOTAL_CHAPTERS,
 	chapterCount,
-} from '../../lib/bible/chapters';
-import { bookNameFromUsfm } from '../../lib/bible/usfm';
+} from '../lib/bible/chapters';
+import { bookNameFromUsfm } from '../lib/bible/usfm';
 import {
 	COMMENTARY_SOURCES,
-	commentaryBookPath,
-	commentaryPath,
+	STUDY_HUB_PATH,
+	bookStudyPath,
+	chapterStudyPath,
 	listChapterBriefs,
-} from '../../lib/commentary';
-import { READER_CACHE_CONTROL, setCacheControl } from '../../lib/http';
-import { breadcrumbJsonLd, itemListJsonLd } from '../../lib/seo';
-import { absoluteUrl } from '../../lib/bible/urls';
+} from '../lib/commentary';
+import { READER_CACHE_CONTROL, setCacheControl } from '../lib/http';
+import { breadcrumbJsonLd, itemListJsonLd } from '../lib/seo';
+import { absoluteUrl } from '../lib/bible/urls';
 
 setCacheControl(Astro.response, READER_CACHE_CONTROL);
 
 const briefs = await listChapterBriefs();
 
-const title = 'Bible Commentary — Free Chapter-by-Chapter Study Notes';
+const title = 'Bible Commentary — Every Chapter of the Bible, Explained Free';
 const description = `Free commentary on all ${TOTAL_CHAPTERS} chapters of the Bible: what each chapter says, what it means, and notes from three commentaries, in plain English.`;
 
 const books = [
@@ -33,17 +34,17 @@ const books = [
 <BaseLayout
 	title={title}
 	description={description}
-	canonicalPath="/commentary"
+	canonicalPath={STUDY_HUB_PATH}
 	jsonLd={[
 		breadcrumbJsonLd(Astro.site, [
 			{ name: 'BibleHearth', path: '/' },
-			{ name: 'Commentary', path: '/commentary' },
+			{ name: 'Bible study', path: STUDY_HUB_PATH },
 		]),
 		itemListJsonLd({
 			name: 'Bible commentary by book',
 			items: [...OLD_TESTAMENT_BOOKS, ...NEW_TESTAMENT_BOOKS].map((id) => ({
 				name: bookNameFromUsfm(id),
-				url: absoluteUrl(Astro.site, commentaryBookPath(id)),
+				url: absoluteUrl(Astro.site, bookStudyPath(id)),
 			})),
 		}),
 	]}
@@ -51,10 +52,10 @@ const books = [
 	<nav class="crumbs" aria-label="Breadcrumb">
 		<a href="/">Home</a>
 		<span>/</span>
-		<span>Commentary</span>
+		<span>Bible study</span>
 	</nav>
 
-	<h1>Bible Commentary</h1>
+	<h1>Bible Commentary and Chapter Summaries</h1>
 
 	<p class="lede">
 		A study page for every chapter of the Bible. Each one lays the chapter out in
@@ -77,7 +78,7 @@ const books = [
 						const [book, chapter] = brief.data.usfm.split('.');
 						return (
 							<li>
-								<a href={commentaryPath(book ?? '', chapter ?? '1')}>
+								<a href={chapterStudyPath(book ?? '', chapter ?? '1')}>
 									{brief.data.title}
 								</a>
 							</li>
@@ -94,7 +95,7 @@ const books = [
 				<h2>{group.heading}</h2>
 				<div class="book-grid">
 					{group.ids.map((id) => (
-						<a class="tile" href={commentaryBookPath(id)}>
+						<a class="tile" href={bookStudyPath(id)}>
 							{bookNameFromUsfm(id)}
 							<span class="tile-kicker">
 								{chapterCount(id)} {chapterCount(id) === 1 ? 'chapter' : 'chapters'}

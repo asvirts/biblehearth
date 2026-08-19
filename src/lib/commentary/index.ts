@@ -8,15 +8,26 @@ export * from './links';
 export * from './sources';
 export { commentaryParagraphs, commentaryPlainText, escapeHtml } from './text';
 
-export function commentaryBookPath(bookUsfm: string): string {
-	return `/commentary/${bookSlugFromUsfm(bookUsfm)}`;
+/**
+ * The hub every study page hangs off.
+ *
+ * Books and chapters live at the site root — `/psalms`, `/psalms/28` — because
+ * the page that carries the chapter, the summary and the commentary is the
+ * answer to "Psalm 28", and a `/commentary/` prefix narrowed that promise to the
+ * one part of the page a reader is least likely to have searched for. The hub
+ * keeps a path of its own because the root is now spoken for by 66 book slugs.
+ */
+export const STUDY_HUB_PATH = '/study';
+
+export function bookStudyPath(bookUsfm: string): string {
+	return `/${bookSlugFromUsfm(bookUsfm)}`;
 }
 
-export function commentaryPath(
+export function chapterStudyPath(
 	bookUsfm: string,
 	chapter: string | number,
 ): string {
-	return `${commentaryBookPath(bookUsfm)}/${chapter}`;
+	return `${bookStudyPath(bookUsfm)}/${chapter}`;
 }
 
 /** Published briefs. Drafts are excluded from every surface. */

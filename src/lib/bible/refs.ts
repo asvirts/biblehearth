@@ -1,4 +1,4 @@
-import { bookNameFromUsfm } from './usfm';
+import { bookNameForChapter, bookNameFromUsfm } from './usfm';
 
 /**
  * Expand a reference into the individual verses it covers.
@@ -41,11 +41,20 @@ export function formatReference(usfm: string): string {
 	if (!book) {
 		return usfm;
 	}
-	const name = bookNameFromUsfm(book);
 	if (!chapter) {
-		return name;
+		return bookNameFromUsfm(book);
 	}
+	// `Psalms` on its own, `Psalm 23` in front of a number. See usfm.ts.
+	const name = bookNameForChapter(book);
 	return verse ? `${name} ${chapter}:${verse}` : `${name} ${chapter}`;
+}
+
+/** "Psalm 28", "Genesis 1" — a chapter written the way a reader writes it. */
+export function chapterReference(
+	bookUsfm: string,
+	chapter: string | number,
+): string {
+	return `${bookNameForChapter(bookUsfm)} ${chapter}`;
 }
 
 /**
