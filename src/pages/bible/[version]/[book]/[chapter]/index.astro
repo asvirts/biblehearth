@@ -16,6 +16,7 @@ import { chapterBriefIndex, chapterStudyPath } from '../../../../../lib/commenta
 import {
 	chapterBookTitle,
 	chapterUsfm,
+	isCanonicalBookSlug,
 	isNumericChapter,
 	usfmFromBookSlug,
 } from '../../../../../lib/bible/usfm';
@@ -54,6 +55,17 @@ if (!requestedSlug || !bookSlug || !chapterId || !isNumericChapter(chapterId)) {
 const bookUsfm = usfmFromBookSlug(bookSlug);
 if (!bookUsfm) {
 	return Astro.rewrite('/404');
+}
+
+/**
+ * Ahead of `resolveVersion` deliberately, not folded into the version redirect
+ * below: the book spelling is knowable from the URL alone, so an aliased path
+ * costs no upstream call to turn away. A URL that is aliased in both segments
+ * takes two hops, which is the price of not spending a licensed fetch to
+ * discover that the first hop was avoidable.
+ */
+if (!isCanonicalBookSlug(bookSlug, bookUsfm)) {
+	return Astro.redirect(chapterPath(requestedSlug, bookUsfm, chapterId), 301);
 }
 
 let version: BibleVersion | null = null;

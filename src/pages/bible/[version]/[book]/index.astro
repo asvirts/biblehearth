@@ -4,7 +4,10 @@ import BaseLayout from '../../../../layouts/BaseLayout.astro';
 import ChapterGrid from '../../../../components/ChapterGrid.astro';
 import CopyrightNotice from '../../../../components/CopyrightNotice.astro';
 import StatusMessage from '../../../../components/StatusMessage.astro';
-import { usfmFromBookSlug } from '../../../../lib/bible/usfm';
+import {
+	isCanonicalBookSlug,
+	usfmFromBookSlug,
+} from '../../../../lib/bible/usfm';
 import { bookPath, versionPath } from '../../../../lib/bible/urls';
 import { READER_CACHE_CONTROL, setPageHeaders } from '../../../../lib/http';
 import { breadcrumbJsonLd } from '../../../../lib/seo';
@@ -26,6 +29,12 @@ if (!requestedSlug || !bookSlug) {
 const bookUsfm = usfmFromBookSlug(bookSlug);
 if (!bookUsfm) {
 	return Astro.rewrite('/404');
+}
+
+// Ahead of the version lookup for the same reason as the chapter route: an
+// aliased book spelling is answerable from the URL alone.
+if (!isCanonicalBookSlug(bookSlug, bookUsfm)) {
+	return Astro.redirect(bookPath(requestedSlug, bookUsfm), 301);
 }
 
 let version: BibleVersion | null = null;

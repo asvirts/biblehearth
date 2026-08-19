@@ -9,6 +9,7 @@ import { bookStudyPath } from '../../../../lib/commentary';
 import {
 	bookNameForChapter,
 	bookNameFromUsfm,
+	isCanonicalBookSlug,
 	isNumericChapter,
 	isNumericVerse,
 	usfmFromBookSlug,
@@ -22,6 +23,7 @@ import {
 import {
 	absoluteUrl,
 	chapterPath,
+	verseHubPath,
 	versePath,
 	versionPath,
 } from '../../../../lib/bible/urls';
@@ -60,6 +62,21 @@ if (!bookUsfm) {
 }
 
 const usfm = verseUsfm(bookUsfm, chapterId, verseId);
+
+/**
+ * The one route where the alias was not merely duplicated but unconsolidated:
+ * `/verse/psa/28/1` and `/verse/psalms/28/1` each pointed their canonical tag
+ * at themselves, so nothing told a crawler the two were one page. These hubs
+ * are also the 594 URLs the site actively submits, which made it the worst
+ * place in the site to leave it.
+ */
+if (!isCanonicalBookSlug(bookSlug, bookUsfm)) {
+	const canonical = verseHubPath(usfm);
+	if (canonical) {
+		return Astro.redirect(canonical, 301);
+	}
+}
+
 const reference = `${bookNameForChapter(bookUsfm)} ${chapterId}:${verseId}`;
 
 type Rendering = {

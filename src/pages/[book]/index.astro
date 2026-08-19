@@ -7,7 +7,11 @@ import {
 	chapterCount,
 	isCanonicalBook,
 } from '../../lib/bible/chapters';
-import { bookNameFromUsfm, usfmFromBookSlug } from '../../lib/bible/usfm';
+import {
+	bookNameFromUsfm,
+	isCanonicalBookSlug,
+	usfmFromBookSlug,
+} from '../../lib/bible/usfm';
 import {
 	STUDY_HUB_PATH,
 	bookStudyPath,
@@ -28,6 +32,12 @@ if (!bookSlug) {
 const bookUsfm = usfmFromBookSlug(bookSlug);
 if (!bookUsfm || !isCanonicalBook(bookUsfm)) {
 	return Astro.rewrite('/404');
+}
+
+// See isCanonicalBookSlug: `/psa` is the same book as `/psalms`, and only one
+// of the two is the page.
+if (!isCanonicalBookSlug(bookSlug, bookUsfm)) {
+	return Astro.redirect(bookStudyPath(bookUsfm), 301);
 }
 
 const bookName = bookNameFromUsfm(bookUsfm);

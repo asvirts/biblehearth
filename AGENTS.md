@@ -80,11 +80,25 @@ lives in the repo rather than in an env var, and `robots.txt` carves out an
 `Allow` for it under the blanket `AhrefsBot` block because Ahrefs verifies the
 key with that agent.
 
-Submit URLs that have **changed**:
+**Production deploys submit themselves.** `postbuild` runs
+`indexnow --changed --if-production`, which fingerprints everything under
+`src/content/` and compares it with the manifest the previous build left in
+`node_modules/.cache` — the one directory Vercel restores between builds. Only
+what actually changed is sent, plus the book page of any changed chapter brief.
+Nothing to do after shipping a brief.
+
+Two things it will not do: submit anything from a preview deploy, and submit
+anything when the manifest is missing. A cleared build cache re-records the
+baseline and sends nothing, because reading an empty baseline as "every page is
+new" is the mass submission this is all built to avoid. It also never fails a
+deploy — a failed submission just leaves the manifest unwritten, so the next
+build retries.
+
+Submit by hand when the change is not a content file:
 
 ```
 npm run indexnow -- /topics/anxiety /answers/what-is-grace
-npm run indexnow -- --sitemap --dry-run
+npm run indexnow -- --changed --dry-run
 ```
 
 `--sitemap` submits everything the sitemaps currently list. It is for seeding a
@@ -94,4 +108,8 @@ resubmitting unchanged pages buys a mass crawl for nothing — and a 429 from
 IndexNow on top of it. `--dry-run` prints the payload and sends nothing.
 
 Confirm receipt in [Bing Webmaster Tools](https://www.bing.com/webmasters) under
-Indexing → IndexNow.
+Indexing → IndexNow. Verifying the site there needs `BING_SITE_VERIFICATION`
+set in Vercel — the `content` value of the `msvalidate.01` tag it offers — which
+BaseLayout emits into every page. It is also what unlocks Crawl Control, which
+is where Bingbot's pace belongs; `robots.txt` gives it a `Crawl-delay: 1` group
+in the meantime, separate from the slower one the long tail gets.

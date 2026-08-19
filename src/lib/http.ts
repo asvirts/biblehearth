@@ -68,6 +68,28 @@ export function setCacheControl(
 }
 
 /**
+ * The editorial date of a page, as a validator a crawler can ask against.
+ *
+ * Bing's guidelines name `lastmod` and HTTP validators in the same breath as
+ * the things that let it detect a change without re-reading the page. The
+ * sitemap half of that is already honest — `<lastmod>` is emitted only where a
+ * real review date exists (see lib/sitemap.ts) — and this is the same rule
+ * applied to the response: only pages carrying a `reviewedAt` set it.
+ *
+ * Reader pages deliberately do not. Their content is scripture, which does not
+ * change, wrapped in markup that changes only on deploy — and a `Last-Modified`
+ * of "whenever we last shipped" is the fabricated freshness signal the sitemap
+ * comment already refuses to emit. Those pages get an ETag from the middleware
+ * instead, which is derived from the bytes and therefore cannot lie.
+ */
+export function setLastModified(
+	response: { headers: Headers },
+	date: Date,
+): void {
+	response.headers.set('Last-Modified', date.toUTCString());
+}
+
+/**
  * Cache and retry headers for a page that may have failed to load its data.
  *
  * `cacheControl` applies on success; anything else gets the error policy, plus

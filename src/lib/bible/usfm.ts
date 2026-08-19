@@ -180,6 +180,25 @@ export function usfmFromBookSlug(slug: string): string | null {
 	return null;
 }
 
+/**
+ * Is this the spelling of the book segment the site actually links with?
+ *
+ * `usfmFromBookSlug` accepts the raw USFM id as well as the slug, which is
+ * convenient for a hand-typed URL and for anything holding only an id. The cost
+ * is that `/psa/28` and `/psalms/28` are both live, and 102 of the 103 books
+ * have an id that differs from their slug — so every `[book]` route in the site
+ * exists twice.
+ *
+ * Callers redirect the alias rather than serving it. A canonical tag only asks
+ * a crawler to consolidate the two; a 301 tells it, which is what Bing's
+ * guidelines ask for and the only thing that stops the duplicate being crawled
+ * at all. The redirect target is always built by a path helper, so the
+ * canonical spelling has exactly one definition.
+ */
+export function isCanonicalBookSlug(slug: string, usfm: string): boolean {
+	return bookSlugFromUsfm(usfm) === slug;
+}
+
 export function isIntroChapter(chapterId: string): boolean {
 	return chapterId.toLowerCase().includes('intro');
 }

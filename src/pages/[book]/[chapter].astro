@@ -18,6 +18,7 @@ import { HUB_TRANSLATION_SLUGS } from '../../lib/bible/translations';
 import { chapterPath } from '../../lib/bible/urls';
 import {
 	bookNameFromUsfm,
+	isCanonicalBookSlug,
 	isNumericChapter,
 	usfmFromBookSlug,
 } from '../../lib/bible/usfm';
@@ -32,7 +33,11 @@ import {
 	type ChapterBrief,
 	type ChapterCommentary,
 } from '../../lib/commentary';
-import { READER_CACHE_CONTROL, setCacheControl } from '../../lib/http';
+import {
+	READER_CACHE_CONTROL,
+	setCacheControl,
+	setLastModified,
+} from '../../lib/http';
 import {
 	articleJsonLd,
 	breadcrumbJsonLd,
@@ -60,6 +65,12 @@ const bookUsfm = usfmFromBookSlug(bookSlug);
 // without spending three upstream requests to discover it is empty.
 if (!bookUsfm || !chapterInRange(bookUsfm, chapterId)) {
 	return Astro.rewrite('/404');
+}
+
+// `/psa/28` resolves to the same chapter as `/psalms/28`. Only one of them is
+// the page; see isCanonicalBookSlug.
+if (!isCanonicalBookSlug(bookSlug, bookUsfm)) {
+	return Astro.redirect(chapterStudyPath(bookUsfm, chapterId), 301);
 }
 
 const usfm = `${bookUsfm}.${chapterId}`;
@@ -169,6 +180,11 @@ try {
 const otherVersions = readerLinks.filter((link) => link.slug !== shownSlug);
 
 setCacheControl(Astro.response, READER_CACHE_CONTROL);
+// Only the briefed chapters have a date worth stating. The rest are `noindex`
+// commentary whose "last modified" would mean nothing but the deploy.
+if (brief) {
+	setLastModified(Astro.response, brief.data.reviewedAt);
+}
 
 const [allTopics, { byChapter: answersByChapter }] = await Promise.all([
 	listTopics(),

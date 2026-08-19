@@ -56,6 +56,25 @@ export default defineConfig({
 				optional: true,
 			}),
 			/**
+			 * Proves ownership of the domain to Bing Webmaster Tools.
+			 *
+			 * An env var rather than a file in public/, because unlike the
+			 * IndexNow key this string is not meant to be discoverable and is
+			 * not shared with anyone: it is a token tied to one Microsoft
+			 * account. Public access rather than secret because it is emitted
+			 * into every page's head, which is the whole point of it.
+			 *
+			 * Optional so a build without it still succeeds — the tag is simply
+			 * omitted. Paste the value from Bing Webmaster Tools → Add site →
+			 * "HTML Meta Tag" (the `content` attribute only) into the Vercel
+			 * project's environment variables.
+			 */
+			BING_SITE_VERIFICATION: envField.string({
+				context: 'server',
+				access: 'public',
+				optional: true,
+			}),
+			/**
 			 * The version the site reads in by default: the home page CTA, the
 			 * Verse of the Day, and anywhere a version is not named in the URL.
 			 * 111 is the NIV — the most-read English translation, so it is what

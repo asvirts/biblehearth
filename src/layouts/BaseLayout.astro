@@ -3,6 +3,7 @@ import '../styles/global.css';
 import '../styles/scripture.css';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import { BING_SITE_VERIFICATION } from 'astro:env/server';
 import { absoluteUrl } from '../lib/bible/urls';
 
 type Props = {
@@ -66,6 +67,11 @@ const documents = jsonLd ? (Array.isArray(jsonLd) ? jsonLd : [jsonLd]) : [];
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 		<meta name="description" content={description} />
+		{
+			BING_SITE_VERIFICATION ? (
+				<meta name="msvalidate.01" content={BING_SITE_VERIFICATION} />
+			) : null
+		}
 		{noindex ? <meta name="robots" content="noindex, follow" /> : null}
 		{canonical ? <link rel="canonical" href={canonical} /> : null}
 		{/* llms.txt link relations. `alternate` is how an agent finds the markdown

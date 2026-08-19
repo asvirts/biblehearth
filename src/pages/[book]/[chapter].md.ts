@@ -1,6 +1,10 @@
 import type { APIRoute } from 'astro';
-import { isNumericChapter, usfmFromBookSlug } from '../../lib/bible/usfm';
-import { chapterBriefIndex } from '../../lib/commentary';
+import {
+	isCanonicalBookSlug,
+	isNumericChapter,
+	usfmFromBookSlug,
+} from '../../lib/bible/usfm';
+import { chapterBriefIndex, chapterStudyPath } from '../../lib/commentary';
 import {
 	chapterBriefMarkdown,
 	markdownNotFound,
@@ -14,7 +18,7 @@ import {
  * same way `/sitemap-bible/[version].xml` does, so this never shadows the page
  * it mirrors.
  */
-export const GET: APIRoute = async ({ params, site }) => {
+export const GET: APIRoute = async ({ params, site, url }) => {
 	const bookSlug = params.book;
 	const chapterId = params.chapter;
 	if (!bookSlug || !chapterId || !isNumericChapter(chapterId)) {
@@ -24,6 +28,13 @@ export const GET: APIRoute = async ({ params, site }) => {
 	const bookUsfm = usfmFromBookSlug(bookSlug);
 	if (!bookUsfm) {
 		return markdownNotFound();
+	}
+
+	// The twin inherits the page's alias problem, so it inherits the fix: see
+	// isCanonicalBookSlug. `/psa/28.md` is a redirect, not a second copy.
+	if (!isCanonicalBookSlug(bookSlug, bookUsfm)) {
+		const canonical = `${chapterStudyPath(bookUsfm, chapterId)}.md`;
+		return Response.redirect(new URL(canonical, site ?? url), 301);
 	}
 
 	// No bounds check and no upstream call: a brief cannot exist for a chapter
