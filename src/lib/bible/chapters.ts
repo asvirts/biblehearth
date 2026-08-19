@@ -2,8 +2,8 @@
  * Chapter counts for the 66-book Protestant canon.
  *
  * Hard-coded rather than read from a Bible index, for two reasons. It makes
- * every commentary route validate its own bounds without an upstream call, so
- * `/commentary/genesis/51` is a 404 even while the scripture API is throttled.
+ * every study route validate its own bounds without an upstream call, so
+ * `/genesis/51` is a 404 even while the scripture API is throttled.
  * And it defines the canon these routes cover: the commentaries we republish
  * were written against this list, and Tyndale's notes reaching into the
  * deuterocanon is not a reason to open sixty extra routes nobody wrote a summary

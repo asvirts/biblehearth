@@ -16,10 +16,21 @@ type Props = {
 	relatedTopics: readonly { slug: string; title: string }[];
 	/** Anchor href for the commentary section, for the outline's jump link. */
 	firstSourceAnchor: string | null;
+	/**
+	 * Whether the page passed a `scripture` slot. Drives the jump link only —
+	 * the slot renders either way, and an empty one is simply nothing.
+	 */
+	hasFullText?: boolean;
 };
 
-const { brief, passages, reference, relatedTopics, firstSourceAnchor } =
-	Astro.props;
+const {
+	brief,
+	passages,
+	reference,
+	relatedTopics,
+	firstSourceAnchor,
+	hasFullText = false,
+} = Astro.props;
 const { data } = brief;
 
 const [bookUsfm, chapterId = '1'] = data.usfm.split('.');
@@ -35,6 +46,7 @@ const bookSlug = bookSlugFromUsfm(bookUsfm ?? '');
 <p class="lede">{data.shortAnswer}</p>
 
 <nav class="brief-jump" aria-label="On this page">
+	{hasFullText ? <a href="#text">Full text</a> : null}
 	<a href="#outline">Outline</a>
 	<a href="#themes">Main ideas</a>
 	{data.glossary.length ? <a href="#words">Words explained</a> : null}
@@ -43,6 +55,11 @@ const bookSlug = bookSlugFromUsfm(bookUsfm ?? '');
 	<a href="#questions">Questions</a>
 	{firstSourceAnchor ? <a href={firstSourceAnchor}>Full commentary</a> : null}
 </nav>
+
+{/* The chapter itself, supplied by the page because loading scripture is its
+    job, not this component's. Someone who searched the reference wants to read
+    it before they read anything about it. */}
+<slot name="scripture" />
 
 <section class="chapter-outline" id="outline">
 	<h2>{reference} outline, verse by verse</h2>

@@ -5,7 +5,9 @@ import Passage from '../../../../components/Passage.astro';
 import RelatedQuestions from '../../../../components/RelatedQuestions.astro';
 import StatusMessage from '../../../../components/StatusMessage.astro';
 import { verseAnswerIndex } from '../../../../lib/answers';
+import { bookStudyPath } from '../../../../lib/commentary';
 import {
+	bookNameForChapter,
 	bookNameFromUsfm,
 	isNumericChapter,
 	isNumericVerse,
@@ -58,7 +60,7 @@ if (!bookUsfm) {
 }
 
 const usfm = verseUsfm(bookUsfm, chapterId, verseId);
-const reference = `${bookNameFromUsfm(bookUsfm)} ${chapterId}:${verseId}`;
+const reference = `${bookNameForChapter(bookUsfm)} ${chapterId}:${verseId}`;
 
 type Rendering = {
 	version: BibleVersion;
@@ -137,7 +139,7 @@ const nextVerse = String(Number(verseId) + 1);
 	jsonLd={[
 		breadcrumbJsonLd(Astro.site, [
 			{ name: 'BibleHearth', path: '/' },
-			{ name: bookNameFromUsfm(bookUsfm), path: canonicalPath },
+			{ name: bookNameFromUsfm(bookUsfm), path: bookStudyPath(bookUsfm) },
 			{ name: reference, path: canonicalPath },
 		]),
 		creativeWorkJsonLd({
@@ -160,7 +162,7 @@ const nextVerse = String(Number(verseId) + 1);
 	<nav class="crumbs" aria-label="Breadcrumb">
 		<a href="/">Home</a>
 		<span>/</span>
-		<span>{bookNameFromUsfm(bookUsfm)}</span>
+		<a href={bookStudyPath(bookUsfm)}>{bookNameFromUsfm(bookUsfm)}</a>
 		<span>/</span>
 		<span>{reference}</span>
 	</nav>
@@ -191,7 +193,7 @@ const nextVerse = String(Number(verseId) + 1);
 						<Passage html={item.passage.content} />
 						<p class="muted">
 							<a href={chapterPath(item.slug, bookUsfm, chapterId)}>
-								Read {bookNameFromUsfm(bookUsfm)} {chapterId} in{' '}
+								Read {bookNameForChapter(bookUsfm)} {chapterId} in{' '}
 								{displayAbbreviation(item.version)}
 							</a>
 							{' · '}

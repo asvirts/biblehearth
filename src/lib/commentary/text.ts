@@ -180,7 +180,7 @@ function referenceHref(
 	}
 	return verse
 		? `/verse/${slug}/${chapter}/${verse}`
-		: `/commentary/${slug}/${chapter}`;
+		: `/${slug}/${chapter}`;
 }
 
 /**

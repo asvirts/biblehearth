@@ -3,8 +3,8 @@ import { urlsetXmlWithLastmod, xmlResponse } from '../lib/sitemap';
 import { CANON_ORDER } from '../lib/bible/chapters';
 import {
 	briefedChapters,
-	commentaryBookPath,
-	commentaryPath,
+	bookStudyPath,
+	chapterStudyPath,
 } from '../lib/commentary';
 
 /**
@@ -29,11 +29,11 @@ export const GET: APIRoute = async ({ site }) => {
 
 	return xmlResponse(
 		urlsetXmlWithLastmod(site, [
-			...CANON_ORDER.map((book) => ({ path: commentaryBookPath(book) })),
+			...CANON_ORDER.map((book) => ({ path: bookStudyPath(book) })),
 			...briefed.map((chapter) => {
 				const [book, number] = chapter.usfm.split('.');
 				return {
-					path: commentaryPath(book ?? '', number ?? '1'),
+					path: chapterStudyPath(book ?? '', number ?? '1'),
 					lastmod: chapter.reviewedAt,
 				};
 			}),

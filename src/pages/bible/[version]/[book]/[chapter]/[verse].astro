@@ -9,6 +9,7 @@ import CopyrightNotice from '../../../../../components/CopyrightNotice.astro';
 import Passage from '../../../../../components/Passage.astro';
 import StatusMessage from '../../../../../components/StatusMessage.astro';
 import {
+	chapterBookTitle,
 	isNumericChapter,
 	isNumericVerse,
 	usfmFromBookSlug,
@@ -105,7 +106,7 @@ setPageHeaders(Astro.response, status, READER_CACHE_CONTROL);
 const heading =
 	passage?.reference ||
 	(book && version
-		? `${book.title} ${chapterId}:${verseId} (${displayAbbreviation(version)})`
+		? `${chapterBookTitle(book.id, book.title, version.language_tag)} ${chapterId}:${verseId} (${displayAbbreviation(version)})`
 		: 'Verse');
 const abbreviation = version ? displayAbbreviation(version) : '';
 // Chapter pages carry the abbreviation but `passage.reference` does not,

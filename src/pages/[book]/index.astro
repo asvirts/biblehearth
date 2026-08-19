@@ -1,23 +1,24 @@
 ---
-import BaseLayout from '../../../layouts/BaseLayout.astro';
-import StatusMessage from '../../../components/StatusMessage.astro';
-import ExternalStudyLinks from '../../../components/ExternalStudyLinks.astro';
-import { attributionLine } from '../../../lib/commentary/sources';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import StatusMessage from '../../components/StatusMessage.astro';
+import ExternalStudyLinks from '../../components/ExternalStudyLinks.astro';
+import { attributionLine } from '../../lib/commentary/sources';
 import {
 	chapterCount,
 	isCanonicalBook,
-} from '../../../lib/bible/chapters';
-import { bookNameFromUsfm, usfmFromBookSlug } from '../../../lib/bible/usfm';
+} from '../../lib/bible/chapters';
+import { bookNameFromUsfm, usfmFromBookSlug } from '../../lib/bible/usfm';
 import {
+	STUDY_HUB_PATH,
+	bookStudyPath,
 	chapterBriefIndex,
-	commentaryBookPath,
-	commentaryPath,
+	chapterStudyPath,
 	externalStudyLinks,
 	loadBookOverviews,
 	type BookOverview,
-} from '../../../lib/commentary';
-import { READER_CACHE_CONTROL, setCacheControl } from '../../../lib/http';
-import { breadcrumbJsonLd, creativeWorkJsonLd } from '../../../lib/seo';
+} from '../../lib/commentary';
+import { READER_CACHE_CONTROL, setCacheControl } from '../../lib/http';
+import { breadcrumbJsonLd, creativeWorkJsonLd } from '../../lib/seo';
 
 const bookSlug = Astro.params.book;
 if (!bookSlug) {
@@ -31,7 +32,7 @@ if (!bookUsfm || !isCanonicalBook(bookUsfm)) {
 
 const bookName = bookNameFromUsfm(bookUsfm);
 const total = chapterCount(bookUsfm);
-const canonicalPath = commentaryBookPath(bookUsfm);
+const canonicalPath = bookStudyPath(bookUsfm);
 
 /**
  * The book introductions are the reason this page exists.
@@ -59,8 +60,8 @@ const briefedCount = chapters.filter((chapter) => chapter.brief).length;
 
 const externalLinks = externalStudyLinks(bookUsfm, 1);
 
-const title = `${bookName} Commentary — Chapter Summaries and Study Notes`;
-const description = `Chapter-by-chapter commentary on ${bookName}: what each of its ${total} ${total === 1 ? 'chapter' : 'chapters'} says and means, with notes from three commentaries.`;
+const title = `${bookName} — Book Summary, All ${total} ${total === 1 ? 'Chapter' : 'Chapters'}, and Commentary`;
+const description = `The book of ${bookName}, chapter by chapter: what each of its ${total} ${total === 1 ? 'chapter' : 'chapters'} says and means, in plain English, with notes from three commentaries.`;
 ---
 
 <BaseLayout
@@ -70,7 +71,7 @@ const description = `Chapter-by-chapter commentary on ${bookName}: what each of 
 	jsonLd={[
 		breadcrumbJsonLd(Astro.site, [
 			{ name: 'BibleHearth', path: '/' },
-			{ name: 'Commentary', path: '/commentary' },
+			{ name: 'Bible study', path: STUDY_HUB_PATH },
 			{ name: bookName, path: canonicalPath },
 		]),
 		creativeWorkJsonLd({
@@ -83,17 +84,17 @@ const description = `Chapter-by-chapter commentary on ${bookName}: what each of 
 	<nav class="crumbs" aria-label="Breadcrumb">
 		<a href="/">Home</a>
 		<span>/</span>
-		<a href="/commentary">Commentary</a>
+		<a href={STUDY_HUB_PATH}>Bible study</a>
 		<span>/</span>
 		<span>{bookName}</span>
 	</nav>
 
-	<h1>{bookName} Commentary</h1>
+	<h1>{bookName}</h1>
 
 	<p class="lede">
-		{bookName} has {total} {total === 1 ? 'chapter' : 'chapters'}. Each one has
-		its own study page with the chapter in outline and the notes three
-		commentaries wrote on it.
+		The book of {bookName} has {total} {total === 1 ? 'chapter' : 'chapters'}.
+		Each one has its own page with the chapter itself, an outline of what happens
+		where, and the notes three commentaries wrote on it.
 		{
 			briefedCount
 				? ` ${briefedCount} ${briefedCount === 1 ? 'chapter has' : 'chapters have'} a written summary in our own words.`
@@ -108,7 +109,7 @@ const description = `Chapter-by-chapter commentary on ${bookName}: what each of 
 				chapters.map((chapter) => (
 					<a
 						class:list={['tile', { 'tile-briefed': Boolean(chapter.brief) }]}
-						href={commentaryPath(bookUsfm, chapter.id)}
+						href={chapterStudyPath(bookUsfm, chapter.id)}
 						title={chapter.brief?.data.title}
 					>
 						{chapter.id}
@@ -135,7 +136,7 @@ const description = `Chapter-by-chapter commentary on ${bookName}: what each of 
 						.filter((chapter) => chapter.brief)
 						.map((chapter) => (
 							<li>
-								<a href={commentaryPath(bookUsfm, chapter.id)}>
+								<a href={chapterStudyPath(bookUsfm, chapter.id)}>
 									{chapter.brief?.data.title}
 								</a>
 							</li>
