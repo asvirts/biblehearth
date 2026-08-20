@@ -1,6 +1,7 @@
 ---
 usfm: MAT.5
 title: "Matthew 5: The Beatitudes, and Six Commands Made Impossible to Police"
+seoTitle: "Matthew 5: The Beatitudes, and Six Hard Commands"
 shortAnswer: >-
   Matthew 5 opens the Sermon on the Mount, and it does two things that pull in
   opposite directions. It begins with nine blessings — on the poor in spirit, the

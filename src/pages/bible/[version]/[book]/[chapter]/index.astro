@@ -139,12 +139,23 @@ const abbreviation = version ? displayAbbreviation(version) : '';
 const heading =
 	book && version ? `${reference} (${abbreviation})` : 'Chapter';
 
-// Scripture text in the title captures the way people actually search
-// ("the lord is my shepherd"), not just the reference.
 const snippet = passage ? scriptureToPlainText(passage.content) : '';
-const title = snippet
-	? `${reference} ${abbreviation} — ${truncateWords(snippet, 52)}`
-	: `${heading} · BibleHearth`;
+/**
+ * No Scripture in a chapter title, unlike the verse pages.
+ *
+ * Putting it there was meant to catch the way people search ("the lord is my
+ * shepherd") rather than only the reference, and at verse level that works. A
+ * chapter snippet begins at verse 1 and runs for a chapter, so it could only
+ * ever appear cut — and a title that opens with 52 characters of Genesis 1:1
+ * matches the same phrase on 1,189 other pages while pushing the one thing that
+ * distinguishes this one, the reference and the translation, out of view. Bing
+ * wants 25-65 characters; this stays inside that at both ends for every book
+ * name in the canon.
+ */
+const title =
+	book && version
+		? `${reference} (${abbreviation}) — Read Online Free`
+		: 'Read the Bible Online Free · BibleHearth';
 const description = snippet
 	? truncateWords(`${reference} in the ${abbreviation}: ${snippet}`, 155)
 	: `Read ${heading} on BibleHearth.`;

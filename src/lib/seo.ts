@@ -1,5 +1,46 @@
 import { absoluteUrl } from './bible/urls';
 
+/**
+ * The character budget for a `<title>`.
+ *
+ * Bing Webmaster Tools reports anything longer as an error rather than a hint,
+ * and Google truncates around the same point, so the ceiling is real on both
+ * sides. Sixty-five is Bing's line; we aim under it rather than at it.
+ */
+export const TITLE_MAX = 65;
+
+/**
+ * A title made of the part that must be there and a Scripture snippet that only
+ * earns its place if the whole thing fits.
+ *
+ * `head` carries the query — the reference, the translation, what the page is.
+ * The snippet is a bonus: a reader searching a half-remembered phrase can match
+ * on it, which is worth real traffic on a reader page. But it is all or
+ * nothing. A snippet cut to fit produces the exact string this function exists
+ * to prevent — "From the rising of the sun to the…", "The Hall of Faith Turns
+ * Over Halfway Through" — which is not a phrase anyone searches, reads as
+ * broken text in a result, and spends the budget the reference needed. So a
+ * short verse comes through whole ("John 11:35 NIV — Jesus wept.") and a long
+ * one is left to the description, where there is room to finish the sentence.
+ */
+export function titleWithSnippet(
+	head: string,
+	snippet: string,
+	max = TITLE_MAX,
+): string {
+	// A clause that happens to end mid-sentence keeps its full stop but loses a
+	// dangling comma — "Rejoice always," reads like a mistake in a result list.
+	const clean = snippet
+		.replace(/\s+/g, ' ')
+		.trim()
+		.replace(/[,;:]+$/, '');
+	if (!clean) {
+		return head;
+	}
+	const whole = `${head} — ${clean}`;
+	return whole.length <= max ? whole : head;
+}
+
 export type BreadcrumbItem = {
 	name: string;
 	path: string;

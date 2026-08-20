@@ -1,6 +1,7 @@
 ---
 usfm: JAS.1
 title: "James 1: God Tests, God Never Tempts, and Religion Is Three Things"
+seoTitle: "James 1: God Tests, God Never Tempts"
 shortAnswer: >-
   James 1 does something English translations hide. The word behind "trials" in verse
   2 and the word behind "tempted" in verse 13 come from the same Greek root, and James

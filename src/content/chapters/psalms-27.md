@@ -1,6 +1,7 @@
 ---
 usfm: PSA.27
 title: "Psalm 27: It Says Whom Shall I Fear, Then Begs God Not to Leave"
+seoTitle: "Psalm 27: Whom Shall I Fear, Then a Plea"
 shortAnswer: >-
   Psalm 27 opens with the most confident line David ever wrote — the LORD is my
   light and my salvation, whom shall I fear — and six verses later the same voice

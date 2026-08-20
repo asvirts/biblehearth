@@ -1,6 +1,7 @@
 ---
 usfm: GAL.5
 title: "Galatians 5: The Fruit of the Spirit, and the Fight It Was Written Inside"
+seoTitle: "Galatians 5: The Fruit of the Spirit, in Context"
 shortAnswer: >-
   Galatians 5 holds the nine words most likely to be painted on a nursery wall —
   love, joy, peace, patience, kindness, goodness, faithfulness, gentleness,

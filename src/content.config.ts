@@ -199,6 +199,25 @@ const chapters = defineCollection({
 		 */
 		title: z.string().min(10).max(95),
 		/**
+		 * The `<title>`, when the `<h1>` above is too long to be one.
+		 *
+		 * Bing reports a title outside 25-65 characters as an error, and an `<h1>`
+		 * has no such ceiling — it is read on the page, in full, by someone who has
+		 * already arrived. So the two fields do different jobs, and most of the
+		 * time one string can do both: leave this out and the `<h1>` is used.
+		 *
+		 * Past 60 characters it cannot, and there is no mechanical way down.
+		 * Cutting "Hebrews 11: The Hall of Faith Turns Over Halfway Through Verse
+		 * 35" to fit yields "...Turns Over Halfway Through" — a fragment nobody
+		 * searches, which reads as broken text in a result. Only the person who
+		 * wrote the claim can say which half of it is the claim, so the refinement
+		 * below asks them rather than guessing.
+		 *
+		 * Same rules as `title`: lead with the reference, make a claim, and spend
+		 * no words on "summary" or "commentary".
+		 */
+		seoTitle: z.string().min(25).max(60).optional(),
+		/**
 		 * 40-90 words, rendered directly under the <h1> and reused as the meta
 		 * description. The highest-leverage text on the page: it is the chunk a
 		 * featured snippet quotes and the paragraph an AI answer lifts whole.
@@ -288,7 +307,27 @@ const chapters = defineCollection({
 		reviewedAt: z.coerce.date(),
 		/** Draft briefs render noindex and stay out of sitemaps. */
 		draft: z.boolean().default(false),
-	}),
+	})
+		/**
+		 * Fail the build rather than ship a title Bing rejects.
+		 *
+		 * A `<title>` is the one field on the page nobody proofreads, because it is
+		 * the one field that never appears on the page. Checking it here is the
+		 * only way it stays checked: the next brief written is the one that would
+		 * quietly reintroduce a 93-character title.
+		 */
+		.superRefine((brief, ctx) => {
+			if (!brief.seoTitle && brief.title.length > 60) {
+				ctx.addIssue({
+					code: z.ZodIssueCode.custom,
+					path: ['seoTitle'],
+					message:
+						`title is ${brief.title.length} characters, which is too long for a ` +
+						'<title> (Bing errors past 65). Add a seoTitle of 25-60 characters ' +
+						'that keeps the reference and the sharper half of the claim.',
+				});
+			}
+		}),
 });
 
 export const collections = { topics, answers, chapters };

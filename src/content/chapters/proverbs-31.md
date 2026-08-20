@@ -1,6 +1,7 @@
 ---
 usfm: PRO.31
 title: "Proverbs 31: An Alphabet Poem of Praise, Not a Checklist for Women"
+seoTitle: "Proverbs 31: A Poem of Praise, Not a Checklist"
 shortAnswer: >-
   Proverbs 31 has two halves that are almost never read together. The first nine
   verses are a queen mother coaching her son on how to be a king: stay off the

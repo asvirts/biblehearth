@@ -1,6 +1,7 @@
 ---
 usfm: HEB.11
 title: "Hebrews 11: The Hall of Faith Turns Over Halfway Through Verse 35"
+seoTitle: "Hebrews 11: Where the Hall of Faith Turns"
 shortAnswer: >-
   Hebrews 11 is known as the Hall of Faith, and the thing worth knowing about it is
   where the list breaks. Through verse 34 faith produces results you would want:
