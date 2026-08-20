@@ -34,6 +34,23 @@ const SOURCES = [
 ];
 
 /**
+ * Upstream chapters whose commentary is filed under the wrong number.
+ *
+ * Mirrors `isMisalignedUpstream` in src/lib/commentary/api.ts — duplicated for
+ * the same reason the book table above is, and it matters more here than there.
+ * The page merely renders the wrong notes; a dossier that hands an author Psalm
+ * 92's commentary under a Psalm 91 heading gets the mistake written into a
+ * brief, where no build step will ever catch it.
+ *
+ * Keep the two in step. If one is edited, edit the other.
+ */
+function misalignedUpstream(id, book, chapter) {
+	return (
+		id === 'jamieson-fausset-brown' && book === 'PSA' && Number(chapter) >= 73
+	);
+}
+
+/**
  * Book slug, name and chapter count.
  *
  * Duplicated from src/lib/bible/usfm.ts and src/lib/bible/chapters.ts rather
@@ -159,7 +176,11 @@ const target = `src/content/chapters/${slug}-${chapter}.md`;
 // would write from an incomplete dossier.
 const [scripture, ...commentaries] = await Promise.all([
 	getJson(`/api/BSB/${usfm}/${chapter}.json`),
-	...SOURCES.map(([id]) => getJson(`/api/c/${id}/${usfm}/${chapter}.json`)),
+	...SOURCES.map(([id]) =>
+		misalignedUpstream(id, usfm, chapter)
+			? null
+			: getJson(`/api/c/${id}/${usfm}/${chapter}.json`),
+	),
 ]);
 
 const existing = await access(target).then(() => true, () => false);
@@ -206,7 +227,11 @@ for (const [index, [id, about]] of SOURCES.entries()) {
 	out.push(`## ${about}`);
 	out.push('');
 	if (!payload) {
-		out.push(`_No notes on ${reference}. Normal — Henry skipped Song of Songs, Tyndale skipped Judges._`);
+		out.push(
+			misalignedUpstream(id, usfm, chapter)
+				? `_Withheld: the upstream files this source's Psalms notes under the wrong chapter from Psalm 73 on, so what it returns for ${reference} is another psalm's commentary. The published page withholds it too._`
+				: `_No notes on ${reference}. Normal — Henry skipped Song of Songs, Tyndale skipped Judges._`,
+		);
 		out.push('');
 		continue;
 	}
