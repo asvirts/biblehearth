@@ -15,7 +15,7 @@ import {
 	usfmFromBookSlug,
 	verseUsfm,
 } from '../../../../lib/bible/usfm';
-import { scriptureToPlainText, truncateWords } from '../../../../lib/bible/text';
+import { scriptureToPlainText } from '../../../../lib/bible/text';
 import {
 	HUB_TRANSLATION_LIMIT,
 	HUB_TRANSLATION_SLUGS,
@@ -30,9 +30,10 @@ import {
 import { READER_CACHE_CONTROL, setPageHeaders } from '../../../../lib/http';
 import {
 	breadcrumbJsonLd,
+	clauseWithin,
 	creativeWorkJsonLd,
 	itemListJsonLd,
-	titleWithSnippet,
+	titleWithClause,
 } from '../../../../lib/seo';
 import { topicPath, verseTopicIndex } from '../../../../lib/topics';
 import {
@@ -143,21 +144,46 @@ const primary = renderings[0];
 const verseText = primary ? scriptureToPlainText(primary.passage.content) : '';
 
 const canonicalPath = `/verse/${bookSlug}/${chapterId}/${verseId}`;
-// The verse comes through whole or not at all — see `titleWithSnippet`. Short
-// verses are common enough at this level ("Jesus wept.") that it is worth
-// asking; a long one leaves the head, which is already the query, on its own.
+const translations = renderings.map((item) => displayAbbreviation(item.version));
+
 const title = renderings.length
-	? titleWithSnippet(
-			`${reference} in ${renderings.length} Translations`,
+	? titleWithClause(
+			reference,
+			`in ${renderings.length} Translations`,
 			verseText,
 		)
 	: `${reference} — Compare Bible Translations`;
-const description = verseText
-	? truncateWords(
-			`${verseText} — ${reference} compared across ${renderings.length} Bible translations, with links to read each in full context.`,
-			155,
-		)
+
+/**
+ * How much of the verse the description leads with.
+ *
+ * Front-loaded on the verse rather than on what the page is, because the
+ * opening words are the only part of this string that is not identical across
+ * 31,103 hubs — and a meta description that opens with a hundred characters of
+ * boilerplate is one Google replaces with its own. Wide enough for a real
+ * clause, narrow enough that the translations behind it survive the ~155
+ * characters a result displays.
+ */
+const DESCRIPTION_LEAD_MAX = 64;
+
+/**
+ * The verse is what makes this relevant; the list is what makes it different.
+ *
+ * Both have to be here. Leading with the verse alone is what four larger sites
+ * already put in front of this query, and the old string spent its whole budget
+ * doing exactly that: `truncateWords` was applied to the verse and the tail
+ * together, so a long verse ate the entire allowance and the reason to click
+ * never rendered. Isaiah 61:1 ended at "bind up the…" and said nothing about
+ * translations at all. Bounding the lead separately means the tail always
+ * arrives.
+ */
+const descriptionLead = clauseWithin(verseText, DESCRIPTION_LEAD_MAX);
+const descriptionTail = renderings.length
+	? `${reference} side by side in ${renderings.length} translations: ${translations.join(', ')}. Each links to the full chapter.`
 	: `Compare ${reference} across Bible translations on BibleHearth.`;
+const description = descriptionLead
+	? `${descriptionLead} — ${descriptionTail}`
+	: descriptionTail;
 
 const [{ byVerse: topicsByVerse }, { byVerse: answersByVerse }] =
 	await Promise.all([verseTopicIndex(), verseAnswerIndex()]);
