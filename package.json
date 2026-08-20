@@ -14,7 +14,9 @@
     "indexnow": "node scripts/indexnow.mjs",
     "questions:audit": "node scripts/questions-audit.mjs",
     "questions:export": "node scripts/questions-export.mjs",
-    "chapter:research": "node scripts/chapter-research.mjs"
+    "chapter:research": "node scripts/chapter-research.mjs",
+    "books:generate": "node scripts/generate-book-slugs.mjs",
+    "locales:generate": "node scripts/generate-locales.mjs"
   },
   "dependencies": {
     "@astrojs/vercel": "^11.0.5",

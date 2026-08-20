@@ -27,7 +27,7 @@ import {
 	displayAbbreviation,
 	errorStatus,
 	getDefaultVersion,
-	listEnglishVersions,
+	listVersions,
 	versionSlug,
 } from '../../lib/youversion/api';
 
@@ -52,7 +52,7 @@ let status = 200;
 try {
 	const [defaultVersion, catalog] = await Promise.all([
 		getDefaultVersion(),
-		listEnglishVersions(),
+		listVersions(),
 	]);
 	version = defaultVersion;
 	if (version) {

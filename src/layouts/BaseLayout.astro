@@ -6,6 +6,11 @@ import Footer from '../components/Footer.astro';
 import Analytics from '../components/Analytics.astro';
 import { BING_SITE_VERIFICATION } from 'astro:env/server';
 import { absoluteUrl } from '../lib/bible/urls';
+import {
+	DEFAULT_OG_IMAGE,
+	OG_IMAGE_HEIGHT,
+	OG_IMAGE_WIDTH,
+} from '../lib/seo';
 
 type Props = {
 	title: string;
@@ -25,6 +30,22 @@ type Props = {
 	/** Root-relative or absolute. Defaults to the brand card. */
 	image?: string;
 	imageAlt?: string;
+	/**
+	 * The page before and after this one, where the page sits in a real sequence.
+	 *
+	 * Emitted as `rel="prev"`/`rel="next"`. Google said in 2019 that it had
+	 * stopped using these as an indexing signal and had not for years, so this is
+	 * not here for Google. Bing still reads them, and this site is deliberately
+	 * Bing-forward — IndexNow, the ownership token above, titles cut to Bing's
+	 * 25-65 character window, and Bingbot given its own `robots.txt` group. On a
+	 * Bible the sequence is also simply true, which is the other reason to state
+	 * it: Genesis 1 really is followed by Genesis 2, and a crawler that knows the
+	 * order can prioritise it rather than rediscovering it from anchors.
+	 *
+	 * Only for genuine linear sequence. A list of topics is not one.
+	 */
+	prev?: string;
+	next?: string;
 	jsonLd?: Record<string, unknown> | Record<string, unknown>[];
 };
 
@@ -35,8 +56,10 @@ const {
 	noindex = false,
 	markdown = false,
 	lang = 'en',
-	image = '/og-default.png',
+	image = DEFAULT_OG_IMAGE,
 	imageAlt = 'BibleHearth — read the Bible online, free',
+	prev,
+	next,
 	jsonLd,
 } = Astro.props;
 
@@ -87,6 +110,8 @@ const documents = jsonLd ? (Array.isArray(jsonLd) ? jsonLd : [jsonLd]) : [];
 		}
 		{noindex ? <meta name="robots" content="noindex, follow" /> : null}
 		{canonical ? <link rel="canonical" href={canonical} /> : null}
+		{prev ? <link rel="prev" href={absoluteUrl(Astro.site, prev)} /> : null}
+		{next ? <link rel="next" href={absoluteUrl(Astro.site, next)} /> : null}
 		{/* llms.txt link relations. `alternate` is how an agent finds the markdown
 		    twin without guessing at the convention; `describedby` points at the
 		    index that says which pages have one. Both are advisory — nothing on
@@ -104,8 +129,8 @@ const documents = jsonLd ? (Array.isArray(jsonLd) ? jsonLd : [jsonLd]) : [];
 		<meta property="og:site_name" content="BibleHearth" />
 		<meta property="og:locale" content={lang.replace('-', '_')} />
 		<meta property="og:image" content={ogImage} />
-		<meta property="og:image:width" content="1200" />
-		<meta property="og:image:height" content="630" />
+		<meta property="og:image:width" content={String(OG_IMAGE_WIDTH)} />
+		<meta property="og:image:height" content={String(OG_IMAGE_HEIGHT)} />
 		<meta property="og:image:alt" content={imageAlt} />
 		<meta name="twitter:card" content="summary_large_image" />
 		<meta name="twitter:title" content={title} />

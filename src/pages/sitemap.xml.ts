@@ -2,7 +2,7 @@ import type { APIRoute } from 'astro';
 import { sitemapIndexXml, versionSitemapPath, xmlResponse } from '../lib/sitemap';
 import {
 	getDefaultVersion,
-	listEnglishVersions,
+	listVersions,
 	versionSlug,
 } from '../lib/youversion/api';
 
@@ -11,7 +11,7 @@ export const GET: APIRoute = async ({ site }) => {
 
 	try {
 		const [versions, defaultVersion] = await Promise.all([
-			listEnglishVersions(),
+			listVersions(),
 			getDefaultVersion(),
 		]);
 

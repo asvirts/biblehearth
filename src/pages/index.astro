@@ -6,10 +6,9 @@ import CopyrightNotice from '../components/CopyrightNotice.astro';
 import StatusMessage from '../components/StatusMessage.astro';
 import { answerPath, listAnswers } from '../lib/answers';
 import { isNumericChapter, parsePassageId } from '../lib/bible/usfm';
-import { scriptureToPlainText, truncateWords } from '../lib/bible/text';
 import { chapterPath, versePath, versionPath } from '../lib/bible/urls';
 import { HOME_CACHE_CONTROL, setPageHeaders } from '../lib/http';
-import { breadcrumbJsonLd } from '../lib/seo';
+import { websiteJsonLd } from '../lib/seo';
 import {
 	BibleUnavailableError,
 	displayAbbreviation,
@@ -18,7 +17,7 @@ import {
 	getDefaultVersion,
 	getPassageHtml,
 	getVerseOfTheDay,
-	listEnglishVersions,
+	listVersions,
 	PlatformConfigError,
 	versionSlug,
 } from '../lib/youversion/api';
@@ -35,7 +34,7 @@ let startHref = '/versions';
 try {
 	[defaultVersion, catalog] = await Promise.all([
 		getDefaultVersion(),
-		listEnglishVersions(),
+		listVersions(),
 	]);
 
 	if (defaultVersion) {
@@ -99,18 +98,33 @@ const votdHref =
 // editorial pages get a slot here rather than relying on the footer alone.
 const answers = await listAnswers();
 const featured = catalog.slice(0, 8);
-const description = votdPassage
-	? truncateWords(
-			`${votdPassage.reference}: ${scriptureToPlainText(votdPassage.content)}`,
-		)
-	: 'Read the Bible with licensed translations, chapter pages, and the Verse of the Day.';
+
+/**
+ * Static, and that is the fix.
+ *
+ * The title and description here used to be the Verse of the Day: the
+ * description was the psalm's own text, truncated. A description that changes
+ * every midnight cannot rank for anything, because it never describes the same
+ * page twice — and what it described was a passage rather than the site, on the
+ * one URL that will accrue more links than any other. The verse is still the
+ * first thing on the page; it is just no longer what the page claims to be.
+ *
+ * The title spends its 56 characters on the differentiator rather than on
+ * "Read the Bible", which is the query this site cannot win and four platforms
+ * own outright. What is ours is the plain-English writing, so that is what the
+ * title says.
+ */
+const description =
+	'Read the Bible free online, with plain-English studies of the chapters ' +
+	'people ask about most: what the chapter says, what it means, and what it ' +
+	'does not.';
 ---
 
 <BaseLayout
-	title="BibleHearth · Read the Bible"
+	title="BibleHearth — Read the Bible, Explained in Plain English"
 	description={description}
 	canonicalPath="/"
-	jsonLd={breadcrumbJsonLd(Astro.site, [{ name: 'BibleHearth', path: '/' }])}
+	jsonLd={websiteJsonLd({ site: Astro.site, description })}
 >
 	{
 		status !== 200 ? (
@@ -119,10 +133,11 @@ const description = votdPassage
 			<div class="stack">
 				<section>
 					<p class="muted">A quiet place to read Scripture</p>
-					<h1>Read the Bible</h1>
+					<h1>Read the Bible, and understand what you read</h1>
 					<p class="lede">
-						Licensed Bible text from the YouVersion Platform, with crawlable
-						chapter and verse pages.
+						Every chapter and verse in several English translations, plus
+						plain-English studies of the passages people ask about most —
+						written for anyone new to the Bible.
 					</p>
 					<p>
 						<a class="cta" href={startHref}>

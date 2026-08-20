@@ -1,0 +1,815 @@
+[
+ {
+  "code": "en",
+  "prefix": "",
+  "englishName": "English",
+  "defaultVersionId": 111,
+  "scope": "full_bible"
+ },
+ {
+  "code": "ak",
+  "prefix": "ak",
+  "htmlLang": "ak",
+  "apiLanguageRange": "ak",
+  "dir": "ltr",
+  "endonym": "Akan",
+  "englishName": "Akan",
+  "versionIds": [
+   2094
+  ],
+  "defaultVersionId": 2094,
+  "scope": "full_bible"
+ },
+ {
+  "code": "am",
+  "prefix": "am",
+  "htmlLang": "am",
+  "apiLanguageRange": "am",
+  "dir": "ltr",
+  "endonym": "አማርኛ",
+  "englishName": "Amharic",
+  "versionIds": [
+   1260
+  ],
+  "defaultVersionId": 1260,
+  "scope": "full_bible"
+ },
+ {
+  "code": "ar",
+  "prefix": "ar",
+  "htmlLang": "ar",
+  "apiLanguageRange": "ar",
+  "dir": "rtl",
+  "endonym": "العربية",
+  "englishName": "Arabic (Standard)",
+  "versionIds": [
+   101
+  ],
+  "defaultVersionId": 101,
+  "scope": "full_bible"
+ },
+ {
+  "code": "bn",
+  "prefix": "bn",
+  "htmlLang": "bn",
+  "apiLanguageRange": "bn",
+  "dir": "ltr",
+  "endonym": "বাংলা",
+  "englishName": "Bengali (Bangla)",
+  "versionIds": [
+   2412
+  ],
+  "defaultVersionId": 2412,
+  "scope": "full_bible"
+ },
+ {
+  "code": "ceb",
+  "prefix": "ceb",
+  "htmlLang": "ceb",
+  "apiLanguageRange": "ceb",
+  "dir": "ltr",
+  "endonym": "Cebuano",
+  "englishName": "Cebuano",
+  "versionIds": [
+   9
+  ],
+  "defaultVersionId": 9,
+  "scope": "full_bible"
+ },
+ {
+  "code": "hne",
+  "prefix": "hne",
+  "htmlLang": "hne",
+  "apiLanguageRange": "hne",
+  "dir": "ltr",
+  "endonym": "छत्तीसगढ़ी",
+  "englishName": "Chhattisgarhi",
+  "versionIds": [
+   1630
+  ],
+  "defaultVersionId": 1630,
+  "scope": "full_bible"
+ },
+ {
+  "code": "qug",
+  "prefix": "qug",
+  "htmlLang": "qug",
+  "apiLanguageRange": "qug",
+  "dir": "ltr",
+  "endonym": "Chimborazo Highland Quichua",
+  "englishName": "Chimborazo Highland Quichua",
+  "versionIds": [
+   98
+  ],
+  "defaultVersionId": 98,
+  "scope": "nt"
+ },
+ {
+  "code": "zh",
+  "prefix": "zh",
+  "htmlLang": "zh",
+  "apiLanguageRange": "zh",
+  "dir": "ltr",
+  "endonym": "中文",
+  "englishName": "Chinese (Simplified)",
+  "versionIds": [
+   36
+  ],
+  "defaultVersionId": 36,
+  "scope": "full_bible"
+ },
+ {
+  "code": "zh-tw",
+  "prefix": "zh-tw",
+  "htmlLang": "zh-TW",
+  "apiLanguageRange": "zh-Hant-TW",
+  "dir": "ltr",
+  "endonym": "中文（台灣）",
+  "englishName": "Chinese (Traditional)",
+  "versionIds": [
+   1392
+  ],
+  "defaultVersionId": 1392,
+  "scope": "full_bible"
+ },
+ {
+  "code": "hr",
+  "prefix": "hr",
+  "htmlLang": "hr",
+  "apiLanguageRange": "hr",
+  "dir": "ltr",
+  "endonym": "hrvatski",
+  "englishName": "Croatian",
+  "versionIds": [
+   39
+  ],
+  "defaultVersionId": 39,
+  "scope": "nt"
+ },
+ {
+  "code": "cs",
+  "prefix": "cs",
+  "htmlLang": "cs",
+  "apiLanguageRange": "cs",
+  "dir": "ltr",
+  "endonym": "čeština",
+  "englishName": "Czech",
+  "versionIds": [
+   162
+  ],
+  "defaultVersionId": 162,
+  "scope": "nt"
+ },
+ {
+  "code": "da",
+  "prefix": "da",
+  "htmlLang": "da",
+  "apiLanguageRange": "da",
+  "dir": "ltr",
+  "endonym": "dansk",
+  "englishName": "Danish",
+  "versionIds": [
+   4555
+  ],
+  "defaultVersionId": 4555,
+  "scope": "full_bible"
+ },
+ {
+  "code": "nl",
+  "prefix": "nl",
+  "htmlLang": "nl",
+  "apiLanguageRange": "nl",
+  "dir": "ltr",
+  "endonym": "Nederlands",
+  "englishName": "Dutch",
+  "versionIds": [
+   75
+  ],
+  "defaultVersionId": 75,
+  "scope": "full_bible"
+ },
+ {
+  "code": "ee",
+  "prefix": "ee",
+  "htmlLang": "ee",
+  "apiLanguageRange": "ee",
+  "dir": "ltr",
+  "endonym": "eʋegbe",
+  "englishName": "Éwé",
+  "versionIds": [
+   1613
+  ],
+  "defaultVersionId": 1613,
+  "scope": "full_bible"
+ },
+ {
+  "code": "fa",
+  "prefix": "fa",
+  "htmlLang": "fa",
+  "apiLanguageRange": "fa",
+  "dir": "rtl",
+  "endonym": "فارسی",
+  "englishName": "Farsi (Persian)",
+  "versionIds": [
+   1619
+  ],
+  "defaultVersionId": 1619,
+  "scope": "full_bible"
+ },
+ {
+  "code": "fr",
+  "prefix": "fr",
+  "htmlLang": "fr",
+  "apiLanguageRange": "fr",
+  "dir": "ltr",
+  "endonym": "français",
+  "englishName": "French",
+  "versionIds": [
+   21
+  ],
+  "defaultVersionId": 21,
+  "scope": "full_bible"
+ },
+ {
+  "code": "lg",
+  "prefix": "lg",
+  "htmlLang": "lg",
+  "apiLanguageRange": "lg",
+  "dir": "ltr",
+  "endonym": "Luganda",
+  "englishName": "Ganda",
+  "versionIds": [
+   1625
+  ],
+  "defaultVersionId": 1625,
+  "scope": "full_bible"
+ },
+ {
+  "code": "gbr",
+  "prefix": "gbr",
+  "htmlLang": "gbr",
+  "apiLanguageRange": "gbr",
+  "dir": "ltr",
+  "endonym": "Gbagyi",
+  "englishName": "Gbagyi",
+  "versionIds": [
+   1621
+  ],
+  "defaultVersionId": 1621,
+  "scope": "nt"
+ },
+ {
+  "code": "de",
+  "prefix": "de",
+  "htmlLang": "de",
+  "apiLanguageRange": "de",
+  "dir": "ltr",
+  "endonym": "Deutsch",
+  "englishName": "German",
+  "versionIds": [
+   73
+  ],
+  "defaultVersionId": 73,
+  "scope": "full_bible"
+ },
+ {
+  "code": "ha",
+  "prefix": "ha",
+  "htmlLang": "ha",
+  "apiLanguageRange": "ha",
+  "dir": "ltr",
+  "endonym": "Hausa",
+  "englishName": "Hausa",
+  "versionIds": [
+   1614
+  ],
+  "defaultVersionId": 1614,
+  "scope": "full_bible"
+ },
+ {
+  "code": "he",
+  "prefix": "he",
+  "htmlLang": "he",
+  "apiLanguageRange": "he",
+  "dir": "rtl",
+  "endonym": "עברית",
+  "englishName": "Hebrew",
+  "versionIds": [
+   24
+  ],
+  "defaultVersionId": 24,
+  "scope": "nt"
+ },
+ {
+  "code": "hil",
+  "prefix": "hil",
+  "htmlLang": "hil",
+  "apiLanguageRange": "hil",
+  "dir": "ltr",
+  "endonym": "Hiligaynon",
+  "englishName": "Hiligaynon",
+  "versionIds": [
+   10
+  ],
+  "defaultVersionId": 10,
+  "scope": "full_bible"
+ },
+ {
+  "code": "hi",
+  "prefix": "hi",
+  "htmlLang": "hi",
+  "apiLanguageRange": "hi",
+  "dir": "ltr",
+  "endonym": "हिन्दी",
+  "englishName": "Hindi",
+  "versionIds": [
+   1628
+  ],
+  "defaultVersionId": 1628,
+  "scope": "full_bible"
+ },
+ {
+  "code": "hu",
+  "prefix": "hu",
+  "htmlLang": "hu",
+  "apiLanguageRange": "hu",
+  "dir": "ltr",
+  "endonym": "magyar",
+  "englishName": "Hungarian",
+  "versionIds": [
+   26
+  ],
+  "defaultVersionId": 26,
+  "scope": "nt"
+ },
+ {
+  "code": "ig",
+  "prefix": "ig",
+  "htmlLang": "ig",
+  "apiLanguageRange": "ig",
+  "dir": "ltr",
+  "endonym": "Igbo",
+  "englishName": "Igbo",
+  "versionIds": [
+   1624
+  ],
+  "defaultVersionId": 1624,
+  "scope": "full_bible"
+ },
+ {
+  "code": "id",
+  "prefix": "id",
+  "htmlLang": "id",
+  "apiLanguageRange": "id",
+  "dir": "ltr",
+  "endonym": "Indonesia",
+  "englishName": "Indonesian",
+  "versionIds": [
+   2727
+  ],
+  "defaultVersionId": 2727,
+  "scope": "nt"
+ },
+ {
+  "code": "ja",
+  "prefix": "ja",
+  "htmlLang": "ja",
+  "apiLanguageRange": "ja",
+  "dir": "ltr",
+  "endonym": "日本語",
+  "englishName": "Japanese",
+  "versionIds": [
+   83
+  ],
+  "defaultVersionId": 83,
+  "scope": "full_bible"
+ },
+ {
+  "code": "ki",
+  "prefix": "ki",
+  "htmlLang": "ki",
+  "apiLanguageRange": "ki",
+  "dir": "ltr",
+  "endonym": "Gikuyu",
+  "englishName": "Kikuyu",
+  "versionIds": [
+   1622
+  ],
+  "defaultVersionId": 1622,
+  "scope": "full_bible"
+ },
+ {
+  "code": "ko",
+  "prefix": "ko",
+  "htmlLang": "ko",
+  "apiLanguageRange": "ko",
+  "dir": "ltr",
+  "endonym": "한국어",
+  "englishName": "Korean",
+  "versionIds": [
+   86
+  ],
+  "defaultVersionId": 86,
+  "scope": "full_bible"
+ },
+ {
+  "code": "ln",
+  "prefix": "ln",
+  "htmlLang": "ln",
+  "apiLanguageRange": "ln",
+  "dir": "ltr",
+  "endonym": "lingála",
+  "englishName": "Lingala",
+  "versionIds": [
+   1964
+  ],
+  "defaultVersionId": 1964,
+  "scope": "full_bible"
+ },
+ {
+  "code": "luo",
+  "prefix": "luo",
+  "htmlLang": "luo",
+  "apiLanguageRange": "luo",
+  "dir": "ltr",
+  "endonym": "Dholuo",
+  "englishName": "Luo (Kenya and Tanzania)",
+  "versionIds": [
+   2652
+  ],
+  "defaultVersionId": 2652,
+  "scope": "full_bible"
+ },
+ {
+  "code": "ml",
+  "prefix": "ml",
+  "htmlLang": "ml",
+  "apiLanguageRange": "ml",
+  "dir": "ltr",
+  "endonym": "മലയാളം",
+  "englishName": "Malayalam",
+  "versionIds": [
+   2431
+  ],
+  "defaultVersionId": 2431,
+  "scope": "full_bible"
+ },
+ {
+  "code": "nd",
+  "prefix": "nd",
+  "htmlLang": "nd",
+  "apiLanguageRange": "nd",
+  "dir": "ltr",
+  "endonym": "isiNdebele",
+  "englishName": "North Ndebele",
+  "versionIds": [
+   1626
+  ],
+  "defaultVersionId": 1626,
+  "scope": "full_bible"
+ },
+ {
+  "code": "no",
+  "prefix": "no",
+  "htmlLang": "no",
+  "apiLanguageRange": "nb",
+  "dir": "ltr",
+  "endonym": "norsk",
+  "englishName": "Norwegian Bokmål",
+  "versionIds": [
+   115
+  ],
+  "defaultVersionId": 115,
+  "scope": "nt"
+ },
+ {
+  "code": "ny",
+  "prefix": "ny",
+  "htmlLang": "ny",
+  "apiLanguageRange": "ny",
+  "dir": "ltr",
+  "endonym": "Nyanja",
+  "englishName": "Nyanja",
+  "versionIds": [
+   1618
+  ],
+  "defaultVersionId": 1618,
+  "scope": "full_bible"
+ },
+ {
+  "code": "pl",
+  "prefix": "pl",
+  "htmlLang": "pl",
+  "apiLanguageRange": "pl",
+  "dir": "ltr",
+  "endonym": "polski",
+  "englishName": "Polish",
+  "versionIds": [
+   137
+  ],
+  "defaultVersionId": 137,
+  "scope": "nt"
+ },
+ {
+  "code": "pt",
+  "prefix": "pt",
+  "htmlLang": "pt",
+  "apiLanguageRange": "pt",
+  "dir": "ltr",
+  "endonym": "português",
+  "englishName": "Portuguese (Brazil)",
+  "versionIds": [
+   129,
+   1966,
+   4360
+  ],
+  "defaultVersionId": 129,
+  "scope": "full_bible"
+ },
+ {
+  "code": "pt-pt",
+  "prefix": "pt-pt",
+  "htmlLang": "pt-PT",
+  "apiLanguageRange": "pt-PT",
+  "dir": "ltr",
+  "endonym": "português europeu",
+  "englishName": "Portuguese (Portugal)",
+  "versionIds": [
+   1967
+  ],
+  "defaultVersionId": 1967,
+  "scope": "full_bible"
+ },
+ {
+  "code": "ro",
+  "prefix": "ro",
+  "htmlLang": "ro",
+  "apiLanguageRange": "ro",
+  "dir": "ltr",
+  "endonym": "română",
+  "englishName": "Romanian",
+  "versionIds": [
+   126
+  ],
+  "defaultVersionId": 126,
+  "scope": "full_bible"
+ },
+ {
+  "code": "ru",
+  "prefix": "ru",
+  "htmlLang": "ru",
+  "apiLanguageRange": "ru",
+  "dir": "ltr",
+  "endonym": "русский",
+  "englishName": "Russian",
+  "versionIds": [
+   143,
+   385,
+   840,
+   853
+  ],
+  "defaultVersionId": 143,
+  "scope": "full_bible"
+ },
+ {
+  "code": "sr",
+  "prefix": "sr",
+  "htmlLang": "sr",
+  "apiLanguageRange": "sr",
+  "dir": "ltr",
+  "endonym": "српски",
+  "englishName": "Serbian",
+  "versionIds": [
+   1969,
+   1970
+  ],
+  "defaultVersionId": 1969,
+  "scope": "full_bible"
+ },
+ {
+  "code": "tn",
+  "prefix": "tn",
+  "htmlLang": "tn",
+  "apiLanguageRange": "tn",
+  "dir": "ltr",
+  "endonym": "Setswana",
+  "englishName": "Setswana",
+  "versionIds": [
+   1615
+  ],
+  "defaultVersionId": 1615,
+  "scope": "nt"
+ },
+ {
+  "code": "sn",
+  "prefix": "sn",
+  "htmlLang": "sn",
+  "apiLanguageRange": "sn",
+  "dir": "ltr",
+  "endonym": "chiShona",
+  "englishName": "Shona",
+  "versionIds": [
+   32
+  ],
+  "defaultVersionId": 32,
+  "scope": "full_bible"
+ },
+ {
+  "code": "sk",
+  "prefix": "sk",
+  "htmlLang": "sk",
+  "apiLanguageRange": "sk",
+  "dir": "ltr",
+  "endonym": "slovenčina",
+  "englishName": "Slovak",
+  "versionIds": [
+   3835
+  ],
+  "defaultVersionId": 3835,
+  "scope": "nt"
+ },
+ {
+  "code": "sl",
+  "prefix": "sl",
+  "htmlLang": "sl",
+  "apiLanguageRange": "sl",
+  "dir": "ltr",
+  "endonym": "slovenščina",
+  "englishName": "Slovenian",
+  "versionIds": [
+   1636
+  ],
+  "defaultVersionId": 1636,
+  "scope": "nt"
+ },
+ {
+  "code": "ckb",
+  "prefix": "ckb",
+  "htmlLang": "ckb",
+  "apiLanguageRange": "ckb",
+  "dir": "rtl",
+  "endonym": "کوردیی ناوەندی",
+  "englishName": "Sorani Kurdish",
+  "versionIds": [
+   503
+  ],
+  "defaultVersionId": 503,
+  "scope": "full_bible"
+ },
+ {
+  "code": "es",
+  "prefix": "es",
+  "htmlLang": "es",
+  "apiLanguageRange": "es",
+  "dir": "ltr",
+  "endonym": "español",
+  "englishName": "Spanish",
+  "versionIds": [
+   128,
+   2664
+  ],
+  "defaultVersionId": 128,
+  "scope": "full_bible"
+ },
+ {
+  "code": "es-es",
+  "prefix": "es-es",
+  "htmlLang": "es-ES",
+  "apiLanguageRange": "es-ES",
+  "dir": "ltr",
+  "endonym": "español de España",
+  "englishName": "Spanish (Spain)",
+  "versionIds": [
+   1637
+  ],
+  "defaultVersionId": 1637,
+  "scope": "full_bible"
+ },
+ {
+  "code": "sw",
+  "prefix": "sw",
+  "htmlLang": "sw",
+  "apiLanguageRange": "sw",
+  "dir": "ltr",
+  "endonym": "Kiswahili",
+  "englishName": "Swahili",
+  "versionIds": [
+   1627
+  ],
+  "defaultVersionId": 1627,
+  "scope": "full_bible"
+ },
+ {
+  "code": "sv",
+  "prefix": "sv",
+  "htmlLang": "sv",
+  "apiLanguageRange": "sv",
+  "dir": "ltr",
+  "endonym": "svenska",
+  "englishName": "Swedish",
+  "versionIds": [
+   916
+  ],
+  "defaultVersionId": 916,
+  "scope": "full_bible"
+ },
+ {
+  "code": "tl",
+  "prefix": "tl",
+  "htmlLang": "tl",
+  "apiLanguageRange": "fil",
+  "dir": "ltr",
+  "endonym": "Tagalog",
+  "englishName": "Tagalog",
+  "versionIds": [
+   1264
+  ],
+  "defaultVersionId": 1264,
+  "scope": "full_bible"
+ },
+ {
+  "code": "ta",
+  "prefix": "ta",
+  "htmlLang": "ta",
+  "apiLanguageRange": "ta",
+  "dir": "ltr",
+  "endonym": "தமிழ்",
+  "englishName": "Tamil",
+  "versionIds": [
+   2730,
+   3281
+  ],
+  "defaultVersionId": 2730,
+  "scope": "full_bible"
+ },
+ {
+  "code": "th",
+  "prefix": "th",
+  "htmlLang": "th",
+  "apiLanguageRange": "th",
+  "dir": "ltr",
+  "endonym": "ไทย",
+  "englishName": "Thai",
+  "versionIds": [
+   179
+  ],
+  "defaultVersionId": 179,
+  "scope": "full_bible"
+ },
+ {
+  "code": "tw",
+  "prefix": "tw",
+  "htmlLang": "tw",
+  "apiLanguageRange": "ak",
+  "dir": "ltr",
+  "endonym": "Twi",
+  "englishName": "Twi",
+  "versionIds": [
+   1631
+  ],
+  "defaultVersionId": 1631,
+  "scope": "full_bible"
+ },
+ {
+  "code": "vi",
+  "prefix": "vi",
+  "htmlLang": "vi",
+  "apiLanguageRange": "vi",
+  "dir": "ltr",
+  "endonym": "Tiếng Việt",
+  "englishName": "Vietnamese",
+  "versionIds": [
+   1638
+  ],
+  "defaultVersionId": 1638,
+  "scope": "full_bible"
+ },
+ {
+  "code": "yom",
+  "prefix": "yom",
+  "htmlLang": "yom",
+  "apiLanguageRange": "yom",
+  "dir": "ltr",
+  "endonym": "Kiyombe",
+  "englishName": "Yombe",
+  "versionIds": [
+   1617
+  ],
+  "defaultVersionId": 1617,
+  "scope": "nt"
+ },
+ {
+  "code": "yo",
+  "prefix": "yo",
+  "htmlLang": "yo",
+  "apiLanguageRange": "yo",
+  "dir": "ltr",
+  "endonym": "Èdè Yorùbá",
+  "englishName": "Yoruba",
+  "versionIds": [
+   911
+  ],
+  "defaultVersionId": 911,
+  "scope": "full_bible"
+ }
+]

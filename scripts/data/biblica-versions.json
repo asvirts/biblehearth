@@ -1,0 +1,623 @@
+{
+ "aka": {
+  "iso1": "ak",
+  "name": "Akan",
+  "versionIds": [
+   2094
+  ]
+ },
+ "amh": {
+  "iso1": "am",
+  "name": "Amharic",
+  "versionIds": [
+   1260
+  ]
+ },
+ "arb": {
+  "iso1": "ar",
+  "name": "Arabic (Standard)",
+  "versionIds": [
+   101
+  ]
+ },
+ "ben": {
+  "iso1": "bn",
+  "name": "Bengali (Bangla)",
+  "versionIds": [
+   809,
+   2412
+  ]
+ },
+ "btt": {
+  "iso1": null,
+  "name": "Bete-Bendi",
+  "versionIds": [
+   4546
+  ]
+ },
+ "ceb": {
+  "iso1": null,
+  "name": "Cebuano",
+  "versionIds": [
+   9
+  ]
+ },
+ "hne": {
+  "iso1": null,
+  "name": "Chhattisgarhi",
+  "versionIds": [
+   1630
+  ]
+ },
+ "qug": {
+  "iso1": null,
+  "name": "Chimborazo Highland Quichua",
+  "versionIds": [
+   98
+  ]
+ },
+ "zho": {
+  "iso1": "zh_CN",
+  "name": "Chinese (Simplified)",
+  "versionIds": [
+   36
+  ]
+ },
+ "zho_tw": {
+  "iso1": "zh_TW",
+  "name": "Chinese (Traditional)",
+  "versionIds": [
+   1392
+  ]
+ },
+ "hrv": {
+  "iso1": "hr",
+  "name": "Croatian",
+  "versionIds": [
+   39
+  ]
+ },
+ "ces": {
+  "iso1": "cs",
+  "name": "Czech",
+  "versionIds": [
+   162
+  ]
+ },
+ "dan": {
+  "iso1": "da",
+  "name": "Danish",
+  "versionIds": [
+   20,
+   4555
+  ]
+ },
+ "nld": {
+  "iso1": "nl",
+  "name": "Dutch",
+  "versionIds": [
+   75
+  ]
+ },
+ "efi": {
+  "iso1": null,
+  "name": "Efik",
+  "versionIds": [
+   4541
+  ]
+ },
+ "eng": {
+  "iso1": "en",
+  "name": "English",
+  "versionIds": [
+   31,
+   107,
+   110,
+   111,
+   113,
+   2753,
+   4253,
+   4669,
+   4670
+  ]
+ },
+ "ekk": {
+  "iso1": null,
+  "name": "Estonian, Standard",
+  "versionIds": [
+   3257
+  ]
+ },
+ "fas": {
+  "iso1": null,
+  "name": "Farsi (Persian)",
+  "versionIds": [
+   1619,
+   4715
+  ]
+ },
+ "fra": {
+  "iso1": "fr",
+  "name": "French",
+  "versionIds": [
+   21
+  ]
+ },
+ "lug": {
+  "iso1": "lg",
+  "name": "Ganda",
+  "versionIds": [
+   1625
+  ]
+ },
+ "gbr": {
+  "iso1": null,
+  "name": "Gbagyi",
+  "versionIds": [
+   1621,
+   4607
+  ]
+ },
+ "deu": {
+  "iso1": "de",
+  "name": "German",
+  "versionIds": [
+   73
+  ]
+ },
+ "guj": {
+  "iso1": "gu",
+  "name": "Gujarati",
+  "versionIds": [
+   4661
+  ]
+ },
+ "hau": {
+  "iso1": "ha",
+  "name": "Hausa",
+  "versionIds": [
+   1614
+  ]
+ },
+ "heb": {
+  "iso1": "he",
+  "name": "Hebrew",
+  "versionIds": [
+   24
+  ]
+ },
+ "hil": {
+  "iso1": null,
+  "name": "Hiligaynon",
+  "versionIds": [
+   10
+  ]
+ },
+ "hin": {
+  "iso1": "hi",
+  "name": "Hindi",
+  "versionIds": [
+   1628
+  ]
+ },
+ "hun": {
+  "iso1": "hu",
+  "name": "Hungarian",
+  "versionIds": [
+   26
+  ]
+ },
+ "ibb": {
+  "iso1": null,
+  "name": "Ibibio",
+  "versionIds": [
+   2619
+  ]
+ },
+ "ibo": {
+  "iso1": "ig",
+  "name": "Igbo",
+  "versionIds": [
+   1624
+  ]
+ },
+ "ind": {
+  "iso1": "id",
+  "name": "Indonesian",
+  "versionIds": [
+   2727,
+   4548
+  ]
+ },
+ "ita": {
+  "iso1": "it",
+  "name": "Italian",
+  "versionIds": [
+   122,
+   123
+  ]
+ },
+ "jpn": {
+  "iso1": "ja",
+  "name": "Japanese",
+  "versionIds": [
+   83
+  ]
+ },
+ "kan": {
+  "iso1": "kn",
+  "name": "Kannada",
+  "versionIds": [
+   3259
+  ]
+ },
+ "kik": {
+  "iso1": "ki",
+  "name": "Kikuyu",
+  "versionIds": [
+   1622
+  ]
+ },
+ "grc": {
+  "iso1": null,
+  "name": "Koine Greek",
+  "versionIds": [
+   156
+  ]
+ },
+ "kor": {
+  "iso1": "ko",
+  "name": "Korean",
+  "versionIds": [
+   86
+  ]
+ },
+ "lao": {
+  "iso1": "lo",
+  "name": "Lao",
+  "versionIds": [
+   3755
+  ]
+ },
+ "lin": {
+  "iso1": "ln",
+  "name": "Lingala",
+  "versionIds": [
+   1964
+  ]
+ },
+ "luo": {
+  "iso1": null,
+  "name": "Luo (Kenya and Tanzania)",
+  "versionIds": [
+   2652
+  ]
+ },
+ "mal": {
+  "iso1": "ml",
+  "name": "Malayalam",
+  "versionIds": [
+   2431
+  ]
+ },
+ "mar": {
+  "iso1": "mr",
+  "name": "Marathi",
+  "versionIds": [
+   3260
+  ]
+ },
+ "mya": {
+  "iso1": "my",
+  "name": "Myanmar Burmese (Unicode)",
+  "versionIds": [
+   3861
+  ]
+ },
+ "npi": {
+  "iso1": "ne",
+  "name": "Nepali",
+  "versionIds": [
+   3261
+  ]
+ },
+ "nde": {
+  "iso1": "nd",
+  "name": "North Ndebele",
+  "versionIds": [
+   1626
+  ]
+ },
+ "nob": {
+  "iso1": "no",
+  "name": "Norwegian Bokmål",
+  "versionIds": [
+   115
+  ]
+ },
+ "nya": {
+  "iso1": "ny",
+  "name": "Nyanja",
+  "versionIds": [
+   1618
+  ]
+ },
+ "nzi": {
+  "iso1": null,
+  "name": "Nzima",
+  "versionIds": [
+   4529
+  ]
+ },
+ "ori": {
+  "iso1": null,
+  "name": "Oriya (macrolanguage)",
+  "versionIds": [
+   4662
+  ]
+ },
+ "orm": {
+  "iso1": null,
+  "name": "Oromo",
+  "versionIds": [
+   3552
+  ]
+ },
+ "pan": {
+  "iso1": "pa",
+  "name": "Panjabi",
+  "versionIds": [
+   3467
+  ]
+ },
+ "pol": {
+  "iso1": "pl",
+  "name": "Polish",
+  "versionIds": [
+   137
+  ]
+ },
+ "por": {
+  "iso1": "pt",
+  "name": "Portuguese (Brazil)",
+  "versionIds": [
+   129,
+   1966,
+   4094,
+   4360
+  ]
+ },
+ "por_pt": {
+  "iso1": "pt",
+  "name": "Portuguese (Portugal)",
+  "versionIds": [
+   1967
+  ]
+ },
+ "ron": {
+  "iso1": "ro",
+  "name": "Romanian",
+  "versionIds": [
+   126
+  ]
+ },
+ "run": {
+  "iso1": "rn",
+  "name": "Rundi",
+  "versionIds": [
+   3264
+  ]
+ },
+ "rus": {
+  "iso1": "ru",
+  "name": "Russian",
+  "versionIds": [
+   143,
+   385,
+   840,
+   853
+  ]
+ },
+ "srp": {
+  "iso1": "sr",
+  "name": "Serbian",
+  "versionIds": [
+   1969,
+   1970
+  ]
+ },
+ "tsn": {
+  "iso1": "tn",
+  "name": "Setswana",
+  "versionIds": [
+   1615
+  ]
+ },
+ "sna": {
+  "iso1": "sn",
+  "name": "Shona",
+  "versionIds": [
+   32
+  ]
+ },
+ "sin": {
+  "iso1": "si",
+  "name": "Sinhala",
+  "versionIds": [
+   3265
+  ]
+ },
+ "slk": {
+  "iso1": "sk",
+  "name": "Slovak",
+  "versionIds": [
+   3835
+  ]
+ },
+ "slv": {
+  "iso1": "sl",
+  "name": "Slovenian",
+  "versionIds": [
+   1636,
+   4723
+  ]
+ },
+ "som": {
+  "iso1": "so",
+  "name": "Somali",
+  "versionIds": [
+   4029
+  ]
+ },
+ "ckb": {
+  "iso1": "ku_IQ",
+  "name": "Sorani Kurdish",
+  "versionIds": [
+   503
+  ]
+ },
+ "spa": {
+  "iso1": "es",
+  "name": "Spanish",
+  "versionIds": [
+   128,
+   753,
+   2664
+  ]
+ },
+ "spa_es": {
+  "iso1": "es",
+  "name": "Spanish (Spain)",
+  "versionIds": [
+   1637
+  ]
+ },
+ "nsm": {
+  "iso1": null,
+  "name": "Sumi Naga",
+  "versionIds": [
+   2728
+  ]
+ },
+ "swh": {
+  "iso1": "sw",
+  "name": "Swahili",
+  "versionIds": [
+   1627,
+   4369
+  ]
+ },
+ "swe": {
+  "iso1": "sv",
+  "name": "Swedish",
+  "versionIds": [
+   33,
+   916
+  ]
+ },
+ "tgl": {
+  "iso1": "tl",
+  "name": "Tagalog",
+  "versionIds": [
+   1264
+  ]
+ },
+ "tam": {
+  "iso1": "ta",
+  "name": "Tamil",
+  "versionIds": [
+   2730,
+   3281,
+   4245
+  ]
+ },
+ "tel": {
+  "iso1": "te",
+  "name": "Telugu",
+  "versionIds": [
+   3268
+  ]
+ },
+ "tha": {
+  "iso1": "th",
+  "name": "Thai",
+  "versionIds": [
+   179,
+   4248,
+   4501,
+   4502
+  ]
+ },
+ "tur": {
+  "iso1": "tr",
+  "name": "Turkish",
+  "versionIds": [
+   3763
+  ]
+ },
+ "twi": {
+  "iso1": "tw",
+  "name": "Twi",
+  "versionIds": [
+   1631
+  ]
+ },
+ "ukr": {
+  "iso1": "uk",
+  "name": "Ukrainian",
+  "versionIds": [
+   3269
+  ]
+ },
+ "urd": {
+  "iso1": "ur",
+  "name": "Urdu",
+  "versionIds": [
+   3536,
+   4553
+  ]
+ },
+ "urd_dv": {
+  "iso1": null,
+  "name": "Urdu (Devanagari)",
+  "versionIds": [
+   3472
+  ]
+ },
+ "vie": {
+  "iso1": "vi",
+  "name": "Vietnamese",
+  "versionIds": [
+   1638
+  ]
+ },
+ "gaz": {
+  "iso1": null,
+  "name": "West Central Oromo",
+  "versionIds": [
+   3725,
+   4456
+  ]
+ },
+ "yom": {
+  "iso1": null,
+  "name": "Yombe",
+  "versionIds": [
+   1617
+  ]
+ },
+ "yor": {
+  "iso1": "yo",
+  "name": "Yoruba",
+  "versionIds": [
+   911
+  ]
+ },
+ "ewe": {
+  "iso1": "ee",
+  "name": "Éwé",
+  "versionIds": [
+   1613
+  ]
+ }
+}

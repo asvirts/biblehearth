@@ -2,13 +2,19 @@ import { BOOK_IDS } from '@youversion/platform-core';
 
 export type BookId = (typeof BOOK_IDS)[number];
 
-type BookMeta = {
+export type BookMeta = {
 	usfm: BookId;
 	slug: string;
 	name: string;
 };
 
-const BOOK_META: readonly BookMeta[] = [
+/**
+ * Exported so the locale-aware lookups in lib/bible/books can treat English as
+ * one more table rather than as the absence of one. Everything else should ask
+ * those helpers, not read this: a caller that reaches in here is a caller that
+ * only works in English.
+ */
+export const BOOK_META: readonly BookMeta[] = [
 	{ usfm: 'GEN', slug: 'genesis', name: 'Genesis' },
 	{ usfm: 'EXO', slug: 'exodus', name: 'Exodus' },
 	{ usfm: 'LEV', slug: 'leviticus', name: 'Leviticus' },

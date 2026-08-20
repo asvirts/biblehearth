@@ -40,7 +40,7 @@ import {
 	findBook,
 	getBibleIndex,
 	getPassageHtml,
-	listEnglishVersions,
+	listVersions,
 	resolveVersion,
 } from '../../../../../lib/youversion/api';
 
@@ -92,7 +92,7 @@ try {
 	slug = resolved.slug;
 	[index, catalog, passage] = await Promise.all([
 		getBibleIndex(resolved.version.id),
-		listEnglishVersions(),
+		listVersions(),
 		getPassageHtml(resolved.version.id, chapterUsfm(bookUsfm, chapterId), {
 			headings: true,
 			notes: true,
@@ -104,6 +104,11 @@ try {
 		return Astro.rewrite('/404');
 	}
 
+	// These drive the Previous/Next links in the body and the `rel="prev"` and
+	// `rel="next"` pair in the head. `adjacentReadableChapter` is what makes the
+	// second one honest: it walks past book intros and non-numeric chapters and
+	// crosses into the next book, so the sequence it states is the sequence a
+	// reader actually gets rather than an assumption that chapter + 1 exists.
 	const previous = adjacentReadableChapter(index, book.id, chapterId, 'previous');
 	const next = adjacentReadableChapter(index, book.id, chapterId, 'next');
 	previousHref = previous
@@ -166,6 +171,8 @@ const description = snippet
 	description={description}
 	lang={version?.language_tag ?? 'en'}
 	canonicalPath={chapterPath(slug, bookUsfm, chapterId)}
+	prev={previousHref ?? undefined}
+	next={nextHref ?? undefined}
 	jsonLd={
 		version && book
 			? [

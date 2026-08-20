@@ -42,7 +42,7 @@ import {
 	getDefaultVersion,
 	getPassageHtml,
 	getVerseOfTheDay,
-	listEnglishVersions,
+	listVersions,
 	PlatformConfigError,
 	versionSlug,
 } from '../lib/youversion/api';
@@ -60,7 +60,7 @@ let slug = '';
 try {
 	const [defaultVersion, catalog] = await Promise.all([
 		getDefaultVersion(),
-		listEnglishVersions(),
+		listVersions(),
 	]);
 	version = defaultVersion;
 

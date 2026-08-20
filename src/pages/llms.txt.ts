@@ -7,6 +7,7 @@ import {
 	listChapterBriefs,
 } from '../lib/commentary';
 import { MARKDOWN_CACHE_CONTROL } from '../lib/http';
+import { ABOUT_PATH, CONTACT_PATH } from '../lib/site';
 import { listTopics, topicPath } from '../lib/topics';
 import { answerPath } from '../lib/answers';
 
@@ -110,6 +111,16 @@ export const GET: APIRoute = async ({ site }) => {
 			'Verse of the Day',
 			absoluteUrl(site, '/verse-of-the-day'),
 			'Changes daily.',
+		),
+		entry(
+			'About BibleHearth',
+			absoluteUrl(site, ABOUT_PATH),
+			'Who publishes this site, how a chapter study is written, what it will not publish, and where to send a correction.',
+		),
+		entry(
+			'Contact',
+			absoluteUrl(site, CONTACT_PATH),
+			'One address, what to write about, and what it cannot answer. Corrections are acted on whether or not they get a reply.',
 		),
 		entry(
 			'Attributions and licences',

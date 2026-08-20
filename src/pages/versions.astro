@@ -2,13 +2,14 @@
 import type { BibleVersion } from '@youversion/platform-core';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import StatusMessage from '../components/StatusMessage.astro';
-import { versionPath } from '../lib/bible/urls';
+import { editionForSlug, editionStyle } from '../lib/bible/editions';
+import { absoluteUrl, versionPath } from '../lib/bible/urls';
 import { READER_CACHE_CONTROL, setPageHeaders } from '../lib/http';
-import { breadcrumbJsonLd } from '../lib/seo';
+import { breadcrumbJsonLd, itemListJsonLd } from '../lib/seo';
 import {
 	displayAbbreviation,
 	errorStatus,
-	listEnglishVersions,
+	listVersions,
 	versionSlug,
 } from '../lib/youversion/api';
 
@@ -18,7 +19,7 @@ let errorTitle = '';
 let errorMessage = '';
 
 try {
-	versions = await listEnglishVersions();
+	versions = await listVersions();
 } catch (error) {
 	status = errorStatus(error);
 	errorTitle = 'Versions are unavailable';
@@ -27,16 +28,47 @@ try {
 
 Astro.response.status = status;
 setPageHeaders(Astro.response, status, READER_CACHE_CONTROL);
+
+/**
+ * Each version paired with what we have written about it.
+ *
+ * The style label and the reading level are the two facts someone choosing a
+ * translation is actually comparing, and both already exist in
+ * lib/bible/editions.ts — the style derived from `approach` so the two can
+ * never disagree. A version with no record still lists; it just lists without
+ * them, which is the same fallback `/bible/<slug>` uses.
+ */
+const listed = versions.map((version) => {
+	const slug = versionSlug(version, versions);
+	const edition = editionForSlug(slug);
+	return {
+		slug,
+		path: versionPath(slug),
+		abbr: displayAbbreviation(version),
+		name: edition?.name ?? version.localized_title ?? version.title,
+		style: edition ? editionStyle(edition) : null,
+		grade: edition?.readingGrade ?? null,
+	};
+});
 ---
 
 <BaseLayout
-	title="Bible versions · BibleHearth"
-	description="Every English Bible translation you can read free on BibleHearth, with the publisher and licence behind each one, and how they differ from each other."
+	title="Bible Translations Compared — Which Should You Read?"
+	description="Every English Bible translation on BibleHearth, compared: how literal each one is, how easy it is to read, and which to choose when you are starting out."
 	canonicalPath="/versions"
-	jsonLd={breadcrumbJsonLd(Astro.site, [
-		{ name: 'BibleHearth', path: '/' },
-		{ name: 'Versions', path: '/versions' },
-	])}
+	jsonLd={[
+		breadcrumbJsonLd(Astro.site, [
+			{ name: 'BibleHearth', path: '/' },
+			{ name: 'Versions', path: '/versions' },
+		]),
+		itemListJsonLd({
+			name: 'English Bible translations on BibleHearth',
+			items: listed.map((item) => ({
+				name: item.name,
+				url: absoluteUrl(Astro.site, item.path),
+			})),
+		}),
+	]}
 >
 	{
 		status !== 200 ? (
@@ -49,28 +81,93 @@ setPageHeaders(Astro.response, status, READER_CACHE_CONTROL);
 						<span>/</span>
 						<span>Versions</span>
 					</nav>
-					<h1>Bible versions</h1>
+					<h1>Which Bible translation should you read?</h1>
 					<p class="lede">
-						These English translations are available to this app after publisher
-						licensing. Open a version to read by book and chapter.
+						Every translation here is a real Bible, worked out from the Hebrew and
+						Greek by scholars. The differences between them are smaller than the
+						arguments about them suggest — but they are real, and one of them
+						will suit you better than the others.
 					</p>
 				</section>
-				<div class="version-grid">
-					{
-						versions.map((version) => {
-							const slug = versionSlug(version, versions);
-							return (
-								<a class="tile" href={versionPath(slug)}>
-									<span class="tile-kicker">{displayAbbreviation(version)}</span>
-									{version.localized_title || version.title}
-									{version.language_tag ? (
-										<span class="muted"> · {version.language_tag}</span>
+
+				<section>
+					<h2>The one difference that actually matters</h2>
+					<p>
+						Translators face the same choice on every verse: follow the original
+						wording, or say what the sentence means in natural English. Follow
+						the wording and you can see how the original was built, but the
+						English comes out stiff — Paul argues in long Greek sentences, and
+						they arrive as long English ones. Say what it means and it reads
+						easily, but the decision the translator made is invisible to you.
+					</p>
+					<p>
+						No translation does only one of these. Each one sits at a different
+						point between them, and that is what the labels below are
+						describing. “Formal” means it stays close to the wording.
+						“Balanced” means it moves between the two. “Simplified” means it
+						has been restated in the shortest sentences that will carry the
+						meaning.
+					</p>
+				</section>
+
+				<section>
+					<h2>Two things that matter less than people think</h2>
+					<p>
+						The first is which one is <em>most accurate</em>. Every translation
+						on this page is accurate. What they disagree about is what to do
+						when accuracy and clarity pull in opposite directions, and that is a
+						judgement, not an error.
+					</p>
+					<p>
+						The second is reading level. A third-grade reading level does not
+						mean a children’s Bible or a lesser one — it is the same book in
+						shorter sentences. Adults who stall a few chapters into every other
+						translation often read whole books in that one, and there is nothing
+						odd about starting there.
+					</p>
+				</section>
+
+				<section>
+					<h2>How to choose</h2>
+					<p>
+						If you have not read much of the Bible before, start with the one
+						that will not stop you: the NIV, or the NIrV if you want it plainer
+						still. If you want to see how a sentence is built, read a formal
+						translation alongside it. If you are stuck on a single verse rather
+						than working through a book, the Amplified is built for exactly
+						that.
+					</p>
+					<p>
+						And read more than one. The cheapest way to find out whether a verse
+						means what you think it means is to read it in a translation that
+						words it differently.
+					</p>
+				</section>
+
+				<section>
+					<h2>The translations</h2>
+					<div class="version-grid">
+						{
+							listed.map((item) => (
+								<a class="tile" href={item.path}>
+									<span class="tile-kicker">{item.abbr}</span>
+									{item.name}
+									{item.style || item.grade ? (
+										<span class="muted">
+											{' '}
+											·{' '}
+											{[item.style, item.grade].filter(Boolean).join(' · ')}
+										</span>
 									) : null}
 								</a>
-							);
-						})
-					}
-				</div>
+							))
+						}
+					</div>
+					<p>
+						Each one has a page of its own with where it came from, who made it,
+						and the honest limitation of reading it.
+					</p>
+				</section>
 			</div>
 		)
 	}
