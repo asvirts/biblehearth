@@ -18,13 +18,28 @@ import {
  * `failures` array means a slug does not resolve back to its own book, which is
  * a 404 on a real URL rather than anything a build would catch.
  */
-export const GET: APIRoute = () => {
+export const GET: APIRoute = ({ locals, url }) => {
 	if (!import.meta.env.DEV) {
 		return new Response(null, { status: 404 });
 	}
 
 	const failures: string[] = [];
 	const rows: unknown[] = [];
+
+	/**
+	 * What the middleware decided, echoed back.
+	 *
+	 * Reachable under any locale prefix, which is the whole test:
+	 * `/pt/api/i18n-smoke` must report `pt` here while `url.pathname` reads
+	 * `/api/i18n-smoke`, because the prefix is stripped before routing. If
+	 * `resolved` comes back `en` on a prefixed request, the rewrite is not
+	 * running and every localized URL on the site is quietly serving English.
+	 */
+	const middleware = {
+		resolved: locals.locale?.code ?? '(unset — middleware did not run)',
+		localePath: locals.localePath ?? null,
+		routedPathname: url.pathname,
+	};
 
 	for (const locale of LOCALES) {
 		const books = localizedBooks(locale);
@@ -51,10 +66,31 @@ export const GET: APIRoute = () => {
 				failures.push(`${locale.code}: encoded ${book.slug} -> ${encoded}`);
 			} else if (decomposed !== book.usfm) {
 				failures.push(`${locale.code}: NFD ${book.slug} -> ${decomposed}`);
-			} else if (!isCanonicalLocaleBookSlug(locale, book.slug, book.usfm)) {
-				failures.push(`${locale.code}: ${book.slug} is not canonical for ${book.usfm}`);
 			} else {
-				roundTripped += 1;
+				/**
+				 * The canonical spelling — which is not always the table's.
+				 *
+				 * A SEARCH_SLUG override makes the publisher's slug an alias: it
+				 * must still resolve (checked above) but it is no longer canonical,
+				 * and asserting otherwise would fail on exactly the three locales
+				 * the override exists for. What must hold is that the canonical
+				 * spelling resolves to the same book and reports itself canonical,
+				 * because that is the URL every link and every sitemap entry uses.
+				 */
+				const canonical = bookSlug(locale, book.usfm);
+				if (usfmFromLocaleBookSlug(locale, canonical) !== book.usfm) {
+					failures.push(
+						`${locale.code}: canonical ${canonical} does not resolve to ${book.usfm}`,
+					);
+				} else if (
+					!isCanonicalLocaleBookSlug(locale, canonical, book.usfm)
+				) {
+					failures.push(
+						`${locale.code}: ${canonical} is not canonical for ${book.usfm}`,
+					);
+				} else {
+					roundTripped += 1;
+				}
 			}
 		}
 
@@ -83,7 +119,7 @@ export const GET: APIRoute = () => {
 
 	return new Response(
 		JSON.stringify(
-			{ locales: LOCALES.length, failures, rows },
+			{ locales: LOCALES.length, middleware, failures, rows },
 			null,
 			1,
 		),
