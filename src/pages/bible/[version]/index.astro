@@ -4,6 +4,8 @@ import BaseLayout from '../../../layouts/BaseLayout.astro';
 import BookList from '../../../components/BookList.astro';
 import CopyrightNotice from '../../../components/CopyrightNotice.astro';
 import StatusMessage from '../../../components/StatusMessage.astro';
+import { editionForSlug } from '../../../lib/bible/editions';
+import { truncateWords } from '../../../lib/bible/text';
 import { versionPath } from '../../../lib/bible/urls';
 import { READER_CACHE_CONTROL, setPageHeaders } from '../../../lib/http';
 import { breadcrumbJsonLd } from '../../../lib/seo';
@@ -48,17 +50,36 @@ try {
 Astro.response.status = status;
 setPageHeaders(Astro.response, status, READER_CACHE_CONTROL);
 
+/**
+ * Our own writing about this translation, where it exists. Absent for a version
+ * nobody has written up yet, and the page falls back to the book list alone
+ * rather than to an empty section.
+ */
+const edition = editionForSlug(slug);
+
+const abbreviation = edition?.abbr ?? (version ? displayAbbreviation(version) : '');
 const title = version
-	? `${version.localized_title || version.title} (${displayAbbreviation(version)})`
+	? `${edition?.name ?? (version.localized_title || version.title)} (${abbreviation})`
 	: 'Bible version';
+
+/**
+ * The title leads with the translation's name because that is the query, and
+ * then says what the page answers — this is not another reader page, it is the
+ * page that tells you whether this is the Bible you should be reading.
+ */
+const pageTitle = edition
+	? `${title} — How It Reads and Who It’s For`
+	: `${title} · BibleHearth`;
 ---
 
 <BaseLayout
-	title={status === 200 ? `${title} · BibleHearth` : 'Bible version unavailable · BibleHearth'}
+	title={status === 200 ? pageTitle : 'Bible version unavailable · BibleHearth'}
 	description={
-		status === 200
-			? `Read the ${title} by book and chapter, with publisher copyright displayed on every page.`
-			: 'This Bible version could not be loaded.'
+		status !== 200
+			? 'This Bible version could not be loaded.'
+			: edition
+				? truncateWords(edition.summary)
+				: `Read the ${title} by book and chapter, with publisher copyright displayed on every page.`
 	}
 	lang={version?.language_tag ?? 'en'}
 	canonicalPath={versionPath(slug)}
@@ -88,7 +109,59 @@ const title = version
 					<span>{displayAbbreviation(version)}</span>
 				</nav>
 				<h1>{title}</h1>
-				<p class="lede">Choose a book to start reading.</p>
+
+				{
+					edition ? (
+						<>
+							<p class="source-byline">{edition.byline}</p>
+							<p class="lede">{edition.summary}</p>
+
+							{edition.about.map((paragraph) => (
+								<p class="source-about">{paragraph}</p>
+							))}
+
+							<dl class="glossary-list">
+								<div class="glossary-item">
+									<dt>How it translates</dt>
+									<dd>{edition.approach}</dd>
+								</div>
+								<div class="glossary-item">
+									<dt>Reading level</dt>
+									<dd>{edition.readingLevel}</dd>
+								</div>
+								<div class="glossary-item">
+									<dt>Best for</dt>
+									<dd>{edition.bestFor}</dd>
+								</div>
+							</dl>
+
+							<p class="source-reading-note">
+								<strong>Worth knowing:</strong> {edition.caution}
+							</p>
+
+							{edition.compare.length > 0 ? (
+								<section>
+									<h2>If you are still deciding</h2>
+									<dl class="glossary-list">
+										{edition.compare.map((item) => (
+											<div class="glossary-item">
+												<dt>
+													<a href={versionPath(item.slug)}>{item.label}</a>
+												</dt>
+												<dd>{item.note}</dd>
+											</div>
+										))}
+									</dl>
+								</section>
+							) : null}
+
+							<h2>Read the {abbreviation} by book</h2>
+						</>
+					) : (
+						<p class="lede">Choose a book to start reading.</p>
+					)
+				}
+
 				<BookList versionSlug={slug} books={index.books} />
 				<CopyrightNotice version={version} />
 			</>
