@@ -30,8 +30,8 @@ import {
 import { READER_CACHE_CONTROL, setPageHeaders } from '../../../../lib/http';
 import {
 	breadcrumbJsonLd,
-	clauseWithin,
 	creativeWorkJsonLd,
+	descriptionWithClause,
 	itemListJsonLd,
 	titleWithClause,
 } from '../../../../lib/seo';
@@ -155,18 +155,6 @@ const title = renderings.length
 	: `${reference} — Compare Bible Translations`;
 
 /**
- * How much of the verse the description leads with.
- *
- * Front-loaded on the verse rather than on what the page is, because the
- * opening words are the only part of this string that is not identical across
- * 31,103 hubs — and a meta description that opens with a hundred characters of
- * boilerplate is one Google replaces with its own. Wide enough for a real
- * clause, narrow enough that the translations behind it survive the ~155
- * characters a result displays.
- */
-const DESCRIPTION_LEAD_MAX = 64;
-
-/**
  * The verse is what makes this relevant; the list is what makes it different.
  *
  * Both have to be here. Leading with the verse alone is what four larger sites
@@ -174,16 +162,20 @@ const DESCRIPTION_LEAD_MAX = 64;
  * doing exactly that: `truncateWords` was applied to the verse and the tail
  * together, so a long verse ate the entire allowance and the reason to click
  * never rendered. Isaiah 61:1 ended at "bind up the…" and said nothing about
- * translations at all. Bounding the lead separately means the tail always
- * arrives.
+ * translations at all. Bounding the lead separately was the right move, but
+ * concatenating it with an unbounded reference, abbreviation list, and chapter
+ * sentence still overran the ~155 characters a result displays — and the
+ * translations, sitting at the end, were the part the cut hid. The chapter
+ * sentence is true of every hub and is the first thing dropped; a long
+ * reference shrinks the lead rather than the list.
  */
-const descriptionLead = clauseWithin(verseText, DESCRIPTION_LEAD_MAX);
-const descriptionTail = renderings.length
-	? `${reference} side by side in ${renderings.length} translations: ${translations.join(', ')}. Each links to the full chapter.`
-	: `Compare ${reference} across Bible translations on BibleHearth.`;
-const description = descriptionLead
-	? `${descriptionLead} — ${descriptionTail}`
-	: descriptionTail;
+const description = descriptionWithClause(
+	verseText,
+	renderings.length
+		? `${reference} side by side in ${renderings.length} translations: ${translations.join(', ')}.`
+		: `Compare ${reference} across Bible translations on BibleHearth.`,
+	renderings.length ? 'Each links to the full chapter.' : '',
+);
 
 const [{ byVerse: topicsByVerse }, { byVerse: answersByVerse }] =
 	await Promise.all([verseTopicIndex(), verseAnswerIndex()]);

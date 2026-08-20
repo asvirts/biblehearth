@@ -1,3 +1,4 @@
+import { truncateWords } from './bible/text';
 import { absoluteMediaUrl, absoluteUrl } from './bible/urls';
 import {
 	ABOUT_PATH,
@@ -63,7 +64,7 @@ const CLAUSE_MIN_WORDS = 4;
  * in that direction cannot damage the text.
  */
 function tidyClause(text: string): string {
-	let out = text.replace(/[,;:—-]+$/, '').trim();
+	let out = text.trim();
 	const count = (mark: RegExp) => (out.match(mark) ?? []).length;
 
 	if (count(/“/g) !== count(/”/g)) {
@@ -73,7 +74,14 @@ function tidyClause(text: string): string {
 		out = out.replace(/‘/g, '');
 	}
 
-	return out.replace(/\s{2,}/g, ' ').trim();
+	// Punctuation last, because removing a quote can expose the comma behind
+	// it: a clause ending `for you,”` is a dangling comma once the orphan is
+	// gone. Not a shape found in 48k characters of quote-dense NIV, but the
+	// order costs nothing and the alternative is silent.
+	return out
+		.replace(/[,;:—-]+$/, '')
+		.replace(/\s{2,}/g, ' ')
+		.trim();
 }
 
 /**
@@ -157,6 +165,68 @@ export function titleWithClause(
 	}
 	const both = `${withTail} — ${clause}`;
 	return both.length <= max ? both : `${head} — ${clause}`;
+}
+
+/**
+ * The character budget for a meta description whose reason to click sits at
+ * the end of the string.
+ *
+ * Search results display around this length. They do not penalise a longer
+ * field, but they do cut it, and the cut is from the right. Editorial pages
+ * that front-load their own writing can run longer — the chapter study does,
+ * on purpose — because the distinctive sentence is already on screen when the
+ * rest falls off. A verse hub's translations are the opposite: they are the
+ * reason to click, they come after the verse, and they are invisible if the
+ * string overruns.
+ */
+export const DESCRIPTION_MAX = 155;
+
+/**
+ * How much of a verse a description may lead with.
+ *
+ * Front-loaded on the verse rather than on what the page is, because the
+ * opening words are the only part of this string that is not identical across
+ * 31,103 hubs — and a meta description that opens with a hundred characters of
+ * boilerplate is one Google replaces with its own. Wide enough for a real
+ * clause; `descriptionWithClause` still shrinks this when the reference and
+ * the abbreviation list would not otherwise fit.
+ */
+const DESCRIPTION_LEAD_MAX = 64;
+
+/**
+ * A distinctive lead, the page's claim, and an optional close, inside one
+ * description.
+ *
+ * `body` is the reason to click and has to survive the display cut. The lead
+ * is sized against whatever budget `body` leaves, so a long reference cannot
+ * spend the translations' characters. `extra` is true of every page of this
+ * shape and is the first thing dropped; spending verse on it would buy a
+ * sentence no result is waiting for. When even `body` overruns, a word-
+ * boundary cut is the last resort rather than a mid-word one.
+ */
+export function descriptionWithClause(
+	snippet: string,
+	body: string,
+	extra = '',
+	max = DESCRIPTION_MAX,
+): string {
+	const separator = ' — ';
+	const leadBudget = Math.min(
+		DESCRIPTION_LEAD_MAX,
+		Math.max(0, max - body.length - separator.length),
+	);
+	const lead = clauseWithin(snippet, leadBudget);
+	const core = lead ? `${lead}${separator}${body}` : body;
+	if (extra) {
+		const withExtra = `${core} ${extra}`;
+		if (withExtra.length <= max) {
+			return withExtra;
+		}
+	}
+	if (core.length <= max) {
+		return core;
+	}
+	return truncateWords(core, max);
 }
 
 export type BreadcrumbItem = {
