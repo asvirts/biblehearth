@@ -1,10 +1,5 @@
 ---
-import type {
-	BibleIndex,
-	BibleIndexBook,
-	BiblePassage,
-	BibleVersion,
-} from '@youversion/platform-core';
+import type { BiblePassage, BibleVersion } from '@youversion/platform-core';
 import BaseLayout from '../../../../../layouts/BaseLayout.astro';
 import CopyrightNotice from '../../../../../components/CopyrightNotice.astro';
 import Passage from '../../../../../components/Passage.astro';
@@ -40,6 +35,8 @@ import {
 	findBook,
 	getBibleIndex,
 	getPassageHtml,
+	type IndexedBible,
+	type IndexedBook,
 	listVersions,
 	resolveVersion,
 } from '../../../../../lib/youversion/api';
@@ -70,8 +67,8 @@ if (!isCanonicalBookSlug(bookSlug, bookUsfm)) {
 
 let version: BibleVersion | null = null;
 let slug = requestedSlug;
-let index: BibleIndex | null = null;
-let book: BibleIndexBook | null = null;
+let index: IndexedBible | null = null;
+let book: IndexedBook | null = null;
 let catalog: BibleVersion[] = [];
 let passage: BiblePassage | null = null;
 let previousHref: string | null = null;

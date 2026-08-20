@@ -38,7 +38,7 @@ import { topicPath, verseTopicIndex } from '../../../../lib/topics';
 import {
 	displayAbbreviation,
 	errorStatus,
-	getPassageHtml,
+	getVerseHtml,
 	listVersions,
 	versionSlug,
 } from '../../../../lib/youversion/api';
@@ -99,12 +99,24 @@ try {
 		.filter((version): version is BibleVersion => Boolean(version))
 		.slice(0, HUB_TRANSLATION_LIMIT);
 
+	/**
+	 * Six translations, and until now six upstream fetches on every cold hub.
+	 *
+	 * That was the most expensive page shape on the site: 31,103 hubs times six
+	 * is 186,618 verse-level cache keys, against a limiter that allows four
+	 * concurrent calls — so one hub could saturate it on its own. Each rendering
+	 * now comes out of that version's chapter entry, which is 1,189 keys instead
+	 * of 31,103 and the same entry the chapter reader page and the warmer use.
+	 * Six chapters cold, nothing once warm.
+	 */
 	const loaded = await Promise.all(
 		chosen.map(async (version) => {
-			const passage = await getPassageHtml(version.id, usfm, {
-				headings: false,
-				notes: false,
-			}).catch(() => null);
+			const passage = await getVerseHtml(
+				version.id,
+				bookUsfm,
+				chapterId,
+				verseId,
+			).catch(() => null);
 			return passage
 				? { version, slug: versionSlug(version, catalog), passage }
 				: null;

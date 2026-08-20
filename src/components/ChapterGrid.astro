@@ -1,11 +1,10 @@
 ---
-import type { BibleIndexBook } from '@youversion/platform-core';
 import { chapterPath } from '../lib/bible/urls';
-import { readableChapters } from '../lib/youversion/api';
+import { type IndexedBook, readableChapters } from '../lib/youversion/api';
 
 type Props = {
 	versionSlug: string;
-	book: BibleIndexBook;
+	book: IndexedBook;
 };
 
 const { versionSlug, book } = Astro.props;

@@ -118,6 +118,21 @@ function remoteSet<T>(
 		return;
 	}
 	if (payload.length > MAX_REMOTE_BYTES) {
+		/**
+		 * Loud, because a silent drop here is invisible and permanent.
+		 *
+		 * A key that never reaches L2 has no regional cache and no stale
+		 * fallback — it lives only in the instance that loaded it, so every cold
+		 * start pays a fresh upstream call and a throttled upstream takes the
+		 * page down outright. `index:{versionId}` was exactly that for months:
+		 * the NIV index serialises to 1.59 MB, so the home page and every reader
+		 * page 503'd whenever the breaker was open, while passage-only pages
+		 * carried on serving from cache. Anything oversized needs narrowing
+		 * before it is cached, and the only way to know is to say so.
+		 */
+		console.warn(
+			`[cache] ${key} not cached remotely: ${payload.length} bytes exceeds ${MAX_REMOTE_BYTES}`,
+		);
 		return;
 	}
 
@@ -175,4 +190,20 @@ export async function loadCached<T>(
 		}
 		throw error;
 	}
+}
+
+/**
+ * Whatever we already hold for `key`, fresh or stale, without loading anything.
+ *
+ * For the callers whose answer is *nice to have*: a page that can state a
+ * sensible default rather than spend a metered upstream call, and must not fail
+ * if the cache is cold. `loadCached` cannot express that — asking it for a value
+ * commits to fetching one.
+ */
+export async function peekCached<T>(key: string): Promise<T | undefined> {
+	const hit = localGet<T>(key);
+	if (hit) {
+		return hit.value;
+	}
+	return (await remoteGet<T>(key))?.value;
 }

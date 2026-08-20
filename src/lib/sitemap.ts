@@ -1,4 +1,3 @@
-import type { BibleIndex } from '@youversion/platform-core';
 import {
 	bookSlugFromUsfm,
 	isNumericChapter,
@@ -52,7 +51,17 @@ export function pageSitemapPaths(versionSlugs: readonly string[]): string[] {
  * Every crawled URL here is also an upstream passage fetch against a rate-limited
  * app key, which is what makes the distinction operational and not just tidy.
  */
-export function bibleSitemapPaths(versionSlug: string, index: BibleIndex): string[] {
+export function bibleSitemapPaths(
+	versionSlug: string,
+	// Structural rather than the API's own index type, so this module keeps
+	// listing URLs without taking on what fetches them.
+	index: {
+		books: ReadonlyArray<{
+			id: string;
+			chapters: ReadonlyArray<{ id: string }>;
+		}>;
+	},
+): string[] {
 	const books: string[] = [];
 	const chapters: string[] = [];
 
