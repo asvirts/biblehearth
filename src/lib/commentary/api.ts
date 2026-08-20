@@ -92,6 +92,43 @@ function textOf(content: unknown[] | undefined): string[] {
 }
 
 /**
+ * The first psalm where the upstream's Jamieson-Fausset-Brown text stops
+ * matching the chapter it is filed under.
+ *
+ * JFB's Psalms commentary closes each chapter introduction with its own scope
+ * marker — "(Psa 23:1-6)" — which makes the misalignment self-evident and not a
+ * matter of opinion: `/api/c/jamieson-fausset-brown/PSA/91.json` returns an
+ * introduction ending "(Psa 92:1-15)". The drift starts at 73, where the notes
+ * are already Psalm 74's, and widens with the chapter number — by 144 the
+ * response carries Psalm 150. Psalms 1-72 are correctly aligned, and every
+ * other book is unaffected.
+ *
+ * Suppressing beats remapping. Only 89 of the 150 psalms expose a marker, so a
+ * lookup table would rest on inference for the other 61, and quietly serving
+ * one wrong chapter of commentary is worse than serving two right ones: the
+ * reader has no way to tell. Returning null puts this on the path the module
+ * already treats as ordinary — Matthew Henry never covered Song of Songs
+ * either — so the page renders Tyndale and Henry and says nothing about a
+ * source it does not have.
+ *
+ * Revisit when the upstream fixes its Psalms index; nothing here needs to
+ * change except this constant going away.
+ */
+const JFB_PSALMS_MISALIGNED_FROM = 73;
+
+function isMisalignedUpstream(
+	sourceId: CommentarySourceId,
+	book: string,
+	chapter: string | number,
+): boolean {
+	if (sourceId !== 'jamieson-fausset-brown' || book !== 'PSA') {
+		return false;
+	}
+	const number = Number(chapter);
+	return Number.isFinite(number) && number >= JFB_PSALMS_MISALIGNED_FROM;
+}
+
+/**
  * One chapter of one commentary, or null where the source has no note on it.
  *
  * `book` is a USFM id. All three sources answer to USFM directly — Tyndale also
@@ -105,6 +142,10 @@ export async function loadChapterCommentary(
 ): Promise<ChapterCommentary | null> {
 	const source = commentarySource(sourceId);
 	if (!source) {
+		return null;
+	}
+
+	if (isMisalignedUpstream(sourceId, book, chapter)) {
 		return null;
 	}
 
