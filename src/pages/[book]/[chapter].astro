@@ -208,10 +208,18 @@ const heading = brief?.data.title ?? `${reference}: Summary and Commentary`;
  * summary", "what does romans 8 mean", "psalm 23 explained" — without stacking
  * every variant into one string. A briefed chapter leads with its own claim,
  * which is the more clickable and more distinctive half.
+ *
+ * That claim is the whole title now. It used to carry `| Summary, Meaning &
+ * Commentary` as well, which put every briefed chapter between 75 and 107
+ * characters: Bing rejects those outright, Google truncated them, and the three
+ * words it bought were the three least distinctive on the page — every result
+ * for "psalm 23" says "commentary". `shortAnswer` earns those queries in the
+ * description, where a sentence has room to mean something. `seoTitle` is how a
+ * brief whose `<h1>` runs long says what its short form should be.
  */
 const title = brief
-	? `${brief.data.title} | Summary, Meaning & Commentary`
-	: `${reference} — Summary, Meaning, and Verse-by-Verse Commentary`;
+	? (brief.data.seoTitle ?? brief.data.title)
+	: `${reference}: Summary, Meaning and Commentary`;
 
 const gist = commentaryGist(commentaries);
 // Longer than the 155 characters a SERP shows, deliberately. Google truncates

@@ -1,6 +1,7 @@
 ---
 usfm: PSA.34
 title: "Psalm 34: Taste and See, Written by a Man Who Escaped by Faking Madness"
+seoTitle: "Psalm 34: Taste and See, and Who Wrote It"
 shortAnswer: >-
   Psalm 34 is a confident psalm — I sought the LORD and he delivered me from all my
   fears, taste and see that the LORD is good — and its heading names the occasion. It

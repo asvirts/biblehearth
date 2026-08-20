@@ -1,6 +1,7 @@
 ---
 usfm: JER.29
 title: "Jeremiah 29: A Letter to Prisoners, and a Plan That Takes Seventy Years"
+seoTitle: "Jeremiah 29: A Letter Written to Prisoners"
 shortAnswer: >-
   Jeremiah 29 is a letter, sent by courier from Jerusalem to Judeans who had been
   deported to Babylon, and verse 11 — "I know the plans I have for you" — is one

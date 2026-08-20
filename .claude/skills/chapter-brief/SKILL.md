@@ -74,7 +74,8 @@ Limits are enforced by Zod at build time. Overshooting fails the build, so count
 | Field | Limit | What it has to do |
 |---|---|---|
 | `usfm` | `PSA.28` | The route, the reverse index and the sitemap entry all derive from it. |
-| `title` | 10–95 | The `<h1>`. Lead with the reference — that is what people type — then make a claim, not a label. It gets `\| Summary, Meaning & Commentary` appended for the `<title>`, so do not spend words on those. |
+| `title` | 10–95 | The `<h1>`. Lead with the reference — that is what people type — then make a claim, not a label. Nothing is appended to it, so do not spend words on "summary" or "commentary" either. |
+| `seoTitle` | 25–60, optional | The `<title>`, for when `title` is too long to be one. Leave it out and `title` is used; past 60 characters the build stops and asks for it, because there is no way to shorten an authored claim mechanically without producing a fragment. Same rules, but keep only the half that *is* the claim: "Hebrews 11: The Hall of Faith Turns Over Halfway Through Verse 35" → "Hebrews 11: Where the Hall of Faith Turns". |
 | `shortAnswer` | 200–750 | The highest-leverage text on the site. Rendered under the `<h1>` and reused as the meta description. First sentence answers "what is this chapter about?" — do not warm up to it. This is the chunk a featured snippet quotes and an AI answer lifts whole. |
 | `outline` | 2–14 entries | Ranges must cover the chapter **with no gaps** — a reader using this to find a verse must never fall in a hole. `heading` (6–90) is a sentence about what happens, never a label. `note` 40–400. |
 | `themes` | 2–6 | `name` 3–70, `explanation` 80–700. The ideas worth carrying out of the chapter. |

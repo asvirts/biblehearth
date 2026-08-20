@@ -1,6 +1,7 @@
 ---
 usfm: 1CO.13
 title: "1 Corinthians 13: The Wedding Reading That Was Written to Settle a Fight"
+seoTitle: "1 Corinthians 13: Written to Settle a Fight"
 shortAnswer: >-
   1 Corinthians 13 is the most-read passage at weddings in the English-speaking
   world, and Paul wrote it to break up an argument. The chapters either side of it

@@ -1,6 +1,7 @@
 ---
 usfm: ISA.41
 title: "Isaiah 41: Fear Not Is a Court Verdict, and Its Audience Is Called a Worm"
+seoTitle: "Isaiah 41: Fear Not Is a Court Verdict"
 shortAnswer: >-
   Isaiah 41 contains one of the most quoted comfort verses in the Bible — do not
   fear, for I am with you — and it is spoken inside a courtroom. The chapter opens

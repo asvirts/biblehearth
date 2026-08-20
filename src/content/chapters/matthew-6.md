@@ -1,6 +1,7 @@
 ---
 usfm: MAT.6
 title: "Matthew 6: The Lord's Prayer, and the Same Sentence Said Three Times"
+seoTitle: "Matthew 6: The Lord's Prayer, and One Repeated Line"
 shortAnswer: >-
   Matthew 6 is the middle of the Sermon on the Mount, and it holds the Lord's
   Prayer, "you cannot serve both God and money", the birds and the lilies, and

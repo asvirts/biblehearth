@@ -1,6 +1,7 @@
 ---
 usfm: JOS.1
 title: "Joshua 1: Courage Is an Order, and the Battle Plan Is to Read"
+seoTitle: "Joshua 1: Be Strong and Courageous Is an Order"
 shortAnswer: >-
   Joshua 1 is a handover. Moses is dead, the nation is camped at a flooded river
   with a country to invade, and God commissions his replacement. Two things about

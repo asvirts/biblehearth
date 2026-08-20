@@ -1,6 +1,7 @@
 ---
 usfm: EPH.6
 title: "Ephesians 6: The Armor of God, and Why Every Instruction Is to Stand"
+seoTitle: "Ephesians 6: The Armor of God, and Why You Stand"
 shortAnswer: >-
   Ephesians 6 holds the best-known battle image in the New Testament — belt,
   breastplate, shoes, shield, helmet, sword — and the striking thing about it is

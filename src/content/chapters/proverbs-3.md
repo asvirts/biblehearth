@@ -1,6 +1,7 @@
 ---
 usfm: PRO.3
 title: "Proverbs 3: Trust in the LORD with All Your Heart, and What Comes Next"
+seoTitle: "Proverbs 3: Trust in the LORD with All Your Heart"
 shortAnswer: >-
   Proverbs 3 is a father's speech to his son, and it holds the verse more people
   have memorised than almost any other in the Old Testament: trust in the LORD

@@ -1,6 +1,7 @@
 ---
 usfm: ROM.12
 title: "Romans 12: It Starts with Therefore, and That Changes Everything After"
+seoTitle: "Romans 12: It Starts with Therefore"
 shortAnswer: >-
   Romans 12 begins with the most important word in it: "Therefore." Paul has spent
   eleven chapters on what God has done — sin, rescue, grace, mercy — and everything he

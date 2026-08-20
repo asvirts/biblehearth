@@ -32,6 +32,7 @@ import {
 	breadcrumbJsonLd,
 	creativeWorkJsonLd,
 	itemListJsonLd,
+	titleWithSnippet,
 } from '../../../../lib/seo';
 import { topicPath, verseTopicIndex } from '../../../../lib/topics';
 import {
@@ -130,8 +131,14 @@ const primary = renderings[0];
 const verseText = primary ? scriptureToPlainText(primary.passage.content) : '';
 
 const canonicalPath = `/verse/${bookSlug}/${chapterId}/${verseId}`;
-const title = verseText
-	? `${reference} in ${renderings.length} Translations — ${truncateWords(verseText, 44)}`
+// The verse comes through whole or not at all — see `titleWithSnippet`. Short
+// verses are common enough at this level ("Jesus wept.") that it is worth
+// asking; a long one leaves the head, which is already the query, on its own.
+const title = renderings.length
+	? titleWithSnippet(
+			`${reference} in ${renderings.length} Translations`,
+			verseText,
+		)
 	: `${reference} — Compare Bible Translations`;
 const description = verseText
 	? truncateWords(

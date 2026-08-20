@@ -1,6 +1,7 @@
 ---
 usfm: JHN.14
 title: "John 14: Every Famous Line Here Is an Answer to a Confused Disciple"
+seoTitle: "John 14: Every Famous Line Is an Answer"
 shortAnswer: >-
   John 14 is part of a farewell speech given hours before Jesus was arrested, and its
   structure is easy to miss: almost every famous line in it is a reply to somebody

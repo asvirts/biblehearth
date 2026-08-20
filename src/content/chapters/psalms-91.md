@@ -1,6 +1,7 @@
 ---
 usfm: PSA.91
 title: "Psalm 91: Three Voices, and What God Actually Promises in His Own Words"
+seoTitle: "Psalm 91: What God Actually Promises Here"
 shortAnswer: >-
   Psalm 91 makes the boldest safety promises in the Bible — no plague will come
   near your tent, a thousand fall at your side and you are left standing — and it

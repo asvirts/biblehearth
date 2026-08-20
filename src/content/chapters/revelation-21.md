@@ -1,6 +1,7 @@
 ---
 usfm: REV.21
 title: "Revelation 21: The City Comes Down, and It Is Shaped Like the Holy of Holies"
+seoTitle: "Revelation 21: The City Comes Down"
 shortAnswer: >-
   Revelation 21 is where the Bible's story ends, and two details in it undo the
   picture most people carry. The direction of travel is downward — twice, in verses 2

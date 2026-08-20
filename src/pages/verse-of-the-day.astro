@@ -147,10 +147,17 @@ const dateLabel = dayStart.toLocaleDateString('en-US', {
 });
 
 const verseText = passage ? scriptureToPlainText(passage.content) : '';
-const title =
-	reference && verseText
-		? `Bible Verse of the Day — ${reference}: ${truncateWords(verseText, 40)}`
-		: 'Bible Verse of the Day';
+/**
+ * Query first, then the reference, and nothing else. Bing reports a title over
+ * ~65 characters as an error, and appending the verse cost more than it bought:
+ * a 40-character fragment ending in an ellipsis ("From the rising of the sun to
+ * the…") is not a phrase anyone searches for, and the same words already read as
+ * a sentence in the description below. The reference is what makes the title
+ * change daily, which is the only freshness signal this page needs.
+ */
+const title = reference
+	? `Bible Verse of the Day — ${reference}`
+	: 'Bible Verse of the Day';
 const description =
 	reference && verseText
 		? truncateWords(
@@ -172,9 +179,8 @@ const description =
 		articleJsonLd({
 			site: Astro.site,
 			path: CANONICAL_PATH,
-			headline: reference
-				? `Bible Verse of the Day — ${reference}`
-				: 'Bible Verse of the Day',
+			// Now the same string as the <title>, and kept that way on purpose.
+			headline: title,
 			description,
 			datePublished: dayStart,
 			dateModified: dayStart,

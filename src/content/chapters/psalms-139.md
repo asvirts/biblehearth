@@ -1,6 +1,7 @@
 ---
 usfm: PSA.139
 title: "Psalm 139: Fearfully and Wonderfully Made, and Nowhere Left to Hide"
+seoTitle: "Psalm 139: Fearfully and Wonderfully Made"
 shortAnswer: >-
   Psalm 139 is best known for one line about being fearfully and wonderfully made,
   and read whole it is a stranger poem than that suggests. Its subject is being

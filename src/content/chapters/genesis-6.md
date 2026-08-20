@@ -1,6 +1,7 @@
 ---
 usfm: GEN.6
 title: "Genesis 6: Two Hearts, One Verse Apart, and a Flood Caused by Violence"
+seoTitle: "Genesis 6: Two Hearts, One Verse Apart"
 shortAnswer: >-
   Genesis 6 starts the flood story, and its hinge is a pair of verses almost nobody
   reads together. Verse 5 says every inclination of the human heart was evil all the

@@ -1,6 +1,7 @@
 ---
 usfm: ECC.3
 title: "Ecclesiastes 3: A Time for Everything Is a Complaint, Not a Comfort"
+seoTitle: "Ecclesiastes 3: A Time for Everything Is a Complaint"
 shortAnswer: >-
   "To everything there is a season" is read at funerals and weddings as
   reassurance, and in its own chapter it is the setup for a complaint. The poem in
