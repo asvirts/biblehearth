@@ -160,11 +160,11 @@ export async function listEnglishVersions(): Promise<BibleVersion[]> {
 /**
  * The abbreviation to show users and to build slugs from.
  *
- * `abbreviation` carries YouVersion's internal edition suffix — NIV11,
- * engWEBUS, enggnv — but people search "john 3 niv", not "john 3 niv11".
- * `localized_abbreviation` is already the clean public form (NIV, WEBUS, GNV)
- * and correctly keeps genuinely distinct editions apart (NASB1995 vs NASB2020),
- * so it is preferred wherever the abbreviation is user-visible.
+ * `abbreviation` carries YouVersion's internal edition suffix — NIV11 — but
+ * people search "john 3 niv", not "john 3 niv11". `localized_abbreviation` is
+ * already the clean public form (NIV) and correctly keeps genuinely distinct
+ * editions apart (NASB1995 vs NASB2020), so it is preferred wherever the
+ * abbreviation is user-visible.
  */
 export function displayAbbreviation(
 	version: Pick<BibleVersion, 'abbreviation' | 'localized_abbreviation'>,
