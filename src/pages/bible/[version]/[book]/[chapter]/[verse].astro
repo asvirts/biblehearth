@@ -1,9 +1,5 @@
 ---
-import type {
-	BibleIndexBook,
-	BiblePassage,
-	BibleVersion,
-} from '@youversion/platform-core';
+import type { BiblePassage, BibleVersion } from '@youversion/platform-core';
 import BaseLayout from '../../../../../layouts/BaseLayout.astro';
 import CopyrightNotice from '../../../../../components/CopyrightNotice.astro';
 import Passage from '../../../../../components/Passage.astro';
@@ -14,7 +10,6 @@ import {
 	isNumericChapter,
 	isNumericVerse,
 	usfmFromBookSlug,
-	verseUsfm,
 } from '../../../../../lib/bible/usfm';
 import {
 	scriptureToPlainText,
@@ -33,7 +28,8 @@ import {
 	errorStatus,
 	findBook,
 	getBibleIndex,
-	getPassageHtml,
+	getVerseHtml,
+	type IndexedBook,
 	resolveVersion,
 	verseExists,
 } from '../../../../../lib/youversion/api';
@@ -70,7 +66,7 @@ if (!isCanonicalBookSlug(bookSlug, bookUsfm)) {
 
 let version: BibleVersion | null = null;
 let slug = requestedSlug;
-let book: BibleIndexBook | null = null;
+let book: IndexedBook | null = null;
 let passage: BiblePassage | null = null;
 let status = 200;
 
@@ -95,11 +91,11 @@ try {
 		return Astro.rewrite('/404');
 	}
 
-	passage = await getPassageHtml(
-		resolved.version.id,
-		verseUsfm(bookUsfm, chapterId, verseId),
-		{ headings: false, notes: true },
-	);
+	// Sliced out of the chapter's cache entry rather than fetched on its own.
+	// These pages are the largest crawlable surface on the site and the one no
+	// sitemap submits, so a key per verse was a guaranteed cold fetch per crawl;
+	// see getVerseHtml.
+	passage = await getVerseHtml(resolved.version.id, bookUsfm, chapterId, verseId);
 	if (!passage) {
 		return Astro.rewrite('/404');
 	}

@@ -1,5 +1,5 @@
 ---
-import type { BibleIndexBook, BibleVersion } from '@youversion/platform-core';
+import type { BibleVersion } from '@youversion/platform-core';
 import BaseLayout from '../../../../layouts/BaseLayout.astro';
 import ChapterGrid from '../../../../components/ChapterGrid.astro';
 import CopyrightNotice from '../../../../components/CopyrightNotice.astro';
@@ -16,6 +16,7 @@ import {
 	errorStatus,
 	findBook,
 	getBibleIndex,
+	type IndexedBook,
 	resolveVersion,
 } from '../../../../lib/youversion/api';
 
@@ -39,7 +40,7 @@ if (!isCanonicalBookSlug(bookSlug, bookUsfm)) {
 
 let version: BibleVersion | null = null;
 let slug = requestedSlug;
-let book: BibleIndexBook | null = null;
+let book: IndexedBook | null = null;
 let status = 200;
 
 try {

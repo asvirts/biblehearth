@@ -3,6 +3,7 @@ import {
 	getHttpStatus,
 	type BibleBook,
 	type BibleIndex,
+	type BibleIndexBook,
 	type BiblePassage,
 	type BibleVersion,
 	type Collection,
@@ -10,16 +11,19 @@ import {
 } from '@youversion/platform-core';
 import { DEFAULT_BIBLE_ID } from 'astro:env/server';
 import {
+	chapterUsfm,
 	isIntroChapter,
 	isNumericChapter,
 	isNumericVerse,
+	verseUsfm,
 } from '../bible/usfm';
 import { isExcludedVersion } from '../bible/catalog';
 import { DEFAULT_LOCALE, type Locale } from '../i18n/locales';
 import { sanitizePassageHtml } from '../bible/sanitize';
+import { lastVerseId, sliceVerse } from '../bible/verses';
 import { isTripped, trip } from '../cache/breaker';
 import { limitUpstream, UpstreamBusyError } from '../cache/limiter';
-import { loadCached } from '../cache/store';
+import { loadCached, peekCached } from '../cache/store';
 import { getBibleClient, PlatformConfigError } from './client';
 
 const VERSION_CACHE_MS = 10 * 60 * 1000;
@@ -295,16 +299,112 @@ export async function getDefaultVersion(
 	return catalog[0] ?? null;
 }
 
-export async function getBibleIndex(versionId: number): Promise<BibleIndex> {
+/**
+ * The index as this site uses it, which is a fraction of what the API sends.
+ *
+ * The full response is every verse of every chapter carrying an id, a passage
+ * id and a title — 1,592,981 bytes for the NIV, and the passage id and title are
+ * read by nothing here. That mattered far more than it sounds: `loadCached`
+ * declines to write anything over 1.5 MB to the Runtime Cache, so the index was
+ * the one key on the site that never had a regional entry and never had a stale
+ * fallback. It lived in one instance's memory, which meant every cold start
+ * spent a 1.6 MB upstream call to rebuild it, and an open breaker 503'd the home
+ * page and every reader page while passage-only pages carried on from cache.
+ *
+ * Narrowed to what is actually read, the same index is 194,751 bytes and caches
+ * like everything else. Narrowing on load rather than on read is deliberate
+ * here — unlike the version catalogue, whose filters have to run on read because
+ * the entry outlives the deploy that would change them, these fields are read by
+ * nobody and no future filter can want them back without a code change anyway.
+ */
+export type IndexedChapter = {
+	id: string;
+	title: string;
+	/** Verse ids only: the sole question asked of them is whether one exists. */
+	verses: readonly string[];
+};
+
+export type IndexedBook = {
+	id: string;
+	title: string;
+	full_title: string;
+	abbreviation: string;
+	canon: BibleIndexBook['canon'];
+	chapters: readonly IndexedChapter[];
+};
+
+export type IndexedBible = {
+	books: readonly IndexedBook[];
+};
+
+function narrowIndex(index: BibleIndex): IndexedBible {
+	return {
+		books: index.books.map((book) => ({
+			id: book.id,
+			title: book.title,
+			full_title: book.full_title,
+			abbreviation: book.abbreviation,
+			canon: book.canon,
+			chapters: book.chapters.map((chapter) => ({
+				id: chapter.id,
+				title: chapter.title,
+				verses: chapter.verses.map((verse) => verse.id),
+			})),
+		})),
+	};
+}
+
+/**
+ * `v2` because the shape changed and the old one is still out there.
+ *
+ * The Runtime Cache survives deploys, and while the NIV's index was too large
+ * to ever be written, a New Testament-only version's fits comfortably — so real
+ * entries in the previous shape exist and would be served to code that now
+ * expects verse ids to be strings. A new key retires them instead of trusting
+ * that none were written.
+ */
+export function chapterIndexKey(versionId: number): string {
+	return `index:v2:${versionId}`;
+}
+
+export async function getBibleIndex(versionId: number): Promise<IndexedBible> {
 	return loadCached(
-		`index:${versionId}`,
+		chapterIndexKey(versionId),
 		INDEX_CACHE_MS,
 		STALE_GRACE_MS,
-		async () => withPlatform(() => getBibleClient().getIndex(versionId)),
+		async () =>
+			narrowIndex(await withPlatform(() => getBibleClient().getIndex(versionId))),
 	);
 }
 
-export function findBook(index: BibleIndex, usfm: string) {
+/**
+ * Where "start reading" goes, without spending a call to find out.
+ *
+ * The home page used to answer this by fetching the whole index and reading
+ * `books[0]` — a 1.6 MB upstream call, on the most linked URL on the site, to
+ * discover that the Bible begins at Genesis 1. Worse, it was the only upstream
+ * call the page could not survive losing: no index meant no `startHref`, which
+ * meant a 503 in place of the entire page.
+ *
+ * So it asks the cache and accepts the answer either way. Genesis 1 is right for
+ * every whole-Bible version, which is every version this site currently serves;
+ * the peek is what keeps it right for the New Testament-only editions in the
+ * locale registry, whose index says Matthew, on any instance that already holds
+ * one. A link is not worth a fetch, and it is certainly not worth the page.
+ */
+export async function startReadingChapter(
+	versionId: number,
+): Promise<{ bookId: string; chapterId: string }> {
+	const index = await peekCached<IndexedBible>(chapterIndexKey(versionId));
+	const book = index?.books[0];
+	const chapter = book?.chapters.find((entry) => isNumericChapter(entry.id));
+
+	return book && chapter
+		? { bookId: book.id, chapterId: chapter.id }
+		: { bookId: 'GEN', chapterId: '1' };
+}
+
+export function findBook(index: IndexedBible, usfm: string) {
 	const id = usfm.toUpperCase();
 	return index.books.find((book) => book.id === id) ?? null;
 }
@@ -323,7 +423,7 @@ export function readableChapters(
 }
 
 export function adjacentReadableChapter(
-	index: BibleIndex,
+	index: IndexedBible,
 	bookId: string,
 	chapterId: string,
 	direction: 'next' | 'previous',
@@ -386,6 +486,70 @@ export async function getPassageHtml(
 			throw error;
 		}
 	});
+}
+
+/**
+ * A single verse, taken from the chapter's cache entry rather than fetched.
+ *
+ * The upstream will serve `PSA.23.1` directly, and doing that gave every verse
+ * page its own cache key: six versions times 31,103 verses is 186,618 keys that
+ * no sitemap submits and no warmer can fill, so a crawler walking the verse hubs
+ * met a cold key — and a metered fetch — on essentially every request. That is
+ * what turned the 2026-08-20 audit crawl into 1,553 URLs 503'ing in six hours.
+ *
+ * The same text is already inside the chapter, which is 1,189 keys per version,
+ * is what `pages/api/warm.ts` fills, and is what the reader page for that
+ * chapter reads. So a verse page now shares the chapter's entry: cold, it spends
+ * one fetch that ~26 sibling verse pages and the chapter page all then read;
+ * warm, it spends none.
+ *
+ * `headings: true, notes: true` is not a preference — those are the options the
+ * chapter reader page and the warmer use, and the cache key is built from them
+ * (see `getPassageHtml`). Anything else here would create a second entry for the
+ * same chapter that nothing else reads, which is the drift this is meant to end.
+ *
+ * Falls back to fetching the verse when the slice cannot be trusted — a
+ * translation that merges two verses has no marker for the second — so this can
+ * only ever cost fewer calls, never a different answer. See lib/bible/verses.ts.
+ */
+export async function getVerseHtml(
+	versionId: number,
+	bookUsfm: string,
+	chapterId: string,
+	verseId: string,
+): Promise<BiblePassage | null> {
+	const usfm = verseUsfm(bookUsfm, chapterId, verseId);
+
+	const chapter = await getPassageHtml(
+		versionId,
+		chapterUsfm(bookUsfm, chapterId),
+		{ headings: true, notes: true },
+	);
+
+	if (chapter?.content) {
+		const content = sliceVerse(chapter.content, verseId);
+		if (content) {
+			return {
+				...chapter,
+				id: usfm,
+				content,
+				// "Psalms 23" is what the chapter reports; the verse is what we asked
+				// for. Matches the reference the upstream returns for it directly.
+				reference: `${chapter.reference}:${verseId}`,
+			};
+		}
+
+		// Past the end of the chapter, which the chapter itself just told us. The
+		// fallback is for a verse the markup merged away, not for one that was
+		// never there — and a crawler following next-verse links generates one of
+		// these for every chapter in the Bible.
+		const last = lastVerseId(chapter.content);
+		if (last && Number(verseId) > Number(last)) {
+			return null;
+		}
+	}
+
+	return getPassageHtml(versionId, usfm, { headings: false, notes: true });
 }
 
 export async function getPassageText(
@@ -503,10 +667,7 @@ export function errorStatus(error: unknown): number {
 
 export function verseExists(
 	book: {
-		chapters?: ReadonlyArray<{
-			id: string;
-			verses: ReadonlyArray<{ id: string }>;
-		}>;
+		chapters?: ReadonlyArray<{ id: string; verses: readonly string[] }>;
 	},
 	chapterId: string,
 	verseId: string,
@@ -515,7 +676,7 @@ export function verseExists(
 		return false;
 	}
 	const chapter = findChapter(book, chapterId);
-	return Boolean(chapter?.verses.some((verse) => verse.id === verseId));
+	return Boolean(chapter?.verses.includes(verseId));
 }
 
 export { PlatformConfigError };

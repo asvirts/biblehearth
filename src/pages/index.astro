@@ -6,7 +6,7 @@ import Passage from '../components/Passage.astro';
 import CopyrightNotice from '../components/CopyrightNotice.astro';
 import StatusMessage from '../components/StatusMessage.astro';
 import { answerPath, listAnswers } from '../lib/answers';
-import { isNumericChapter, parsePassageId } from '../lib/bible/usfm';
+import { parsePassageId } from '../lib/bible/usfm';
 import { chapterPath, versePath, versionPath } from '../lib/bible/urls';
 import { HOME_CACHE_CONTROL, setPageHeaders } from '../lib/http';
 import { websiteJsonLd } from '../lib/seo';
@@ -16,12 +16,12 @@ import {
 	BibleUnavailableError,
 	displayAbbreviation,
 	errorStatus,
-	getBibleIndex,
 	getDefaultVersion,
 	getPassageHtml,
 	getVerseOfTheDay,
 	listVersions,
 	PlatformConfigError,
+	startReadingChapter,
 	versionSlug,
 } from '../lib/youversion/api';
 
@@ -45,21 +45,30 @@ try {
 			defaultVersion,
 			catalog.length ? catalog : [defaultVersion],
 		);
-		const index = await getBibleIndex(defaultVersion.id);
-		const firstBook = index.books[0];
-		const firstChapter = firstBook?.chapters.find((chapter) =>
-			isNumericChapter(chapter.id),
-		);
-		startHref =
-			firstBook && firstChapter
-				? chapterPath(slug, firstBook.id, firstChapter.id)
-				: versionPath(slug);
-		votd = await getVerseOfTheDay();
-		if (votd) {
-			votdPassage = await getPassageHtml(defaultVersion.id, votd.passage_id, {
-				headings: false,
-				notes: false,
-			});
+		const start = await startReadingChapter(defaultVersion.id);
+		startHref = chapterPath(slug, start.bookId, start.chapterId);
+
+		/**
+		 * Its own try, because the home page must not be all-or-nothing.
+		 *
+		 * `votd:day:N` is a new cache key every midnight UTC, which makes it the
+		 * one thing here that is reliably cold — and it was cold at the exact
+		 * moment a crawl had the app key throttled, so the whole page became an
+		 * error message. Nothing else on it depends on the verse: the markup
+		 * already renders the panel only when the passage arrived, so a failure
+		 * belongs here rather than in the outer catch that replaces the page.
+		 */
+		try {
+			votd = await getVerseOfTheDay();
+			if (votd) {
+				votdPassage = await getPassageHtml(defaultVersion.id, votd.passage_id, {
+					headings: false,
+					notes: false,
+				});
+			}
+		} catch {
+			votd = null;
+			votdPassage = null;
 		}
 	}
 } catch (error) {

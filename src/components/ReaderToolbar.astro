@@ -1,8 +1,9 @@
 ---
-import type { BibleIndex, BibleVersion } from '@youversion/platform-core';
+import type { BibleVersion } from '@youversion/platform-core';
 import { bookSlugFromUsfm } from '../lib/bible/usfm';
 import {
 	displayAbbreviation,
+	type IndexedBible,
 	readableChapters,
 	versionSlug,
 } from '../lib/youversion/api';
@@ -10,7 +11,7 @@ import {
 type Props = {
 	catalog: BibleVersion[];
 	version: BibleVersion;
-	index: BibleIndex;
+	index: IndexedBible;
 	bookId: string;
 	chapterId: string;
 };
