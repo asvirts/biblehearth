@@ -29,6 +29,28 @@ const API_ORIGIN = 'https://bible.helloao.org';
 const COMMENTARY_CACHE_MS = 30 * 24 * 60 * 60 * 1000;
 const STALE_GRACE_MS = 90 * 24 * 60 * 60 * 1000;
 
+/**
+ * Bump this when the *rendering* of commentary changes, not the source text.
+ *
+ * What these entries hold is not the upstream's JSON — it is our own escaped,
+ * paragraph-wrapped HTML with every scripture reference already linked. So the
+ * cache outlives any change to how those links are built, and the Runtime Cache
+ * survives deployments: with a thirty-day refresh and a ninety-day grace window,
+ * a fixed link is a fixed link that nobody sees for a month.
+ *
+ * v2 is the study-page path migration of 2026-08-18. `referenceHref` has
+ * emitted `/genesis/2` since then, but entries written before it still carry
+ * `<a class="xref" href="/commentary/genesis/2">`, so every cross-reference
+ * inside a reproduced note spent a 301 — on the book and chapter pages that
+ * carry the site's best writing. No deploy could clear that; only the key can.
+ *
+ * The durable fix is to cache the upstream strings and link them at render, so
+ * a URL change never needs a flush. That changes the shape of a cached value
+ * across two loaders and several render paths, which is why it is not bundled
+ * in here — and why this constant will be needed once more when it happens.
+ */
+const RENDER_VERSION = 'v2';
+
 /** The upstream is fast; a slow response means something is wrong. */
 const REQUEST_TIMEOUT_MS = 6000;
 
@@ -150,7 +172,7 @@ export async function loadChapterCommentary(
 	}
 
 	return loadCached(
-		`commentary:${sourceId}:${book}.${chapter}`,
+		`commentary:${RENDER_VERSION}:${sourceId}:${book}.${chapter}`,
 		COMMENTARY_CACHE_MS,
 		STALE_GRACE_MS,
 		async () => {
@@ -217,7 +239,7 @@ export async function loadBookOverviews(book: string): Promise<BookOverview[]> {
 	const loaded = await Promise.all(
 		COMMENTARY_SOURCES.map(async (source) => {
 			const introduction = await loadCached(
-				`commentary-intro:${source.id}:${book}`,
+				`commentary-intro:${RENDER_VERSION}:${source.id}:${book}`,
 				COMMENTARY_CACHE_MS,
 				STALE_GRACE_MS,
 				async () => {

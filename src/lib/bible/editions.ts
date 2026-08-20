@@ -59,6 +59,19 @@ export type BibleEdition = {
 	approach: string;
 	/** Plainly stated, because it is what a lot of people are really asking. */
 	readingLevel: string;
+	/**
+	 * The same fact as `readingLevel`, short enough for a table cell.
+	 *
+	 * A separate field rather than a truncation of the one above, because the
+	 * sentence above is written to be read and this is written to be scanned
+	 * against five others. Truncating "About a seventh-grade reading level." to
+	 * fit a column yields "About a seventh-grade…", which is worse than either.
+	 *
+	 * Not every translation has one. The Amplified's difficulty is not a grade
+	 * level — its sentences are crowded rather than advanced — and saying "11th
+	 * grade" about it would be inventing a number to fill a cell.
+	 */
+	readingGrade: string;
 	/** Who should reach for this one. */
 	bestFor: string;
 	/** The honest limitation. Never omitted, never softened into a compliment. */
@@ -80,6 +93,7 @@ export const BIBLE_EDITIONS: readonly BibleEdition[] = [
 		],
 		approach:
 			'Balanced — closer to the original wording than a paraphrase, freer than a strictly literal translation.',
+		readingGrade: '7th grade',
 		readingLevel: 'About a seventh-grade reading level.',
 		bestFor:
 			'Reading whole books at a time, reading out loud, and being the version most people around you already have.',
@@ -109,6 +123,7 @@ export const BIBLE_EDITIONS: readonly BibleEdition[] = [
 		],
 		approach:
 			'Expanded — one verse, several possible renderings, with the additions marked.',
+		readingGrade: 'No fixed level',
 		readingLevel:
 			'Hard to read at length — not because the vocabulary is difficult, but because the sentences are crowded.',
 		bestFor:
@@ -136,6 +151,7 @@ export const BIBLE_EDITIONS: readonly BibleEdition[] = [
 		],
 		approach:
 			'Formal — follows the grammar of the original closely, and lets the English be awkward when the original is.',
+		readingGrade: '11th grade',
 		readingLevel: 'Around an eleventh-grade reading level.',
 		bestFor:
 			'Studying how a sentence is actually built, and checking a verse you first read somewhere smoother.',
@@ -162,6 +178,7 @@ export const BIBLE_EDITIONS: readonly BibleEdition[] = [
 		],
 		approach:
 			'Formal — the same close-to-the-original method as 1995, in more natural English.',
+		readingGrade: '10th grade',
 		readingLevel:
 			'Around a tenth-grade reading level, a little easier than the 1995 edition.',
 		bestFor: 'Wanting a literal translation without fighting the sentences.',
@@ -186,6 +203,7 @@ export const BIBLE_EDITIONS: readonly BibleEdition[] = [
 		],
 		approach:
 			'Simplified — the NIV’s meaning, restated in the shortest sentences that will carry it.',
+		readingGrade: '3rd grade',
 		readingLevel: 'Around a third-grade reading level.',
 		bestFor:
 			'Reading with children, reading in a second language, and getting through a whole book without stalling.',
@@ -210,6 +228,7 @@ export const BIBLE_EDITIONS: readonly BibleEdition[] = [
 		],
 		approach:
 			'Balanced — readable English, kept close to the wording underneath it.',
+		readingGrade: '8th grade',
 		readingLevel: 'Around an eighth-grade reading level.',
 		bestFor:
 			'Comparing wording, quoting freely, and study tools that need a modern text with no licence attached.',
@@ -224,6 +243,19 @@ export const BIBLE_EDITIONS: readonly BibleEdition[] = [
 		],
 	},
 ];
+
+/**
+ * The one-word half of `approach`, for a comparison table.
+ *
+ * Every `approach` is written as "Label — the explanation", so the label is
+ * already there and does not need writing twice. Deriving it means the table and
+ * the prose can never disagree about which category a translation is in, which
+ * is the failure a seventh hand-kept field would eventually produce.
+ */
+export function editionStyle(edition: BibleEdition): string {
+	const [label] = edition.approach.split('—');
+	return (label ?? edition.approach).trim();
+}
 
 const bySlug = new Map(BIBLE_EDITIONS.map((edition) => [edition.slug, edition]));
 

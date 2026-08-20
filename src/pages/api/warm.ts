@@ -12,7 +12,7 @@ import {
 	getBibleIndex,
 	getDefaultVersion,
 	getPassageHtml,
-	listEnglishVersions,
+	listVersions,
 } from '../../lib/youversion/api';
 
 /**
@@ -111,7 +111,7 @@ export const GET: APIRoute = async ({ request }) => {
 		// Warming these two matters on its own: every reader page needs the
 		// catalog and the index, so they are the entries whose expiry is felt
 		// site-wide rather than on one URL.
-		const [version] = await Promise.all([getDefaultVersion(), listEnglishVersions()]);
+		const [version] = await Promise.all([getDefaultVersion(), listVersions()]);
 		if (!version) {
 			return Response.json({ ok: false, error: 'no-default-version' }, { status: 503 });
 		}

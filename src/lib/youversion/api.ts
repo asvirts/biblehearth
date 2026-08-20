@@ -15,6 +15,7 @@ import {
 	isNumericVerse,
 } from '../bible/usfm';
 import { isExcludedVersion } from '../bible/catalog';
+import { DEFAULT_LOCALE, type Locale } from '../i18n/locales';
 import { sanitizePassageHtml } from '../bible/sanitize';
 import { isTripped, trip } from '../cache/breaker';
 import { limitUpstream, UpstreamBusyError } from '../cache/limiter';
@@ -99,9 +100,9 @@ async function withPlatform<T>(operation: () => Promise<T>): Promise<T> {
 	}
 }
 
-async function listAllEnglishVersions(): Promise<BibleVersion[]> {
+async function listAllVersions(locale: Locale): Promise<BibleVersion[]> {
 	return loadCached(
-		'versions:en',
+		`versions:${locale.code}`,
 		VERSION_CACHE_MS,
 		STALE_GRACE_MS,
 		async () =>
@@ -112,7 +113,7 @@ async function listAllEnglishVersions(): Promise<BibleVersion[]> {
 
 				do {
 					const page: Collection<BibleVersion> = await client.getVersions(
-						'en*',
+						locale.apiLanguageRange,
 						undefined,
 						{
 							page_size: 99,
@@ -146,15 +147,30 @@ async function listAllEnglishVersions(): Promise<BibleVersion[]> {
 }
 
 /**
- * The catalog as the site presents it.
+ * The catalog as the site presents it, for one locale.
  *
- * Exclusions are applied on read, not before caching: the Runtime Cache
- * survives deployments, so filtering at write time would leave a newly
- * excluded version live until the entry happened to expire.
+ * Filtering happens on read, not before caching: the Runtime Cache survives
+ * deployments, so filtering at write time would leave a newly excluded version
+ * live until the entry happened to expire.
+ *
+ * Two filters, and which one applies is the locale's decision rather than this
+ * function's. English is a blocklist because it was curated down from the
+ * twenty versions this key already carried, so naming the rejects was the
+ * shorter list. Every other locale is an allowlist of ids, because a locale
+ * starting from nothing must not gain ~1,189 crawlable reader pages the day an
+ * upstream edition appears in its language.
  */
-export async function listEnglishVersions(): Promise<BibleVersion[]> {
-	const versions = await listAllEnglishVersions();
-	return versions.filter((version) => !isExcludedVersion(version));
+export async function listVersions(
+	locale: Locale = DEFAULT_LOCALE,
+): Promise<BibleVersion[]> {
+	const versions = await listAllVersions(locale);
+
+	if (locale.versionIds === null) {
+		return versions.filter((version) => !isExcludedVersion(version));
+	}
+
+	const allowed = new Set(locale.versionIds);
+	return versions.filter((version) => allowed.has(version.id));
 }
 
 /**
@@ -185,23 +201,36 @@ export function versionSlug(
 
 const SLUG_WITH_ID = /^([a-z0-9]+(?:-[a-z0-9]+)*)-(\d+)$/;
 
+/**
+ * A version slug back to the version it names, within one locale.
+ *
+ * Scoped to a locale rather than global, because the abbreviation is not unique
+ * across languages: `nvi` is the Spanish NVI (128), the Portuguese NVI (129)
+ * and the Castellano NVI (1637). Resolving globally would make `/es/bible/nvi`
+ * and `/pt/bible/nvi` a coin toss between three editions, and the `-{id}`
+ * disambiguator would leak into URLs that have a perfectly good unambiguous
+ * spelling inside their own locale.
+ */
 export async function resolveVersion(
 	slug: string,
+	locale: Locale = DEFAULT_LOCALE,
 ): Promise<{ version: BibleVersion; slug: string } | null> {
 	const withId = slug.match(SLUG_WITH_ID);
 	if (withId) {
 		const id = Number(withId[2]);
 		const version = await getVersionById(id);
 		// An excluded version must 404 here too, or `/bible/tpt-1849` would
-		// bypass the catalog filter entirely.
-		if (!version || isExcludedVersion(version)) {
+		// bypass the catalog filter entirely — and for a translated locale, so
+		// must a version this locale does not carry, or `/es/bible/rves-147`
+		// would serve a page the allowlist deliberately withheld.
+		if (!version || isExcludedVersion(version) || !carries(locale, version)) {
 			return null;
 		}
-		const catalog = await listEnglishVersions().catch(() => [version]);
+		const catalog = await listVersions(locale).catch(() => [version]);
 		return { version, slug: versionSlug(version, catalog) };
 	}
 
-	const catalog = await listEnglishVersions();
+	const catalog = await listVersions(locale);
 	const matches = catalog.filter(
 		(item) =>
 			item.abbreviation.toLowerCase() === slug ||
@@ -233,13 +262,36 @@ export async function getVersionById(id: number): Promise<BibleVersion | null> {
 	);
 }
 
-export async function getDefaultVersion(): Promise<BibleVersion | null> {
-	const preferred = await getVersionById(DEFAULT_BIBLE_ID);
+/**
+ * Whether a locale's allowlist admits this version.
+ *
+ * English admits everything its blocklist has not withheld, which is what
+ * `versionIds: null` means and why this returns true for it rather than
+ * consulting a list it does not have.
+ */
+function carries(locale: Locale, version: Pick<BibleVersion, 'id'>): boolean {
+	return locale.versionIds === null || locale.versionIds.includes(version.id);
+}
+
+/**
+ * The version a locale reads in when the URL does not name one.
+ *
+ * English still reads `DEFAULT_BIBLE_ID` from the environment, which predates
+ * the locale registry and stays because it is how a deploy repoints English
+ * without a commit. Translated locales take the id from the registry instead:
+ * their catalogue is a single version, so an env var per language would be
+ * eight ways to break the only version that locale has.
+ */
+export async function getDefaultVersion(
+	locale: Locale = DEFAULT_LOCALE,
+): Promise<BibleVersion | null> {
+	const preferredId = locale.prefix ? locale.defaultVersionId : DEFAULT_BIBLE_ID;
+	const preferred = await getVersionById(preferredId);
 	if (preferred) {
 		return preferred;
 	}
 
-	const catalog = await listEnglishVersions();
+	const catalog = await listVersions(locale);
 	return catalog[0] ?? null;
 }
 

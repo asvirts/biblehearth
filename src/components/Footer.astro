@@ -1,5 +1,6 @@
 ---
 import { answerPath, listAnswers } from '../lib/answers';
+import { ABOUT_PATH, CONTACT_PATH, PRIVACY_PATH } from '../lib/site';
 import { listTopics, topicPath } from '../lib/topics';
 
 // Footer links appear on every page, so this is how /topics and /answers stay
@@ -42,6 +43,15 @@ const [topics, answers] = await Promise.all([listTopics(), listAnswers()]);
 						))
 					}
 					<li><a href="/answers">All questions</a></li>
+				</ul>
+			</div>
+			<div class="footer-col">
+				<h2>This site</h2>
+				<ul>
+					<li><a href={ABOUT_PATH}>About BibleHearth</a></li>
+					<li><a href={CONTACT_PATH}>Contact</a></li>
+					<li><a href="/attributions">Attributions</a></li>
+					<li><a href={PRIVACY_PATH}>Privacy</a></li>
 				</ul>
 			</div>
 		</nav>

@@ -39,7 +39,7 @@ import {
 	displayAbbreviation,
 	errorStatus,
 	getPassageHtml,
-	listEnglishVersions,
+	listVersions,
 	versionSlug,
 } from '../../../../lib/youversion/api';
 
@@ -90,7 +90,7 @@ let renderings: Rendering[] = [];
 let status = 200;
 
 try {
-	const catalog = await listEnglishVersions();
+	const catalog = await listVersions();
 
 	// Order by the curated list; skip anything not licensed to this app.
 	const chosen = HUB_TRANSLATION_SLUGS.map((wanted) =>

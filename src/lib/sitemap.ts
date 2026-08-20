@@ -12,6 +12,7 @@ import {
 	versionPath,
 } from './bible/urls';
 import { SITEMAP_CACHE_CONTROL } from './http';
+import { ABOUT_PATH, CONTACT_PATH, PRIVACY_PATH } from './site';
 
 /** Sitemap protocol hard limit (uncompressed URL count). */
 export const SITEMAP_URL_LIMIT = 50_000;
@@ -27,6 +28,9 @@ export function pageSitemapPaths(versionSlugs: readonly string[]): string[] {
 		'/verse-of-the-day',
 		'/versions',
 		'/study',
+		ABOUT_PATH,
+		CONTACT_PATH,
+		PRIVACY_PATH,
 		'/attributions',
 		...unique.map(versionPath),
 	];
