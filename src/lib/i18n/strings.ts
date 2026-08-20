@@ -12,9 +12,17 @@ import { DEFAULT_LOCALE, type Locale } from './locales';
  * A chapter reference is interpolated rather than concatenated, because the
  * reference does not sit in the same place in every language. English puts it
  * first in "Psalm 91 outline, verse by verse" and last in "Common questions
- * about Psalm 91"; Portuguese wants "Roteiro de Salmo 91, versículo por
- * versículo". A template string per language is the only version of this that
- * does not read like it was assembled.
+ * about Psalm 91". A template string per language is the only version of this
+ * that does not read like it was assembled.
+ *
+ * The Romance tables lead with the reference and a colon, and that is a grammar
+ * fix rather than a style choice. Spanish and Portuguese contract the definite
+ * article into the preposition — "recorrido **del** Salmo 91", "roteiro **do**
+ * Salmo 91" — and whether a book takes an article at all varies by book: it is
+ * "do Salmo" but "de Gênesis". Getting that right per book would need a gender
+ * and article column for 66 books in every Romance locale; putting the reference
+ * in front of a colon needs none of it and is correct for every book. It also
+ * happens to put the searched phrase at the start of the heading.
  *
  * **English is the fallback, and that is deliberate rather than lazy.** A locale
  * with no entry here also has no briefs — and a chapter with no brief renders
@@ -86,15 +94,15 @@ const EN: Strings = {
 const PT: Strings = {
 	home: 'Início',
 	studyHub: 'Estudo bíblico',
-	outline: (r) => `Roteiro de ${r}, versículo por versículo`,
-	themes: (r) => `As ideias principais de ${r}`,
-	glossary: (r) => `Palavras de ${r}, explicadas de forma simples`,
-	keyVerses: (r) => `Versículos-chave de ${r}`,
-	caution: (r) => `O que se costuma dizer que ${r} afirma, e não afirma`,
-	faqs: (r) => `Perguntas frequentes sobre ${r}`,
+	outline: (r) => `${r}: roteiro versículo por versículo`,
+	themes: (r) => `${r}: as ideias principais`,
+	glossary: (r) => `${r}: palavras explicadas de forma simples`,
+	keyVerses: (r) => `${r}: versículos-chave`,
+	caution: (r) => `${r}: o que se costuma dizer que o texto afirma, e não afirma`,
+	faqs: (r) => `${r}: perguntas frequentes`,
 	relatedTopics: 'Temas relacionados',
-	commentaries: (r) => `O que os comentários dizem sobre ${r}`,
-	readIn: (r) => `Leia ${r} em`,
+	commentaries: (r) => `${r}: o que dizem os comentários`,
+	readIn: (r) => `${r} em outras traduções:`,
 	psalmNumbering: (hebrew) => `Salmo ${hebrew} na numeração hebraica.`,
 	psalmNumberingShared: (hebrew, septuagint) =>
 		`Parte do Salmo ${hebrew} na numeração hebraica (Septuaginta ${septuagint}).`,
@@ -110,15 +118,15 @@ const PT: Strings = {
 const ES: Strings = {
 	home: 'Inicio',
 	studyHub: 'Estudio bíblico',
-	outline: (r) => `Recorrido de ${r}, versículo por versículo`,
-	themes: (r) => `Las ideas principales de ${r}`,
-	glossary: (r) => `Palabras de ${r}, explicadas de forma sencilla`,
-	keyVerses: (r) => `Versículos clave de ${r}`,
-	caution: (r) => `Lo que se suele decir que ${r} afirma, y no afirma`,
-	faqs: (r) => `Preguntas frecuentes sobre ${r}`,
+	outline: (r) => `${r}: recorrido versículo por versículo`,
+	themes: (r) => `${r}: las ideas principales`,
+	glossary: (r) => `${r}: palabras explicadas de forma sencilla`,
+	keyVerses: (r) => `${r}: versículos clave`,
+	caution: (r) => `${r}: lo que se suele decir que dice, y no dice`,
+	faqs: (r) => `${r}: preguntas frecuentes`,
 	relatedTopics: 'Temas relacionados',
-	commentaries: (r) => `Lo que dicen los comentarios sobre ${r}`,
-	readIn: (r) => `Lee ${r} en`,
+	commentaries: (r) => `${r}: lo que dicen los comentarios`,
+	readIn: (r) => `${r} en otras traducciones:`,
 	psalmNumbering: (hebrew) => `Salmo ${hebrew} en la numeración hebrea.`,
 	psalmNumberingShared: (hebrew, septuagint) =>
 		`Parte del Salmo ${hebrew} en la numeración hebrea (Septuaginta ${septuagint}).`,

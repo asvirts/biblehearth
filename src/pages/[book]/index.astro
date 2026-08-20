@@ -8,41 +8,50 @@ import {
 	isCanonicalBook,
 } from '../../lib/bible/chapters';
 import {
-	bookNameFromUsfm,
-	isCanonicalBookSlug,
-	usfmFromBookSlug,
-} from '../../lib/bible/usfm';
+	bookName as localeBookName,
+	hasBook,
+	isCanonicalLocaleBookSlug,
+	usfmFromLocaleBookSlug,
+} from '../../lib/bible/books';
+import { displayChapterNumber } from '../../lib/bible/psalms';
+import { encodedPath } from '../../lib/bible/urls';
 import {
-	STUDY_HUB_PATH,
 	bookStudyPath,
 	chapterBriefIndex,
 	chapterStudyPath,
 	externalStudyLinks,
 	loadBookOverviews,
+	studyHubPath,
 	type BookOverview,
 } from '../../lib/commentary';
 import { READER_CACHE_CONTROL, setCacheControl } from '../../lib/http';
 import { breadcrumbJsonLd, creativeWorkJsonLd } from '../../lib/seo';
+
+/** Decided by middleware; see src/middleware.ts. */
+const locale = Astro.locals.locale;
 
 const bookSlug = Astro.params.book;
 if (!bookSlug) {
 	return Astro.rewrite('/404');
 }
 
-const bookUsfm = usfmFromBookSlug(bookSlug);
-if (!bookUsfm || !isCanonicalBook(bookUsfm)) {
+const bookUsfm = usfmFromLocaleBookSlug(locale, bookSlug);
+// `hasBook` is the New Testament check: a locale whose only licensed version
+// stops at Revelation does not have Genesis, and a book page listing fifty
+// chapters with no text behind any of them is worse than a 404.
+if (!bookUsfm || !isCanonicalBook(bookUsfm) || !hasBook(locale, bookUsfm)) {
 	return Astro.rewrite('/404');
 }
 
-// See isCanonicalBookSlug: `/psa` is the same book as `/psalms`, and only one
-// of the two is the page.
-if (!isCanonicalBookSlug(bookSlug, bookUsfm)) {
-	return Astro.redirect(bookStudyPath(bookUsfm), 301);
+// See isCanonicalLocaleBookSlug: `/psa` is the same book as `/psalms`, and only
+// one of the two is the page.
+if (!isCanonicalLocaleBookSlug(locale, bookSlug, bookUsfm)) {
+	return Astro.redirect(encodedPath(bookStudyPath(bookUsfm, locale)), 301);
 }
 
-const bookName = bookNameFromUsfm(bookUsfm);
+const bookName = localeBookName(locale, bookUsfm);
 const total = chapterCount(bookUsfm);
-const canonicalPath = bookStudyPath(bookUsfm);
+const canonicalPath = bookStudyPath(bookUsfm, locale);
 
 /**
  * The book introductions are the reason this page exists.
@@ -54,21 +63,68 @@ const canonicalPath = bookStudyPath(bookUsfm);
  */
 let overviews: BookOverview[] = [];
 try {
-	overviews = await loadBookOverviews(bookUsfm);
+	/**
+	 * English only, because the overviews themselves are English.
+	 *
+	 * These are the public-domain commentary introductions — Tyndale, and the
+	 * rest — and they are the reason this page is worth indexing in English.
+	 * There is no translated edition of them, so rendering them under a `/pt/`
+	 * URL would serve English prose from a Portuguese page: the clearest way to
+	 * tell a reader they are in the wrong place and a crawler that the page is a
+	 * near-duplicate of the English one.
+	 *
+	 * A translated book page is therefore its chapter grid plus whatever briefs
+	 * the locale has, which is also why it is `noindex` until it has one.
+	 */
+	overviews = locale.prefix ? [] : await loadBookOverviews(bookUsfm);
 } catch {
 	overviews = [];
 }
 
 setCacheControl(Astro.response, READER_CACHE_CONTROL);
 
-const briefs = await chapterBriefIndex();
+const briefs = await chapterBriefIndex(locale);
+/**
+ * Every chapter, with the number this locale writes alongside the one we count
+ * in.
+ *
+ * `id` stays Hebrew because that is what the brief index is keyed by; `label` is
+ * what the tile shows and what its URL ends in. In Russian the Psalms grid
+ * therefore runs 1, 2, ... 8, 9, 9, 10 ... — because Hebrew 9 and 10 are both
+ * Septuagint 9 — which is correct and is exactly what a Russian reader's own
+ * Bible does.
+ */
 const chapters = Array.from({ length: total }, (_, index) => {
 	const id = String(index + 1);
-	return { id, brief: briefs.get(`${bookUsfm}.${id}`) };
+	return {
+		id,
+		label: displayChapterNumber(locale, bookUsfm, id),
+		brief: briefs.get(`${bookUsfm}.${id}`),
+	};
 });
 const briefedCount = chapters.filter((chapter) => chapter.brief).length;
 
-const externalLinks = externalStudyLinks(bookUsfm, 1);
+/**
+ * A book page earns the index the same way a chapter page does: by carrying
+ * something of ours.
+ *
+ * In English that is the book overviews above, which every book has, so English
+ * book pages are indexable unconditionally as they always were. A translated
+ * book page has no overviews — there is no translated edition of them — so it is
+ * a heading and a grid of numbers until the locale has a brief in this book, and
+ * a grid of numbers is not a page worth putting in front of anyone.
+ */
+const indexable = locale.prefix ? briefedCount > 0 : true;
+
+/**
+ * BibleHub, StudyLight and the rest — all English, so English only.
+ *
+ * These are "read more elsewhere" links, and their value is that the page on the
+ * other end says something this one does not. In Portuguese or Thai that is not
+ * true of an English interlinear: it is an outbound link to a page the reader
+ * cannot read, which spends this page's link equity for nothing.
+ */
+const externalLinks = locale.prefix ? [] : externalStudyLinks(bookUsfm, 1);
 
 const title = `${bookName} — Book Summary, All ${total} ${total === 1 ? 'Chapter' : 'Chapters'}, and Commentary`;
 const description = `The book of ${bookName}, chapter by chapter: what each of its ${total} ${total === 1 ? 'chapter' : 'chapters'} says and means, in plain English, with notes from three commentaries.`;
@@ -78,23 +134,26 @@ const description = `The book of ${bookName}, chapter by chapter: what each of i
 	title={title}
 	description={description}
 	canonicalPath={canonicalPath}
+	noindex={!indexable}
+	lang={locale.htmlLang}
+	dir={locale.dir}
 	jsonLd={[
 		breadcrumbJsonLd(Astro.site, [
 			{ name: 'BibleHearth', path: '/' },
-			{ name: 'Bible study', path: STUDY_HUB_PATH },
+			{ name: 'Bible study', path: studyHubPath(locale) },
 			{ name: bookName, path: canonicalPath },
 		]),
 		creativeWorkJsonLd({
 			name: `${bookName} commentary`,
 			description,
-			inLanguage: 'en',
+			inLanguage: locale.htmlLang,
 		}),
 	]}
 >
 	<nav class="crumbs" aria-label="Breadcrumb">
 		<a href="/">Home</a>
 		<span>/</span>
-		<a href={STUDY_HUB_PATH}>Bible study</a>
+		<a href={studyHubPath(locale)}>Bible study</a>
 		<span>/</span>
 		<span>{bookName}</span>
 	</nav>
@@ -127,13 +186,13 @@ const description = `The book of ${bookName}, chapter by chapter: what each of i
 				chapters.map((chapter) => (
 					<a
 						class:list={['tile', { 'tile-briefed': Boolean(chapter.brief) }]}
-						href={chapterStudyPath(bookUsfm, chapter.id)}
+						href={chapterStudyPath(bookUsfm, chapter.id, locale)}
 						title={chapter.brief?.data.title}
 						data-va="chapter-tile"
 						data-va-chapter={`${bookSlug}/${chapter.id}`}
 						data-va-briefed={chapter.brief ? 'yes' : 'no'}
 					>
-						{chapter.id}
+						{chapter.label}
 					</a>
 				))
 			}
@@ -157,7 +216,7 @@ const description = `The book of ${bookName}, chapter by chapter: what each of i
 						.filter((chapter) => chapter.brief)
 						.map((chapter) => (
 							<li>
-								<a href={chapterStudyPath(bookUsfm, chapter.id)}>
+								<a href={chapterStudyPath(bookUsfm, chapter.id, locale)}>
 									{chapter.brief?.data.title}
 								</a>
 							</li>

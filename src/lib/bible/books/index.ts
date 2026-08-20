@@ -61,10 +61,27 @@ function indexFor(locale: Locale): LocaleIndex | null {
 	}
 	let cached = indexes.get(locale.code);
 	if (!cached) {
+		/**
+		 * Both spellings resolve; only one is canonical.
+		 *
+		 * `bySlug` carries the publisher's slug *and* any SEARCH_SLUG override, so
+		 * `/pt/salmo/91` and `/pt/salmos/91` both find the Psalms. `bookSlug`
+		 * then names one of them as canonical and `isCanonicalLocaleBookSlug`
+		 * 301s the other to it — which is how "salmos 91" traffic reaches the
+		 * page instead of a 404, without the page existing at two URLs.
+		 */
+		const bySlug = new Map(table.map((book) => [book.slug, book]));
+		for (const [id, slug] of Object.entries(SEARCH_SLUG[locale.code] ?? {})) {
+			const book = table.find((entry) => entry.usfm === id);
+			if (book && slug) {
+				bySlug.set(slug, book);
+			}
+		}
+
 		cached = {
 			books: table,
 			byUsfm: new Map(table.map((book) => [book.usfm, book])),
-			bySlug: new Map(table.map((book) => [book.slug, book])),
+			bySlug,
 		};
 		indexes.set(locale.code, cached);
 	}
@@ -84,12 +101,49 @@ export function localizedBooks(locale: Locale): readonly LocalizedBook[] {
 	return indexFor(locale)?.books ?? [];
 }
 
+/**
+ * Where the publisher's title is not the word people search.
+ *
+ * The generated slug comes from the publisher's book title, which is right for
+ * almost every book in almost every language and wrong for the Psalms in three
+ * of them — because a book title and a chapter reference are different phrases,
+ * and only the Psalms are routinely cited one chapter at a time:
+ *
+ * - Portuguese titles the book "Salmos", and "salmo 91" draws 2.5M searches a
+ *   month against 276K for "salmos 91".
+ * - Russian titles it «Псалтирь», the Psalter — a word essentially nobody pairs
+ *   with a number. «Псалом 90» draws 78K.
+ * - Romanian titles it „Psalmii", the plural. „Psalmul 50" draws 40K.
+ *
+ * Spanish needs no entry: its publisher already titles the book "Salmo".
+ *
+ * This is the same evidence the CHAPTER_FORM table below rests on, applied to
+ * the URL as well as the heading — there is no reason for a page to say "Salmo
+ * 91" above a URL that says `salmos`. The publisher's spelling stays a working
+ * alias, because `bySlug` still carries it: it resolves and then 301s here, so
+ * "salmos 91" traffic lands on the canonical page instead of a 404.
+ *
+ * Only add a row with search data behind it. A guess here is a canonical URL
+ * built on an invented word, which is worse than an unidiomatic one.
+ */
+const SEARCH_SLUG: Partial<Record<string, Partial<Record<string, string>>>> = {
+	pt: { PSA: 'salmo' },
+	'pt-pt': { PSA: 'salmo' },
+	ru: { PSA: 'псалом' },
+	ro: { PSA: 'psalmul' },
+};
+
 export function bookSlug(locale: Locale, usfm: string): string {
+	const id = usfm.toUpperCase();
+	const override = SEARCH_SLUG[locale.code]?.[id];
+	if (override) {
+		return override;
+	}
 	const index = indexFor(locale);
 	if (!index) {
 		return englishBookSlug(usfm);
 	}
-	return index.byUsfm.get(usfm.toUpperCase())?.slug ?? englishBookSlug(usfm);
+	return index.byUsfm.get(id)?.slug ?? englishBookSlug(usfm);
 }
 
 export function bookName(locale: Locale, usfm: string): string {
@@ -182,6 +236,24 @@ const CHAPTER_FORM: Partial<Record<string, Partial<Record<string, string>>>> = {
 	en: { PSA: 'Psalm' },
 	fr: { PSA: 'Psaume' },
 	pt: { PSA: 'Salmo' },
+
+	/**
+	 * Russian and Romanian, added on the evidence of what people search.
+	 *
+	 * The comment above warns against inventing a singular for a language nobody
+	 * on the team reads, and that warning stands — these two are not invented.
+	 * The publisher titles produce «Псалтирь 90» and „Psalmii 50": the first is
+	 * the name of the Psalter as a book, the second is the plural. Meanwhile
+	 * «псалом 90» draws 78,000 searches a month and „psalmul 50" 40,000, which is
+	 * the attestation — hundreds of thousands of native speakers a month writing
+	 * the form the page should use in front of a number.
+	 *
+	 * Both are also the forms the Synodal and Romanian Orthodox psalters print as
+	 * each psalm's own heading, which is the same fact arriving from the other
+	 * direction.
+	 */
+	ru: { PSA: 'Псалом' },
+	ro: { PSA: 'Psalmul' },
 };
 
 export function localeBookNameForChapter(locale: Locale, usfm: string): string {
