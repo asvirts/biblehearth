@@ -237,6 +237,19 @@ entity:
   name: Psalm 91
   sameAs:
     - https://en.wikipedia.org/wiki/Psalm_91
+figure:
+  src: ../../assets/editorial/chapters/psalms-91.jpg
+  alt: "The rock fortress of Masada seen from below, a flat-topped crag above the desert."
+  caption: "Psalm 91 talks about shelter the way a fortress talks about it: not that danger is imaginary, but that there is a place it does not own."
+  kind: photograph
+  credit:
+    title: "Masada"
+    creator: "Godot13"
+    date: "2016"
+    holder: "Wikimedia Commons"
+    license: cc-by-sa
+    licenseUrl: https://creativecommons.org/licenses/by-sa/4.0/
+    sourceUrl: https://commons.wikimedia.org/wiki/File:ISR-2016-Masada%2004.jpg
 publishedAt: 2026-08-19
 reviewedAt: 2026-08-19
 ---

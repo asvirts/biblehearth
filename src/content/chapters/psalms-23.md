@@ -185,6 +185,19 @@ entity:
   name: Psalm 23
   sameAs:
     - https://en.wikipedia.org/wiki/Psalm_23
+figure:
+  src: ../../assets/editorial/chapters/psalms-23.jpg
+  alt: "A fifth-century mosaic of a young shepherd in a gold landscape, sheep at his feet, a cross-staff in his hand."
+  caption: "Christians put Psalm 23 on the walls of tombs: not a rural postcard, but a claim that the shepherd does not leave the valley."
+  kind: art
+  credit:
+    title: "The Good Shepherd"
+    creator: "Unknown mosaicists"
+    date: "c. 425"
+    holder: "Mausoleum of Galla Placidia, Ravenna"
+    license: pd
+    licenseUrl: https://creativecommons.org/publicdomain/mark/1.0/
+    sourceUrl: https://commons.wikimedia.org/wiki/File:%22The%20good%20Shepherd%22%20mosaic%20-%20Mausoleum%20of%20Galla%20Placidia.jpg
 publishedAt: 2026-08-17
 reviewedAt: 2026-08-17
 ---

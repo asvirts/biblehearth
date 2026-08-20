@@ -96,6 +96,19 @@ entity:
   name: Marriage
   sameAs: [https://www.wikidata.org/wiki/Q8445, https://en.wikipedia.org/wiki/Marriage]
 sources: [naves, torreys, editorial]
+figure:
+  src: ../../assets/editorial/topics/marriage.jpg
+  alt: "Veronese’s Wedding at Cana: a crowded feast, musicians, and jars in a vast architectural setting."
+  caption: "The one wedding Jesus attends in the Gospels is a feast that runs out of wine. Marriage in Scripture is public, costly, and in need of help."
+  kind: art
+  credit:
+    title: "The Wedding at Cana"
+    creator: "Paolo Veronese"
+    date: "1563"
+    holder: "Musée du Louvre"
+    license: pd
+    licenseUrl: https://creativecommons.org/publicdomain/mark/1.0/
+    sourceUrl: https://commons.wikimedia.org/wiki/File:Les%20Noces%20de%20Cana%20-%20Paolo%20Veronese%20-%20Mus%C3%A9e%20du%20Louvre%20Peintures%20INV%20142%20;%20MR%20384.jpg
 publishedAt: 2026-08-17
 reviewedAt: 2026-08-17
 ---

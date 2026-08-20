@@ -223,6 +223,18 @@ entity:
   name: Psalm 121
   sameAs:
     - https://en.wikipedia.org/wiki/Psalm_121
+figure:
+  src: ../../assets/editorial/chapters/psalms-121.jpg
+  alt: "Snow-capped Mount Hermon rising over a wide valley, hills receding into haze."
+  caption: "“I lift up my eyes to the hills” is the start of a question, not a nature lyric: the help does not come from the hills themselves."
+  kind: photograph
+  credit:
+    title: "Mount Hermon"
+    creator: "Almog"
+    holder: "Wikimedia Commons"
+    license: cc-by-sa
+    licenseUrl: https://creativecommons.org/licenses/by-sa/3.0/
+    sourceUrl: https://commons.wikimedia.org/wiki/File:Mount%20Hermon%20View.jpg
 publishedAt: 2026-08-19
 reviewedAt: 2026-08-19
 ---

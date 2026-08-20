@@ -93,6 +93,18 @@ entity:
   name: Work
   sameAs: [https://www.wikidata.org/wiki/Q11660]
 sources: [naves, torreys, editorial]
+figure:
+  src: ../../assets/editorial/topics/work.jpg
+  alt: "A carpenter’s chisel, angle gauges, and pencil laid on a wooden bench."
+  caption: "The Gospels’ word for Joseph is craftsman. Work in Scripture is tools and a trade, not a branding exercise."
+  kind: photograph
+  credit:
+    title: "Carpenter’s tools"
+    creator: "Anastasia Fedotova"
+    holder: "Wikimedia Commons"
+    license: cc-by-sa
+    licenseUrl: https://creativecommons.org/licenses/by-sa/3.0/
+    sourceUrl: https://commons.wikimedia.org/wiki/File:Carpenter-tools%20Beveled-edge-chisel-two-angle-gauges-and-carpenters-pencil-01.jpg
 publishedAt: 2026-08-17
 reviewedAt: 2026-08-17
 ---

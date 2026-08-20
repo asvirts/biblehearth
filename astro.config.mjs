@@ -1,6 +1,6 @@
 // @ts-check
 import vercel from '@astrojs/vercel';
-import { defineConfig, envField, passthroughImageService } from 'astro/config';
+import { defineConfig, envField } from 'astro/config';
 
 // https://astro.build/config
 export default defineConfig({
@@ -8,13 +8,12 @@ export default defineConfig({
 	output: 'server',
 	trailingSlash: 'never',
 	session: false,
-	image: {
-		service: passthroughImageService(),
-	},
 	adapter: vercel({
 		webAnalytics: {
 			enabled: true,
 		},
+		imageService: true,
+		devImageService: 'sharp',
 	}),
 	/**
 	 * The study pages moved from `/commentary/psalms/28` to `/psalms/28`.

@@ -105,6 +105,18 @@ sources:
   - naves
   - torreys
   - editorial
+figure:
+  src: ../../assets/editorial/topics/grief.jpg
+  alt: "A winter hillside of bare trees and snow, the colour gone out of the ground."
+  caption: "Grief in Scripture is allowed to look like a season that has stopped producing. The verses do not skip to spring."
+  kind: photograph
+  credit:
+    title: "Winter in the Rhön"
+    creator: "A.Savin"
+    holder: "Wikimedia Commons"
+    license: cc-by-sa
+    licenseUrl: https://creativecommons.org/licenses/by-sa/4.0/
+    sourceUrl: https://commons.wikimedia.org/wiki/File:Winter%20in%20der%20Rh%C3%B6n.jpg
 publishedAt: 2026-08-17
 reviewedAt: 2026-08-17
 ---

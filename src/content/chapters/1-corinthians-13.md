@@ -251,6 +251,19 @@ entity:
   name: 1 Corinthians 13
   sameAs:
     - https://en.wikipedia.org/wiki/1_Corinthians_13
+figure:
+  src: ../../assets/editorial/chapters/1-corinthians-13.jpg
+  alt: "Van Dyck’s Charity: a woman gathering children against her, a picture of caritas rather than romance."
+  caption: "Paul’s “love” in this chapter is caritas — the kind that stays when the gifts run out — not the feeling a wedding reading usually means."
+  kind: art
+  credit:
+    title: "Charity"
+    creator: "Anthony van Dyck"
+    date: "c. 1627–1628"
+    holder: "National Gallery, London"
+    license: pd
+    licenseUrl: https://creativecommons.org/publicdomain/mark/1.0/
+    sourceUrl: https://commons.wikimedia.org/wiki/File:Van%20Dyck%20-%20Charity.jpg
 publishedAt: 2026-08-19
 reviewedAt: 2026-08-19
 ---

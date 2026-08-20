@@ -266,6 +266,19 @@ entity:
   sameAs:
     - https://en.wikipedia.org/wiki/Galatians_5
     - https://en.wikipedia.org/wiki/Fruit_of_the_Holy_Spirit
+figure:
+  src: ../../assets/editorial/chapters/galatians-5.jpg
+  alt: "A piled still life of fruit, bread, and game, painted as abundance that will not last."
+  caption: "The fruit of the Spirit is not a still life. Van Utrecht’s table shows what fruit looks like when it is only produce: impressive, and already on the way to rotting."
+  kind: art
+  credit:
+    title: "Banquet Still Life"
+    creator: "Adriaen van Utrecht"
+    date: "1644"
+    holder: "Rijksmuseum"
+    license: pd
+    licenseUrl: https://creativecommons.org/publicdomain/mark/1.0/
+    sourceUrl: https://commons.wikimedia.org/wiki/File:Banquet%20Still%20Life,%20Adriaen%20van%20Utrecht,%201644%20-%20Rijksmuseum.jpg
 publishedAt: 2026-08-19
 reviewedAt: 2026-08-19
 ---

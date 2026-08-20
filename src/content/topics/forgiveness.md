@@ -108,6 +108,19 @@ sources:
   - naves
   - torreys
   - editorial
+figure:
+  src: ../../assets/editorial/topics/forgiveness.jpg
+  alt: "Rembrandt’s Return of the Prodigal Son: the father gathering the kneeling son, the older brother looking on."
+  caption: "Forgiveness in the Gospels has a body in it. Rembrandt painted the father’s hands, not a slogan."
+  kind: art
+  credit:
+    title: "The Return of the Prodigal Son"
+    creator: "Rembrandt"
+    date: "c. 1668"
+    holder: "The State Hermitage Museum, St Petersburg"
+    license: pd
+    licenseUrl: https://creativecommons.org/publicdomain/mark/1.0/
+    sourceUrl: https://commons.wikimedia.org/wiki/File:Rembrandt%20Harmensz%20van%20Rijn%20-%20Return%20of%20the%20Prodigal%20Son%20-%20Google%20Art%20Project.jpg
 publishedAt: 2026-08-17
 reviewedAt: 2026-08-17
 ---

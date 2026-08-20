@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import Figure from '../components/Figure.astro';
 import {
 	NEW_TESTAMENT_BOOKS,
 	OLD_TESTAMENT_BOOKS,
@@ -17,6 +18,8 @@ import {
 import { READER_CACHE_CONTROL, setCacheControl } from '../lib/http';
 import { breadcrumbJsonLd, itemListJsonLd } from '../lib/seo';
 import { absoluteUrl } from '../lib/bible/urls';
+import { hubFigures } from '../lib/images/hubs';
+import { shareCardFromFigure } from '../lib/images/og';
 
 setCacheControl(Astro.response, READER_CACHE_CONTROL);
 
@@ -29,12 +32,17 @@ const books = [
 	{ heading: 'Old Testament', ids: OLD_TESTAMENT_BOOKS },
 	{ heading: 'New Testament', ids: NEW_TESTAMENT_BOOKS },
 ];
+
+const figure = hubFigures.study;
+const share = await shareCardFromFigure(figure);
 ---
 
 <BaseLayout
 	title={title}
 	description={description}
 	canonicalPath={STUDY_HUB_PATH}
+	image={share.image}
+	imageAlt={share.imageAlt}
 	jsonLd={[
 		breadcrumbJsonLd(Astro.site, [
 			{ name: 'BibleHearth', path: '/' },
@@ -64,6 +72,8 @@ const books = [
 		If you are new to reading the Bible, start with the Tyndale notes on any
 		page: they are written in plain modern English.
 	</p>
+
+	<Figure figure={figure} />
 
 	{
 		briefs.length ? (

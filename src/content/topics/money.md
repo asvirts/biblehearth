@@ -119,6 +119,18 @@ entity:
   name: Money
   sameAs: [https://www.wikidata.org/wiki/Q1368, https://en.wikipedia.org/wiki/Money]
 sources: [naves, torreys, editorial]
+figure:
+  src: ../../assets/editorial/topics/money.jpg
+  alt: "A silver Tyrian shekel, the kind of coin that circulated in the first-century Levant."
+  caption: "When the Gospels mention money they mean a real coin, with a weight and a stamp, not an abstraction called “wealth.”"
+  kind: photograph
+  credit:
+    title: "Tyrian shekel from the Huseifa hoard"
+    creator: "Hanay"
+    holder: "Wikimedia Commons"
+    license: cc-by-sa
+    licenseUrl: https://creativecommons.org/licenses/by-sa/3.0/
+    sourceUrl: https://commons.wikimedia.org/wiki/File:Huseifa%20hoard%20-%20Tyrian%20shekel%20(1).JPG
 publishedAt: 2026-08-17
 reviewedAt: 2026-08-17
 ---

@@ -105,6 +105,18 @@ entity:
   name: Faith
   sameAs: [https://www.wikidata.org/wiki/Q5390, https://en.wikipedia.org/wiki/Faith]
 sources: [naves, torreys, editorial]
+figure:
+  src: ../../assets/editorial/topics/faith.jpg
+  alt: "A mustard plant in flower, small yellow blooms on a branching green stem."
+  caption: "Jesus compared faith to a mustard seed because the plant is ordinary and then suddenly not. This is the plant, not a jewel."
+  kind: photograph
+  credit:
+    title: "White mustard (Sinapis alba)"
+    creator: "Krzysztof Ziarnek"
+    holder: "Wikimedia Commons"
+    license: cc-by-sa
+    licenseUrl: https://creativecommons.org/licenses/by-sa/4.0/
+    sourceUrl: https://commons.wikimedia.org/wiki/File:Sinapis%20alba%20subsp.%20mairei%20kz03.jpg
 publishedAt: 2026-08-17
 reviewedAt: 2026-08-17
 ---

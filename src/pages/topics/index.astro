@@ -1,9 +1,12 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import Figure from '../../components/Figure.astro';
 import { HOME_CACHE_CONTROL, setCacheControl } from '../../lib/http';
 import { breadcrumbJsonLd, itemListJsonLd } from '../../lib/seo';
 import { absoluteUrl } from '../../lib/bible/urls';
 import { listTopics, topicPath, topicVerseCount } from '../../lib/topics';
+import { hubFigures } from '../../lib/images/hubs';
+import { shareCardFromFigure } from '../../lib/images/og';
 
 setCacheControl(Astro.response, HOME_CACHE_CONTROL);
 
@@ -12,12 +15,17 @@ const names = topics
 	.slice(0, 3)
 	.map((topic) => topic.data.title)
 	.join(', ');
+
+const figure = hubFigures.topics;
+const share = await shareCardFromFigure(figure);
 ---
 
 <BaseLayout
 	title={`Bible Topics — Verses About ${names} and More`}
 	description={`Bible verses by topic, grouped by theme with plain-English context for every passage. ${topics.length} topics covering ${names.toLowerCase()}, and more.`}
 	canonicalPath="/topics"
+	image={share.image}
+	imageAlt={share.imageAlt}
 	jsonLd={[
 		breadcrumbJsonLd(Astro.site, [
 			{ name: 'BibleHearth', path: '/' },
@@ -44,6 +52,8 @@ const names = topics
 		of context for each verse explaining who is speaking and why it belongs —
 		plus an honest note on how the passages are commonly misused.
 	</p>
+
+	<Figure figure={figure} />
 
 	<div class="stack">
 		{

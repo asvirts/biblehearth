@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import Figure from '../components/Figure.astro';
 import { listAnswers } from '../lib/answers';
 import { TOTAL_CHAPTERS } from '../lib/bible/chapters';
 import { listChapterBriefs, STUDY_HUB_PATH } from '../lib/commentary';
@@ -16,6 +17,8 @@ import {
 	EDITORIAL_EMAIL,
 } from '../lib/site';
 import { listTopics } from '../lib/topics';
+import { hubFigures } from '../lib/images/hubs';
+import { shareCardFromFigure } from '../lib/images/og';
 
 setCacheControl(Astro.response, READER_CACHE_CONTROL);
 
@@ -52,12 +55,17 @@ const description =
  */
 const publisherDescription =
 	'A free Bible site written for people in their first year of reading it: licensed English translations, alongside original plain-English writing on chapters, topics and the questions people actually ask.';
+
+const figure = hubFigures.about;
+const share = await shareCardFromFigure(figure);
 ---
 
 <BaseLayout
 	title={title}
 	description={description}
 	canonicalPath={ABOUT_PATH}
+	image={share.image}
+	imageAlt={share.imageAlt}
 	jsonLd={[
 		breadcrumbJsonLd(Astro.site, [
 			{ name: 'BibleHearth', path: '/' },
@@ -89,6 +97,8 @@ const publisherDescription =
 		reading it. This page says who publishes it, how the writing on it is made,
 		what it refuses to publish, and where to write when we get something wrong.
 	</p>
+
+	<Figure figure={figure} />
 
 	<section>
 		<h2>What is on this site</h2>

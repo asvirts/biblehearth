@@ -22,6 +22,12 @@ import {
 	faqJsonLd,
 	itemListJsonLd,
 } from '../../lib/seo';
+import {
+	articleShareFields,
+	shareCardFromFigure,
+} from '../../lib/images/og';
+import Figure from '../../components/Figure.astro';
+import type { EditorialFigure } from '../../lib/images/types';
 import { listTopics, topicPath } from '../../lib/topics';
 import {
 	displayAbbreviation,
@@ -120,6 +126,10 @@ const reviewed = answer.data.reviewedAt.toLocaleDateString('en-US', {
 	year: 'numeric',
 	month: 'long',
 });
+
+const share = answer.data.figure
+	? await shareCardFromFigure(answer.data.figure)
+	: undefined;
 ---
 
 <BaseLayout
@@ -127,6 +137,8 @@ const reviewed = answer.data.reviewedAt.toLocaleDateString('en-US', {
 	description={description}
 	canonicalPath={canonicalPath}
 	markdown
+	image={share?.image}
+	imageAlt={share?.imageAlt}
 	jsonLd={[
 		breadcrumbJsonLd(Astro.site, [
 			{ name: 'BibleHearth', path: '/' },
@@ -141,6 +153,7 @@ const reviewed = answer.data.reviewedAt.toLocaleDateString('en-US', {
 			datePublished: answer.data.publishedAt,
 			dateModified: answer.data.reviewedAt,
 			about: answer.data.entity,
+			...articleShareFields(share),
 		}),
 		itemListJsonLd({
 			name: `Readings of ${anchorReference}`,
@@ -164,6 +177,8 @@ const reviewed = answer.data.reviewedAt.toLocaleDateString('en-US', {
 
 	{/* Answer-first: this is the chunk a snippet or retrieval model lifts whole. */}
 	<p class="lede">{answer.data.shortAnswer}</p>
+
+	{answer.data.figure ? <Figure figure={answer.data.figure as EditorialFigure} /> : null}
 
 	{
 		status !== 200 || !version ? (

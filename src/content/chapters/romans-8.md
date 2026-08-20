@@ -237,6 +237,18 @@ entity:
   name: Romans 8
   sameAs:
     - https://en.wikipedia.org/wiki/Romans_8
+figure:
+  src: ../../assets/editorial/chapters/romans-8.jpg
+  alt: "Ancient olive trees in Gethsemane, thick twisted trunks and silver leaves against stone."
+  caption: "Romans 8 is about a life the Spirit keeps going. Olive trees of this age are the nearest plant-picture of that: still alive after more winters than anyone present remembers."
+  kind: photograph
+  credit:
+    title: "Old olive trees in the Garden of Gethsemane"
+    creator: "Kristián Slovák"
+    holder: "Wikimedia Commons"
+    license: cc-by-sa
+    licenseUrl: https://creativecommons.org/licenses/by-sa/4.0/
+    sourceUrl: https://commons.wikimedia.org/wiki/File:%D0%9Eld%20Olive%20trees%20in%20the%20Garden%20of%20Gethsemane,%2005.jpg
 publishedAt: 2026-08-17
 reviewedAt: 2026-08-17
 ---

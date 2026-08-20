@@ -104,6 +104,18 @@ sources:
   - naves
   - torreys
   - editorial
+figure:
+  src: ../../assets/editorial/topics/peace.jpg
+  alt: "The Sea of Galilee on a still day, pale hills across a barely ruffled surface."
+  caption: "Biblical peace is not the absence of a lake that can storm. It is what is said to hold when the water has a history of not staying like this."
+  kind: photograph
+  credit:
+    title: "Calm waters, Sea of Galilee"
+    creator: "Ianandwendy.com"
+    holder: "Wikimedia Commons"
+    license: cc-by
+    licenseUrl: https://creativecommons.org/licenses/by/2.0/
+    sourceUrl: https://commons.wikimedia.org/wiki/File:Calm%20waters,%20Sea%20of%20Galilee%200833%20(508209962).jpg
 publishedAt: 2026-08-17
 reviewedAt: 2026-08-17
 ---

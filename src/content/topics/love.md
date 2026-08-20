@@ -115,6 +115,19 @@ entity:
   name: Love
   sameAs: [https://www.wikidata.org/wiki/Q316, https://en.wikipedia.org/wiki/Love]
 sources: [naves, torreys, editorial]
+figure:
+  src: ../../assets/editorial/topics/love.jpg
+  alt: "A still life of bread and wine on a table, painted without a human figure in the frame."
+  caption: "Biblical love is closer to a shared table than to a feeling. Bread and wine are what the text keeps putting in people’s hands."
+  kind: art
+  credit:
+    title: "Still Life with Bread and Wine"
+    creator: "Henri Horace Roland de la Porte"
+    date: "18th century"
+    holder: "York Art Gallery"
+    license: pd
+    licenseUrl: https://creativecommons.org/publicdomain/mark/1.0/
+    sourceUrl: https://commons.wikimedia.org/wiki/File:Henri%20Horace%20Roland%20de%20la%20Porte%20(c.1724-1793)%20-%20Still%20Life%20with%20Bread%20and%20Wine%20-%20YORAG%20,%20764%20-%20York%20Art%20Gallery.jpg
 publishedAt: 2026-08-17
 reviewedAt: 2026-08-17
 ---

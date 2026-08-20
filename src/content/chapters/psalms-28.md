@@ -260,6 +260,18 @@ entity:
   name: Psalm 28
   sameAs:
     - https://en.wikipedia.org/wiki/Psalm_28
+figure:
+  src: ../../assets/editorial/chapters/psalms-28.jpg
+  alt: "Bare limestone hills of the Judean desert under a hard sky, no green in sight."
+  caption: "Psalm 28 calls God a rock while the poet is still shouting into silence. The landscape here is the kind of place that makes that prayer make sense."
+  kind: photograph
+  credit:
+    title: "The Judean desert"
+    creator: "David Shankbone"
+    holder: "Wikimedia Commons"
+    license: cc-by-sa
+    licenseUrl: https://creativecommons.org/licenses/by-sa/3.0/
+    sourceUrl: https://commons.wikimedia.org/wiki/File:Judean%20desert004.jpg
 publishedAt: 2026-08-18
 reviewedAt: 2026-08-18
 ---

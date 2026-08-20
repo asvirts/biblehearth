@@ -98,6 +98,19 @@ entity:
   name: Friendship
   sameAs: [https://www.wikidata.org/wiki/Q491, https://en.wikipedia.org/wiki/Friendship]
 sources: [naves, torreys, editorial]
+figure:
+  src: ../../assets/editorial/topics/friendship.jpg
+  alt: "Cima da Conegliano’s David and Jonathan: two young men in a landscape, one holding Goliath’s head, the covenant between them implied in how they stand."
+  caption: "The Bible’s strongest picture of friendship is a covenant, not a mood: David and Jonathan bound to each other at a cost."
+  kind: art
+  credit:
+    title: "David and Jonathan"
+    creator: "Cima da Conegliano"
+    date: "c. 1505–1510"
+    holder: "National Gallery, London"
+    license: pd
+    licenseUrl: https://creativecommons.org/publicdomain/mark/1.0/
+    sourceUrl: https://commons.wikimedia.org/wiki/File:Cima%20da%20Conegliano%20-%20David%20and%20Jonathan%20-%20WGA04912.jpg
 publishedAt: 2026-08-17
 reviewedAt: 2026-08-17
 ---

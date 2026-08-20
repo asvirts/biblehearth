@@ -1,4 +1,4 @@
-import { absoluteUrl } from './bible/urls';
+import { absoluteMediaUrl, absoluteUrl } from './bible/urls';
 import {
 	ABOUT_PATH,
 	EDITORIAL_EMAIL,
@@ -9,20 +9,13 @@ import {
 } from './site';
 
 /**
- * The social card every page falls back to, and its real dimensions.
+ * The social card a page falls back to, and its real dimensions.
  *
- * Here rather than in BaseLayout because two things now need it: the `og:image`
- * the layout emits, and the `image` on the `Article` node below. Those must be
- * the same URL — an article whose structured data advertises one image while the
- * page's Open Graph tags advertise another is a page disagreeing with itself,
- * and it is the kind of disagreement nobody notices because both halves
- * validate on their own.
- *
- * It is one shared card across every page, which is a weak signal rather than a
- * false one: it does represent this site, it just does not distinguish this
- * page. Per-page cards generated from the chapter reference would be the real
- * version. When that lands, this stays as the fallback for pages that have no
- * card of their own.
+ * Here rather than in BaseLayout because two things need it: the `og:image`
+ * the layout emits, and the `image` on the `Article` node. Those must be the
+ * same URL. Editorial pages pass a 1200×630 crop of their figure instead;
+ * this stays as the fallback for reader pages, verse hubs, and unbriefed
+ * chapters, which have no picture of their own.
  */
 export const DEFAULT_OG_IMAGE = '/og-default.png';
 export const OG_IMAGE_WIDTH = 1200;
@@ -163,6 +156,11 @@ export function articleJsonLd(options: {
 	 * cannot drift — see DEFAULT_OG_IMAGE.
 	 */
 	image?: string;
+	/** Caption, credit, licence — only when `image` is a work we are hosting. */
+	imageCaption?: string;
+	imageCreditText?: string;
+	imageLicense?: string;
+	imageSourceUrl?: string;
 }): Record<string, unknown> {
 	const url = absoluteUrl(options.site, options.path);
 	return {
@@ -178,9 +176,17 @@ export function articleJsonLd(options: {
 		isAccessibleForFree: true,
 		image: {
 			'@type': 'ImageObject',
-			url: absoluteUrl(options.site, options.image ?? DEFAULT_OG_IMAGE),
+			url: absoluteMediaUrl(options.site, options.image ?? DEFAULT_OG_IMAGE),
 			width: OG_IMAGE_WIDTH,
 			height: OG_IMAGE_HEIGHT,
+			...(options.imageCaption ? { caption: options.imageCaption } : {}),
+			...(options.imageCreditText
+				? { creditText: options.imageCreditText }
+				: {}),
+			...(options.imageLicense ? { license: options.imageLicense } : {}),
+			...(options.imageSourceUrl
+				? { acquireLicensePage: options.imageSourceUrl }
+				: {}),
 		},
 		author: organizationRef(options.site),
 		// An id reference, not a second copy: `author` above defines the node in

@@ -218,6 +218,19 @@ entity:
   name: Genesis creation narrative
   sameAs:
     - https://en.wikipedia.org/wiki/Genesis_creation_narrative
+figure:
+  src: ../../assets/editorial/chapters/genesis-1.jpg
+  alt: "Michelangelo’s Creation of Adam: two hands reaching across a gap, almost touching."
+  caption: "The chapter’s claim in one gesture: people are made, on purpose, and the gap between maker and made does not close itself."
+  kind: art
+  credit:
+    title: "The Creation of Adam"
+    creator: "Michelangelo"
+    date: "c. 1512"
+    holder: "Sistine Chapel, Vatican"
+    license: pd
+    licenseUrl: https://creativecommons.org/publicdomain/mark/1.0/
+    sourceUrl: https://commons.wikimedia.org/wiki/File:Michelangelo%20-%20Creation%20of%20Adam%20(cropped).jpg
 publishedAt: 2026-08-17
 reviewedAt: 2026-08-17
 ---

@@ -1,7 +1,13 @@
 import { defineMiddleware } from 'astro:middleware';
+import { DEFAULT_LOCALE, splitLocalePath } from './lib/i18n/locales';
 
 /**
- * Freshness validators for HTML responses.
+ * Locale resolution, then freshness validators for HTML responses.
+ *
+ * Two jobs in one middleware because Astro runs one chain and the order between
+ * them is forced: the locale has to be decided before the page renders, and the
+ * ETag has to be computed after it, because the rendered bytes differ by
+ * language. Splitting them into two files would only hide that.
  *
  * Bing's guidelines ask for "HTTP validation headers such as ETags" alongside
  * sitemap `lastmod`, as the signals that let it tell a changed page from an
@@ -18,7 +24,58 @@ import { defineMiddleware } from 'astro:middleware';
  * setLastModified); this handles the conditional request for both.
  */
 export const onRequest = defineMiddleware(async (context, next) => {
-	const response = await next();
+	/**
+	 * The locale is decided here and nowhere else.
+	 *
+	 * `[book]/[chapter]` is the greediest route in the app — 66 book slugs sit
+	 * at the site root — so a three-segment `/es/salmo/91` would have to be
+	 * matched by a route competing with it, and two-segment `/es/salmo` would
+	 * resolve as the book `es`, chapter `salmo`. Stripping the prefix before
+	 * routing avoids both: one set of route files serves all 58 locales, and the
+	 * same `[book]/[chapter].astro` renders Psalm 91 in English and Salmo 91 in
+	 * Spanish by reading `locals.locale`.
+	 *
+	 * `splitLocalePath` answers English for anything with no matching prefix, so
+	 * `/api/warm` and `/sitemap.xml` fall through untouched without needing an
+	 * exclusion list — no path segment they start with is a registered locale.
+	 */
+	const { locale, rest } = splitLocalePath(context.url.pathname);
+	context.locals.locale = locale;
+	context.locals.localePath = rest;
+
+	/**
+	 * Rewrite rather than redirect: `/es/salmo/91` is the canonical URL and must
+	 * answer 200 at it. The prefix is removed only for route matching, so the
+	 * address bar, the canonical tag and the sitemap all keep saying `/es/...`.
+	 *
+	 * The query string is carried across because `next()` takes a whole path and
+	 * would otherwise drop it — which on this site would silently discard the
+	 * `?day=` on a localized Verse of the Day.
+	 *
+	 * No `Vary: Accept-Language` anywhere in here, deliberately. The URL names
+	 * the language, so there is nothing to negotiate, and varying on a header
+	 * every browser sends differently would fragment the CDN cache for pages
+	 * whose content does not depend on it.
+	 */
+	/**
+	 * Rewritten as a whole `Request`, not as a path string.
+	 *
+	 * `next('/salmo/91')` looks equivalent and is not: it re-runs routing but
+	 * leaves an endpoint's `params` empty, so `/pt/salmo/91.md` reached
+	 * `[chapter].md.ts` with `params: {}` and 404'd while the `.astro` page on the
+	 * same path resolved fine. Handing `next` a Request makes the rewrite a
+	 * genuine re-dispatch, and params are recomputed for pages and endpoints
+	 * alike.
+	 */
+	const response =
+		locale.code === DEFAULT_LOCALE.code
+			? await next()
+			: await next(
+					new Request(
+						new URL(`${rest}${context.url.search}`, context.url),
+						context.request,
+					),
+				);
 
 	if (!isValidatable(context.request, response)) {
 		return response;

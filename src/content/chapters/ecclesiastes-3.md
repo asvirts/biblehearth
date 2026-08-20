@@ -261,6 +261,18 @@ entity:
   name: Ecclesiastes 3
   sameAs:
     - https://en.wikipedia.org/wiki/Ecclesiastes_3
+figure:
+  src: ../../assets/editorial/chapters/ecclesiastes-3.jpg
+  alt: "A winter valley in the Trossachs: bare trees, snow on the hills, a season that has clearly arrived."
+  caption: "Ecclesiastes 3 does not say every season is pleasant. It says each one has a time, including the ones that look like nothing is growing."
+  kind: photograph
+  credit:
+    title: "Winter in the Trossachs"
+    creator: "Wfscraig"
+    holder: "Wikimedia Commons"
+    license: cc-by-sa
+    licenseUrl: https://creativecommons.org/licenses/by-sa/4.0/
+    sourceUrl: https://commons.wikimedia.org/wiki/File:Winter%20in%20Trossachs,%20Scotland.jpg
 publishedAt: 2026-08-19
 reviewedAt: 2026-08-19
 ---

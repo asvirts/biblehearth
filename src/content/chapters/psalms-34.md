@@ -242,6 +242,19 @@ entity:
   name: Psalm 34
   sameAs:
     - https://en.wikipedia.org/wiki/Psalm_34
+figure:
+  src: ../../assets/editorial/chapters/psalms-34.jpg
+  alt: "A seventeenth-century still life: a loaf of bread, a glass of wine, and a knife on a wooden table."
+  caption: "“Taste and see” is an invitation to something as ordinary as bread, not a slogan about positive thinking."
+  kind: art
+  credit:
+    title: "Still Life with Bread and Wine Glass"
+    creator: "Isaac Luttichuys"
+    date: "17th century"
+    holder: "Wikimedia Commons"
+    license: pd
+    licenseUrl: https://creativecommons.org/publicdomain/mark/1.0/
+    sourceUrl: https://commons.wikimedia.org/wiki/File:Luttichuys,%20Isaac%20-%20Still%20Life%20with%20Bread%20and%20Wine%20Glass%20-%2017th%20c.jpg
 publishedAt: 2026-08-19
 reviewedAt: 2026-08-19
 ---

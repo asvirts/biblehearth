@@ -163,6 +163,41 @@ h1 {
 	max-width: 42rem;
 }
 
+.editorial-figure {
+	margin: 1.5rem 0 2rem;
+	max-width: 42rem;
+}
+
+.editorial-figure img {
+	display: block;
+	width: 100%;
+	height: auto;
+	border-radius: clamp(0.8rem, 3vw, 1rem);
+	border: 1px solid var(--line);
+	background: var(--bg-raised);
+}
+
+.editorial-figure figcaption {
+	margin-top: 0.65rem;
+	font-size: 0.85rem;
+	color: var(--muted);
+	line-height: 1.45;
+}
+
+.editorial-figure .figure-caption {
+	display: block;
+	color: var(--ink);
+}
+
+.editorial-figure .figure-credit {
+	display: block;
+	margin-top: 0.25rem;
+}
+
+.editorial-figure .figure-credit a {
+	color: inherit;
+}
+
 .panel {
 	background: var(--bg-raised);
 	border: 1px solid var(--line);

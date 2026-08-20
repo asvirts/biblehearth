@@ -1,6 +1,7 @@
 ---
 import type { BiblePassage, BibleVersion, VOTD } from '@youversion/platform-core';
 import BaseLayout from '../layouts/BaseLayout.astro';
+import Figure from '../components/Figure.astro';
 import Passage from '../components/Passage.astro';
 import CopyrightNotice from '../components/CopyrightNotice.astro';
 import StatusMessage from '../components/StatusMessage.astro';
@@ -9,6 +10,8 @@ import { isNumericChapter, parsePassageId } from '../lib/bible/usfm';
 import { chapterPath, versePath, versionPath } from '../lib/bible/urls';
 import { HOME_CACHE_CONTROL, setPageHeaders } from '../lib/http';
 import { websiteJsonLd } from '../lib/seo';
+import { hubFigures } from '../lib/images/hubs';
+import { shareCardFromFigure } from '../lib/images/og';
 import {
 	BibleUnavailableError,
 	displayAbbreviation,
@@ -118,12 +121,17 @@ const description =
 	'Read the Bible free online, with plain-English studies of the chapters ' +
 	'people ask about most: what the chapter says, what it means, and what it ' +
 	'does not.';
+
+const figure = hubFigures.home;
+const share = await shareCardFromFigure(figure);
 ---
 
 <BaseLayout
 	title="BibleHearth — Read the Bible, Explained in Plain English"
 	description={description}
 	canonicalPath="/"
+	image={share.image}
+	imageAlt={share.imageAlt}
 	jsonLd={websiteJsonLd({ site: Astro.site, description })}
 >
 	{
@@ -139,6 +147,7 @@ const description =
 						plain-English studies of the passages people ask about most —
 						written for anyone new to the Bible.
 					</p>
+					<Figure figure={figure} />
 					<p>
 						<a class="cta" href={startHref}>
 							Start reading{versionLabel ? ` in ${versionLabel}` : ''}

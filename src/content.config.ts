@@ -1,5 +1,6 @@
 import { defineCollection, reference, z } from 'astro:content';
 import { glob } from 'astro/loaders';
+import { editorialFigureSchema, requireFigureWhenPublished } from './lib/images/schema';
 
 /** JHN.3 | JHN.3.16 | PHP.4.6-7 */
 const USFM_REF = /^[A-Z0-9]{3}\.\d+(\.\d+(-\d+)?)?$/;
@@ -30,9 +31,11 @@ const verseGroup = z.object({
 
 const topics = defineCollection({
 	loader: glob({ pattern: '**/*.md', base: './src/content/topics' }),
-	schema: z.object({
+	schema: ({ image }) =>
+		z.object({
 		/** "Anxiety" — the entity, not the query string. */
 		title: z.string().min(2).max(60),
+		figure: editorialFigureSchema(image).optional(),
 		/** Query variants; powers related-topic matching and internal search. */
 		aliases: z.array(z.string()).default([]),
 		/**
@@ -69,7 +72,7 @@ const topics = defineCollection({
 		reviewedAt: z.coerce.date(),
 		/** Draft topics render noindex and stay out of sitemaps. */
 		draft: z.boolean().default(false),
-	}),
+	}).superRefine(requireFigureWhenPublished),
 });
 
 /**
@@ -106,9 +109,11 @@ const answerView = z.object({
  */
 const answers = defineCollection({
 	loader: glob({ pattern: '**/*.md', base: './src/content/answers' }),
-	schema: z.object({
+	schema: ({ image }) =>
+		z.object({
 		/** The <h1>, phrased as the query. "Who Are the Sons of God in Genesis 6?" */
 		question: z.string().min(10).max(110),
+		figure: editorialFigureSchema(image).optional(),
 		/** "Sons of God in Genesis 6" — for cards, breadcrumbs, and back-links. */
 		label: z.string().min(4).max(60),
 		/** Other phrasings of the same question this page is meant to answer. */
@@ -153,7 +158,7 @@ const answers = defineCollection({
 		reviewedAt: z.coerce.date(),
 		/** Draft answers render noindex and stay out of sitemaps. */
 		draft: z.boolean().default(false),
-	}),
+	}).superRefine(requireFigureWhenPublished),
 });
 
 /**
@@ -189,10 +194,12 @@ const chapterOutlineEntry = z.object({
 
 const chapters = defineCollection({
 	loader: glob({ pattern: '**/*.md', base: './src/content/chapters' }),
-	schema: z.object({
+	schema: ({ image }) =>
+		z.object({
 		/** Chapter USFM: `GEN.1`. The route, the reverse index and the sitemap
 		 * entry all derive from this, so it is the only id the file carries. */
 		usfm: z.string().regex(/^[A-Z0-9]{3}\.\d+$/),
+		figure: editorialFigureSchema(image).optional(),
 		/**
 		 * The <h1>. Leads with the reference, because that is what people type,
 		 * then says what the chapter is about rather than repeating "commentary".
@@ -317,6 +324,7 @@ const chapters = defineCollection({
 		 * quietly reintroduce a 93-character title.
 		 */
 		.superRefine((brief, ctx) => {
+			requireFigureWhenPublished(brief, ctx);
 			if (!brief.seoTitle && brief.title.length > 60) {
 				ctx.addIssue({
 					code: z.ZodIssueCode.custom,

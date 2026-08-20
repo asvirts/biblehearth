@@ -261,6 +261,19 @@ entity:
   sameAs:
     - https://en.wikipedia.org/wiki/Ephesians_6
     - https://en.wikipedia.org/wiki/Armor_of_God
+figure:
+  src: ../../assets/editorial/chapters/ephesians-6.jpg
+  alt: "A bronze Corinthian helmet, the face-opening a dark T in a surface that once took blows."
+  caption: "Ephesians 6 borrows armour because the letter thinks the Christian life is a fight. The pieces named are real pieces, not a costume."
+  kind: photograph
+  credit:
+    title: "Bronze helmet of the Corinthian type"
+    creator: "Unknown Greek bronzeworker"
+    date: "early 5th century BCE"
+    holder: "The Metropolitan Museum of Art"
+    license: cc0
+    licenseUrl: https://creativecommons.org/publicdomain/zero/1.0/
+    sourceUrl: https://www.metmuseum.org/art/collection/search/247983
 publishedAt: 2026-08-19
 reviewedAt: 2026-08-19
 ---

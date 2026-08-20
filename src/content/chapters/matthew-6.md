@@ -281,6 +281,18 @@ entity:
   sameAs:
     - https://en.wikipedia.org/wiki/Matthew_6
     - https://en.wikipedia.org/wiki/Lord%27s_Prayer
+figure:
+  src: ../../assets/editorial/chapters/matthew-6.jpg
+  alt: "White Madonna lilies growing on a rocky slope, trumpets open toward the light."
+  caption: "“Consider the lilies” is an argument about anxiety, made from a flower that does not farm and is still dressed."
+  kind: photograph
+  credit:
+    title: "Madonna lily (Lilium candidum)"
+    creator: "Ori~"
+    holder: "Wikimedia Commons"
+    license: cc-by
+    licenseUrl: https://creativecommons.org/licenses/by/3.0/
+    sourceUrl: https://commons.wikimedia.org/wiki/File:Lilium%20candidum%20in%20Wadi%20Kelah%201.jpg
 publishedAt: 2026-08-19
 reviewedAt: 2026-08-19
 ---

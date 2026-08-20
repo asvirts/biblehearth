@@ -278,6 +278,18 @@ entity:
   sameAs:
     - https://en.wikipedia.org/wiki/Sons_of_God
     - https://en.wikipedia.org/wiki/Nephilim
+figure:
+  src: ../../assets/editorial/answers/sons-of-god-genesis-6.jpg
+  alt: "A historical illustration of Enoch being taken, a rare picture of the Genesis 5–6 world the “sons of God” debate sits inside."
+  caption: "The “sons of God” question lives next door to Enoch, who walked with God and was not. The page has to start in that neighbourhood of Genesis, not in a later war in heaven."
+  kind: art
+  credit:
+    title: "God took Enoch"
+    creator: "Unknown illustrator"
+    holder: "Wikimedia Commons"
+    license: pd
+    licenseUrl: https://creativecommons.org/publicdomain/mark/1.0/
+    sourceUrl: https://commons.wikimedia.org/wiki/File:Figures%20God%20took%20Enoch.jpg
 publishedAt: 2026-08-17
 reviewedAt: 2026-08-17
 ---

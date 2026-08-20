@@ -279,6 +279,19 @@ entity:
   name: John 14
   sameAs:
     - https://en.wikipedia.org/wiki/John_14
+figure:
+  src: ../../assets/editorial/chapters/john-14.jpg
+  alt: "Leonardo’s Last Supper: Jesus at the centre of a long table, the disciples reacting around him."
+  caption: "John 14 is spoken at this table, after the meal has already turned. The room is the point: “In my Father’s house” is said by someone about to leave it."
+  kind: art
+  credit:
+    title: "The Last Supper"
+    creator: "Leonardo da Vinci"
+    date: "c. 1495–1498"
+    holder: "Santa Maria delle Grazie, Milan"
+    license: pd
+    licenseUrl: https://creativecommons.org/publicdomain/mark/1.0/
+    sourceUrl: https://commons.wikimedia.org/wiki/File:Leonardo%20da%20Vinci%20(1452-1519)%20-%20The%20Last%20Supper%20(1495-1498).jpg
 publishedAt: 2026-08-19
 reviewedAt: 2026-08-19
 ---

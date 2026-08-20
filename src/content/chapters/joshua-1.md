@@ -242,6 +242,19 @@ entity:
   name: Joshua 1
   sameAs:
     - https://en.wikipedia.org/wiki/Joshua_1
+figure:
+  src: ../../assets/editorial/chapters/joshua-1.jpg
+  alt: "John Martin’s Joshua commanding the sun: a vast army under a sky split by light, the sun halted above the field."
+  caption: "Joshua 1 is the charge before any of that happens: be strong, because the work in front of you is larger than you."
+  kind: art
+  credit:
+    title: "Joshua Commanding the Sun to Stand Still"
+    creator: "John Martin"
+    date: "1840"
+    holder: "National Gallery of Art, Washington"
+    license: pd
+    licenseUrl: https://creativecommons.org/publicdomain/mark/1.0/
+    sourceUrl: https://commons.wikimedia.org/wiki/File:John%20Martin%20-%20Joshua%20Commanding%20the%20Sun%20to%20Stand%20Still%20-%20Google%20Art%20Project.jpg
 publishedAt: 2026-08-19
 reviewedAt: 2026-08-19
 ---

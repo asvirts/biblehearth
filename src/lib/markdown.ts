@@ -1,8 +1,11 @@
 import { getEntries } from 'astro:content';
 import { answerPath, type Answer } from './answers';
-import { chapterReference, formatReference } from './bible/refs';
+import { formatReference, localeChapterReference } from './bible/refs';
 import { absoluteUrl, verseHubPath } from './bible/urls';
 import { chapterStudyPath, type ChapterBrief } from './commentary';
+import { figureMarkdownCredit } from './images/types';
+import { DEFAULT_LOCALE, type Locale } from './i18n/locales';
+import { strings } from './i18n/strings';
 import { MARKDOWN_CACHE_CONTROL, NOTFOUND_CACHE_CONTROL } from './http';
 import { topicPath, type Topic } from './topics';
 
@@ -124,19 +127,28 @@ function document(blocks: readonly (string | null)[]): string {
 export async function chapterBriefMarkdown(
 	brief: ChapterBrief,
 	site: URL | undefined,
+	locale: Locale = DEFAULT_LOCALE,
 ): Promise<string> {
 	const { data } = brief;
 	const [bookUsfm = '', chapterId = '1'] = data.usfm.split('.');
-	const reference = chapterReference(bookUsfm, chapterId);
-	const canonical = absoluteUrl(site, chapterStudyPath(bookUsfm, chapterId));
+	// Both halves localised together — see localeChapterReference. A twin whose
+	// heading says "Salmo 91" while its canonical points at /psalms/91 is a
+	// Portuguese document claiming to be a copy of an English page.
+	const reference = localeChapterReference(locale, bookUsfm, chapterId);
+	const canonical = absoluteUrl(
+		site,
+		chapterStudyPath(bookUsfm, chapterId, locale),
+	);
 	const topics = await relatedTopicLinks(data.relatedTopics, site);
+	const t = strings(locale);
 
 	return document([
 		heading(1, data.title),
 		quote(data.shortAnswer),
+		data.figure ? figureMarkdownCredit(data.figure) : null,
 		SCRIPTURE_NOTE,
 
-		heading(2, `${reference} outline, verse by verse`),
+		heading(2, t.outline(reference)),
 		...data.outline.flatMap((entry) => [
 			heading(
 				3,
@@ -145,14 +157,14 @@ export async function chapterBriefMarkdown(
 			inline(entry.note),
 		]),
 
-		heading(2, `The main ideas in ${reference}`),
+		heading(2, t.themes(reference)),
 		...data.themes.flatMap((theme) => [
 			heading(3, theme.name),
 			inline(theme.explanation),
 		]),
 
 		data.glossary.length
-			? heading(2, `Words in ${reference}, explained simply`)
+			? heading(2, t.glossary(reference))
 			: null,
 		data.glossary.length
 			? bullets(
@@ -162,18 +174,18 @@ export async function chapterBriefMarkdown(
 				)
 			: null,
 
-		data.keyVerses.length ? heading(2, `Key verses in ${reference}`) : null,
+		data.keyVerses.length ? heading(2, t.keyVerses(reference)) : null,
 		...data.keyVerses.flatMap((verse) => [
 			heading(3, citation(verse.usfm, site)),
 			inline(verse.why),
 		]),
 
 		data.caution
-			? heading(2, `What ${reference} is often made to say, and does not`)
+			? heading(2, t.caution(reference))
 			: null,
 		data.caution ? inline(data.caution) : null,
 
-		heading(2, `Common questions about ${reference}`),
+		heading(2, t.faqs(reference)),
 		...data.faqs.flatMap((faq) => [heading(3, faq.q), inline(faq.a)]),
 
 		body(brief),
@@ -196,6 +208,7 @@ export async function topicMarkdown(
 	return document([
 		heading(1, `Bible Verses About ${data.title}`),
 		quote(data.shortAnswer),
+		data.figure ? figureMarkdownCredit(data.figure) : null,
 		SCRIPTURE_NOTE,
 
 		...data.groups.flatMap((group) => [
@@ -238,6 +251,7 @@ export async function answerMarkdown(
 	return document([
 		heading(1, data.question),
 		quote(data.shortAnswer),
+		data.figure ? figureMarkdownCredit(data.figure) : null,
 		SCRIPTURE_NOTE,
 
 		heading(2, `The passage: ${anchorReference}`),

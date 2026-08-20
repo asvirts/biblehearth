@@ -286,6 +286,19 @@ entity:
   sameAs:
     - https://en.wikipedia.org/wiki/Blasphemy_against_the_Holy_Spirit
     - https://en.wikipedia.org/wiki/Eternal_sin
+figure:
+  src: ../../assets/editorial/answers/what-is-the-unforgivable-sin.jpg
+  alt: "Papyrus 21, a fragment of Matthew 12, the chapter that names blasphemy against the Spirit."
+  caption: "The unforgivable sin is a sentence in Matthew 12, not a riddle floating free of it. This is an early copy of that page."
+  kind: photograph
+  credit:
+    title: "Papyrus 21 (Matthew 12:24–26)"
+    creator: "Unknown scribe"
+    date: "3rd century"
+    holder: "Muhlenberg College"
+    license: pd
+    licenseUrl: https://creativecommons.org/publicdomain/mark/1.0/
+    sourceUrl: https://commons.wikimedia.org/wiki/File:Allentown%20PA,%20Muhlenberg%20College%20Ms%20Theol.%20Pap.%203%20(Papyrus%2021)%20recto%20Matthew%2012,%2024-26.jpg
 publishedAt: 2026-08-19
 reviewedAt: 2026-08-19
 ---

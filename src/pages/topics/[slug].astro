@@ -22,6 +22,12 @@ import {
 	itemListJsonLd,
 } from '../../lib/seo';
 import {
+	articleShareFields,
+	shareCardFromFigure,
+} from '../../lib/images/og';
+import Figure from '../../components/Figure.astro';
+import type { EditorialFigure } from '../../lib/images/types';
+import {
 	listTopics,
 	topicPath,
 	topicVerseCount,
@@ -112,6 +118,10 @@ const reviewed = topic.data.reviewedAt.toLocaleDateString('en-US', {
 	year: 'numeric',
 	month: 'long',
 });
+
+const share = topic.data.figure
+	? await shareCardFromFigure(topic.data.figure)
+	: undefined;
 ---
 
 <BaseLayout
@@ -119,6 +129,8 @@ const reviewed = topic.data.reviewedAt.toLocaleDateString('en-US', {
 	description={description}
 	canonicalPath={canonicalPath}
 	markdown
+	image={share?.image}
+	imageAlt={share?.imageAlt}
 	jsonLd={[
 		breadcrumbJsonLd(Astro.site, [
 			{ name: 'BibleHearth', path: '/' },
@@ -133,6 +145,7 @@ const reviewed = topic.data.reviewedAt.toLocaleDateString('en-US', {
 			datePublished: topic.data.publishedAt,
 			dateModified: topic.data.reviewedAt,
 			about: topic.data.entity,
+			...articleShareFields(share),
 		}),
 		itemListJsonLd({
 			name: `Bible verses about ${topic.data.title.toLowerCase()}`,
@@ -156,6 +169,8 @@ const reviewed = topic.data.reviewedAt.toLocaleDateString('en-US', {
 
 	{/* Answer-first: this is the chunk a snippet or retrieval model lifts whole. */}
 	<p class="lede">{topic.data.shortAnswer}</p>
+
+	{topic.data.figure ? <Figure figure={topic.data.figure as EditorialFigure} /> : null}
 
 	{
 		status !== 200 || !version ? (

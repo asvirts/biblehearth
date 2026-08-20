@@ -1,3 +1,6 @@
+import type { Locale } from '../i18n/locales';
+import { localeBookNameForChapter } from './books';
+import { displayChapterNumber } from './psalms';
 import { bookNameForChapter, bookNameFromUsfm } from './usfm';
 
 /**
@@ -55,6 +58,27 @@ export function chapterReference(
 	chapter: string | number,
 ): string {
 	return `${bookNameForChapter(bookUsfm)} ${chapter}`;
+}
+
+/**
+ * The same reference, written the way a reader of one locale writes it.
+ *
+ * Both halves change, not just the book name: "Salmo 91" needs the Portuguese
+ * singular in front of the number, and «Псалом 90» needs the Septuagint number
+ * as well. Getting one half right and not the other is the failure worth naming
+ * — «Псалом 91» is a real string with the right word and the wrong psalm, and
+ * it is what this page would print if it translated the name and passed the
+ * chapter through.
+ *
+ * `chapter` is always the Hebrew number, like everywhere else inside the app.
+ */
+export function localeChapterReference(
+	locale: Locale,
+	bookUsfm: string,
+	chapter: string | number,
+): string {
+	const name = localeBookNameForChapter(locale, bookUsfm);
+	return `${name} ${displayChapterNumber(locale, bookUsfm, chapter)}`;
 }
 
 /**

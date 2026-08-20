@@ -1,10 +1,14 @@
 ---
 import type { BiblePassage } from '@youversion/platform-core';
 import Passage from './Passage.astro';
+import Figure from './Figure.astro';
 import type { ChapterBrief } from '../lib/commentary';
 import { formatReference } from '../lib/bible/refs';
 import { bookSlugFromUsfm } from '../lib/bible/usfm';
 import { topicPath } from '../lib/topics';
+import type { EditorialFigure } from '../lib/images/types';
+import { DEFAULT_LOCALE, type Locale } from '../lib/i18n/locales';
+import { strings } from '../lib/i18n/strings';
 
 type Props = {
 	brief: ChapterBrief;
@@ -21,6 +25,12 @@ type Props = {
 	 * the slot renders either way, and an empty one is simply nothing.
 	 */
 	hasFullText?: boolean;
+	/**
+	 * The locale this brief is written in. Drives the section headings only —
+	 * everything else on this component comes from the brief itself, which is
+	 * already in the right language because it is a separate file per locale.
+	 */
+	locale?: Locale;
 };
 
 const {
@@ -30,8 +40,10 @@ const {
 	relatedTopics,
 	firstSourceAnchor,
 	hasFullText = false,
+	locale = DEFAULT_LOCALE,
 } = Astro.props;
 const { data } = brief;
+const t = strings(locale);
 
 const [bookUsfm, chapterId = '1'] = data.usfm.split('.');
 // Routes take the URL slug, never the USFM id: `1CO` addresses
@@ -44,6 +56,12 @@ const bookSlug = bookSlugFromUsfm(bookUsfm ?? '');
     AI answer lifts whole, so it says what the chapter is about in its first
     sentence and never warms up to the point. */}
 <p class="lede">{data.shortAnswer}</p>
+
+{
+	data.figure ? (
+		<Figure figure={data.figure as EditorialFigure} />
+	) : null
+}
 
 <nav class="brief-jump" aria-label="On this page">
 	{hasFullText ? <a href="#text">Full text</a> : null}
@@ -62,7 +80,7 @@ const bookSlug = bookSlugFromUsfm(bookUsfm ?? '');
 <slot name="scripture" />
 
 <section class="chapter-outline" id="outline">
-	<h2>{reference} outline, verse by verse</h2>
+	<h2>{t.outline(reference)}</h2>
 	<ol class="outline-list">
 		{
 			data.outline.map((entry) => (
@@ -82,7 +100,7 @@ const bookSlug = bookSlugFromUsfm(bookUsfm ?? '');
 </section>
 
 <section class="chapter-themes" id="themes">
-	<h2>The main ideas in {reference}</h2>
+	<h2>{t.themes(reference)}</h2>
 	{
 		data.themes.map((theme) => (
 			<div class="theme-item">
@@ -96,7 +114,7 @@ const bookSlug = bookSlugFromUsfm(bookUsfm ?? '');
 {
 	data.glossary.length ? (
 		<section class="chapter-glossary" id="words">
-			<h2>Words in {reference}, explained simply</h2>
+			<h2>{t.glossary(reference)}</h2>
 			<p class="muted">
 				Church language, in ordinary English. Nothing here assumes you have
 				heard the word before.
@@ -116,7 +134,7 @@ const bookSlug = bookSlugFromUsfm(bookUsfm ?? '');
 {
 	data.keyVerses.length ? (
 		<section class="chapter-key-verses" id="key-verses">
-			<h2>Key verses in {reference}</h2>
+			<h2>{t.keyVerses(reference)}</h2>
 			{data.keyVerses.map((verse) => {
 				const passage = passages.get(verse.usfm);
 				const [book, chapter, versePart] = verse.usfm.split('.');
@@ -146,7 +164,7 @@ const bookSlug = bookSlugFromUsfm(bookUsfm ?? '');
 {
 	data.caution ? (
 		<section class="chapter-caution" id="caution">
-			<h2>What {reference} is often made to say, and does not</h2>
+			<h2>{t.caution(reference)}</h2>
 			<p>{data.caution}</p>
 		</section>
 	) : null
@@ -165,7 +183,7 @@ const bookSlug = bookSlugFromUsfm(bookUsfm ?? '');
 	data-va-chapter={`${bookSlug}/${chapterId}`}
 	data-va-text={hasFullText ? 'yes' : 'no'}
 >
-	<h2>Common questions about {reference}</h2>
+	<h2>{t.faqs(reference)}</h2>
 	{
 		data.faqs.map((faq) => (
 			<div class="faq-item">
@@ -179,7 +197,7 @@ const bookSlug = bookSlugFromUsfm(bookUsfm ?? '');
 {
 	relatedTopics.length ? (
 		<section class="chapter-topics">
-			<h2>Related topics</h2>
+			<h2>{t.relatedTopics}</h2>
 			<ul class="topic-links">
 				{relatedTopics.map((topic) => (
 					<li>

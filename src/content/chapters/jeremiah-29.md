@@ -239,6 +239,19 @@ entity:
   name: Jeremiah 29
   sameAs:
     - https://en.wikipedia.org/wiki/Jeremiah_29
+figure:
+  src: ../../assets/editorial/chapters/jeremiah-29.jpg
+  alt: "The reconstructed Ishtar Gate: glazed blue brick, bulls and dragons in relief, under a museum roof."
+  caption: "Jeremiah 29 is a letter to people living under this kind of power, told to unpack and plant gardens rather than wait for a quick rescue."
+  kind: photograph
+  credit:
+    title: "The Ishtar Gate of Babylon"
+    creator: "Unknown Babylonian craftsmen"
+    date: "c. 575 BCE"
+    holder: "Pergamon Museum, Berlin"
+    license: cc-by
+    licenseUrl: https://creativecommons.org/licenses/by/2.0/
+    sourceUrl: https://commons.wikimedia.org/wiki/File:Ishtar%20Gate%20at%20Berlin%20Museum.jpg
 publishedAt: 2026-08-19
 reviewedAt: 2026-08-19
 ---

@@ -104,6 +104,18 @@ sources:
   - naves
   - torreys
   - editorial
+figure:
+  src: ../../assets/editorial/topics/healing.jpg
+  alt: "A set of Roman bronze medical instruments laid out, probes and blades darkened with age."
+  caption: "The Gospels’ healings happen in a world that already had doctors and tools. The pages that collect those verses should not pretend otherwise."
+  kind: photograph
+  credit:
+    title: "Roman medical instruments from Novae"
+    creator: "Vassia Atanassova - Spiritia"
+    holder: "Wikimedia Commons"
+    license: cc-by-sa
+    licenseUrl: https://creativecommons.org/licenses/by-sa/4.0/
+    sourceUrl: https://commons.wikimedia.org/wiki/File:Roman%20medical%20instruments%20found%20in%20Novae,%20Bulgaria.jpg
 publishedAt: 2026-08-17
 reviewedAt: 2026-08-17
 ---

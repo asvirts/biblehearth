@@ -85,12 +85,34 @@ Limits are enforced by Zod at build time. Overshooting fails the build, so count
 | `faqs` | 2–8 | `q` 10–150, `a` 120–900. Real queries, phrased as typed. Each answer must **stand alone** — no "as mentioned above" — because they render as `FAQPage` structured data and get quoted in isolation. |
 | `relatedTopics` | ≤6 | Slugs only from the dossier's list. Anything else fails the build. |
 | `entity` | — | `name` plus `sameAs`. **Verify the URL returns 200 before writing it.** A fabricated Wikipedia link is the failure a reader remembers. |
+| `figure` | required on published briefs | One picture. Named biblical scene → public-domain painting or engraving of that scene. Otherwise a photograph or museum object (manuscript, coin, landscape the text names). Never Unsplash/Pexels/Pixabay, never an AI image, never a generic European Jesus for an epistle. File goes in `src/assets/editorial/chapters/{slug}.jpg`; add the work to `scripts/data/editorial-images.json`. Fields: `src`, `alt` (20–180), `caption` (20–240), `kind` (`art` or `photograph`), `credit` (`title`, `creator`, `date`, `holder`, `license` `cc0`/`pd`/`cc-by`/`cc-by-sa`, `licenseUrl`, `sourceUrl`). |
 | `publishedAt` / `reviewedAt` | dates | Today's date, in `YYYY-MM-DD`. Drives `<lastmod>` and the Article schema. |
 
 The markdown **body** after the frontmatter is the "If this is your first time
 reading X" note. Prose with an `##` heading, rendered after the structured
 sections. Use it to tell a first-time reader what to watch for — the thing they
 would miss reading it cold.
+
+### Pick the picture
+
+A published brief without a `figure` fails the build. One image, and it has to
+belong to the chapter.
+
+1. If this chapter is a scene someone actually painted (the flood, the sermon
+   on the mount, Nicodemus at night), use that work from a museum or Wikimedia
+   Commons. Name it in the caption.
+2. If it is not — most epistles, most Proverbs — use a photograph or artifact:
+   a manuscript of the letter, a landscape the chapter names, a coin, a tool.
+   Not a generic apostle portrait, and not a European Jesus reused from another
+   page.
+3. Licences we will use: CC0, US public domain, CC BY, CC BY-SA. Skip NC, ND,
+   Getty, Unsplash, Pexels, Pixabay, and Wikimedia's AI-generated category.
+4. Download a ~1600–2000px JPEG into `src/assets/editorial/chapters/{slug}.jpg`.
+   Host the file. Do not hotlink.
+5. Record the work in `scripts/data/editorial-images.json` so it can be
+   re-fetched. Credit `sourceUrl` is the museum or Commons page, not our copy.
+
+`psalms-23.md` is the worked example for the fields, including `figure`.
 
 ### What not to do
 

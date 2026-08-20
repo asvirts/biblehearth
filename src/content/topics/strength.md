@@ -105,6 +105,18 @@ sources:
   - naves
   - torreys
   - editorial
+figure:
+  src: ../../assets/editorial/topics/strength.jpg
+  alt: "A large oak in leaf, the trunk thick, the crown filling the frame."
+  caption: "The Bible’s pictures of strength are living things that have lasted — trees, rocks, a remnant — not a flexed pose."
+  kind: photograph
+  credit:
+    title: "Oak in Deelerwoud"
+    creator: "Agnes Monkelbaan"
+    holder: "Wikimedia Commons"
+    license: cc-by-sa
+    licenseUrl: https://creativecommons.org/licenses/by-sa/4.0/
+    sourceUrl: https://commons.wikimedia.org/wiki/File:Deelerwoud,%2009-05-2024%20(d.j.b.)%2016.jpg
 publishedAt: 2026-08-17
 reviewedAt: 2026-08-17
 ---

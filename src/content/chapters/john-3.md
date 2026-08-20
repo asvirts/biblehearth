@@ -215,6 +215,19 @@ entity:
   sameAs:
     - https://en.wikipedia.org/wiki/John_3
     - https://en.wikipedia.org/wiki/John_3:16
+figure:
+  src: ../../assets/editorial/chapters/john-3.jpg
+  alt: "Henry Ossawa Tanner’s Nicodemus visiting Jesus at night, two figures in a dim courtyard, a lantern between them."
+  caption: "John 3 happens after dark, on purpose. Tanner painted the lantern, not a spotlight: this is a conversation a Pharisee would rather not have in public."
+  kind: art
+  credit:
+    title: "Nicodemus Coming to Christ"
+    creator: "Henry Ossawa Tanner"
+    date: "1927"
+    holder: "Philadelphia Museum of Art"
+    license: pd
+    licenseUrl: https://creativecommons.org/publicdomain/mark/1.0/
+    sourceUrl: https://commons.wikimedia.org/wiki/File:Henry%20Ossawa%20Tanner%20-%20Nicodemus%20coming%20to%20Christ.jpg
 publishedAt: 2026-08-17
 reviewedAt: 2026-08-17
 ---

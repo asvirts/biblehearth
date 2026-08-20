@@ -138,6 +138,19 @@ sources:
   - naves
   - torreys
   - editorial
+figure:
+  src: ../../assets/editorial/topics/anxiety.jpg
+  alt: "An Aivazovsky seascape: a small ship heeled over in a heavy sea under a torn sky."
+  caption: "The Bible’s anxiety passages are written for weather like this, not for a calm that has already arrived."
+  kind: art
+  credit:
+    title: "Ship in the Stormy Sea"
+    creator: "Ivan Aivazovsky"
+    date: "1887"
+    holder: "Aivazovsky National Art Museum, Feodosia"
+    license: pd
+    licenseUrl: https://creativecommons.org/publicdomain/mark/1.0/
+    sourceUrl: https://commons.wikimedia.org/wiki/File:Ivan%20Aivazovsky%20-%20Ship%20in%20the%20Stormy%20Sea.jpg
 publishedAt: 2026-08-17
 reviewedAt: 2026-08-17
 ---

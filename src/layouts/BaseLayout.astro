@@ -5,7 +5,7 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import Analytics from '../components/Analytics.astro';
 import { BING_SITE_VERIFICATION } from 'astro:env/server';
-import { absoluteUrl } from '../lib/bible/urls';
+import { absoluteMediaUrl, absoluteUrl } from '../lib/bible/urls';
 import {
 	DEFAULT_OG_IMAGE,
 	OG_IMAGE_HEIGHT,
@@ -17,8 +17,30 @@ type Props = {
 	description: string;
 	canonicalPath?: string;
 	noindex?: boolean;
-	/** BCP-47 tag. Wrong the moment a non-English version is served. */
+	/** BCP-47 tag. Pass `locale.htmlLang`; it drives `lang`, `og:locale` and dates. */
 	lang?: string;
+	/**
+	 * Text direction, for the five right-to-left locales.
+	 *
+	 * On `<html>` rather than in CSS because it is a property of the document's
+	 * language, not of its styling: it decides how the browser orders neutral
+	 * characters, which is why an Arabic chapter heading with a number in it —
+	 * «مزمور 91» — renders with the number on the wrong side without it. Arabic,
+	 * Hebrew, Persian and Sorani Kurdish all need it, and it is one attribute.
+	 */
+	dir?: 'ltr' | 'rtl';
+	/**
+	 * The same page in other languages, as `hreflang` alternates.
+	 *
+	 * Callers pass this only when the set is real — a page actually written in
+	 * each locale named. Two rules make the cluster valid and both are the
+	 * caller's to keep: every page in the cluster must list every other one
+	 * *including itself*, which is why `x-default` and the self-reference are
+	 * added here rather than asked for, and no page may point at a URL that is
+	 * `noindex`. A cluster that breaks either is discarded whole, so a wrong
+	 * `hreflang` is worse than none.
+	 */
+	alternates?: { hreflang: string; href: string }[];
 	/**
 	 * Whether this page has a markdown twin at `<canonical>.md`.
 	 *
@@ -56,6 +78,8 @@ const {
 	noindex = false,
 	markdown = false,
 	lang = 'en',
+	dir = 'ltr',
+	alternates = [],
 	image = DEFAULT_OG_IMAGE,
 	imageAlt = 'BibleHearth — read the Bible online, free',
 	prev,
@@ -65,12 +89,44 @@ const {
 
 const canonical = canonicalPath ? absoluteUrl(Astro.site, canonicalPath) : undefined;
 // Social scrapers and AI preview cards do not resolve relative image URLs.
-const ogImage = /^https?:\/\//i.test(image) ? image : absoluteUrl(Astro.site, image);
+const ogImage = absoluteMediaUrl(Astro.site, image);
 const documents = jsonLd ? (Array.isArray(jsonLd) ? jsonLd : [jsonLd]) : [];
+
+/**
+ * The `hreflang` cluster, absolute and with `x-default` appended.
+ *
+ * Absolute because the spec requires it — a relative `hreflang` href is ignored,
+ * silently, which is the worst failure mode available here. `x-default` points
+ * at English: it is what a search engine shows a reader whose language we do not
+ * publish in, and English is the only locale that is not itself a translation.
+ *
+ * Emitted only when the caller passed a real cluster, so the common case — a
+ * page that exists in one language — carries no alternates at all rather than a
+ * self-reference dressed up as a choice.
+ */
+const hreflangs = alternates.length
+	? [
+			...alternates.map((entry) => ({
+				hreflang: entry.hreflang,
+				href: absoluteUrl(Astro.site, entry.href),
+			})),
+			...(alternates.find((entry) => entry.hreflang === 'en')
+				? [
+						{
+							hreflang: 'x-default',
+							href: absoluteUrl(
+								Astro.site,
+								alternates.find((entry) => entry.hreflang === 'en')!.href,
+							),
+						},
+					]
+				: []),
+		]
+	: [];
 ---
 
 <!doctype html>
-<html lang={lang}>
+<html lang={lang} dir={dir}>
 	<head>
 		<!-- Google tag (gtag.js) -->
 		<script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-E46EVPHNWB"></script>
@@ -110,6 +166,9 @@ const documents = jsonLd ? (Array.isArray(jsonLd) ? jsonLd : [jsonLd]) : [];
 		}
 		{noindex ? <meta name="robots" content="noindex, follow" /> : null}
 		{canonical ? <link rel="canonical" href={canonical} /> : null}
+		{hreflangs.map((entry) => (
+			<link rel="alternate" hreflang={entry.hreflang} href={entry.href} />
+		))}
 		{prev ? <link rel="prev" href={absoluteUrl(Astro.site, prev)} /> : null}
 		{next ? <link rel="next" href={absoluteUrl(Astro.site, next)} /> : null}
 		{/* llms.txt link relations. `alternate` is how an agent finds the markdown

@@ -284,6 +284,19 @@ entity:
   sameAs:
     - https://en.wikipedia.org/wiki/Cremation
     - https://en.wikipedia.org/wiki/Christian_burial
+figure:
+  src: ../../assets/editorial/answers/what-does-the-bible-say-about-cremation.jpg
+  alt: "A Roman glass cinerary urn with its lid, made to hold what fire left of a body."
+  caption: "Cremation is not a modern invention the Bible never met. Rome put ashes in jars like this while the church was learning how to bury its dead."
+  kind: photograph
+  credit:
+    title: "Glass cinerary urn with lid"
+    creator: "Unknown Roman glassworker"
+    date: "1st–2nd century CE"
+    holder: "The Metropolitan Museum of Art"
+    license: cc0
+    licenseUrl: https://creativecommons.org/publicdomain/zero/1.0/
+    sourceUrl: https://www.metmuseum.org/art/collection/search/251452
 publishedAt: 2026-08-19
 reviewedAt: 2026-08-19
 ---

@@ -259,6 +259,19 @@ entity:
   name: Proverbs 3
   sameAs:
     - https://en.wikipedia.org/wiki/Proverbs_3
+figure:
+  src: ../../assets/editorial/chapters/proverbs-3.jpg
+  alt: "A page of the Aleppo Codex, Hebrew written in a precise masoretic hand with vowel points."
+  caption: "Proverbs 3 is wisdom meant to be copied, not invented on the spot. This is what that kind of copying looked like when it was done with care."
+  kind: photograph
+  credit:
+    title: "Aleppo Codex"
+    creator: "Masoretic scribes"
+    date: "c. 920"
+    holder: "Israel Museum / Ben-Zvi Institute"
+    license: pd
+    licenseUrl: https://creativecommons.org/publicdomain/mark/1.0/
+    sourceUrl: https://commons.wikimedia.org/wiki/File:Aleppo%20Codex%20(Deut).jpg
 publishedAt: 2026-08-19
 reviewedAt: 2026-08-19
 ---

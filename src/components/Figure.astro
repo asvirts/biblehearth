@@ -1,0 +1,31 @@
+---
+import { Image } from 'astro:assets';
+import { licenseDisplayName, type EditorialFigure } from '../lib/images/types';
+
+type Props = {
+	figure: EditorialFigure;
+};
+
+const { figure } = Astro.props;
+const { credit } = figure;
+const licenseName = licenseDisplayName(credit.license, credit.licenseUrl);
+---
+
+<figure class="editorial-figure">
+	<Image
+		src={figure.src}
+		alt={figure.alt}
+		widths={[480, 800, 1200]}
+		sizes="(max-width: 42rem) calc(100vw - 2.3rem), 42rem"
+		priority
+	/>
+	<figcaption>
+		<span class="figure-caption">{figure.caption}</span>
+		<span class="figure-credit">
+			<a href={credit.sourceUrl} rel="noopener noreferrer">{credit.title}</a>
+			{credit.date ? ` (${credit.date})` : ''}, {credit.creator}. {credit.holder}.
+			{' '}
+			<a href={credit.licenseUrl} rel="license noopener noreferrer">{licenseName}</a>.
+		</span>
+	</figcaption>
+</figure>
