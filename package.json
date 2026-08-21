@@ -15,6 +15,7 @@
     "questions:audit": "node scripts/questions-audit.mjs",
     "questions:export": "node scripts/questions-export.mjs",
     "chapter:research": "node scripts/chapter-research.mjs",
+    "copy:audit": "node scripts/copy-audit.mjs",
     "books:generate": "node scripts/generate-book-slugs.mjs",
     "locales:generate": "node scripts/generate-locales.mjs"
   },

@@ -2,49 +2,49 @@
 title: Prayer
 aliases: [praying, how to pray, unanswered prayer, talking to God]
 shortAnswer: >-
-  Asked how to pray, Jesus gave a short prayer and two warnings — do not
-  perform, and do not pile up words. Scripture treats prayer as ordinary
-  conversation kept up rather than a technique to be perfected, and it is
-  candid about the gaps: Romans says the Spirit intercedes when we do not know
-  what to ask, and Paul records prayers of his own that were refused.
+  When asked how to pray, Jesus gave a short model and warned against performing
+  for an audience or piling up empty words. Scripture presents prayer as an
+  ordinary, continuing relationship with God. Romans says the Spirit helps when
+  words fail, and Paul openly records a prayer that received a different answer
+  than the one he wanted.
 groups:
   - id: how-jesus-taught-it
-    heading: Jesus taught it short, and warned against performance
+    heading: Jesus teaches simple, sincere prayer
     rationale: >-
-      Both instructions in the Sermon on the Mount are subtractive. The model
-      prayer that follows is notably brief.
+      In the Sermon on the Mount, Jesus removes performance and empty repetition
+      from prayer. His model is brief and direct.
     verses:
       - usfm: MAT.6.9-13
         gloss: >-
-          Offered as a pattern rather than a script, and short enough that its
-          brevity is part of the lesson.
+          Jesus offers a compact pattern covering God's name and kingdom, daily
+          provision, forgiveness, and protection from testing.
       - usfm: MAT.6.7
         gloss: >-
-          The warning is against many words, which rules out length or
-          eloquence as measures of a prayer.
+          Jesus warns against empty repetition. Length and eloquence aren't
+          measures of whether God hears a prayer.
   - id: what-to-bring
     heading: The instruction is to bring everything, plainly
     rationale: >-
-      Scripture nowhere restricts prayer to worthy or well-formed subjects, and
-      the Psalms model the opposite.
+      Scripture invites people to bring every concern to God. The Psalms model
+      prayer that is candid, unfinished, and emotionally varied.
     verses:
       - usfm: PHP.4.6
         gloss: >-
-          Anxiety is redirected into request, with thanksgiving attached rather
-          than required first.
+          Paul directs anxious concerns into specific requests and includes
+          thanksgiving within the same practice.
       - usfm: PSA.62.8
         gloss: >-
-          The image is pouring out — emptying a container, not composing a
-          statement.
+          Pouring out the heart pictures complete honesty before God, like
+          emptying a full container.
       - usfm: 1TH.5.16-18
         gloss: >-
-          Continual prayer here describes a running posture rather than
-          uninterrupted speech.
+          Continual prayer describes recurring openness to God through the day,
+          not uninterrupted speech.
   - id: when-words-fail
-    heading: Scripture accounts for prayer you cannot form
+    heading: The Spirit helps when words fail
     rationale: >-
-      One of the more unusual claims in the New Testament is that inarticulate
-      prayer is still prayer.
+      Romans says prayer can continue even when a person doesn't know what to
+      ask or how to express it.
     verses:
       - usfm: ROM.8.26
         gloss: >-
@@ -52,34 +52,34 @@ groups:
           the Spirit filling the gap with wordless groans.
       - usfm: PSA.13.1-2
         gloss: >-
-          A prayer that is mostly complaint, preserved without editing, asking
-          how long four times.
+          This prayer is mostly complaint and asks "How long?" four times. Its
+          inclusion gives anguished questions a place in prayer.
   - id: persistence
-    heading: Persistence is commended; a blank cheque is not
+    heading: Scripture encourages persistent, submitted asking
     rationale: >-
-      The passages urging bold asking are qualified elsewhere in the same
-      writings, and reading them together avoids both timidity and magic.
+      Scripture encourages people to ask boldly and keep praying while placing
+      the request within God's will.
     verses:
       - usfm: LUK.18.1
         gloss: >-
-          Luke states the parable's purpose up front — that they should always
-          pray and not give up — which frames it as endurance, not technique.
+          Luke states that the parable teaches people to pray continually and
+          not give up. Its emphasis is endurance.
       - usfm: MAT.7.7
         gloss: >-
-          Three imperatives in a row, deliberately encouraging, and set in a
-          passage comparing God to a parent rather than a vending machine.
+          Three imperatives encourage confident prayer within a passage that
+          compares God to a caring parent.
       - usfm: 1JN.5.14
         gloss: >-
-          John attaches the qualifier the other passages assume — asking
-          according to his will.
+          John grounds confidence in asking according to God's will.
 misuse: >-
   "Ask and it will be given to you" is the most abused sentence on this page.
-  Read alongside 1 John 5:14 and Jesus' own prayer in Gethsemane — where he
-  asks for the cup to pass and it does not — it plainly is not a guarantee of
-  outcomes. The related and more harmful move is treating unanswered prayer as
+  First John 5:14 speaks of asking according to God's will, and Jesus' prayer in
+  Gethsemane asks for the cup to pass before he proceeds to the cross. Together,
+  these passages rule out a guarantee of every requested outcome. Treating
+  unanswered prayer as
   a diagnosis of the person praying. Paul asked three times about his own
   affliction and was told no, and no one accuses him of insufficient faith.
-  Prayer is also not a substitute for action where action is possible: James
+  Prayer also doesn't replace action where action is possible. James
   is scathing about wishing someone well while withholding what they need.
   Finally, the warning against many words means no one is praying wrong for
   being brief or inarticulate.
@@ -87,12 +87,12 @@ faqs:
   - q: How did Jesus teach us to pray?
     a: >-
       In Matthew 6:9-13 he gave what is now called the Lord's Prayer, prefaced
-      by two warnings — not to pray for an audience, and not to heap up words
+      by two warnings: don't pray for an audience, and don't heap up words
       thinking length helps. The prayer itself is short and covers God's name
       and kingdom, daily provision, forgiveness, and protection from testing.
   - q: Why does God not answer some prayers?
     a: >-
-      Scripture does not give a single reason, and it is candid that it
+      Scripture doesn't give a single reason, and it is candid that it
       happens. Paul asked three times about a personal affliction and was told
       grace would be sufficient instead. Jesus asked in Gethsemane for the cup
       to pass and proceeded to the cross. 1 John 5:14 frames confident asking
@@ -100,22 +100,22 @@ faqs:
   - q: What does it mean to "pray without ceasing"?
     a: >-
       1 Thessalonians 5:17 describes a continuing posture rather than
-      uninterrupted speech — an ongoing openness in which prayer is resumed
-      constantly through a normal day. Read alongside Matthew 6:7, which warns
-      against many words, it clearly does not mean praying longer.
+      uninterrupted speech. It is an ongoing openness in which prayer resumes
+      throughout a normal day. Matthew 6:7's warning against empty repetition
+      also shows that continual prayer isn't simply longer prayer.
 related: [faith, anxiety, trust]
 entity:
   name: Prayer
   sameAs: [https://www.wikidata.org/wiki/Q40953, https://en.wikipedia.org/wiki/Prayer]
 sources: [naves, torreys, editorial]
 publishedAt: 2026-08-17
-reviewedAt: 2026-08-17
+reviewedAt: 2026-08-21
 ---
 
-Two of Jesus' three instructions about prayer are about doing less — less
-performance, fewer words. The prayer he then offers as a model takes about
-twenty seconds to say.
+Jesus removes two common pressures from prayer: performing for other people and
+trying to impress God with many words. The prayer he then gives as a model takes
+about twenty seconds to say.
 
-That restraint is easy to lose. Most anxiety about prayer is anxiety about
-doing it correctly, which is the precise worry these passages were written to
-remove.
+That simplicity can ease the fear of praying incorrectly. Scripture makes room
+for polished words, repeated requests, short cries, complaint, silence, and the
+Spirit's help when a person can say nothing at all.

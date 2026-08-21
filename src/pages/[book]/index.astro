@@ -126,8 +126,8 @@ const indexable = locale.prefix ? briefedCount > 0 : true;
  */
 const externalLinks = locale.prefix ? [] : externalStudyLinks(bookUsfm, 1);
 
-const title = `${bookName} — Book Summary, All ${total} ${total === 1 ? 'Chapter' : 'Chapters'}, and Commentary`;
-const description = `The book of ${bookName}, chapter by chapter: what each of its ${total} ${total === 1 ? 'chapter' : 'chapters'} says and means, in plain English, with notes from three commentaries.`;
+const title = `${bookName} | Summary, Chapters, and Commentary`;
+const description = `Study all ${total} ${total === 1 ? 'chapter' : 'chapters'} of ${bookName} with chapter outlines, clear explanations, and notes from three commentaries.`;
 ---
 
 <BaseLayout
@@ -162,8 +162,8 @@ const description = `The book of ${bookName}, chapter by chapter: what each of i
 
 	<p class="lede">
 		The book of {bookName} has {total} {total === 1 ? 'chapter' : 'chapters'}.
-		Each one has its own page with the chapter itself, an outline of what happens
-		where, and the notes three commentaries wrote on it.
+		Each page includes the chapter, an outline of its movement, and notes from
+		three commentaries.
 		{
 			briefedCount
 				? ` ${briefedCount} ${briefedCount === 1 ? 'chapter has' : 'chapters have'} a written summary in our own words.`
@@ -200,8 +200,8 @@ const description = `The book of ${bookName}, chapter by chapter: what each of i
 		{
 			briefedCount ? (
 				<p class="muted">
-					Highlighted chapters have a full written summary. The rest carry the
-					commentary notes.
+					Highlighted chapters include an original BibleHearth study. The remaining
+					chapters still include the commentary notes.
 				</p>
 			) : null
 		}

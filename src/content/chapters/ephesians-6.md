@@ -1,124 +1,100 @@
 ---
 usfm: EPH.6
-title: "Ephesians 6: The Armor of God, and Why Every Instruction Is to Stand"
-seoTitle: "Ephesians 6: The Armor of God, and Why You Stand"
+title: "Ephesians 6 Explained: The Armor of God"
+seoTitle: "Ephesians 6: The Armor of God Explained"
 shortAnswer: >-
-  Ephesians 6 holds the best-known battle image in the New Testament — belt,
-  breastplate, shoes, shield, helmet, sword — and the striking thing about it is
-  how little attacking it asks for. Five of the six pieces are defensive, and
-  every verb attached to them is some form of "stand": make your stand, stand your
-  ground, stand firm. There is no order to advance. The other surprise is where
-  Paul puts it. The armor arrives immediately after nine verses about children,
-  fathers, slaves and masters, and then verse 12 says the struggle is not against
-  flesh and blood — which lands very differently right after instructions about
-  the people you live with.
+  Ephesians 6 uses the New Testament's best-known battle image: a belt,
+  breastplate, shoes, shield, helmet, and sword. Five pieces protect the wearer,
+  and Paul repeatedly tells believers to stand firm. He gives no order to
+  advance. The image follows instructions to children, parents, enslaved people,
+  and masters. When Paul then says the struggle isn't against flesh and blood,
+  he rules out the people in those difficult relationships as the true enemy.
 outline:
   - verses: "1-4"
-    heading: Children obey, and fathers are told what not to do
+    heading: Children receive instruction, and fathers receive restraint
     note: >-
-      Children are pointed to the commandment about honouring parents, the one
-      Paul notes comes with a promise attached. Then a sentence aimed at fathers
-      that would have been unusual in that world: do not provoke your children to
-      rage. The instruction to the person with power is a restraint.
+      Paul points children to the commandment about honoring parents and its
+      attached promise. He then warns fathers not to provoke their children to
+      anger, placing a limit on the person with greater power.
   - verses: "5-9"
-    heading: Slaves, masters, and a sentence that undercuts the arrangement
+    heading: Enslaved people and masters answer to the same Lord
     note: >-
-      Paul addresses enslaved people directly as members of the church, which is
-      itself remarkable, and tells them to work as though for Christ. Then he
-      turns to the masters and levels the ground: stop threatening, you have the
-      same Master, and he shows no favouritism.
+      Paul addresses enslaved people directly as members of the church and tells
+      them to work for Christ. He then commands masters to stop threatening,
+      reminding them that both groups share one Master who shows no favoritism.
   - verses: "10-13"
-    heading: Be strong, put the armor on, and find out who the enemy is not
+    heading: God's strength helps believers stand against spiritual evil
     note: >-
-      Strength is located in the Lord rather than the reader. The purpose of the
-      armor is stated twice as standing rather than winning, and verse 12 rules out
-      the obvious candidates for the enemy: not flesh and blood, but rulers,
-      authorities and powers.
+      Strength comes from the Lord. The armor equips believers to stand, while
+      verse 12 identifies rulers, authorities, and spiritual powers as the
+      opposition and excludes human beings from that category.
   - verses: "14-17"
-    heading: Six pieces, five of them for absorbing hits
+    heading: Six pieces connect God's gifts with a soldier's equipment
     note: >-
       Belt of truth, breastplate of righteousness, shoes of readiness from the
       gospel of peace, shield of faith against flaming arrows, helmet of
-      salvation, and the sword of the Spirit — which is the word of God, and the
-      only item that can be used offensively.
+      salvation, and the sword of the Spirit, which is the word of God. Only the
+      sword can be used to strike.
   - verses: "18-20"
-    heading: The armor's actual action turns out to be prayer
+    heading: Prayer is the action that follows the armor
     note: >-
-      After all the equipment, no charge and no battle: pray, at all times, in
-      every kind of prayer, staying alert, for all the saints. Then Paul asks for
-      prayer himself — not to be released from his chains, but to be given words
-      while he is in them.
+      After naming the equipment, Paul tells believers to pray at all times, stay
+      alert, and intercede for all the saints. From prison, he asks for words and
+      boldness to speak, not for release from his chains.
   - verses: "21-24"
-    heading: A named courier and a closing blessing
+    heading: Tychicus carries news and a closing blessing
     note: >-
-      Tychicus is carrying the letter and will fill in the details Paul has not
-      written. The blessing at the end returns to the words the letter opened with:
-      peace, love, faith, grace.
+      Tychicus will tell the church how Paul is doing and encourage them. The
+      closing blessing returns to peace, love, faith, and grace.
 themes:
-  - name: Every verb is stand, not attack
+  - name: The repeated command is to stand
     explanation: >-
-      Count them. Make your stand against the devil's schemes, stand your ground,
-      having done everything, to stand, stand firm then. Four times in four verses,
-      and not one instruction to advance, charge, pursue or defeat. The equipment
-      matches: a belt, body armour, boots, a shield and a helmet are all for
-      absorbing what is coming at you, and only the sword could be used the other
-      way. That shapes what the passage is promising. It is not a strategy for
-      winning a spiritual campaign. It is what you need in order to still be there
-      when the day of evil has finished.
-  - name: The armor is God's, and it is issued rather than assembled
+      Paul says "stand" four times in four verses without commanding believers
+      to charge, pursue, or conquer. A belt, body armor, boots, shield, and helmet
+      all prepare someone to absorb an attack, while only the sword can strike.
+      The passage equips Christians to remain faithful through an evil day.
+  - name: God supplies the armor
     explanation: >-
-      Paul does not call it the Christian's armour but the armor of God, and every
-      piece he names is something this letter has already said God supplies:
-      truth, righteousness, peace through the gospel, faith, salvation, and the
-      word. So "put it on" is closer to getting dressed in what you have been
-      given than to building your own kit out of effort. That is why the passage
-      opens with strength located somewhere other than the reader — be strong in
-      the Lord and in his mighty power. A person who reads the list as six spiritual
-      disciplines to develop has quietly reversed the sentence.
-  - name: The battle chapter is bolted onto the household chapter
+      The phrase is "the armor of God." Earlier in Ephesians, God supplies each
+      reality Paul names: truth, righteousness, peace through the gospel, faith,
+      salvation, and the word. Putting on the armor means receiving and living in
+      what God provides. The section opens by locating strength in the Lord and
+      his mighty power.
+  - name: The household setting shapes the battle image
     explanation: >-
-      There is no break at verse 10 in Paul's argument, only in our headings. What
-      comes immediately before the armor is domestic: children and parents, and
-      then enslaved workers and the men who owned them — the most ordinary and most
-      loaded relationships in a first-century house. Then, two verses into the
-      battle, Paul says the struggle is not against flesh and blood. Read in
-      sequence, that is not an abstraction. It is a warning to people who had just
-      been given instructions about the difficult individuals they lived and worked
-      with, and who might reasonably have identified them as the problem.
-  - name: The only tactic named is prayer
+      Modern headings create a break at verse 10, but Paul's argument continues
+      from children and parents to enslaved workers and owners. These were close,
+      unequal relationships within a first-century household. Two verses into
+      the battle image, Paul says human beings aren't the enemy. Read in sequence,
+      that instruction redirects blame away from the difficult person nearby.
+  - name: Prayer is the named response
     explanation: >-
-      A reader expecting a fight is given, in verse 18, an instruction to pray —
-      at all times, in every form, staying alert, and for other Christians rather
-      than only for themselves. The armour section does not end in combat; it ends
-      in intercession. And Paul's own prayer request is the quietest thing in the
-      chapter. He is in prison, and what he asks for is not release but words: that
-      when he opens his mouth he will speak boldly. An ambassador in chains is his
-      own description, and it is a fair summary of what the whole passage expects
-      of a Christian.
+      Verse 18 directs believers to pray in every way, remain alert, and
+      intercede for the whole church. The armor section ends with prayer. Paul is
+      in prison, yet he asks for clear words and boldness instead of release. His
+      phrase "an ambassador in chains" captures faithful witness under pressure.
 glossary:
   - term: the full armor of God
     plain: >-
       The Greek word means a complete set of equipment, the whole kit rather than a
-      selection. Paul is describing what a Roman soldier would be wearing, item by
-      item, and applying each piece to something God gives. The word "full" is doing
-      real work: the point is that nothing is left off.
+      selection. Believers are told to "put it on". Paul moves through a Roman
+      soldier's equipment and connects each piece with something God gives. The word
+      "full" emphasizes that nothing is omitted.
   - term: rulers, authorities and powers
     plain: >-
-      Paul's terms for organised spiritual opposition — evil that is structured and
-      has intentions, rather than bad luck or bad moods. He deliberately does not
-      give details. Earlier in this letter he has already said Christ has been
-      placed above every one of them, which is the context that keeps the list from
-      being frightening.
+      Paul's terms for organized spiritual opposition, evil with structure and
+      intent. He gives few details. Earlier, Ephesians says Christ is seated above
+      every ruler and authority, placing these powers under his rule.
   - term: breastplate
     plain: >-
-      Body armour covering the chest and stomach, protecting everything a stab
+      Body armor covering the chest and stomach, protecting the areas a stab
       would be aimed at. Paul attaches it to righteousness, meaning being right
-      with God — the thing an accusation goes for first.
+      with God, which answers accusation.
   - term: flaming arrows
     plain: >-
       Arrows with burning pitch on the tip, shot to set fire to whatever they hit.
       A large shield soaked in water could put one out on impact, which is why
-      faith is matched with a shield rather than with body armour.
+      faith is matched with a shield.
   - term: the sword of the Spirit
     plain: >-
       The one item on the list that can be used to strike, and Paul immediately
@@ -127,53 +103,45 @@ glossary:
   - term: an ambassador in chains
     plain: >-
       Paul's description of himself in verse 20. An ambassador represents a
-      government and is supposed to be untouchable; being one in chains is a
-      contradiction, and he uses it to describe his own position without
-      complaining about it.
+      government and would normally receive protection. "In chains" exposes the
+      contradiction in Paul's position while preserving his sense of calling.
 keyVerses:
   - usfm: EPH.6.10-11
     why: >-
       The instruction the rest of the passage unpacks, and the place where the
-      strength is located. It is God's power and God's armor; the reader's job is
-      to put it on and be found standing.
+      strength is located. God's power and armor equip the reader to stand.
   - usfm: EPH.6.12
     why: >-
-      The verse that decides how the whole passage is used. It removes human beings
-      from the category of enemy, and it does so two verses after Paul finished
+      This verse removes human beings from the category of enemy two verses after Paul finished
       writing about parents, children, slaves and masters.
   - usfm: EPH.6.13
     why: >-
-      "Having done everything, to stand." The clearest statement of what winning
-      looks like here — not conquest, but still being on your feet when the day of
-      evil is over.
+      "Having done everything, to stand." Faithfulness here means remaining on
+      your feet when the evil day has passed.
   - usfm: EPH.6.17
     why: >-
       The helmet and the sword, and the only offensive item in the kit. Paul names
-      what the sword is rather than leaving it to imagination: the word of God.
+      the sword directly as the word of God.
   - usfm: EPH.6.18
     why: >-
-      The turn most readers do not expect. After six pieces of armour, the action
-      is prayer — constant, alert, and for other people rather than oneself.
+      After six pieces of armor, Paul calls for constant, alert prayer on behalf
+      of other believers.
 caution: >-
-  Two things get read into this chapter that are not in it. The first is a habit of
-  finding a demon behind every difficulty. Verse 12 is the verse usually cited for
-  it, and the verse says the opposite: our struggle is not against flesh and
-  blood. It is a sentence that takes an enemy away rather than handing you one, and
-  using it to identify a person, a relative or a colleague as the spiritual
-  opposition inverts it — especially given that Paul has just spent nine verses on
-  exactly those relationships. The second is smaller but very common in sermons:
-  the claim that the armor has no covering for the back, so Christians must never
-  retreat, or must stand back to back. It is a good line and it is not in the text.
-  Paul lists six items and says nothing about what is missing, and Roman soldiers
-  were in fact armoured behind. Any point that depends on a detail the passage does
-  not contain is worth dropping, because the passage's real emphasis — five
-  defensive pieces and four commands to stand — makes the same point honestly.
+  This chapter doesn't encourage readers to find a demon behind every difficulty.
+  Verse 12 says the struggle isn't against flesh and blood, removing human beings
+  from the enemy category. Using it to identify a relative, colleague, or other
+  person as spiritual opposition reverses the verse, especially after Paul's
+  household instructions. A common sermon illustration also claims that the
+  armor leaves the back exposed, so Christians must never retreat or must stand
+  back to back. Paul never makes that observation, and Roman armor did protect
+  the back. The text supplies a sounder emphasis through five protective pieces
+  and four commands to stand.
 faqs:
   - q: What is each piece of the armor of God in Ephesians 6?
     a: >-
       Six items, each matched to something God gives. The belt of truth goes on
       first, the piece that holds everything else in place. The breastplate of
-      righteousness covers the chest — being right with God, protecting what an
+      righteousness covers the chest, with right standing before God answering what an
       accusation aims at. Shoes are the readiness that comes from the gospel of
       peace, so you can keep your footing. The shield of faith is large enough to
       put out flaming arrows. The helmet of salvation protects the head, meaning
@@ -188,68 +156,60 @@ faqs:
       The placement is pointed: he has just written about parents and children,
       enslaved workers and slave owners, which are precisely the relationships in
       which a first-century Christian would have had someone to blame. The verse
-      does not say people cannot harm you. It says they are not what you are
+      doesn't say people can't harm you. It says they aren't what you are
       fighting.
   - q: Who are the rulers, authorities, and cosmic powers in Ephesians 6:12?
     a: >-
-      Paul's language for organised spiritual evil — powers with structure and
-      intent rather than random misfortune. He is deliberately vague about the
-      details, and the New Testament nowhere gives the taxonomy that later writers
-      built out of verses like this one. What matters for reading the chapter is
-      what this same letter said earlier: Christ has been seated above every ruler
-      and authority, with everything under his feet. The powers are real and they
-      are already outranked, which is why the instruction is to stand rather than
-      to fight for the outcome.
+      Paul's language for organized spiritual evil, powers with structure and
+      intent beyond random misfortune. He gives few details, and the New
+      Testament nowhere gives the taxonomy that later writers
+      built from verses like this one. Earlier in Ephesians, Christ is seated
+      above every ruler and authority with everything under his feet. The powers
+      are real and already outranked, so believers stand within a victory they
+      don't have to secure themselves.
   - q: What is the sword of the Spirit?
     a: >-
       Paul says what it is in the same breath: the word of God. The Greek word for
-      sword here is the short blade used at close quarters rather than a long
-      cavalry sword, and the word he uses for "word" tends to mean something
-      spoken rather than a text in the abstract — so the picture is closer to
-      saying something true at close range than to owning a Bible. It is the only
-      item in the list that can be used to strike, which makes it worth noticing
-      that the weapon Christians are given is a sentence.
+      sword describes a short blade used at close quarters. His term for "word"
+      often means something spoken, so the image suggests speaking God's truth in
+      the immediate situation. It is the only item in the list that can strike.
   - q: What are the flaming darts of the evil one?
     a: >-
       Arrows tipped with burning pitch, shot to set fire to whatever they landed
       on. Paul matches them with the shield of faith, and the match is practical: a
       large Roman shield, made of layered wood and leather and often soaked with
       water, could stop one and put it out at the same time. What the arrows stand
-      for is not spelled out. Readers have most often taken them as temptations and
-      accusations — the sudden, targeted thoughts that arrive from outside and
+      for isn't defined. Readers have often taken them as temptations and
+      accusations, sudden targeted thoughts that arrive and
       catch fire if nothing absorbs them.
   - q: Is it true that the armor of God has no covering for the back?
     a: >-
       No. It is a widely repeated sermon illustration and it has no basis in the
       passage or in Roman equipment. Paul lists six pieces and makes no comment at
-      all about anything being left uncovered, and Roman soldiers wore armour that
-      protected the back. The lesson usually drawn from it — do not retreat, stand
-      together — is a fair reading of the chapter for a completely different
-      reason: Paul says "stand" four times and gives no order to advance. The point
-      survives without the invented detail, which is a better reason to drop the
-      detail than to keep it.
+      all about an uncovered back, and Roman soldiers wore armor that protected
+      it. The usual lesson about standing together has a firmer basis elsewhere:
+      Paul says "stand" four times and never orders an advance.
   - q: Does Ephesians 6:5 endorse slavery?
     a: >-
-      It does not abolish it, and pretending otherwise is not honest. Paul writes
+      It doesn't abolish it. Paul writes
       to people inside the arrangement and tells enslaved Christians how to work,
       which is very far from calling for their freedom, and these verses were quoted
-      by defenders of slavery for centuries. Two things in the text pull the other
-      way. He addresses enslaved people directly, as full members of the church
-      being spoken to rather than property being discussed — unusual in itself. And
-      he turns to the owners in verse 9 and removes the ground they stood on: stop
-      threatening, you have the same Master, and God shows no favouritism. That is
-      not abolition, but it is incompatible with the belief that made the
+      by defenders of slavery for centuries. The text also contains two pressures
+      against the institution's logic. Paul addresses enslaved people directly as
+      church members, not as property under discussion. He then turns to the
+      owners in verse 9 and removes the ground they stood on: stop
+      threatening, you have the same Master, and God shows no favoritism. This is
+      short of abolition, but it undermines the hierarchy that made the
       institution work, and Christians who later argued for abolition drew on it.
   - q: What does "fathers, do not provoke your children to anger" mean?
     a: >-
       It is an instruction to the person with the power, and in a household where a
       father's authority was close to absolute it was pointed. The verb means to
-      goad or exasperate — the sustained unfairness, mockery or unreasonable
-      demands that build resentment rather than a single loss of temper. What Paul
+      goad or exasperate through sustained unfairness, mockery, or unreasonable
+      demands that build resentment. Paul
       puts in its place is bringing them up in the discipline and instruction of the
-      Lord, so he is not arguing against correcting children. He is against
-      correcting them in a way that leaves them angry, and he makes the parent
-      responsible for that outcome.
+      Lord, so correction remains part of parenting. The warning makes parents
+      responsible for how their use of authority affects their children.
 relatedTopics:
   - prayer
   - protection
@@ -262,33 +222,25 @@ entity:
     - https://en.wikipedia.org/wiki/Ephesians_6
     - https://en.wikipedia.org/wiki/Armor_of_God
 publishedAt: 2026-08-19
-reviewedAt: 2026-08-19
+reviewedAt: 2026-08-21
 ---
 
 ## If this is your first time reading Ephesians 6
 
-Do not start at verse 10, even though that is where the famous part begins.
+Begin at verse 1, before the familiar armor section. Paul first writes about
+children and parents, then enslaved workers and the men who own them. These are
+ordinary, close, and often difficult relationships. Without a break in his
+argument, he tells the church to be strong in the Lord and put on God's full
+armor. Two verses later, he says the struggle isn't against flesh and blood.
 
-Start at verse 1, and you will notice something the chapter headings hide. Before
-the armor, Paul is writing about a household: children and their parents, then
-enslaved workers and the men who owned them. Ordinary, close-quarters, often
-difficult relationships. Then, with no break in his argument, he says be strong in
-the Lord, put on the full armor of God — and two verses later, that the struggle is
-not against flesh and blood.
+The sequence guides the passage. A Christian in that household had obvious
+candidates for an enemy, and Paul removes every human being from that category.
 
-That sequence is the key to the passage. A Christian in that house had obvious
-candidates for an enemy, and Paul takes all of them off the table before he starts
-describing the fight.
+The armor itself reinforces the emphasis. Five pieces protect the wearer: belt,
+breastplate, shoes, shield, and helmet. Only the sword can strike. Paul also says
+"stand" four times without giving a command to advance, charge, or defeat.
 
-Then read the armor slowly and count two things. Count how many pieces are for
-defence: belt, breastplate, shoes, shield, helmet — five, and only the sword could
-be swung. And count how many times Paul says "stand": make your stand, stand your
-ground, having done everything, to stand, stand firm. Four times, and never once
-advance, charge or defeat.
-
-So the passage is not a plan for winning a war. It is a description of how to still
-be on your feet at the end of a bad day, wearing equipment somebody else supplied.
-And when the instruction finally comes, in verse 18, it is not to fight. It is to
-pray — constantly, alertly, and for other people. Paul, who is writing this in
-chains, asks them to pray for him too, and the thing he wants is not to be let out.
-It is to be given the right words while he is still in there.
+The passage prepares believers to remain faithful through an evil day using
+equipment God supplies. Verse 18 then calls for constant, alert prayer on behalf
+of others. Writing in chains, Paul asks the church to pray for his words and
+boldness while he remains there.

@@ -1,258 +1,193 @@
 ---
 usfm: PRO.31
-title: "Proverbs 31: An Alphabet Poem of Praise, Not a Checklist for Women"
-seoTitle: "Proverbs 31: A Poem of Praise, Not a Checklist"
+title: "Proverbs 31 Explained: Wise Leadership and a Woman of Strength"
+seoTitle: "Proverbs 31 Explained: The Woman of Strength"
 shortAnswer: >-
-  Proverbs 31 has two halves that are almost never read together. The first nine
-  verses are a queen mother coaching her son on how to be a king: stay off the
-  wine, and speak up for people who have no voice. The famous part, verses 10 to
-  31, is a formal poem — twenty-two verses, each starting with the next letter of
-  the Hebrew alphabet — praising a woman who buys land, runs a trade, feeds a
-  household and gives to the poor. The word translated "noble character" is a
-  strength word, closer to a soldier's than a saint's, and the poem's own ending
-  asks that she be given credit rather than handed a standard.
+  Proverbs 31 begins with a mother's advice to King Lemuel: govern with a clear mind
+  and defend people who lack power. It then offers an alphabet poem praising a woman
+  of strength who manages a household, buys land, trades goods, teaches wisely, and
+  serves the poor. The chapter honors capable leadership used for others. Its final
+  words call for public recognition of the woman's work and praise her fear of the
+  Lord above charm or beauty.
 outline:
   - verses: "1-3"
-    heading: A king's mother gets his attention and warns him
+    heading: Lemuel's mother warns him about destructive choices
     note: >-
-      Three questions in a row — what shall I say, son of my womb, son of my vows
-      — and then the first warning: do not pour your strength into women who ruin
-      kings. The chapter opens as one person's speech to one person, which is
-      worth remembering when the poem arrives.
+      A mother urgently addresses the son for whom she prayed. She tells him not to
+      spend his strength on relationships that destroy kings and their ability to
+      govern.
   - verses: "4-7"
-    heading: Wine is wrong for a king and right for the dying
+    heading: A ruler must remain clearheaded
     note: >-
-      Not a general ban. The reason given is judicial: a drunk ruler forgets the
-      law and the poor lose their case. Then a surprising turn — give strong drink
-      to someone who is perishing, so they can forget their misery. The same
-      substance, judged by who is holding it.
+      Wine can cause a ruler to forget the law and deny justice to oppressed people.
+      Strong drink is instead mentioned as relief for those who are dying or in deep
+      distress.
   - verses: "8-9"
-    heading: The two verses this chapter is never quoted for
+    heading: Speak for people without a voice
     note: >-
-      Open your mouth for those with no voice. Judge righteously. Defend the poor
-      and needy. This is the climax of the mother's advice, and it is the reason
-      the wine mattered — a king exists to give judgment, and the people who
-      cannot afford one depend on his being clear-headed.
+      The king must speak for people who cannot make their own case and defend the
+      rights of the poor and needy. Clear judgment exists for the sake of those most
+      exposed to injustice.
   - verses: "10-12"
-    heading: The poem opens with a question, not a description
+    heading: The poem praises a trustworthy woman of strength
     note: >-
-      "A wife of noble character, who can find?" — the first line asks after her
-      rather than prescribing her, and the word behind "noble character" means
-      force or strength. Her husband trusts her, and the poem's first claim about
-      her is financial: he lacks nothing of value.
+      The opening question is "A wife of noble character, who can find?" The Hebrew phrase
+      translated "noble character" carries the sense of strength and capability. Her
+      husband trusts her judgment and benefits from her work.
   - verses: "13-19"
-    heading: Wool, ships, a field she buys, a lamp still lit
+    heading: She produces, trades, invests, and plans
     note: >-
-      She picks her materials, sources food from a distance, is up before dawn,
-      appraises a field and buys it, plants a vineyard from her own earnings,
-      checks that her margin is good and works late. This is a woman with capital
-      and judgment, not only industry.
+      She selects materials, brings food from a distance, directs her household,
+      evaluates and buys a field, and plants a vineyard from her earnings. Her work
+      shows financial judgment as well as energy.
   - verses: "20-27"
-    heading: The poor, the household, and a woman who laughs at the future
+    heading: Her strength serves both household and neighbor
     note: >-
-      Her hands reach the needy. Her family is warm before the snow comes. She
-      sells linen to merchants. She is dressed in strength and honour, teaches
-      with wisdom, and can laugh at the days to come — the one line in the poem
-      about how she feels.
+      She gives to the poor, prepares her household for winter, and sells linen to
+      merchants. Strength and dignity mark her life, wisdom shapes her speech, and
+      sound preparation lets her face the future with confidence.
   - verses: "28-31"
-    heading: Her family speaks, and the poem asks that she get the credit
+    heading: Her family and community give her praise
     note: >-
-      Children call her blessed, her husband praises her out loud, and then the
-      famous contrast: charm deceives, beauty passes, fear of the LORD is what
-      deserves praise. The last verse is a request — give her the fruit of her
-      hands, let her works speak for her in public.
+      Her children and husband speak their praise. Charm can mislead and beauty fades,
+      while a woman who fears the Lord deserves honor. The poem asks the community to
+      give her the fruit of her work and recognize it publicly.
 themes:
-  - name: It is an alphabet poem, and that changes what it is
+  - name: The portrait is a carefully crafted alphabet poem
     explanation: >-
-      Verses 10 to 31 are an acrostic: twenty-two verses, each beginning with the
-      next letter of the Hebrew alphabet in order. That is a deliberate literary
-      form, like a sonnet, and Hebrew poets used it to signal completeness —
-      everything from A to Z on a subject. It also means the poem is a set piece
-      rather than a catalogue of duties, and that some details are there because
-      the form needed a line, not because the woman needed a task. A reader who
-      knows they are holding a formal poem of praise treats it very differently
-      from a reader who thinks they are holding a job description.
-  - name: The word behind "virtuous" is a strength word
+      Verses 10 through 31 contain 22 lines beginning with the successive letters of
+      the Hebrew alphabet. Acrostics could aid memory and signal a full portrait from
+      beginning to end. The literary form helps readers recognize praise expressed
+      through a complete picture, not a daily task list imposed on every woman.
+  - name: The central Hebrew word emphasizes strength
     explanation: >-
-      Verse 10's description — rendered "noble character", "virtuous", "excellent"
-      — translates a Hebrew word normally used for military capability: able men,
-      valiant soldiers, an army's force. It appears elsewhere for the men chosen
-      as judges because they were competent and tough. Applied to this woman it
-      means capable, formidable, not fragile. English translations reach for words
-      about morals; the Hebrew reaches for a word about power. Almost everything
-      the poem then shows her doing — buying, trading, negotiating, provisioning —
-      fits the stronger word better.
-  - name: Half the chapter is about justice for the poor
+      The word translated "virtuous", "excellent", or "of noble character" commonly
+      describes capability, force, and valor. Elsewhere it can identify soldiers or
+      competent leaders. Her buying, trading, planning, producing, and providing fit
+      the portrait of a formidable and trustworthy woman.
+  - name: Power is meant to protect vulnerable people
     explanation: >-
-      Verses 1 to 9 are the frame nobody quotes, and their subject is the abuse of
-      power. A king who drinks forgets what has been decreed and the oppressed
-      lose their case, so the queen mother tells her son to stay sober and open
-      his mouth for people who cannot speak for themselves. Then the poem she is
-      remembered for describes a woman who reaches out her hands to the needy.
-      Read whole, the chapter is not two unrelated pieces stitched together — both
-      halves are about power used for people who have none.
-  - name: Praise spoken about her, not a standard handed to her
+      Lemuel must use royal authority to defend people without social standing. The
+      woman in the poem likewise opens her hands to the poor. Both sections show
+      strength serving others, whether through public justice or household resources.
+  - name: The poem gives praise instead of assigning more work
     explanation: >-
-      Watch who is talking at the end. Her children call her blessed, her husband
-      praises her, and the final verse asks the audience to give her the credit
-      her work has earned and let her works praise her at the city gates. Nowhere
-      in the chapter is a woman told to become this. It is a commendation, written
-      to be said out loud about somebody who has already done the work. Turning it
-      into a checklist reverses its direction, and that reversal is the source of
-      most of the damage the chapter has done to people who love it.
+      Children, husband, and community are the speakers at the end. They recognize a
+      life already lived and give credit for its fruit. The passage offers a model of
+      wisdom and strength, but its direct action is praise. It should encourage and
+      honor women, not become a burden that ignores differences in resources, season,
+      ability, and calling.
 glossary:
   - term: Lemuel
     plain: >-
-      The king whose mother speaks in verses 1 to 9. He appears nowhere else in
-      the Bible and nobody knows who he was. The name means something like
-      "belonging to God", which is why some older writers guessed it was a
-      nickname for Solomon — a guess, not information.
+      The king addressed by his mother in verses 1 through 9. He appears nowhere else
+      in Scripture. His name may mean "belonging to God." The old suggestion that it
+      is a name for Solomon remains speculation; the name can also be glossed "devoted
+      to God".
   - term: acrostic
     plain: >-
-      A poem where each line or verse starts with the next letter of the alphabet.
-      Verses 10 to 31 do this with all twenty-two Hebrew letters. Several psalms
-      use the same device. It helped people memorise, and it signalled that a
-      subject had been covered from top to bottom.
+      A poem whose successive lines begin with the letters of the alphabet in order.
+      These 22 verses use every Hebrew letter, a form also found in several psalms.
   - term: a wife of noble character
     plain: >-
-      The Hebrew phrase means something closer to "a woman of strength" or "a
-      capable woman". The same strength word describes soldiers and the able men
-      picked to settle disputes. It is not primarily a word about being good; it
-      is a word about being formidable.
+      A Hebrew phrase that can mean "a woman of strength", "a woman of real strength",
+      or "a capable woman". The
+      key word also describes valor, wealth, or proven ability elsewhere in Scripture.
   - term: the city gates
     plain: >-
-      The open area just inside a town's gate, where elders heard cases, deals
-      were struck and public business happened — the courthouse and market square
-      in one. When the poem ends by asking that her works praise her at the gates,
-      it is asking for public credit, not private thanks.
+      The public area where elders heard cases, trade occurred, and civic decisions
+      were made. Praise at the gates means recognition in the community's public life.
   - term: distaff and spindle
     plain: >-
-      The two hand tools for spinning wool or flax into thread. Cloth production
-      was ordinary, skilled, valuable work, and verse 24 shows her selling the
-      results to merchants. The detail marks her as a producer, not a hobbyist.
+      Hand tools used to spin wool or flax into thread. Her textile work produces
+      goods valuable enough to sell to merchants.
   - term: more precious than rubies
     plain: >-
-      A comparison to the most valuable thing the writer could name; the exact
-      stone is uncertain and other Bibles say pearls or jewels. Proverbs uses the
-      same comparison for wisdom itself, which is a deliberate echo rather than a
-      coincidence.
+      A comparison with an exceptionally valuable object. The exact stone is
+      uncertain, so translations vary among rubies, pearls, and jewels. Proverbs uses
+      the same comparison for wisdom.
 keyVerses:
   - usfm: PRO.31.8-9
     why: >-
-      The high point of the first half and the least quoted lines in the chapter.
-      A mother tells a king that his job is to speak for people who have no voice
-      of their own, and to judge honestly for the poor.
+      Lemuel's mother defines royal responsibility through advocacy and just judgment
+      for poor and vulnerable people.
   - usfm: PRO.31.10
     why: >-
-      The opening of the poem, and the verse where the translation matters most.
-      It asks a question rather than issuing a specification, and the phrase
-      behind "noble character" is a word about strength.
+      The poem begins with a question and describes a woman "more precious than
+      rubies", using a Hebrew phrase that celebrates strength, ability, and
+      trustworthy character.
   - usfm: PRO.31.16
     why: >-
-      She assesses a field, buys it, and plants a vineyard out of her own
-      earnings. One verse that settles what kind of portrait this is: she holds
-      money and makes decisions with it.
+      She evaluates property, completes a purchase, and invests her earnings in a
+      vineyard, showing independent financial judgment.
   - usfm: PRO.31.25
     why: >-
-      Dressed in strength and honour, and able to laugh at the days to come. The
-      only line about her inner life, and it describes confidence rather than
-      anxiety about whether she is measuring up.
+      Strength and dignity give her confidence about the future. The poem's one direct
+      glimpse of her inner posture is settled and hopeful.
   - usfm: PRO.31.30
     why: >-
-      The verse the whole poem is pointed at. It rules out the two things a woman
-      was, and often still is, judged on, and puts the fear of the LORD in their
-      place as the thing that actually deserves praise.
+      Charm can mislead and beauty passes, while reverence for the Lord gives the
+      lasting basis for praise.
 caution: >-
-  Proverbs 31 has been turned into a measuring stick, and used that way it does
-  real harm. Women get handed the poem as a specification — be up before dawn, run
-  a business, keep everyone clothed, never eat the bread of idleness — and
-  conclude they are failing at something Scripture requires. Three things in the
-  text push back. It is a poem, built on the Hebrew alphabet, and some of its
-  lines exist because the form needed the next letter. It is praise, spoken by a
-  family about someone who has already lived a long life, and the last verse asks
-  the audience to give her credit rather than asking her to do more. And it
-  describes one wealthy ancient household with servants, land and a textile trade,
-  which is a setting almost no reader shares. Taking the details as a template
-  misses the point, and it also quietly writes off the women in the chapter's own
-  world who had no field to buy. The thing the poem finally praises is in verse
-  30, and it is available to anyone: she feared the LORD. Everything else is what
-  that looked like in one woman's particular life.
+  Proverbs 31 should not become a checklist used to measure every woman's value. It
+  is an alphabet poem of praise, spoken after a life of work and shaped by one
+  prosperous ancient household with servants, land, and a textile business. Many
+  women in its own world had no field to buy or staff to direct. The poem's closing
+  standard is reverence for the Lord, expressed through this woman's particular gifts
+  and circumstances. Its final command asks the community to honor her work.
 faqs:
   - q: Who is the Proverbs 31 woman?
     a: >-
-      She is not identified, and that is probably deliberate. The poem introduces
-      her with a question — a woman of strength, who can find one? — rather than a
-      name, and then describes her through what she does over what looks like a
-      full adult lifetime. Jewish tradition has often read her as a picture of
-      wisdom itself, since the book of Proverbs personifies wisdom as a woman
-      earlier on and uses the same "more precious than rubies" comparison for her.
-      Christian readers have more often read her as a portrait of a real kind of
-      person. Both readings work, and neither depends on her having existed.
+      The poem gives no name. It may portray an exemplary woman across a full adult
+      life. Jewish readers have also seen her as an embodiment of wisdom, which
+      Proverbs earlier personifies as a woman and likewise calls more precious than
+      jewels. The poem can honor both a real kind of person and the wisdom her life
+      displays.
   - q: Is the Proverbs 31 woman an impossible standard?
     a: >-
-      Read as a daily checklist, yes, and read that way it is being misused. Three
-      features of the text argue against it. The passage is an alphabet poem, a
-      formal set piece rather than a list of requirements. It is spoken as praise
-      by a husband and children about a woman who has already lived it, not as
-      instruction to a young woman starting out. And its own conclusion moves off
-      the achievements entirely: charm is deceptive, beauty is fleeting, and what
-      earns praise is that she feared the LORD. The poem is closer to a eulogy in
-      the best sense than to a performance review.
+      It becomes impossible when treated as a daily checklist. The acrostic form
+      presents a complete poetic portrait, her family praises work already done, and
+      the details span many kinds of activity across time. The conclusion centers on
+      fear of the Lord. The poem celebrates mature wisdom without requiring every
+      woman to reproduce every circumstance.
   - q: Does the Proverbs 31 woman run a business?
     a: >-
       Yes, plainly. She evaluates a field and buys it, funds a vineyard from her
       own profits, imports food from a distance, manufactures linen garments and
-      sashes, sells them to merchants, and checks that her margin is good. She
-      also directs staff. In a book written in a world where property and trade
-      were usually men's business, the poem hands her capital and judgment without
-      a word of apology, and the strength word in verse 10 fits that picture
-      better than the softer English translations do.
+      sashes, sells them to merchants, and evaluates the profitability of her trade.
+      She also directs household workers. The poem gives her capital, judgment, and
+      commercial responsibility, fitting the language of strength in verse 10.
   - q: What does "charm is deceptive and beauty is fleeting" mean?
     a: >-
-      Verse 30 sets aside the two things a woman in that world was most often
-      valued for. Charm here is the pleasing surface of a manner; beauty is looks.
-      Neither is called bad — they are called unreliable, one because it can be
-      performed and one because it does not last. Against them the verse puts fear
-      of the LORD, meaning a life lived with God actually taken into account. It is
-      the poem's own summary, and it is a relief: the one thing the chapter finally
-      praises is not an accomplishment and not a body.
+      Charm can create an impression that hides reality, and physical beauty changes
+      over time. The verse does not call either quality evil; it calls them unreliable
+      foundations for honor. A life shaped by reverence for the Lord deserves lasting
+      praise.
   - q: What does "her worth is far above rubies" mean?
     a: >-
-      It is a comparison to the most valuable object the writer could name, and the
-      exact gem is uncertain — other translations say pearls or jewels. The point
-      is not that she is expensive but that she is rare and hard to price, which
-      is why the line follows a question about whether such a woman can be found.
-      Proverbs uses the identical comparison for wisdom itself earlier in the book,
-      so the phrase quietly puts her in the same category as the thing the whole
-      book is chasing.
+      The phrase compares her with an object of exceptional value. Since the exact gem
+      is uncertain, translations use rubies, pearls, or jewels. The same comparison
+      describes wisdom earlier in Proverbs, linking this woman's life with the book's
+      central pursuit.
   - q: Who was King Lemuel?
     a: >-
-      Nobody knows. He is named only here, in verse 1, as the son whose mother's
-      teaching makes up the first nine verses. The name means roughly "belonging
-      to God" or "devoted to God", which led some older commentators to suggest it
-      was an affectionate name for Solomon. That is a guess with nothing behind it.
-      A simpler reading is that he was a king outside Israel whose mother's advice
-      was good enough to keep, which would fit the book's habit of collecting
-      wisdom from more than one place.
+      Scripture names him only here. His name may mean "belonging to God" or "devoted
+      to God." Some older interpreters guessed that it was another name for Solomon,
+      but the text gives no evidence for that identification. He may have been a king
+      outside Israel whose mother's wise teaching became part of this collection.
   - q: Why does Proverbs 31 say to give strong drink to those who are perishing?
     a: >-
-      Verses 6 and 7 are not an endorsement of getting drunk to escape your
-      problems; they are the second half of an argument about who should be
-      holding the cup. A king must stay clear because people's court cases depend
-      on him remembering the law. Someone who is dying or in bitter distress is in
-      a different position, and the verse allows them relief from pain. Ancient
-      readers would have heard it close to what we would call pain relief for the
-      dying. It is a striking piece of compassion sitting inside a warning about
-      power.
+      The verses distinguish a ruler responsible for justice from someone dying or
+      suffering bitter distress. The king must remain clearheaded because court cases
+      depend on him. Strong drink for the perishing resembles ancient pain relief,
+      acknowledging compassionate care in extreme suffering rather than encouraging
+      habitual escape through alcohol.
   - q: What does "speak up for those who cannot speak for themselves" mean?
     a: >-
-      Verses 8 and 9 tell the king to open his mouth for the voiceless and the
-      dispossessed and to judge honestly for the poor and needy. In that world
-      justice happened in public at the city gate, and it went badly for anyone
-      with no standing, no property and nobody to argue for them. The instruction
-      is specific: use the position you hold to make the case for people who
-      cannot make their own. It is the practical reason the chapter opened by
-      telling a ruler to stay sober.
+      Lemuel must use his authority to represent people who lack standing, property,
+      or another advocate. He is to judge fairly for poor and needy people whose cases
+      might otherwise be ignored. The command turns power into responsibility for
+      someone else's protection.
 relatedTopics:
   - marriage
   - work
@@ -264,35 +199,20 @@ entity:
   sameAs:
     - https://en.wikipedia.org/wiki/Proverbs_31
 publishedAt: 2026-08-19
-reviewedAt: 2026-08-19
+reviewedAt: 2026-08-21
 ---
 
-## If this is your first time reading Proverbs 31
+## Reading both parts of Proverbs 31
 
-Read it from verse 1, not from verse 10.
+The chapter opens with a mother's counsel to a king. Lemuel must protect his capacity
+to judge and use his voice for people who lack one. The famous poem that begins in
+verse 10 shares that concern for strength directed toward the good of others.
 
-Almost everyone meets this chapter in the middle, at the famous poem about the
-capable wife, and misses that the chapter opens with a woman talking. She is a
-queen mother, her son is a king, and her advice to him is short and pointed: do
-not throw yourself away, do not drink while you are responsible for other
-people's court cases, and open your mouth for the people who have nobody to speak
-for them. That is the first nine verses, and they almost never get read at all.
+The poem follows the Hebrew alphabet, one letter per verse. This formal structure
+offers a full portrait of a woman whose work spans household management, agriculture,
+trade, teaching, generosity, and planning. The key description in verse 10 can mean a
+woman of strength or proven ability.
 
-Then the poem starts, and there are two things worth knowing before you read it.
-
-The first is that it is an alphabet poem. In Hebrew, verse 10 begins with the
-first letter of the alphabet, verse 11 with the second, all the way to verse 31
-and the twenty-second letter. It is a deliberate shape, the way a sonnet is a
-shape, and it tells you that you are reading a crafted piece of praise rather
-than a list of duties.
-
-The second is the word in verse 10. English Bibles say "noble character",
-"virtuous", or "excellent". The Hebrew word is the one normally used for soldiers
-and for men picked to be judges because they were capable and hard to push
-around. Read the poem with "a woman of real strength" in your head and it stops
-sounding like a domestic ideal. She buys land. She sets prices. She sells to
-merchants. She laughs at the future.
-
-And then watch who is speaking at the end. Her children praise her. Her husband
-praises her. The last verse asks everyone else to give her the credit in public.
-Nobody in this chapter is told to become her. She is being applauded.
+The closing voices belong to her children, husband, and community. They look back on
+her work and praise it. The final verse asks that she receive public credit, while
+verse 30 locates her deepest honor in reverence for the Lord.

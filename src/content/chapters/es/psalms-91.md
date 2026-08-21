@@ -1,269 +1,213 @@
 ---
 usfm: PSA.91
-title: "Salmo 91: Tres Voces, y lo Que Dios Promete con Sus Propias Palabras"
-seoTitle: "Salmo 91: Lo Que Dios Promete de Verdad"
+title: "Salmo 91: Refugio, peligro y la presencia de Dios"
+seoTitle: "Salmo 91 explicado: refugio y protección"
 shortAnswer: >-
-  El Salmo 91 hace las promesas de protección más audaces de la Biblia — ninguna
-  plaga llegará a tu tienda, mil caen a tu lado y tú quedas en pie — y las hace
-  con tres voces distintas que nunca se molesta en presentar. Alguien da su
-  testimonio en los versículos 1-2. Otra persona pasa los versículos 3-13
-  diciéndole lo que Dios hará. Luego, en los versículos 14-16, Dios habla por sí
-  mismo, y las promesas cambian de forma: no "nada te tocará", sino "estaré con
-  él en la angustia". Leer bien este salmo empieza por notar quién habla.
+  El Salmo 91 expresa una confianza profunda en la protección de Dios frente a la
+  violencia, la enfermedad y los peligros ocultos. El poema pasa por tres voces: un
+  testimonio en los versículos 1-2, palabras de ánimo en los versículos 3-13 y la voz
+  de Dios en los versículos 14-16. Al final, Dios promete responder, rescatar y dice
+  "estaré con él en la angustia". El salmo ofrece refugio sin convertir la fe en una
+  garantía de que nunca sufriremos daño.
 outline:
   - verses: "1-2"
-    heading: Un hombre elige a su propio protector y lo dice en voz alta
+    heading: El creyente hace de Dios su morada
     note: >-
-      Los verbos son habitar y morar — quedarse, no llegar. Después el salmista
-      lo convierte en una declaración personal: "diré al SEÑOR: tú eres mi
-      refugio". Todavía no se ha prometido nada. Alguien simplemente ha decidido
-      dónde vive.
+      "Habitar" y "morar" describen una vida estable bajo el cuidado de Dios. El
+      hablante declara: "diré al SEÑOR: tú eres mi refugio". También reconoce al SEÑOR
+      como su fortaleza y el Dios en quien confía.
   - verses: "3-4"
-    heading: Los peligros reciben nombre, y el refugio también
+    heading: Dios protege frente a peligros ocultos
     note: >-
-      Una segunda voz toma la palabra y empieza a hablarle a "tú". Las amenazas
-      son concretas — el lazo escondido de un cazador de aves, una plaga mortal —
-      y el refugio que se ofrece contra ellas es sorprendentemente pequeño:
-      plumas y alas. El salmo pone un ave que cubre a sus polluelos y una muralla
-      en la misma frase.
+      Una segunda voz se dirige a "ti" y menciona la trampa de un cazador y una plaga
+      mortal. La protección de Dios aparece tanto en la ternura de unas alas que cubren
+      como en la firmeza de un escudo y un baluarte.
   - verses: "5-8"
-    heading: Cuatro momentos del día en que llega el miedo, y la negativa a temer
+    heading: El cuidado de Dios alcanza todas las horas del día
     note: >-
-      Terror de noche, flecha de día, enfermedad que camina en la oscuridad,
-      desgracia al mediodía. Entre todos cubren el reloj entero, y ese es
-      justamente el punto. Luego viene la línea más difícil del salmo: mil caen a
-      tu lado y a ti no te alcanza. Nunca dice por qué.
+      El terror nocturno, la flecha de día, la enfermedad en la oscuridad y la
+      destrucción al mediodía abarcan el día entero. El salmo anima a no temer aunque
+      muchos caigan cerca, pero no explica por qué unos sobreviven y otros no.
   - verses: "9-13"
-    heading: Las promesas suben hasta los ángeles y el león pisado
+    heading: Los ángeles guardan el camino de quien confía en Dios
     note: >-
-      El versículo 9 repite el versículo 1 — has hecho del SEÑOR tu morada — y las
-      promesas escalan: ningún mal, ninguna plaga en la tienda, ángeles con
-      órdenes, manos que te sostienen, un león y una cobra bajo tu pie. Este es
-      el punto más alto del capítulo, y sigue siendo la voz humana la que habla.
+      El versículo 9 retoma la imagen del SEÑOR como morada. Las palabras de ánimo
+      crecen con imágenes de cuidado angelical y victoria sobre leones y serpientes.
+      Esta sección sigue en boca de la segunda voz humana.
   - verses: "14-16"
-    heading: Dios deja de ser el tema y habla por sí mismo
+    heading: Dios promete responder y acompañar
     note: >-
-      Los pronombres cambian a "yo" y se quedan así. Seis cosas que Dios dice que
-      hará: librar, proteger, responder, estar con él en la angustia, honrarlo,
-      saciarlo con larga vida. Una de esas seis da por supuesto, discretamente,
-      que la angustia llega.
+      Dios habla ahora en primera persona. Promete librar, proteger, responder,
+      acompañar en la angustia, honrar y saciar con larga vida. Su presencia dentro de
+      la dificultad forma parte de la promesa.
 themes:
-  - name: Quién habla cambia lo que se promete
+  - name: El cambio de voces aclara las promesas
     explanation: >-
-      El salmo tiene tres voces y no identifica ninguna. Los versículos 1-2 son
-      un testimonio. Los versículos 3-13 se dirigen a "tú" — alguien está
-      animando a otra persona. Los versículos 14-16 son Dios en primera persona.
-      Fíjate dónde están las afirmaciones más grandes. "No te sobrevendrá ningún
-      mal, ninguna plaga llegará a tu tienda" está en la sección del medio, donde
-      una persona le dice a otra qué esperar. Cuando Dios toma la palabra, las
-      promesas se vuelven más personales y más medidas: rescate, respuesta,
-      compañía en la angustia, honra, una vida plena. Eso no es una contradicción
-      del salmo. Es la diferencia entre cómo habla el ánimo y cómo formula una
-      promesa quien tendrá que cumplirla.
-  - name: El refugio es donde vives, no donde corres
+      El Salmo 91 no identifica a sus hablantes, aunque los pronombres permiten seguir
+      tres movimientos. Los versículos 1-2 presentan un testimonio, los versículos
+      3-13 se dirigen al creyente como "tú" y los versículos 14-16 ponen el "yo" en
+      boca de Dios. Las declaraciones más amplias de protección aparecen en la sección
+      de ánimo, entre ellas "No te sobrevendrá ningún mal, ninguna plaga llegará a tu
+      tienda". Las palabras finales de Dios prometen rescate, respuesta, compañía en
+      la angustia, honra y una vida plena. Escuchar cada voz permite mantener juntas la
+      confianza y la sobriedad del poema.
+  - name: El refugio se convierte en una forma estable de vivir
     explanation: >-
-      Los dos verbos del versículo 1 son habitar y morar, y el versículo 9 lo
-      repite: has hecho del SEÑOR tu morada. Nada de eso es lenguaje de
-      emergencia. Un refugio al que corres cuando suena la sirena no es lo que
-      describe este salmo — describe una dirección. Eso cambia cómo funcionan las
-      promesas, porque se ligan a una vida establecida con Dios y no a una
-      oración hecha en una mala semana. Es también la exigencia más silenciosa
-      del salmo: todo lo que se ofrece en los quince versículos siguientes se
-      ofrece a alguien que ya vive allí.
-  - name: El único pasaje que la Escritura muestra mal citado
+      El versículo 1 habla de habitar y morar, y el versículo 9 vuelve a llamar al
+      SEÑOR una morada. Son palabras de permanencia. El refugio de este salmo se parece
+      más a un hogar que a una parada de emergencia. Sus promesas forman parte de una
+      relación con Dios que continúa antes, durante y después de una crisis.
+  - name: Jesús muestra cómo puede torcerse una promesa verdadera
     explanation: >-
-      Muchos versículos se usan mal. Este es el único pasaje que la Biblia se
-      detiene a mostrarnos siendo mal usado, y por quién. Cuando el diablo cita
-      los versículos 11 y 12 a Jesús en Mateo 4, los cita con exactitud y aun así
-      se equivoca, porque omite las palabras que los limitan y convierte una
-      promesa de protección en un desafío. Es decir: este salmo llega con su
-      propio manual de instrucciones adjunto, escrito dentro del Nuevo
-      Testamento. Estas palabras son verdaderas, y no son una licencia. Quien
-      nunca ha oído eso recurrirá al Salmo 91 exactamente en el momento
-      equivocado.
-  - name: Peligros con nombre, no peligros vagos
+      En Mateo 4, el diablo cita los versículos 11 y 12 para convencer a Jesús de que
+      se lance desde el templo. Convierte la protección en un reto y omite la frase
+      "en todos tus caminos". Jesús se niega a poner a Dios a prueba. La escena marca
+      un límite claro: confiar en Dios es recibir su cuidado mientras caminamos con
+      fidelidad; no consiste en crear un peligro para obligarlo a intervenir.
+  - name: El poema nombra los miedos con precisión
     explanation: >-
-      El salmo no trata de una inquietud genérica. Enumera el lazo escondido de
-      un cazador de aves, una plaga mortal, terror en la noche, flecha de día,
-      enfermedad en la oscuridad, desgracia al mediodía, un león, una serpiente.
-      Entre todos cubren casi todas las formas en que una persona de la
-      Antigüedad moría de verdad. Vale la pena copiar esa precisión cuando ores.
-      Este salmo no está calmando a alguien preocupado por nada; le está
-      respondiendo a alguien que sabe nombrar lo que le da miedo, y responde al
-      mismo nivel de detalle.
+      Una trampa escondida, una plaga, el terror nocturno, las flechas, la destrucción,
+      los leones y las serpientes dan forma concreta al temor. Estos peligros reunían
+      muchas de las amenazas que podía enfrentar un viajero o una comunidad antigua.
+      El Salmo 91 responde a miedos específicos con imágenes igualmente concretas de
+      refugio y deja espacio para orar con sinceridad sobre aquello que asusta.
 glossary:
   - term: el Altísimo
     plain: >-
-      Un título de Dios que no dice nada sobre su carácter y todo sobre su
-      posición: lo que sea que tenga poder sobre tu vida, él está por encima. Es
-      un título muy antiguo, y aparece en la primera línea del salmo para fijar la
-      escala de todo lo que viene después.
+      Un título antiguo que coloca a Dios por encima de todo otro poder. Su aparición
+      en la primera línea establece la escala de los peligros y las promesas del salmo.
   - term: el Todopoderoso
     plain: >-
-      Un título que significa que Dios tiene poder para hacer lo que dice que
-      hará. Va junto con "el Altísimo" en el versículo 1, para que la frase
-      inicial cubra las dos preguntas que de verdad tiene una persona con miedo:
-      ¿está él por encima de esto, y puede hacer algo al respecto?
+      Un título que destaca el poder de Dios. Junto con "el Altísimo", lo presenta
+      como soberano sobre el peligro y capaz de cuidar a quienes confían en él.
   - term: refugio
     plain: >-
-      Un lugar al que vas para estar a salvo de algo. El versículo 2 lo pone
-      junto a fortaleza, que es más fuerte — una fortaleza se construye para ser
-      atacada y resistir. El salmo usa las dos palabras porque quiere decir algo
-      más que escondite.
+      Un lugar seguro donde resguardarse del peligro. El versículo 2 une esta palabra
+      con "fortaleza", una estructura preparada para resistir ataques. La imagen
+      comunica consuelo y firmeza.
   - term: lazo del cazador
     plain: >-
-      La trampa escondida de un cazador de aves. La imagen se elige por lo que el
-      ave no sabe: la red se puso antes, y ningún cuidado la habría salvado.
-      Representa el tipo de peligro que no podrías haber evitado simplemente
-      siendo prudente.
+      Una red o trampa oculta que servía para capturar aves. Como el ave no podía verla
+      de antemano, la imagen representa peligros que la prudencia común quizá no llegue
+      a detectar.
   - term: plaga
     plain: >-
-      Una enfermedad infecciosa y mortal que atraviesa a toda una población.
-      Algunas traducciones dicen pestilencia o peste. El versículo 6 la retrata
-      caminando en la oscuridad, que es muy parecido a cómo se sentía una
-      epidemia antes de que alguien entendiera cómo se propaga la enfermedad.
+      Una enfermedad infecciosa y mortal que se extiende por una población. Algunas
+      traducciones usan "pestilencia" o "peste". El versículo 6 la presenta como una
+      amenaza que avanza en la oscuridad.
   - term: escudo y baluarte
     plain: >-
-      El versículo 4 llama protección a la fidelidad de Dios con una imagen
-      doble: algo que llevas y algo detrás de lo cual te colocas — la muralla de
-      un fuerte, que el atacante tenía que superar. Las traducciones al español
-      resuelven ese par de maneras distintas, y algunas lo reúnen en una sola
-      expresión.
+      El versículo 4 compara la fidelidad de Dios con dos defensas: un escudo que la
+      persona lleva y una muralla tras la cual puede resguardarse. Las traducciones al
+      español expresan este par de distintas maneras.
 keyVerses:
   - usfm: PSA.91.1
     why: >-
-      La frase que el resto del salmo existe para explicar. Los dos verbos hablan
-      de quedarse, no de llegar, y los dos títulos hablan de posición, no de
-      afecto — lo que fija los términos antes de que se haga una sola promesa.
+      La primera frase describe una vida continua bajo la protección de Dios. Los dos
+      títulos destacan su autoridad y su poder antes de mencionar cualquier peligro.
   - usfm: PSA.91.7
     why: >-
-      La línea más citada y más difícil del capítulo. Aquí el lector decide que el
-      salmo es una garantía de seguridad física o empieza a preguntarse qué clase
-      de promesa es en realidad.
+      Esta imagen de supervivencia en medio de un desastre expresa una confianza
+      profunda en el cuidado personal de Dios. También plantea preguntas difíciles
+      sobre la relación entre las promesas y el sufrimiento real.
   - usfm: PSA.91.11-12
     why: >-
-      Los dos versículos que el diablo cita a Jesús en Mateo 4, y por eso este
-      salmo pide una lectura cuidadosa en lugar de una lectura entusiasta. La
-      expresión que los limita, y que él omitió, es "en todos tus caminos".
+      El diablo cita estos versículos al tentar a Jesús en Mateo 4. Al omitir "en todos
+      tus caminos", convierte una promesa de cuidado en una invitación a provocar una
+      crisis.
   - usfm: PSA.91.15
     why: >-
-      Las palabras de Dios, y la corrección más silenciosa del capítulo. No dice
-      que la angustia se mantendrá lejos. Dice que él estará dentro de ella.
+      En las palabras de Dios, la protección incluye su presencia en la angustia. Él
+      promete responder, acompañar, rescatar y honrar.
 caution: >-
-  El Salmo 91 es el capítulo peor usado de los Salmos, y se usa mal de una manera
-  concreta: los versículos 3-13 se sacan de contexto y se tratan como un contrato
-  de que el cristiano no sufrirá daño. Esa lectura no sobrevive al final del propio
-  salmo. Cuando Dios habla por fin con su propia voz, lo que promete es rescate,
-  respuesta, honra y una vida plena — y "estaré con él en la angustia", lo que da
-  por supuesto que la angustia llega. Tampoco sobrevive al resto de la Biblia. En
-  la Escritura hay personas fieles encarceladas, ejecutadas, naufragadas y
-  enfermas, y el Nuevo Testamento trata eso como algo corriente, no como un fallo
-  de este salmo. La advertencia más afilada está en la propia historia del texto:
-  los versículos 11 y 12 son las únicas líneas de la Biblia que se nos muestra
-  explícitamente citadas por el diablo, y la persona a quien se las citó se negó a
-  actuar según ellas. La respuesta de Jesús fue que poner a Dios a prueba no es lo
-  mismo que confiar en él. Si estás usando este salmo para justificar un riesgo que
-  tú mismo elegiste, lo estás usando exactamente como Mateo 4 advierte.
+  El Salmo 91 no debe tratarse como un contrato que garantiza al creyente una vida sin
+  enfermedad, lesión, violencia o muerte. Al final, Dios promete: "Estaré con él en la
+  angustia", dando por sentado que la angustia puede llegar. En otros pasajes de la
+  Biblia, personas fieles enferman, sufren persecución, naufragan y mueren. Mateo 4
+  también advierte contra el uso de los versículos 11 y 12 para justificar un peligro
+  provocado: Jesús se niega a saltar desde el templo y responde que no se debe poner a
+  Dios a prueba. Confiar en este salmo implica buscar refugio en Dios ante un peligro
+  real. No justifica correr riesgos evitables, rechazar atención médica ni culpar a
+  quien sufrió a pesar de haber orado.
 faqs:
   - q: ¿El Salmo 91 promete que el cristiano nunca se enfermará ni se hará daño?
     a: >-
-      No, y el propio salmo es la mejor prueba. Sus promesas más grandes —
-      ninguna plaga cerca de tu tienda, ningún mal acercándose a ti — las dice una
-      voz que anima a otra persona. Cuando Dios habla en primera persona, al
-      final, dice "estaré con él en la angustia", lo que supone que la angustia
-      viene. El salmo promete presencia, rescate y una vida que no queda
-      finalmente destruida. No promete un cuerpo intacto. Leído como garantía de
-      salud, una enfermedad corriente lo desmentirá tarde o temprano, y quienes
-      salen heridos cuando eso pasa son las personas a las que se les dijo lo
-      contrario.
+      No. Cuando Dios habla al final, dice: "Estaré con él en la angustia", de modo que
+      su promesa incluye acompañamiento cuando llega la dificultad. El resto de la
+      Biblia también muestra a personas fieles enfermas, heridas y perseguidas. El
+      Salmo 91 afirma el cuidado, el rescate y la seguridad final que vienen de Dios.
+      No debe usarse como garantía de salud, motivo para ignorar precauciones sensatas
+      ni razón para culpar a quien sufre.
   - q: ¿Qué significa "mil caerán a tu lado" en el Salmo 91:7?
     a: >-
-      El versículo 7 describe un campo de batalla o una epidemia: gente muriendo
-      en gran número, lo bastante cerca para tocarla, mientras quien ora queda en
-      pie. Es la línea más extravagante del salmo y también la más incómoda,
-      porque no dice absolutamente nada sobre el motivo. No es una explicación de
-      quién muere y quién no, y el salmo nunca insinúa que los mil lo merecieran.
-      Es una afirmación de que el cuidado de Dios es personal y no estadístico —
-      de que, sea lo que sea lo que esté pasando, tú eres conocido
-      individualmente. Si esa confianza se ha visto confirmada en todos los casos
-      es una pregunta que el salmo deja abierta.
+      El versículo presenta un peligro masivo, quizá una batalla o una epidemia,
+      mientras una persona sigue en pie. La imagen expresa confianza en el cuidado
+      personal de Dios aun cuando el sufrimiento alcanza a muchos. El salmo no explica
+      por qué una persona sobrevive y otra muere, ni insinúa que quienes caen lo
+      merecen. Esa dolorosa pregunta queda abierta.
   - q: ¿Por qué Satanás citó el Salmo 91 al tentar a Jesús?
     a: >-
-      En Mateo 4:6 y Lucas 4:10-11, el diablo lleva a Jesús a lo más alto del
-      templo y cita los versículos 11 y 12 — los ángeles que te sostendrán para
-      que no tropieces — como razón para lanzarse. La cita es correcta; el uso de
-      ella, no. Omite la expresión "en todos tus caminos", que enmarca la promesa
-      como protección mientras sigues tu vida, y no como seguro para una
-      temeridad que tú inventaste. Jesús responde con una línea de Deuteronomio:
-      no pongas a prueba al Señor tu Dios. Es la lección más clara de la Biblia
-      sobre la diferencia entre confiar en una promesa y desafiar a Dios a
-      cumplirla.
+      En Mateo 4 y Lucas 4, el diablo invita a Jesús a saltar desde lo alto del templo
+      y cita la promesa de que los ángeles lo guardarán. Omite "en todos tus caminos",
+      una frase que sitúa la protección en el camino que Dios ha dado. Jesús responde
+      con Deuteronomio: "No pongas a prueba al Señor tu Dios". La escena muestra que
+      unas palabras bíblicas pueden citarse con precisión y aplicarse mal. La confianza
+      sigue a Dios frente al peligro real; no crea peligro para exigir una prueba.
   - q: ¿Qué es el lazo del cazador en el Salmo 91:3?
     a: >-
-      Era el oficio de quien cazaba aves, y el lazo era una trampa escondida —
-      una red o un nudo que el ave nunca vio y del que no habría escapado por ser
-      cuidadosa. Ese es el punto de la imagen. El versículo 3 lo pone junto a la
-      plaga mortal, y las dos comparten una cualidad: llegan sin aviso, y ser
-      prudente no es defensa. El salmo no promete protección contra peligros que
-      tú mismo podrías haber evitado. Habla del tipo que ya estaba puesto antes de
-      que llegaras.
+      El cazador atrapaba aves con una red o un lazo oculto. El ave podía caer sin
+      haber visto la trampa, por lo que la imagen representa un peligro preparado de
+      antemano. El versículo 3 lo une con una enfermedad mortal, otra amenaza que puede
+      avanzar sin ser vista. El poema reconoce los límites de nuestra atención y pide
+      a Dios un cuidado que alcanza más allá de lo que podemos prever.
   - q: ¿Qué significa "mandará a sus ángeles acerca de ti"?
     a: >-
-      Los versículos 11 y 12 dicen que Dios asigna ángeles para guardar a quien se
-      refugia en él, y los retratan levantándolo en sus manos para que no se
-      golpee el pie con una piedra. La escala es deliberadamente pequeña — no es
-      rescate de una catástrofe, es el tropiezo corriente. Las palabras que más
-      importan son el límite: te guardan "en todos tus caminos", es decir, a lo
-      largo del camino que de verdad estás recorriendo. Es una promesa de compañía
-      en el camino, y esa es exactamente la expresión que el diablo omitió al
-      citarle el versículo a Jesús.
+      Los versículos 11 y 12 describen a Dios enviando ángeles para guardar al creyente
+      en su camino, incluso levantándolo para que no tropiece con una piedra. La frase
+      "en todos tus caminos" vincula ese cuidado con la senda que la persona ya
+      recorre. El diablo omite precisamente esas palabras al citar el pasaje a Jesús,
+      transformando la guía en un supuesto seguro para una prueba temeraria.
   - q: ¿Qué significa "pisarás al león y a la cobra" en el Salmo 91:13?
     a: >-
-      El versículo 13 es una imagen de victoria, no una afirmación sobre animales
-      salvajes. Los leones y las serpientes eran las dos cosas que mataban gente
-      en campo abierto, y poner el pie sobre uno de ellos es lo que se hace
-      después de que ya está vencido. El salmo ha pasado doce versículos hablando
-      de amenazas que vienen hacia ti; esta línea termina con las amenazas debajo
-      de ti. Escritores posteriores oyeron más en esto — la frase de Pablo sobre
-      que Dios aplastará a Satanás bajo tus pies, en Romanos 16:20, reutiliza la
-      imagen — pero el salmo mismo hace un punto más simple. Las cosas que te
-      cazan no tienen la última jugada.
+      Los leones y las serpientes representan amenazas mortales del campo abierto.
+      Pisarlos es una imagen poética de victoria después de que el peligro ha sido
+      vencido, no una invitación a acercarse a animales peligrosos. Romanos 16:20 usa
+      una imagen parecida al hablar de Dios aplastando a Satanás bajo los pies de los
+      creyentes. En el Salmo 91, la amenaza no obtiene la victoria final.
   - q: ¿Quién escribió el Salmo 91?
     a: >-
-      Nadie lo sabe. El Salmo 91 no tiene título en el texto hebreo, lo cual es
-      poco habitual, y eso significa que el salmo no lleva nombre de autor. Como
-      el salmo anterior se atribuye a Moisés, algunos lectores antiguos supusieron
-      que este también era suyo. Otros defendieron a David, en parte por el
-      lenguaje de plaga del versículo 6 y por la plaga ocurrida durante su
-      reinado. Las dos son suposiciones. La respuesta honesta es que el salmo es
-      anónimo, y nada en la manera de leerlo depende de resolver la cuestión.
+      El texto hebreo no da el nombre del autor. Algunos lectores antiguos lo
+      relacionaron con Moisés porque el Salmo 90 lleva su nombre. Otros propusieron a
+      David, en parte por la mención de una plaga y la epidemia ocurrida durante su
+      reinado. Ninguna atribución puede demostrarse a partir del salmo. Su mensaje no
+      depende de resolver la autoría.
 entity:
   name: Salmo 91
   sameAs:
     - https://en.wikipedia.org/wiki/Psalm_91
 publishedAt: 2026-08-20
-reviewedAt: 2026-08-20
+reviewedAt: 2026-08-21
 ---
 
 ## Si es tu primera lectura del Salmo 91
 
-Léelo dos veces y, la segunda, marca en el margen quién está hablando.
-Encontrarás tres personas: un hombre que dice lo que ha decidido acerca de Dios,
-alguien que le responde largamente sobre lo que Dios hará, y luego Dios, que toma
-la palabra en los tres últimos versículos y habla en primera persona por única
-vez en el capítulo.
+Fíjate en los pronombres mientras lees. Aunque el salmo no identifica a los hablantes,
+los cambios de voz revelan tres partes. En los versículos 1 y 2, una persona da
+testimonio de su confianza en Dios. Del 3 al 13, otra voz se dirige a ella como "tú".
+En los tres versículos finales, Dios habla en primera persona.
 
-La razón para hacerlo es la misma por la que la mayoría de la gente termina
-decepcionada con este salmo. Casi todo lo que se cita del Salmo 91 en un cuadro
-en la pared o en una semana difícil viene de la sección del medio — el ánimo — y
-el ánimo está en tono alto. Cuando Dios habla por sí mismo, al final, suena
-distinto. Promete responder, rescatar, honrar y estar *con* la persona en la
-angustia. Esa última es más pequeña que "nada te tocará" y mucho más difícil de
-desmentir, y es la que se ha sostenido para los lectores de este salmo durante
-tres mil años.
+El cambio importa porque la sección intermedia contiene afirmaciones muy amplias sobre
+la seguridad. Cuando Dios toma la palabra, promete responder, rescatar, proteger,
+honrar y estar *con* el creyente en la angustia. La dificultad sigue presente. Las
+palabras de Dios afirman su compañía fiel en vez de describir una vida intocable.
 
-Presta atención a una cosa más. Los versículos 11 y 12 son los versículos que el
-diablo cita a Jesús en Mateo 4, y Jesús los rechaza. Eso es único en la Biblia:
-una promesa tan fácil de abusar que la Escritura misma escenifica el abuso para
-ti y te muestra la respuesta correcta. El Salmo 91 es para quien busca refugio,
-no para quien decide arriesgarse.
+Las imágenes de protección son intensas: unas alas cubren al vulnerable, los ángeles
+guardan el camino y los animales peligrosos terminan bajo los pies. Invitan a presentar
+a Dios miedos concretos. No explican por qué sufren algunas personas fieles ni
+garantizan que una fe suficiente evitará toda enfermedad, lesión o muerte.
+
+Mateo 4 muestra al diablo usando los versículos 11 y 12 para convencer a Jesús de que
+corra un riesgo innecesario. Jesús se niega a poner a Dios a prueba. Esa escena ofrece
+una guía práctica para leer el Salmo 91: podemos buscar refugio en Dios cuando llega el
+peligro y, al mismo tiempo, actuar con sabiduría sin provocar una crisis para demostrar
+que una promesa funciona.

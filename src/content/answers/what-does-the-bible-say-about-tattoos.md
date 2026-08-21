@@ -11,12 +11,12 @@ aliases:
   - are tattoos against the Bible
 shortAnswer: >-
   The Bible mentions tattoos once. Leviticus 19:28 tells Israel not to cut their
-  bodies for the dead or put marks on themselves, and no other verse in either
-  Testament returns to the subject. So the argument is never really about the number
-  of verses; it is about what that one verse was for. Read as a standing moral
-  command it still applies. Read as part of a group of rules about mourning rituals
-  and contacting the dead, its target was a practice rather than ink. Most churches
-  today treat it as a question of motive and wisdom rather than law.
+  bodies for the dead or put marks on themselves. No other verse returns to the
+  subject. The disagreement concerns the purpose of that command. Some readers
+  understand it as a lasting moral rule. Others read it within a cluster of laws
+  about mourning and pagan worship, aimed at a religious practice in ancient
+  Israel. Most churches today treat tattoos as a matter of motive, content,
+  conscience, and wisdom.
 anchor:
   chapter: LEV.19
   passage: LEV.19.28
@@ -24,36 +24,32 @@ views:
   - id: still-forbidden
     name: The command still stands
     claim: >-
-      God told his people not to mark their bodies, gave no expiry date, and signed
-      the command with "I am the LORD" — the same signature attached to instructions
-      Christians still keep without argument.
+      God told Israel not to mark their bodies, gave no expiration date, and
+      closed the command with "I am the LORD." The same formula appears with
+      instructions Christians continue to follow.
     support: >-
-      Leviticus 19 is not a list of ceremonial trivia. It contains loving your
-      neighbour as yourself, honest weights and measures, care for the deaf and blind,
-      and a ban on taking revenge — commands the New Testament quotes approvingly and
-      no Christian treats as expired. The tattoo instruction sits in that chapter,
-      among those, and closes with the same formula God uses to underwrite the ones
-      nobody disputes. Nothing in the verse ties it to a specific ritual; it simply
-      says do not do it. And the New Testament adds a reason of its own rather than
-      removing one, describing a Christian's body as the Holy Spirit's temple and as
-      something bought at a price. On this reading, the burden of proof is on anyone
-      claiming a command was withdrawn, and no verse withdraws this one.
+      Leviticus 19 contains more than ritual details. It commands love of
+      neighbor, honest measures, care for people with disabilities, and freedom
+      from revenge. The New Testament affirms these teachings. The marking rule
+      appears in the same chapter and uses the same divine signature. Its second
+      clause doesn't explicitly tie the marks to a ritual. The New Testament also
+      describes a Christian's body as the Holy Spirit's temple and as something
+      bought at a price. Readers who hold this view place the burden of proof on
+      anyone claiming that the command no longer applies.
     objection: >-
       The same chapter forbids interbreeding cattle, sowing a field with two kinds of
-      seed, wearing cloth of two materials, and cutting the hair at the sides of your
-      head — and almost nobody who cites verse 28 keeps verse 19 or verse 27. That is
-      not a cheap debating point; it is evidence that Leviticus 19 mixes categories,
-      and that the "I am the LORD" signature appears on commands the church long ago
-      stopped applying as written. Once you concede that some instructions in this
-      chapter were for Israel's distinct national life rather than for all people
-      everywhere, the question becomes which kind this is — and that cannot be settled
-      by the verse being present.
+      seed, wearing cloth made from two materials, and cutting the hair at the
+      sides of the head. Most people who cite verse 28 don't apply verses 19 and
+      27 in the same way. Leviticus 19 therefore contains several kinds of law,
+      and "I am the LORD" also appears with commands the church no longer applies
+      literally. Once some instructions are recognized as part of Israel's
+      distinct national life, the presence of verse 28 alone can't establish
+      which kind of command it is.
     held: >-
-      The historic position of much of the church, and still the teaching of many
-      conservative Protestant and Orthodox communities. It was also the general
-      Christian instinct for centuries: Roman emperors banned facial tattooing under
-      Christian influence, and marking the body was widely associated with slavery and
-      paganism.
+      Much of the church historically opposed tattooing, and many conservative
+      Protestant and Orthodox communities still do. Under Christian influence,
+      Roman emperors banned facial tattooing. For centuries, body marks were also
+      widely associated with slavery and pagan worship.
     verses:
       - usfm: LEV.19.28
         gloss: >-
@@ -62,46 +58,44 @@ views:
           cutting it, closing with the phrase "I am the LORD".
       - usfm: LEV.19.18
         gloss: >-
-          Ten verses earlier, in the same speech, is "love your neighbour as yourself"
-          — which Jesus calls the second greatest commandment. Proof that this chapter
-          is not disposable.
+          Ten verses earlier, the same speech says "love your neighbour as
+          yourself," which Jesus calls the second greatest commandment. The
+          chapter contains enduring moral instruction.
       - usfm: 1CO.6.19-20
         gloss: >-
           Paul, writing to Corinth about sexual sin, calls the Christian body a temple
           of the Holy Spirit that was bought at a price. Used here as a New Testament
-          reason for treating the body as not entirely your own.
+          reason for treating the body as belonging to God.
       - usfm: DEU.14.1
         gloss: >-
           Moses again, tying self-cutting to grief and to Israel's identity as God's
-          children. On this reading it reinforces rather than narrows the concern
-          about marking the body.
+          children. The strict reading sees this as reinforcing the broader
+          concern about marking the body.
   - id: pagan-mourning
     name: A ban on mourning rites, not on ink
     claim: >-
       The verse belongs to a run of instructions about the dead, divination and pagan
-      ritual, and its subject is a specific religious practice — grieving the way the
-      neighbours grieved — rather than decoration.
+      ritual. Its target is a religious mourning practice used by surrounding
+      peoples, not decorative ink.
     support: >-
       Look at what surrounds it. The verses immediately before forbid eating blood,
-      practising divination and interpreting omens; verse 27 forbids a particular
+      practicing divination and interpreting omens; verse 27 forbids a particular
       haircut associated with foreign worship; verse 28 puts cutting for the dead and
-      marking the body in one sentence. That is a cluster about the cult of the dead
-      and pagan religion, not a cluster about appearance. Deuteronomy 14:1 makes the
+      marking the body in one sentence. The cluster concerns the dead and pagan
+      religion. Deuteronomy 14:1 makes the
       link explicit by naming grief as the occasion for cutting, and Leviticus 21:5
       repeats the ban for priests in the same terms. First Kings shows what the
       practice looked like in the wild: the prophets of Baal cutting themselves until
-      blood ran, trying to get a god's attention. If the target is that, then a
-      command against it says nothing about a modern tattoo, which is not a mourning
-      rite and not an appeal to any god.
+      blood ran as they sought their god's attention. If Leviticus targets that
+      practice, a modern tattoo with no connection to mourning or worship falls
+      outside the command.
     objection: >-
-      The verse does not actually say "for the dead" about the marks. It says do not
-      make cuts in your bodies for the dead, and do not put marks on yourselves — two
-      clauses, and only the first carries the qualifier. Reading the mourning context
-      into the second half is an inference, and a determined reader can point out that
-      the writer knew how to add the qualifier when he wanted it, because he just did.
-      There is also very little hard evidence about what the Hebrew word actually
-      described; it appears nowhere else in the Bible, so nobody can demonstrate from
-      the text that it meant a religious mark rather than any mark at all.
+      The words "for the dead" directly modify the cuts, not the marks. The verse
+      contains two clauses, and only the first carries that qualifier. Extending
+      the mourning context into the second clause is an inference. Evidence for
+      the rare Hebrew word is also limited because it appears nowhere else in
+      the Bible. The text alone can't demonstrate whether it meant a ritual mark
+      or every kind of mark.
     held: >-
       The most common reading among modern Old Testament scholars and in most
       mainstream commentaries, and the position of many evangelical pastors who
@@ -109,48 +103,43 @@ views:
     verses:
       - usfm: LEV.19.26-28
         gloss: >-
-          The verse read with its neighbours. Blood, divination, omens, a forbidden
-          haircut, cutting for the dead, and marks — a group of instructions about
-          pagan religion rather than about style.
+          Read with its neighbors, the verse follows instructions about blood,
+          divination, omens, a forbidden haircut, and cutting for the dead. The
+          context points toward pagan religious practices.
       - usfm: DEU.14.1
         gloss: >-
-          The clearest parallel, and it names the occasion: do not cut yourselves or
-          shave your foreheads for the dead. Grief, not appearance, is the setting.
+          This close parallel names the occasion: "do not cut yourselves or
+          shave your foreheads for the dead." The setting is grief.
       - usfm: LEV.21.5
         gloss: >-
           The same prohibition applied to priests, again alongside shaving practices,
-          which suggests a recognisable ritual complex rather than a general aesthetic
-          rule.
+          suggesting a recognizable ritual complex.
       - usfm: 1KI.18.28
         gloss: >-
           The prophets of Baal on Mount Carmel, cutting themselves with swords and
-          spears to force their god to answer. This is the practice the law was
-          written against, described in action.
+          spears as they seek an answer from their god. This scene illustrates
+          the kind of practice the contextual reading has in view.
   - id: wisdom-question
     name: A wisdom question rather than a law question
     claim: >-
-      Whatever Leviticus 19:28 required of Israel, the New Testament does not carry
-      the ceremonial code forward as law — so the live question for a Christian is
-      motive, conscience and witness, not permission.
+      The New Testament doesn't carry Israel's ceremonial code forward as law
+      for Gentile Christians. The present questions concern motive, conscience,
+      permanence, and witness.
     support: >-
-      The New Testament repeatedly refuses to bind Gentile Christians to Israel's
+      The New Testament repeatedly declines to bind Gentile Christians to Israel's
       ritual distinctives. The council in Acts 15 lists what Gentile believers must
-      keep and tattooing is not on it; Paul treats food laws, festivals and
-      circumcision as shadows whose substance has arrived; and he tells the Roman
-      church to stop condemning each other over exactly this class of question,
-      putting the decision under each believer's own conscience before God. On that
-      footing, "is it allowed?" is the wrong question and produces bad answers in both
-      directions. The better ones are the ones Paul actually asks: what is this for,
-      who is it for, does it honour the God who owns this body, and can you do it
-      without contempt for people who would decide differently.
+      keep and doesn't mention tattooing. Paul describes food laws and festivals
+      as shadows and resists using circumcision as a requirement. In Romans 14,
+      he places disputed practices under each believer's conscience before God
+      and tells the church to stop condemning one another. This approach asks
+      what the tattoo communicates, why someone wants it, whether it honors God,
+      and whether people can disagree without contempt.
     objection: >-
       This can become a way of never answering. "It depends on your motive" is true of
-      almost any action and can excuse almost any action, and it puts the decision in
-      the hands of the person least able to judge it. There is also a real asymmetry
-      the argument tends to skip: a tattoo is permanent in a way a meal or a festival
-      is not, and Paul's conscience passages are about things that can be stopped
-      tomorrow. A reader who is genuinely unsure is arguably being told, by this view,
-      to make an irreversible decision on the strength of a self-assessment.
+      almost any action and can become an excuse. A tattoo is also permanent in
+      a way that a meal or festival isn't, while Paul's examples in Romans 14
+      involve practices that can change the next day. Someone who remains unsure
+      should take that permanence seriously before relying on self-assessment.
     held: >-
       The most common position in mainstream Protestant and Catholic teaching today,
       and the practical stance of most pastors, who tend to discuss content,
@@ -158,42 +147,36 @@ views:
     verses:
       - usfm: COL.2.16-17
         gloss: >-
-          Paul telling the Colossians to let nobody judge them over food, festivals or
-          Sabbaths, because those were a shadow of something that has now come. The
-          category argument in one sentence.
+          Paul tells the Colossians not to accept judgment over food, festivals,
+          or Sabbaths because these were shadows of what has come in Christ.
       - usfm: ACT.15.28-29
         gloss: >-
           The Jerusalem council setting out the short list of requirements for Gentile
-          believers. Notable for what is absent as much as for what is there.
+          believers. Tattooing isn't among them.
       - usfm: ROM.14.22-23
         gloss: >-
           Paul putting disputed practices under personal conviction before God, and
-          warning that acting against your own conscience is itself the problem.
+          warning against acting in defiance of one's own conscience.
       - usfm: 1CO.10.31
         gloss: >-
-          The rule Paul reaches for when no rule applies: whatever you do, do it for
-          God's glory. The question this view says a Christian should actually be
-          asking.
+          Paul gives a broad principle for disputed actions: whatever you do, do
+          it for God's glory.
 bottomLine: >-
-  On the plain text, this is a thin case in both directions. One verse, one Hebrew
-  word that appears nowhere else in the Bible, and no follow-up anywhere in either
-  Testament — including from Paul, who was willing to write at length about hair,
-  food, festivals and circumcision. Anyone claiming the Bible is emphatic about
-  tattoos is overstating the evidence, and anyone claiming it says nothing at all is
-  ignoring a verse. What can be said with confidence is that the practice Leviticus
-  had in view was tied to grief and to the worship of other gods, that the New
-  Testament never carries the instruction forward, and that no New Testament writer
-  treats body marking as a live issue for the churches. What is left is a genuine
-  question of wisdom, and it is not a small one: a tattoo is permanent, it carries a
-  message, and it goes on a body that a Christian confesses is not entirely their own.
-  Those are better things to weigh than a verdict.
+  The biblical evidence is limited: one verse, one Hebrew word found nowhere
+  else, and no New Testament discussion of the subject. Leviticus places the
+  command near mourning and pagan worship practices, yet "for the dead" directly
+  modifies cutting and may not govern the second clause about marks. The New
+  Testament never repeats the instruction or treats body marking as a church
+  issue. For most Christians, the decision therefore belongs to wisdom. A tattoo
+  is permanent, communicates a message, and goes on a body understood to belong
+  to God. Those concerns deserve more attention than a simple verdict.
 caution:
   - >-
     Leviticus 19:28 is often quoted as though the Bible returns to the subject
-    repeatedly. It does not. This is the only verse in the Bible that mentions
+    repeatedly. It doesn't. This is the only verse in the Bible that mentions
     tattooing, the Hebrew word behind it occurs nowhere else, and no writer in the New
-    Testament mentions the practice at all. A case built on one verse is not
-    worthless, but it should be presented as what it is.
+    Testament mentions the practice. That doesn't make the verse worthless, but
+    it should keep claims proportionate to the evidence.
   - >-
     Quoting verse 28 while ignoring verses 19 and 27 is the most common failure on the
     strict side. The same chapter, in the same voice, forbids planting two kinds of
@@ -203,59 +186,52 @@ caution:
   - >-
     On the permissive side, the argument that "it was only about pagan mourning" is
     stronger than the text quite proves. The verse attaches "for the dead" to cutting
-    and not to marking, and the context is suggestive rather than decisive. It is fair
-    to say the surrounding verses point that way; it is not fair to say the verse says
-    so.
+    but not directly to marking. The surrounding context supports a ritual
+    reading without proving it.
   - >-
     Whatever you conclude, tattoos are not a measure of anybody's standing with God,
-    and treating them as one is the actual error in most conversations about this.
+    and treating them that way creates the deeper error in many conversations.
     Christians with tattoos are not second-class, and Christians without them are not
     more obedient. Neither the strict reading nor the permissive one makes ink a test
-    of faith, and the New Testament's own list of what to judge people by does not
+    of faith, and the New Testament's own list of what to judge people by doesn't
     include their skin.
 faqs:
   - q: Does Leviticus 19:28 forbid tattoos for Christians today?
     a: >-
       That is the question in dispute, and the honest answer is that the verse does not
-      settle it by itself. It plainly forbade something to ancient Israel. Whether the
-      command carries over depends on whether you read it as a moral instruction for
-      all people or as part of Israel's distinct national and religious life — and
-      Leviticus 19 contains both kinds, since it also gives us "love your neighbour as
-      yourself" and a rule about not wearing two kinds of fabric. Most churches today
-      do not treat it as binding law, and most also do not treat the question as
-      trivial. What no one can honestly claim is that the New Testament repeats or
-      confirms it, because it never mentions the subject.
+      settle it by itself. It clearly prohibited something for ancient Israel.
+      Applying it today depends on whether the command is read as a universal
+      moral instruction or part of Israel's distinct religious life. Leviticus
+      19 contains both "love your neighbour as yourself" and a rule against
+      wearing two kinds of fabric. Most churches don't treat verse 28 as binding
+      law, and the New Testament never repeats it.
   - q: Is getting a tattoo a sin?
     a: >-
       No mainstream Christian tradition teaches that a tattoo is automatically sinful,
       and none of them teaches it is automatically fine either. The considerations that
-      actually come up in pastoral conversation are what the tattoo says, why you want
-      it, whether it is permanent regret in the making, whether you are doing it in
-      defiance of your own conscience — which Paul treats as the real problem in Romans
-      14 — and whether you can hold your view without contempt for people who hold the
-      other one. If your conscience genuinely objects, the New Testament's advice is
-      not to override it. If it does not, the New Testament nowhere supplies a rule
-      that would.
+      come up in pastoral conversation are its message, motive, permanence, and
+      relationship to conscience. Romans 14 treats acting against conscience as
+      serious and calls people to disagree without contempt. If someone's
+      conscience objects, the New Testament advises against overriding it. If it
+      doesn't, the New Testament supplies no direct rule against the tattoo.
   - q: What was the tattooing that Leviticus was talking about?
     a: >-
       Nobody knows for certain, because the Hebrew word appears only in this verse and
-      cannot be checked against another use. What can be reconstructed is the world
-      around it. Peoples in the region marked their skin in connection with mourning
-      the dead, with dedication to a particular god, and with slavery — a mark of
-      ownership. All three would explain why Israel, whose identity depended on
-      belonging to one God and being distinct from the nations, was told not to do it.
-      The verse's own sentence pairs it with cutting the body for the dead, which is at
-      least a hint about the setting.
+      can't be compared with another biblical use. In the surrounding ancient
+      world, skin marks could be connected with mourning the dead, dedication to
+      a god, or slavery and ownership. Any of these would explain why Israel was
+      told to remain distinct. The verse pairs marks with cutting for the dead,
+      which points toward that ritual setting.
   - q: Does "your body is a temple" apply to tattoos?
     a: >-
       Paul's line about the body being a temple of the Holy Spirit comes in 1
-      Corinthians 6, and his subject there is sexual immorality — specifically men in
+      Corinthians 6, and his subject there is sexual immorality, specifically men in
       Corinth visiting prostitutes. He is not discussing appearance, decoration or
       modification, and the argument he builds is about what you do with your body
-      sexually and to whom it belongs. That does not make the verse irrelevant: the
-      principle that a Christian's body is not their own private property is a real one
-      and worth applying. But applying it requires an argument, not a quotation, and
-      people on both sides of the tattoo question can and do make one.
+      sexually and to whom it belongs. The broader principle that a Christian's
+      body belongs to God can still be applied, but doing so requires an argument
+      that goes beyond quoting the verse. Christians on both sides make that
+      argument differently.
   - q: Are there tattoos or marks anywhere else in the Bible?
     a: >-
       There are marks, though none of them is a tattoo in the modern sense. Isaiah has
@@ -264,8 +240,8 @@ faqs:
       of the beast and names written on the redeemed, and pictures Christ returning
       with a name written on his robe and thigh. Paul tells the Galatians he bears the
       marks of Jesus on his body, almost certainly meaning scars from beatings. These
-      are used by some as evidence that marking is not inherently offensive to God, and
-      by others as symbolic language that says nothing about the practice either way.
+      passages show that marking imagery isn't inherently offensive to God, but
+      most are symbolic and don't directly address modern tattooing.
   - q: What do different churches teach about tattoos?
     a: >-
       Most Protestant denominations have no official position and leave it to
@@ -276,7 +252,7 @@ faqs:
       Conservative and fundamentalist churches are the most likely to teach against
       them outright, usually from Leviticus 19:28. Some Christian communities have
       historically used tattoos deliberately, including Coptic Christians in Egypt who
-      have marked crosses on their wrists for centuries as an identifier that could not
+      have marked crosses on their wrists for centuries as an identifier that couldn't
       be renounced.
 relatedTopics:
   - wisdom
@@ -288,72 +264,67 @@ entity:
     - https://en.wikipedia.org/wiki/Tattoo
     - https://en.wikipedia.org/wiki/Book_of_Leviticus
 publishedAt: 2026-08-19
-reviewedAt: 2026-08-19
+reviewedAt: 2026-08-21
 ---
 
 ## One verse, one word
 
-The whole biblical case about tattoos rests on the second half of a single
-sentence. Leviticus 19:28 forbids two things — making cuts in your body for the
-dead, and putting marks on yourself — and the Hebrew word behind that second
-phrase, *qaʿaqaʿ*, appears nowhere else in the Bible. Not once. That is unusual
-enough to matter, because the normal way to work out what a Hebrew word means is
-to look at its other uses, and here there are none.
+The biblical discussion of tattoos rests on the second half of one sentence.
+Leviticus 19:28 prohibits making cuts in the body for the dead and putting marks
+on the body. The Hebrew word for the second action, *qaʿaqaʿ*, appears nowhere
+else in Scripture. Translators therefore can't compare it with another biblical
+use.
 
-So translators have had to guess from context and from what is known about the
-ancient world. "Tattoo" is a reasonable guess and most modern Bibles make it.
-Older ones were vaguer: the King James has "print any marks upon you", which is
-honest about the uncertainty.
+Context and ancient cultural evidence have to supply the likely meaning.
+"Tattoo" is a reasonable choice used by most modern translations. The King
+James Version uses the broader phrase "print any marks upon you", which leaves
+more of the uncertainty visible.
 
 ## Why the argument is really about categories
 
-Nobody disputes that God told Israel not to do this. The disagreement is about
-what kind of instruction it was, and that question runs through the whole Old
-Testament rather than just this verse.
+The command clearly addressed ancient Israel. The disagreement concerns what
+kind of instruction it was and how Christians understand Old Testament law.
 
 Leviticus 19 is a good place to see the difficulty. In the space of one chapter
-you get "love your neighbour as yourself", which Jesus quotes as the second
-greatest commandment, and a rule against wearing clothing made of two kinds of
-material, which no Christian has kept for two thousand years. Both are in the
-same voice. Both end with God's own signature. And the chapter itself gives you
-no headings to sort them by.
+it says "love your neighbour as yourself," which Jesus calls the second greatest
+commandment, and prohibits clothing made from two kinds of material, a rule
+Christians haven't generally applied for centuries. Both appear in the same
+voice and under God's authority. The chapter provides no labels to sort their
+continuing application.
 
 Christians have long distinguished between commands that reflect God's unchanging
 character and commands that marked Israel out as a distinct nation with a
-distinct worship — a distinction the New Testament clearly makes somewhere, since
-it drops circumcision, food laws and festivals while keeping the moral
-instructions. What the New Testament does not do is hand over a list. So each
-case has to be argued.
+distinct worship. The New Testament clearly makes some version of that
+distinction because it doesn't require Gentiles to adopt circumcision, food
+laws, and festivals while retaining many moral commands. It doesn't provide a
+simple list, so the application of individual laws still requires interpretation.
 
 ## The strongest thing on each side
 
-For the strict reading: the verse exists, it has no expiry date attached, and the
-New Testament never repeals it. If you think the burden of proof falls on the
-person claiming a command has lapsed, that is a real position and not a silly one.
+The strict reading begins with the verse itself. It has no expiration date, and
+the New Testament never explicitly repeals it. Readers who require clear
+evidence before setting aside a command have a coherent reason for caution.
 
 For the permissive reading: the verse sits in a run of instructions about eating
 blood, divination, omens, a forbidden haircut and cutting yourself for the dead.
-That is a paragraph about pagan religion. And Deuteronomy 14:1 makes the mourning
-connection explicit — do not cut yourselves or shave your foreheads for the dead
-— which is the closest thing to a commentary the Bible offers on its own verse.
+The paragraph concerns pagan religion and practices around death. Deuteronomy
+14:1 makes the mourning connection explicit with "do not cut yourselves or
+shave your foreheads for the dead," providing Scripture's closest parallel.
 
-## What actually decides it, for most people
+## Questions that help with the decision
 
-In practice almost nobody decides this by exegesis, and almost nobody should
-pretend otherwise. What tends to decide it is a set of questions the Bible does
-address at length:
+In practice, the decision usually turns on questions the Bible addresses more
+directly than it addresses tattooing itself.
 
-Is this something you want, or something you are proving? Paul's letters are full
-of warnings about doing things to be seen, and about doing things in defiance of
-your own conscience — which he says is a problem even when the action itself is
-fine.
+Is this a thoughtful choice or an attempt to prove something? Paul's letters
+warn against performative choices and against acting in defiance of conscience,
+even when the action itself may be permitted.
 
 What does it say? A tattoo is a message you are choosing to carry permanently.
-The content is a far more Christian question than the medium.
+Its content deserves at least as much attention as the medium.
 
-Can you hold your view without contempt? This is the one Paul actually gets angry
-about. Romans 14 is written to a church tearing itself apart over food and
-holy days, and his instruction is not to settle the question but to stop despising
-each other over it. Given that the tattoo question has considerably less
-scriptural weight than the food question did, a Christian who has become
-insufferable about it in either direction has picked up the wrong problem.
+Can people hold different conclusions without contempt? Romans 14 addresses a
+church divided over food and holy days. Paul's immediate instruction is to stop
+despising and condemning one another. The tattoo question carries less direct
+biblical attention than those disputes did, so hostility over it can become a
+larger spiritual problem than the original decision.

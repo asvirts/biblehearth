@@ -21,8 +21,8 @@ const share = figure ? await shareCardFromFigure(figure) : undefined;
 ---
 
 <BaseLayout
-	title={`Bible Topics — Verses About ${names} and More`}
-	description={`Bible verses by topic, grouped by theme with plain-English context for every passage. ${topics.length} topics covering ${names.toLowerCase()}, and more.`}
+	title={`Bible Topics | Verses About ${names} and More`}
+	description={`Find Bible verses by topic, grouped by theme and explained in context. Browse ${topics.length} topics, including ${names.toLowerCase()}.`}
 	canonicalPath="/topics"
 	image={share?.image}
 	imageAlt={share?.imageAlt}
@@ -48,9 +48,9 @@ const share = figure ? await shareCardFromFigure(figure) : undefined;
 
 	<h1>Bible Verses by Topic</h1>
 	<p class="lede">
-		Every topic is a curated set of passages grouped by theme, with a sentence
-		of context for each verse explaining who is speaking and why it belongs —
-		plus an honest note on how the passages are commonly misused.
+		Each topic brings related passages together by theme. A short note explains
+		who is speaking, what is happening, and why the verse belongs in the list.
+		Where a passage is often misused, the page explains the problem directly.
 	</p>
 
 	{figure ? <Figure figure={figure} /> : null}

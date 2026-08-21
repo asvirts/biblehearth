@@ -6,91 +6,89 @@ aliases:
   - waiting on God
   - discouraged
 shortAnswer: >-
-  Biblical hope is not optimism. The word describes confident expectation
-  directed at a specific promise, which is why Scripture can command it without
-  requiring cheerfulness. Romans 8 defines it as being about what you cannot yet
-  see, and Lamentations arrives at its most quoted line about hope only after
-  two full chapters of grief.
+  Biblical hope is confident expectation anchored in a promise. It can survive
+  when cheerfulness disappears because its basis lies beyond a person's mood.
+  Romans 8 connects hope with what can't yet be seen, and Lamentations reaches
+  its best-known words of hope after two chapters of grief.
 groups:
   - id: not-optimism
-    heading: Hope is expectation aimed at a promise, not a mood
+    heading: Hope rests on a promise
     rationale: >-
-      The New Testament repeatedly defines hope by its object rather than by how
-      it feels, which is what allows it to survive bad circumstances.
+      The New Testament defines hope by what it expects and whom it trusts. Its
+      foundation can remain steady through painful circumstances.
     verses:
       - usfm: ROM.8.24-25
         gloss: >-
           Paul defines hope by what is not yet visible and pairs it with
-          patience, making waiting part of the definition rather than a failure
-          of it.
+          patience. Waiting belongs to hope because fulfillment hasn't arrived
+          yet.
       - usfm: HEB.6.19
         gloss: >-
-          The image is an anchor — something that holds precisely because it is
-          fixed somewhere other than where you are.
+          The image is an anchor secured beyond the shifting conditions where a
+          person currently stands.
       - usfm: HEB.11.1
         gloss: >-
           Faith is defined in terms of things hoped for, tying the two together
-          as confidence about what has not yet arrived.
+          as trust in what has been promised but hasn't arrived.
   - id: after-grief
     heading: The strongest statements of hope come out of grief
     rationale: >-
-      Scripture does not place hope in opposition to sorrow. Its most-quoted
-      hopeful lines are written by people in ruins, which is what gives them
-      their weight.
+      Some of Scripture's strongest words of hope come from people surrounded
+      by ruins. Sorrow remains present when they begin to look ahead.
     verses:
       - usfm: LAM.3.21-23
         gloss: >-
-          Jeremiah reaches new mercies every morning only after two chapters
-          cataloguing devastation, and calls it to mind deliberately.
+          After two chapters cataloging devastation, the writer deliberately
+          recalls God's mercy and faithfulness.
       - usfm: PSA.42.11
         gloss: >-
-          The psalmist commands his own soul to hope, which implies it was not
-          doing so spontaneously.
+          The psalmist speaks hope to his downcast soul because the feeling
+          hasn't arisen on its own.
       - usfm: ROM.5.3-5
         gloss: >-
           Paul traces a sequence from suffering through perseverance and
-          character to hope, refusing to skip the earlier stages.
+          character before reaching hope. Each stage has a place in the process.
   - id: renewal
     heading: Hope is repeatedly tied to waiting and renewal
     rationale: >-
       Where Scripture addresses exhaustion, hope is described as something that
-      restores strength over time rather than instantly.
+      renews strength through a period of waiting.
     verses:
       - usfm: ISA.40.31
         gloss: >-
           Written to a worn-out people, the promise is renewed strength for
-          those who wait — and the imagery descends from soaring to simply not
-          fainting.
+          those who wait. The imagery moves from soaring to running and finally
+          to walking without fainting.
       - usfm: JER.29.11
         gloss: >-
           Spoken to exiles who had just been told to settle in for seventy
-          years, which is the context that makes the promise serious rather
-          than sentimental.
+          years. The promise offers a future across generations, not immediate
+          escape.
 misuse: >-
   Jeremiah 29:11 is the most commonly misapplied verse in this collection. It is
   a promise to a nation in exile, delivered alongside instructions to build
-  houses and plant gardens because the exile would last seventy years — most of
+  houses and plant gardens because the exile would last seventy years. Most of
   the original hearers died before it was fulfilled. Read as a personal
   guarantee of career success or good outcomes, it becomes something the text
-  never claimed. Biblical hope is also not a duty to appear positive. Lamentations
-  and the psalms of complaint are preserved precisely because faithful people
-  have sat in despair, and treating hope as an obligation to feel better is a
-  good way to make grieving people feel faithless.
+  never claimed. Biblical hope also doesn't require a positive appearance.
+  Lamentations and the psalms of complaint preserve the words of faithful people
+  in despair. Pressuring someone to feel better can add shame to grief and
+  misrepresent the hope these passages offer.
 faqs:
-  - q: What does Jeremiah 29:11 actually mean in context?
+  - q: What does Jeremiah 29:11 mean in context?
     a: >-
       It was written to Judeans exiled in Babylon, in a letter telling them to
       settle down because the exile would last seventy years. The promise of a
       future and a hope is addressed to the nation across generations, not to an
-      individual expecting immediate improvement — many who first heard it never
+      individual expecting immediate improvement. Many who first heard it never
       saw it fulfilled.
   - q: How is biblical hope different from wishful thinking?
     a: >-
       Wishful thinking has no basis beyond preference. Biblical hope is defined
-      by its object — a specific promise — which is why Hebrews can compare it to
+      by its object, a specific promise, which is why Hebrews can compare it to
       an anchor. Romans 8:24-25 explicitly ties it to what is not yet seen and
-      pairs it with patience, so it functions as confident waiting rather than
-      hoping for the best.
+      pairs it with patience. Biblical hope is confident waiting grounded in
+      God's promise.
 related:
   - peace
   - trust
@@ -105,12 +103,12 @@ sources:
   - torreys
   - editorial
 publishedAt: 2026-08-17
-reviewedAt: 2026-08-17
+reviewedAt: 2026-08-21
 ---
 
-English flattens hope into something close to wishing. The biblical words are
-firmer — expectation with a reason attached, aimed at something specific.
+In ordinary English, hope can sound like a wish. Scripture uses firmer language:
+an expectation tied to a reason and directed toward a promise.
 
-That is why the New Testament can pair hope with patience without
-contradiction, and why the most durable hopeful passages in Scripture were
-written by people whose circumstances had not improved at all.
+That meaning explains why the New Testament pairs hope with patience. It also
+explains why some of the Bible's most durable hopeful passages were written by
+people whose circumstances had not yet improved.

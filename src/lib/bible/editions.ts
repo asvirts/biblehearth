@@ -87,7 +87,7 @@ export const BIBLE_EDITIONS: readonly BibleEdition[] = [
 		summary:
 			'The most widely read modern English Bible. It aims for the sentence an English writer would have written, which makes it easy to read and sometimes hides how strange the original wording is.',
 		about: [
-			'The NIV was translated from scratch in the 1960s and 70s by scholars drawn from several countries and denominations rather than by one church or one publisher’s in-house team. That was deliberate: the committee wanted a Bible no single tradition owned. It has been revised twice since, in 1984 and again in 2011, and the committee that made it still meets to keep revising it.',
+			'The NIV was translated from scratch in the 1960s and 70s by scholars from several countries and denominations. The committee wanted a Bible that no single church tradition owned. It has been revised twice, in 1984 and 2011, and the committee still meets to review the translation.',
 			'It sits in the middle of the range translators argue about. A word-for-word translation follows the grammar of the Hebrew or Greek even when the English comes out strange; a thought-for-thought translation says what the sentence means and lets the grammar go. The NIV does the first where it can and the second where it has to, which is why it reads smoothly and why people who want to see the seams reach for something else.',
 			'The 2011 revision is the one you are reading here. Its most argued-over change was to say "brothers and sisters" where the Greek says "brothers" but is addressing a whole church, and to make similar changes elsewhere. Some readers welcomed that as more accurate to who was being spoken to; others preferred the older wording. Knowing the change exists is usually enough.',
 		],
@@ -118,7 +118,7 @@ export const BIBLE_EDITIONS: readonly BibleEdition[] = [
 		summary:
 			'A Bible that opens a word up instead of choosing one English equivalent for it, using brackets to show the other meanings the original could carry.',
 		about: [
-			'Most translations have to pick one English word for each Hebrew or Greek word and move on. The Amplified does not pick. Where a word in the original carries a range of meaning, it prints several English options together, marking with brackets and parentheses what has been added to help. The work behind it began with Frances Siewert, the complete Bible appeared in 1965, and it was substantially revised in 2015.',
+			'Most translations choose one English rendering for a Hebrew or Greek word. The Amplified often places several options together, using brackets and parentheses to mark the extra help. Frances Siewert began the work, the complete Bible appeared in 1965, and a major revision followed in 2015.',
 			'The effect is that a single verse can tell you what a translator would otherwise have to put in a footnote. If you have ever wondered why two Bibles word the same verse differently, the Amplified is often showing you both answers at once.',
 		],
 		approach:
@@ -147,21 +147,21 @@ export const BIBLE_EDITIONS: readonly BibleEdition[] = [
 			'One of the most literal English Bibles in common use, and the edition many readers deliberately stayed with when the 2020 revision arrived.',
 		about: [
 			'The NASB descends from the American Standard Version of 1901, and it inherited that translation’s habit of following the Hebrew and Greek closely even where the English comes out stiff. Where the original has an unusual word order or an odd idiom, you can usually see it through the English. The 1995 update smoothed the language a little without changing the method.',
-			'It is here alongside the 2020 revision rather than instead of it because the two are genuinely different to read, and a lot of people have a settled preference between them.',
+			'The 1995 and 2020 editions are both included because they feel different on the page, and many longtime NASB readers have a clear preference between them.',
 		],
 		approach:
 			'Formal — follows the grammar of the original closely, and lets the English be awkward when the original is.',
 		readingGrade: '11th grade',
 		readingLevel: 'Around an eleventh-grade reading level.',
 		bestFor:
-			'Studying how a sentence is actually built, and checking a verse you first read somewhere smoother.',
+			'Studying how a sentence is built and checking a verse you first read in a smoother translation.',
 		caution:
-			'Literal is not the same as clear. A translation that mirrors Greek word order can leave you certain of the words and unsure of the point, and long Greek sentences — Paul’s especially — survive into English as long English sentences.',
+			'A literal rendering can still be hard to understand. When the NASB mirrors Greek word order, you may recognize every word and still need to untangle the sentence. Paul’s long sentences often remain long in English.',
 		compare: [
 			{
 				slug: 'nasb2020',
 				label: 'NASB 2020',
-				note: 'The current revision: more natural English, and updated wording where the original addressed everyone rather than only men.',
+				note: 'The current revision, with more natural English and updated wording for passages addressed to mixed groups.',
 			},
 		],
 	},
@@ -171,9 +171,9 @@ export const BIBLE_EDITIONS: readonly BibleEdition[] = [
 		abbr: 'NASB 2020',
 		byline: 'The Lockman Foundation, 2020',
 		summary:
-			'The current New American Standard Bible — the same literal method as the 1995 edition, in English loosened where it was stiff for no good reason.',
+			'The current New American Standard Bible keeps the 1995 edition’s literal method while smoothing English that had become needlessly stiff.',
 		about: [
-			'The 2020 revision keeps the NASB’s approach of staying close to the Hebrew and Greek, while accepting that some of the awkwardness in earlier editions came from the English rather than from the original. Sentences were rebuilt where the older wording was hard to no purpose.',
+			'The 2020 revision stays close to the Hebrew and Greek while recognizing that some awkwardness in earlier editions came from dated English. Editors rebuilt sentences when the older wording made the meaning unnecessarily hard to follow.',
 			'It also changed how the translation handles words that addressed a mixed group. Where the Greek says "brothers" but is speaking to a whole church, this edition says "brothers and sisters"; where "man" meant a person, it often says "person". That change is the main reason the 1995 edition is still widely read, and both are on this site so you can compare them verse by verse.',
 		],
 		approach:
@@ -208,7 +208,7 @@ export const BIBLE_EDITIONS: readonly BibleEdition[] = [
 		bestFor:
 			'Reading with children, reading in a second language, and getting through a whole book without stalling.',
 		caution:
-			'Breaking long sentences into short ones can lose the joins between them. Paul argues in chains — therefore, because, so that — and when those sentences are split the steps are all still there but the argument can read like a list. For a closely reasoned chapter, read a fuller version afterwards.',
+			'Breaking a long sentence into several short ones can make its connections harder to see. Paul often links each step with words such as "therefore," "because," and "so that." The NIrV keeps the steps, but the argument may feel more like a list. Compare a fuller translation when the logic of a passage matters.',
 		compare: [
 			{
 				slug: 'niv',
@@ -221,17 +221,17 @@ export const BIBLE_EDITIONS: readonly BibleEdition[] = [
 		slug: 'bsb',
 		byline: 'Bible Hub and the Berean Bible translation team, 2022',
 		summary:
-			'A modern translation released under an unusually open licence, which is why it turns up in study tools and software almost everywhere.',
+			'A modern translation released under an unusually open license, which is why it appears in so many study tools and Bible apps.',
 		about: [
 			'The Berean Standard Bible was produced alongside the interlinear and study tools at Bible Hub, and it was built to be given away: the text is freely licensed, so anyone can quote it, print it or build on it without asking permission. Almost every other modern translation is tightly licensed, and that one difference explains how fast the BSB spread.',
-			'The translation itself aims at the middle — close enough to the original to be useful for study, plain enough to read straight through.',
+			'The translation aims for a middle path. It stays close enough to the original wording for study and remains smooth enough for extended reading.',
 		],
 		approach:
 			'Balanced — readable English, kept close to the wording underneath it.',
 		readingGrade: '8th grade',
 		readingLevel: 'Around an eighth-grade reading level.',
 		bestFor:
-			'Comparing wording, quoting freely, and study tools that need a modern text with no licence attached.',
+			'Comparing wording, quoting freely, and using study tools that need a modern text with an open license.',
 		caution:
 			'It is new, and very few churches read from it. Nothing is wrong with the translation, but you will rarely be following along in it on a Sunday, and far less has been written about it than about older versions.',
 		compare: [

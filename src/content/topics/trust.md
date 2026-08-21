@@ -6,90 +6,87 @@ aliases:
   - depend on God
   - lean not on your own understanding
 shortAnswer: >-
-  Trust in Scripture is less a feeling of certainty than a decision about where
-  to put your weight. Proverbs 3:5 contrasts it directly with leaning on your
-  own understanding, and the psalms repeatedly show people choosing to trust
-  while still afraid. It is treated as something you do in the absence of full
-  information, which is what distinguishes it from confidence.
+  Scripture describes trust as a decision about where to place your weight.
+  Proverbs 3:5 calls people to rely on God with their whole heart, and the
+  Psalms show people choosing that reliance while they are still afraid. Trust
+  can act without complete information or a settled feeling of confidence.
 groups:
   - id: what-it-is
-    heading: Trust is where you put your weight, not how certain you feel
+    heading: Trust directs where you rely
     rationale: >-
-      The central texts frame trust as a redirection of reliance rather than an
-      emotional state, which is why it can be commanded.
+      The central passages speak about where people lean and seek refuge. Trust
+      is a chosen direction that can coexist with uncertain feelings.
     verses:
       - usfm: PRO.3.5-6
         gloss: >-
-          The contrast is explicit — wholehearted reliance set against leaning
-          on your own understanding, with a promise attached to the choice.
+          Wholehearted reliance on God comes with a warning against making one's
+          own understanding the final authority.
       - usfm: PSA.56.3
         gloss: >-
           David writes this while in enemy hands, holding fear and trust in the
-          same sentence rather than resolving one into the other.
+          same sentence. One feeling doesn't have to erase the other.
       - usfm: JER.17.7-8
         gloss: >-
           Jeremiah's image is a tree by water whose leaves stay green in
-          drought — trust described by what it survives, not what it prevents.
+          drought. Trust is visible in what the tree survives.
   - id: alternatives
     heading: Scripture is blunt about the alternatives
     rationale: >-
       The texts name the competing objects of trust directly: wealth, military
-      strength, other people, and yourself. The critique is practical rather
-      than moralising.
+      strength, other people, and personal judgment. Each one has practical
+      limits as a final source of security.
     verses:
       - usfm: PSA.20.7
         gloss: >-
           Chariots and horses were the military technology of the day; the
-          contrast is between hardware and a name.
+          psalm places confidence in God's name above confidence in weapons.
       - usfm: PSA.118.8
         gloss: >-
           Sitting near the centre of the Hebrew Bible, this line prefers refuge
-          in God over confidence in people — including, by implication,
-          yourself.
+          in God over making people the final source of security.
       - usfm: PRO.11.28
         gloss: >-
           Riches are named as the specific failure mode, with a falling leaf as
-          the image of what happens to that kind of confidence.
+          the image for confidence that can't hold.
   - id: over-time
     heading: Trust is built by memory
     rationale: >-
-      Repeatedly the ground for trusting now is what happened before. Scripture
-      treats remembering as the discipline that makes trust possible.
+      People in Scripture often find a basis for present trust by recalling
+      God's past faithfulness. Remembering becomes a practical discipline.
     verses:
       - usfm: LAM.3.21-23
         gloss: >-
           Written amid the ruins of Jerusalem, the hope is explicitly something
-          the writer calls to mind rather than something he feels.
+          the writer deliberately calls to mind while grief remains.
       - usfm: PSA.77.11
         gloss: >-
-          Asaph, in a psalm of genuine distress, deliberately turns to
-          recollection as a method when present evidence is not helping.
+          In deep distress, Asaph deliberately recalls God's past works when his
+          present circumstances offer little reassurance.
 misuse: >-
-  "Trust God" is easy to weaponise. It is often said to people in crisis as a
+  "Trust God" is easy to weaponize. It is often said to people in crisis as a
   way of ending an uncomfortable conversation, which is close to the opposite
-  of how Scripture uses it — Lamentations reaches its famous line about mercies
-  being new every morning only after two chapters of unrelieved grief. Trust in
-  these texts is also not a technique for getting outcomes. Proverbs 3:5-6 is
+  of how Scripture uses it. Lamentations reaches its famous line about mercies
+  being new every morning only after two chapters of unrelieved grief. Trust
+  isn't a technique for getting desired outcomes. Proverbs 3:5-6 is
   frequently read as a promise that God will make your plans succeed; the
   passage says he will make your paths straight, which in context means
-  direction rather than ease. Nor does trusting God mean refusing to think.
+  guidance along the way. "Lean not on your own understanding" also doesn't require refusing to think.
   The same book that warns against leaning on your own understanding spends
-  most of its length commending careful judgement.
+  most of its length commending careful judgment.
 faqs:
-  - q: What does Proverbs 3:5-6 actually mean?
+  - q: What does Proverbs 3:5-6 mean?
     a: >-
-      It calls for reliance on God rather than exclusively on your own
-      assessment, and promises directed paths in return. In context "lean not on
-      your own understanding" is a warning against treating your own judgement
-      as the final authority, not a prohibition on thinking — Proverbs otherwise
-      commends wisdom, planning, and counsel throughout.
+      It calls for wholehearted reliance on God and promises that he will direct
+      a person's paths. "Lean not on your own understanding" warns against
+      making personal judgment the final authority. Proverbs still commends
+      wisdom, planning, and counsel throughout the book.
   - q: What is the difference between faith and trust in the Bible?
     a: >-
       The underlying Greek and Hebrew words overlap heavily, and most
       translations render the same terms as either word depending on context.
       Where a distinction is drawn in English usage, faith tends to describe
-      what a person believes and trust describes acting on it — but Scripture
-      does not maintain a sharp line between them.
+      what a person believes and trust describes acting on it. Scripture itself
+      doesn't maintain a sharp line between them.
 related:
   - anxiety
   - fear
@@ -104,13 +101,13 @@ sources:
   - torreys
   - editorial
 publishedAt: 2026-08-17
-reviewedAt: 2026-08-17
+reviewedAt: 2026-08-21
 ---
 
-The psalms are unusually honest about how trust actually works. It is rarely
-depicted as serenity. More often someone states the fear, states the trust, and
-lets both stand — Psalm 56 does this in a single verse.
+The Psalms are honest about how trust works. They rarely portray it as perfect
+serenity. A writer often names fear and trust together, as Psalm 56 does in a
+single verse.
 
-That pattern matters for reading the rest. Trust in Scripture is a direction,
-not a temperature. You can be entirely uncertain and still be leaning the right
-way.
+That pattern helps explain the rest of these passages. Trust has a direction
+even when feelings remain unsettled. A person can be uncertain and still place
+reliance in God.

@@ -63,15 +63,15 @@ const bookSlug = bookSlugFromUsfm(bookUsfm ?? '');
 	) : null
 }
 
-<nav class="brief-jump" aria-label="On this page">
-	{hasFullText ? <a href="#text">Full text</a> : null}
-	<a href="#outline">Outline</a>
-	<a href="#themes">Main ideas</a>
-	{data.glossary.length ? <a href="#words">Words explained</a> : null}
-	{data.keyVerses.length ? <a href="#key-verses">Key verses</a> : null}
-	{data.caution ? <a href="#caution">Common misreadings</a> : null}
-	<a href="#questions">Questions</a>
-	{firstSourceAnchor ? <a href={firstSourceAnchor}>Full commentary</a> : null}
+<nav class="brief-jump" aria-label={t.onThisPage}>
+	{hasFullText ? <a href="#text">{t.jump.fullText}</a> : null}
+	<a href="#outline">{t.jump.outline}</a>
+	<a href="#themes">{t.jump.themes}</a>
+	{data.glossary.length ? <a href="#words">{t.jump.glossary}</a> : null}
+	{data.keyVerses.length ? <a href="#key-verses">{t.jump.keyVerses}</a> : null}
+	{data.caution ? <a href="#caution">{t.jump.caution}</a> : null}
+	<a href="#questions">{t.jump.questions}</a>
+	{firstSourceAnchor ? <a href={firstSourceAnchor}>{t.jump.commentary}</a> : null}
 </nav>
 
 {/* The chapter itself, supplied by the page because loading scripture is its
@@ -115,10 +115,7 @@ const bookSlug = bookSlugFromUsfm(bookUsfm ?? '');
 	data.glossary.length ? (
 		<section class="chapter-glossary" id="words">
 			<h2>{t.glossary(reference)}</h2>
-			<p class="muted">
-				Church language, in ordinary English. Nothing here assumes you have
-				heard the word before.
-			</p>
+			<p class="muted">{t.glossaryIntro}</p>
 			<dl class="glossary-list">
 				{data.glossary.map((item) => (
 					<div class="glossary-item">
@@ -201,9 +198,7 @@ const bookSlug = bookSlugFromUsfm(bookUsfm ?? '');
 			<ul class="topic-links">
 				{relatedTopics.map((topic) => (
 					<li>
-						<a href={topicPath(topic.slug)}>
-							Bible verses about {topic.title.toLowerCase()}
-						</a>
+						<a href={topicPath(topic.slug)}>{t.relatedTopicLink(topic.title)}</a>
 					</li>
 				))}
 			</ul>

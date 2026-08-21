@@ -553,9 +553,9 @@ const reviewed = brief
 			</ChapterBriefBody>
 		) : (
 			<p class="lede">
-				{reference} has not been written up in our own words yet. Below are the
-				notes on it from three commentaries — start with Tyndale, which is
-				written in modern English for readers new to the Bible.
+				An original study of {reference} is still in progress. You can read notes
+				from three commentaries below. Tyndale is the best place to begin if you
+				prefer clear, modern English.
 			</p>
 		)
 	}
@@ -575,9 +575,9 @@ const reviewed = brief
 					{t.commentaries(reference)}
 				</h2>
 				<p class="muted">
-					Three commentaries, oldest last. Each is shown in full with its author
-					and licence, and every scripture reference inside them links through to
-					the verse.
+					Each commentary appears in full with its author and license. Scripture
+					references link to the corresponding verse on BibleHearth. The oldest
+					commentary appears last.
 				</p>
 				{commentaries.map((entry, index) => (
 					<CommentarySourceBlock

@@ -6,74 +6,76 @@ aliases:
   - prayer for healing
   - restoration
 shortAnswer: >-
-  Scripture presents healing as something God does, frequently and gladly, while
-  refusing to reduce it to a formula. Jesus heals throughout the gospels, James
-  instructs the church to pray for the sick, and Paul — who healed others — was
-  himself told no. Holding those together is the honest reading, and it is what
-  keeps the topic from becoming either denial or blame.
+  Scripture presents God as a healer without turning healing into a guaranteed
+  formula. Jesus heals throughout the Gospels, and James tells church elders to
+  pray for people who are sick. Paul also healed others yet received a different
+  answer when he prayed about his own affliction. All three belong in a faithful
+  account of what the Bible says.
 groups:
   - id: character
     heading: Healing is presented as something God does
     rationale: >-
-      The texts consistently locate healing in God's character rather than in a
-      technique, which is why it can be asked for directly.
+      These passages ground healing in God's identity and generosity. They give
+      people reason to ask God directly for help.
     verses:
       - usfm: PSA.103.2-3
         gloss: >-
           Healing is listed alongside forgiveness among benefits to be
-          remembered, tying physical restoration to God's ordinary generosity.
+          remembered. The psalm includes physical restoration among signs of
+          God's generosity.
       - usfm: EXO.15.26
         gloss: >-
           God takes healing into a name he calls himself, making it a matter of
-          identity rather than an occasional act.
+          identity and covenant care.
       - usfm: JER.30.17
         gloss: >-
           Spoken to a nation everyone had written off, with restoration promised
-          specifically to those called outcasts.
+          to people their enemies had dismissed as outcasts.
   - id: jesus
     heading: Jesus heals, and the gospels record why
     rationale: >-
-      The healing narratives usually give a motive — compassion — and often tie
-      restoration to being returned to community, not merely to health.
+      The healing stories often name compassion as Jesus' motive. Many also
+      restore people to community along with restoring their bodies.
     verses:
       - usfm: MAT.4.23
         gloss: >-
-          A summary statement pairing teaching with healing every disease, which
-          the gospels treat as one ministry rather than two.
+          Matthew summarizes Jesus' work by placing teaching, proclaiming, and
+          healing together as parts of one ministry.
       - usfm: MRK.1.41
         gloss: >-
-          Jesus touches a man with leprosy — a gesture that broke purity
-          convention and restored him socially as well as physically.
+          Jesus touches a man with leprosy. The gesture crosses a purity
+          boundary and begins restoring him socially as well as physically.
       - usfm: MAT.9.35-36
         gloss: >-
           The stated motive is compassion at seeing people harassed and
-          helpless, which frames healing as mercy rather than proof.
+          helpless. Matthew presents healing as an expression of mercy.
   - id: unanswered
     heading: Scripture also records healing withheld
     rationale: >-
-      Any honest treatment has to include the passages where the answer was no.
-      The Bible includes them without embarrassment.
+      The Bible also records faithful people who remained ill or received a
+      different answer to prayer. Those accounts place limits on any formula.
     verses:
       - usfm: 2CO.12.8-9
         gloss: >-
           Paul asks three times and is refused, receiving sufficient grace
-          instead — written by someone through whom others were healed.
+          for his weakness. The same apostle had seen other people healed
+          through his ministry.
       - usfm: JAS.5.14-15
         gloss: >-
           James instructs elders to pray and anoint, framing it as the church's
-          normal practice while keeping the outcome in God's hands.
+          normal practice while leaving the outcome in God's hands.
       - usfm: 2TI.4.20
         gloss: >-
           Paul mentions leaving a coworker behind sick, recorded without
           explanation or apology.
 misuse: >-
   The most damaging misuse of these verses is telling sick people that they are
-  not healed because they lack faith. Paul prayed three times about a persistent
-  affliction and was told no, and he left Trophimus behind ill; neither is
-  presented as a failure. Isaiah 53:5 — "by his wounds we are healed" — is
+  unhealed because they lack faith. Paul prayed three times about a persistent
+  affliction and later left Trophimus behind ill; neither account blames the
+  sick person. Isaiah 53:5, "by his wounds we are healed," is
   quoted as a guarantee of physical healing, but 1 Peter 2:24 applies it to
   being healed from sin, and treating it as a medical promise sets people up to
-  blame themselves. Nothing in Scripture opposes medical care: Paul recommends
+  blame themselves. Scripture gives no reason to oppose medical care. Paul recommends
   wine for a stomach ailment, and Luke is called the beloved physician without
   qualification. Praying for healing and seeking treatment are not competitors.
 faqs:
@@ -81,13 +83,13 @@ faqs:
     a: >-
       No. Scripture presents God as a healer and encourages praying for the
       sick, but it also records healing withheld. Paul asked three times about
-      his own affliction and was told grace would be sufficient instead, and he
+      his own affliction and was told grace would be sufficient, and he
       mentions leaving a sick coworker behind. The consistent picture is a God
-      who heals often, not a guaranteed outcome.
+      who heals, without a promise that every illness will end now.
   - q: What does "by his wounds we are healed" mean?
     a: >-
       Isaiah 53:5 is quoted in 1 Peter 2:24, where it is applied to dying to sin
-      and living for righteousness — a healing of the relationship between
+      and living for righteousness, describing healing in the relationship between
       people and God. Many readers also see physical implications, but the New
       Testament's own use of the verse is primarily about sin, so reading it as
       a medical guarantee goes beyond how Scripture applies it.
@@ -105,14 +107,15 @@ sources:
   - torreys
   - editorial
 publishedAt: 2026-08-17
-reviewedAt: 2026-08-17
+reviewedAt: 2026-08-21
 ---
 
-Healing is one of the topics where selective quotation does the most harm. It is
-possible to assemble a page of verses that reads as an unconditional guarantee,
-and it is possible to assemble one that reads as resignation. Neither matches
-the whole.
+Selective quotation can badly distort the Bible's teaching about healing. Some
+passages show remarkable recoveries, while others name faithful people who
+remain sick. The full picture leaves room for confident prayer, medical care,
+unanswered questions, and compassion toward anyone who is suffering.
 
-The gospels show healing as constant and motivated by compassion. The letters
-show faithful people who stayed sick. Both are Scripture, and a page that
-includes only one of them is not being honest with the reader.
+The Gospels show Jesus healing again and again because he is moved by mercy.
+The letters show Christians praying for the sick and living with illness that
+persists. Reading them together protects sick people from both despair and
+blame.

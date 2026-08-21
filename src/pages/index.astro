@@ -127,16 +127,15 @@ const featured = catalog.slice(0, 8);
  * title says.
  */
 const description =
-	'Read the Bible free online, with plain-English studies of the chapters ' +
-	'people ask about most: what the chapter says, what it means, and what it ' +
-	'does not.';
+	'Read the Bible free online and find clear, beginner-friendly studies for ' +
+	'the chapters and questions people look up most.';
 
 const figure = hubFigures.home;
 const share = figure ? await shareCardFromFigure(figure) : undefined;
 ---
 
 <BaseLayout
-	title="BibleHearth — Read the Bible, Explained in Plain English"
+	title="BibleHearth | Read and Understand the Bible"
 	description={description}
 	canonicalPath="/"
 	image={share?.image}
@@ -149,12 +148,11 @@ const share = figure ? await shareCardFromFigure(figure) : undefined;
 		) : (
 			<div class="stack">
 				<section>
-					<p class="muted">A quiet place to read Scripture</p>
-					<h1>Read the Bible, and understand what you read</h1>
+					<p class="muted">Read Scripture at your own pace</p>
+					<h1>Read the Bible with help when you need it</h1>
 					<p class="lede">
-						Every chapter and verse in several English translations, plus
-						plain-English studies of the passages people ask about most —
-						written for anyone new to the Bible.
+						Choose from several English translations, then find clear studies
+						for the passages and questions that often stop new readers.
 					</p>
 					{figure ? <Figure figure={figure} /> : null}
 					<p>
