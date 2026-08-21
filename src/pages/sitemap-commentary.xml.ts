@@ -71,17 +71,31 @@ export const GET: APIRoute = async ({ site }) => {
 		}
 
 		/**
-		 * Which books this locale has written in — the same test the book page
-		 * itself uses to decide whether to be `noindex`.
+		 * Which books this locale has written in, and when each was last written
+		 * in — the same test the book page itself uses to decide whether to be
+		 * `noindex`.
 		 *
-		 * The two must agree exactly. Listing all 66 for a locale with one brief
-		 * would submit 65 pages that render `noindex`, which is the contradiction
-		 * this file's own header warns about. English is exempt: its book pages
-		 * carry the licensed overviews, so all 66 are indexable and listed.
+		 * The keys must agree with that test exactly. Listing all 66 for a locale
+		 * with one brief would submit 65 pages that render `noindex`, which is the
+		 * contradiction this file's own header warns about. English is exempt: its
+		 * book pages carry the licensed overviews, so all 66 are indexable and
+		 * listed.
+		 *
+		 * The dates are what a book page can honestly claim. Its licensed overview
+		 * does not change, but its chapter grid does — a tile becomes a briefed
+		 * link the day somebody writes that chapter up — so the newest brief in
+		 * the book is the last time the page itself differed. A book nobody has
+		 * written in yet carries no date rather than a guess.
 		 */
-		const briefedBooks = new Set(
-			briefed.map((chapter) => chapter.usfm.split('.')[0]),
-		);
+		const briefedBooks = new Map<string, Date>();
+		for (const chapter of briefed) {
+			const book = chapter.usfm.split('.')[0] ?? '';
+			const current = briefedBooks.get(book);
+			if (!current || chapter.reviewedAt > current) {
+				briefedBooks.set(book, chapter.reviewedAt);
+			}
+		}
+
 		const books = locale.prefix
 			? CANON_ORDER.filter((book) => briefedBooks.has(book))
 			: CANON_ORDER;
@@ -91,6 +105,7 @@ export const GET: APIRoute = async ({ site }) => {
 				.filter((book) => hasBook(locale, book))
 				.map((book) => ({
 					path: bookStudyPath(book, locale),
+					lastmod: briefedBooks.get(book),
 				})),
 			...briefed.map((chapter) => {
 				const [book, number] = chapter.usfm.split('.');
