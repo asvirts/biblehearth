@@ -84,12 +84,25 @@ export function bibleSitemapPaths(
 	return [...books, ...chapters].slice(0, SITEMAP_URL_LIMIT);
 }
 
-export function urlsetXml(site: URL | undefined, paths: readonly string[]): string {
-	const urls = uniquePaths(paths)
-		.map((path) => `  <url>\n    <loc>${escapeXml(absoluteUrl(site, path))}</loc>\n  </url>`)
-		.join('\n');
+/**
+ * One entry in a sitemap or a sitemap index.
+ *
+ * `lastmod` is optional and stays optional on purpose — see
+ * `urlsetXmlWithLastmod` for what a fabricated one costs.
+ */
+export type SitemapEntry = {
+	path: string;
+	lastmod?: Date;
+};
 
-	return `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls}\n</urlset>\n`;
+export function urlsetXml(
+	site: URL | undefined,
+	paths: readonly string[],
+): string {
+	return urlsetXmlWithLastmod(
+		site,
+		paths.map((path) => ({ path })),
+	);
 }
 
 /**
@@ -100,45 +113,68 @@ export function urlsetXml(site: URL | undefined, paths: readonly string[]): stri
  * sites teach Google to ignore the field entirely, so reader pages deliberately
  * omit it. (BibleGateway's topical sitemap still advertises a 2014 lastmod,
  * which is the opposite failure.)
+ *
+ * Which is why an entry without a date emits no tag rather than a placeholder,
+ * and why a sitemap may honestly be a mix of both: a book study page changes
+ * when somebody briefs one of its chapters, and carries that date, while the
+ * sixty-five books nobody has written on yet carry none.
  */
 export function urlsetXmlWithLastmod(
 	site: URL | undefined,
-	entries: readonly { path: string; lastmod?: Date }[],
+	entries: readonly SitemapEntry[],
 ): string {
-	const seen = new Set<string>();
-	const urls = entries
-		.map((entry) => ({ ...entry, path: normalizePath(entry.path) }))
-		.filter((entry) => {
-			if (seen.has(entry.path)) {
-				return false;
-			}
-			seen.add(entry.path);
-			return true;
-		})
-		.map((entry) => {
-			const loc = `    <loc>${escapeXml(absoluteUrl(site, entry.path))}</loc>`;
-			const lastmod = entry.lastmod
-				? `\n    <lastmod>${entry.lastmod.toISOString().slice(0, 10)}</lastmod>`
-				: '';
-			return `  <url>\n${loc}${lastmod}\n  </url>`;
-		})
+	const urls = uniqueEntries(entries)
+		.map(
+			(entry) =>
+				`  <url>\n    <loc>${escapeXml(absoluteUrl(site, entry.path))}</loc>${lastmodTag(entry.lastmod)}\n  </url>`,
+		)
 		.join('\n');
 
 	return `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls}\n</urlset>\n`;
 }
 
+/**
+ * The index, whose `lastmod` is the one Google actually acts on.
+ *
+ * A child sitemap's date is the newest date inside it, which is what the
+ * protocol means by the time the sitemap file was modified. It is also the
+ * cheapest thing on the site: a crawler that trusts it can skip re-reading a
+ * sitemap whose contents have not moved, and every URL it skips re-fetching
+ * here is a licensed passage fetch not spent against a rate-limited app key.
+ *
+ * Children with nothing real to report — the verse hubs, the reader pages —
+ * carry no date, on the same terms as the URLs inside them.
+ */
 export function sitemapIndexXml(
 	site: URL | undefined,
-	paths: readonly string[],
+	entries: readonly SitemapEntry[],
 ): string {
-	const items = uniquePaths(paths)
+	const items = uniqueEntries(entries)
 		.map(
-			(path) =>
-				`  <sitemap>\n    <loc>${escapeXml(absoluteUrl(site, path))}</loc>\n  </sitemap>`,
+			(entry) =>
+				`  <sitemap>\n    <loc>${escapeXml(absoluteUrl(site, entry.path))}</loc>${lastmodTag(entry.lastmod)}\n  </sitemap>`,
 		)
 		.join('\n');
 
 	return `<?xml version="1.0" encoding="UTF-8"?>\n<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${items}\n</sitemapindex>\n`;
+}
+
+/**
+ * The newest of a set of dates, or nothing if the set is empty.
+ *
+ * `undefined` rather than the epoch or today, so a section with no dated
+ * content omits its `lastmod` instead of claiming one.
+ */
+export function latestDate(
+	dates: readonly (Date | undefined)[],
+): Date | undefined {
+	let latest: Date | undefined;
+	for (const date of dates) {
+		if (date && (!latest || date > latest)) {
+			latest = date;
+		}
+	}
+	return latest;
 }
 
 export async function xmlResponse(body: string): Promise<Response> {
@@ -156,8 +192,31 @@ function isRoutableBook(bookId: string): boolean {
 	return usfmFromBookSlug(bookSlugFromUsfm(bookId)) !== null;
 }
 
-function uniquePaths(paths: readonly string[]): string[] {
-	return [...new Set(paths.map(normalizePath))];
+/** Date-only, which is all a review date knows and all a crawler needs. */
+function lastmodTag(lastmod?: Date): string {
+	return lastmod
+		? `\n    <lastmod>${lastmod.toISOString().slice(0, 10)}</lastmod>`
+		: '';
+}
+
+/**
+ * Entries by normalised path, first occurrence winning.
+ *
+ * First rather than newest-dated: a duplicate path in a sitemap is a bug in the
+ * caller, and silently merging two disagreeing dates would hide it.
+ */
+function uniqueEntries(entries: readonly SitemapEntry[]): SitemapEntry[] {
+	const seen = new Set<string>();
+	const unique: SitemapEntry[] = [];
+	for (const entry of entries) {
+		const path = normalizePath(entry.path);
+		if (seen.has(path)) {
+			continue;
+		}
+		seen.add(path);
+		unique.push({ ...entry, path });
+	}
+	return unique;
 }
 
 function escapeXml(value: string): string {
