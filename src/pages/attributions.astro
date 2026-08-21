@@ -12,7 +12,7 @@ const figures = await listAttributedFigures();
 
 const title = 'Attributions and Licences · BibleHearth';
 const description =
-	'Every source BibleHearth reproduces or links to: the Bible translations, the public-domain and Creative Commons commentaries and images, who holds each, and the licence.';
+	'Every source BibleHearth reproduces or links to: the Bible translations, the public-domain and Creative Commons commentaries, who holds each, and the licence.';
 ---
 
 <BaseLayout
@@ -43,76 +43,87 @@ const description =
 
 	<section>
 		<h2>Images</h2>
-		<p>
-			Editorial pages carry one picture each: a public-domain painting or
-			engraving when the page is a named biblical scene, and a photograph or
-			museum object otherwise. We host a copy. The work stays under its original
-			licence. Our writing is separate work and is not covered by it.
-		</p>
 		{
-			figures.map((item) => {
-				const licenseName = licenseDisplayName(
-					item.figure.credit.license,
-					item.figure.credit.licenseUrl,
-				);
-				return (
-					<div class="theme-item">
-						<h3>{item.figure.credit.title}</h3>
-						<dl class="glossary-list">
-							<div class="glossary-item">
-								<dt>Maker</dt>
-								<dd>
-									{item.figure.credit.creator}
-									{item.figure.credit.date ? ` (${item.figure.credit.date})` : ''}
-								</dd>
+			figures.length ? (
+				<>
+					<p>
+						When an editorial page carries a picture, it is a public-domain
+						painting or engraving for a named biblical scene, or a photograph
+						or museum object otherwise. We host a copy. The work stays under
+						its original licence. Our writing is separate work and is not
+						covered by it.
+					</p>
+					{figures.map((item) => {
+						const licenseName = licenseDisplayName(
+							item.figure.credit.license,
+							item.figure.credit.licenseUrl,
+						);
+						return (
+							<div class="theme-item">
+								<h3>{item.figure.credit.title}</h3>
+								<dl class="glossary-list">
+									<div class="glossary-item">
+										<dt>Maker</dt>
+										<dd>
+											{item.figure.credit.creator}
+											{item.figure.credit.date
+												? ` (${item.figure.credit.date})`
+												: ''}
+										</dd>
+									</div>
+									<div class="glossary-item">
+										<dt>Holder</dt>
+										<dd>{item.figure.credit.holder}</dd>
+									</div>
+									<div class="glossary-item">
+										<dt>Licence</dt>
+										<dd>
+											<a
+												href={item.figure.credit.licenseUrl}
+												rel="license nofollow noopener"
+												target="_blank"
+											>
+												{licenseName}
+											</a>
+										</dd>
+									</div>
+									<div class="glossary-item">
+										<dt>Used on</dt>
+										<dd>
+											<a href={item.pagePath}>{item.pageName}</a>
+										</dd>
+									</div>
+									<div class="glossary-item">
+										<dt>Source</dt>
+										<dd>
+											<a
+												href={item.figure.credit.sourceUrl}
+												rel="nofollow noopener"
+												target="_blank"
+											>
+												{item.figure.credit.sourceUrl}
+											</a>
+										</dd>
+									</div>
+								</dl>
+								{item.figure.credit.license === 'cc-by-sa' ? (
+									<p class="muted">
+										This licence is share-alike. The copy of this image on this
+										site stays available under the same licence. Our own writing
+										on the page is separate work and is not covered by it.
+									</p>
+								) : null}
 							</div>
-							<div class="glossary-item">
-								<dt>Holder</dt>
-								<dd>{item.figure.credit.holder}</dd>
-							</div>
-							<div class="glossary-item">
-								<dt>Licence</dt>
-								<dd>
-									<a
-										href={item.figure.credit.licenseUrl}
-										rel="license nofollow noopener"
-										target="_blank"
-									>
-										{licenseName}
-									</a>
-								</dd>
-							</div>
-							<div class="glossary-item">
-								<dt>Used on</dt>
-								<dd>
-									<a href={item.pagePath}>{item.pageName}</a>
-								</dd>
-							</div>
-							<div class="glossary-item">
-								<dt>Source</dt>
-								<dd>
-									<a
-										href={item.figure.credit.sourceUrl}
-										rel="nofollow noopener"
-										target="_blank"
-									>
-										{item.figure.credit.sourceUrl}
-									</a>
-								</dd>
-							</div>
-						</dl>
-						{
-							item.figure.credit.license === 'cc-by-sa' ? (
-								<p class="muted">
-									This licence is share-alike. The copy of this image on this
-									site stays available under the same licence. Our own writing on
-									the page is separate work and is not covered by it.
-								</p>
-							) : null
-						}
-					</div>
-				);
-			})
+						);
+					})}
+				</>
+			) : (
+				<p>
+					There are no editorial pictures on the site at the moment. Pages that
+					will carry one later will be listed here with the maker, holder and
+					licence of each work.
+				</p>
+			)
 		}
 	</section>
 

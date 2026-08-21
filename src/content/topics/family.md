@@ -90,19 +90,6 @@ entity:
   name: Family
   sameAs: [https://www.wikidata.org/wiki/Q8436, https://en.wikipedia.org/wiki/Family]
 sources: [naves, torreys, editorial]
-figure:
-  src: ../../assets/editorial/topics/family.jpg
-  alt: "Aertsen’s peasants gathered by a hearth: a household at work and rest in a single room."
-  caption: "Biblical family is a household, not a portrait studio: people who share a fire, work, and the next meal."
-  kind: art
-  credit:
-    title: "Peasants by the Hearth"
-    creator: "Pieter Aertsen"
-    date: "c. 1556"
-    holder: "Museum Mayer van den Bergh, Antwerp"
-    license: pd
-    licenseUrl: https://creativecommons.org/publicdomain/mark/1.0/
-    sourceUrl: https://commons.wikimedia.org/wiki/File:Pieter%20Aertsen%20Peasants%20by%20the%20Hearth.jpg
 publishedAt: 2026-08-17
 reviewedAt: 2026-08-17
 ---

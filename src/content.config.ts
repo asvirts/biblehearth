@@ -1,6 +1,6 @@
 import { defineCollection, reference, z } from 'astro:content';
 import { glob } from 'astro/loaders';
-import { editorialFigureSchema, requireFigureWhenPublished } from './lib/images/schema';
+import { editorialFigureSchema } from './lib/images/schema';
 
 /** JHN.3 | JHN.3.16 | PHP.4.6-7 */
 const USFM_REF = /^[A-Z0-9]{3}\.\d+(\.\d+(-\d+)?)?$/;
@@ -72,7 +72,7 @@ const topics = defineCollection({
 		reviewedAt: z.coerce.date(),
 		/** Draft topics render noindex and stay out of sitemaps. */
 		draft: z.boolean().default(false),
-	}).superRefine(requireFigureWhenPublished),
+	}),
 });
 
 /**
@@ -158,7 +158,7 @@ const answers = defineCollection({
 		reviewedAt: z.coerce.date(),
 		/** Draft answers render noindex and stay out of sitemaps. */
 		draft: z.boolean().default(false),
-	}).superRefine(requireFigureWhenPublished),
+	}),
 });
 
 /**
@@ -324,7 +324,6 @@ const chapters = defineCollection({
 		 * quietly reintroduce a 93-character title.
 		 */
 		.superRefine((brief, ctx) => {
-			requireFigureWhenPublished(brief, ctx);
 			if (!brief.seoTitle && brief.title.length > 60) {
 				ctx.addIssue({
 					code: z.ZodIssueCode.custom,

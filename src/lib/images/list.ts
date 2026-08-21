@@ -13,7 +13,7 @@ export type AttributedFigure = {
 /**
  * Every figure on the site, for the attributions page.
  *
- * Built from the same collections the pages use, plus the five hub assets, so
+ * Built from the same collections the pages use, plus any hub assets, so
  * a credit cannot live on /attributions and nowhere else, or the other way
  * round.
  */
@@ -24,12 +24,19 @@ export async function listAttributedFigures(): Promise<AttributedFigure[]> {
 		listAnswers(),
 	]);
 
-	const hubs: AttributedFigure[] = (Object.keys(HUB_PAGES) as HubId[]).map(
-		(id) => ({
-			pageName: HUB_PAGES[id].name,
-			pagePath: HUB_PAGES[id].path,
-			figure: hubFigures[id],
-		}),
+	const hubs: AttributedFigure[] = (Object.keys(HUB_PAGES) as HubId[]).flatMap(
+		(id) => {
+			const figure = hubFigures[id];
+			return figure
+				? [
+						{
+							pageName: HUB_PAGES[id].name,
+							pagePath: HUB_PAGES[id].path,
+							figure,
+						},
+					]
+				: [];
+		},
 	);
 
 	const items: AttributedFigure[] = [

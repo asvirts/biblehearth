@@ -183,19 +183,6 @@ entity:
   name: Salmo 23
   sameAs:
     - https://en.wikipedia.org/wiki/Psalm_23
-figure:
-  src: ../../../assets/editorial/chapters/psalms-23.jpg
-  alt: "Mosaico do século V de um jovem pastor num cenário dourado, ovelhas a seus pés e um cajado em forma de cruz na mão."
-  caption: "Os cristãos colocaram o Salmo 23 nas paredes de túmulos: não como paisagem rural, mas como afirmação de que o pastor não abandona o vale."
-  kind: art
-  credit:
-    title: "The Good Shepherd"
-    creator: "Unknown mosaicists"
-    date: "c. 425"
-    holder: "Mausoleum of Galla Placidia, Ravenna"
-    license: pd
-    licenseUrl: https://creativecommons.org/publicdomain/mark/1.0/
-    sourceUrl: https://commons.wikimedia.org/wiki/File:%22The%20good%20Shepherd%22%20mosaic%20-%20Mausoleum%20of%20Galla%20Placidia.jpg
 publishedAt: 2026-08-20
 reviewedAt: 2026-08-20
 ---

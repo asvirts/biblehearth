@@ -108,19 +108,6 @@ entity:
   name: Prayer
   sameAs: [https://www.wikidata.org/wiki/Q40953, https://en.wikipedia.org/wiki/Prayer]
 sources: [naves, torreys, editorial]
-figure:
-  src: ../../assets/editorial/topics/prayer.jpg
-  alt: "Dürer’s study of two praying hands, the sleeves bunched, the fingers pressed together."
-  caption: "Prayer in the Bible is often this unadorned: hands, and nothing else in the picture to explain them."
-  kind: art
-  credit:
-    title: "Praying Hands"
-    creator: "Albrecht Dürer"
-    date: "1508"
-    holder: "Albertina, Vienna"
-    license: pd
-    licenseUrl: https://creativecommons.org/publicdomain/mark/1.0/
-    sourceUrl: https://commons.wikimedia.org/wiki/File:Albrecht%20D%C3%BCrer%20-%20Praying%20Hands,%201508%20-%20Google%20Art%20Project.jpg
 publishedAt: 2026-08-17
 reviewedAt: 2026-08-17
 ---

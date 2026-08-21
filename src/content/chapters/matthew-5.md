@@ -313,19 +313,6 @@ entity:
     - https://en.wikipedia.org/wiki/Matthew_5
     - https://en.wikipedia.org/wiki/Beatitudes
     - https://en.wikipedia.org/wiki/Sermon_on_the_Mount
-figure:
-  src: ../../assets/editorial/chapters/matthew-5.jpg
-  alt: "Carl Bloch’s Sermon on the Mount: Jesus seated on a hillside, a crowd gathered on the grass below him."
-  caption: "Matthew 5 is a sermon delivered to people sitting on a hill, not a poster of virtues. Bloch painted the crowd as well as the speaker."
-  kind: art
-  credit:
-    title: "Sermon on the Mount"
-    creator: "Carl Bloch"
-    date: "1877"
-    holder: "Museum of National History, Frederiksborg"
-    license: pd
-    licenseUrl: https://creativecommons.org/publicdomain/mark/1.0/
-    sourceUrl: https://commons.wikimedia.org/wiki/File:Bloch-SermonOnTheMount.jpg
 publishedAt: 2026-08-19
 reviewedAt: 2026-08-19
 ---

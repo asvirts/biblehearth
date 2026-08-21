@@ -206,19 +206,6 @@ entity:
   name: Philippians 4
   sameAs:
     - https://en.wikipedia.org/wiki/Philippians_4
-figure:
-  src: ../../assets/editorial/chapters/philippians-4.jpg
-  alt: "Rembrandt’s Apostle Paul: an old man in a dark room, a manuscript on the table, light on his face."
-  caption: "Philippians 4’s “do not be anxious” is written from confinement. Rembrandt painted Paul with the letter, not with a halo."
-  kind: art
-  credit:
-    title: "The Apostle Paul"
-    creator: "Rembrandt"
-    date: "c. 1657"
-    holder: "National Gallery of Art, Washington"
-    license: pd
-    licenseUrl: https://creativecommons.org/publicdomain/mark/1.0/
-    sourceUrl: https://commons.wikimedia.org/wiki/File:The%20Apostle%20Paul%20-%20Rembrandt.jpg
 publishedAt: 2026-08-17
 reviewedAt: 2026-08-17
 ---

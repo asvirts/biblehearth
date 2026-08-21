@@ -101,18 +101,6 @@ sources:
   - naves
   - torreys
   - editorial
-figure:
-  src: ../../assets/editorial/topics/fear.jpg
-  alt: "Lightning striking over a harbour at night, a lighthouse and the water lit for an instant."
-  caption: "Fear in Scripture is often this sudden: a sky that was weather and is now a threat. The verses about it do not pretend the storm is imaginary."
-  kind: photograph
-  credit:
-    title: "Overnight storm with lightning, Port-la-Nouvelle"
-    creator: "Maxime Raynal"
-    holder: "Wikimedia Commons"
-    license: cc-by
-    licenseUrl: https://creativecommons.org/licenses/by/2.0/
-    sourceUrl: https://commons.wikimedia.org/wiki/File:Port%20and%20lighthouse%20overnight%20storm%20with%20lightning%20in%20Port-la-Nouvelle.jpg
 publishedAt: 2026-08-17
 reviewedAt: 2026-08-17
 ---

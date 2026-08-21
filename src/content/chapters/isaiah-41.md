@@ -255,19 +255,6 @@ entity:
   name: Isaiah 41
   sameAs:
     - https://en.wikipedia.org/wiki/Isaiah_41
-figure:
-  src: ../../assets/editorial/chapters/isaiah-41.jpg
-  alt: "An aerial view of the Judean desert: ridged limestone, dry wadis, almost no vegetation."
-  caption: "Isaiah 41 promises rivers on this kind of ground. The promise is only as large as the dryness it names."
-  kind: photograph
-  credit:
-    title: "The Judean desert near Masada"
-    creator: "Andrew Shiva"
-    date: "2013"
-    holder: "Wikimedia Commons"
-    license: cc-by-sa
-    licenseUrl: https://creativecommons.org/licenses/by-sa/4.0/
-    sourceUrl: https://commons.wikimedia.org/wiki/File:Aerial%20view%20of%20the%20Judean%20Desert%20(near%20Masada),%20Israel%2003.jpg
 publishedAt: 2026-08-19
 reviewedAt: 2026-08-19
 ---

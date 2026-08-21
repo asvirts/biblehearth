@@ -241,18 +241,6 @@ entity:
   name: Psalm 27
   sameAs:
     - https://en.wikipedia.org/wiki/Psalm_27
-figure:
-  src: ../../assets/editorial/chapters/psalms-27.jpg
-  alt: "Pale winter sunrise reflecting on a still lake, light coming up behind dark hills."
-  caption: "“The Lord is my light” is not a metaphor for cheerfulness. It is a claim that the dark does not get the last word."
-  kind: photograph
-  credit:
-    title: "Late winter sunrise on Lake Okanagan"
-    creator: "Wing-Chi Poon"
-    holder: "Wikimedia Commons"
-    license: cc0
-    licenseUrl: https://creativecommons.org/publicdomain/zero/1.0/
-    sourceUrl: https://commons.wikimedia.org/wiki/File:Late%20Winter%20Sunrise%20on%20Lake%20Okanagan.JPG
 publishedAt: 2026-08-19
 reviewedAt: 2026-08-19
 ---

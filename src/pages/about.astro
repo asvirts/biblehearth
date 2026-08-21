@@ -57,15 +57,15 @@ const publisherDescription =
 	'A free Bible site written for people in their first year of reading it: licensed English translations, alongside original plain-English writing on chapters, topics and the questions people actually ask.';
 
 const figure = hubFigures.about;
-const share = await shareCardFromFigure(figure);
+const share = figure ? await shareCardFromFigure(figure) : undefined;
 ---
 
 <BaseLayout
 	title={title}
 	description={description}
 	canonicalPath={ABOUT_PATH}
-	image={share.image}
-	imageAlt={share.imageAlt}
+	image={share?.image}
+	imageAlt={share?.imageAlt}
 	jsonLd={[
 		breadcrumbJsonLd(Astro.site, [
 			{ name: 'BibleHearth', path: '/' },
@@ -98,7 +98,7 @@ const share = await shareCardFromFigure(figure);
 		what it refuses to publish, and where to write when we get something wrong.
 	</p>
 
-	<Figure figure={figure} />
+	{figure ? <Figure figure={figure} /> : null}
 
 	<section>
 		<h2>What is on this site</h2>

@@ -93,18 +93,6 @@ entity:
   name: Loneliness
   sameAs: [https://www.wikidata.org/wiki/Q1152570, https://en.wikipedia.org/wiki/Loneliness]
 sources: [naves, torreys, editorial]
-figure:
-  src: ../../assets/editorial/topics/loneliness.jpg
-  alt: "A pale path running through a wood, trees on both sides, nobody on the track."
-  caption: "The lonely psalms are walked, not posed. A path with no one else on it is the honest picture."
-  kind: photograph
-  credit:
-    title: "Path at High Beach, Essex"
-    creator: "Acabashi"
-    holder: "Wikimedia Commons"
-    license: cc-by-sa
-    licenseUrl: https://creativecommons.org/licenses/by-sa/4.0/
-    sourceUrl: https://commons.wikimedia.org/wiki/File:Easy%20Access%20Path,%20High%20Beach,%20Essex,%20England%202.jpg
 publishedAt: 2026-08-17
 reviewedAt: 2026-08-17
 ---

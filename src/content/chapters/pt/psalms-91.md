@@ -237,19 +237,6 @@ entity:
   name: Salmo 91
   sameAs:
     - https://en.wikipedia.org/wiki/Psalm_91
-figure:
-  src: ../../../assets/editorial/chapters/psalms-91.jpg
-  alt: "A fortaleza rochosa de Massada vista de baixo, um penhasco de topo plano acima do deserto."
-  caption: "O Salmo 91 fala de abrigo do modo como uma fortaleza fala: não que o perigo seja imaginário, mas que existe um lugar que ele não domina."
-  kind: photograph
-  credit:
-    title: "Masada"
-    creator: "Godot13"
-    date: "2016"
-    holder: "Wikimedia Commons"
-    license: cc-by-sa
-    licenseUrl: https://creativecommons.org/licenses/by-sa/4.0/
-    sourceUrl: https://commons.wikimedia.org/wiki/File:ISR-2016-Masada%2004.jpg
 publishedAt: 2026-08-20
 reviewedAt: 2026-08-20
 ---

@@ -270,19 +270,6 @@ entity:
   name: Genesis 6
   sameAs:
     - https://en.wikipedia.org/wiki/Genesis_6
-figure:
-  src: ../../assets/editorial/chapters/genesis-6.jpg
-  alt: "John Martin’s The Deluge: a dark sky over heaving water, tiny figures clinging to rock."
-  caption: "Genesis 6 is not a children’s-ark picture. Martin painted the water as something that unmakes a world."
-  kind: art
-  credit:
-    title: "The Deluge"
-    creator: "John Martin"
-    date: "1834"
-    holder: "Yale Center for British Art"
-    license: pd
-    licenseUrl: https://creativecommons.org/publicdomain/mark/1.0/
-    sourceUrl: https://commons.wikimedia.org/wiki/File:John%20Martin%20-%20The%20Deluge%20-%20Google%20Art%20Project.jpg
 publishedAt: 2026-08-19
 reviewedAt: 2026-08-19
 ---

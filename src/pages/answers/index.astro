@@ -18,7 +18,7 @@ const answers = await listAnswers();
 const labels = answers.map((answer) => answer.data.label);
 
 const figure = hubFigures.answers;
-const share = await shareCardFromFigure(figure);
+const share = figure ? await shareCardFromFigure(figure) : undefined;
 ---
 
 <BaseLayout
@@ -28,8 +28,8 @@ const share = await shareCardFromFigure(figure);
 		155,
 	)}
 	canonicalPath="/answers"
-	image={share.image}
-	imageAlt={share.imageAlt}
+	image={share?.image}
+	imageAlt={share?.imageAlt}
 	jsonLd={[
 		breadcrumbJsonLd(Astro.site, [
 			{ name: 'BibleHearth', path: '/' },
@@ -57,7 +57,7 @@ const share = await shareCardFromFigure(figure);
 		Where the evidence does not settle the question, these pages say so.
 	</p>
 
-	<Figure figure={figure} />
+	{figure ? <Figure figure={figure} /> : null}
 
 	<div class="stack">
 		{

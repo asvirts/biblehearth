@@ -109,19 +109,6 @@ entity:
   name: Wisdom
   sameAs: [https://www.wikidata.org/wiki/Q799, https://en.wikipedia.org/wiki/Wisdom]
 sources: [naves, torreys, editorial]
-figure:
-  src: ../../assets/editorial/topics/wisdom.jpg
-  alt: "The Psalms Scroll from Qumran, Hebrew columns on darkened parchment."
-  caption: "Biblical wisdom is a text you copy and return to, not a personality trait. This is what that copying looked like two thousand years ago."
-  kind: photograph
-  credit:
-    title: "The Psalms Scroll (11Q5)"
-    creator: "Unknown Qumran scribes"
-    date: "1st century CE"
-    holder: "Israel Museum, Jerusalem"
-    license: pd
-    licenseUrl: https://creativecommons.org/publicdomain/mark/1.0/
-    sourceUrl: https://commons.wikimedia.org/wiki/File:Psalms%20Scroll.jpg
 publishedAt: 2026-08-17
 reviewedAt: 2026-08-17
 ---

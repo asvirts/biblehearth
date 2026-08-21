@@ -221,19 +221,6 @@ entity:
   name: Psalm 46
   sameAs:
     - https://en.wikipedia.org/wiki/Psalm_46
-figure:
-  src: ../../assets/editorial/chapters/psalms-46.jpg
-  alt: "A river winding through fields at sunrise, mist lying low along the water."
-  caption: "The psalm’s river is not scenery. It is the thing that keeps a city alive while the rest of the earth is giving way."
-  kind: photograph
-  credit:
-    title: "Sunrise over the countryside, Dülmen"
-    creator: "Dietmar Rabich"
-    date: "2012"
-    holder: "Wikimedia Commons"
-    license: cc-by-sa
-    licenseUrl: https://creativecommons.org/licenses/by-sa/4.0/
-    sourceUrl: https://commons.wikimedia.org/wiki/File:D%C3%BClmen,%20Umland,%20Sonnenaufgang%20--%202012%20--%208084.jpg
 publishedAt: 2026-08-19
 reviewedAt: 2026-08-19
 ---

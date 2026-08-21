@@ -104,18 +104,6 @@ entity:
   name: Temptation
   sameAs: [https://www.wikidata.org/wiki/Q1147429, https://en.wikipedia.org/wiki/Temptation]
 sources: [naves, torreys, editorial]
-figure:
-  src: ../../assets/editorial/topics/temptation.jpg
-  alt: "The Judean desert in hard light: pale ground, a few shrubs, hills going back to a dry horizon."
-  caption: "Jesus’ temptation is set in a wilderness like this, not in a shop. The first tests in the Gospels happen where there is nothing to eat."
-  kind: photograph
-  credit:
-    title: "The Judean desert"
-    creator: "David Shankbone"
-    holder: "Wikimedia Commons"
-    license: cc-by-sa
-    licenseUrl: https://creativecommons.org/licenses/by-sa/3.0/
-    sourceUrl: https://commons.wikimedia.org/wiki/File:JudeanDesert.jpg
 publishedAt: 2026-08-17
 reviewedAt: 2026-08-17
 ---

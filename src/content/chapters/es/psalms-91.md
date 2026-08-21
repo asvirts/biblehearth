@@ -241,19 +241,6 @@ entity:
   name: Salmo 91
   sameAs:
     - https://en.wikipedia.org/wiki/Psalm_91
-figure:
-  src: ../../../assets/editorial/chapters/psalms-91.jpg
-  alt: "La fortaleza rocosa de Masada vista desde abajo, un risco de cima plana sobre el desierto."
-  caption: "El Salmo 91 habla del refugio como habla una fortaleza: no que el peligro sea imaginario, sino que hay un lugar que no le pertenece."
-  kind: photograph
-  credit:
-    title: "Masada"
-    creator: "Godot13"
-    date: "2016"
-    holder: "Wikimedia Commons"
-    license: cc-by-sa
-    licenseUrl: https://creativecommons.org/licenses/by-sa/4.0/
-    sourceUrl: https://commons.wikimedia.org/wiki/File:ISR-2016-Masada%2004.jpg
 publishedAt: 2026-08-20
 reviewedAt: 2026-08-20
 ---

@@ -287,18 +287,6 @@ entity:
   sameAs:
     - https://en.wikipedia.org/wiki/Tattoo
     - https://en.wikipedia.org/wiki/Book_of_Leviticus
-figure:
-  src: ../../assets/editorial/answers/what-does-the-bible-say-about-tattoos.jpg
-  alt: "A Mesopotamian cylinder seal engraved with a cultic scene, made to roll an image into clay."
-  caption: "Leviticus 19 is about marks made in a world that already inscribed stone, clay, and skin. The question is which marks, and for whom."
-  kind: photograph
-  credit:
-    title: "Cylinder seal with cultic scene"
-    creator: "Unknown Mesopotamian seal-cutter"
-    holder: "The Metropolitan Museum of Art"
-    license: cc0
-    licenseUrl: https://creativecommons.org/publicdomain/zero/1.0/
-    sourceUrl: https://www.metmuseum.org/art/collection/search/327434
 publishedAt: 2026-08-19
 reviewedAt: 2026-08-19
 ---

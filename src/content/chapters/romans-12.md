@@ -259,19 +259,6 @@ entity:
   name: Romans 12
   sameAs:
     - https://en.wikipedia.org/wiki/Romans_12
-figure:
-  src: ../../assets/editorial/chapters/romans-12.jpg
-  alt: "A leaf of Papyrus 46, early Greek text of Paul written in a compact book hand."
-  caption: "Romans 12 is “therefore”: after eleven chapters of argument, the letter turns to what a body of people is for. This is an early copy of that turn."
-  kind: photograph
-  credit:
-    title: "Papyrus 46"
-    creator: "Unknown scribe"
-    date: "c. 175–225"
-    holder: "University of Michigan / Chester Beatty Library"
-    license: pd
-    licenseUrl: https://creativecommons.org/publicdomain/mark/1.0/
-    sourceUrl: https://commons.wikimedia.org/wiki/File:P46.jpg
 publishedAt: 2026-08-19
 reviewedAt: 2026-08-19
 ---

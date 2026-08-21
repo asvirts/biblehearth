@@ -94,19 +94,6 @@ entity:
   name: Protection
   sameAs: [https://www.wikidata.org/wiki/Q1132127]
 sources: [naves, torreys, editorial]
-figure:
-  src: ../../assets/editorial/topics/protection.jpg
-  alt: "An aerial view of Masada: the plateau fortress, the ramp, and the desert dropping away on every side."
-  caption: "“God is a fortress” is a metaphor borrowed from places like this: high, costly to take, and built because the plain was not safe."
-  kind: photograph
-  credit:
-    title: "Masada from the air"
-    creator: "Andrew Shiva"
-    date: "2013"
-    holder: "Wikimedia Commons"
-    license: cc-by-sa
-    licenseUrl: https://creativecommons.org/licenses/by-sa/4.0/
-    sourceUrl: https://commons.wikimedia.org/wiki/File:Israel-2013-Aerial%2021-Masada.jpg
 publishedAt: 2026-08-17
 reviewedAt: 2026-08-17
 ---

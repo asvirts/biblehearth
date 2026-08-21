@@ -17,15 +17,15 @@ const names = topics
 	.join(', ');
 
 const figure = hubFigures.topics;
-const share = await shareCardFromFigure(figure);
+const share = figure ? await shareCardFromFigure(figure) : undefined;
 ---
 
 <BaseLayout
 	title={`Bible Topics — Verses About ${names} and More`}
 	description={`Bible verses by topic, grouped by theme with plain-English context for every passage. ${topics.length} topics covering ${names.toLowerCase()}, and more.`}
 	canonicalPath="/topics"
-	image={share.image}
-	imageAlt={share.imageAlt}
+	image={share?.image}
+	imageAlt={share?.imageAlt}
 	jsonLd={[
 		breadcrumbJsonLd(Astro.site, [
 			{ name: 'BibleHearth', path: '/' },
@@ -53,7 +53,7 @@ const share = await shareCardFromFigure(figure);
 		plus an honest note on how the passages are commonly misused.
 	</p>
 
-	<Figure figure={figure} />
+	{figure ? <Figure figure={figure} /> : null}
 
 	<div class="stack">
 		{

@@ -34,15 +34,15 @@ const books = [
 ];
 
 const figure = hubFigures.study;
-const share = await shareCardFromFigure(figure);
+const share = figure ? await shareCardFromFigure(figure) : undefined;
 ---
 
 <BaseLayout
 	title={title}
 	description={description}
 	canonicalPath={STUDY_HUB_PATH}
-	image={share.image}
-	imageAlt={share.imageAlt}
+	image={share?.image}
+	imageAlt={share?.imageAlt}
 	jsonLd={[
 		breadcrumbJsonLd(Astro.site, [
 			{ name: 'BibleHearth', path: '/' },
@@ -73,7 +73,7 @@ const share = await shareCardFromFigure(figure);
 		page: they are written in plain modern English.
 	</p>
 
-	<Figure figure={figure} />
+	{figure ? <Figure figure={figure} /> : null}
 
 	{
 		briefs.length ? (

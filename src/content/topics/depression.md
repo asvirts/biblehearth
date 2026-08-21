@@ -95,19 +95,6 @@ entity:
   name: Depression
   sameAs: [https://www.wikidata.org/wiki/Q42844, https://en.wikipedia.org/wiki/Depression_(mood)]
 sources: [naves, torreys, editorial]
-figure:
-  src: ../../assets/editorial/topics/depression.jpg
-  alt: "A Friedrich landscape: distant ridges fading into rising mist, no figure in the foreground."
-  caption: "Some psalms sound like this weather — not theatrical despair, just a view in which the path is hard to see."
-  kind: art
-  credit:
-    title: "Mountain Landscape with Rising Mist"
-    creator: "Caspar David Friedrich"
-    date: "c. 1810–1820"
-    holder: "Wikimedia Commons"
-    license: pd
-    licenseUrl: https://creativecommons.org/publicdomain/mark/1.0/
-    sourceUrl: https://commons.wikimedia.org/wiki/File:Caspar%20David%20Friedrich%20Paysage%20de%20Riesengebirge%20avec%20la%20brume%20montante.jpg
 publishedAt: 2026-08-17
 reviewedAt: 2026-08-17
 ---

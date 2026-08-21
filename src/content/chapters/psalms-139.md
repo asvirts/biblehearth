@@ -260,18 +260,6 @@ entity:
   name: Psalm 139
   sameAs:
     - https://en.wikipedia.org/wiki/Psalm_139
-figure:
-  src: ../../assets/editorial/chapters/psalms-139.jpg
-  alt: "The Milky Way over the ALMA antennas on a high plateau, the sky dense with stars."
-  caption: "Psalm 139’s night is not empty. It is the place the psalmist says you still cannot hide."
-  kind: photograph
-  credit:
-    title: "ALMA and a starry night"
-    creator: "European Southern Observatory / Babak Tafreshi"
-    holder: "ESO"
-    license: cc-by
-    licenseUrl: https://creativecommons.org/licenses/by/4.0/
-    sourceUrl: https://commons.wikimedia.org/wiki/File:ALMA%20and%20a%20Starry%20Night.jpg
 publishedAt: 2026-08-19
 reviewedAt: 2026-08-19
 ---
