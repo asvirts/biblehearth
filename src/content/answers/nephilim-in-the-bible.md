@@ -41,8 +41,7 @@ views:
       Nephilim were present "in those days, and also afterward," then says the
       unions produced *gibborim*, mighty men. Reading the Nephilim and *gibborim*
       as one group is possible, but it remains an inference. The words "also
-      afterward" create another difficulty. The separate wording "And also afterward"
-      matters because offspring of pre-flood unions
+      afterward" create another difficulty because offspring of pre-flood unions
       shouldn't remain after a flood that killed everything breathing.
     held: >-
       This view appears in the Book of the Watchers, Jubilees, Josephus, and most
