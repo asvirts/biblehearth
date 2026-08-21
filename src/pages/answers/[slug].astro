@@ -265,7 +265,7 @@ const share = answer.data.figure
 	{
 		answer.data.caution.length ? (
 			<section class="topic-misuse">
-				<h2>What {anchorReference} does not say</h2>
+				<h2>Limits and common misreadings of {anchorReference}</h2>
 				{answer.data.caution.map((paragraph) => (
 					<p>{paragraph}</p>
 				))}
@@ -326,9 +326,9 @@ const share = answer.data.figure
 
 	<footer class="topic-provenance">
 		<p class="muted">
-			Reviewed {reviewed}. This page sets out the main readings of a disputed
-			passage and the evidence each rests on; it does not advocate a
-			denominational position.
+			Reviewed {reviewed}. This page presents the main readings of a disputed
+			passage, along with the evidence and objections attached to each one. It
+			is written as a non-denominational explainer.
 		</p>
 		{version ? <CopyrightNotice version={version} /> : null}
 	</footer>

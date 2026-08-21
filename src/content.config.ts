@@ -10,11 +10,10 @@ const verseEntry = z.object({
 	/**
 	 * One sentence: who is speaking, to whom, and why the verse belongs here.
 	 *
-	 * This is the moat. Every competitor publishes a bare verse list; the gloss
-	 * is what makes each entry independently quotable, guards against
-	 * proof-texting, and keeps most of the page's prose ours rather than the
-	 * publisher's. Required, and length-checked, because it is the first thing
-	 * anyone is tempted to skip.
+	 * A bare verse list leaves the reader to work out why each passage belongs.
+	 * The gloss supplies that context and guards against proof-texting. It is
+	 * required and length-checked because it carries most of the explanatory
+	 * value of the entry.
 	 */
 	gloss: z.string().min(40).max(400),
 });
@@ -40,12 +39,11 @@ const topics = defineCollection({
 		aliases: z.array(z.string()).default([]),
 		/**
 		 * 40–90 words, rendered directly under the <h1> before anything else.
-		 * The single highest-leverage element on the page: it is the chunk a
-		 * featured snippet or a retrieval model lifts whole.
+		 * Give the reader a direct, self-contained answer before the verse groups.
 		 */
 		shortAnswer: z.string().min(200).max(700),
 		groups: z.array(verseGroup).min(2).max(6),
-		/** The honest paragraph nobody else writes. Highest-trust signal here. */
+		/** A clear warning about a real misuse or limit of the selected verses. */
 		misuse: z.string().min(200).max(1400).optional(),
 		faqs: z
 			.array(
@@ -79,9 +77,8 @@ const topics = defineCollection({
  * One reading of a contested passage, stated the way its own defenders state
  * it — then the strongest objection to it, stated the way its critics do.
  *
- * The pairing is the point. A page that lists three views and only argues
- * against two is an advocacy page wearing an explainer's clothes, and both
- * readers and retrieval models are good at noticing.
+	 * Treat the views evenly. A page that lists three readings and only argues
+	 * against two is advocacy presented as explanation.
  */
 const answerView = z.object({
 	/** Anchor id, also the #fragment target. */
@@ -120,8 +117,8 @@ const answers = defineCollection({
 		aliases: z.array(z.string()).default([]),
 		/**
 		 * 40–90 words, rendered directly under the <h1> and reused verbatim as the
-		 * meta description (truncated). Front-load it: the first sentence is what
-		 * a SERP shows and what a retrieval model quotes.
+		 * meta description (truncated). The first sentence should answer the
+		 * question directly because it may appear in a search result.
 		 */
 		shortAnswer: z.string().min(200).max(900),
 		/** The passage the question is about. */
@@ -132,7 +129,7 @@ const answers = defineCollection({
 			passage: z.string().regex(USFM_REF),
 		}),
 		views: z.array(answerView).min(2).max(5),
-		/** Where the evidence leaves it. Honest about what stays unresolved. */
+		/** Where the evidence leaves it, including anything still unresolved. */
 		bottomLine: z.string().min(200).max(1600).optional(),
 		/** What the passage does not say. Paragraphs, rendered in order. */
 		caution: z.array(z.string().min(80).max(1200)).max(5).default([]),
@@ -171,17 +168,20 @@ const answers = defineCollection({
  * Tools; republishing him again adds a reader service and zero search value. A
  * chapter competes on the strength of the fields below or it does not compete.
  *
- * Two rules run through every field, and they are the same rule twice:
+	 * Two rules run through every field:
  *
  * 1. Write for someone in their first month of reading the Bible. Short
  *    sentences. No term used before it is explained. "Propitiation",
  *    "eschatology" and "federal headship" are not clarifications, they are new
  *    problems. If a sentence needs a seminary word, the sentence is wrong, not
  *    the reader.
- * 2. Simple is not the same as vague. "God is in control" explains nothing.
- *    "Nothing that happens to you is outside God's reach, including the parts
- *    that feel random" says the same thing and can actually be disagreed with.
- *    Plain language means concrete, not soft.
+	 * 2. Simple is not the same as vague. Name what the chapter says and the
+	 *    details that support the explanation. Plain language should stay
+	 *    concrete.
+	 *
+	 * Follow `docs/editorial-voice.md`: use a warm explainer voice, vary sentence
+	 * rhythm, lead with the positive meaning, and avoid turning every paragraph
+	 * into the same contrast.
  */
 const chapterOutlineEntry = z.object({
 	/** Verse range within this chapter: `1`, `3-13`. */
@@ -226,10 +226,8 @@ const chapters = defineCollection({
 		seoTitle: z.string().min(25).max(60).optional(),
 		/**
 		 * 40-90 words, rendered directly under the <h1> and reused as the meta
-		 * description. The highest-leverage text on the page: it is the chunk a
-		 * featured snippet quotes and the paragraph an AI answer lifts whole.
-		 * Answer the question "what is this chapter about?" in the first sentence
-		 * and do not warm up to it.
+		 * description. Answer "what is this chapter about?" in the first sentence
+		 * and give enough context for the paragraph to stand alone.
 		 */
 		shortAnswer: z.string().min(200).max(750),
 		/**
@@ -256,9 +254,8 @@ const chapters = defineCollection({
 		 * sentence each.
 		 *
 		 * A newcomer meets "covenant" and "atonement" here for the first time and
-		 * every other site assumes they already know. Defining them in place is
-		 * the single kindest thing this page does — and definitions happen to be
-		 * exactly what retrieval models quote, so the kindness is free.
+		 * many other sites assume they already know. Defining them in place is one
+		 * of the most useful services this page can offer a new reader.
 		 */
 		glossary: z
 			.array(
@@ -284,9 +281,9 @@ const chapters = defineCollection({
 		/**
 		 * What this chapter is routinely made to say and does not say.
 		 *
-		 * The most-quoted chapters are the most-misquoted ones, and a newcomer is
-		 * the person least equipped to spot it. Saying so plainly is the highest
-		 * trust signal on the page and nobody else writes it.
+		 * The most-quoted chapters are often the most-misquoted. Correct the
+		 * misunderstanding directly without turning the section into a performance
+		 * of the site's discernment.
 		 */
 		caution: z.string().min(150).max(1500).optional(),
 		/**

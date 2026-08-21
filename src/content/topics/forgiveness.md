@@ -7,17 +7,17 @@ aliases:
   - repentance
   - being forgiven
 shortAnswer: >-
-  Scripture treats forgiveness in two directions that it refuses to separate:
-  what God extends, and what people owe each other. The forgiveness described is
-  thorough — sins removed as far as east is from west — and the Lord's Prayer
-  ties receiving it to extending it. Notably, none of these texts equate
-  forgiveness with pretending the wrong did not happen.
+  Scripture connects the forgiveness God gives with the forgiveness people
+  extend to one another. It describes God's forgiveness in sweeping images,
+  including sins removed as far as east is from west. The Lord's Prayer ties
+  receiving mercy to showing it. Forgiveness still leaves room to name the
+  wrong, maintain boundaries, and pursue justice.
 groups:
   - id: received
     heading: The forgiveness described is thorough
     rationale: >-
-      The images used are spatial and absolute — distance, depth, erasure —
-      rather than partial or probationary.
+      Biblical writers use images of immeasurable distance, deep water, and
+      erasure to describe how completely God deals with confessed sin.
     verses:
       - usfm: PSA.103.12
         gloss: >-
@@ -26,17 +26,16 @@ groups:
       - usfm: 1JN.1.9
         gloss: >-
           Confession is met with forgiveness described as faithful and just,
-          grounding it in God's character rather than the confessor's
-          performance.
+          grounding the promise in God's character and reliability.
       - usfm: MIC.7.19
         gloss: >-
-          Sins are pictured as hurled into the depths of the sea — a deliberate
-          act of disposal, not a quiet overlooking.
+          Micah pictures sins being thrown into the depths of the sea. The image
+          conveys decisive removal.
   - id: extended
     heading: Receiving and extending are tied together
     rationale: >-
-      The New Testament repeatedly links the two directions, and the Lord's
-      Prayer makes the connection explicit enough to be uncomfortable.
+      The New Testament repeatedly connects God's mercy with the way forgiven
+      people treat others. The Lord's Prayer makes that relationship explicit.
     verses:
       - usfm: MAT.6.14-15
         gloss: >-
@@ -44,50 +43,48 @@ groups:
           which is the only line of it he stops to explain.
       - usfm: EPH.4.32
         gloss: >-
-          The standard given is the forgiveness already received — the measure
-          is not the offence but the precedent.
+          God's forgiveness supplies the pattern for forgiving one another.
       - usfm: COL.3.13
         gloss: >-
-          Paul assumes grievances will exist within the church and instructs
-          bearing with each other alongside forgiving.
+          Paul assumes that grievances will arise within the church. He joins
+          patience with one another to the call to forgive.
   - id: hard-cases
     heading: The hard cases are addressed directly
     rationale: >-
-      Scripture does not treat forgiveness as easy or one-off, and the passages
-      most often cited on repetition come from people asking exactly that.
+      Scripture recognizes that forgiveness can be difficult and repeated. Its
+      best-known teaching on the subject begins with Peter asking how often he
+      must do it.
     verses:
       - usfm: MAT.18.21-22
         gloss: >-
-          Peter proposes seven times, presumably expecting praise, and is given
-          a number designed to make counting pointless.
+          Peter proposes forgiving seven times. Jesus answers with a number so
+          large that keeping score no longer makes sense.
       - usfm: LUK.23.34
         gloss: >-
-          Spoken during the crucifixion itself, and phrased as a request rather
-          than a declaration.
+          Jesus speaks these words during the crucifixion and frames them as a
+          request to the Father.
       - usfm: ROM.12.19
         gloss: >-
-          Paul tells believers to leave vengeance to God, which frames
-          forgiveness as handing over a claim rather than declaring the wrong
-          acceptable.
+          Paul tells believers to leave vengeance to God. A person can release
+          the claim to revenge while still recognizing that the wrong was real.
 misuse: >-
-  Forgiveness in Scripture is not the same as reconciliation, trust, or the
-  removal of consequences, and conflating them has done real harm — particularly
-  when victims of abuse are told that forgiving means returning to the person
-  who hurt them. Romans 12:19 frames forgiveness as relinquishing your claim to
-  vengeance, not as declaring the act acceptable or safe. Scripture also
-  continues to prescribe consequences for wrongdoing after forgiveness, and
-  Jesus' instruction about repeated forgiveness in Matthew 18 sits inside a
-  chapter that also lays out a process for confronting sin. Nor is forgiveness
-  usually instant. Treating it as a single decision rather than something
-  returned to repeatedly leaves people feeling they have failed when the anger
-  comes back.
+  Forgiveness, reconciliation, trust, and removal of consequences are different
+  things in Scripture. Confusing them can cause serious harm, especially when
+  someone experiencing abuse is told that forgiveness requires returning to an
+  unsafe person. Romans 12:19 calls believers to release personal vengeance;
+  it doesn't declare the offense acceptable or the offender safe. Scripture
+  still allows consequences for wrongdoing, and Matthew 18 places repeated
+  forgiveness in the same chapter as a process for confronting sin.
+  Forgiveness may also take time. Anger returning doesn't prove that a person
+  has failed, and renewed boundaries can remain necessary throughout the
+  process.
 faqs:
   - q: How many times does the Bible say to forgive?
     a: >-
       In Matthew 18:21-22 Peter asks whether seven times is enough and Jesus
-      answers seventy-seven times — or seventy times seven, depending on the
-      translation and manuscript. Either way the number is large enough to make
-      the point that counting defeats the purpose.
+      answers seventy-seven times, or seventy times seven depending on the
+      translation and manuscript. Either reading makes keeping a tally beside
+      the purpose of the instruction.
   - q: Does forgiving someone mean trusting them again?
     a: >-
       No. Scripture distinguishes forgiveness from reconciliation and from
@@ -109,13 +106,13 @@ sources:
   - torreys
   - editorial
 publishedAt: 2026-08-17
-reviewedAt: 2026-08-17
+reviewedAt: 2026-08-21
 ---
 
-Two directions run through every passage on this page. Scripture describes
-forgiveness received in extravagant terms — distance, depth, disposal — and
-then, almost immediately, asks that it be passed on.
+The passages on this page move in two directions. Scripture describes God's
+forgiveness through images of distance, depth, and complete removal. It then
+calls forgiven people to extend mercy to others.
 
-The order matters. In nearly every case the extending is grounded in the
-receiving, which is why Paul's instruction is to forgive as you were forgiven
-rather than as the offence deserves.
+The order matters. Paul grounds the difficult work of forgiving in mercy that
+has already been received. The model comes from God's action, not from the size
+of the offense or the offender's deserving.

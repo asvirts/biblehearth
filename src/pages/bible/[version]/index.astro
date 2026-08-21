@@ -69,7 +69,7 @@ const title = version
  * page that tells you whether this is the Bible you should be reading.
  */
 const pageTitle = edition
-	? `${title} — How It Reads and Who It’s For`
+	? `${title} | How It Reads and Who It’s For`
 	: `${title} · BibleHearth`;
 ---
 
@@ -142,7 +142,7 @@ const pageTitle = edition
 
 							{edition.compare.length > 0 ? (
 								<section>
-									<h2>If you are still deciding</h2>
+									<h2>Compare similar translations</h2>
 									<dl class="glossary-list">
 										{edition.compare.map((item) => (
 											<div class="glossary-item">

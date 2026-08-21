@@ -43,7 +43,7 @@ const count = (value: number) => value.toLocaleString('en-US');
 
 const title = 'About BibleHearth · Who Writes This and Why';
 const description =
-	'Who publishes BibleHearth, how each chapter study is written, what this site refuses to publish, and where to write when we get something wrong.';
+	'Learn who publishes BibleHearth, how its studies are written and reviewed, and how to report a correction.';
 
 /*
  * The publisher's own description, which is not the page's.
@@ -54,7 +54,7 @@ const description =
  * description from quietly becoming the site's identity.
  */
 const publisherDescription =
-	'A free Bible site written for people in their first year of reading it: licensed English translations, alongside original plain-English writing on chapters, topics and the questions people actually ask.';
+	'A free Bible site for people who are still getting oriented to Scripture, with licensed translations and clear studies of chapters, topics, and common questions.';
 
 const figure = hubFigures.about;
 const share = figure ? await shareCardFromFigure(figure) : undefined;
@@ -93,57 +93,45 @@ const share = figure ? await shareCardFromFigure(figure) : undefined;
 	<h1>About BibleHearth</h1>
 
 	<p class="lede">
-		BibleHearth is a free Bible site written for people in their first year of
-		reading it. This page says who publishes it, how the writing on it is made,
-		what it refuses to publish, and where to write when we get something wrong.
+		BibleHearth is a free Bible site for people who are still getting oriented to
+		Scripture. Here is how the studies are written, which sources appear beside
+		them, and how to tell us when something needs to be corrected.
 	</p>
 
 	{figure ? <Figure figure={figure} /> : null}
 
 	<section>
 		<h2>What is on this site</h2>
+		<p>The site brings together Scripture and BibleHearth's own study material.</p>
 		<p>
-			Two kinds of page live here, and only one of them is ours.
-		</p>
-		<p>
-			The reader is Scripture. It is licensed from each translation's publisher
-			and served through the YouVersion Platform, and every page that shows a
-			translation carries the copyright notice that publisher requires. We
-			display that text under licence. We do not own it, and we do not
-			reproduce it anywhere it is not licensed to appear — including the
-			plain-text version of our own pages, where quoted verses become links
-			instead.
+			The Bible reader displays Scripture licensed from each translation's
+			publisher and served through the YouVersion Platform. Every page that shows
+			a translation also carries the publisher's required copyright notice. The
+			plain-text versions of our studies link to verses on the site because their
+			license does not allow us to republish the passages there.
 		</p>
 		<p>
 			The rest is written here: {count(written)} chapter studies,
 			{' '}{count(topics.length)} topic pages and {count(answers.length)} answers
-			to questions people actually type into a search box. That writing is the
-			part of the site to hold us to, and the rest of this page is about how it
-			is made.
+			to common Bible questions. BibleHearth is responsible for that writing and
+			for keeping it clear, accurate, and current.
 		</p>
 	</section>
 
 	<section>
 		<h2>Who it is for</h2>
+		<p>It is for anyone who opens the Bible and reaches a chapter that needs context.</p>
 		<p>
-			Someone who has picked up a Bible, or opened the app, and hit a chapter
-			that does not explain itself.
-		</p>
-		<p>
-			Every page is written on the assumption that you have not been to
-			seminary and may never have been to church. No church word is used before
-			it is explained — covenant, atonement, righteousness and the rest are
-			defined where a reader first meets them, not in a glossary at the back.
-			Where a passage is genuinely difficult, the page says so instead of
-			smoothing it over.
+			The studies assume no seminary training and no previous church experience.
+			Terms such as covenant, atonement, and righteousness are explained when
+			they first appear. Difficult passages stay difficult; the page gives you
+			the background and the main ways readers have understood them.
 		</p>
 	</section>
 
 	<section>
 		<h2>How a chapter study is written</h2>
-		<p>
-			Each one is written against the chapter itself, in this order.
-		</p>
+		<p>Each study begins with the chapter and follows the same basic process.</p>
 		<ol class="outline-list">
 			<li>
 				<p>
@@ -153,9 +141,9 @@ const share = figure ? await shareCardFromFigure(figure) : undefined;
 			</li>
 			<li>
 				<p>
-					<strong>It is laid out verse by verse, in the order it happens</strong>,
-					with a heading for each movement — so the summary can be checked
-					against the text rather than taken on trust.
+					<strong>Its movement is mapped verse by verse.</strong> Each heading points
+					back to the part of the chapter it explains, so readers can check the
+					summary against the text.
 				</p>
 			</li>
 			<li>
@@ -166,31 +154,28 @@ const share = figure ? await shareCardFromFigure(figure) : undefined;
 			</li>
 			<li>
 				<p>
-					<strong>What the chapter is routinely made to say, and does not, is
-					stated plainly.</strong> This is the section most likely to disagree
-					with something you have heard.
+					<strong>Common misreadings are addressed directly.</strong> The caution
+					section explains where a familiar interpretation asks more of the
+					chapter than the words support.
 				</p>
 			</li>
 			<li>
 				<p>
-					<strong>The questions people are actually asking get answered</strong>,
-					in the words they ask them in.
+					<strong>Common questions receive direct answers</strong> in the same words
+					readers use when they ask them.
 				</p>
 			</li>
 		</ol>
 		<p>
-			Three commentaries then appear underneath, reproduced in full and named:
-			Tyndale's Open Study Notes, released under a Creative Commons licence, and
-			Matthew Henry (1706) and Jamieson-Fausset-Brown (1871), both public
-			domain. They are there so that you can check us. Where our reading and a
-			three-hundred-year-old scholar's differ, you can see the difference on the
-			same page instead of taking our word for it.
+			Three named commentaries appear underneath: Tyndale's Open Study Notes,
+			released under a Creative Commons license, and Matthew Henry (1706) and
+			Jamieson-Fausset-Brown (1871), both public domain. Reading them beside the
+			study makes agreements and differences easy to see.
 		</p>
 		<p>
 			Where they cover the chapter you are on, the page also links out to The
-			Gospel Coalition's commentary and BibleProject's overview of the book —
-			and never to a page we have not verified exists, which is why some
-			chapters carry fewer links than others.
+			Gospel Coalition's commentary and BibleProject's overview of the book. We
+			check every destination before adding it, so some chapters have fewer links.
 		</p>
 		<p>
 			Every study carries the month it was last reviewed. That date moves when
@@ -203,43 +188,40 @@ const share = figure ? await shareCardFromFigure(figure) : undefined;
 		<p>
 			There are {count(TOTAL_CHAPTERS)} chapters in the Bible. {count(written)}
 			{' '}of them are written up so far. The other {count(unwritten)} have a
-			working page — you can read the chapter there, and the commentaries — but
-			that page tells search engines not to index it, and it is kept out of the
+			working page where you can read the chapter and the commentaries. Until an
+			original study is ready, that page stays out of search indexes and the
 			sitemap.
 		</p>
 		<p>
-			That is deliberate, and it costs us almost the whole site. A page whose
-			only substance is public-domain commentary that four larger sites already
-			mirror has nothing to offer someone searching, however many of them we
-			could generate. So a chapter earns its place in a search index by having
-			something of our own written about it, and until then it stays out. The
+			Larger sites already publish the same public-domain commentaries. An
+			indexable BibleHearth page needs an original study that helps the reader
+			understand the chapter. Until that study exists, the page stays out. The
 			{' '}<a href={STUDY_HUB_PATH}>study index</a> lists the chapters that have
 			cleared that bar.
 		</p>
 	</section>
 
 	<section>
-		<h2>What this site is not</h2>
+		<h2>Where this site's help ends</h2>
 		<p>
-			It is not a church, and it is not a substitute for one. Nobody here is
-			your pastor.
+			BibleHearth is a study resource. It is not a church or a substitute for
+			pastoral care.
 		</p>
 		<p>
 			These pages explain what a passage says, how it has been read, and where
-			readers disagree. They do not tell you what to do about your marriage,
-			your diagnosis or your grief. Where a topic touches something serious the
-			page says so and points outward — the page on depression asks you to
-			contact a doctor or a crisis line, in those words, because that is the
-			right answer and a verse list is not.
+			readers disagree. Personal decisions about a marriage, a diagnosis, or grief
+			need help from people who know the situation. Pages that touch serious
+			subjects say that clearly. The depression page, for example, directs readers
+			to a doctor or crisis line when immediate help is needed.
 		</p>
 	</section>
 
 	<section>
-		<h2>Sources and licences</h2>
+		<h2>Sources and licenses</h2>
 		<p>
 			Every work reproduced or linked here is listed on the
 			{' '}<a href="/attributions">attributions page</a>: who holds it, under
-			what licence, and what we changed. Verse selections on the topic pages are
+			what license, and what we changed. Verse selections on the topic pages are
 			our own, informed by Nave's Topical Bible (1897) and Torrey's New Topical
 			Textbook (1897), both public domain.
 		</p>
@@ -259,9 +241,8 @@ const share = figure ? await shareCardFromFigure(figure) : undefined;
 		</p>
 		<p>
 			A correction is made on the page itself and the review date moves with it.
-			Where a page was wrong in a way that changed its meaning, it says on the
-			page that it changed, rather than quietly reading better than it did the
-			day before.
+			If an error changed the meaning of a page, the corrected page includes a
+			note explaining what changed.
 		</p>
 	</section>
 
@@ -272,8 +253,8 @@ const share = figure ? await shareCardFromFigure(figure) : undefined;
 			2026. It is not affiliated with a church, a denomination or a Bible
 			publisher, and nothing written here is endorsed by one. Bible text reaches
 			these pages through the YouVersion Platform, which any developer can apply
-			for — a licence to display Scripture, not an endorsement of anything
-			written around it.
+			for. That license allows us to display Scripture; it is not an endorsement
+			of the writing around it.
 		</p>
 		<p>
 			There is nothing to buy here, no account to make, no advertising and no

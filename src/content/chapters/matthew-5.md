@@ -1,306 +1,231 @@
 ---
 usfm: MAT.5
-title: "Matthew 5: The Beatitudes, and Six Commands Made Impossible to Police"
-seoTitle: "Matthew 5: The Beatitudes, and Six Hard Commands"
+title: "Matthew 5 Explained: The Beatitudes and Jesus' Deeper Commands"
+seoTitle: "Matthew 5 Explained: The Beatitudes"
 shortAnswer: >-
-  Matthew 5 opens the Sermon on the Mount, and it does two things that pull in
-  opposite directions. It begins with nine blessings — on the poor in spirit, the
-  mourners, the meek, the hungry — none of which is a command and none of which
-  anybody achieves. Then, from verse 21, it says "you have heard it was said... but
-  I tell you" six times, and every time the standard goes up. Do not murder becomes
-  do not hold someone in contempt. Do not commit adultery becomes do not look. Eye
-  for eye becomes turn the other cheek. Not one of the new versions could be
-  enforced by a court, which is the point: they are aimed somewhere a court cannot
-  reach.
+  Matthew 5 begins the Sermon on the Mount with the Beatitudes, blessings for people
+  such as the poor in spirit, mourners, the meek, and peacemakers. Jesus then calls
+  his followers salt and light and explains how he fulfills the Law. His teaching
+  reaches beyond outward conduct to anger, desire, truthfulness, retaliation, and
+  love for enemies. Six sections use the pattern "you have heard it was said... but I
+  tell you". The chapter describes a whole-person righteousness formed in the
+  heart and lived in public.
 outline:
   - verses: "1-2"
-    heading: He sits down, which is what a teacher does
+    heading: Jesus sits down to teach
     note: >-
-      Two verses of stage direction, and they matter. Jesus goes up the hill and
-      sits — the posture of a rabbi settling in to teach at length, not a preacher
-      passing through. His disciples come to him, with the crowds behind them.
+      Jesus goes up the mountain and takes the seated posture of a Jewish teacher.
+      His disciples gather near him while the crowds remain part of the wider
+      audience.
   - verses: "3-12"
-    heading: Nine blessings, and not one of them is an instruction
+    heading: The Beatitudes announce God's favor
     note: >-
-      Poor in spirit, mourning, meek, hungry for righteousness, merciful, pure in
-      heart, peacemaking, persecuted — and then a longer version aimed directly at
-      "you". These are announcements about who is already in favour, not a list of
-      qualities to acquire.
+      Jesus blesses the poor in spirit, mourners, the meek, those hungry for
+      righteousness, the merciful, the pure in heart, peacemakers, and the persecuted.
+      The final blessing directly addresses disciples who are insulted because of him.
   - verses: "13-16"
-    heading: You are salt, you are light — stated, not requested
+    heading: Jesus calls his followers salt and light
     note: >-
-      Both are indicatives before they are imperatives: this is what you are.
-      Salt that has lost its taste is useless, a city on a hill cannot be hidden, a
-      lamp does not go under a basket. The only instruction is not to hide.
+      Salt without flavor is useless, and a lamp belongs on its stand. Jesus tells
+      his followers to let their light be visible through good works that direct
+      praise toward their Father.
   - verses: "17-20"
-    heading: The hinge of the whole chapter
+    heading: Jesus fulfills the Law and the Prophets
     note: >-
-      Not abolishing the Law but fulfilling it; not one stroke of a pen will drop
-      out. Then verse 20, which sets up everything that follows: unless your
-      righteousness goes beyond that of the scribes and Pharisees, you will never
-      enter the kingdom.
+      Jesus has come to fulfill the Law and the Prophets, down to their smallest
+      details. He calls for a righteousness that goes beyond the scribes and
+      Pharisees, preparing for the examples that follow.
   - verses: "21-26"
-    heading: Murder pushed back to the contempt behind it
+    heading: Anger and contempt belong with the command against murder
     note: >-
-      The command against killing is extended to anger and to two insults —
-      "Raca" and "you fool". Then two practical scenes: leave your offering at the
-      altar and go make peace first, and settle with your opponent before you reach
-      the court.
+      Jesus traces murder back to anger and contempt, including insults such as
+      "Raca" and "you fool". Reconciliation with another
+      person takes priority even over presenting an offering, and disputes should be
+      addressed before they reach court.
   - verses: "27-32"
-    heading: Adultery pushed back to the look, and a word on divorce
+    heading: Desire and divorce reveal the heart of sexual faithfulness
     note: >-
-      Looking at someone in order to want them is treated as the thing itself,
-      already done, inwardly. Then the most violent images in the chapter — the eye
-      and the hand — and a restriction on divorce in a world where a man could
-      dismiss a wife easily.
+      A deliberate look that cultivates lust violates faithfulness in the heart.
+      Jesus uses forceful images about the eye and hand to show the seriousness of
+      sin, then restricts easy divorce in a society where women were vulnerable.
   - verses: "33-37"
-    heading: Oaths made unnecessary rather than stricter
+    heading: Truthful speech makes oaths unnecessary
     note: >-
-      Instead of tightening the rules for swearing, Jesus removes the need for
-      them. Do not swear by heaven, earth, Jerusalem or your own head. Let yes mean
-      yes. An oath is only useful to someone whose ordinary word cannot be trusted.
+      Jesus tells his followers to avoid elaborate oaths and make their ordinary
+      speech dependable. A clear yes or no should carry enough weight on its own.
   - verses: "38-42"
-    heading: Retaliation replaced with something stranger than surrender
+    heading: Jesus teaches creative nonretaliation
     note: >-
-      Turn the other cheek, hand over the cloak as well, walk the second mile, give
-      to the one who asks. Each is a response that neither fights back nor simply
-      submits — it takes the initiative in a way the aggressor has no script for.
+      Turning the other cheek, giving the cloak, and walking a second mile each
+      surrender the right to proportional revenge. The responses take initiative
+      without mirroring the aggressor's conduct.
   - verses: "43-48"
-    heading: Love extended to the people it is hardest to extend it to
+    heading: Love reaches enemies as well as friends
     note: >-
-      Love your enemies, pray for those who persecute you — with a reason attached:
-      God sends sun and rain on everyone indiscriminately. Loving the people who love
-      you back, Jesus says, is not distinctive. Then verse 48: be perfect, as your
-      Father is.
+      Jesus tells his followers to love enemies and pray for persecutors. God's sun
+      and rain benefit both good and evil people. Complete love reaches beyond the
+      circle of those who return it.
 themes:
-  - name: It opens by blessing people who have nothing
+  - name: The sermon begins with blessing
     explanation: >-
-      The Beatitudes are not entry requirements and they are not virtues to
-      cultivate. Nobody sets out to be poor in spirit, and mourning is not an
-      achievement. What Jesus does in verses 3 to 12 is announce that the kingdom
-      belongs to categories of people everyone else had written off — the
-      spiritually bankrupt, the grieving, the unassertive, the ones who want
-      rightness and do not have it. That matters enormously for how the rest of the
-      chapter reads. The standards about to be raised out of reach are being raised
-      for an audience that has already been told they are in favour, which is a
-      completely different experience from being handed them cold.
-  - name: Six times the command gets harder, and no new rules appear
+      The Beatitudes announce God's favor before Jesus gives a command. The kingdom
+      belongs to the spiritually empty, comfort awaits mourners, and the meek inherit
+      the earth. This order matters. The demanding teaching that follows is addressed
+      to people who have first heard that God's kingdom welcomes those with little
+      status or strength.
+  - name: Jesus traces commands back to their source
     explanation: >-
-      "You have heard that it was said... but I tell you" runs six times through
-      verses 21 to 48, and the pattern never varies in direction. Every time, Jesus
-      takes a command his hearers already knew and pushes it further in — from
-      killing to contempt, from adultery to the look, from keeping oaths to not
-      needing them, from proportionate revenge to no revenge, from loving neighbours
-      to loving enemies. He adds no new prohibitions and lifts no old ones. That is
-      what verse 17 means in practice: this is not a replacement code but the
-      original commands followed all the way down to where they came from.
+      "You have heard that it was said... but I tell you" introduces the pattern.
+      Jesus carries each
+      command inward, from murder to contempt, adultery to cultivated desire, oath
+      keeping to truthful speech, proportional revenge to generosity, and neighbor
+      love to enemy love. This is how the chapter displays his fulfillment of the Law.
   - name: The new standards cannot be audited
     explanation: >-
-      A court can try a murder. No court can try contempt. You can be convicted of
-      adultery and never of a look; a magistrate can enforce a contract and cannot
-      require that your word be good without one. Every command in the second half
-      of this chapter has been moved out of the range of external verification, which
-      means the only place it can be kept is inside the person keeping it. That is
-      why verse 20 asks for a righteousness beyond the Pharisees' — not more scruple
-      or more effort, but a different location. The Sermon is unenforceable on
-      purpose.
-  - name: Salt and light are what you are, not what you should try to be
+      Human courts can judge murder, adultery, and broken contracts. They cannot fully
+      measure contempt, lustful purpose, or inward love for an enemy. Jesus places the
+      center of righteousness within the person, where conduct begins. The standard
+      exceeds external compliance because it seeks an integrated heart and life.
+  - name: Salt and light describe an existing calling
     explanation: >-
-      Both images in verses 13 to 16 arrive as statements of fact: you are the salt
-      of the earth, you are the light of the world. Neither is "become". The
-      instructions attached are almost entirely negative — do not lose your
-      saltiness, do not put the lamp under a basket, and a city on a hill cannot be
-      hidden even if it wanted to be. Jesus is not asking his hearers to generate
-      influence. He is telling them they already have it and warning them about
-      concealing it, which is a much less anxious way of putting the same demand.
+      Jesus addresses "you" and says his followers are salt and light; the verb is not
+      "become". His followers
+      already affect the communities around them. Their task is to remain faithful
+      and visible so that good works point beyond themselves to the Father.
   - name: Perfect means complete, not flawless
     explanation: >-
-      Verse 48 sounds like the most crushing sentence in the New Testament until
-      you notice what it is the conclusion of. The paragraph before it is about
-      loving enemies, and its argument is that God sends sun and rain on good and
-      bad people alike — his goodness has no boundary around it. The Greek word
-      translated "perfect" means finished, whole, complete, lacking nothing. So the
-      instruction is to be complete in the way God is complete: love that does not
-      stop at the edge of the people who love you back. That is still difficult. It
-      is not the same as being told to be faultless.
+      Verse 48 concludes the paragraph about loving enemies. The Greek word translated
+      "perfect" can mean complete, mature, or whole. God's generous care reaches good
+      and evil people through sun and rain. Jesus calls his followers toward that same
+      completeness in love, beyond a demand for instant moral flawlessness.
 glossary:
   - term: blessed
     plain: >-
-      The Greek word describes someone who is genuinely well off — congratulated,
-      fortunate — rather than someone receiving a blessing in a religious ceremony.
-      Some translations use "happy", which is close but too light. "Things are good
-      for this person, whatever it looks like" is nearer.
+      The Greek word describes someone who receives God's favor and can be called
+      fortunate, even when present circumstances look painful. Some translations use
+      "happy", though the word carries more weight than a passing feeling.
   - term: poor in spirit
     plain: >-
-      Not humble in the modest sense, and not financially poor. The picture is
-      spiritual bankruptcy — someone who has nothing to offer God and knows it.
-      Jesus puts it first, which means the door into the whole sermon is admitting
-      you are empty-handed.
+      People who recognize their spiritual need and come to God empty-handed. Matthew
+      emphasizes inner poverty, while Luke's related teaching says simply "the poor."
   - term: meek
     plain: >-
-      Gentle, unassertive, not inclined to push. It is not weakness — the same word
-      is used of Moses and of Jesus himself — but it does mean not grabbing. The
-      promise attached, inheriting the earth, is deliberately absurd: the people
-      who never take anything end up with everything.
+      Gentle people who do not seize power for themselves. Scripture uses the same
+      quality for Moses and Jesus, showing disciplined strength instead of helplessness.
   - term: Raca
     plain: >-
-      An Aramaic insult, probably meaning empty-headed or worthless, kept
-      untranslated because its force was in the sound. Jesus is not banning one
-      particular word; he is naming the ordinary contempt that everyday insults
-      carry and treating it as serious.
+      An Aramaic insult that may mean empty-headed or worthless. Jesus uses it as an
+      example of the contempt carried through ordinary insults.
   - term: an eye for an eye
     plain: >-
-      A legal principle from the Law of Moses, and its original purpose was to
-      limit revenge rather than license it — the punishment could not exceed the
-      injury. Jesus is not overturning a savage rule; he is telling his followers
-      not to claim even the fair amount.
+      A legal principle that limited punishment to the scale of the injury. Jesus
+      asks his followers to surrender even a proportionate personal claim to revenge.
   - term: go the extra mile
     plain: >-
-      A Roman soldier could legally compel a civilian in occupied territory to carry
-      his pack for one mile. Jesus says walk two. The phrase has since become an
-      English idiom for doing more than required, which has softened it: the
-      original was about how to respond to an occupying army.
+      Roman soldiers could compel civilians in occupied territory to carry equipment
+      for a mile. Jesus' second mile imagines a voluntary response that exceeds the
+      imposed demand.
   - term: perfect
     plain: >-
-      The Greek word means complete, whole, having reached its intended end — not
-      morally spotless. Verse 48 is asking for a love as unrestricted as God's,
-      which is the subject of the five verses before it.
+      The Greek word can mean complete, mature, or brought to its intended end. In
+      verse 48, it describes love that reaches enemies as God's generosity does.
   - term: the Law and the Prophets
     plain: >-
-      A standard way of referring to the Hebrew Scriptures as a whole. When Jesus
-      says he has not come to abolish them, he is talking about the entire Old
-      Testament, not just the rule book.
+      A common name for the Hebrew Scriptures as a whole. Jesus' statement about
+      fulfillment concerns the Old Testament, beyond its individual legal commands.
 keyVerses:
   - usfm: MAT.5.3
     why: >-
-      The first sentence of the sermon and the one that sets its terms. The kingdom
-      is handed to the spiritually bankrupt before a single command is given.
+      The sermon opens by giving the kingdom to people who recognize their spiritual
+      need, before Jesus issues any command.
   - usfm: MAT.5.17
     why: >-
-      The verse that governs everything after it. Whatever Jesus is doing with the
-      commandments in this chapter, he says it is completion rather than
-      replacement.
+      Jesus identifies his mission as fulfilling the Law and the Prophets. The six
+      teachings that follow show that fulfillment reaching the heart.
   - usfm: MAT.5.20
     why: >-
-      The hinge. A righteousness beyond that of the most scrupulous people in the
-      room is required, which rules out doing the same things harder.
+      The righteousness of Jesus' kingdom reaches beyond visible rule keeping into
+      the motives and desires from which conduct grows.
   - usfm: MAT.5.39
     why: >-
-      The most famous and most misapplied instruction in the chapter. Turning the
-      other cheek is neither fighting back nor lying down, and the difference
-      matters.
+      Turning the other cheek is a form of nonretaliation that responds to humiliation
+      without copying the aggressor's violence.
   - usfm: MAT.5.44
     why: >-
-      The last and hardest of the six reversals, with its reason attached: God's
-      sun rises on the evil and the good. Love without a boundary around it.
+      Love and prayer extend even to enemies and persecutors because God's common
+      gifts reach good and evil people alike.
   - usfm: MAT.5.48
     why: >-
-      The conclusion of the whole chapter, and it turns on one word. Complete
-      rather than flawless, and complete specifically in the indiscriminate love
-      just described.
+      Jesus calls for complete love modeled on the Father's care for people across
+      moral and relational boundaries.
 caution: >-
-  Two passages here have been used to do real harm. Verses 29 and 30 — gouge out
-  the eye, cut off the hand — are deliberate overstatement, a way of speaking Jesus
-  uses often, and they have never been read literally by the mainstream of the
-  church. He is saying that what happens inside you is worth serious cost to deal
-  with, not prescribing self-injury. If those verses are pressing on you as an
-  instruction, that is a misreading of them, and it is worth saying to somebody who
-  can help. The second is verse 39, "do not resist an evil person", which has been
-  quoted to people being abused by a spouse, a parent or a church leader as a
-  reason to stay and absorb it. The scene Jesus describes is a public insult — a
-  slap to the right cheek, delivered backhanded to humiliate rather than to injure
-  — and his answer is a startling piece of initiative in front of witnesses. It is
-  not a policy for private, ongoing violence, and reading it as one requires
-  ignoring the rest of the New Testament on protecting the vulnerable. Nothing in
-  this chapter obliges anybody to remain within reach of someone harming them.
+  Verses 29 and 30 use deliberate overstatement to communicate the seriousness of
+  dealing with sin. Mainstream Christian interpretation has never treated them as
+  instructions for self-injury. Anyone feeling compelled to harm themselves should
+  seek immediate help from a trusted person or emergency service. Verse 39 has also
+  been misused through the words "do not resist an evil person" to keep people in
+  abusive homes or churches. The right-cheek scene
+  describes a public act of humiliation and a nonretaliatory response. It does not
+  require anyone to remain within reach of private, repeated violence. Seeking safety,
+  protection, and help is consistent with the Bible's care for vulnerable people.
 faqs:
   - q: What are the Beatitudes and what does each one mean?
     a: >-
-      Nine statements at the start of the sermon, each beginning "blessed are".
-      Poor in spirit — those with nothing to offer God — get the kingdom. Those who
-      mourn will be comforted. The meek, who never grab, inherit the earth. Those
-      who hunger and thirst for righteousness will be filled. The merciful will
-      receive mercy. The pure in heart, meaning undivided rather than sinless, will
-      see God. Peacemakers will be called God's sons. The persecuted get the kingdom
-      too, and the ninth extends that to the hearers directly: blessed are you when
-      people insult and lie about you. None of them is a command, and none describes
-      an achievement.
+      The Beatitudes are nine blessings, each beginning "blessed are", at the start of the sermon. The kingdom
+      belongs to the poor in spirit and the persecuted; mourners receive comfort; the
+      meek inherit the earth; those hungry for righteousness are filled; the merciful
+      receive mercy; the pure in heart see God; and peacemakers are called God's
+      children. The final statement directly blesses disciples who suffer because of
+      Jesus.
   - q: What does "blessed are the poor in spirit" mean?
     a: >-
-      It describes spiritual bankruptcy — someone who has nothing to bring God and
-      is aware of it. Not modesty, not low self-esteem, and not financial poverty,
-      though Luke's version of the sermon says simply "the poor" and the two overlap
-      in practice. Jesus puts it first in the list, which makes it the entrance to
-      everything that follows: the kingdom is given to people who have run out of
-      resources rather than to people who have accumulated them. Anyone reading the
-      rest of this chapter and finding its standards impossible has already
-      qualified for its first sentence.
+      It describes people who recognize that they come to God without spiritual
+      wealth or leverage. The phrase differs from low self-esteem, and Luke's related
+      blessing of "the poor" also keeps material need in view. Jesus gives the kingdom
+      to people who know they depend on God.
   - q: What does "turn the other cheek" mean?
     a: >-
-      Jesus specifies the right cheek, and in a world where the left hand was not
-      used for social contact, striking someone's right cheek means a backhanded
-      slap — an insult from a superior to an inferior rather than a punch in a
-      fight. Offering the other cheek then forces a choice: hit again with an open
-      hand, which is how equals fight, or stop. It is not passivity and it is not
-      retaliation; it is a third move that refuses the terms being offered. The two
-      examples that follow work the same way: the cloak and the second mile both do
-      more than was demanded, in public, in a way that exposes the demand.
+      Because Jesus specifies the right cheek, many interpreters understand a
+      backhanded slap meant to humiliate a social inferior. Offering the other cheek
+      rejects retaliation while forcing the aggressor to choose a different kind of
+      encounter. The cloak and second-mile examples likewise take active, public
+      responses to coercive demands. The passage does not require staying in danger.
   - q: Does looking with lust really equal adultery?
     a: >-
-      Jesus says the person who looks at someone in order to want them has already
-      committed adultery in his heart, and he means it — but notice what he is
-      levelling. He is not saying a look carries the same consequences as an affair,
-      or that noticing someone attractive is the same as pursuing them. The Greek
-      describes looking with the intention of wanting, which is deliberate rather
-      than involuntary. And the reason he says it is the argument of the whole
-      chapter: the command was never only about the act. Someone who has kept the
-      letter of it while running the whole thing inwardly has not kept it. This is
-      the sixth commandment being followed home, not a new one being invented.
+      Jesus identifies deliberate looking that cultivates sexual desire as adultery
+      in the heart. He is not equating an involuntary notice with a chosen pursuit,
+      nor saying every thought has the same external consequences as an affair. He is
+      locating the moral breach in the intention that can precede the act.
   - q: Should you literally pluck out your eye if it causes you to sin?
     a: >-
-      No. This is deliberate overstatement, a form of speech Jesus uses regularly —
-      elsewhere he talks about a camel going through a needle's eye and a plank in
-      somebody's eye — and the church has never read it as a command to injure
-      yourself. Two things show it. Removing an eye would not remove the desire,
-      since verse 28 has just located the problem in the heart rather than the body.
-      And he says the right eye and the right hand specifically, which reads as
-      rhetorical emphasis on losing your best rather than as a surgical
-      instruction. What he is asserting is that dealing with what goes on inside you
-      is worth a serious cost.
+      No. Jesus uses vivid overstatement elsewhere, including a plank in an eye and a
+      camel passing through a needle. Physical injury would not remove a desire that
+      verse 28 locates in the heart. The language urges decisive action against sin,
+      even when change is costly. It does not authorize self-harm.
   - q: What does "I came not to abolish the law but to fulfill it" mean?
     a: >-
-      Jesus is answering a charge before it is made. His hearers could reasonably
-      have suspected that a teacher who ate with the wrong people and argued about
-      the Sabbath was dismantling the Law, and he says the opposite: not one stroke
-      of a pen will drop out. Fulfil means bring to completion, fill full, carry
-      through to what it was aimed at. The rest of the chapter shows what he means —
-      six commands taken not less seriously but further than anyone had taken them.
-      Christians disagree about how much of the Law's detail still binds them, and
-      this verse does not settle that argument, but it does rule out the idea that
-      Jesus treated the Old Testament as expired.
+      "Fulfill" means bringing the Scriptures to their intended completion. Jesus
+      rejects the idea that he is discarding the Old Testament and then shows the
+      depth of its commands in six examples. Christians differ over how specific Old
+      Testament laws apply after Christ, and this verse alone does not settle every
+      part of that discussion.
   - q: What does "be perfect as your heavenly Father is perfect" mean?
     a: >-
-      The Greek word means complete, whole, having reached its proper end — not
-      morally spotless. And it is the conclusion of a specific paragraph, not a
-      free-standing demand: the verses immediately before it say God sends sun and
-      rain on the good and the evil alike, and that loving only the people who love
-      you back is nothing remarkable. So "be perfect as your Father is perfect"
-      means let your love be as complete and as unbounded as his — do not stop it at
-      the edge of the people who deserve it. That is still a very high bar. It is
-      not the same as being told to be faultless, which is how the verse is usually
-      heard.
+      The Greek word can mean complete, whole, or mature. The immediate paragraph is
+      about loving enemies as God gives sun and rain to both good and evil people.
+      The call to "be perfect as your Father is perfect" describes a love that reaches
+      its intended fullness instead of stopping
+      with people who return it. The verse still sets a demanding goal, but it should
+      not be reduced to a demand for instant flawlessness.
   - q: What is the exception for divorce in Matthew 5:32?
     a: >-
-      Jesus allows one ground, translated variously as sexual immorality,
-      unfaithfulness or marital unfaithfulness, and the Greek word behind it is
-      broad enough that Christians have argued about its exact scope for centuries.
-      Two pieces of context are worth having. In that world a man could dismiss his
-      wife on slight grounds, and a dismissed woman was often left destitute — so
-      Jesus is restricting a male privilege and protecting the vulnerable party, not
-      adding a burden to women. And this is one of two passages where he addresses
-      it; Paul later adds a further situation. Churches differ genuinely on the
-      practical rules, and anyone in that situation deserves careful counsel rather
-      than a verse quoted at them.
+      Jesus names a ground translated as sexual immorality, unfaithfulness, or
+      marital unfaithfulness. Christians have debated the Greek term's exact scope for
+      centuries, and Paul later addresses another situation. In this setting, men
+      could dismiss wives on slight grounds and leave them economically exposed, so
+      Jesus restricts a male privilege and protects the vulnerable. Anyone facing
+      divorce deserves careful, safe counsel instead of a single verse used in
+      isolation.
 relatedTopics:
   - love
   - forgiveness
@@ -314,40 +239,23 @@ entity:
     - https://en.wikipedia.org/wiki/Beatitudes
     - https://en.wikipedia.org/wiki/Sermon_on_the_Mount
 publishedAt: 2026-08-19
-reviewedAt: 2026-08-19
+reviewedAt: 2026-08-21
 ---
 
-## If this is your first time reading Matthew 5
+## Reading Matthew 5 as one argument
 
-This is the opening third of the longest stretch of Jesus' teaching in the Bible,
-and it is worth reading in one sitting even though it takes a while. Two things
-will help.
+The first third of the Sermon on the Mount begins with blessing. Jesus announces the
+kingdom to the poor in spirit, comfort to mourners, and an inheritance to the meek
+before giving any instruction. That order places the demanding teaching within God's
+welcome and favor.
 
-The first is to notice that the chapter starts with blessings and not with
-commands. Verses 3 to 12 do not ask you to do anything. They announce that the
-kingdom belongs to the poor in spirit, that mourners will be comforted, that the
-meek get the earth. Nobody works their way onto that list — you do not decide to be
-spiritually bankrupt or take up mourning as a discipline. Jesus is telling a hillside
-full of ordinary people that they are already in favour, and he does it before he
-asks for a single thing.
+From verse 21, Jesus works through six familiar teachings. Each one reaches beneath
+visible conduct into anger, desire, trustworthy speech, responses to harm, and love
+for enemies. Courts can judge murder or broken contracts, but only God and the person
+involved fully know contempt, lust, and motive. The righteousness Jesus describes
+forms action from the inside.
 
-Keep that in mind, because the second half of the chapter is relentless. From verse
-21 he says "you have heard it was said... but I tell you" six times, and every
-single time the standard goes up. Do not murder becomes do not despise anybody. Do
-not commit adultery becomes do not look at somebody in order to want them. Keep your
-oaths becomes have a word so good you never need one. An eye for an eye becomes turn
-the other cheek. Love your neighbour becomes love your enemy.
-
-Here is the thing to watch for, because it explains the whole chapter. Not one of
-those new versions could be tested by anybody else. A court can prosecute murder; it
-cannot prosecute contempt. Somebody can hold you to a contract; nobody can require
-that your word be good without one. Jesus has moved every command to a place where
-external checking is impossible, which is what he means in verse 20 by a
-righteousness that goes beyond the Pharisees'. He is not asking for more effort at
-the same job. He is saying the job was always inside.
-
-And when it ends, at verse 48, with "be perfect as your heavenly Father is perfect",
-read the word carefully. It means complete, whole, finished — and the paragraph it
-concludes is about God sending rain on people who do not deserve it. The sentence is
-asking for a love with no edge to it. Which is hard enough without also hearing it
-as a demand to be flawless.
+Verse 48 completes the section on enemy love. The word translated "perfect" can mean
+whole or mature. As the Father gives sun and rain across moral boundaries, his
+children are to develop a love that does not end with friends. The goal is demanding,
+yet it arises from the blessing that opened the sermon.

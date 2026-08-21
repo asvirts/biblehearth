@@ -1,261 +1,213 @@
 ---
 usfm: PSA.51
-title: "Psalm 51: He Asks to Be Created, Not Repaired"
+title: "Psalm 51: A Prayer for Mercy and a Clean Heart"
 shortAnswer: >-
-  Psalm 51 is David's prayer after the affair with Bathsheba and the killing of her
-  husband, and two things about it are easy to miss. He never asks for the
-  consequences to be lifted — not once in nineteen verses — and when he does ask for
-  something, the verb he chooses is enormous. "Create in me a clean heart" uses the
-  word Genesis 1 uses for God making the universe, a verb the Hebrew Bible only ever
-  gives to God. He is not asking to be patched up. He has concluded there is nothing
-  in him to work with, and asks to be made. And in verse 17 the king who ran the
-  sacrificial system says the sacrifice God wants is a broken spirit.
+  Psalm 51 is David's prayer of confession after his sin involving Bathsheba and the
+  death of her husband, Uriah. David asks for mercy, cleansing, a renewed spirit, and
+  restored joy. He never asks God to remove the consequences. His request to "create
+  in me a clean heart" uses the same Hebrew verb used for God's creative work in
+  Genesis 1. Near the end, David says that God welcomes a broken and contrite heart
+  more than an outward sacrifice offered without repentance.
 outline:
   - verses: "1-2"
-    heading: Three words for what he did, and two for what he needs
+    heading: David asks for mercy and cleansing
     note: >-
-      Transgression, iniquity, sin — three different Hebrew words in two verses,
-      because one was not enough. What he asks for is domestic: blot it out, wash me,
-      cleanse me. And the ground he asks on is God's character, not his own record.
+      Three Hebrew words describe David's wrong: transgression, iniquity, and sin. His
+      requests use the language of erasing and washing. He bases his appeal on God's
+      faithful love and compassion.
   - verses: "3-6"
-    heading: Total agreement with the charge
+    heading: David accepts God's judgment
     note: >-
-      No mitigation offered. My sin is always in front of me. Against you have I
-      sinned, so that your verdict is proved right. Then the two hardest verses: he
-      traces it back before he was born, and says what God wants is truth in the
-      inmost place.
+      David keeps his wrongdoing in view and agrees that God's verdict is just. He
+      traces the problem deep into his life and recognizes God's desire for truth in
+      the hidden parts of a person.
   - verses: "7-9"
-    heading: Cleaning language, and bones that have been crushed
+    heading: He asks to be washed and restored
     note: >-
-      Hyssop, washing, whiter than snow — the vocabulary of ritual purification. Then
-      the line that gives away how bad this was: let the bones you have crushed
-      rejoice. He credits the breaking to God and asks the broken parts to be glad.
+      Hyssop, washing, and whiteness recall Israel's rituals of purification. David
+      feels as if his bones have been crushed and asks God to let joy reach those
+      broken places again.
   - verses: "10-12"
-    heading: The four requests at the centre of the psalm
+    heading: David asks for inner renewal
     note: >-
-      Create a clean heart. Renew a right spirit. Do not cast me from your presence or
-      take your Holy Spirit from me. Restore the joy. Every one of them is about his
-      interior, and none of them is about his circumstances.
+      David asks God to create a clean heart, renew a steadfast spirit, keep him close,
+      and restore the joy of salvation. His attention stays on the person he needs to
+      become, not on escaping his circumstances.
   - verses: "13-15"
-    heading: What he intends to do afterwards
+    heading: Forgiveness leads to teaching and praise
     note: >-
-      Teach other people who have done wrong, so they come back. Deliver me from
-      bloodguilt — the nearest the psalm comes to naming the murder. And open my lips,
-      which assumes they have been shut.
+      David promises to teach other sinners God's ways so they can return. He asks for
+      deliverance from bloodguilt and for lips opened to praise God again.
   - verses: "16-17"
-    heading: The sacrifice that is actually wanted
+    heading: God receives a broken and contrite heart
     note: >-
-      "You do not delight in sacrifice, or I would bring it." From the king who
-      maintained the entire system, that is a striking admission. What God will not
-      despise, he says, is a broken and crushed heart.
+      "You do not delight in sacrifice, or I would bring it." David knows that a ritual
+      offering cannot replace repentance. The sacrifice God
+      will not despise is a broken spirit and a contrite heart that no longer tries to
+      defend itself.
   - verses: "18-19"
-    heading: A national ending, and a likely later hand
+    heading: The prayer widens to Jerusalem
     note: >-
-      The last two verses turn from one man to Zion's walls and the altar's bulls,
-      which sits oddly after verse 17. Many readers take them as an addition made when
-      the nation prayed this psalm as its own after the exile.
+      The final verses turn from David's confession to Zion's welfare and restored
+      sacrifices. Many scholars understand them as a later addition from a community
+      that prayed David's words after the exile.
 themes:
-  - name: He asks to be created, not repaired
+  - name: A clean heart requires God's creative work
     explanation: >-
-      Verse 10's "create in me a clean heart" uses the Hebrew verb bara — the word in
-      the first sentence of Genesis, and a verb the Old Testament reserves for God.
-      Nobody else in the Hebrew Bible is ever its subject. That choice is the psalm's
-      central claim about how bad David thinks his situation is. He does not ask for
-      his heart to be cleaned, mended or improved; he asks for one to be made, which
-      only makes sense if he has concluded that the existing one is not salvageable
-      material. It is the difference between asking a mechanic for a repair and asking
-      for a new engine, except that the only supplier is the one who made the first
-      one out of nothing.
-  - name: He never asks for the consequences to be lifted
+      The Hebrew verb bara in verse 10 also appears in the Bible's opening sentence
+      for God's creation of the heavens and the earth. Throughout the Hebrew Bible,
+      God alone is the subject of this verb. David therefore asks for more than modest
+      improvement. He believes that only God's creative power can give him the clean
+      center of thought, desire, and decision that he needs.
+  - name: David seeks change without bargaining over consequences
     explanation: >-
-      Read the requests. Mercy, washing, a clean heart, a right spirit, God's presence,
-      the Spirit, restored joy, opened lips, rescue from bloodguilt. Not one of them
-      asks that the situation be undone or that the fallout be cancelled — and the
-      fallout, in 2 Samuel, was severe and long. He also credits the pain to God rather
-      than to bad luck: verse 8 speaks of bones "you have crushed". Whatever David
-      wanted from this prayer, it was not a reduced sentence. It was to be a different
-      person inside the sentence he had, which is a considerably harder thing to ask
-      for and a more honest one.
-  - name: The sacrifice is being broken
+      David asks for mercy, cleansing, renewal, God's presence, restored joy, opened
+      lips, and release from bloodguilt. He does not ask for the damage described in 2
+      Samuel to disappear. Verse 8 even speaks of bones "you have crushed". His prayer
+      focuses on becoming a changed person while accepting that serious wrongdoing
+      carries consequences.
+  - name: Repentance gives sacrifice its meaning
     explanation: >-
-      Verses 16 and 17 are startling in David's mouth. He was the king; he built the
-      infrastructure of Israel's worship and had unlimited access to its sacrifices.
-      And he says God does not delight in them — "or I would bring it", which
-      acknowledges he could. What God will not despise is a broken spirit and a crushed
-      heart. That is not a claim that sacrifice was worthless; the last verses of the
-      psalm expect it to resume. It is a claim about order. The thing that cannot be
-      substituted for is the state of the person bringing it, and the only offering
-      David has left is the fact that he is wrecked.
-  - name: The plan for afterwards is teaching
+      As king, David had ready access to Israel's sacrificial worship. He still says
+      that God does not delight in it, "or I would bring it". God receives the broken
+      spirit and contrite heart of someone who has stopped defending the wrong. The
+      final verses expect sacrifices to continue, so the poem sets repentance at the
+      heart of worship instead of dismissing the practice itself.
+  - name: David hopes his failure can help other sinners return
     explanation: >-
-      Verse 13 is the psalm's one glance forward: then I will teach transgressors your
-      ways, and sinners will return to you. It is a modest and specific ambition, and
-      notice who the intended audience is. Not the righteous, not the nation, but other
-      people who have done what he has done. He expects his own worst episode to make
-      him useful to a particular group, which is not the same as saying it was worth it.
-      It is the assumption that forgiveness is supposed to go somewhere, and that where
-      it goes is towards people in the same position.
+      Verse 13 looks beyond confession: David will teach God's ways to other
+      transgressors so they can return. He does not treat his sin as worthwhile or
+      minimize the people harmed by it. He hopes that received mercy can make him
+      useful to people who also need to turn back to God.
 glossary:
   - term: transgression, iniquity and sin
     plain: >-
-      Three different Hebrew words in the psalm's first two verses. Transgression
-      suggests rebellion or breaking through a boundary; iniquity suggests something
-      twisted or bent out of shape; sin is the word for missing a target. David uses
-      all three because no single one covered it.
+      Three Hebrew words used in the opening verses. Transgression carries the sense
+      of rebellion, iniquity describes something twisted, and sin can mean missing a
+      target. Together they describe David's wrongdoing from several angles.
   - term: hyssop
     plain: >-
-      A small bushy plant used in Israel's purification rituals — dipped in blood or
-      water and used to sprinkle a person, a house or a doorway. Asking to be purified
-      with hyssop asks for the treatment given to someone ritually unclean rather than
-      merely guilty.
+      A small plant used to sprinkle blood or water during Israel's purification
+      rituals. David's request for cleansing with hyssop presents him as someone who
+      needs to be restored from ritual uncleanness as well as forgiven.
   - term: blot out
     plain: >-
-      The image is erasing writing, the way you would scrape ink off a scroll so no
-      trace remains. It asks not for a pardon recorded alongside the offence but for the
-      record itself to be removed.
+      An image of erasing writing from a record. David asks God to remove the charge
+      completely through mercy.
   - term: a clean heart
     plain: >-
-      In Hebrew the heart is where thinking, deciding and wanting happen, not mainly
-      where feelings live. So a clean heart is not a happier inner life; it is a
-      decision-making centre that has been made new.
+      In Hebrew thought, the heart is the center of thought, desire, and decision. A
+      clean heart is an inner life reshaped for faithful choices.
   - term: contrite
     plain: >-
-      Crushed or shattered. Verse 17 pairs it with "broken", and neither word describes
-      politeness or regret. They describe someone whose self-assessment has collapsed,
-      which the verse says God will not treat with contempt.
+      Crushed or deeply humbled. Verse 17 pairs it with "broken" to describe someone
+      whose excuses and self-confidence have collapsed before God.
   - term: bloodguilt
     plain: >-
-      Responsibility for someone's death. It is the closest this psalm comes to
-      mentioning what happened to Uriah, and it appears in verse 14 as something David
-      asks to be delivered from rather than something he explains.
+      Guilt for causing another person's death. The word in verse 14 is the psalm's
+      clearest reference to David's responsibility for Uriah's killing.
   - term: your Holy Spirit
     plain: >-
-      One of the few places in the Old Testament where this exact phrase appears. In
-      David's world God's Spirit came on particular people for particular purposes and
-      could be withdrawn — Saul was the example David would have had in mind, which is
-      what makes verse 11 frightening in his mouth.
+      A rare phrase in the Old Testament. David had watched God's Spirit depart from
+      Saul after the Spirit had empowered him for kingship, so his request carries a
+      personal fear rooted in that history.
 keyVerses:
   - usfm: PSA.51.4
     why: >-
-      The most theologically loaded verse in the psalm and the most misused. It says
-      something true about the weight of sin against God, and it does not mean nobody
-      else was harmed.
+      David admits that God is right to judge him. His emphasis on sin against God
+      cannot erase the serious harm he caused Bathsheba, Uriah, and others.
   - usfm: PSA.51.10
     why: >-
-      The centre of the psalm and its boldest request. The verb is the one Genesis uses
-      for God making the world, which tells you what David thinks is required.
+      "Create in me a clean heart" uses the creation verb from Genesis 1. The choice
+      expresses his complete dependence on God's power to renew him.
   - usfm: PSA.51.11
     why: >-
-      The most frightened line in the psalm. David had watched God's Spirit leave his
-      predecessor, and this is the request of a man who thinks it could happen to him.
+      David asks to remain in God's presence and remembers what happened when the
+      Spirit departed from Saul, the king before him.
   - usfm: PSA.51.12
     why: >-
-      "Restore to me the joy of your salvation" — an admission that he had it and lost
-      it, and that guilt had taken something specific from him rather than merely
-      making him feel bad.
+      "Restore to me the joy of your salvation" admits that guilt has robbed David of
+      joy. He asks God to restore the gladness that
+      once accompanied his experience of salvation.
   - usfm: PSA.51.17
     why: >-
-      The verse the whole psalm exists to arrive at, and an extraordinary thing for a
-      king with unlimited access to sacrifices to say. What God will not despise is a
-      person in pieces.
+      David identifies humble repentance as the offering God receives. His brokenness
+      cannot be replaced by the sacrifices available to him as king.
 caution: >-
-  Verse 4 — "against you, you only, have I sinned" — is regularly used to argue that
-  sin is only ever a matter between a person and God, and therefore that apologies and
-  accountability to the people you harmed are optional. That is a serious misuse.
-  David had a man killed and took his wife; 2 Samuel is unambiguous that human beings
-  were wronged, and the prophet Nathan confronts him about them directly. The verse is
-  hyperbole of a kind Hebrew uses often, and its point is comparative: measured against
-  the offence to God, everything else in the case is secondary. It is not a claim that
-  Uriah did not matter. Verse 11 needs care of a different sort. David's fear of losing
-  God's Spirit reflects his own world, where the Spirit came on chosen people for
-  particular tasks and had visibly departed from Saul. The New Testament describes the
-  Spirit's presence in a Christian differently, and most churches teach that a believer
-  is not at risk in the way David thought he was — though Christians do differ on
-  whether salvation can finally be lost. Reading verse 11 as a warning that a bad week
-  could cost you the Spirit is importing Saul's situation into a settlement the New
-  Testament describes in other terms.
+  "Against you, you only, have I sinned" must never be used to avoid apology,
+  accountability, or repair toward people who were harmed. Second Samuel makes clear
+  that David wronged Bathsheba and caused Uriah's death, and Nathan confronts those
+  acts directly. Verse 4 emphasizes the ultimate seriousness of sin against God; it
+  does not make human victims irrelevant. Verse 11 also comes from David's particular
+  setting. He had seen God's Spirit depart from Saul after empowering him as king. The
+  New Testament describes the Spirit's presence with Christians in different terms.
+  Most churches teach that believers do not lose the Spirit as Saul did, though
+  traditions disagree about whether salvation can finally be lost. This verse should
+  not be used to tell a struggling Christian that one failure has driven the Spirit
+  away.
 faqs:
   - q: What sin was David confessing in Psalm 51?
     a: >-
-      The psalm's heading connects it to the events of 2 Samuel 11 and 12. David, at
-      home while his army was at war, saw Bathsheba bathing, sent for her, and slept
-      with her; when she became pregnant he arranged for her husband Uriah to be
-      abandoned in battle and killed, then married her. The prophet Nathan confronted
-      him with a story about a stolen lamb and then said, "You are the man." Psalm 51 is
-      the prayer that follows. What is remarkable is that the psalm names none of it
-      directly — the only trace is "bloodguilt" in verse 14 — and spends its nineteen
-      verses on what has to happen to David rather than on what happened.
+      The heading connects the prayer with 2 Samuel 11 and 12. David summoned
+      Bathsheba and slept with her while her husband, Uriah, was serving in David's
+      army. When she became pregnant, David arranged for Uriah to be exposed in battle
+      and killed, then married Bathsheba. The prophet Nathan confronted David with a
+      story about a stolen lamb and declared, "You are the man." Psalm 51 refers to
+      the killing through the word "bloodguilt" and concentrates on David's need for
+      confession, cleansing, and change.
   - q: What does "create in me a clean heart" mean?
     a: >-
-      The verb is the striking part. Hebrew has ordinary words for mending, cleaning and
-      restoring, and David does not use any of them. He uses bara, the verb in the first
-      sentence of Genesis, which in the Old Testament never has any subject except God.
-      So he is not asking for improvement; he is asking for an act of creation, of the
-      kind that produces something where there was nothing. In Hebrew the heart is where
-      you think and decide rather than where you feel, so what he wants replaced is his
-      whole decision-making interior. The request assumes his existing one cannot be
-      worked with.
+      David uses bara, the Hebrew verb found in Genesis 1 for God's act of creation.
+      The Old Testament reserves that verb for God as its subject. In Hebrew thought,
+      the heart is the center of thinking, desiring, and deciding. David is asking God
+      to do creative work at the center of his character, giving him the inner life
+      needed for different choices.
   - q: What does "against you, you only, have I sinned" mean when David wronged others?
     a: >-
-      It is deliberate overstatement, of a kind Hebrew uses freely, and its purpose is
-      comparative rather than literal. David plainly had sinned against Uriah, against
-      Bathsheba, and against a nation whose king he was — 2 Samuel says so, and Nathan
-      confronted him with exactly those wrongs. What the verse claims is that measured
-      against the offence to God, the rest of the case is secondary. The second half of
-      the verse supports that reading: he says it so that God will be shown right when he
-      passes judgement. It is a man conceding the verdict, not a man arguing that nobody
-      else was hurt. Using it to avoid making amends to people inverts it.
+      The statement uses poetic emphasis to acknowledge that every sin is ultimately
+      an offense against God. David had also sinned against Uriah, Bathsheba, his
+      family, and the nation he led; 2 Samuel and Nathan's confrontation leave that
+      clear. The rest of verse 4 accepts God's just verdict. David is admitting guilt,
+      not denying human harm. Using his words to avoid accountability or amends would
+      reverse their purpose.
   - q: Does Psalm 51:5 teach original sin?
     a: >-
-      It is one of the main texts in the discussion, and it does not settle it. The verse
-      says he was brought forth in iniquity and was sinful when his mother conceived him,
-      which is a strong statement — but it is a poet describing how far back his problem
-      goes, not a doctrinal definition. Christians who hold to original sin read it as
-      evidence that human beings arrive already turned the wrong way, and they are not
-      straining the words. Others read it as intensity rather than doctrine: David saying
-      that the trouble is not an episode but something he has never been without. It is
-      also worth noting what the verse is not doing. It is not offered as an excuse — the
-      two verses before it are complete admissions of guilt.
+      Psalm 51:5 is important to the discussion, though it does not settle every
+      question. Christians who affirm original sin see it as evidence that the human
+      problem reaches back to the beginning of life. Others read David's language as
+      poetic intensity, expressing that sin has always marked his experience. The
+      verse is confession rather than a formal doctrinal definition, and David does
+      not use it as an excuse. The preceding verses accept full responsibility.
   - q: What does "do not take your Holy Spirit from me" mean?
     a: >-
-      In David's world, God's Spirit came on particular people for particular purposes,
-      and could be withdrawn. David had watched it happen: the Spirit left Saul, the king
-      he replaced, and Saul's decline afterwards was the great cautionary tale of David's
-      own lifetime. So this is not an abstract worry. It is a man who has seen the
-      precedent asking not to become it, and it is the most frightened line in the psalm.
-      Notice what he pairs it with — do not cast me from your presence — which suggests
-      the thing he dreads most is not punishment but exclusion.
+      In the Old Testament, God's Spirit empowered particular people for particular
+      purposes and could be withdrawn. David had watched the Spirit depart from Saul,
+      the king he replaced. That history gives the request personal urgency. By pairing
+      it with "do not cast me from your presence," David shows that separation from God
+      frightens him more than the loss of comfort or status.
   - q: Can Christians lose the Holy Spirit like David feared?
     a: >-
-      Most churches teach not, and the reason is that the New Testament describes the
-      Spirit's presence differently from the arrangement David lived under. There, the
-      Spirit came on chosen individuals for tasks and could depart, as with Saul. In the
-      New Testament the Spirit is described as given to all who belong to Christ, as a
-      deposit and a seal, and Jesus promises an Advocate who will be with them forever.
-      Christians do genuinely disagree about whether salvation itself can finally be
-      lost, and that debate is older than any of us. But reading Psalm 51:11 as evidence
-      that a Christian's failure could cost them the Spirit applies Saul's situation to a
-      settlement the New Testament describes in other terms.
+      Most churches say Christians do not lose the Holy Spirit in the way Saul did.
+      The New Testament describes the Spirit as given to everyone who belongs to
+      Christ, as a seal and deposit, and Jesus promises an Advocate who remains with
+      his followers. Christian traditions still disagree about whether salvation can
+      finally be lost. Psalm 51:11 comes from David's experience of Old Testament
+      kingship, so it does not by itself resolve that later debate or show that one
+      failure causes the Spirit to leave a Christian.
   - q: What is a broken and contrite heart?
     a: >-
-      Both words describe damage, not decorum. "Broken" is the ordinary word for
-      something snapped, and "contrite" translates a word meaning crushed or pulverised.
-      So the phrase does not mean politely sorry or appropriately solemn; it means a
-      person whose confidence in themselves has been demolished. Verse 17 says God will
-      not despise that, which is a deliberately modest promise — not that he is pleased
-      by it, but that he will not treat it with contempt. For somebody who has just done
-      something they cannot defend, that is close to the only thing they can bring, and
-      the verse says it is accepted.
+      "Broken" and "contrite" both describe something crushed. Together they picture
+      a person whose excuses and self-confidence have collapsed, leaving a humble and
+      honest confession. Verse 17 assures that God will not despise such a person. The
+      language does not celebrate emotional pain for its own sake; it welcomes the
+      repentance of someone who can no longer defend what they did.
   - q: What does "wash me with hyssop" mean?
     a: >-
-      Hyssop was a small bushy plant used in Israel's purification rituals: dipped in
-      blood and used to mark doorposts at the Passover, and used in the ceremonies for
-      cleansing someone with a skin disease or a house that had been contaminated. So
-      asking to be purified with hyssop is asking for the treatment given to somebody
-      ritually unclean — untouchable, excluded from the community — rather than the
-      treatment given to somebody who has merely done wrong. It is a request to be made
-      fit to be near people and near God again. The same plant appears at the
-      crucifixion in John's Gospel, which later Christian readers found significant.
+      Hyssop was a small plant used in Israel's purification rituals. It marked the
+      Passover doorways and was used when cleansing a person or house from ritual
+      uncleanness. David asks for the kind of purification that restores someone to
+      community and worship. John's Gospel later mentions hyssop at Jesus'
+      crucifixion, a connection that has held significance for Christian readers.
 relatedTopics:
   - forgiveness
   - grief
@@ -267,39 +219,37 @@ entity:
   sameAs:
     - https://en.wikipedia.org/wiki/Psalm_51
 publishedAt: 2026-08-19
-reviewedAt: 2026-08-19
+reviewedAt: 2026-08-21
 ---
 
 ## If this is your first time reading Psalm 51
 
-Know what happened first, because the psalm never tells you.
+The heading points to the events of 2 Samuel 11 and 12, which Psalm 51 itself never
+retells.
 
-In 2 Samuel 11, David stays home while his army is at war, sees a woman named
-Bathsheba bathing, sends for her, and sleeps with her. She becomes pregnant. Her
-husband Uriah is a soldier in David's own army, so David arranges for him to be left
-exposed in battle and killed, and then marries the widow. A prophet called Nathan comes
-to him with a story about a rich man stealing a poor man's only lamb, waits for David to
-condemn the man in the story, and then says: you are the man.
+David remains home while his army is at war, sees Bathsheba bathing, summons her, and
+sleeps with her. When she becomes pregnant, he tries to conceal what happened. He
+eventually arranges for her husband, Uriah, to be left exposed in battle and killed.
+The prophet Nathan later tells David a story about a rich man who stole a poor man's
+only lamb. After David condemns the rich man, Nathan says, "You are the man."
 
-Psalm 51 is what David prayed next. And two things about it are worth watching for.
+Psalm 51 gives David's prayer after that confrontation. He begins with no defense of
+his conduct. He appeals to God's steadfast love, names his wrong as transgression,
+iniquity, and sin, and asks to be thoroughly cleansed.
 
-The first is what he asks for. Read the requests and you will notice something missing:
-he never once asks for the consequences to be lifted. Not the child, not his family, not
-his reputation, none of it. What he asks for is a clean heart, a right spirit, God's
-presence, and his joy back. He also says, in verse 8, that God is the one who crushed
-his bones. He is not asking for a lighter sentence; he is asking to be a different
-person while serving it.
+His requests stay focused on inner change. David asks for a clean heart, a steadfast
+spirit, God's continued presence, and the joy of salvation. He never asks for the
+consequences described in 2 Samuel to be removed. Repentance here means accepting the
+truth of what happened and asking God to form a different kind of person within it.
 
-The second is the word in verse 10. English has him saying "create in me a clean
-heart", and the Hebrew verb there is bara — the word in the very first sentence of the
-Bible, when God creates the heavens and the earth. In the whole Old Testament, nobody
-except God is ever the subject of that verb. David could have asked for his heart to be
-washed, mended or restored, and Hebrew has words for all of those. He asks for one to be
-made. Which only makes sense if he has decided the one he has is not worth working on.
+Verse 10 uses a remarkable word. The Hebrew verb translated "create" is bara, the
+same verb used when God creates the heavens and the earth in Genesis 1. God is always
+its subject in the Hebrew Bible. David believes that renewal at the center of his
+thought and desire requires God's creative power.
 
-And then read verse 17, remembering who is speaking. This is the king. He had the temple
-plans, the priesthood, the herds — he could have brought any sacrifice he wanted, and he
-says so: you do not delight in sacrifice, or I would bring it. What God will not despise,
-he says, is a broken spirit and a crushed heart.
+Verse 17 comes from a king with abundant access to Israel's sacrifices. David knows
+he cannot substitute an offering for repentance. He brings God a broken spirit and a
+contrite heart, trusting that honest humility will not be treated with contempt.
 
-That is a strange thing to call an offering. It is also the only thing he had left.
+The prayer offers a durable pattern for confession: name the wrong, accept God's
+judgment, seek deep change, and let received mercy shape what comes next.

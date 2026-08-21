@@ -36,12 +36,6 @@ import { topicPath, type Topic } from './topics';
  * sequence.
  */
 
-const SCRIPTURE_NOTE =
-	'_Scripture text is not reproduced in this file: the translations BibleHearth ' +
-	'serves are licensed from their publishers and carry a required copyright ' +
-	'notice that a stripped copy would lose. Every reference below links to the ' +
-	'verse on the site, where the text and its notice are served together._';
-
 /** Collapse a value into something safe to sit on one line of markdown. */
 function inline(text: string): string {
 	return text.replace(/\s+/g, ' ').trim();
@@ -83,6 +77,8 @@ function body(entry: { body?: string | undefined }): string | null {
 async function relatedTopicLinks(
 	refs: readonly { collection: 'topics'; id: string }[],
 	site: URL | undefined,
+	label: (title: string) => string = (title) =>
+		`Bible verses about ${title.toLowerCase()}`,
 ): Promise<string[]> {
 	if (refs.length === 0) {
 		return [];
@@ -92,7 +88,7 @@ async function relatedTopicLinks(
 		.filter((topic) => topic && !topic.data.draft)
 		.map((topic) =>
 			link(
-				`Bible verses about ${topic.data.title.toLowerCase()}`,
+				label(topic.data.title),
 				absoluteUrl(site, topicPath(topic.id)),
 			),
 		);
@@ -109,14 +105,22 @@ function bullets(items: readonly string[]): string {
  * it is to be read somewhere else — so it says where it came from and when it
  * was last looked at, on the way out.
  */
-function footer(canonical: string, reviewedAt: Date): string {
+function footer(
+	canonical: string,
+	reviewedAt: Date,
+	copy: {
+		source: string;
+		reviewed: string;
+		copyright: string;
+	},
+): string {
 	const reviewed = reviewedAt.toISOString().slice(0, 10);
 	return [
 		'---',
 		'',
-		`Source: ${canonical}`,
-		`Reviewed: ${reviewed}`,
-		'Original writing © BibleHearth. Quoted Scripture is licensed from its publisher and is not included here.',
+		`${copy.source}: ${canonical}`,
+		`${copy.reviewed}: ${reviewed}`,
+		copy.copyright,
 	].join('\n');
 }
 
@@ -139,14 +143,18 @@ export async function chapterBriefMarkdown(
 		site,
 		chapterStudyPath(bookUsfm, chapterId, locale),
 	);
-	const topics = await relatedTopicLinks(data.relatedTopics, site);
 	const t = strings(locale);
+	const topics = await relatedTopicLinks(
+		data.relatedTopics,
+		site,
+		t.relatedTopicLink,
+	);
 
 	return document([
 		heading(1, data.title),
 		quote(data.shortAnswer),
 		data.figure ? figureMarkdownCredit(data.figure) : null,
-		SCRIPTURE_NOTE,
+		t.markdown.scriptureNote,
 
 		heading(2, t.outline(reference)),
 		...data.outline.flatMap((entry) => [
@@ -190,10 +198,10 @@ export async function chapterBriefMarkdown(
 
 		body(brief),
 
-		topics.length ? heading(2, 'Related topics') : null,
+		topics.length ? heading(2, t.relatedTopics) : null,
 		topics.length ? bullets(topics) : null,
 
-		footer(canonical, data.reviewedAt),
+		footer(canonical, data.reviewedAt, t.markdown),
 	]);
 }
 
@@ -204,12 +212,13 @@ export async function topicMarkdown(
 	const { data } = topic;
 	const canonical = absoluteUrl(site, topicPath(topic.id));
 	const related = await relatedTopicLinks(data.related, site);
+	const t = strings();
 
 	return document([
 		heading(1, `Bible Verses About ${data.title}`),
 		quote(data.shortAnswer),
 		data.figure ? figureMarkdownCredit(data.figure) : null,
-		SCRIPTURE_NOTE,
+		t.markdown.scriptureNote,
 
 		...data.groups.flatMap((group) => [
 			heading(2, group.heading),
@@ -234,7 +243,7 @@ export async function topicMarkdown(
 		related.length ? heading(2, 'Related topics') : null,
 		related.length ? bullets(related) : null,
 
-		footer(canonical, data.reviewedAt),
+		footer(canonical, data.reviewedAt, t.markdown),
 	]);
 }
 
@@ -247,12 +256,13 @@ export async function answerMarkdown(
 	const anchorReference = formatReference(data.anchor.passage);
 	const [anchorBook = '', anchorChapter = '1'] = data.anchor.chapter.split('.');
 	const topics = await relatedTopicLinks(data.relatedTopics, site);
+	const t = strings();
 
 	return document([
 		heading(1, data.question),
 		quote(data.shortAnswer),
 		data.figure ? figureMarkdownCredit(data.figure) : null,
-		SCRIPTURE_NOTE,
+		t.markdown.scriptureNote,
 
 		heading(2, `The passage: ${anchorReference}`),
 		`Read it in context: ${citation(data.anchor.passage, site)} · ${link(
@@ -279,7 +289,7 @@ export async function answerMarkdown(
 		data.bottomLine ? heading(2, 'Where the evidence leaves it') : null,
 		data.bottomLine ? inline(data.bottomLine) : null,
 
-		data.caution.length ? heading(2, `What ${anchorReference} does not say`) : null,
+		data.caution.length ? heading(2, `Limits and common misreadings of ${anchorReference}`) : null,
 		...data.caution.map((paragraph) => inline(paragraph)),
 
 		data.faqs.length
@@ -290,7 +300,7 @@ export async function answerMarkdown(
 		topics.length ? heading(2, 'Related topics') : null,
 		topics.length ? bullets(topics) : null,
 
-		footer(canonical, data.reviewedAt),
+		footer(canonical, data.reviewedAt, t.markdown),
 	]);
 }
 

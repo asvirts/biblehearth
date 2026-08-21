@@ -22,9 +22,9 @@ const share = figure ? await shareCardFromFigure(figure) : undefined;
 ---
 
 <BaseLayout
-	title="Bible Questions Answered — Hard Passages, Explained"
+	title="Bible Questions Answered | Difficult Passages Explained"
 	description={truncateWords(
-		`Straight answers to contested Bible questions, with the passage rendered in full and every serious reading compared honestly: ${labels.join(', ')}.`,
+		`Explore difficult Bible questions with the passage in context, the main interpretations, and the evidence behind each one: ${labels.join(', ')}.`,
 		155,
 	)}
 	canonicalPath="/answers"
@@ -50,11 +50,12 @@ const share = figure ? await shareCardFromFigure(figure) : undefined;
 		<span>Answers</span>
 	</nav>
 
-	<h1>Bible Questions, Answered</h1>
+	<h1>Answers to Difficult Bible Questions</h1>
 	<p class="lede">
-		One question, one passage, and every reading that serious interpreters
-		actually hold — with what supports each and the strongest objection to it.
-		Where the evidence does not settle the question, these pages say so.
+		Each page starts with one question and the passage behind it. Then it walks
+		through the main interpretations, the evidence for each one, and the hardest
+		questions each view must answer. Some passages leave room for uncertainty,
+		and the explanations keep that uncertainty in view.
 	</p>
 
 	{figure ? <Figure figure={figure} /> : null}

@@ -98,7 +98,7 @@ export const COMMENTARY_SOURCES: readonly CommentarySource[] = [
 		about:
 			'A pastor writing for his own congregation three hundred years ago. Henry is less interested in historical background than in what a chapter asks of the person reading it, which is why he is still quoted in sermons today. He is warm, direct, and unafraid to apply a text to you.',
 		readingNote:
-			'Written in the early 1700s. The sentences are long and some words have shifted meaning since — "conversation" means how a person lives, "want" means to lack something. Read it slowly; it rewards that.',
+			'Written in the early 1700s. The sentences are long, and some words have changed meaning. For example, "conversation" means how a person lives, and "want" means to lack something. Read it slowly; the detail is worth the effort.',
 		license: PUBLIC_DOMAIN,
 		homepage: 'https://www.ccel.org/ccel/henry/mhc1.html',
 	},
@@ -109,9 +109,9 @@ export const COMMENTARY_SOURCES: readonly CommentarySource[] = [
 		byline: 'Robert Jamieson, A. R. Fausset and David Brown, 1871',
 		author: 'Robert Jamieson, A. R. Fausset and David Brown',
 		about:
-			'Three Scottish scholars working phrase by phrase through the whole Bible. Where a translation had to choose one English wording, they tell you what the Hebrew or Greek actually says and what the alternatives were. Useful when you want to know why two Bibles word the same verse differently.',
+			'Three Scottish scholars work phrase by phrase through the whole Bible. They explain the underlying Hebrew or Greek and note other possible English renderings. This is useful when two Bibles word the same verse differently.',
 		readingNote:
-			'Written in 1871 and organised around short quoted phrases followed by a dash, then the explanation. It reads more like reference notes than prose, and it assumes you have the verse in front of you.',
+			'Written in 1871 and organized around short quoted phrases followed by an explanation. It reads like reference notes and assumes you have the verse open beside it.',
 		license: PUBLIC_DOMAIN,
 		homepage: 'https://www.ccel.org/ccel/jamieson/jfb.html',
 	},

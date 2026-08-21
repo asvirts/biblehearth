@@ -14,7 +14,7 @@ setCacheControl(Astro.response, READER_CACHE_CONTROL);
 
 const title = 'Contact BibleHearth · Corrections and Permissions';
 const description =
-	'One address, read by a person: what to write to BibleHearth about, what happens to a correction, and the questions this address cannot answer.';
+	'Contact BibleHearth about corrections, broken pages, permissions, or questions about the writing.';
 
 const mailto = `mailto:${EDITORIAL_EMAIL}`;
 
@@ -72,9 +72,8 @@ const reasons = [
 	<h1>Contact BibleHearth</h1>
 
 	<p class="lede">
-		One address, read by the person responsible for these pages:
-		{' '}<a href={mailto}>{EDITORIAL_EMAIL}</a>. There is no form to fill in and
-		no ticket number. This page says what it is good for, and what it is not.
+		Write to <a href={mailto}>{EDITORIAL_EMAIL}</a>. The same inbox handles
+		corrections, broken pages, permissions, and questions about the studies.
 	</p>
 
 	<section>
@@ -100,16 +99,14 @@ const reasons = [
 	<section>
 		<h2>What this address cannot do</h2>
 		<p>
-			It is not pastoral care, and nobody here is your pastor. These pages
-			explain what a passage says and how it has been read; they cannot tell you
-			what to do about your marriage, your diagnosis or your grief, and an
-			answer that tried to would be worth less than the one a person who knows
-			you can give.
+			This inbox cannot provide pastoral care. The studies can explain a passage,
+			but personal questions about a marriage, a diagnosis, or grief need someone
+			who knows you and the situation.
 		</p>
 		<p>
-			If you are in crisis, please contact a doctor or a crisis line rather than
-			this inbox. That is not a brush-off and it is not a failure of faith — it
-			is the answer that helps, and email is far too slow for it.
+			If you are in crisis, contact a doctor or crisis line now. Email is too slow
+			for an emergency, and trained local help can respond in ways this inbox
+			cannot.
 		</p>
 		<p>
 			If your question is about the Bible App, we cannot help: this site is not
@@ -126,20 +123,17 @@ const reasons = [
 	<section>
 		<h2>What to expect</h2>
 		<p>
-			A person reads everything that arrives, usually replying within a few
-			days. A correction gets acted on whether or not it gets a reply, because
-			fixing the page matters more than answering the message — though we try to
-			do both.
+			A person reads every message and usually replies within a few days. We may
+			fix a reported error before sending a reply, but we try to do both.
 		</p>
 		<p>
-			There is no telephone number and no postal address. This is a small site,
-			email is the only channel anyone here watches, and publishing a number
-			nobody answers would be worse than saying so plainly.
+			BibleHearth is a small site, and email is the only monitored contact
+			channel. There is no telephone number or postal address.
 		</p>
 		<p class="muted">
 			See also: <a href={ABOUT_PATH}>about this site</a> for who publishes it and
 			how the writing is made, <a href="/attributions">attributions</a> for every
-			source and licence, and <a href={PRIVACY_PATH}>privacy</a> for what happens
+			source and license, and <a href={PRIVACY_PATH}>privacy</a> for what happens
 			to an email you send and what the site measures.
 		</p>
 	</section>

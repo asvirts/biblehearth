@@ -6,80 +6,81 @@ aliases:
   - rest
   - peace of mind
 shortAnswer: >-
-  The Bible's word for peace is wider than calm. Shalom means wholeness — things
-  working as they should, relationships intact, nothing missing. That is why
-  peace in Scripture is usually described as something given rather than
-  achieved, and why Jesus distinguishes his peace from the kind the world hands
-  out. It can coexist with trouble, which is precisely what makes it useful.
+  The Bible's idea of peace is wider than calm. The Hebrew word *shalom* means
+  wholeness: life in good order, relationships restored, and essential needs
+  met. Scripture usually describes this peace as a gift from God. Jesus says it
+  can remain present in the middle of trouble, which gives it depth beyond a
+  passing feeling.
 groups:
   - id: given
-    heading: Peace is described as given, not manufactured
+    heading: Peace is received and kept
     rationale: >-
-      Across both testaments peace arrives from outside the person. The verbs
-      are receive, keep, and guard rather than generate.
+      Across both Testaments, God gives peace, keeps people in peace, and guards
+      them through it. The emphasis rests on receiving and remaining.
     verses:
       - usfm: JHN.14.27
         gloss: >-
           Spoken on the night before his arrest, Jesus distinguishes what he
-          leaves from what the world offers — and says it in the least peaceful
-          circumstances imaginable.
+          gives from the peace the world offers. He makes the promise in deeply
+          unsettled circumstances.
       - usfm: PHP.4.7
         gloss: >-
           Paul describes peace as a garrison around the heart and mind; it
-          guards rather than explains, and explicitly exceeds understanding.
+          guards people even when they can't explain what is happening.
       - usfm: ISA.26.3
         gloss: >-
           The condition named is a mind fixed on God, and the peace promised is
           doubled in the Hebrew for emphasis.
   - id: with-trouble
-    heading: It coexists with trouble rather than replacing it
+    heading: Peace can coexist with trouble
     rationale: >-
-      These passages refuse to define peace as the absence of difficulty, which
-      is what separates the biblical idea from mere calm.
+      These passages locate peace inside difficult circumstances. Biblical
+      peace is deeper than the absence of conflict or stress.
     verses:
       - usfm: JHN.16.33
         gloss: >-
           Jesus promises peace and predicts trouble in the same breath, placing
-          the peace in himself rather than in improved circumstances.
+          the source of peace in himself even before circumstances improve.
       - usfm: ROM.5.1
         gloss: >-
-          Paul locates peace in a restored relationship — a settled standing
-          rather than a settled mood.
+          Paul describes peace with God as a restored relationship and settled
+          standing.
       - usfm: PSA.4.8
         gloss: >-
-          A short line about actually being able to sleep, which is a more
-          honest test of peace than most abstractions.
+          The psalm gives peace a practical expression: lying down and sleeping
+          in safety.
   - id: with-others
     heading: Peace is also something you owe other people
     rationale: >-
-      A large share of the Bible's peace language is relational and active —
-      something to make and pursue rather than only to feel.
+      Much of the Bible's peace language is relational and active. People are
+      told to make peace and pursue it with others.
     verses:
       - usfm: ROM.12.18
         gloss: >-
           Paul's realism is notable: he twice qualifies the command, conceding
-          that peace is not always within your power.
+          that peace isn't always within one person's power.
       - usfm: MAT.5.9
         gloss: >-
-          The beatitude blesses peacemakers rather than the peaceful, which
-          makes it a job description.
+          The beatitude blesses people who make peace, describing active work
+          that reflects God's character.
       - usfm: HEB.12.14
         gloss: >-
           Peace is paired with holiness as something to pursue actively, using
-          the language of chasing rather than waiting.
+          the language of determined pursuit.
 misuse: >-
-  Peace in Scripture is not a mood you can be blamed for lacking, and these
-  verses are frequently misused that way. Jesus said his followers would have
+  Peace in Scripture isn't a mood someone can be blamed for lacking. Jesus said
+  his followers would have
   trouble in the same sentence in which he promised peace, so an absence of calm
-  is not evidence of an absence of faith. Nor does biblical peace mean avoiding
-  conflict — the same Jesus who blesses peacemakers overturned tables, and
+  doesn't prove an absence of faith. Biblical peace also doesn't require
+  avoiding conflict. The same Jesus who blesses peacemakers overturned tables,
+  and
   Romans 12:18 openly concedes that peace with everyone may not be possible.
   Using "peace" to pressure someone into silence about a real wrong inverts the
-  word's meaning, which is wholeness, not quiet.
+  word's meaning. Shalom seeks wholeness, justice, and restored relationships.
 faqs:
   - q: What does shalom mean in the Bible?
     a: >-
-      Shalom means completeness or wholeness — a state in which relationships,
+      *Shalom* means completeness or wholeness, a state in which relationships,
       circumstances, and a person's inner life are intact and nothing essential
       is missing. English "peace" usually implies the absence of conflict, which
       is narrower. This is why shalom can be used as a greeting, a blessing, and
@@ -105,13 +106,14 @@ sources:
   - torreys
   - editorial
 publishedAt: 2026-08-17
-reviewedAt: 2026-08-17
+reviewedAt: 2026-08-21
 ---
 
 If you only read the English word, peace sounds like a feeling. The Hebrew
 behind most of the Old Testament occurrences is broader and more physical:
 fences mended, debts settled, a community where the vulnerable are safe.
 
-That width explains the odd combinations in the New Testament — peace promised
-alongside predicted trouble, peace described as a guard rather than a calm.
-Something is being held together, not merely felt.
+That wider meaning explains combinations that might otherwise sound strange.
+The New Testament promises peace while predicting trouble and describes peace
+as a guard around the heart and mind. It is the wholeness that holds a person
+together, not just a moment of calm.

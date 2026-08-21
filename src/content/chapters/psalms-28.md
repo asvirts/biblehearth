@@ -1,255 +1,188 @@
 ---
 usfm: PSA.28
-title: "Psalm 28: What to Pray When God Seems Silent"
+title: "Psalm 28 Explained: A Prayer When God Seems Silent"
 shortAnswer: >-
-  Psalm 28 is a prayer by David in two halves. In the first he begs God not to
-  stay silent — being ignored by God frightens him more than his enemies do. In
-  the second, with no explanation of what changed in between, he thanks God for
-  hearing him. Sitting between the halves is the hardest part of the psalm:
-  David asks God to repay people who speak warmly to their neighbours while
-  planning to hurt them. It ends by widening out from himself to everyone God
-  calls his own.
+  Psalm 28 begins with David pleading for God to answer him and ends with thanks that
+  God has heard. Between those two movements, David asks for justice against people
+  who speak peace while planning harm. He leaves repayment with God instead of
+  describing personal revenge. Once assured of being heard, he calls the Lord his
+  strength and shield and expands his private prayer to ask God to save, bless,
+  shepherd, and carry the whole community.
 outline:
   - verses: "1"
-    heading: What David is actually afraid of is God's silence
+    heading: David fears being met with silence
     note: >-
-      He calls God his Rock, then says what he dreads — that the Rock will say
-      nothing back. If God stays quiet, he says, he may as well be dead already.
-      Notice that his enemies have not been mentioned yet. The silence is the
-      first problem.
+      David calls God his Rock and begs for an answer. Divine silence would leave him
+      feeling "like those who go down to the pit", a picture of the grave.
   - verses: "2"
-    heading: He prays out loud, with his hands lifted toward the sanctuary
+    heading: He lifts his hands toward God's sanctuary
     note: >-
-      Lifting both hands palm-up was the ordinary posture for asking, the way
-      kneeling is for us. He turns toward the one room in the temple where God
-      had promised to speak. This is a man praying at the address he was given.
+      Raised hands form the ordinary posture of petition. David turns toward the inner
+      sanctuary, the place associated with God's presence and answer.
   - verses: "3"
-    heading: "The request: do not sweep me up with the two-faced"
+    heading: David asks to be separated from the deceitful
     note: >-
-      He asks not to share the fate of people who "speak peace to their
-      neighbours while malice is in their hearts". That is a specific kind of
-      wickedness — not violence, but friendliness used as cover. David wants to
-      be sorted separately from them.
+      He does not want to share the fate of people who "speak peace to their neighbours
+      while malice is in their hearts". Their friendliness hides an intention to harm.
   - verses: "4-5"
-    heading: He asks God to give them exactly what they have been handing out
+    heading: David hands the demand for justice to God
     note: >-
-      This is the part modern readers flinch at, and it should be read carefully.
-      David does not plan to do anything to these people. He states what he
-      thinks justice would look like and then leaves it with God. Verse 5 gives
-      his reason: they treat everything God does as if it did not matter.
+      "Repay them according to their deeds" is David's request to God. He proposes no
+      personal retaliation. These people disregard the Lord's works, so David leaves
+      judgment with the Lord.
   - verses: "6"
-    heading: The hinge — thanks, before anything has visibly changed
+    heading: The prayer turns suddenly to thanks
     note: >-
-      One verse, and the psalm turns over completely. "Blessed be the LORD, for
-      he has heard my cry for mercy." Nothing in the text says the trouble ended.
-      What changed is that David became sure he had been heard.
+      "Blessed be the LORD, for he has heard my cry for mercy." The psalm reports no change in the
+      external danger, only confidence that the prayer has reached God.
   - verses: "7"
-    heading: What David says about God once the silence has broken
+    heading: The Lord becomes strength and shield
     note: >-
-      Strength, shield, trust, help, joy, song — six things stacked in one verse.
-      This is the line people quote, and it is the far side of verse 1, not a
-      replacement for it. He is not saying he was never afraid.
+      Trust receives help, and fear gives way to joy and song. The one David feared
+      might be silent is now praised with "The LORD is my strength and my shield".
   - verses: "8"
-    heading: The psalm stops saying "me" and starts saying "us"
+    heading: David's confidence widens to the people
     note: >-
-      The same God who was David's strength is called the strength of a whole
-      people. Whatever David has just received, he immediately assumes is not
-      only for him.
+      The Lord is the strength of his people and the saving refuge of "his anointed".
+      David applies his personal assurance to the wider community.
   - verses: "9"
-    heading: It ends by praying for everyone else
+    heading: The closing prayer asks God to shepherd everyone
     note: >-
-      Four requests in one sentence — save them, bless them, shepherd them,
-      carry them. A prayer that started as one frightened man's emergency ends
-      with him asking for other people, and asking for more than he asked for
-      himself.
+      Four requests close the psalm: save the people, bless the inheritance, shepherd
+      them, and "carry" them forever.
 themes:
-  - name: The worst thing that can happen is God saying nothing
+  - name: Unanswered prayer becomes the first fear
     explanation: >-
-      Most of us would say the worst thing is the trouble itself. David says
-      otherwise. In verse 1 the enemies have not even been named yet, and what he
-      is already braced against is silence — God present but not answering. He
-      says that if God does not speak, he is no better off than a man in the
-      grave. This is worth sitting with, because it names something people feel
-      and rarely say out loud: that unanswered prayer can be more frightening
-      than the problem it was about.
-  - name: People who are pleasant to your face
+      David names God's silence before describing any enemy. Without an answer, he
+      feels as helpless and cut off as a dead person. The psalm gives language to the
+      fear that prolonged silence can become more painful than the original problem.
+  - name: Deceit can hide behind peaceful words
     explanation: >-
-      Verse 3 describes a very particular person — someone who speaks peace to
-      their neighbour while malice is in their heart. Not an enemy across a
-      battlefield. A colleague, a relative, someone in your congregation. The
-      Bible takes this seriously enough to make it the specific wrong David
-      names, and if you have ever discovered that a friendly person was working
-      against you, the psalm is not asking you to pretend it did not happen.
-  - name: Handing over the wish for revenge instead of acting on it
+      Verse 3 focuses on people whose friendly speech conceals malice. The danger can
+      come through a neighbor, relative, colleague, or fellow worshiper instead of an
+      obvious battlefield enemy. David names that betrayal honestly before God.
+  - name: Prayer can hand the desire for repayment to God
     explanation: >-
-      Verse 4 asks God to repay these people according to what they have done.
-      Christians disagree about how to pray verses like this, and it is fair to
-      find it uncomfortable. But notice what David does not do. He does not
-      threaten them, warn them, or plan anything. He says out loud, to God, what
-      he wants to happen, and then it is God's business. That is a different act
-      from revenge — it is the alternative to it.
-  - name: Thanks that arrives before the rescue does
+      The request for judgment is severe, and Christians differ over how to use such
+      prayers. David states the outcome he wants without threatening the offenders or
+      announcing a plan to act. Bringing the desire to God can interrupt personal
+      revenge and submit justice to a wiser judge.
+  - name: Assurance arrives before a visible outcome
     explanation: >-
-      Between verse 5 and verse 6 something happens that the psalm never
-      describes. David goes from pleading to praising in the space of a line, and
-      the text gives no news, no outcome, no rescue. Matthew Henry, writing in
-      1706, admitted he could not tell whether David wrote this while still in
-      trouble or afterwards. That ambiguity is probably the point: the psalm
-      shows what it looks like to be certain you have been heard before you can
-      see any evidence of it.
-  - name: A private prayer that refuses to stay private
+      Verse 6 turns from petition to praise without reporting rescue. Matthew Henry
+      noted that David may be thanking God in advance or recalling a prayer after the
+      event. The text leaves that timing open and centers confidence on being heard.
+  - name: Personal relief grows into communal prayer
     explanation: >-
-      The last two verses do something you would not predict from the first
-      seven. David has been saying "me" and "my" throughout — my Rock, my
-      strength, my shield — and then in verse 8 he says God is the strength of
-      his people, and in verse 9 he prays for all of them. Relief did not make
-      him more inward. It made him remember there were others in the same
-      position.
+      David speaks of "my Rock," "my strength," and "my shield" through verse 7. He
+      then recognizes God as the strength of his people and prays for all of them.
+      Assurance enlarges his concern beyond his own emergency.
 glossary:
   - term: LORD (in capital letters)
     plain: >-
-      Where your Bible prints LORD in small capitals, the Hebrew underneath is
-      God's personal name — the name he gave Moses. So verse 1 is not "a god is
-      my rock". It is a name, addressed to someone David already knows.
+      Small-capital LORD represents God's personal covenant name in Hebrew, the name
+      revealed to Moses. David addresses a God he already knows.
   - term: My Rock
     plain: >-
-      A cliff or crag you could put your back against and not be surrounded. It
-      is a picture of somewhere safe and immovable, not a picture of something
-      hard or cold. David is saying: you are the thing that does not move when
-      everything else does.
+      A secure cliff or crag that gives protection from attack. The image emphasizes
+      God's stability when everything else can shift.
   - term: The pit
     plain: >-
-      The grave, and by extension the world of the dead. It is not a word for
-      hell here. When David says he would be "like those who go down to the pit",
-      he means he would be as good as buried — cut off, out of reach, past
-      helping.
+      The grave and the realm of the dead, not hell in this verse. David uses it for
+      a condition of helplessness and separation; translations that say "the grave"
+      refer to the same image.
   - term: Your holy sanctuary
     plain: >-
-      The innermost room of the temple, which older translations call the
-      "oracle" — literally the speaking-place. It was the one address where God
-      had promised to answer. David turns toward it for the same reason you look
-      at someone when you are talking to them.
+      The innermost worship space associated with God's presence. Older translations
+      call it the "oracle" or speaking place. David turns toward it while asking God
+      to hear.
   - term: Lift up my hands
     plain: >-
-      Standing with both hands raised, palms open, was the normal way to pray in
-      the ancient Near East — the posture of someone asking, and of someone with
-      nothing hidden. It is a gesture of request, not of celebration.
+      A common ancient posture of prayer with open palms raised. It expresses petition,
+      dependence, and openness before God.
   - term: Iniquity
     plain: >-
-      An old English word for wrongdoing done on purpose, with a sense of being
-      bent or crooked. "Workers of iniquity" in verse 3 means people who make a
-      practice of it, not people who slipped up once.
+      Deliberate wrongdoing pictured as moral crookedness. "Workers of iniquity" make
+      a practice of it instead of committing an isolated mistake.
   - term: His anointed
     plain: >-
-      Anointing meant pouring oil on someone's head to mark them out for a job —
-      usually king or priest. In verse 8 David means himself, the king. Christians
-      also read it forward to Jesus, whose title Christ simply means "anointed
-      one".
+      Someone set apart for an office by the pouring of oil, commonly a king or
+      priest. David refers to the king, while Christians also connect the title with
+      Jesus as the Christ, or "anointed one".
   - term: Your inheritance
     plain: >-
-      What belongs to God and is not going to be handed over to anyone else. It
-      is a way of describing God's people as his own property in the warm sense —
-      the thing he would not part with — rather than as something he owns coldly.
+      God's people pictured as his lasting possession. The image emphasizes belonging,
+      commitment, and care.
 keyVerses:
   - usfm: PSA.28.1
     why: >-
-      The verse that sets the whole psalm's temperature. David is not asking for
-      an outcome yet; he is asking not to be met with silence. It is the honest
-      opening line for anyone who has prayed about something for a long time and
-      heard nothing back.
+      David begins by asking for an answer and openly names the despair that silence
+      creates.
   - usfm: PSA.28.3
     why: >-
-      The clearest description in the Psalms of a specific and very ordinary
-      wrong: people who are warm to your face and working against you behind it.
-      David's request is not that they be exposed but that he not be counted
-      among them.
+      The verse names deceptive peace as a serious wrong and asks God to distinguish
+      David from those who practice it.
   - usfm: PSA.28.6-7
     why: >-
-      The turn, and the most quoted lines in the chapter. Verse 7 is where "the
-      LORD is my strength and my shield" comes from. Read together with verse 6
-      you can see what it is — not a confident slogan, but what a frightened man
-      said the moment he became sure he had been heard.
+      These verses mark the turn from urgent petition to thanks, trust, help, and joy.
   - usfm: PSA.28.9
     why: >-
-      The closing prayer, and the reason this psalm is used in public worship.
-      Having asked for himself for eight verses, David spends the last one asking
-      for everyone else — save, bless, shepherd, carry. The verb "carry" is what
-      a shepherd does with an animal that cannot walk any further.
+      Four verbs extend the prayer to God's people: save, bless, shepherd, and carry.
+      The last image suggests a shepherd supporting an exhausted animal.
 caution: >-
-  Verse 4 — "Repay them according to their deeds" — is the verse people either
-  skip or misuse. It is not permission to get even. It is close to the opposite:
-  David says out loud what he wishes would happen and then leaves it with God,
-  and there is no plan in this psalm to do anything to anybody. Read as a licence
-  for revenge, it inverts the thing it is doing. Verse 7 has the opposite
-  problem. "The LORD is my strength and my shield" gets lifted off the page and
-  printed on things, away from the fear in verse 1 that produced it. It is not a
-  slogan about being confident; it is what a frightened man said after a long
-  silence finally broke, and it means much less cut loose from that. Finally, the
-  turn at verse 6 is not a promise that praying this psalm will change your
-  circumstances. Nothing in the text says David's enemies went away.
+  Verse 4 submits a severe request for repayment to God; it does not authorize personal
+  revenge. David announces no plan to harm anyone. Verse 7 should remain connected to
+  the fear of silence in verse 1, showing that praise can grow out of honest distress.
+  The turn to thanks in verse 6 also does not guarantee that praying these words will
+  immediately change external circumstances. The psalm never says the enemies left.
 faqs:
   - q: What is Psalm 28 about?
     a: >-
-      It is a prayer in two parts. In verses 1 to 5 David asks God to answer him,
-      says he is afraid of God's silence more than of his enemies, and asks not to
-      be lumped in with people who are friendly to their neighbours while meaning
-      them harm. In verses 6 to 9 he thanks God for hearing him and prays for
-      God's people as a whole. The psalm never says what happened in between,
-      which is part of what makes it useful.
+      Verses 1 through 5 ask God to answer, distinguish David from deceptive people,
+      and judge wrongdoing. Verses 6 through 9 thank God for hearing and widen the
+      prayer to the whole community. No event is reported between the plea and the
+      praise.
   - q: Who wrote Psalm 28 and when?
     a: >-
       The heading in the Hebrew text says "of David", who reigned over Israel
-      around 1000 BC. Nothing in the psalm dates it precisely. Some older
-      commentators, including Jamieson, Fausset and Brown in 1871, suggested the
-      rebellion of David's son Absalom as the setting, because verse 8 mentions
-      "his anointed" — the king — and the psalm ends by praying for the nation.
-      That is a reasonable guess, not something the text states.
+      around 1000 BC. The psalm gives no precise date. Older commentators including
+      Jamieson, Fausset, and Brown suggested Absalom's rebellion because verse 8
+      mentions the anointed king and the ending prays for the nation. That remains an
+      inference rather than a stated setting.
   - q: What does "the LORD is my strength and my shield" mean?
     a: >-
-      Strength is what holds you up; a shield is what stands between you and
-      what is coming at you. David is saying God does both at once — supplies
-      what he does not have and blocks what he cannot stop. The line matters most
-      when you read it where it sits, six verses after he was afraid God had gone
-      quiet on him. It is not a statement of general optimism. It is relief.
+      Strength enables David to stand, and a shield protects him from attack. God
+      provides both inner support and defense. The statement comes after David's fear
+      of silence and expresses relief that God has heard.
   - q: What is "the pit" in Psalm 28:1?
     a: >-
-      The grave, and the world of the dead beyond it. It is not a reference to
-      hell, and translations that render it "the grave" are saying the same
-      thing. David's point is about being cut off: a dead man cannot be helped
-      and cannot be spoken to, and that is exactly how he says he would feel if
-      God did not answer him.
+      It is the grave and, by extension, the realm of the dead. David imagines himself
+      cut off and beyond help if God offers no answer. The term does not refer to hell
+      in this verse.
   - q: Is Psalm 28:4 asking God for revenge?
     a: >-
-      It is asking God for justice, in strong language, and Christians have
-      always found verses like this difficult. Psalms that ask God to deal with
-      wrongdoers are called imprecatory psalms. What is worth noticing is that
-      David takes no action himself and proposes none — he states what he thinks
-      these people deserve and hands the matter over. The New Testament makes the
-      same move in Romans 12:19: leave room for God's judgement rather than taking
-      it up yourself.
+      It asks God for justice in forceful language. Such prayers are called
+      imprecatory psalms and have long challenged Christian readers. David takes no
+      action and proposes none; he places the matter before God. Romans 12:19 likewise
+      tells believers to leave vengeance to God's judgment.
   - q: Why does Psalm 28 suddenly change from asking to thanking?
     a: >-
-      Nobody can say for certain, and commentators have argued about it for
-      centuries. Matthew Henry, writing in 1706, offered two possibilities: that
-      David was still in trouble and thanking God in advance because he was sure
-      of being heard, or that he was already safe and recording the prayer he had
-      prayed earlier. Either way the psalm deliberately gives no news between
-      verse 5 and verse 6. The confidence does not rest on a visible result.
+      The text does not say. Matthew Henry proposed that David either thanked God in
+      advance while still in danger or recorded an earlier prayer after reaching
+      safety. Because no update appears between verses 5 and 6, the poem emphasizes
+      assurance of being heard more than a visible result.
   - q: How do you pray Psalm 28?
     a: >-
-      Pray it in its own order rather than skipping to the good part. Say the
-      thing you are actually afraid of first, as verse 1 does. Name the people or
-      situation honestly, as verse 3 does. Hand over what you would like to see
-      happen instead of acting on it, as verse 4 does. Then thank God for hearing
-      you before you know how it ends, as verse 6 does. And finish by praying for
-      somebody other than yourself, as verse 9 does.
+      Follow its movement: name the fear, describe the wrong honestly, place the desire
+      for justice with God, thank him for hearing, and remember others who also need
+      help. The prayer does not require pretending that the situation has already
+      changed.
   - q: Is Psalm 28 a psalm of lament?
     a: >-
-      Yes — specifically an individual lament, meaning one person's complaint
-      brought to God rather than the whole nation's. Roughly a third of the
-      Psalms are laments, which is worth knowing if you assumed the Bible expects
-      you to be upbeat when you pray. Psalm 28 is unusual among them for turning
-      to praise inside the same poem rather than ending in the dark.
+      Yes. It begins as an individual lament, one person's complaint brought before
+      God. Laments make up a large share of the Psalms and give worshipers language
+      for distress. Psalm 28 turns to praise within the same poem and closes with a
+      communal prayer.
 relatedTopics:
   - prayer
   - strength
@@ -261,22 +194,20 @@ entity:
   sameAs:
     - https://en.wikipedia.org/wiki/Psalm_28
 publishedAt: 2026-08-18
-reviewedAt: 2026-08-18
+reviewedAt: 2026-08-21
 ---
 
-## If this is your first time reading Psalm 28
+## Reading the two halves of Psalm 28
 
-Read all nine verses before reading anything about them. It takes a minute, and
-it is the only way to feel the join between verse 5 and verse 6 — which is the
-most interesting thing in the psalm and the easiest to miss if someone explains
-it to you first.
+David's first concern is God's silence. His enemies appear only after he has pleaded
+for an answer and described the despair of feeling cut off. He then names the
+deception of people who speak peace while intending harm.
 
-Two things to watch for. The first is that David's opening fear is not his
-enemies but God's silence; the enemies do not appear until verse 3. The second is
-that the psalm changes its mind halfway through and never tells you why. Verse 5
-is still braced for the worst. Verse 6 is grateful. Nothing in between reports a
-rescue.
+Verse 4 asks God to repay those people according to their deeds. The request is meant
+to sound severe, yet David leaves the action entirely with God. Prayer becomes the
+place where anger and the desire for justice are handed over.
 
-If verse 4 stops you — where David asks God to pay these people back — you are
-reading it correctly. It is meant to be uncomfortable. It is also the last thing
-David says about them; he does not act, and the psalm moves on.
+The turn between verses 5 and 6 comes without explanation. One line still speaks of
+judgment, and the next blesses God for hearing. The psalm reports no rescue, but
+assurance changes David's posture. By the final verse, his attention has widened to
+everyone who needs God to save, bless, shepherd, and carry them.

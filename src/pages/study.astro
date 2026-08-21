@@ -25,8 +25,8 @@ setCacheControl(Astro.response, READER_CACHE_CONTROL);
 
 const briefs = await listChapterBriefs();
 
-const title = 'Bible Commentary — Every Chapter of the Bible, Explained Free';
-const description = `Free commentary on all ${TOTAL_CHAPTERS} chapters of the Bible: what each chapter says, what it means, and notes from three commentaries, in plain English.`;
+const title = 'Bible Commentary and Chapter Studies | BibleHearth';
+const description = `Browse all ${TOTAL_CHAPTERS} chapters of the Bible, with clear chapter studies and notes from three free commentaries.`;
 
 const books = [
 	{ heading: 'Old Testament', ids: OLD_TESTAMENT_BOOKS },
@@ -63,14 +63,13 @@ const share = figure ? await shareCardFromFigure(figure) : undefined;
 		<span>Bible study</span>
 	</nav>
 
-	<h1>Bible Commentary and Chapter Summaries</h1>
+	<h1>Bible Commentary and Chapter Studies</h1>
 
 	<p class="lede">
-		A study page for every chapter of the Bible. Each one lays the chapter out in
-		order, explains the words that need explaining, and then gives you what three
-		commentaries wrote about it — in full, free, with no account and no paywall.
-		If you are new to reading the Bible, start with the Tyndale notes on any
-		page: they are written in plain modern English.
+		Every chapter has a place here. Studies walk through the chapter in order and
+		explain unfamiliar words. Three free commentaries follow the study, with no
+		account or paywall. If you are new to the Bible, begin with the Tyndale notes;
+		they use clear, modern English.
 	</p>
 
 	{figure ? <Figure figure={figure} /> : null}
@@ -80,8 +79,8 @@ const share = figure ? await shareCardFromFigure(figure) : undefined;
 			<section>
 				<h2>Chapters written up in full</h2>
 				<p class="muted">
-					These chapters have a summary, an outline, a plain-English glossary and
-					answers to the questions people actually ask about them.
+					These chapters include an original summary, an outline, a glossary, and
+					answers to common questions.
 				</p>
 				<ul class="topic-links">
 					{briefs.map((brief) => {
@@ -135,7 +134,7 @@ const share = figure ? await shareCardFromFigure(figure) : undefined;
 			))
 		}
 		<p class="muted">
-			Full licence and attribution details are on the{' '}
+			Full license and attribution details are on the{' '}
 			<a href="/attributions">attributions page</a>.
 		</p>
 	</section>

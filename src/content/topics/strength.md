@@ -7,54 +7,55 @@ aliases:
   - endurance
   - keep going
 shortAnswer: >-
-  Scripture almost never promises strength as a personal attribute. It is
-  described as supplied, renewed, or made perfect in weakness — which is why the
-  most quoted verse on the subject was written by a man in prison explaining
-  that he had learned to cope with having little. Strength in these texts is
-  something you receive at the point you run out.
+  Scripture usually describes strength as something God supplies and renews.
+  Paul even says divine power reaches its fullness in human weakness. His
+  best-known words about doing "all things" were written from prison as he
+  explained how he had learned to live with both plenty and need. These passages
+  offer sustaining help when personal reserves run out.
 groups:
   - id: supplied
-    heading: Strength is supplied rather than summoned
+    heading: God supplies strength
     rationale: >-
-      The grammar in these passages is consistently passive or received. Someone
-      strengthens; the person is strengthened.
+      These passages speak of people being strengthened, helped, upheld, and
+      renewed. The source lies beyond their own willpower.
     verses:
       - usfm: ISA.41.10
         gloss: >-
           Strengthening, helping, and upholding are all things done to the
-          hearer, addressed to exiles with no power of their own.
+          hearer. God makes this promise to exiles with little power of their
+          own.
       - usfm: PSA.28.7
         gloss: >-
           David names God as his strength and shield before describing the help
-          arriving, putting the source ahead of the outcome.
+          he received, placing the source before the outcome.
       - usfm: NEH.8.10
         gloss: >-
           Spoken to people weeping over Scripture they had just heard; joy is
-          named as the source of strength rather than its result.
+          named as a source of strength for them.
   - id: in-weakness
-    heading: It appears at the point of weakness, not instead of it
+    heading: God's power meets people in weakness
     rationale: >-
-      Several key texts make weakness the precondition rather than the obstacle,
-      which inverts the usual expectation.
+      Several key texts place weakness at the very setting where God's power
+      becomes visible.
     verses:
       - usfm: 2CO.12.9-10
         gloss: >-
           Paul is refused relief and told power is perfected in weakness, then
-          says he will boast about the very thing he asked to be rid of.
+          chooses to speak openly about the weakness he wanted removed.
       - usfm: PHP.4.13
         gloss: >-
           Written from prison and immediately after Paul describes learning
-          contentment in both plenty and need — the "all things" is about
-          coping, not achievement.
+          contentment in both plenty and need. "All things" refers to living
+          faithfully across those circumstances.
       - usfm: 2CO.4.16
         gloss: >-
           Paul concedes outward wasting away and locates renewal inward and
-          daily, refusing to claim the decline is not happening.
+          daily. Inner renewal doesn't require him to deny physical decline.
   - id: renewal
     heading: For exhaustion, the promise is renewal over time
     rationale: >-
       Where Scripture addresses tiredness specifically, the language is of
-      waiting and renewal rather than instant restoration.
+      waiting and strength that returns over time.
     verses:
       - usfm: ISA.40.29-31
         gloss: >-
@@ -63,11 +64,11 @@ groups:
       - usfm: PSA.73.26
         gloss: >-
           Asaph concedes the failure of both body and heart, then names God as
-          the strength that remains — a substitution, not a denial.
+          the strength that remains after both have failed.
       - usfm: MAT.11.28-30
         gloss: >-
           Jesus addresses the already-exhausted and offers a different burden
-          rather than the absence of one.
+          that can be carried beside him.
 misuse: >-
   Philippians 4:13 is the most misquoted verse in this collection. Paul is not
   claiming he can accomplish anything he attempts; the preceding verses are
@@ -75,23 +76,23 @@ misuse: >-
   things" refers to enduring circumstances. Printed on athletic gear it becomes
   a promise of achievement, which reverses its meaning. Isaiah 40:31 is likewise
   often read as a promise of constant energy, but the passage moves deliberately
-  from soaring to merely not fainting — it accommodates the ordinary case.
-  These verses are also not a reason to refuse rest or help. Elijah, at his
+  from soaring to running and then walking without fainting. It includes the
+  ordinary work of continuing. These verses also support rest and help. Elijah, at his
   lowest, was given food and sleep before he was given a word.
 faqs:
   - q: What does Philippians 4:13 really mean?
     a: >-
       In context Paul is describing contentment, not capability. The surrounding
       verses explain that he has learned to be content whether well fed or in
-      need, and the verse concludes that thought — he can endure any of those
-      circumstances through the one who strengthens him. It is about sufficiency
-      under pressure rather than a promise of success in whatever you attempt.
+      need, and the verse concludes that thought. Through Christ's strength, he
+      can live faithfully in any of those circumstances. The promise concerns
+      sufficiency under pressure, not success in every attempt.
   - q: What does the Bible say when you feel too tired to keep going?
     a: >-
       Isaiah 40:29-31 is addressed directly to the exhausted, promising strength
       to the weary and renewal to those who wait. Notably the imagery descends
       from soaring to walking without fainting, which accommodates ordinary
-      endurance rather than promising constant energy. Matthew 11:28-30 offers a
+      endurance without promising constant energy. Matthew 11:28-30 offers a
       lighter yoke to those already worn out.
 related:
   - hope
@@ -106,13 +107,12 @@ sources:
   - torreys
   - editorial
 publishedAt: 2026-08-17
-reviewedAt: 2026-08-17
+reviewedAt: 2026-08-21
 ---
 
-There is a consistent grammatical tell in the Bible's language about strength.
-People are strengthened, upheld, renewed, sustained. The verbs are things done
-to them.
+The Bible often speaks about strength in the passive voice. People are
+strengthened, upheld, renewed, and sustained. Help comes to them from God.
 
-That is worth noticing before reading any single verse on this page, because it
-changes what these texts are offering. Not encouragement to try harder — a
-source to draw on once trying harder has stopped working.
+That pattern changes what these verses offer. Their first message isn't "try
+harder." They point to a source of strength that remains available when trying
+harder has stopped working.

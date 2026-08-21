@@ -1,206 +1,182 @@
 ---
 usfm: 1CO.13
-title: "1 Corinthians 13: The Wedding Reading That Was Written to Settle a Fight"
-seoTitle: "1 Corinthians 13: Written to Settle a Fight"
+title: "1 Corinthians 13 Explained: Love in a Divided Church"
+seoTitle: "1 Corinthians 13: Love in a Divided Church"
 shortAnswer: >-
-  1 Corinthians 13 is the most-read passage at weddings in the English-speaking
-  world, and Paul wrote it to break up an argument. The chapters either side of it
-  are about spiritual gifts, and the church at Corinth was ranking its members by
-  them — who spoke in tongues, who prophesied, who knew the most. Paul stops mid-
-  subject to say that every one of those abilities is worth nothing without love,
-  then defines love in fifteen short statements, over half of which describe what
-  love refuses to do. The chapter closes with an argument about duration: gifts
-  expire, love does not.
+  First Corinthians 13 is often read at weddings, but Paul wrote it for a church
+  divided over spiritual gifts and status. Chapters 12 and 14 discuss tongues,
+  prophecy, and other gifts. Between them, Paul says that every impressive
+  ability amounts to nothing without love. He describes love through fifteen
+  short statements, many of them about restraint, then explains why love is
+  greatest: gifts serve a temporary purpose, while love endures.
 outline:
   - verses: "1-3"
-    heading: Three ways to have everything and be worth nothing
+    heading: Impressive gifts amount to nothing without love
     note: >-
-      Paul builds three sentences on the same frame — suppose I had the most
-      impressive thing available, and no love. Tongues without love is noise.
-      Prophecy, total knowledge and mountain-moving faith without love leaves him
-      "nothing". Giving everything away without love gains nothing. Notice he puts
-      himself in the examples.
+      Paul imagines possessing extraordinary speech, knowledge, faith, and
+      generosity while lacking love. Paul calls the result "nothing": noise, personal emptiness,
+      and no gain. He places himself inside each example instead of pointing at
+      someone else.
   - verses: "4-7"
-    heading: Fifteen statements about love, and most of them are refusals
+    heading: Love is patient, kind, truthful, and restrained
     note: >-
-      Two positives open it — patient, kind — and then come the negatives: does
-      not envy, does not boast, is not proud, is not rude, is not self-seeking,
-      not easily angered, keeps no account of wrongs, takes no pleasure in evil.
-      Read against chapters 1 to 12, it is a list of what the Corinthians were
-      doing to each other.
+      Patience and kindness open the list. The wording "it does not envy, it does not boast, it is not proud"
+      introduces envy, boasting, pride,
+      rudeness, self-interest, quick anger, scorekeeping, and delight in evil as
+      incompatible with love. Chapters 1 through 12 show the Corinthians
+      struggling with many of these behaviors.
   - verses: "8-10"
-    heading: The gifts have an expiry date and love does not
+    heading: Spiritual gifts are partial and temporary
     note: >-
-      Prophecy will cease, tongues will be stilled, knowledge will be set aside.
-      This is the actual argument of the chapter: the things the church was
-      competing over are temporary by design, and they are temporary because they
-      are partial. When the complete thing arrives, the fragment is not needed.
+      Prophecy, tongues, and knowledge all serve a limited purpose and "will cease". Because they
+      provide only partial understanding, they will end when completeness
+      arrives. The gifts over which Corinth competed were temporary by design.
   - verses: "11-12"
-    heading: Two pictures of knowing only part of something
+    heading: Childhood and a dim mirror picture partial knowledge
     note: >-
-      A grown man remembering how he thought as a child, and a face in a polished
-      bronze mirror. Neither is an insult to present knowledge — a child's
-      thinking is right for a child, and a bronze mirror does show your face. Both
-      say the same thing: this is real and it is not the finished version.
+      Paul compares present understanding to childhood and to a face reflected
+      in polished bronze. Both provide real but incomplete knowledge. A fuller,
+      face-to-face understanding still lies ahead.
   - verses: "13"
-    heading: A ranking, and love wins it
+    heading: Love is greatest because it lasts
     note: >-
       Faith, hope and love are the three that remain, and love is called the
-      greatest. Given the eleven verses before it, "greatest" means something
-      specific: it is the one that does not become unnecessary.
+      "greatest". The preceding argument explains the ranking: love never becomes
+      unnecessary.
 themes:
-  - name: Written to stop an argument, not to bless a marriage
+  - name: Love addresses a divided church
     explanation: >-
       Chapter 12 lists spiritual gifts, chapter 14 gives rules for using them in
-      a meeting, and chapter 13 sits between them like a hand raised in the middle
-      of a row. Corinth was a church that sorted itself into ranks, took each
-      other to court, held cliquey communion meals and prized the flashiest gift
-      most highly. Into that, Paul says the gift you are proud of is a sound
-      effect without love. The passage is not describing an ideal; it is telling a
-      specific congregation what they were failing at, which is why every line is
-      so concrete.
-  - name: Love is defined mostly by what it will not do
+      a gathering, and chapter 13 belongs inside that discussion. The Corinthian
+      church ranked its members, took disputes to court, divided at communion,
+      and prized visible gifts. Paul tells them that the ability they value most
+      becomes empty noise without love. His concrete description answers the
+      congregation's actual failures.
+  - name: Much of love takes the form of restraint
     explanation: >-
-      Count the list in verses 4 to 7. Patient and kind are positive. Then eight
-      statements in a row describe restraint: not envying, not boasting, not
-      proud, not rude, not self-seeking, not quick to anger, keeping no ledger of
-      wrongs, taking no pleasure in evil. That shape is worth noticing, because it
-      makes the chapter usable. You cannot manufacture a feeling on demand, but
-      you can decline to bring up the thing from three years ago. Most of what
-      Paul calls love here is available to somebody who does not feel loving at
-      the time.
+      After patience and kindness, Paul gives a long series of actions love
+      avoids. It doesn't envy, boast, inflate itself, disregard others, insist on
+      its own way, flare quickly, keep a ledger of wrongs, or enjoy evil. These
+      choices can be practiced even when affectionate feelings are weak. The
+      passage makes love visible in ordinary conduct.
   - name: The argument is about what lasts
     explanation: >-
-      Verses 8 to 12 are the reason love wins, and the reasoning is about
-      duration rather than warmth. Prophecy, tongues and knowledge are partial —
-      useful in the way a child's understanding is useful, or a bronze mirror is
-      useful — and things that exist to fill a gap end when the gap closes. Love
-      is not partial in that way, so nothing about it becomes obsolete. When verse
-      13 calls love the greatest of the three, it is finishing this argument, not
-      making a compliment.
-  - name: The word Paul uses is closer to a verb than a feeling
+      Verses 8 through 12 explain why love is greatest. Prophecy, tongues, and
+      knowledge provide partial help, much like childhood understanding or a
+      bronze reflection. When complete knowledge arrives, their temporary work
+      ends. Love has no comparable expiration, so verse 13 completes an argument
+      about endurance.
+  - name: Agape seeks another person's good
     explanation: >-
-      Greek had several words in this area, and Paul chose the one that describes
-      settled goodwill acted on, not affection or desire. That is why the chapter
-      can be a list of behaviours rather than a description of an emotion, and why
-      it can be commanded at all. It also means the chapter is not primarily about
-      romance. It is about how people who did not choose each other, and did not
-      much like each other, were supposed to behave in the same room.
+      Paul's word *agape* describes committed goodwill expressed in action. That
+      is why he can list behaviors and command love within a community. The
+      chapter's first setting isn't romance; it is shared life among people who
+      didn't choose one another and weren't treating one another well.
 glossary:
   - term: love (agape)
     plain: >-
       The Greek word here describes a decision to seek someone's good and keep
-      seeking it, whether or not you feel warm towards them. It is why the chapter
-      can list actions rather than feelings, and why it can be an instruction. It
-      is not the word for romance or for liking someone.
+      seeking it even when warm feelings are absent. Paul can therefore describe
+      love through actions and give it as an instruction. The word isn't limited
+      to romance or personal affection.
   - term: tongues
     plain: >-
       Speaking in a language the speaker has not learned, treated in Corinth as
-      the most impressive thing a Christian could do. Paul deals with it at length
-      in chapter 14; here he only uses it as his first example of an ability that
-      counts for nothing on its own.
+      a highly impressive spiritual gift. Paul discusses its use at length in
+      chapter 14 and uses it here as his first example of ability emptied of
+      value without love.
   - term: prophecy
     plain: >-
-      In the New Testament, delivering a message from God to a gathering — not
-      necessarily about the future. Paul rates it above tongues in chapter 14,
-      which makes it a pointed example: even the gift he prefers is worth nothing
-      without love.
+      In the New Testament, prophecy communicates a message from God to a
+      gathering and isn't necessarily about the future. Paul values it above
+      tongues in chapter 14, yet says even this gift is empty without love.
   - term: the perfect (or the complete)
     plain: >-
       Verse 10's word for whatever it is that makes partial knowledge
-      unnecessary. Paul does not define it. Verse 12 pairs it with seeing "face to
-      face", so most readers take it as the state of things after Christ returns.
+      unnecessary. Paul doesn't define it, but verse 12 connects it with seeing
+      "face to face." Most readers therefore understand it as the state after
+      Christ returns.
   - term: a dim reflection as in a mirror
     plain: >-
-      Mirrors in Paul's world were polished bronze, so a reflection was recognisable
-      but murky. Older Bibles translate this "through a glass darkly". The point is
-      not that we see nothing, but that we see indistinctly and will not always.
+      Mirrors in Paul's world were polished bronze, producing a recognizable but
+      unclear reflection. Older Bibles translate this "through a glass darkly."
+      Present knowledge is real and indistinct, with greater clarity still to
+      come.
   - term: a ringing gong or clanging cymbal
     plain: >-
       Loud metal instruments, used in the temples of other gods around Corinth.
       Paul is saying that impressive religious noise without love is
-      indistinguishable from the pagan racket next door — a harder insult than it
-      sounds in English.
+      indistinguishable from the religious noise nearby. The comparison is
+      sharper in Corinth's setting than it may sound in English.
 keyVerses:
   - usfm: 1CO.13.1
     why: >-
-      The sentence that sets the chapter's terms, and the one that tells you it is
-      about church politics before it is about romance. Paul makes himself the
-      hypothetical failure rather than pointing at anyone.
+      This sentence establishes the chapter's terms within a church dispute.
+      Paul makes himself the hypothetical failure, beginning with humility.
   - usfm: 1CO.13.4-5
     why: >-
-      The lines everybody knows, and the place to notice how many of them are
-      negative. This is the most quoted description of love in any language, and
-      most of it is a list of things love declines to do.
+      These familiar lines make love concrete through patience, kindness,
+      truthfulness, and a long list of destructive behaviors it avoids.
   - usfm: 1CO.13.8
     why: >-
-      The hinge of the chapter's argument, and the verse people fight over.
-      Whatever "will cease" means for tongues and prophecy, the contrast Paul is
-      drawing is with a love that does not.
+      This verse turns from love's character to its permanence. Interpretations
+      of when gifts cease differ, while Paul's contrast with enduring love stays
+      clear.
   - usfm: 1CO.13.12
     why: >-
-      The most quietly hopeful verse in the chapter and the source of "through a
-      glass darkly". It concedes how little we currently see and promises the
-      concession is temporary.
+      The source of "through a glass darkly" acknowledges the limits of present
+      understanding and promises that those limits are temporary.
   - usfm: 1CO.13.13
     why: >-
-      The conclusion, and it only makes sense with the eleven verses above it.
-      Love is greatest because it is the one thing on the list that never becomes
-      unnecessary.
+      This conclusion gathers the argument above it. Love is greatest because
+      its work never becomes unnecessary.
 caution: >-
-  Two ways this chapter gets turned against people. The first is mild: read at a
-  wedding as a description of how the couple already feel, it sets up a standard
-  nobody meets and gives both of them a stick — "if you loved me you would be
-  patient." Paul was not describing a feeling two people have; he was telling a
-  quarrelling congregation how to behave regardless of how they felt. The list is
-  more useful, not less, once you stop treating it as a romantic diagnosis. The
-  second is serious. Verse 7 — love bears all things, believes all things,
-  endures all things — has been quoted to people being harmed by a spouse, a
-  parent or a church leader as a reason to stay quiet and keep taking it. Nothing
-  in this chapter asks that. The same letter tells the Corinthians to expel a man
-  for abuse, and the same list says love takes no pleasure in evil and is not
-  self-seeking, which cuts against the person doing harm long before it asks
-  anything of the person being harmed. A verse about not giving up on people is
-  not a verse about tolerating being hurt by them.
+  This chapter can be misused in two important ways. At weddings, it may be read
+  as a description of how a couple already feels and then turned into a test:
+  "if you loved me you would be patient." Paul gives a divided community
+  practices to follow regardless of emotion. More seriously, "love bears all
+  things" and "endures all things" have been used to pressure people to remain
+  silent under harm from a spouse, parent, or church leader. The chapter doesn't
+  require tolerating abuse. The same letter tells Corinth to confront serious
+  wrongdoing, and the list says love doesn't delight in evil or seek its own
+  advantage. Those words first judge the person causing harm. Safety, truth, and
+  appropriate boundaries remain consistent with love.
 faqs:
   - q: Is 1 Corinthians 13 appropriate to read at weddings?
     a: >-
       There is nothing wrong with it, and it is worth knowing what you are
       reading. Paul wrote it to a divided church about how its members should
       treat one another, not to a couple about marriage, and there is no romance
-      anywhere in the chapter. That said, the qualities it lists are exactly the
-      ones a marriage runs on — patience, kindness, not keeping score — and
+      anywhere in the chapter. The qualities it lists are still central to a
+      marriage, including patience, kindness, and releasing old scores. For that
+      reason,
       Christians have applied it to marriage for centuries on the reasonable
       grounds that a husband and wife are also two Christians in the same room.
-      Read it at the wedding. Just do not read it as a description of how the two
-      of them feel today; read it as a description of what they are promising to
-      do.
+      At a wedding, it works best as a description of how two people promise to
+      live, not a measurement of their current feelings.
   - q: What does "love is patient, love is kind" mean line by line?
     a: >-
       Patient is the word for holding your temper over a long stretch. Kind means
-      actively useful to someone, not merely inoffensive. Does not envy — no
-      resentment at someone else's gift or position, which was Corinth's specific
-      disease. Does not boast, is not proud — no advertising and no inflated
-      self-estimate. Not rude covers behaviour that disregards other people in the
-      room. Not self-seeking is refusing to insist on your own way. Not easily
-      angered is a short fuse denied. Keeps no account of wrongs is bookkeeping
-      abandoned. Takes no pleasure in evil, rejoices in the truth, is the
-      character of someone who does not enjoy bad news about people they dislike.
-      Bears, believes, hopes and endures all things is stamina.
+      active good to another person. "Does not envy" rejects resentment of
+      another person's gift or position, a particular problem in Corinth. "Does
+      not boast" and "is not proud" reject self-promotion. Rudeness disregards
+      others, while self-seeking insists on one's own way. Quick anger gives way
+      to patience, and "keeps no account of wrongs" abandons the ledger. Love
+      refuses to enjoy evil, rejoices with truth, and continues to bear, believe,
+      hope, and endure.
   - q: What does "love keeps no record of wrongs" mean?
     a: >-
-      The phrase behind it is an accounting term — entering an item in a ledger.
+      The phrase behind it is an accounting term for entering an item in a ledger.
       Paul is describing the mental filing system that remembers exactly what
       somebody did, when, and how many times, and can produce the list during the
-      next argument. Love, he says, does not keep the book. That is not the same
-      as pretending nothing happened or having no memory; the same letter deals
-      very directly with things people had done. It is a refusal to hold the
-      record as a weapon to be used later.
+      next argument. Love doesn't keep that book. This doesn't require pretending
+      nothing happened; the same letter directly confronts wrongdoing. It means
+      refusing to preserve the record as a future weapon.
   - q: Does 1 Corinthians 13:8 mean tongues and prophecy have ceased?
     a: >-
-      Christians genuinely disagree here, and the chapter does not settle it. One
+      Christians disagree here, and the chapter doesn't settle it. One
       reading holds that these gifts ended when the New Testament was complete,
-      making the "perfect" of verse 10 the finished Scriptures — so tongues and
+      making the "perfect" of verse 10 the finished Scriptures, so tongues and
       prophecy are not to be expected now. The other holds that verse 12's "face
       to face" points to Christ's return, which has not happened, so the gifts
       continue until then. The second reading has the easier time with verse 12,
@@ -212,18 +188,17 @@ faqs:
       Verse 10 says something complete arrives and makes the incomplete
       unnecessary. Paul immediately illustrates it twice: an adult who no longer
       thinks as a child, and a murky bronze reflection replaced by a face seen
-      directly. Neither illustration says the earlier stage was wrong — a child's
-      thinking is appropriate for a child. They say it was provisional. What
-      exactly "the perfect" is, Paul does not spell out, and that gap is where the
+      directly. A child's thinking is appropriate for a child, so the earlier
+      stage is provisional without being false. Paul doesn't spell out exactly
+      what "the perfect" is, and that gap is where the
       disagreement about tongues and prophecy lives.
   - q: What does "seeing through a glass darkly" mean?
     a: >-
       It is the King James wording of verse 12, where "glass" means mirror rather
       than window. Mirrors then were polished metal, so the reflection was real
-      but indistinct. Paul's point is about the limits of present understanding:
-      what Christians know about God now is genuine and unfinished at the same
-      time. The phrase has since escaped into ordinary English to mean any partial
-      or distorted view of something.
+      but indistinct. Paul describes the limits of present understanding: what
+      Christians know about God now is real and unfinished. The phrase has since
+      entered ordinary English for a partial or distorted view.
   - q: What does "the tongues of angels" mean in 1 Corinthians 13:1?
     a: >-
       Paul is stretching his example to its limit rather than teaching about
@@ -236,9 +211,9 @@ faqs:
   - q: Why is love greater than faith and hope?
     a: >-
       Because of the argument in verses 8 to 12 about what lasts. Faith and hope
-      both take their shape from something not yet in hand — you trust what you
-      cannot see, you hope for what has not arrived. When it does arrive, they
-      have done their work. Love has no such built-in ending. Later Christian
+      both concern what isn't yet in hand. Faith trusts what can't be seen, and
+      hope waits for what hasn't arrived. When fulfillment comes, they have done
+      their work. Love has no built-in ending. Later Christian
       writers added a second reason from elsewhere in the New Testament: God is
       described as being love, which no verse says of faith or hope.
 relatedTopics:
@@ -252,31 +227,27 @@ entity:
   sameAs:
     - https://en.wikipedia.org/wiki/1_Corinthians_13
 publishedAt: 2026-08-19
-reviewedAt: 2026-08-19
+reviewedAt: 2026-08-21
 ---
 
 ## If this is your first time reading 1 Corinthians 13
 
-Read chapter 12 first, or at least the last few verses of it. It costs you two
-minutes and it changes the whole chapter.
+Reading chapter 12, or at least its final verses, gives chapter 13 its proper
+setting.
 
-What you will find is that chapter 12 is a list of spiritual gifts and chapter 14
-is a set of rules for using them in a church meeting — and chapter 13 has been
-dropped in between them. Paul is in the middle of a subject. He breaks off to say
-that the abilities his readers were competing over are worth precisely nothing
-without love, spends ten verses saying what love is, and then picks the subject
-back up. This is an interruption, and it is aimed at people who were behaving
-badly.
+Chapter 12 lists spiritual gifts, and chapter 14 gives rules for using them in a
+church gathering. Chapter 13 belongs in the middle of that discussion. Paul
+pauses to say that the abilities his readers compete over are worth nothing
+without love. After describing love and explaining why it lasts, he returns to
+the gifts. The chapter directly addresses a community behaving badly.
 
-That is why the list in verses 4 to 7 is so specific and so unromantic. Corinth
-had members suing each other, cliques at the communion table, and a pecking order
-based on who had the most impressive gift. Almost every item on Paul's list is
-the exact opposite of something they were doing. When you read "it does not envy,
-it does not boast, it is not proud", you are reading a description of a real
-congregation, in reverse.
+That context explains the specificity of verses 4 through 7. Corinth had members
+suing one another, cliques forming at communion, and a status system built around
+spiritual gifts. Paul's description of love reverses the congregation's conduct.
+"It does not envy, it does not boast, it is not proud" speaks into a real church
+conflict.
 
-Then notice how much of the list is negative — things love does not do. That is
-good news if you have ever tried to obey this chapter. You cannot summon a warm
-feeling on command. You can decide not to bring up the old thing, not to insist on
-your own way, not to keep the score. Paul's version of love is mostly made of
-decisions like that, which is why he could ask a difficult church for it at all.
+Much of the list describes restraint. Warm feelings can't be summoned on
+command, but people can release an old score, make room for someone else, and
+refuse to use a remembered wrong as a weapon. Paul gives a difficult church a
+form of love that can be practiced in the next conversation.

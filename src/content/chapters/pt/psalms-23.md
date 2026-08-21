@@ -1,201 +1,181 @@
 ---
 usfm: PSA.23
-title: "Salmo 23: O Senhor É o Meu Pastor, Explicado Verso a Verso"
+title: "Salmo 23: O cuidado de Deus como pastor e anfitrião"
 shortAnswer: >-
-  O Salmo 23 é um cântico curto em que Davi descreve Deus como um pastor que o
-  alimenta, o conduz, permanece com ele no perigo e nunca fica sem bondade. Seis
-  versículos, duas imagens: Deus como pastor em campo aberto e depois Deus como
-  anfitrião diante de uma mesa posta. O tema não é uma vida sem dificuldade —
-  existe um vale escuro e existem inimigos — mas a presença de alguém que não vai
-  embora.
+  O Salmo 23 descreve o cuidado de Deus por meio de duas imagens. Primeiro, ele é o
+  pastor que alimenta, conduz, restaura e acompanha Davi no vale escuro. Depois, é o
+  anfitrião que prepara uma mesa e recebe Davi com honra. O poema reconhece a presença
+  do perigo e dos inimigos, ao mesmo tempo que afirma a companhia fiel de Deus em cada
+  parte do caminho.
 outline:
   - verses: "1"
-    heading: A afirmação sobre a qual todo o salmo se apoia
+    heading: Davi reconhece o Senhor como seu pastor
     note: >-
-      "O Senhor é o meu pastor; de nada terei falta." Todo o resto do salmo
-      explica o que essa frase significa na prática. Repare no "meu" — é uma
-      afirmação pessoal, não uma observação geral sobre Deus.
+      "O Senhor é o meu pastor; de nada terei falta." Os versículos seguintes mostram
+      como esse cuidado se manifesta. Ao dizer "meu", Davi transforma uma verdade
+      sobre Deus em uma declaração pessoal de confiança.
   - verses: "2-3"
-    heading: O pastor alimenta, dá de beber e restaura
+    heading: O pastor oferece alimento, descanso e direção
     note: >-
-      Pasto verde, águas tranquilas e uma alma trazida de volta à vida. Ovelhas
-      não bebem de água corrente e agitada, então "águas tranquilas" é um detalhe
-      de pastor: Deus provê na forma que a criatura consegue de fato receber.
+      Pastos verdes e "águas tranquilas" formam uma cena de alimento e repouso. Deus
+      renova a vida de Davi e o conduz por caminhos certos, cuidando dele de uma forma
+      que ele consegue receber.
   - verses: "4"
-    heading: O vale, e a razão pela qual é possível atravessá-lo
+    heading: A presença de Deus acompanha Davi no vale
     note: >-
-      O salmo entra direto no pior lugar que existe nele e a linguagem muda —
-      Davi para de falar sobre Deus e começa a falar com ele. O consolo oferecido
-      não é livramento do vale, mas companhia dentro dele.
+      Ao chegar ao vale mais escuro, Davi passa a falar diretamente com Deus. A vara e
+      o cajado representam proteção e direção. A segurança nasce da presença de Deus
+      durante a travessia.
   - verses: "5"
-    heading: A imagem muda do campo para a mesa
+    heading: Deus recebe Davi como convidado de honra
     note: >-
-      De repente Deus é anfitrião, não pastor: uma mesa posta, óleo derramado na
-      cabeça, um cálice que transborda. E os inimigos continuam na sala. A honra
-      é dada diante das pessoas que esperavam vê-lo humilhado.
+      A cena muda do campo para uma mesa preparada. Deus unge a cabeça de Davi e enche
+      seu cálice até transbordar, demonstrando acolhimento e honra diante dos inimigos.
   - verses: "6"
-    heading: Bondade e misericórdia como perseguidoras
+    heading: A bondade de Deus acompanha Davi até sua casa
     note: >-
-      O verbo hebraico é mais forte do que "seguir" — é a palavra usada para
-      perseguir algo até alcançar. Davi não está sendo acompanhado pela bondade
-      de Deus; ele está sendo caçado por ela, todos os dias da sua vida, até
-      chegar em casa.
+      O verbo hebraico traduzido como "seguir" também pode significar perseguir. A
+      bondade e o amor leal de Deus buscam Davi ativamente por toda a vida, até ele
+      permanecer na casa do Senhor.
 themes:
-  - name: Deus como pastor, não como gerente
+  - name: O pastor permanece perto do rebanho
     explanation: >-
-      Pastorear no Israel antigo era um trabalho sem glamour, físico, de tempo
-      integral. O pastor caminhava com o rebanho, dormia perto dele e enfrentava
-      pessoalmente o que aparecesse. Chamar Deus de pastor não é dizer que ele
-      supervisiona de longe; é dizer que ele está por perto, acordado e disposto
-      a se envolver.
-  - name: Presença, e não proteção
+      No Israel antigo, cuidar de ovelhas era um trabalho físico e contínuo. O pastor
+      caminhava com o rebanho, encontrava água e alimento, dormia por perto e enfrentava
+      os perigos. Ao chamar Deus de pastor, Davi descreve um cuidado próximo, atento e
+      envolvido com as necessidades da vida.
+  - name: A presença de Deus sustenta a travessia
     explanation: >-
-      A linha mais citada do salmo fala de atravessar o vale da sombra da morte,
-      e ela não diz que o vale é evitado. Diz "não temerei mal nenhum, porque
-      você está comigo". Esta é a oferta central do salmo, e vale ser honesto:
-      é uma promessa menor do que muita gente quer e maior do que essas mesmas
-      pessoas esperam.
-  - name: O suficiente, não o excesso
+      O versículo 4 atravessa o vale da sombra da morte. Davi diz "não temerei mal
+      nenhum, porque você está comigo". O centro do salmo
+      é essa companhia fiel no lugar difícil, representada pela vara que protege e
+      pelo cajado que guia.
+  - name: A provisão atende às necessidades reais
     explanation: >-
-      "De nada terei falta" significa "não me faltará nada" — não "vou receber
-      tudo o que pedir". Uma ovelha com um bom pastor não tem uma vida livre de
-      tempo ruim, de distância ou de predadores. Ela tem uma vida em que nada do
-      que realmente precisa está faltando. O salmo é cuidadoso com essa
-      diferença, e é fácil confundi-la.
-  - name: Honra diante dos inimigos
+      "De nada terei falta" expressa confiança de que o pastor cuidará do que é
+      necessário. A imagem não promete todos os desejos realizados. O rebanho ainda
+      enfrenta distância, clima ruim e predadores, porém conta com alimento, direção,
+      descanso e proteção sob o cuidado do pastor.
+  - name: Deus restaura a honra diante dos inimigos
     explanation: >-
-      O versículo 5 não remove os inimigos. Ele senta Davi diante de uma mesa
-      cheia enquanto eles assistem. Numa cultura em que a vergonha pública era
-      uma das piores coisas que podiam acontecer a alguém, ser honrado na frente
-      de quem queria vê-lo humilhado era uma forma específica e poderosa de
-      reparação.
+      Os inimigos continuam presentes no versículo 5, mas Davi ocupa o lugar de um
+      convidado valorizado à mesa de Deus. Em uma cultura profundamente marcada por
+      honra e vergonha públicas, essa recepção comunica restauração diante de quem
+      esperava vê-lo humilhado.
 glossary:
   - term: o Senhor
     plain: >-
-      Onde a sua Bíblia imprime SENHOR em maiúsculas, o hebraico traz o nome
-      pessoal de Deus, aquele revelado a Moisés. Então a primeira linha não é "um
-      deus é meu pastor", mas o nome de um Deus específico que Davi conhece.
+      Quando uma tradução imprime SENHOR em letras maiúsculas, o texto hebraico traz o
+      nome pessoal de Deus revelado a Moisés. Davi está falando do Deus que conhece e
+      com quem mantém uma relação de aliança.
   - term: de nada terei falta
     plain: >-
-      Quer dizer "não me faltará nada do que eu preciso". É uma afirmação sobre
-      provisão, não sobre desejos atendidos. Algumas traduções dizem "nada me
-      faltará", com o mesmo sentido.
+      Uma declaração de confiança na provisão do pastor. Algumas traduções dizem "nada
+      me faltará". A frase trata das necessidades sob o cuidado de Deus, sem prometer
+      a realização de todo desejo.
   - term: restaura a minha alma
     plain: >-
-      Traz-me de volta à vida. A palavra hebraica para alma significa a pessoa
-      viva inteira, não uma parte invisível dentro dela, então isto está mais
-      perto de "ele me revigora" do que de qualquer coisa fantasmagórica.
+      A expressão pode significar "ele me revigora", "renova a minha vida" ou
+      "faz-me reviver". A palavra
+      hebraica traduzida como "alma" se refere à pessoa viva por inteiro.
   - term: o vale da sombra da morte
     plain: >-
-      Um desfiladeiro profundo e escuro — o tipo de lugar estreito onde um
-      rebanho fica mais exposto. A expressão também pode ser traduzida como
-      "vale tenebroso". Inclui o morrer, mas não trata só disso; trata de
-      qualquer trecho em que você não consegue ver a saída.
+      Um vale profundo e escuro, onde o rebanho ficava especialmente vulnerável. A
+      expressão também pode ser traduzida como "vale tenebroso" ou "vale escuro". Ela inclui a morte e
+      também alcança outros períodos em que o caminho parece perigoso e sem saída.
   - term: vara e cajado
     plain: >-
-      Duas ferramentas do ofício. A vara era um bastão para afastar predadores; o
-      cajado era o bordão de ponta curva para guiar e segurar as ovelhas. Um
-      protege, o outro dirige, e Davi acha os dois reconfortantes.
+      Duas ferramentas do pastor. A vara ajudava a enfrentar predadores; o cajado,
+      geralmente curvo, servia para orientar e alcançar as ovelhas. Juntos, comunicam
+      proteção e direção.
   - term: unge a minha cabeça com óleo
     plain: >-
-      Derramar óleo perfumado na cabeça de um convidado era hospitalidade comum
-      numa boa refeição, como pegar o casaco de alguém e servir-lhe uma bebida.
-      Era o sinal de que o convidado era bem-vindo e valorizado.
+      Derramar óleo perfumado sobre a cabeça de um convidado era um gesto de
+      hospitalidade e honra. Mostrava que aquela pessoa era recebida com alegria e
+      tratada como alguém de valor.
   - term: misericórdia
     plain: >-
-      A palavra hebraica é hesed — bondade leal e comprometida, que cumpre o que
-      promete. Não é pena. É a fidelidade de quem decidiu ficar do seu lado.
+      A palavra hebraica hesed reúne amor leal, bondade e compromisso com uma aliança.
+      Ela descreve a fidelidade persistente de Deus ao seu povo.
 keyVerses:
   - usfm: PSA.23.1
     why: >-
-      A linha que a maioria das pessoas conhece mesmo sem conhecer nada mais da
-      Bíblia. Todo o resto do salmo a desdobra. Lida por inteiro, é a afirmação
-      de que o Deus que governa o universo assume responsabilidade pessoal e
-      prática pelas necessidades de uma pessoa.
+      A frase de abertura resume todo o poema. O Deus soberano assume o cuidado pessoal
+      e prático de Davi como um pastor cuida do rebanho.
   - usfm: PSA.23.4
     why: >-
-      O versículo lido em mais funerais e à beira de mais leitos de hospital do
-      que qualquer outro da Bíblia, e a razão pela qual este salmo permanece. Seu
-      consolo é muito bem localizado: não que o vale seja removido, mas que você
-      não o atravessa sozinho.
+      Este versículo oferece consolo em funerais, hospitais e outros momentos de medo.
+      Deus permanece perto durante a travessia do vale.
   - usfm: PSA.23.6
     why: >-
-      A promessa final, e mais forte no hebraico do que na maioria das traduções
-      — a bondade e o amor leal de Deus perseguem Davi ativamente pelo resto da
-      vida dele. Responde ao medo de que a bondade de Deus possa acabar antes de
-      você.
+      O verbo hebraico dá à bondade e ao amor leal de Deus um movimento ativo em
+      direção a Davi. Esse cuidado continua por toda a sua vida e o conduz para casa.
 caution: >-
-  O Salmo 23 é muitas vezes citado como se prometesse uma vida confortável, e não
-  é isso. Existe um vale escuro no versículo 4 e existem inimigos no versículo 5,
-  e o salmo nunca diz que algum dos dois é removido. "De nada terei falta" é uma
-  promessa de não faltar nada do que você precisa, não de receber tudo o que você
-  pede — ler ao contrário prepara a pessoa para sentir que Deus quebrou a palavra
-  quando algo dá errado. Vale dizer também que Davi escreveu isto como alguém que
-  passou anos sendo perseguido, não como alguém cuja vida foi tranquila. O salmo é
-  uma declaração de confiança feita de dentro da dificuldade. Citado a quem está
-  sofrendo como razão para não se sentir mal, ele se torna o oposto do que é.
+  O Salmo 23 reconhece um vale escuro no versículo 4 e inimigos no versículo 5. Por
+  isso, não oferece uma garantia de conforto contínuo. "De nada terei falta" expressa
+  confiança no cuidado de Deus e não promete que todo pedido será atendido. Davi
+  conheceu perseguição e perigo, e suas palavras nascem dentro dessa experiência.
+  Quando alguém está sofrendo, o salmo deve oferecer companhia e esperança. Ele não
+  deve ser usado para exigir que a pessoa esconda a dor ou interprete toda dificuldade
+  como falta de fé.
 faqs:
   - q: Quem escreveu o Salmo 23 e quando?
     a: >-
-      O salmo traz o título "Salmo de Davi", e Davi passou a primeira parte da
-      vida como pastor de ovelhas antes de se tornar rei de Israel, por volta de
-      1000 a.C. Os detalhes de pastoreio que aparecem nele — águas tranquilas em
-      vez de água corrente, a vara e o cajado como duas ferramentas distintas —
-      soam como alguém descrevendo um trabalho que realmente fez, e não uma
-      metáfora sobre a qual leu.
+      O título hebraico identifica o poema como "Salmo de Davi". Antes de se tornar rei
+      de Israel, por volta de 1000 a.C., Davi cuidava das ovelhas de sua família. As
+      imagens de pastos, águas tranquilas, vara e cajado combinam com essa experiência.
+      O salmo não informa em que momento específico da vida de Davi foi escrito.
   - q: O que significa "de nada terei falta" no Salmo 23:1?
     a: >-
-      Significa "não me faltará nada do que eu preciso". Davi não está afirmando
-      que sempre receberá o que deseja. Está afirmando que, com este pastor, nada
-      genuinamente necessário vai faltar. É uma frase sobre suprimento, e a
-      diferença importa: lida como promessa de conforto, ela decepciona na
-      primeira dificuldade.
+      A frase significa "não me faltará nada do que eu preciso". Davi confia que o
+      pastor cuidará do que ele precisa. Ela fala de provisão e
+      contentamento sob os cuidados de Deus. Ela não garante todos os desejos nem uma
+      vida livre de perdas. O próprio salmo inclui um vale ameaçador e a presença de
+      inimigos.
   - q: O que é o vale da sombra da morte?
     a: >-
-      Literalmente um desfiladeiro profundo e escuro — o trecho de terreno mais
-      perigoso por onde um rebanho podia ser levado, onde os predadores tinham
-      cobertura e as ovelhas não enxergavam longe. Muitas traduções trazem "vale
-      tenebroso" ou "vale escuro". Certamente inclui o morrer, e é por isso que o
-      versículo é lido em funerais, mas se aplica a qualquer período em que você
-      não consegue ver a saída.
+      A expressão descreve um vale muito escuro, onde um rebanho ficava exposto e não
+      conseguia enxergar o caminho adiante. Algumas traduções usam "vale tenebroso".
+      A imagem inclui a morte, motivo pelo qual aparece em tantos funerais, e também se
+      aplica a outros períodos de perigo, luto ou incerteza.
   - q: Por que o salmo muda de ovelhas para uma mesa de jantar?
     a: >-
-      Porque faz o mesmo ponto duas vezes, com duas imagens diferentes. Na
-      primeira metade, Deus é o pastor em campo aberto que mantém Davi vivo. Na
-      segunda, é o anfitrião que trata Davi como convidado de honra. Provisão e
-      acolhimento. A mudança também leva o salmo de sobreviver a ser celebrado,
-      o que é uma escalada deliberada.
+      As duas cenas revelam dimensões complementares do cuidado de Deus. Como pastor,
+      ele provê alimento, direção e segurança no caminho. Como anfitrião, recebe Davi à
+      mesa, unge sua cabeça e enche seu cálice. O poema passa da sobrevivência no campo
+      para o acolhimento e a honra dentro de casa.
   - q: O Salmo 23 fala de Jesus?
     a: >-
-      Os cristãos leem assim, e com razão: em João 10, Jesus se chama o bom
-      pastor que dá a vida pelas ovelhas, o que é um eco direto. Hebreus 13:20 e
-      1 Pedro 2:25 usam a mesma imagem a respeito dele. O salmo foi escrito
-      séculos antes e se sustenta por conta própria, mas o Novo Testamento
-      claramente retoma a figura e a aplica a Jesus.
+      O Salmo 23 fala primeiro do Senhor como pastor de Davi. Séculos depois, o Novo
+      Testamento retoma essa imagem para Jesus. Em João 10, ele se apresenta como o bom
+      pastor que dá a vida pelas ovelhas; Hebreus 13:20 e 1 Pedro 2:25 usam linguagem
+      semelhante. Por isso, os cristãos leem o salmo à luz do cuidado de Jesus.
   - q: Por que o Salmo 23 é lido em funerais?
     a: >-
-      Principalmente por causa do versículo 4. É uma das poucas passagens
-      conhecidas que nomeia a morte diretamente, sem desviar o olhar e sem
-      fingir que a perda é pequena, e ainda assim oferece algo — companhia, em
-      vez de explicação. A promessa do versículo 6, de habitar na casa de Deus
-      para sempre, dá ao salmo um lugar para terminar de que um funeral precisa.
+      O versículo 4 atravessa a sombra da morte e oferece a presença de Deus sem
+      diminuir a dor. Já o versículo 6 termina com a esperança de permanecer na casa do
+      Senhor. Essa combinação de luto reconhecido, companhia no vale e esperança de um
+      lar torna o salmo especialmente significativo em funerais.
 entity:
   name: Salmo 23
   sameAs:
     - https://en.wikipedia.org/wiki/Psalm_23
 publishedAt: 2026-08-20
-reviewedAt: 2026-08-20
+reviewedAt: 2026-08-21
 ---
 
 ## Se esta é a sua primeira leitura do Salmo 23
 
-Ele tem seis versículos. Leia o texto inteiro antes de ler qualquer coisa sobre
-ele — isso leva menos de um minuto e é o único jeito de perceber a virada no
-meio, onde Davi para de descrever Deus e começa a falar com ele. Os versículos 1
-a 3 dizem *ele*. O versículo 4 diz *você*. Algo acontece no vale que muda o modo
-como Davi fala.
+O Salmo 23 tem apenas seis versículos e pode ser lido inteiro em menos de um minuto.
+Observe a mudança de voz no meio do poema. Nos versículos 1 a 3, Davi fala sobre Deus:
+"ele" conduz, restaura e guia. Ao entrar no vale, Davi passa a falar diretamente com
+Deus: "não temerei mal nenhum, porque você está comigo". O lugar mais escuro
+transforma a descrição em oração.
 
-O salmo também merece uma leitura lenta o suficiente para ver o que ele não
-promete. Não é a garantia de uma vida fácil dada por alguém que teve uma vida
-fácil. É uma declaração de confiança de um homem com inimigos, escrita na
-linguagem de um trabalho que ele já tinha feito.
+As duas imagens principais também merecem atenção. Na primeira, Deus é um pastor em
+campo aberto, responsável por alimento, descanso, direção e proteção. Na segunda, Deus
+é o anfitrião que prepara uma mesa, recebe Davi com honra e enche seu cálice.
+
+Davi inclui um vale escuro e inimigos na mesma oração em que diz que nada lhe faltará.
+Sua confiança não depende de uma vida fácil. Ela nasce da presença constante de Deus,
+cuja bondade e cujo amor leal o acompanham até o fim do caminho.

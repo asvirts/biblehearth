@@ -37,6 +37,19 @@ type Strings = {
 	home: string;
 	/** Breadcrumb: the study hub. */
 	studyHub: string;
+	/** Accessible label for the chapter's in-page navigation. */
+	onThisPage: string;
+	/** Short labels in the chapter's in-page navigation. */
+	jump: {
+		fullText: string;
+		outline: string;
+		themes: string;
+		glossary: string;
+		keyVerses: string;
+		caution: string;
+		questions: string;
+		commentary: string;
+	};
 	/** `<h2>` over the verse-by-verse outline. Takes the chapter reference. */
 	outline: (reference: string) => string;
 	/** `<h2>` over the themes. */
@@ -51,6 +64,17 @@ type Strings = {
 	faqs: (reference: string) => string;
 	/** `<h2>` over the related-topic links. */
 	relatedTopics: string;
+	/** Sentence above the glossary definitions. */
+	glossaryIntro: string;
+	/** One related-topic link. */
+	relatedTopicLink: (title: string) => string;
+	/** Generated copy that appears only in a page's Markdown twin. */
+	markdown: {
+		scriptureNote: string;
+		source: string;
+		reviewed: string;
+		copyright: string;
+	};
 	/** `<h2>` over the republished commentary stack. English-only in practice. */
 	commentaries: (reference: string) => string;
 	/** Lead-in to the translation links: "Read Psalm 91 in …". */
@@ -70,13 +94,34 @@ type Strings = {
 const EN: Strings = {
 	home: 'Home',
 	studyHub: 'Bible study',
+	onThisPage: 'On this page',
+	jump: {
+		fullText: 'Full text',
+		outline: 'Outline',
+		themes: 'Main ideas',
+		glossary: 'Words explained',
+		keyVerses: 'Key verses',
+		caution: 'Common misreadings',
+		questions: 'Questions',
+		commentary: 'Full commentary',
+	},
 	outline: (r) => `${r} outline, verse by verse`,
 	themes: (r) => `The main ideas in ${r}`,
 	glossary: (r) => `Words in ${r}, explained simply`,
 	keyVerses: (r) => `Key verses in ${r}`,
-	caution: (r) => `What ${r} is often made to say, and does not`,
+	caution: (r) => `Common misreadings of ${r}`,
 	faqs: (r) => `Common questions about ${r}`,
 	relatedTopics: 'Related topics',
+	glossaryIntro: 'Simple definitions for words that may be unfamiliar to a new reader.',
+	relatedTopicLink: (title) => `Bible verses about ${title.toLowerCase()}`,
+	markdown: {
+		scriptureNote:
+			'_Scripture text is not reproduced in this file: the translations BibleHearth serves are licensed from their publishers and require a copyright notice beside the text. Every reference below links to the verse on BibleHearth, where the passage and its notice appear together._',
+		source: 'Source',
+		reviewed: 'Reviewed',
+		copyright:
+			'Original writing © BibleHearth. Licensed Scripture is not included in this file.',
+	},
 	commentaries: (r) => `What the commentaries say about ${r}`,
 	readIn: (r) => `Read ${r} in`,
 	psalmNumbering: (hebrew) => `Psalm ${hebrew} in Hebrew numbering.`,
@@ -94,13 +139,34 @@ const EN: Strings = {
 const PT: Strings = {
 	home: 'Início',
 	studyHub: 'Estudo bíblico',
+	onThisPage: 'Nesta página',
+	jump: {
+		fullText: 'Texto completo',
+		outline: 'Roteiro',
+		themes: 'Ideias principais',
+		glossary: 'Palavras explicadas',
+		keyVerses: 'Versículos-chave',
+		caution: 'Leitura cuidadosa',
+		questions: 'Perguntas',
+		commentary: 'Comentário completo',
+	},
 	outline: (r) => `${r}: roteiro versículo por versículo`,
 	themes: (r) => `${r}: as ideias principais`,
 	glossary: (r) => `${r}: palavras explicadas de forma simples`,
 	keyVerses: (r) => `${r}: versículos-chave`,
-	caution: (r) => `${r}: o que se costuma dizer que o texto afirma, e não afirma`,
+	caution: (r) => `${r}: como ler o texto com cuidado`,
 	faqs: (r) => `${r}: perguntas frequentes`,
 	relatedTopics: 'Temas relacionados',
+	glossaryIntro: 'Definições simples para palavras que podem ser novas para quem está começando a ler a Bíblia.',
+	relatedTopicLink: (title) => `Versículos bíblicos sobre ${title.toLowerCase()}`,
+	markdown: {
+		scriptureNote:
+			'_O texto bíblico não é reproduzido neste arquivo: as traduções oferecidas pelo BibleHearth são licenciadas por suas editoras e exigem que o aviso de direitos autorais apareça junto ao texto. Cada referência abaixo leva ao versículo no BibleHearth, onde a passagem e o aviso aparecem juntos._',
+		source: 'Fonte',
+		reviewed: 'Revisado em',
+		copyright:
+			'Texto original © BibleHearth. As Escrituras licenciadas não estão incluídas neste arquivo.',
+	},
 	commentaries: (r) => `${r}: o que dizem os comentários`,
 	readIn: (r) => `${r} em outras traduções:`,
 	psalmNumbering: (hebrew) => `Salmo ${hebrew} na numeração hebraica.`,
@@ -118,13 +184,34 @@ const PT: Strings = {
 const ES: Strings = {
 	home: 'Inicio',
 	studyHub: 'Estudio bíblico',
+	onThisPage: 'En esta página',
+	jump: {
+		fullText: 'Texto completo',
+		outline: 'Recorrido',
+		themes: 'Ideas principales',
+		glossary: 'Palabras explicadas',
+		keyVerses: 'Versículos clave',
+		caution: 'Lectura cuidadosa',
+		questions: 'Preguntas',
+		commentary: 'Comentario completo',
+	},
 	outline: (r) => `${r}: recorrido versículo por versículo`,
 	themes: (r) => `${r}: las ideas principales`,
 	glossary: (r) => `${r}: palabras explicadas de forma sencilla`,
 	keyVerses: (r) => `${r}: versículos clave`,
-	caution: (r) => `${r}: lo que se suele decir que dice, y no dice`,
+	caution: (r) => `${r}: cómo leer el texto con cuidado`,
 	faqs: (r) => `${r}: preguntas frecuentes`,
 	relatedTopics: 'Temas relacionados',
+	glossaryIntro: 'Definiciones sencillas para palabras que pueden resultar nuevas al comenzar a leer la Biblia.',
+	relatedTopicLink: (title) => `Versículos bíblicos sobre ${title.toLowerCase()}`,
+	markdown: {
+		scriptureNote:
+			'_El texto bíblico no se reproduce en este archivo: las traducciones que ofrece BibleHearth tienen licencia de sus editoriales y requieren que el aviso de derechos de autor aparezca junto al texto. Cada referencia enlaza con el versículo en BibleHearth, donde la traducción y su aviso aparecen juntos._',
+		source: 'Fuente',
+		reviewed: 'Revisado el',
+		copyright:
+			'Texto original © BibleHearth. Las Escrituras con licencia no están incluidas en este archivo.',
+	},
 	commentaries: (r) => `${r}: lo que dicen los comentarios`,
 	readIn: (r) => `${r} en otras traducciones:`,
 	psalmNumbering: (hebrew) => `Salmo ${hebrew} en la numeración hebrea.`,

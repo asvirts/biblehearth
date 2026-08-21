@@ -7,87 +7,85 @@ aliases:
   - scared
 shortAnswer: >-
   "Do not be afraid" is among the most repeated instructions in Scripture, and
-  it is almost never said to people who are safe. It is spoken to exiles,
-  soldiers, shepherds, and a teenager told she would bear a son. The reassurance
-  offered is nearly always presence rather than the removal of the danger, which
-  is why the same Bible also commands a very different kind of fear toward God.
+  it usually comes to people facing real danger or uncertainty. Exiles,
+  soldiers, shepherds, and a young woman told she would bear a son all hear
+  these words. The reassurance is usually that God is present with them. The
+  Bible also commends the "fear of the Lord," using the word for a reverent awe
+  that puts other fears into perspective.
 groups:
   - id: presence
-    heading: The reassurance offered is presence, not the removal of danger
+    heading: God's presence is the main reassurance
     rationale: >-
-      In almost every case where fear is addressed directly, the ground given is
-      that God is with the person — not that the threat was imaginary.
+      When Scripture addresses fear directly, it usually reminds people that
+      God is with them. The threats they face are still real.
     verses:
       - usfm: ISA.41.10
         gloss: >-
-          Addressed to a people already in exile, the promise is strengthening
-          and help in the middle of the situation rather than its reversal.
+          God speaks to people already in exile and promises strength and help
+          within their difficult situation.
       - usfm: DEU.31.6
         gloss: >-
-          Moses' charge to Israel before entering an occupied land; the reason
-          given is accompaniment, and the promise is that it will not be
-          withdrawn.
+          Before Israel enters an occupied land, Moses grounds courage in God's
+          continuing presence with the people.
       - usfm: PSA.23.4
         gloss: >-
-          The psalm does not avoid the valley or claim it is harmless — it
-          locates comfort inside it, in company.
+          The psalm travels through the darkest valley and finds comfort there
+          in the shepherd's company.
   - id: displacing
-    heading: Fear is displaced by something, not simply suppressed
+    heading: Love and trust make less room for fear
     rationale: >-
-      Scripture rarely treats courage as willpower. It describes fear being
-      crowded out by love, by trust, or by a larger fear that reorders the
-      smaller ones.
+      Scripture rarely treats courage as a feat of willpower. Love, trust, and
+      reverence for God give people a larger reality to hold alongside fear.
     verses:
       - usfm: 1JN.4.18
         gloss: >-
-          John argues that mature love leaves no room for the particular fear
-          of punishment — the mechanism is displacement, not suppression.
+          John says mature love drives out the fear of punishment. Security in
+          love changes what a person expects from God.
       - usfm: PSA.56.3
         gloss: >-
           David writes this while in enemy hands; the admission of fear and the
-          act of trust occupy the same sentence rather than cancelling out.
+          choice to trust share the same sentence. Courage can begin while fear
+          is still present.
       - usfm: PRO.29.25
         gloss: >-
-          A proverb naming the social version of the problem — fear of other
-          people's opinion — and setting trust against it as the alternative.
+          This proverb names the social pressure created by other people's
+          opinions and directs attention toward trust in God.
   - id: fear-of-god
     heading: The one fear Scripture commends
     rationale: >-
       The same texts that say "do not fear" repeatedly commend the fear of the
-      Lord. The word covers awe and right-sized reverence rather than dread, and
-      it functions as the thing that shrinks lesser fears.
+      Lord. Here the word conveys awe and well-placed reverence. Taking God
+      seriously can reduce the power of lesser fears.
     verses:
       - usfm: PRO.9.10
         gloss: >-
-          Presented as the starting point of wisdom rather than its conclusion —
-          a posture you begin from, not a state you achieve.
+          Proverbs presents reverence for God as wisdom's starting place, a
+          posture from which learning can begin.
       - usfm: MAT.10.28
         gloss: >-
           Jesus explicitly ranks fears for disciples facing persecution, telling
           them which one is worth keeping.
 misuse: >-
-  "Fear not" appears often enough that it gets flattened into a slogan, and it
-  is sometimes used to shame people for a normal nervous system response. The
-  people receiving these words were rarely calm, and Scripture does not treat
-  their fear as failure — it addresses them in it. Nor are these verses a
-  guarantee of safety. Many of the people told not to be afraid went on to
-  suffer real harm. What is promised is company through the thing, not exemption
-  from it, and reading them as a protective charm sets readers up to feel
-  betrayed by the text.
+  "Fear not" can become a slogan used to shame people for a normal nervous
+  system response. The people who first heard these words were often afraid,
+  and Scripture meets them in that condition. These verses also don't guarantee
+  physical safety. Many people who received the command later suffered real
+  harm. The repeated promise is God's company through danger. Reading the words
+  as a protective charm asks them to promise something they don't say.
 faqs:
   - q: How many times does the Bible say "do not be afraid"?
     a: >-
       Counts vary by translation and by whether related phrasings are included,
-      so claims of exactly 365 are folklore rather than arithmetic. Commands
-      against fear in some form appear well over a hundred times across both
-      testaments, which is enough to make the point without the invented
-      precision.
-  - q: What does "fear of the Lord" actually mean?
+      so the popular claim of exactly 365 is folklore, not a reliable count.
+      Commands about fear appear well over a hundred times across both
+      Testaments. The exact number depends on which wording and translation a
+      person counts.
+  - q: What does "fear of the Lord" mean?
     a: >-
-      It describes reverence and awe rather than terror — taking God seriously
-      enough that the assessment reorders other priorities. Proverbs presents it
-      as the beginning of wisdom, and the same books that commend it repeatedly
-      tell people not to be afraid, so the two are clearly different postures.
+      It describes reverence and awe: taking God seriously enough for that
+      reality to reorder other priorities. Proverbs calls it the beginning of
+      wisdom. Because the same books repeatedly tell people not to be afraid,
+      reverence for God and terror are clearly different postures.
 related:
   - anxiety
   - trust
@@ -102,14 +100,13 @@ sources:
   - torreys
   - editorial
 publishedAt: 2026-08-17
-reviewedAt: 2026-08-17
+reviewedAt: 2026-08-21
 ---
 
-The instruction not to be afraid is usually delivered at the worst possible
-moment — before a battle, during an exile, at an angelic appearance that was
-evidently terrifying enough to require the preface. That timing is the point.
-These are not observations that the situation is fine.
+The instruction not to be afraid often arrives at a frightening moment: before
+a battle, during exile, or when an angel appears. The timing acknowledges the
+danger and gives the hearer a reason to move through it.
 
-Read together, the passages describe courage as a byproduct rather than a
-virtue summoned directly. Something else arrives — presence, love, a clearer
-sense of proportion — and the fear has less room.
+Together, these passages show courage growing from God's presence, mature love,
+trust, and a clearer sense of proportion. Fear may still be felt, but it no
+longer has to make every decision.

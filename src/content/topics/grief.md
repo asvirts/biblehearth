@@ -9,62 +9,61 @@ aliases:
 shortAnswer: >-
   Scripture gives grief room. Jesus wept at a graveside he was about to empty,
   an entire book is named Lamentations, and roughly a third of the Psalms are
-  complaints. The comfort offered is presence and an eventual end to death
-  rather than an explanation, and the New Testament is careful to say believers
-  grieve differently — not that they grieve less.
+  laments. Its comfort comes through God's presence and the promise that death
+  will end. The New Testament says Christian hope changes the way believers
+  grieve, while fully expecting them to grieve.
 groups:
   - id: permission
-    heading: Grief is given room, not corrected
+    heading: Scripture makes room for grief
     rationale: >-
-      The Bible records extended mourning without rebuking it, and its central
-      figure weeps. This is the necessary starting point for everything else.
+      The Bible records long periods of mourning without rebuke, and Jesus
+      himself weeps. Grief is treated as a fitting response to loss.
     verses:
       - usfm: JHN.11.35
         gloss: >-
-          Jesus weeps at Lazarus's tomb minutes before raising him, which means
-          the tears were not about lacking information.
+          Jesus weeps at Lazarus's tomb even though he knows he will soon raise
+          him. Knowing the outcome doesn't make the loss unreal.
       - usfm: ECC.3.4
         gloss: >-
           Mourning is listed as one of the seasons proper to a human life,
-          rather than a malfunction to be hurried through.
+          giving grief a rightful place and season.
       - usfm: ROM.12.15
         gloss: >-
-          Paul instructs the church to weep with those who weep — the
-          assignment is company, not correction.
+          Paul tells the church to weep with those who weep. The immediate task
+          is shared sorrow and presence.
   - id: nearness
-    heading: What is promised is nearness, not explanation
+    heading: God promises nearness to the brokenhearted
     rationale: >-
-      Where Scripture addresses the brokenhearted directly, it consistently
-      offers proximity rather than reasons.
+      Passages addressed to the brokenhearted emphasize God's closeness and
+      care. They rarely offer a complete explanation for the loss.
     verses:
       - usfm: PSA.34.18
         gloss: >-
-          The claim is nearness specifically to the crushed, locating God at the
-          point of the break rather than after the recovery.
+          God is described as close to people with crushed hearts and spirits,
+          including them at the lowest point of grief.
       - usfm: PSA.147.3
         gloss: >-
-          Healing and binding are medical images — slow work on an actual wound,
-          not a word that removes it.
+          Healing and binding are medical images for patient care of a real
+          wound.
       - usfm: 2CO.1.3-4
         gloss: >-
           Paul describes comfort as something received and then passed on, which
-          makes the grieving person eventually useful rather than merely
-          patched.
+          allows people who have suffered to accompany others with the comfort
+          they received.
   - id: horizon
     heading: The horizon is an end to death itself
     rationale: >-
-      Christian hope at a funeral is not that the loss is small but that it is
-      not final. These passages are the ones most often read aloud for that
-      reason.
+      Christian hope doesn't minimize loss. It looks toward the day when death
+      itself ends, which is why these passages are often read at funerals.
     verses:
       - usfm: 1TH.4.13
         gloss: >-
-          Paul does not tell the Thessalonians to stop grieving but to grieve
-          unlike those without hope — the distinction is manner, not presence.
+          Paul expects the Thessalonians to grieve. Their hope in resurrection
+          changes that grief without removing it.
       - usfm: REV.21.4
         gloss: >-
-          The promise is the removal of death and mourning themselves, with God
-          depicted as personally wiping the tears.
+          God is pictured personally wiping away tears when death and mourning
+          are finally removed.
       - usfm: JHN.11.25-26
         gloss: >-
           Spoken to Martha in the middle of her grief and framed as a question
@@ -72,26 +71,26 @@ groups:
 misuse: >-
   Almost every verse here can be turned into a way of ending a conversation.
   "He's in a better place" and "everything happens for a reason" are not
-  quotations from Scripture, and Romans 8:28 does not say suffering is good —
-  it says God works within it. The book of Job is largely a record of friends
+  quotations from Scripture, and Romans 8:28 doesn't call suffering good. It
+  says God works within it. The book of Job largely records friends
   offering theologically tidy explanations and being told at the end that they
   spoke wrongly. If you are supporting someone grieving, Romans 12:15 is the
-  more usable instruction than anything on this page: weep with them. Grief also
-  has no schedule in Scripture. Mourning periods run to thirty days and beyond,
-  and nothing here suggests a deadline.
+  clearest instruction on this page: weep with them. Scripture also gives grief
+  no universal schedule. Mourning periods last thirty days and longer, and
+  these passages set no deadline.
 faqs:
   - q: What is the shortest verse in the Bible about grief?
     a: >-
-      John 11:35 — "Jesus wept" — is the shortest verse in most English
+      John 11:35, "Jesus wept", is the shortest verse in most English
       translations. Its significance is the timing: he weeps at Lazarus's tomb
-      knowing he is about to raise him, which means the grief was not resolved
+      knowing he is about to raise him, which shows that grief wasn't resolved
       by knowing the outcome.
   - q: Does the Bible say Christians shouldn't grieve?
     a: >-
       No. 1 Thessalonians 4:13 is the passage usually cited, and it says
-      believers should not grieve as those who have no hope — a comparison of
-      manner, not a prohibition. The same Scriptures contain an entire book of
-      laments and record Jesus weeping at a funeral.
+      believers shouldn't grieve as people who have no hope. Paul distinguishes
+      the shape of their grief; he doesn't prohibit it. The same Scriptures
+      contain a whole book of laments and record Jesus weeping at a funeral.
 related:
   - hope
   - peace
@@ -106,14 +105,14 @@ sources:
   - torreys
   - editorial
 publishedAt: 2026-08-17
-reviewedAt: 2026-08-17
+reviewedAt: 2026-08-21
 ---
 
-The Bible is less tidy about death than the verses quoted at funerals suggest.
-It contains a book of laments with no resolution in its final chapter, psalms
-that end in darkness, and a God who is described as close to the crushed rather
-than as explaining the crushing.
+The Bible speaks about death with more honesty than a few familiar funeral
+verses can convey. Lamentations ends without a tidy resolution, some psalms
+close in darkness, and God is described as close to people whose hearts have
+been crushed.
 
-Read in full, the pattern is company first and horizon second. The promise that
-death ends is real, but it arrives after a great deal of weeping that Scripture
-never asks anyone to cut short.
+Company comes first in these passages, followed by a wider horizon. Scripture
+holds out the real promise that death will end after giving people abundant
+room to weep. It never asks mourners to hurry past that part.

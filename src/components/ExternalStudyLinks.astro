@@ -12,12 +12,11 @@ const { links, reference } = Astro.props;
 {
 	links.length ? (
 		<section class="external-study">
-			<h2>Where to go deeper on {reference}</h2>
+			<h2>More resources for {reference}</h2>
 			<p class="muted">
-				Both of these are free to read and neither can be reproduced here — The
-				Gospel Coalition and BibleProject keep their work under their own
-				copyright. They are worth the click, especially if you are new to
-				reading the Bible.
+				These free resources come from The Gospel Coalition and BibleProject.
+				Their work remains under their own copyright, so BibleHearth links to the
+				original pages.
 			</p>
 			<ul class="external-links">
 				{links.map((link) => (

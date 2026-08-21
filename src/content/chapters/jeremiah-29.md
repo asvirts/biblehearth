@@ -1,234 +1,180 @@
 ---
 usfm: JER.29
-title: "Jeremiah 29: A Letter to Prisoners, and a Plan That Takes Seventy Years"
-seoTitle: "Jeremiah 29: A Letter Written to Prisoners"
+title: "Jeremiah 29 Explained: Hope During a Long Exile"
+seoTitle: "Jeremiah 29 Explained: Plans for Hope and a Future"
 shortAnswer: >-
-  Jeremiah 29 is a letter, sent by courier from Jerusalem to Judeans who had been
-  deported to Babylon, and verse 11 — "I know the plans I have for you" — is one
-  line inside it. The plans in question run seventy years, which means most of the
-  people who first read that sentence died in Babylon without seeing them. The
-  instruction attached to the promise is the part nobody quotes: build houses in
-  the city that conquered you, plant gardens, marry, have children, and pray for
-  Babylon to prosper. The plan begins by telling them to stop waiting to go home.
+  Jeremiah 29 is a letter to Judeans living in exile in Babylon. God promises his
+  people hope and a future, but their return will come after 70 years. For now, they
+  are to build homes, plant gardens, raise families, and seek the welfare of the city
+  that conquered them. The chapter teaches patient faithfulness during a long wait
+  and warns against prophets offering a quicker, false hope.
 outline:
   - verses: "1-3"
-    heading: A real letter, with named couriers and a date
+    heading: Jeremiah sends a letter to Babylon
     note: >-
-      Not a sermon or a vision — a document. Jeremiah is in Jerusalem, his readers
-      are already deported, and two named men, Elasah and Gemariah, carry it to
-      Babylon in a diplomatic bag. Knowing that changes how the famous verse
-      reads.
+      Jeremiah writes from Jerusalem to people who have already been deported. Two
+      named couriers, Elasah and Gemariah, carry the letter to Babylon during an
+      official mission.
   - verses: "4-7"
-    heading: The instruction almost nobody quotes with verse 11
+    heading: Build a life and seek Babylon's welfare
     note: >-
-      Build houses. Plant gardens. Marry, and let your children marry. Then the
-      hardest line in the chapter: seek the prosperity of the city I sent you to,
-      and pray for it. They are told to want good for Babylon, and the reason
-      given is practical — if it does well, so will you.
+      The exiles are to build houses, plant gardens, marry, and raise another
+      generation. God also tells them to seek and pray for Babylon's welfare because
+      their own welfare is tied to the city's.
   - verses: "8-9"
-    heading: A warning aimed at optimism rather than despair
+    heading: False prophets promise a quick return
     note: >-
-      Other prophets among the exiles were predicting a quick return. God calls
-      that a lie told in his name, and calls their dreams something the audience
-      brought out of them. The letter exists because comforting predictions were
-      already circulating.
+      Prophets and diviners among the exiles are giving reassuring predictions that
+      God did not send. Jeremiah warns the people against believing those dreams.
   - verses: "10-14"
-    heading: The timeline first, then the promise everyone knows
+    heading: God promises return after 70 years
     note: >-
-      Seventy years is stated in verse 10, before verse 11 says a word about
-      plans. Then: a future, a hope, prayers that get answered, and a search that
-      finds God when it is wholehearted. The order matters — the promise is
-      date-stamped, and the date is not soon.
+      Verse 10 gives the timeline before verse 11 describes God's plans for hope and
+      a future. After 70 years, he will bring the people home. They will pray, seek
+      him wholeheartedly, and find him.
   - verses: "15-19"
-    heading: The turn nobody reads at a graduation
+    heading: Judgment remains for those in Jerusalem
     note: >-
-      The exiles are told not to envy the people still in Jerusalem, because
-      sword, famine and plague are coming for them; they will be like figs too
-      rotten to eat. The same letter that holds verse 11 holds this.
+      The people still in Jerusalem will face sword, famine, and plague because they
+      have refused God's words. Their condition is compared to rotten figs that
+      cannot be eaten.
   - verses: "20-23"
-    heading: Two prophets named, and their sentence
+    heading: Ahab and Zedekiah are exposed
     note: >-
-      Ahab and Zedekiah — not the king — are named as liars and handed to
-      Nebuchadnezzar. The letter says plainly that God knows what they have done
-      in private, and is a witness to it.
+      The false prophets Ahab and Zedekiah have spoken lies and committed adultery.
+      God knows what they did in private and announces that Nebuchadnezzar will
+      execute them.
   - verses: "24-32"
-    heading: Somebody writes back, and it goes badly for him
+    heading: Shemaiah opposes Jeremiah's message
     note: >-
-      Shemaiah answers Jeremiah's letter with a letter of his own, urging the
-      temple authorities to put Jeremiah in the stocks. The priest who received
-      it read it to Jeremiah instead. Shemaiah's line is cut off; he will not see
-      the good that is coming.
+      Shemaiah sends his own letter asking temple officials to restrain Jeremiah.
+      The priest reads it to Jeremiah, who responds with a message of judgment:
+      Shemaiah and his descendants will not share in the promised restoration.
 themes:
   - name: The plan is seventy years long
     explanation: >-
-      Verse 10 fixes the length before verse 11 describes the content, and
-      seventy years is longer than most of the letter's readers had left. People
-      who heard "plans to prosper you and not to harm you" would grow old and die
-      in Babylon, and the promise would come true for their grandchildren. That
-      is not a disappointing reading of the verse; it is the reading the chapter
-      gives, and it makes the promise sturdier rather than weaker. It survives
-      the death of the person holding it.
-  - name: "The promise arrives with an instruction: settle down"
+      Verse 10 sets a 70-year horizon before verse 11 speaks of hope and a future.
+      Many original readers who heard of God's "plans to prosper you and not to harm
+      you" would die in Babylon, and their children or grandchildren would see the
+      return. God's promise concerns the future of his people across generations,
+      giving them reason to live faithfully during a wait longer than an individual
+      lifetime.
+  - name: The promise includes ordinary faithfulness
     explanation: >-
-      Verses 5 to 7 are the practical half of the same paragraph, and they say:
-      stop living out of a suitcase. Build. Plant. Marry. Have children and let
-      them marry. Pray for the city that took you. Every one of those actions
-      assumes years, and each is a small admission that home is not coming back
-      this season. What God offers is a future; what he asks first is that they
-      stop refusing the present.
-  - name: It was written against hope, not against despair
+      Houses, gardens, marriages, and children all assume a future in Babylon. The
+      exiles can honor God's long-term promise by investing in the place where they
+      now live. Prayer for Babylon's welfare also turns patient waiting into active
+      service for neighbors, even within an empire that caused them great harm.
+  - name: The letter corrects false optimism
     explanation: >-
-      This is the surprise of the chapter. Verse 11 sounds like reassurance for
-      people who have given up, but the letter is aimed at the opposite problem:
-      prophets in Babylon were promising a fast release, and people believed
-      them. Against that, "I know the plans I have for you" means God knows and
-      the optimists do not. The verse is a correction to false hope before it is
-      a comfort to lost hope, which is exactly the reverse of how it is normally
-      used.
-  - name: The "you" is a people, not a person
+      Some exiles were listening to prophets who promised a quick return. God's
+      statement that he knows his plans challenges those predictions. Hope remains
+      real, but it follows God's 70-year timetable. The chapter offers durable hope
+      by telling the truth about a long and painful season.
+  - name: The promise addresses a people
     explanation: >-
-      Every "you" in verse 11 is plural in Hebrew, and the letter is addressed to
-      a group with an address: the exiles from Jerusalem, in Babylon, after 597
-      BC. The promise is national — a scattered people gathered and brought back
-      to a specific piece of land. That does not put it out of reach for an
-      individual reader, but it does mean the verse is not a personal forecast
-      about a job, a diagnosis or a move. It is a statement about God's intentions
-      towards his people, which a person can rest on without treating it as a
-      prediction about their own week.
+      Every "you" in verse 11 is plural in Hebrew. The promise first concerns the
+      Judean exiles in Babylon after 597 BC and their eventual return to their land.
+      Individual readers can trust the character of the God revealed here, while
+      respecting that the verse is not a personal forecast about a particular job,
+      illness, or decision.
 glossary:
   - term: exile
     plain: >-
-      Being forcibly moved from your own country to the conqueror's, as a
-      population rather than as prisoners in a jail. Babylon did this to Judah in
-      stages. The people in this letter still had homes, work and families — just
-      in the wrong country, permanently.
+      The forced relocation of a population into a conquering nation. Babylon
+      deported people from Judah in stages. The exiles could have homes, work, and
+      families, but they lived far from their own land under foreign rule.
   - term: Babylon
     plain: >-
-      The empire that conquered Judah and destroyed Jerusalem, centred in what is
-      now Iraq. In the rest of the Bible its name becomes shorthand for a
-      powerful, godless city, which is worth knowing because this chapter tells
-      God's people to pray for its success.
+      The empire centered in present-day Iraq that conquered Judah and later destroyed
+      Jerusalem. Elsewhere in the Bible, Babylon becomes a symbol of arrogant,
+      godless power. Here God tells the exiles to pray for its welfare.
   - term: false prophet
     plain: >-
-      Someone claiming to deliver a message from God that God did not send. The
-      chapter's test is not sincerity but outcome and origin: these men predicted
-      a quick homecoming, and God says he never spoke to them. Their message was
-      popular, which is part of the point.
+      Someone who claims to speak for God without being sent by him. The prophets in
+      this chapter offer a popular message of quick return that contradicts God's
+      stated timeline.
   - term: the LORD of Hosts
     plain: >-
-      A title for God meaning something like the commander of armies. It appears
-      repeatedly in this letter, addressed to people who had just lost a war, and
-      the claim it makes is that their defeat was not a sign of God's weakness.
+      A title meaning the LORD who commands armies. Its repeated use assures a people
+      who lost a war that their defeat did not result from weakness in their God.
   - term: diviners
     plain: >-
-      People who tried to read the future by set techniques — casting lots,
-      reading signs, interpreting dreams to order. Verse 8 lists them alongside
-      the prophets because both were selling the same reassurance.
+      People who used practices such as interpreting signs, casting lots, or
+      producing requested dreams to predict the future. Verse 8 groups them with
+      prophets whose reassuring message did not come from God.
 keyVerses:
   - usfm: JER.29.5-7
     why: >-
-      The instruction the famous promise is attached to, and the most demanding
-      lines in the chapter. Praying for the prosperity of the city that deported
-      you is a much harder thing to be asked than patience.
+      God directs the exiles to build stable lives and seek the welfare of the city
+      that conquered them. Waiting for restoration includes constructive work and
+      prayer for former enemies.
   - usfm: JER.29.10
     why: >-
-      The verse that sets the scale of everything in verse 11. Read them in order
-      and the promise is date-stamped seventy years out, which is how the original
-      readers would have heard it.
+      The 70-year timeline sets the scale for the promise in verse 11. Restoration
+      is certain, but it will not be immediate.
   - usfm: JER.29.11
     why: >-
-      The most quoted verse in the book and one of the most quoted in the Bible.
-      Read inside its own letter it says something more durable than it does on a
-      card, because it survives the reader dying before it arrives.
+      God states his good intentions for the exiled community and promises hope and
+      a future that will reach beyond many of the original hearers.
   - usfm: JER.29.13
     why: >-
-      The promise that has travelled furthest beyond the exile, and the one least
-      tied to Babylon. Its condition is wholeheartedness rather than technique,
-      which is why readers in very different situations have found it applies to
-      them.
+      God promises to be found by people who seek him with their whole heart, even
+      when they are far from Jerusalem and its temple.
 caution: >-
-  Jeremiah 29:11 is probably the most confidently misapplied verse in the Bible.
-  On a graduation card it means "God has a good outcome lined up for you
-  personally, and soon". In the letter it means "the nation I deported will be
-  brought back, in seventy years, long after most of you are dead." Both of those
-  can be about the same God, but they are not the same promise, and the gap
-  between them does real damage. People are handed this verse during an illness or
-  a job loss, hear it as a guarantee of a specific good outcome, and then conclude
-  that either God broke his word or their faith was insufficient when the outcome
-  goes the other way. Neither conclusion follows from the text. Two things keep
-  the verse honest. First, read verse 10 before it: the timeline is part of the
-  promise. Second, read verses 5 to 7 with it: the first thing God tells people
-  with a good future is to build a life in the place they did not choose. And if
-  you want the whole letter, read verses 16 to 18 as well, where the same God
-  promises sword, famine and plague to the people who stayed behind. A verse that
-  can survive its own context is worth more than one that needs protecting from
-  it.
+  Jeremiah 29:11 should not be used as a guarantee of a quick, favorable outcome for
+  an individual illness, job search, or life decision. It promises national
+  restoration to a community after 70 years. If a hoped-for outcome does not happen,
+  that does not mean God broke this promise or that a person lacked faith. Verses 5
+  through 10 provide the setting: the exiles must build lives in Babylon through a
+  long wait. Verses 16 through 18 also show that this hopeful letter includes severe
+  judgment for those who refuse God's word.
 faqs:
   - q: Is Jeremiah 29:11 a promise to individual Christians?
     a: >-
-      Not directly, and taking it that way causes the trouble people run into with
-      it. The letter is addressed to a group — the Judeans deported to Babylon —
-      and every "you" in the verse is plural. The specific content of the promise
-      is national: a scattered people gathered up and returned to their own land
-      after seventy years. What a Christian reader can properly take from it is
-      what it reveals about God's intentions towards his people: that his plans
-      for them are good, that exile is not abandonment, and that a long delay is
-      not evidence he has changed his mind. What it does not supply is a forecast
-      that a particular illness will be healed or a particular job will come
-      through.
+      It is first a promise to the Judeans deported to Babylon, and every "you" in
+      the verse is plural. God will gather this people and return them to their land
+      after 70 years. Christians can learn that exile does not equal abandonment and
+      that delay does not erase God's faithfulness. The verse does not predict the
+      outcome of a specific illness, job application, or personal plan.
   - q: What does "I know the plans I have for you" mean?
     a: >-
-      In context it is a claim staked against competitors. Prophets among the
-      exiles were predicting a quick return home, and God's answer is that he
-      knows what he intends and they do not. The Hebrew word behind "plans" is
-      closer to thoughts or intentions than to a blueprint or a schedule, so the
-      verse is telling the exiles what God is disposed towards them rather than
-      handing them an itinerary. The two things he names are a future and a hope —
-      not a smooth path to them.
+      False prophets claim the exile will end soon, while God says he alone knows his
+      intentions. The Hebrew word behind "plans" can mean thoughts or purposes, so the verse gives
+      the direction of God's commitment toward his people instead of a detailed
+      itinerary. He intends to give them hope and a future through a path that still
+      includes a long exile.
   - q: Why did God tell the exiles to build houses and plant gardens?
     a: >-
-      Because they were going to be there a long time, and because refusing to
-      settle was making them miserable and easy to deceive. A garden takes seasons
-      and a house takes years; both are ways of admitting you are not leaving next
-      spring. The exiles who kept their bags packed stayed permanently unsettled
-      and kept believing whoever promised the earliest homecoming. God's
-      instruction is oddly ordinary — live your life, marry, raise children, do
-      your work — and it was the healthiest thing available to them.
+      Their stay in Babylon would last for decades. Houses and gardens require time,
+      while marriage and children prepare for another generation. These ordinary
+      commitments let the community live faithfully in the present instead of being
+      repeatedly misled by promises of immediate return.
   - q: What does "seek the welfare of the city where you live" mean?
     a: >-
-      Verse 7 tells the exiles to work for Babylon's good and to pray for it, and
-      Babylon is the empire that burned their temple. It is not an instruction to
-      approve of Babylon. It is an instruction to stop treating the place they
-      lived as enemy ground to be endured, and it comes with a plain reason: if
-      the city does well, they will do well inside it. Christians have applied
-      that ever since to living as a minority somewhere they did not choose and do
-      not run, which is a fair extension of what the verse asks.
+      God tells the exiles to work and pray for Babylon's good because their own
+      welfare is connected to the city's. This does not require approval of its
+      injustice or religion. It calls them to contribute to the community where they
+      live, even as a displaced minority under foreign rule.
   - q: What does "you will seek me and find me when you search for me with all your heart" mean?
     a: >-
-      Verse 13 attaches a condition to being found, and the condition is not
-      cleverness, correct technique or a particular place — the temple was in
-      ruins and they were hundreds of miles from it. It is wholeheartedness. The
-      promise is that God is findable from Babylon, which for the original readers
-      was the surprising part: distance from the holy city did not put them out of
-      reach. What the verse rules out is casual searching, the kind that wants an
-      answer without wanting God.
+      God asks for wholehearted seeking, not a special technique or location. The
+      exiles are hundreds of miles from Jerusalem, yet distance from the temple does
+      not place them beyond God's reach. The verse calls for a sincere desire for God
+      himself, beyond a casual search for a convenient answer.
   - q: What are the seventy years in Jeremiah 29:10?
     a: >-
-      A fixed period for the exile, announced earlier in the book as well. Most
-      readers count it from the first deportation rather than the destruction of
-      Jerusalem, which puts the return in the reign of the Persian king Cyrus, and
-      Daniel 9 shows a later reader doing exactly that arithmetic. Whether the
-      figure is precise to the year or a round number for a long generation and a
-      half is debated. Either way its function in the letter is the same: it tells
-      the exiles that the wait has a limit and that the limit is not short.
+      Jeremiah gives 70 years as the appointed period for Babylonian rule and exile.
+      Many readers count from the first deportation to the era of the Persian king
+      Cyrus, and Daniel 9 later reflects on the same number. Scholars debate whether
+      it is exact to the year or a rounded span. In either case, it assures the exiles
+      that their long wait has a limit.
   - q: Who was Jeremiah 29:11 originally written to?
     a: >-
-      Judeans deported to Babylon by Nebuchadnezzar, in the group that included
-      King Jeconiah, the queen mother, court officials, craftsmen and metalworkers
-      — the deportation of 597 BC. Verse 1 names them, verse 3 names the two men
-      who carried the letter, and verse 4 has God say he is the one who caused
-      them to be carried away. They were prisoners of war living in a foreign
-      empire, and this was their mail.
+      The letter went to Judeans whom Nebuchadnezzar deported to Babylon in 597 BC.
+      The group included King Jeconiah, the queen mother, court officials, craftsmen,
+      and metalworkers. They were displaced people living within the empire that had
+      defeated their nation.
 relatedTopics:
   - hope
   - patience
@@ -240,29 +186,21 @@ entity:
   sameAs:
     - https://en.wikipedia.org/wiki/Jeremiah_29
 publishedAt: 2026-08-19
-reviewedAt: 2026-08-19
+reviewedAt: 2026-08-21
 ---
 
-## If this is your first time reading Jeremiah 29
+## Reading Jeremiah 29 as a letter
 
-You almost certainly know verse 11 before you know anything else in this chapter,
-so the useful thing is to read the chapter as a letter and see where that verse
-falls.
+The chapter names its audience and the people who carried the message. These Judeans
+have lost a war and now live in Babylon, while other prophets assure them that the
+exile will end soon. Jeremiah gives a harder timeline: 70 years.
 
-Start at verse 1 and notice who is holding it. These are people who lost a war.
-They were marched to Babylon, they are living in an empire that worships other
-gods, and back home a rival set of prophets is telling them to keep their bags
-packed because this will all be over shortly. Jeremiah writes to say it will not
-be over shortly. It will be seventy years. Build a house.
+That setting shapes verse 11. God's good plans do not mean a quick escape for every
+reader of the letter. They secure a future for the community, including generations
+who will be born in Babylon. Houses, gardens, marriages, and prayer for the city are
+ways to live faithfully while waiting.
 
-That is the setting of "I know the plans I have for you", and it is worth
-sitting with, because it makes the verse mean something sturdier than the version
-on the card. It is not a promise that things will work out soon. It is a promise
-that God's intentions towards his people are good even when the evidence in front
-of them is a foreign city and a seventy-year wait — good enough that they can
-plant gardens they may not eat from.
-
-One more thing to watch for. Keep reading past verse 14. The letter gets hard:
-rotten figs, two named prophets executed, a man whose family line ends because he
-told people what they wanted to hear. That is the same letter. A promise you have
-only ever seen quoted alone is worth meeting in its own company.
+The letter continues past its familiar promises. It includes judgment against people
+in Jerusalem and against prophets who speak falsely in God's name. Hope and warning
+belong together here. God promises restoration while asking his people to trust his
+word more than an easier message.

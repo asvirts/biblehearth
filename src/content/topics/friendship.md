@@ -2,11 +2,11 @@
 title: Friendship
 aliases: [friends, companionship, loyalty, best friend]
 shortAnswer: >-
-  Proverbs treats friendship as a formative force rather than a pleasant extra
-  — you become like the people you walk with, and a friend willing to wound you
-  is worth more than one who only agrees. The New Testament raises the stakes
-  further when Jesus stops calling his followers servants and calls them
-  friends, defining the word by what he is about to give up.
+  Proverbs presents friendship as a relationship that shapes character. The
+  people someone walks with influence who that person becomes, and an honest
+  friend can be more valuable than an agreeable companion. In John 15, Jesus
+  calls his followers friends and connects that name with openness and
+  self-giving love.
 groups:
   - id: loyalty
     heading: The test is loyalty over time, especially in trouble
@@ -16,35 +16,38 @@ groups:
     verses:
       - usfm: PRO.17.17
         gloss: >-
-          The clause about adversity is the point — the friend is defined by
-          the season in which the others leave.
+          Adversity reveals the loyalty this proverb describes. A true friend
+          remains present when easier companions leave.
       - usfm: PRO.18.24
         gloss: >-
           Sets many companions against one who sticks closer than a brother,
-          arguing that quantity is not the measure.
+          showing that the number of relationships says little about their
+          depth.
       - usfm: 1SA.18.1
         gloss: >-
           The friendship between Jonathan and David is described in covenant
-          language, and it later costs Jonathan his own claim to the throne.
+          language. Jonathan's loyalty later comes at the cost of his own claim
+          to the throne.
   - id: honesty
     heading: Honest friends are ranked above agreeable ones
     rationale: >-
-      Several proverbs prefer painful truth from a friend to comfortable
-      flattery, which sets a high bar for what counts as friendship.
+      Several proverbs value a friend's difficult truth above an enemy's
+      pleasant flattery. Honesty is joined to proven care.
     verses:
       - usfm: PRO.27.6
         gloss: >-
           Wounds from a friend are called faithful and set against the profuse
-          kisses of an enemy — the contrast is sincerity, not severity.
+          kisses of an enemy. The contrast concerns sincerity, not permission
+          to be severe.
       - usfm: PRO.27.17
         gloss: >-
           Iron sharpening iron is friction that improves an edge; the image
-          assumes mutual benefit, not one party filing down the other.
+          assumes that both people benefit from the relationship.
   - id: formative
     heading: Your friends shape you, so choose deliberately
     rationale: >-
-      Proverbs treats companionship as an input to character rather than a
-      neutral preference.
+      Proverbs describes companionship as one of the forces that forms a
+      person's character. Choosing friends is also choosing influence.
     verses:
       - usfm: PRO.13.20
         gloss: >-
@@ -52,45 +55,47 @@ groups:
           companion of fools spelled out.
       - usfm: ECC.4.9-10
         gloss: >-
-          The argument is practical — someone to help you up — which keeps
-          friendship from being sentimentalised.
+          Ecclesiastes makes a practical case for companionship: when one
+          person falls, another can help that person stand again.
   - id: jesus
     heading: Jesus redefines the word by what it costs
     rationale: >-
-      The upgrade from servant to friend is stated deliberately, and attached
-      to the highest possible price.
+      Jesus deliberately changes the relationship he names, moving from
+      servants to friends. He connects friendship with disclosure and costly
+      love.
     verses:
       - usfm: JHN.15.15
         gloss: >-
-          The reason given for the change is disclosure — friends are told what
-          the master is doing, servants are not.
+          Jesus explains the change through disclosure. He has made known to
+          his friends what he heard from the Father.
       - usfm: JHN.15.13
         gloss: >-
           Spoken two verses earlier and hours before he demonstrates it, which
-          is what keeps the definition from being abstract.
+          places the definition only hours before Jesus gives his life.
 misuse: >-
   "Iron sharpens iron" is the most abused verse here, regularly used to excuse
-  people who are simply harsh. The image is mutual — both blades improve — and
-  it sits beside a proverb that calls a friend's wounds faithful precisely
-  because they come from someone committed to you. Criticism from someone who
-  has not earned trust is not sharpening. Proverbs 18:24 is also often read as
-  being about Jesus; it is a proverb contrasting shallow acquaintance with deep
-  loyalty, and reading a New Testament figure into it flattens the point.
+  people who are simply harsh. The image is mutual: both blades improve. It
+  sits beside a proverb that calls a friend's wounds faithful precisely
+  because they come from someone committed to the relationship. Criticism from
+  someone who hasn't earned trust shouldn't be mislabeled as sharpening.
+  Proverbs 18:24 is also often read as a direct reference to Jesus. In context,
+  it contrasts shallow acquaintance with deep loyalty, and importing a New
+  Testament figure obscures the proverb's own subject.
   Finally, "bad company corrupts good character" has been used to justify
-  cutting off anyone struggling, which sits badly with a Jesus criticised
+  cutting off anyone struggling, which sits badly with a Jesus criticized
   specifically for the company he kept.
 faqs:
   - q: What does "iron sharpens iron" mean in the Bible?
     a: >-
       Proverbs 27:17 pictures friction that improves an edge, and the image is
-      mutual — both pieces of iron are changed. It commends friendships in which
+      mutual; both pieces of iron are changed. It commends friendships in which
       people make each other better through honest engagement. It is not a
-      licence for harshness; the neighbouring proverb calls a friend's wounds
-      faithful because they come from someone genuinely committed to you.
+      license for harshness. The neighboring proverb calls a friend's wounds
+      faithful because they come from someone committed to the relationship.
   - q: What did Jesus say about friendship?
     a: >-
       In John 15:15 he tells his disciples he no longer calls them servants but
-      friends, giving disclosure as the reason — a servant does not know the
+      friends, giving disclosure as the reason. A servant does not know the
       master's business. Two verses earlier he defines the greatest love as
       laying down one's life for one's friends, which he does within a day.
 related: [love, loneliness, forgiveness]
@@ -99,13 +104,13 @@ entity:
   sameAs: [https://www.wikidata.org/wiki/Q491, https://en.wikipedia.org/wiki/Friendship]
 sources: [naves, torreys, editorial]
 publishedAt: 2026-08-17
-reviewedAt: 2026-08-17
+reviewedAt: 2026-08-21
 ---
 
-Proverbs is unsentimental about friends. It is interested in who shows up when
-things go badly, who tells you the truth at a cost, and who you are slowly
-becoming by being near them.
+Proverbs looks at friendship through everyday tests. Who stays when life goes
+badly? Who tells the truth with care? What kind of person is someone becoming
+through years of shared influence?
 
-John 15 then does something the proverbs do not. It has Jesus change the term
-from servant to friend, and locate the difference in being told what is going
-on.
+John 15 adds another dimension. Jesus calls his disciples friends because he
+has shared the Father's purposes with them. Within hours, he also shows the
+self-giving love that defines the relationship.
