@@ -266,19 +266,6 @@ entity:
   name: Psalm 51
   sameAs:
     - https://en.wikipedia.org/wiki/Psalm_51
-figure:
-  src: ../../assets/editorial/chapters/psalms-51.jpg
-  alt: "A woodcut of the prophet Nathan confronting King David, who covers his face."
-  caption: "Psalm 51 is what David says after Nathan has said “You are the man.” The engraving keeps that order: first the charge, then the prayer."
-  kind: art
-  credit:
-    title: "Nathan rebukes David"
-    creator: "Julius Schnorr von Carolsfeld"
-    date: "1860"
-    holder: "Die Bibel in Bildern"
-    license: pd
-    licenseUrl: https://creativecommons.org/publicdomain/mark/1.0/
-    sourceUrl: https://commons.wikimedia.org/wiki/File:Schnorr%20von%20Carolsfeld%20Bibel%20in%20Bildern%201860%20102.png
 publishedAt: 2026-08-19
 reviewedAt: 2026-08-19
 ---

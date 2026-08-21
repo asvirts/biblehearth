@@ -108,18 +108,6 @@ entity:
   name: Patience
   sameAs: [https://www.wikidata.org/wiki/Q189460, https://en.wikipedia.org/wiki/Patience]
 sources: [naves, torreys, editorial]
-figure:
-  src: ../../assets/editorial/topics/patience.jpg
-  alt: "A wooden hourglass standing on a table, sand collected in the lower bulb."
-  caption: "Patience in the Bible is time you do not control. An hourglass is honest about that in a way a slogan is not."
-  kind: photograph
-  credit:
-    title: "Wooden hourglass"
-    creator: "User:SJuergen"
-    holder: "Wikimedia Commons"
-    license: cc-by-sa
-    licenseUrl: https://creativecommons.org/licenses/by-sa/3.0/
-    sourceUrl: https://commons.wikimedia.org/wiki/File:Wooden%20hourglass%203.jpg
 publishedAt: 2026-08-17
 reviewedAt: 2026-08-17
 ---

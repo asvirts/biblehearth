@@ -104,18 +104,6 @@ sources:
   - naves
   - torreys
   - editorial
-figure:
-  src: ../../assets/editorial/topics/hope.jpg
-  alt: "Sunrise on Lake Louise: pink light on snow peaks, the water holding a clear reflection."
-  caption: "Hope in the Bible is not optimism about the weather. It is waiting for a light you cannot yet walk by — and this is what the waiting is for."
-  kind: photograph
-  credit:
-    title: "Sunrise at Lake Louise"
-    creator: "Davebloggs007"
-    holder: "Wikimedia Commons"
-    license: cc-by
-    licenseUrl: https://creativecommons.org/licenses/by/2.0/
-    sourceUrl: https://commons.wikimedia.org/wiki/File:Sunrise%20Reflections%20-%20Lake%20Louise,%20Alberta,%20Canada.jpg
 publishedAt: 2026-08-17
 reviewedAt: 2026-08-17
 ---

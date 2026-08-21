@@ -14,9 +14,8 @@ import {
  *
  * Here rather than in BaseLayout because two things need it: the `og:image`
  * the layout emits, and the `image` on the `Article` node. Those must be the
- * same URL. Editorial pages pass a 1200×630 crop of their figure instead;
- * this stays as the fallback for reader pages, verse hubs, and unbriefed
- * chapters, which have no picture of their own.
+ * same URL. Editorial pages pass a 1200×630 crop of their figure when they
+ * have one; this stays as the fallback for every other page.
  */
 export const DEFAULT_OG_IMAGE = '/og-default.png';
 export const OG_IMAGE_WIDTH = 1200;

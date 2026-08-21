@@ -92,19 +92,6 @@ entity:
   name: Gratitude
   sameAs: [https://www.wikidata.org/wiki/Q1067697, https://en.wikipedia.org/wiki/Gratitude]
 sources: [naves, torreys, editorial]
-figure:
-  src: ../../assets/editorial/topics/gratitude.jpg
-  alt: "Bruegel’s Harvesters: a wheat field being cut, some workers eating in the shade, a village beyond."
-  caption: "Thanksgiving in Scripture is usually for bread that someone had to cut. Bruegel painted the work inside the thanks."
-  kind: art
-  credit:
-    title: "The Harvesters"
-    creator: "Pieter Bruegel the Elder"
-    date: "1565"
-    holder: "The Metropolitan Museum of Art"
-    license: pd
-    licenseUrl: https://creativecommons.org/publicdomain/mark/1.0/
-    sourceUrl: https://commons.wikimedia.org/wiki/File:Pieter%20Bruegel%20the%20Elder-%20The%20Harvesters%20-%20Google%20Art%20Project.jpg
 publishedAt: 2026-08-17
 reviewedAt: 2026-08-17
 ---

@@ -285,19 +285,6 @@ entity:
   name: Hebrews 11
   sameAs:
     - https://en.wikipedia.org/wiki/Hebrews_11
-figure:
-  src: ../../assets/editorial/chapters/hebrews-11.jpg
-  alt: "József Molnár’s painting of Abraham’s household on the move: tents, camels, and a long road under a wide sky."
-  caption: "Hebrews 11 is a list of people who left before they arrived. Abraham is first in that line because he packed while the destination was still only a promise."
-  kind: art
-  credit:
-    title: "Abraham’s Journey"
-    creator: "József Molnár"
-    date: "1850"
-    holder: "Hungarian National Gallery"
-    license: pd
-    licenseUrl: https://creativecommons.org/publicdomain/mark/1.0/
-    sourceUrl: https://commons.wikimedia.org/wiki/File:Moln%C3%A1r%20%C3%81brah%C3%A1m%20kik%C3%B6lt%C3%B6z%C3%A9se%201850.jpg
 publishedAt: 2026-08-19
 reviewedAt: 2026-08-19
 ---

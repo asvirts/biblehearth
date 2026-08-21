@@ -84,18 +84,6 @@ entity:
   name: Parenting
   sameAs: [https://www.wikidata.org/wiki/Q13442814, https://en.wikipedia.org/wiki/Parenting]
 sources: [naves, torreys, editorial]
-figure:
-  src: ../../assets/editorial/topics/parenting.jpg
-  alt: "A clay cuneiform letter, the signs pressed into the tablet while it was still soft."
-  caption: "Deuteronomy tells parents to talk about these words at home and on the road. The oldest way to send a word that far is to press it into something that keeps."
-  kind: photograph
-  credit:
-    title: "Cuneiform tablet: private letter"
-    creator: "Unknown scribe"
-    holder: "The Metropolitan Museum of Art"
-    license: cc0
-    licenseUrl: https://creativecommons.org/publicdomain/zero/1.0/
-    sourceUrl: https://commons.wikimedia.org/wiki/File:Cuneiform%20tablet%20with%20a%20small%20second%20tablet-%20private%20letter%20MET%20DP-13441-020.jpg
 publishedAt: 2026-08-17
 reviewedAt: 2026-08-17
 ---

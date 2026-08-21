@@ -283,19 +283,6 @@ entity:
   name: James 1
   sameAs:
     - https://en.wikipedia.org/wiki/James_1
-figure:
-  src: ../../assets/editorial/chapters/james-1.jpg
-  alt: "A Greek bronze mirror of the fifth century BCE, the disc held up by a small draped figure."
-  caption: "James says a person who hears the word and does not do it is like someone who looks in a mirror and walks away having forgotten the face."
-  kind: photograph
-  credit:
-    title: "Bronze mirror with a support in the form of a draped woman"
-    creator: "Unknown Greek bronzeworker"
-    date: "mid-5th century BCE"
-    holder: "The Metropolitan Museum of Art"
-    license: cc0
-    licenseUrl: https://creativecommons.org/publicdomain/zero/1.0/
-    sourceUrl: https://www.metmuseum.org/art/collection/search/255391
 publishedAt: 2026-08-19
 reviewedAt: 2026-08-19
 ---

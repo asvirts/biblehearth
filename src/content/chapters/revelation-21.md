@@ -268,19 +268,6 @@ entity:
   sameAs:
     - https://en.wikipedia.org/wiki/Revelation_21
     - https://en.wikipedia.org/wiki/New_Jerusalem
-figure:
-  src: ../../assets/editorial/chapters/revelation-21.jpg
-  alt: "John Martin’s Plains of Heaven: a luminous lake and distant mountains under a vast, crowded sky."
-  caption: "Revelation 21 is not an escape from earth. Martin painted a world, not a cloud: the claim is that the holy city comes down."
-  kind: art
-  credit:
-    title: "The Plains of Heaven"
-    creator: "John Martin"
-    date: "1851–1853"
-    holder: "Tate Britain"
-    license: pd
-    licenseUrl: https://creativecommons.org/publicdomain/mark/1.0/
-    sourceUrl: https://commons.wikimedia.org/wiki/File:John%20Martin%20-%20The%20Plains%20of%20Heaven%20-%20Google%20Art%20Project.jpg
 publishedAt: 2026-08-19
 reviewedAt: 2026-08-19
 ---

@@ -263,18 +263,6 @@ entity:
   name: Proverbs 31
   sameAs:
     - https://en.wikipedia.org/wiki/Proverbs_31
-figure:
-  src: ../../assets/editorial/chapters/proverbs-31.jpg
-  alt: "A field of blue flax in flower, low plants stretching to a hedge under an ordinary sky."
-  caption: "Proverbs 31’s woman works in flax and wool. The chapter is about skill and provision, not a personality type, and flax is the plant it names."
-  kind: photograph
-  credit:
-    title: "Field of flax"
-    creator: "Roger Jones"
-    holder: "Geograph Britain and Ireland"
-    license: cc-by-sa
-    licenseUrl: https://creativecommons.org/licenses/by-sa/2.0/
-    sourceUrl: https://commons.wikimedia.org/wiki/File:Field%20of%20Flax%20-%20geograph.org.uk%20-%20282010.jpg
 publishedAt: 2026-08-19
 reviewedAt: 2026-08-19
 ---

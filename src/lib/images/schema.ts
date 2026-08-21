@@ -11,9 +11,8 @@ const LICENSE_IDS = Object.keys(FIGURE_LICENSES) as Array<
  * The picture on a chapter, topic or answer. Same fields in every collection
  * so the figure component and the attributions page can iterate them.
  *
- * Optional in the schema; a superRefine on each collection requires it once
- * the entry is no longer a draft, so a brief in progress can ship without a
- * file and a published page cannot.
+ * Optional. Pages render a figure when one is present and skip it when not —
+ * published writing does not wait on a picture.
  */
 export function editorialFigureSchema(image: ImageHelper) {
 	return z.object({
@@ -33,19 +32,4 @@ export function editorialFigureSchema(image: ImageHelper) {
 			sourceUrl: z.string().url(),
 		}),
 	});
-}
-
-export function requireFigureWhenPublished(
-	entry: { draft?: boolean; figure?: unknown },
-	ctx: z.RefinementCtx,
-): void {
-	if (!entry.draft && !entry.figure) {
-		ctx.addIssue({
-			code: z.ZodIssueCode.custom,
-			path: ['figure'],
-			message:
-				'Published pages need a figure. Pick a public-domain or CC work, ' +
-				'put the file in src/assets/editorial/, and fill these fields. Drafts may omit it.',
-		});
-	}
 }

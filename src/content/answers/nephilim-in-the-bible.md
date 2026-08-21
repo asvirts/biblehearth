@@ -265,19 +265,6 @@ entity:
   sameAs:
     - https://en.wikipedia.org/wiki/Nephilim
     - https://en.wikipedia.org/wiki/Anakim
-figure:
-  src: ../../assets/editorial/answers/nephilim-in-the-bible.jpg
-  alt: "Bruegel’s Fall of the Rebel Angels: a swarm of hybrid creatures tumbling out of heaven under Michael’s assault."
-  caption: "Genesis 6’s “sons of God” and the Nephilim have been read as a fall of angels for a very long time. Bruegel painted that reading; the page has to argue with it, not decorate it."
-  kind: art
-  credit:
-    title: "The Fall of the Rebel Angels"
-    creator: "Pieter Bruegel the Elder"
-    date: "1562"
-    holder: "Royal Museums of Fine Arts of Belgium"
-    license: pd
-    licenseUrl: https://creativecommons.org/publicdomain/mark/1.0/
-    sourceUrl: https://commons.wikimedia.org/wiki/File:Pieter%20Bruegel%20the%20Elder%20-%20The%20Fall%20of%20the%20Rebel%20Angels%20-%20Google%20Art%20Project.jpg
 publishedAt: 2026-08-17
 reviewedAt: 2026-08-17
 ---

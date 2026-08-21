@@ -103,18 +103,6 @@ sources:
   - naves
   - torreys
   - editorial
-figure:
-  src: ../../assets/editorial/topics/trust.jpg
-  alt: "A heavy ship’s anchor standing on a quay, chain and flukes at rest."
-  caption: "Hebrews calls hope an anchor. The point of the picture is weight, not decoration: something that holds when the water does not."
-  kind: photograph
-  credit:
-    title: "Anchor at Ferguson Marine"
-    creator: "Thomas Nugent"
-    holder: "Geograph Britain and Ireland"
-    license: cc-by-sa
-    licenseUrl: https://creativecommons.org/licenses/by-sa/2.0/
-    sourceUrl: https://commons.wikimedia.org/wiki/File:Anchor%20at%20Ferguson%20Marine%20-%20geograph.org.uk%20-%205204496.jpg
 publishedAt: 2026-08-17
 reviewedAt: 2026-08-17
 ---

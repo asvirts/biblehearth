@@ -132,15 +132,15 @@ const description =
 	'does not.';
 
 const figure = hubFigures.home;
-const share = await shareCardFromFigure(figure);
+const share = figure ? await shareCardFromFigure(figure) : undefined;
 ---
 
 <BaseLayout
 	title="BibleHearth — Read the Bible, Explained in Plain English"
 	description={description}
 	canonicalPath="/"
-	image={share.image}
-	imageAlt={share.imageAlt}
+	image={share?.image}
+	imageAlt={share?.imageAlt}
 	jsonLd={websiteJsonLd({ site: Astro.site, description })}
 >
 	{
@@ -156,7 +156,7 @@ const share = await shareCardFromFigure(figure);
 						plain-English studies of the passages people ask about most —
 						written for anyone new to the Bible.
 					</p>
-					<Figure figure={figure} />
+					{figure ? <Figure figure={figure} /> : null}
 					<p>
 						<a class="cta" href={startHref}>
 							Start reading{versionLabel ? ` in ${versionLabel}` : ''}
