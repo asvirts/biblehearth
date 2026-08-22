@@ -11,6 +11,7 @@ import {
 	versionPath,
 } from './bible/urls';
 import { SITEMAP_CACHE_CONTROL } from './http';
+import { DEFAULT_LOCALE, type Locale } from './i18n/locales';
 import { ABOUT_PATH, CONTACT_PATH, PRIVACY_PATH } from './site';
 
 /** Sitemap protocol hard limit (uncompressed URL count). */
@@ -18,6 +19,22 @@ export const SITEMAP_URL_LIMIT = 50_000;
 
 export function versionSitemapPath(versionSlug: string): string {
 	return `/sitemap-bible/${versionSlug}.xml`;
+}
+
+/**
+ * One stable child sitemap per locale.
+ *
+ * The path names the locale rather than its default version. Version slugs come
+ * from the upstream catalogue and can collide across languages (`nvi` exists in
+ * Spanish and Portuguese), while the locale code is already the site's unique
+ * routing identity. It also lets the root sitemap list every language without
+ * making 58 upstream calls merely to discover the current abbreviations.
+ */
+export function localeSitemapPath(
+	locale: Pick<Locale, 'code'> | string,
+): string {
+	const code = typeof locale === 'string' ? locale : locale.code;
+	return `/sitemap-locale/${code}.xml`;
 }
 
 export function pageSitemapPaths(versionSlugs: readonly string[]): string[] {
@@ -61,6 +78,7 @@ export function bibleSitemapPaths(
 			chapters: ReadonlyArray<{ id: string }>;
 		}>;
 	},
+	locale: Locale = DEFAULT_LOCALE,
 ): string[] {
 	const books: string[] = [];
 	const chapters: string[] = [];
@@ -70,14 +88,14 @@ export function bibleSitemapPaths(
 			continue;
 		}
 
-		books.push(bookPath(versionSlug, book.id));
+		books.push(bookPath(versionSlug, book.id, locale));
 
 		for (const chapter of book.chapters) {
 			if (!isNumericChapter(chapter.id)) {
 				continue;
 			}
 
-			chapters.push(chapterPath(versionSlug, book.id, chapter.id));
+			chapters.push(chapterPath(versionSlug, book.id, chapter.id, locale));
 		}
 	}
 

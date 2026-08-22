@@ -1,13 +1,15 @@
 ---
 import { bookPath } from '../lib/bible/urls';
+import { DEFAULT_LOCALE, type Locale } from '../lib/i18n/locales';
 import type { IndexedBook } from '../lib/youversion/api';
 
 type Props = {
 	versionSlug: string;
 	books: readonly IndexedBook[];
+	locale?: Locale;
 };
 
-const { versionSlug, books } = Astro.props;
+const { versionSlug, books, locale = DEFAULT_LOCALE } = Astro.props;
 
 const groups = [
 	{ id: 'old_testament', label: 'Old Testament' },
@@ -28,7 +30,7 @@ const groups = [
 				<h2 class="canon-label">{group.label}</h2>
 				<div class="book-grid">
 					{items.map((book) => (
-						<a class="tile" href={bookPath(versionSlug, book.id)}>
+						<a class="tile" href={bookPath(versionSlug, book.id, locale)}>
 							<span class="tile-kicker">{book.abbreviation}</span>
 							{book.title}
 						</a>

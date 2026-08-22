@@ -1,5 +1,14 @@
 import { defineMiddleware } from 'astro:middleware';
-import { DEFAULT_LOCALE, splitLocalePath } from './lib/i18n/locales';
+import {
+	DEFAULT_LOCALE,
+	localeForCode,
+	splitLocalePath,
+} from './lib/i18n/locales';
+
+/** Carries the public locale through Astro's second rewrite rendering phase. */
+const REWRITE_LOCALE_HEADER = 'x-biblehearth-rewrite-locale';
+/** Prevents a client-supplied header from selecting another locale at a URL. */
+const REWRITE_TOKEN = crypto.randomUUID();
 
 /**
  * Locale resolution, then freshness validators for HTML responses.
@@ -35,11 +44,20 @@ export const onRequest = defineMiddleware(async (context, next) => {
 	 * same `[book]/[chapter].astro` renders Psalm 91 in English and Salmo 91 in
 	 * Spanish by reading `locals.locale`.
 	 *
-	 * `splitLocalePath` answers English for anything with no matching prefix, so
-	 * `/api/warm` and `/sitemap.xml` fall through untouched without needing an
-	 * exclusion list — no path segment they start with is a registered locale.
+	 * A localized request is re-rendered below at its prefix-free route. Astro
+	 * runs middleware again for that render, so a signed private request header
+	 * carries the locale across the boundary. A real path prefix always wins over
+	 * that header; the header only has meaning after the prefix has been removed.
 	 */
-	const { locale, rest } = splitLocalePath(context.url.pathname);
+	const split = splitLocalePath(context.url.pathname);
+	const hasPathLocale = split.locale.code !== DEFAULT_LOCALE.code;
+	const carriedLocale = hasPathLocale
+		? null
+		: localeFromRewriteHeader(
+				context.request.headers.get(REWRITE_LOCALE_HEADER),
+			);
+	const locale = hasPathLocale ? split.locale : (carriedLocale ?? DEFAULT_LOCALE);
+	const rest = hasPathLocale ? split.rest : context.url.pathname;
 	context.locals.locale = locale;
 	context.locals.localePath = rest;
 
@@ -48,34 +66,36 @@ export const onRequest = defineMiddleware(async (context, next) => {
 	 * answer 200 at it. The prefix is removed only for route matching, so the
 	 * address bar, the canonical tag and the sitemap all keep saying `/es/...`.
 	 *
-	 * The query string is carried across because `next()` takes a whole path and
-	 * would otherwise drop it — which on this site would silently discard the
-	 * `?day=` on a localized Verse of the Day.
+	 * The query string is carried across because a rewrite would otherwise drop
+	 * it — which on this site would silently discard the `?day=` on a localized
+	 * Verse of the Day.
 	 *
 	 * No `Vary: Accept-Language` anywhere in here, deliberately. The URL names
 	 * the language, so there is nothing to negotiate, and varying on a header
 	 * every browser sends differently would fragment the CDN cache for pages
 	 * whose content does not depend on it.
 	 */
-	/**
-	 * Rewritten as a whole `Request`, not as a path string.
-	 *
-	 * `next('/salmo/91')` looks equivalent and is not: it re-runs routing but
-	 * leaves an endpoint's `params` empty, so `/pt/salmo/91.md` reached
-	 * `[chapter].md.ts` with `params: {}` and 404'd while the `.astro` page on the
-	 * same path resolved fine. Handing `next` a Request makes the rewrite a
-	 * genuine re-dispatch, and params are recomputed for pages and endpoints
-	 * alike.
-	 */
-	const response =
-		locale.code === DEFAULT_LOCALE.code
-			? await next()
-			: await next(
-					new Request(
-						new URL(`${rest}${context.url.search}`, context.url),
-						context.request,
-					),
-				);
+	if (hasPathLocale) {
+		/**
+		 * `context.rewrite`, rather than an in-place `next(path)`, starts a fresh
+		 * route render. The Vercel adapter otherwise serves the localized page body
+		 * under the original unmatched route's HTTP 404 — visually correct in a
+		 * browser, but ineligible for Google. The second pass sees the header above,
+		 * restores `locals.locale`, and renders the prefix-free route with its real
+		 * status and parameters.
+		 */
+		const request = new Request(
+			new URL(`${rest}${context.url.search}`, context.url),
+			context.request,
+		);
+		request.headers.set(
+			REWRITE_LOCALE_HEADER,
+			`${REWRITE_TOKEN}:${locale.code}`,
+		);
+		return context.rewrite(request);
+	}
+
+	const response = await next();
 
 	if (!isValidatable(context.request, response)) {
 		return response;
@@ -94,6 +114,17 @@ export const onRequest = defineMiddleware(async (context, next) => {
 
 	return new Response(body, { status: response.status, headers });
 });
+
+function localeFromRewriteHeader(value: string | null) {
+	if (!value) {
+		return null;
+	}
+	const separator = value.indexOf(':');
+	if (separator < 0 || value.slice(0, separator) !== REWRITE_TOKEN) {
+		return null;
+	}
+	return localeForCode(value.slice(separator + 1));
+}
 
 /**
  * HTML 200s to a GET or HEAD, and nothing else.

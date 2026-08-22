@@ -1,21 +1,29 @@
 ---
 import { chapterPath } from '../lib/bible/urls';
+import { displayChapterNumber } from '../lib/bible/psalms';
+import { DEFAULT_LOCALE, type Locale } from '../lib/i18n/locales';
 import { type IndexedBook, readableChapters } from '../lib/youversion/api';
 
 type Props = {
 	versionSlug: string;
 	book: IndexedBook;
+	locale?: Locale;
 };
 
-const { versionSlug, book } = Astro.props;
+const { versionSlug, book, locale = DEFAULT_LOCALE } = Astro.props;
 const chapters = readableChapters(book);
 ---
 
 <div class="chapter-grid">
 	{
 		chapters.map((chapter) => (
-			<a class="tile" href={chapterPath(versionSlug, book.id, chapter.id)}>
-				{chapter.title || chapter.id}
+			<a
+				class="tile"
+				href={chapterPath(versionSlug, book.id, chapter.id, locale)}
+			>
+				{book.id === 'PSA'
+					? displayChapterNumber(locale, book.id, chapter.id)
+					: chapter.title || chapter.id}
 			</a>
 		))
 	}

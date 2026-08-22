@@ -5,11 +5,12 @@ import ChapterGrid from '../../../../components/ChapterGrid.astro';
 import CopyrightNotice from '../../../../components/CopyrightNotice.astro';
 import StatusMessage from '../../../../components/StatusMessage.astro';
 import {
-	isCanonicalBookSlug,
-	usfmFromBookSlug,
-} from '../../../../lib/bible/usfm';
-import { bookPath, versionPath } from '../../../../lib/bible/urls';
+	isCanonicalLocaleBookSlug,
+	usfmFromLocaleBookSlug,
+} from '../../../../lib/bible/books';
+import { bookPath, encodedPath, versionPath } from '../../../../lib/bible/urls';
 import { READER_CACHE_CONTROL, setPageHeaders } from '../../../../lib/http';
+import { localePath } from '../../../../lib/i18n/locales';
 import { breadcrumbJsonLd } from '../../../../lib/seo';
 import {
 	displayAbbreviation,
@@ -22,20 +23,24 @@ import {
 
 const requestedSlug = Astro.params.version;
 const bookSlug = Astro.params.book;
+const locale = Astro.locals.locale;
 
 if (!requestedSlug || !bookSlug) {
 	return Astro.rewrite('/404');
 }
 
-const bookUsfm = usfmFromBookSlug(bookSlug);
+const bookUsfm = usfmFromLocaleBookSlug(locale, bookSlug);
 if (!bookUsfm) {
 	return Astro.rewrite('/404');
 }
 
 // Ahead of the version lookup for the same reason as the chapter route: an
 // aliased book spelling is answerable from the URL alone.
-if (!isCanonicalBookSlug(bookSlug, bookUsfm)) {
-	return Astro.redirect(bookPath(requestedSlug, bookUsfm), 301);
+if (!isCanonicalLocaleBookSlug(locale, bookSlug, bookUsfm)) {
+	return Astro.redirect(
+		encodedPath(bookPath(requestedSlug, bookUsfm, locale)),
+		301,
+	);
 }
 
 let version: BibleVersion | null = null;
@@ -44,13 +49,16 @@ let book: IndexedBook | null = null;
 let status = 200;
 
 try {
-	const resolved = await resolveVersion(requestedSlug);
+	const resolved = await resolveVersion(requestedSlug, locale);
 	if (!resolved) {
 		return Astro.rewrite('/404');
 	}
 
 	if (resolved.slug !== requestedSlug) {
-		return Astro.redirect(bookPath(resolved.slug, bookUsfm), 301);
+		return Astro.redirect(
+			encodedPath(bookPath(resolved.slug, bookUsfm, locale)),
+			301,
+		);
 	}
 
 	version = resolved.version;
@@ -85,14 +93,18 @@ const versionLabel = version ? displayAbbreviation(version) : '';
 			? `Read ${bookTitle} in the ${version?.localized_title || version?.title} by chapter.`
 			: 'This Bible book could not be loaded.'
 	}
-	lang={version?.language_tag ?? 'en'}
-	canonicalPath={bookPath(slug, bookUsfm)}
+	lang={locale.htmlLang}
+	dir={locale.dir}
+	canonicalPath={bookPath(slug, bookUsfm, locale)}
 	jsonLd={
 		version && book
 			? breadcrumbJsonLd(Astro.site, [
-					{ name: 'BibleHearth', path: '/' },
-					{ name: displayAbbreviation(version), path: versionPath(slug) },
-					{ name: book.title, path: bookPath(slug, book.id) },
+					{ name: 'BibleHearth', path: localePath(locale, '/') },
+					{
+						name: displayAbbreviation(version),
+						path: versionPath(slug, locale),
+					},
+					{ name: book.title, path: bookPath(slug, book.id, locale) },
 				])
 			: undefined
 	}
@@ -106,9 +118,9 @@ const versionLabel = version ? displayAbbreviation(version) : '';
 		) : (
 			<>
 				<nav class="crumbs" aria-label="Breadcrumb">
-					<a href="/">Home</a>
+					<a href={localePath(locale, '/')}>Home</a>
 					<span>/</span>
-					<a href={versionPath(slug)}>{displayAbbreviation(version)}</a>
+					<a href={versionPath(slug, locale)}>{displayAbbreviation(version)}</a>
 					<span>/</span>
 					<span>{book.title}</span>
 				</nav>
@@ -117,7 +129,7 @@ const versionLabel = version ? displayAbbreviation(version) : '';
 					<span class="muted"> ({displayAbbreviation(version)})</span>
 				</h1>
 				<p class="lede">Select a chapter to read.</p>
-				<ChapterGrid versionSlug={slug} book={book} />
+				<ChapterGrid versionSlug={slug} book={book} locale={locale} />
 				<CopyrightNotice version={version} />
 			</>
 		)
