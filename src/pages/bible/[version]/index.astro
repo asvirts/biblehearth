@@ -6,8 +6,9 @@ import CopyrightNotice from '../../../components/CopyrightNotice.astro';
 import StatusMessage from '../../../components/StatusMessage.astro';
 import { editionForSlug } from '../../../lib/bible/editions';
 import { truncateWords } from '../../../lib/bible/text';
-import { versionPath } from '../../../lib/bible/urls';
+import { encodedPath, versionPath } from '../../../lib/bible/urls';
 import { READER_CACHE_CONTROL, setPageHeaders } from '../../../lib/http';
+import { localePath } from '../../../lib/i18n/locales';
 import { breadcrumbJsonLd } from '../../../lib/seo';
 import {
 	displayAbbreviation,
@@ -18,6 +19,7 @@ import {
 } from '../../../lib/youversion/api';
 
 const requestedSlug = Astro.params.version;
+const locale = Astro.locals.locale;
 
 if (!requestedSlug) {
 	return Astro.rewrite('/404');
@@ -29,13 +31,13 @@ let index: IndexedBible | null = null;
 let status = 200;
 
 try {
-	const resolved = await resolveVersion(requestedSlug);
+	const resolved = await resolveVersion(requestedSlug, locale);
 	if (!resolved) {
 		return Astro.rewrite('/404');
 	}
 
 	if (resolved.slug !== requestedSlug) {
-		return Astro.redirect(versionPath(resolved.slug), 301);
+		return Astro.redirect(encodedPath(versionPath(resolved.slug, locale)), 301);
 	}
 
 	version = resolved.version;
@@ -56,7 +58,7 @@ setPageHeaders(Astro.response, status, READER_CACHE_CONTROL);
  * nobody has written up yet, and the page falls back to the book list alone
  * rather than to an empty section.
  */
-const edition = editionForSlug(slug);
+const edition = locale.prefix ? null : editionForSlug(slug);
 
 const abbreviation = edition?.abbr ?? (version ? displayAbbreviation(version) : '');
 const title = version
@@ -71,6 +73,14 @@ const title = version
 const pageTitle = edition
 	? `${title} | How It Reads and Who It’s For`
 	: `${title} · BibleHearth`;
+const breadcrumbs = [
+	{ name: 'BibleHearth', path: localePath(locale, '/') },
+	...(!locale.prefix ? [{ name: 'Versions', path: '/versions' }] : []),
+	{
+		name: version ? displayAbbreviation(version) : abbreviation,
+		path: versionPath(slug, locale),
+	},
+];
 ---
 
 <BaseLayout
@@ -82,16 +92,11 @@ const pageTitle = edition
 				? truncateWords(edition.summary)
 				: `Read the ${title} by book and chapter, with publisher copyright displayed on every page.`
 	}
-	lang={version?.language_tag ?? 'en'}
-	canonicalPath={versionPath(slug)}
+	lang={locale.htmlLang}
+	dir={locale.dir}
+	canonicalPath={versionPath(slug, locale)}
 	jsonLd={
-		version
-			? breadcrumbJsonLd(Astro.site, [
-					{ name: 'BibleHearth', path: '/' },
-					{ name: 'Versions', path: '/versions' },
-					{ name: displayAbbreviation(version), path: versionPath(slug) },
-				])
-			: undefined
+		version ? breadcrumbJsonLd(Astro.site, breadcrumbs) : undefined
 	}
 >
 	{
@@ -103,9 +108,13 @@ const pageTitle = edition
 		) : (
 			<>
 				<nav class="crumbs" aria-label="Breadcrumb">
-					<a href="/">Home</a>
-					<span>/</span>
-					<a href="/versions">Versions</a>
+					<a href={localePath(locale, '/')}>Home</a>
+					{!locale.prefix ? (
+						<>
+							<span>/</span>
+							<a href="/versions">Versions</a>
+						</>
+					) : null}
 					<span>/</span>
 					<span>{displayAbbreviation(version)}</span>
 				</nav>
@@ -147,7 +156,7 @@ const pageTitle = edition
 										{edition.compare.map((item) => (
 											<div class="glossary-item">
 												<dt>
-													<a href={versionPath(item.slug)}>{item.label}</a>
+													<a href={versionPath(item.slug, locale)}>{item.label}</a>
 												</dt>
 												<dd>{item.note}</dd>
 											</div>
@@ -163,7 +172,7 @@ const pageTitle = edition
 					)
 				}
 
-				<BookList versionSlug={slug} books={index.books} />
+				<BookList versionSlug={slug} books={index.books} locale={locale} />
 				<CopyrightNotice version={version} />
 			</>
 		)

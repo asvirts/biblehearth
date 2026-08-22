@@ -4,17 +4,12 @@ import { briefedChapters } from '../lib/commentary';
 import { LOCALES } from '../lib/i18n/locales';
 import {
 	latestDate,
+	localeSitemapPath,
 	sitemapIndexXml,
-	versionSitemapPath,
 	xmlResponse,
 	type SitemapEntry,
 } from '../lib/sitemap';
 import { listTopics } from '../lib/topics';
-import {
-	getDefaultVersion,
-	listVersions,
-	versionSlug,
-} from '../lib/youversion/api';
 
 /**
  * The newest review date behind each child sitemap.
@@ -54,42 +49,20 @@ async function childLastmods(): Promise<Record<string, Date | undefined>> {
 }
 
 export const GET: APIRoute = async ({ site }) => {
-	let versionSitemaps: string[] = [];
-
-	try {
-		const [versions, defaultVersion] = await Promise.all([
-			listVersions(),
-			getDefaultVersion(),
-		]);
-
-		/**
-		 * The default translation only — not all nineteen.
-		 *
-		 * Every version renders the same chapters from the same upstream API, so
-		 * submitting all of them multiplies one Bible's worth of crawlable pages
-		 * by the size of the catalog: a five-figure crawl for a site that has not
-		 * yet had its first translation indexed, spent on pages that differ from
-		 * one another only in wording. It also means every crawler pass costs the
-		 * app key nineteen passage fetches per chapter instead of one, which is
-		 * how the rate limit got tripped in the first place.
-		 *
-		 * The other versions stay fully crawlable — they are linked from
-		 * `/versions`, from the reader toolbar, and their own sitemap still
-		 * resolves at `/sitemap-bible/<slug>.xml`. Add them back here once the
-		 * default translation is actually indexed.
-		 */
-		if (defaultVersion) {
-			versionSitemaps = [
-				versionSitemapPath(versionSlug(defaultVersion, versions)),
-			];
-		}
-	} catch {
-		// Search Console reports any error status as "Sitemap could not be read"
-		// and then backs off for days, so a throttled upstream must not take the
-		// index down with it. The page sitemap needs no upstream call and always
-		// resolves, so a degraded index still gets the site crawled; the version
-		// sitemaps come back on the next read.
-	}
+	/**
+	 * One default licensed Bible edition for every locale.
+	 *
+	 * The root index names stable locale sitemaps rather than looking up 58
+	 * version slugs here. That keeps this route independent of the upstream API:
+	 * a throttle can postpone one language's child sitemap, but it cannot erase
+	 * every language from the index Google already knows.
+	 *
+	 * This does not submit the other editions a locale may carry. One edition per
+	 * language is the bounded expansion the locale registry promises; adding all
+	 * translations would multiply the same chapter inventory without adding a
+	 * language.
+	 */
+	const localeSitemaps = LOCALES.map(localeSitemapPath);
 
 	// A missing date costs a crawler one wasted re-read; a failed index costs
 	// days of backoff. So this degrades to no dates rather than to no sitemap.
@@ -110,7 +83,7 @@ export const GET: APIRoute = async ({ site }) => {
 		// is licensed Scripture, which does not have a review date, and the seed
 		// set's own changes are not something anything at runtime can observe.
 		{ path: '/sitemap-verses.xml' },
-		...versionSitemaps.map((path) => ({ path })),
+		...localeSitemaps.map((path) => ({ path })),
 	];
 
 	return xmlResponse(

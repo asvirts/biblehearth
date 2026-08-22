@@ -7,14 +7,14 @@ import ReaderToolbar from '../../../../../components/ReaderToolbar.astro';
 import RelatedQuestions from '../../../../../components/RelatedQuestions.astro';
 import StatusMessage from '../../../../../components/StatusMessage.astro';
 import { verseAnswerIndex } from '../../../../../lib/answers';
-import { chapterBriefIndex, chapterStudyPath } from '../../../../../lib/commentary';
 import {
-	chapterBookTitle,
-	chapterUsfm,
-	isCanonicalBookSlug,
-	isNumericChapter,
-	usfmFromBookSlug,
-} from '../../../../../lib/bible/usfm';
+	isCanonicalLocaleBookSlug,
+	usfmFromLocaleBookSlug,
+} from '../../../../../lib/bible/books';
+import { chapterBriefIndex, chapterStudyPath } from '../../../../../lib/commentary';
+import { displayChapterNumber, hebrewChapter } from '../../../../../lib/bible/psalms';
+import { localeChapterReference } from '../../../../../lib/bible/refs';
+import { chapterUsfm, isNumericChapter } from '../../../../../lib/bible/usfm';
 import {
 	scriptureToPlainText,
 	truncateWords,
@@ -23,9 +23,11 @@ import { topicPath, verseTopicIndex } from '../../../../../lib/topics';
 import {
 	bookPath,
 	chapterPath,
+	encodedPath,
 	versionPath,
 } from '../../../../../lib/bible/urls';
 import { READER_CACHE_CONTROL, setPageHeaders } from '../../../../../lib/http';
+import { localePath } from '../../../../../lib/i18n/locales';
 import { breadcrumbJsonLd, creativeWorkJsonLd } from '../../../../../lib/seo';
 import {
 	adjacentReadableChapter,
@@ -43,14 +45,24 @@ import {
 
 const requestedSlug = Astro.params.version;
 const bookSlug = Astro.params.book;
-const chapterId = Astro.params.chapter;
+const requestedChapter = Astro.params.chapter;
+const locale = Astro.locals.locale;
 
-if (!requestedSlug || !bookSlug || !chapterId || !isNumericChapter(chapterId)) {
+if (
+	!requestedSlug ||
+	!bookSlug ||
+	!requestedChapter ||
+	!isNumericChapter(requestedChapter)
+) {
 	return Astro.rewrite('/404');
 }
 
-const bookUsfm = usfmFromBookSlug(bookSlug);
-if (!bookUsfm) {
+const bookUsfm = usfmFromLocaleBookSlug(locale, bookSlug);
+const normalizedChapter = bookUsfm
+	? hebrewChapter(locale, bookUsfm, requestedChapter)
+	: null;
+const chapterId = normalizedChapter === null ? null : String(normalizedChapter);
+if (!bookUsfm || !chapterId) {
 	return Astro.rewrite('/404');
 }
 
@@ -61,8 +73,11 @@ if (!bookUsfm) {
  * takes two hops, which is the price of not spending a licensed fetch to
  * discover that the first hop was avoidable.
  */
-if (!isCanonicalBookSlug(bookSlug, bookUsfm)) {
-	return Astro.redirect(chapterPath(requestedSlug, bookUsfm, chapterId), 301);
+if (!isCanonicalLocaleBookSlug(locale, bookSlug, bookUsfm)) {
+	return Astro.redirect(
+		encodedPath(chapterPath(requestedSlug, bookUsfm, chapterId, locale)),
+		301,
+	);
 }
 
 let version: BibleVersion | null = null;
@@ -76,20 +91,23 @@ let nextHref: string | null = null;
 let status = 200;
 
 try {
-	const resolved = await resolveVersion(requestedSlug);
+	const resolved = await resolveVersion(requestedSlug, locale);
 	if (!resolved) {
 		return Astro.rewrite('/404');
 	}
 
 	if (resolved.slug !== requestedSlug) {
-		return Astro.redirect(chapterPath(resolved.slug, bookUsfm, chapterId), 301);
+		return Astro.redirect(
+			encodedPath(chapterPath(resolved.slug, bookUsfm, chapterId, locale)),
+			301,
+		);
 	}
 
 	version = resolved.version;
 	slug = resolved.slug;
 	[index, catalog, passage] = await Promise.all([
 		getBibleIndex(resolved.version.id),
-		listVersions(),
+		listVersions(locale),
 		getPassageHtml(resolved.version.id, chapterUsfm(bookUsfm, chapterId), {
 			headings: true,
 			notes: true,
@@ -109,9 +127,11 @@ try {
 	const previous = adjacentReadableChapter(index, book.id, chapterId, 'previous');
 	const next = adjacentReadableChapter(index, book.id, chapterId, 'next');
 	previousHref = previous
-		? chapterPath(slug, previous.bookId, previous.chapterId)
+		? chapterPath(slug, previous.bookId, previous.chapterId, locale)
 		: null;
-	nextHref = next ? chapterPath(slug, next.bookId, next.chapterId) : null;
+	nextHref = next
+		? chapterPath(slug, next.bookId, next.chapterId, locale)
+		: null;
 } catch (error) {
 	status = errorStatus(error);
 	if (status === 404) {
@@ -126,7 +146,11 @@ setPageHeaders(Astro.response, status, READER_CACHE_CONTROL);
 // hand-kept, so a citation added to a topic or answer surfaces here on deploy.
 const chapterKey = book ? `${book.id}.${chapterId}` : '';
 const [{ byChapter: topicsByChapter }, { byChapter: answersByChapter }, briefs] =
-	await Promise.all([verseTopicIndex(), verseAnswerIndex(), chapterBriefIndex()]);
+	await Promise.all([
+		verseTopicIndex(),
+		verseAnswerIndex(),
+		chapterBriefIndex(locale),
+	]);
 const chapterTopics = book ? (topicsByChapter.get(chapterKey) ?? []) : [];
 const chapterAnswers = book ? (answersByChapter.get(chapterKey) ?? []) : [];
 // The study page is version-agnostic, so its link has to earn the click on its
@@ -135,8 +159,11 @@ const chapterAnswers = book ? (answersByChapter.get(chapterKey) ?? []) : [];
 const chapterBrief = book ? briefs.get(chapterKey) : undefined;
 
 const reference = book
-	? `${chapterBookTitle(book.id, book.title, version?.language_tag)} ${chapterId}`
+	? localeChapterReference(locale, book.id, chapterId)
 	: 'Chapter';
+const displayNumber = book
+	? displayChapterNumber(locale, book.id, chapterId)
+	: chapterId;
 const abbreviation = version ? displayAbbreviation(version) : '';
 const heading =
 	book && version ? `${reference} (${abbreviation})` : 'Chapter';
@@ -166,26 +193,33 @@ const description = snippet
 <BaseLayout
 	title={title}
 	description={description}
-	lang={version?.language_tag ?? 'en'}
-	canonicalPath={chapterPath(slug, bookUsfm, chapterId)}
+	lang={locale.htmlLang}
+	dir={locale.dir}
+	canonicalPath={chapterPath(slug, bookUsfm, chapterId, locale)}
 	prev={previousHref ?? undefined}
 	next={nextHref ?? undefined}
 	jsonLd={
 		version && book
 			? [
 					breadcrumbJsonLd(Astro.site, [
-						{ name: 'BibleHearth', path: '/' },
-						{ name: displayAbbreviation(version), path: versionPath(slug) },
-						{ name: book.title, path: bookPath(slug, book.id) },
+						{ name: 'BibleHearth', path: localePath(locale, '/') },
 						{
-							name: `Chapter ${chapterId}`,
-							path: chapterPath(slug, book.id, chapterId),
+							name: displayAbbreviation(version),
+							path: versionPath(slug, locale),
+						},
+						{
+							name: book.title,
+							path: bookPath(slug, book.id, locale),
+						},
+						{
+							name: `Chapter ${displayNumber}`,
+							path: chapterPath(slug, book.id, chapterId, locale),
 						},
 					]),
 					creativeWorkJsonLd({
 						name: heading,
 						description,
-						inLanguage: version.language_tag,
+						inLanguage: locale.htmlLang,
 						copyrightNotice: version.copyright,
 					}),
 				]
@@ -201,13 +235,13 @@ const description = snippet
 		) : (
 			<>
 				<nav class="crumbs" aria-label="Breadcrumb">
-					<a href="/">Home</a>
+					<a href={localePath(locale, '/')}>Home</a>
 					<span>/</span>
-					<a href={versionPath(slug)}>{displayAbbreviation(version)}</a>
+					<a href={versionPath(slug, locale)}>{displayAbbreviation(version)}</a>
 					<span>/</span>
-					<a href={bookPath(slug, book.id)}>{book.title}</a>
+					<a href={bookPath(slug, book.id, locale)}>{book.title}</a>
 					<span>/</span>
-					<span>{chapterId}</span>
+					<span>{displayNumber}</span>
 				</nav>
 				<h1>{heading}</h1>
 				<ReaderToolbar
@@ -216,6 +250,7 @@ const description = snippet
 					index={index}
 					bookId={book.id}
 					chapterId={chapterId}
+					locale={locale}
 				/>
 				<Passage html={passage.content} />
 				<nav class="pager">
@@ -226,17 +261,22 @@ const description = snippet
 					)}
 					{nextHref ? <a href={nextHref}>Next chapter</a> : <span />}
 				</nav>
-				<section class="study-cta panel">
-					<h2>Understand {reference}</h2>
-					<p>
-						{chapterBrief
-							? `${chapterBrief.data.title}. The study includes an outline, definitions for unfamiliar words, and notes from three commentaries.`
-							: `Walk through ${reference} verse by verse, then read what three commentaries say about the chapter. The explanations are written for new readers.`}
-					</p>
-					<a class="cta" href={chapterStudyPath(book.id, chapterId)}>
-						Read the {reference} commentary
-					</a>
-				</section>
+				{!locale.prefix || chapterBrief ? (
+					<section class="study-cta panel">
+						<h2>Understand {reference}</h2>
+						<p>
+							{chapterBrief
+								? `${chapterBrief.data.title}. The study includes an outline, definitions for unfamiliar words, and notes from three commentaries.`
+								: `Walk through ${reference} verse by verse, then read what three commentaries say about the chapter. The explanations are written for new readers.`}
+						</p>
+						<a
+							class="cta"
+							href={chapterStudyPath(book.id, chapterId, locale)}
+						>
+							Read the {reference} commentary
+						</a>
+					</section>
+				) : null}
 				<RelatedQuestions
 					heading="Questions about this chapter"
 					answers={chapterAnswers}

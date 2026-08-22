@@ -1,6 +1,8 @@
 ---
 import type { BibleVersion } from '@youversion/platform-core';
-import { bookSlugFromUsfm } from '../lib/bible/usfm';
+import { bookSlug } from '../lib/bible/books';
+import { displayChapterNumber } from '../lib/bible/psalms';
+import { DEFAULT_LOCALE, localePath, type Locale } from '../lib/i18n/locales';
 import {
 	displayAbbreviation,
 	type IndexedBible,
@@ -14,15 +16,23 @@ type Props = {
 	index: IndexedBible;
 	bookId: string;
 	chapterId: string;
+	locale?: Locale;
 };
 
-const { catalog, version, index, bookId, chapterId } = Astro.props;
+const {
+	catalog,
+	version,
+	index,
+	bookId,
+	chapterId,
+	locale = DEFAULT_LOCALE,
+} = Astro.props;
 const currentSlug = versionSlug(version, catalog);
 const currentBook = index.books.find((book) => book.id === bookId);
 const chapters = currentBook ? readableChapters(currentBook) : [];
 ---
 
-<form class="toolbar" method="get" action="/read">
+<form class="toolbar" method="get" action={localePath(locale, '/read')}>
 	<label class="field-wide">
 		Version
 		<select name="version">
@@ -43,7 +53,7 @@ const chapters = currentBook ? readableChapters(currentBook) : [];
 		<select name="book">
 			{
 				index.books.map((book) => (
-					<option value={bookSlugFromUsfm(book.id)} selected={book.id === bookId}>
+					<option value={bookSlug(locale, book.id)} selected={book.id === bookId}>
 						{book.title}
 					</option>
 				))
@@ -55,8 +65,13 @@ const chapters = currentBook ? readableChapters(currentBook) : [];
 		<select name="chapter">
 			{
 				chapters.map((chapter) => (
-					<option value={chapter.id} selected={chapter.id === chapterId}>
-						{chapter.title || chapter.id}
+					<option
+						value={displayChapterNumber(locale, bookId, chapter.id)}
+						selected={chapter.id === chapterId}
+					>
+						{bookId === 'PSA'
+							? displayChapterNumber(locale, bookId, chapter.id)
+							: chapter.title || chapter.id}
 					</option>
 				))
 			}
