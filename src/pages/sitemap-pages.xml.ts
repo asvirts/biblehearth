@@ -31,7 +31,7 @@ async function studyLastmod(): Promise<Date | undefined> {
 	return latestDate(perLocale.flat().map((chapter) => chapter.reviewedAt));
 }
 
-export const GET: APIRoute = async ({ site }) => {
+export const GET: APIRoute = async ({ site, request }) => {
 	let slugs: string[] = [];
 	try {
 		const versions = await listVersions();
@@ -51,5 +51,6 @@ export const GET: APIRoute = async ({ site }) => {
 				lastmod: path === STUDY_HUB_PATH ? reviewed : undefined,
 			})),
 		),
+		request,
 	);
 };

@@ -18,6 +18,24 @@ const xml = await response.text();
 const paths = [...xml.matchAll(/<loc>([^<]+)<\/loc>/g)].map(
 	(match) => new URL(unescapeXml(match[1].trim())).pathname,
 );
+const required = [
+	'/sitemap-pages.xml',
+	'/sitemap-topics.xml',
+	'/sitemap-answers.xml',
+	'/sitemap-studies.xml',
+	'/sitemap-verses.xml',
+];
+const missingRequired = required.filter((path) => !paths.includes(path));
+if (paths.includes('/sitemap-commentary.xml')) {
+	console.error(
+		'sitemap index still lists /sitemap-commentary.xml; it should 301 to /sitemap-studies.xml instead of appearing as a child.',
+	);
+	process.exit(1);
+}
+if (missingRequired.length > 0) {
+	console.error(`sitemap index is missing ${missingRequired.join(', ')}`);
+	process.exit(1);
+}
 const localePaths = paths.filter((path) =>
 	path.startsWith('/sitemap-locale/'),
 );

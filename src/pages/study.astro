@@ -4,7 +4,6 @@ import Figure from '../components/Figure.astro';
 import {
 	NEW_TESTAMENT_BOOKS,
 	OLD_TESTAMENT_BOOKS,
-	TOTAL_CHAPTERS,
 	chapterCount,
 } from '../lib/bible/chapters';
 import { bookNameFromUsfm } from '../lib/bible/usfm';
@@ -25,8 +24,8 @@ setCacheControl(Astro.response, READER_CACHE_CONTROL);
 
 const briefs = await listChapterBriefs();
 
-const title = 'Bible Commentary and Chapter Studies | BibleHearth';
-const description = `Browse all ${TOTAL_CHAPTERS} chapters of the Bible, with clear chapter studies and notes from three free commentaries.`;
+const title = 'Bible Chapter Studies and Free Commentary';
+const description = `Original studies for ${briefs.length} Bible chapters, plus a page for every book and notes from three free commentaries.`;
 
 const books = [
 	{ heading: 'Old Testament', ids: OLD_TESTAMENT_BOOKS },
@@ -49,7 +48,7 @@ const share = figure ? await shareCardFromFigure(figure) : undefined;
 			{ name: 'Bible study', path: STUDY_HUB_PATH },
 		]),
 		itemListJsonLd({
-			name: 'Bible commentary by book',
+			name: 'Bible chapter studies by book',
 			items: [...OLD_TESTAMENT_BOOKS, ...NEW_TESTAMENT_BOOKS].map((id) => ({
 				name: bookNameFromUsfm(id),
 				url: absoluteUrl(Astro.site, bookStudyPath(id)),
@@ -63,13 +62,14 @@ const share = figure ? await shareCardFromFigure(figure) : undefined;
 		<span>Bible study</span>
 	</nav>
 
-	<h1>Bible Commentary and Chapter Studies</h1>
+	<h1>Bible Chapter Studies and Free Commentary</h1>
 
 	<p class="lede">
-		Every chapter has a place here. Studies walk through the chapter in order and
-		explain unfamiliar words. Three free commentaries follow the study, with no
-		account or paywall. If you are new to the Bible, begin with the Tyndale notes;
-		they use clear, modern English.
+		Start with the chapters written up in full — those pages carry an original
+		summary, an outline, a glossary, and answers to common questions. Every
+		book also has a page, and three free commentaries sit on each chapter,
+		with no account or paywall. If you are new to the Bible, begin with the
+		Tyndale notes; they use clear, modern English.
 	</p>
 
 	{figure ? <Figure figure={figure} /> : null}

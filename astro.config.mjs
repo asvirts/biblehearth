@@ -74,6 +74,20 @@ export default defineConfig({
 				optional: true,
 			}),
 			/**
+			 * Proves ownership of the domain to Google Search Console.
+			 *
+			 * Same shape as the Bing token: public because it is emitted in every
+			 * page's head, optional so a build without it still succeeds. Paste the
+			 * `content` value from Search Console → HTML tag verification into the
+			 * Vercel project's environment variables. Without it, Google has no
+			 * HTML-tag proof of ownership (DNS/file methods can still work).
+			 */
+			GOOGLE_SITE_VERIFICATION: envField.string({
+				context: 'server',
+				access: 'public',
+				optional: true,
+			}),
+			/**
 			 * The version the site reads in by default: the home page CTA, the
 			 * Verse of the Day, and anywhere a version is not named in the URL.
 			 * 111 is the NIV — the most-read English translation, so it is what

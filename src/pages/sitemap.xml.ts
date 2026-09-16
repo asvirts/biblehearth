@@ -6,6 +6,7 @@ import {
 	latestDate,
 	localeSitemapPath,
 	sitemapIndexXml,
+	STUDY_SITEMAP_PATH,
 	xmlResponse,
 	type SitemapEntry,
 } from '../lib/sitemap';
@@ -44,11 +45,11 @@ async function childLastmods(): Promise<Record<string, Date | undefined>> {
 		'/sitemap-answers.xml': latestDate(
 			answers.map((answer) => answer.data.reviewedAt),
 		),
-		'/sitemap-commentary.xml': briefs,
+		[STUDY_SITEMAP_PATH]: briefs,
 	};
 }
 
-export const GET: APIRoute = async ({ site }) => {
+export const GET: APIRoute = async ({ site, request }) => {
 	/**
 	 * One default licensed Bible edition for every locale.
 	 *
@@ -78,7 +79,7 @@ export const GET: APIRoute = async ({ site }) => {
 		{ path: '/sitemap-pages.xml' },
 		{ path: '/sitemap-topics.xml' },
 		{ path: '/sitemap-answers.xml' },
-		{ path: '/sitemap-commentary.xml' },
+		{ path: STUDY_SITEMAP_PATH },
 		// Curated seed set only — see lib/seed.ts for why. No date: a verse hub
 		// is licensed Scripture, which does not have a review date, and the seed
 		// set's own changes are not something anything at runtime can observe.
@@ -94,5 +95,6 @@ export const GET: APIRoute = async ({ site }) => {
 				lastmod: lastmods[child.path],
 			})),
 		),
+		request,
 	);
 };

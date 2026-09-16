@@ -131,6 +131,7 @@ const share = topic.data.figure
 	markdown
 	image={share?.image}
 	imageAlt={share?.imageAlt}
+	ogType="article"
 	jsonLd={[
 		breadcrumbJsonLd(Astro.site, [
 			{ name: 'BibleHearth', path: '/' },
@@ -140,7 +141,7 @@ const share = topic.data.figure
 		articleJsonLd({
 			site: Astro.site,
 			path: canonicalPath,
-			headline: title,
+			headline: `Bible Verses About ${topic.data.title}`,
 			description,
 			datePublished: topic.data.publishedAt,
 			dateModified: topic.data.reviewedAt,

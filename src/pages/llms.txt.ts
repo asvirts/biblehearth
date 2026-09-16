@@ -14,7 +14,7 @@ import { answerPath } from '../lib/answers';
 /**
  * The curated index described at https://llmstxt.org.
  *
- * Generated rather than checked in, for the same reason sitemap-commentary.xml
+ * Generated rather than checked in, for the same reason sitemap-studies.xml
  * is: the list of chapters with original writing on them changes every time
  * someone writes a brief, and a hand-kept copy would be wrong by the second one.
  * `listChapterBriefs()` is the same lookup the sitemap and the study page use,

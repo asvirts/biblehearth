@@ -103,6 +103,7 @@ const chapters = Array.from({ length: total }, (_, index) => {
 	};
 });
 const briefedCount = chapters.filter((chapter) => chapter.brief).length;
+const briefedChapters = chapters.filter((chapter) => chapter.brief);
 
 /**
  * A book page earns the index the same way a chapter page does: by carrying
@@ -126,8 +127,12 @@ const indexable = locale.prefix ? briefedCount > 0 : true;
  */
 const externalLinks = locale.prefix ? [] : externalStudyLinks(bookUsfm, 1);
 
-const title = `${bookName} | Summary, Chapters, and Commentary`;
-const description = `Study all ${total} ${total === 1 ? 'chapter' : 'chapters'} of ${bookName} with chapter outlines, clear explanations, and notes from three commentaries.`;
+const title = briefedCount
+	? `${bookName}: ${briefedCount} Chapter ${briefedCount === 1 ? 'Study' : 'Studies'} and Overview`
+	: `${bookName}: Book Overview and Chapter Commentary`;
+const description = briefedCount
+	? `Study the book of ${bookName}: ${briefedCount} original chapter ${briefedCount === 1 ? 'study' : 'studies'}, a book overview, and notes from three commentaries.`
+	: `An overview of ${bookName} (${total} ${total === 1 ? 'chapter' : 'chapters'}) with notes from three commentaries. Original chapter studies are added as they are written.`;
 ---
 
 <BaseLayout
@@ -162,17 +167,29 @@ const description = `Study all ${total} ${total === 1 ? 'chapter' : 'chapters'} 
 
 	<p class="lede">
 		The book of {bookName} has {total} {total === 1 ? 'chapter' : 'chapters'}.
-		Each page includes the chapter, an outline of its movement, and notes from
-		three commentaries.
+		Each chapter page includes the text and notes from three commentaries.
 		{
 			briefedCount
 				? ` ${briefedCount} ${briefedCount === 1 ? 'chapter has' : 'chapters have'} a written summary in our own words.`
-				: ''
+				: ' Original summaries, outlines, and FAQs are added as each chapter is written up.'
 		}
 	</p>
 
 	<section>
 		<h2>Chapters in {bookName}</h2>
+		{
+			briefedChapters.length ? (
+				<ul class="topic-links">
+					{briefedChapters.map((chapter) => (
+						<li>
+							<a href={chapterStudyPath(bookUsfm, chapter.id, locale)}>
+								{chapter.brief?.data.title}
+							</a>
+						</li>
+					))}
+				</ul>
+			) : null
+		}
 		<div class="chapter-grid">
 			{
 				/* `briefed` is the whole reason this is an event rather than a

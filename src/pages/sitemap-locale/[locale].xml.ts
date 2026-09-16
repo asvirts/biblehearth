@@ -18,7 +18,7 @@ import {
  * edition inside the child sitemap keeps those colliding slugs isolated behind
  * their locale prefixes and lets the root index remain entirely upstream-free.
  */
-export const GET: APIRoute = async ({ params, site }) => {
+export const GET: APIRoute = async ({ params, site, request }) => {
 	const code = params.locale;
 	const locale = code ? localeForCode(code) : null;
 	if (!locale) {
@@ -41,6 +41,7 @@ export const GET: APIRoute = async ({ params, site }) => {
 				versionPath(slug, locale),
 				...bibleSitemapPaths(slug, index, locale),
 			]),
+			request,
 		);
 	} catch {
 		// A locale disappearing during an upstream throttle is temporary. Tell a

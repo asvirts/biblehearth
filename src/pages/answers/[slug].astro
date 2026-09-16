@@ -30,6 +30,10 @@ import Figure from '../../components/Figure.astro';
 import type { EditorialFigure } from '../../lib/images/types';
 import { listTopics, topicPath } from '../../lib/topics';
 import {
+	chapterBriefIndex,
+	chapterStudyPath,
+} from '../../lib/commentary';
+import {
 	displayAbbreviation,
 	errorStatus,
 	getDefaultVersion,
@@ -118,6 +122,12 @@ const relatedTopics = answer.data.relatedTopics
 	.map((ref) => allTopics.find((item) => item.id === ref.id))
 	.filter((item): item is (typeof allTopics)[number] => Boolean(item));
 
+const briefs = await chapterBriefIndex();
+const anchorStudy =
+	anchorBook && anchorChapter
+		? briefs.get(`${anchorBook}.${anchorChapter}`)
+		: undefined;
+
 const otherAnswers = (await listAnswers()).filter(
 	(item) => item.id !== answer.id,
 );
@@ -139,6 +149,7 @@ const share = answer.data.figure
 	markdown
 	image={share?.image}
 	imageAlt={share?.imageAlt}
+	ogType="article"
 	jsonLd={[
 		breadcrumbJsonLd(Astro.site, [
 			{ name: 'BibleHearth', path: '/' },
@@ -148,7 +159,7 @@ const share = answer.data.figure
 		articleJsonLd({
 			site: Astro.site,
 			path: canonicalPath,
-			headline: title,
+			headline: answer.data.question,
 			description,
 			datePublished: answer.data.publishedAt,
 			dateModified: answer.data.reviewedAt,
@@ -201,6 +212,16 @@ const share = answer.data.figure
 				Read {anchorChapterReference}
 				{version ? ` in ${displayAbbreviation(version)}` : ''}
 			</a>
+			{
+				anchorStudy && anchorBook && anchorChapter ? (
+					<>
+						{' · '}
+						<a href={chapterStudyPath(anchorBook, anchorChapter)}>
+							{anchorStudy.data.title}
+						</a>
+					</>
+				) : null
+			}
 		</p>
 		<p class="muted">
 			Compare translations:{' '}

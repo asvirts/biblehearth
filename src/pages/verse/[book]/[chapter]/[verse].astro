@@ -5,7 +5,7 @@ import Passage from '../../../../components/Passage.astro';
 import RelatedQuestions from '../../../../components/RelatedQuestions.astro';
 import StatusMessage from '../../../../components/StatusMessage.astro';
 import { verseAnswerIndex } from '../../../../lib/answers';
-import { bookStudyPath } from '../../../../lib/commentary';
+import { bookStudyPath, chapterBriefIndex, chapterStudyPath } from '../../../../lib/commentary';
 import {
 	bookNameForChapter,
 	bookNameFromUsfm,
@@ -177,10 +177,12 @@ const description = descriptionWithClause(
 	renderings.length ? 'Each links to the full chapter.' : '',
 );
 
-const [{ byVerse: topicsByVerse }, { byVerse: answersByVerse }] =
-	await Promise.all([verseTopicIndex(), verseAnswerIndex()]);
+const [{ byVerse: topicsByVerse }, { byVerse: answersByVerse }, briefs] =
+	await Promise.all([verseTopicIndex(), verseAnswerIndex(), chapterBriefIndex()]);
 const relatedTopics = topicsByVerse.get(usfm) ?? [];
 const relatedAnswers = answersByVerse.get(usfm) ?? [];
+const chapterBrief = briefs.get(`${bookUsfm}.${chapterId}`);
+const chapterHref = chapterStudyPath(bookUsfm, chapterId);
 
 const previousVerse = Number(verseId) > 1 ? String(Number(verseId) - 1) : null;
 const nextVerse = String(Number(verseId) + 1);
@@ -194,6 +196,14 @@ const nextVerse = String(Number(verseId) + 1);
 		breadcrumbJsonLd(Astro.site, [
 			{ name: 'BibleHearth', path: '/' },
 			{ name: bookNameFromUsfm(bookUsfm), path: bookStudyPath(bookUsfm) },
+			...(chapterBrief
+				? [
+						{
+							name: `${bookNameForChapter(bookUsfm)} ${chapterId}`,
+							path: chapterHref,
+						},
+					]
+				: []),
 			{ name: reference, path: canonicalPath },
 		]),
 		creativeWorkJsonLd({
@@ -217,6 +227,14 @@ const nextVerse = String(Number(verseId) + 1);
 		<a href="/">Home</a>
 		<span>/</span>
 		<a href={bookStudyPath(bookUsfm)}>{bookNameFromUsfm(bookUsfm)}</a>
+		{
+			chapterBrief ? (
+				<>
+					<span>/</span>
+					<a href={chapterHref}>{bookNameForChapter(bookUsfm)} {chapterId}</a>
+				</>
+			) : null
+		}
 		<span>/</span>
 		<span>{reference}</span>
 	</nav>
@@ -278,6 +296,21 @@ const nextVerse = String(Number(verseId) + 1);
 					heading="Questions about this verse"
 					answers={relatedAnswers}
 				/>
+
+				{
+					chapterBrief ? (
+						<section class="study-cta panel">
+							<h2>{chapterBrief.data.title}</h2>
+							<p>
+								A chapter study with an outline, definitions for unfamiliar
+								words, and notes from three commentaries.
+							</p>
+							<a class="cta" href={chapterHref}>
+								Read the {bookNameForChapter(bookUsfm)} {chapterId} study
+							</a>
+						</section>
+					) : null
+				}
 
 				{relatedTopics.length ? (
 					<section class="chapter-topics">

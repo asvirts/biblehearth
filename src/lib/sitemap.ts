@@ -17,6 +17,18 @@ import { ABOUT_PATH, CONTACT_PATH, PRIVACY_PATH } from './site';
 /** Sitemap protocol hard limit (uncompressed URL count). */
 export const SITEMAP_URL_LIMIT = 50_000;
 
+/**
+ * Book pages and briefed chapter studies.
+ *
+ * The filename used to be `sitemap-commentary.xml`, leftover from when the
+ * studies lived under `/commentary`. Google does not rank on sitemap names,
+ * but Search Console reports, the URL itself, and every internal comment that
+ * still said "commentary" described the wrong thing after the 2026-08-18 move.
+ * The old path 301s to this one so anything already submitted keeps resolving.
+ */
+export const STUDY_SITEMAP_PATH = '/sitemap-studies.xml';
+export const STUDY_SITEMAP_LEGACY_PATH = '/sitemap-commentary.xml';
+
 export function versionSitemapPath(versionSlug: string): string {
 	return `/sitemap-bible/${versionSlug}.xml`;
 }
@@ -195,13 +207,24 @@ export function latestDate(
 	return latest;
 }
 
-export async function xmlResponse(body: string): Promise<Response> {
+export async function xmlResponse(
+	body: string,
+	request?: Request,
+): Promise<Response> {
+	const accept = request?.headers.get('Accept-Encoding') ?? 'gzip';
+	const gzip = /\bgzip\b/i.test(accept);
+	const headers: Record<string, string> = {
+		'Content-Type': 'application/xml; charset=utf-8',
+		'Cache-Control': SITEMAP_CACHE_CONTROL,
+		Vary: 'Accept-Encoding',
+	};
+	if (!gzip) {
+		return new Response(body, { headers });
+	}
 	return new Response(await gzipUtf8(body), {
 		headers: {
-			'Content-Type': 'application/xml; charset=utf-8',
+			...headers,
 			'Content-Encoding': 'gzip',
-			'Cache-Control': SITEMAP_CACHE_CONTROL,
-			Vary: 'Accept-Encoding',
 		},
 	});
 }

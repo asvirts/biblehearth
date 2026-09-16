@@ -35,6 +35,9 @@ const path = Astro.url.pathname;
 			BibleHearth
 		</a>
 		<nav class="nav" aria-label="Primary">
+			<a href="/study" aria-current={path === '/study' || path.startsWith('/study/') ? 'page' : undefined}>
+				Study
+			</a>
 			<a href="/topics" aria-current={path.startsWith('/topics') ? 'page' : undefined}>
 				Topics
 			</a>

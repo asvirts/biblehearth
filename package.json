@@ -16,6 +16,7 @@
     "questions:export": "node scripts/questions-export.mjs",
     "chapter:research": "node scripts/chapter-research.mjs",
     "copy:audit": "node scripts/copy-audit.mjs",
+    "test:seo": "node --experimental-strip-types --test src/lib/seo.test.ts",
     "books:generate": "node scripts/generate-book-slugs.mjs",
     "locales:generate": "node scripts/generate-locales.mjs",
     "sitemap:audit": "node scripts/sitemap-audit.mjs"

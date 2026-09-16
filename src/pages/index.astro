@@ -10,6 +10,7 @@ import { parsePassageId } from '../lib/bible/usfm';
 import { chapterPath, versePath, versionPath } from '../lib/bible/urls';
 import { HOME_CACHE_CONTROL, setPageHeaders } from '../lib/http';
 import { websiteJsonLd } from '../lib/seo';
+import { chapterStudyPath, listChapterBriefs } from '../lib/commentary';
 import { hubFigures } from '../lib/images/hubs';
 import { shareCardFromFigure } from '../lib/images/og';
 import {
@@ -110,6 +111,12 @@ const votdHref =
 // editorial pages get a slot here rather than relying on the footer alone.
 const answers = await listAnswers();
 const featured = catalog.slice(0, 8);
+const studies = (await listChapterBriefs())
+	.sort(
+		(left, right) =>
+			right.data.reviewedAt.getTime() - left.data.reviewedAt.getTime(),
+	)
+	.slice(0, 8);
 
 /**
  * Static, and that is the fix.
@@ -176,6 +183,35 @@ const share = figure ? await shareCardFromFigure(figure) : undefined;
 								<a href="/verse-of-the-day">Today's verse in context</a>
 							</p>
 							{defaultVersion ? <CopyrightNotice version={defaultVersion} /> : null}
+						</section>
+					) : null
+				}
+
+				{
+					studies.length > 0 ? (
+						<section>
+							<h2>Chapter studies</h2>
+							<p class="muted">
+								Original writing on the chapters people look up most, with an
+								outline, a glossary, and notes from three commentaries.
+							</p>
+							<div class="version-grid">
+								{studies.map((brief) => {
+									const [book, chapter] = brief.data.usfm.split('.');
+									return (
+										<a
+											class="tile"
+											href={chapterStudyPath(book ?? '', chapter ?? '1')}
+										>
+											<span class="tile-kicker">Study</span>
+											{brief.data.title}
+										</a>
+									);
+								})}
+							</div>
+							<p>
+								<a href="/study">All chapter studies</a>
+							</p>
 						</section>
 					) : null
 				}

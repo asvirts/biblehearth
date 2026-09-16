@@ -122,7 +122,9 @@ img {
 
 .nav {
 	display: flex;
-	gap: 1.25rem;
+	flex-wrap: wrap;
+	justify-content: flex-end;
+	gap: 1rem 1.25rem;
 }
 
 .nav a {
