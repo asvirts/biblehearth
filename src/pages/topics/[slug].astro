@@ -11,9 +11,10 @@ import { formatReference } from '../../lib/bible/refs';
 import { truncateWords } from '../../lib/bible/text';
 import { absoluteUrl, chapterPath } from '../../lib/bible/urls';
 import {
+	DEGRADED_CACHE_CONTROL,
 	READER_CACHE_CONTROL,
+	setCacheControl,
 	setLastModified,
-	setPageHeaders,
 } from '../../lib/http';
 import {
 	articleJsonLd,
@@ -55,7 +56,7 @@ const { Content } = await render(topic);
 let version: BibleVersion | null = null;
 let readerSlug = '';
 let passages = new Map<string, BiblePassage | null>();
-let status = 200;
+let upstreamStatus = 200;
 
 try {
 	const [defaultVersion, catalog] = await Promise.all([
@@ -71,14 +72,36 @@ try {
 		);
 	}
 } catch (error) {
-	status = errorStatus(error);
+	upstreamStatus = errorStatus(error);
 }
 
-Astro.response.status = status;
-setPageHeaders(Astro.response, status, READER_CACHE_CONTROL);
-if (status === 200) {
-	setLastModified(Astro.response, topic.data.reviewedAt);
-}
+/**
+ * A throttled upstream costs this page its verse text and nothing else.
+ *
+ * Everything that makes this page worth indexing is already in hand before the
+ * first upstream call: the short answer, the themed groups and their
+ * rationales, the per-verse glosses, the misreadings section, the FAQ, and the
+ * prose from `src/content/topics`. That is a complete article, and the reader
+ * gets it along with a `StatusMessage` naming what is absent.
+ *
+ * So this returns 200. Serving 503 threw the article away over a missing
+ * quotation, and did it to the handful of URLs carrying the only original
+ * writing on the site — teaching Googlebot that precisely those pages are
+ * unreliable, at the moment a crawl was already in progress. There is no
+ * condition under which this page has nothing on it, which is what a 503 would
+ * have to mean; a topic that does not exist is a 404 above, and one whose entry
+ * loaded has its whole argument.
+ *
+ * The TTL carries the honesty instead. See DEGRADED_CACHE_CONTROL: five minutes
+ * rather than a day, so the page repairs itself about when the upstream does.
+ */
+const degraded = upstreamStatus !== 200 || !version;
+setCacheControl(
+	Astro.response,
+	degraded ? DEGRADED_CACHE_CONTROL : READER_CACHE_CONTROL,
+);
+// The editorial date is the page's own and does not depend on the upstream.
+setLastModified(Astro.response, topic.data.reviewedAt);
 
 /**
  * Single verses link to the version-agnostic hub — that is the indexable page
@@ -93,7 +116,15 @@ function readerHref(usfm: string): string {
 	if (verse && !verse.includes('-')) {
 		return `/verse/${bookSlugFromUsfm(book)}/${chapter}/${verse}`;
 	}
-	return chapterPath(readerSlug, book, chapter);
+	/**
+	 * The chapter route needs a version slug, and this page now renders its whole
+	 * argument when the upstream is down — at which point there is no slug to
+	 * build with and `chapterPath` yields `/bible//JHN/3`. A double slash is a
+	 * link to a 404 that a crawler will still follow and report. Sending those
+	 * links to /versions beats emitting it, which is what the answer pages
+	 * already do.
+	 */
+	return readerSlug ? chapterPath(readerSlug, book, chapter) : '/versions';
 }
 
 const reference = formatReference;
@@ -101,6 +132,19 @@ const reference = formatReference;
 const verseCount = topicVerseCount(topic);
 const canonicalPath = topicPath(topic.id);
 const title = `${verseCount} Bible Verses About ${topic.data.title}, Grouped and Explained`;
+/**
+ * The visible `<h1>`, which is not the `<title>`.
+ *
+ * `headline` in an `Article` node means the article's headline, and Google's
+ * structured-data guidance is that it must match what the page displays. The
+ * `<title>` is written for a SERP line — it carries the count and the
+ * "Grouped and Explained" qualifier because that is what earns the click — and
+ * the `<h1>` is written for someone already reading. Passing the `<title>` as
+ * `headline` described a heading this page has never rendered.
+ *
+ * One constant feeding both the markup and the JSON-LD, so they cannot drift.
+ */
+const headline = `Bible Verses About ${topic.data.title}`;
 const description = truncateWords(
 	`${verseCount} Bible verses about ${topic.data.title.toLowerCase()}, grouped by theme with plain-English context for each passage: ${topic.data.groups
 		.map((group) => group.heading.toLowerCase())
@@ -131,6 +175,9 @@ const share = topic.data.figure
 	markdown
 	image={share?.image}
 	imageAlt={share?.imageAlt}
+	ogType="article"
+	publishedTime={topic.data.publishedAt}
+	modifiedTime={topic.data.reviewedAt}
 	jsonLd={[
 		breadcrumbJsonLd(Astro.site, [
 			{ name: 'BibleHearth', path: '/' },
@@ -140,7 +187,7 @@ const share = topic.data.figure
 		articleJsonLd({
 			site: Astro.site,
 			path: canonicalPath,
-			headline: title,
+			headline,
 			description,
 			datePublished: topic.data.publishedAt,
 			dateModified: topic.data.reviewedAt,
@@ -165,7 +212,7 @@ const share = topic.data.figure
 		<span>{topic.data.title}</span>
 	</nav>
 
-	<h1>Bible Verses About {topic.data.title}</h1>
+	<h1>{headline}</h1>
 
 	{/* Answer-first: this is the chunk a snippet or retrieval model lifts whole. */}
 	<p class="lede">{topic.data.shortAnswer}</p>
@@ -173,8 +220,9 @@ const share = topic.data.figure
 	{topic.data.figure ? <Figure figure={topic.data.figure as EditorialFigure} /> : null}
 
 	{
-		status !== 200 || !version ? (
+		degraded ? (
 			<StatusMessage
+				variant="notice"
 				title="Scripture is temporarily unavailable"
 				message="The verses for this topic could not be loaded. The explanations below are still available."
 			/>

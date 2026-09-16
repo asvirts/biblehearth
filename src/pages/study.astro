@@ -25,8 +25,33 @@ setCacheControl(Astro.response, READER_CACHE_CONTROL);
 
 const briefs = await listChapterBriefs();
 
+/**
+ * What this hub can honestly claim, which is two different numbers.
+ *
+ * The description used to read "Browse all 1,189 chapters of the Bible, with
+ * clear chapter studies and notes from three free commentaries" — which a
+ * reader and a snippet both take as 1,189 chapter studies. There are far fewer.
+ * 1,189 is how many chapters you can *reach* from here; `briefs.length` is how
+ * many have writing of our own on them, and the rest are `noindex` pages of
+ * republished commentary that four larger sites already mirror.
+ *
+ * Both numbers stated, neither standing in for the other. The written count is
+ * read from the same `listChapterBriefs()` the sitemap uses, so it cannot drift
+ * from what the page below actually lists — which is the other half of the
+ * problem with a hardcoded claim: it would have been wrong again the next time
+ * somebody shipped a brief.
+ */
+const written = briefs.length;
+const allChapters = TOTAL_CHAPTERS.toLocaleString('en-US');
 const title = 'Bible Commentary and Chapter Studies | BibleHearth';
-const description = `Browse all ${TOTAL_CHAPTERS} chapters of the Bible, with clear chapter studies and notes from three free commentaries.`;
+const description = written
+	? `All ${allChapters} chapters of the Bible, browsable by book. ${written} ${written === 1 ? 'has' : 'have'} a study written in plain English; every chapter page carries notes from three free commentaries.`
+	: `All ${allChapters} chapters of the Bible, browsable by book, each with notes from three free commentaries.`;
+
+/** The same two numbers in the lede's own voice. Empty while nothing is written. */
+const writtenSentence = written
+	? `${written} ${written === 1 ? 'chapter has' : 'chapters have'} a study written by us as well: a walk through the chapter in order, in plain English, with the unfamiliar words explained. Those are listed first below.`
+	: '';
 
 const books = [
 	{ heading: 'Old Testament', ids: OLD_TESTAMENT_BOOKS },
@@ -65,11 +90,17 @@ const share = figure ? await shareCardFromFigure(figure) : undefined;
 
 	<h1>Bible Commentary and Chapter Studies</h1>
 
+	{/*
+		The lede says which chapters have a study and which do not, because the
+		page below is two things and a reader who does not know that will click a
+		tile expecting the first and find the second. "Every chapter has a place
+		here. Studies walk through the chapter in order" read as a promise of
+		1,189 studies.
+	*/}
 	<p class="lede">
-		Every chapter has a place here. Studies walk through the chapter in order and
-		explain unfamiliar words. Three free commentaries follow the study, with no
-		account or paywall. If you are new to the Bible, begin with the Tyndale notes;
-		they use clear, modern English.
+		Every chapter of the Bible is here, with notes from three free commentaries
+		and no account or paywall. {writtenSentence} If you are new to the Bible,
+		begin with the Tyndale notes; they use clear, modern English.
 	</p>
 
 	{figure ? <Figure figure={figure} /> : null}

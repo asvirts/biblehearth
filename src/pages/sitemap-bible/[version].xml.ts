@@ -9,7 +9,7 @@ import {
 } from '../../lib/sitemap';
 import { getBibleIndex, resolveVersion } from '../../lib/youversion/api';
 
-export const GET: APIRoute = async ({ params, site, url }) => {
+export const GET: APIRoute = async ({ params, request, site, url }) => {
 	const slug = params.version;
 	if (!slug || !isSafeSlug(slug)) {
 		return new Response('Not found', { status: 404 });
@@ -29,7 +29,10 @@ export const GET: APIRoute = async ({ params, site, url }) => {
 		}
 
 		const index = await getBibleIndex(resolved.version.id);
-		return xmlResponse(urlsetXml(site, bibleSitemapPaths(resolved.slug, index)));
+		return xmlResponse(
+			urlsetXml(site, bibleSitemapPaths(resolved.slug, index)),
+			request,
+		);
 	} catch {
 		// Retry-After so a throttled read is a postponement rather than the days
 		// of backoff Search Console applies to an unexplained error.

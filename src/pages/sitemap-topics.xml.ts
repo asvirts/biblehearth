@@ -2,7 +2,7 @@ import type { APIRoute } from 'astro';
 import { latestDate, urlsetXmlWithLastmod, xmlResponse } from '../lib/sitemap';
 import { listTopics, topicPath } from '../lib/topics';
 
-export const GET: APIRoute = async ({ site }) => {
+export const GET: APIRoute = async ({ request, site }) => {
 	const topics = await listTopics();
 	const reviewed = topics.map((topic) => topic.data.reviewedAt);
 
@@ -16,5 +16,6 @@ export const GET: APIRoute = async ({ site }) => {
 				lastmod: topic.data.reviewedAt,
 			})),
 		]),
+		request,
 	);
 };

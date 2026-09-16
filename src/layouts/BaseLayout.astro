@@ -4,7 +4,10 @@ import '../styles/scripture.css';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import Analytics from '../components/Analytics.astro';
-import { BING_SITE_VERIFICATION } from 'astro:env/server';
+import {
+	BING_SITE_VERIFICATION,
+	GOOGLE_SITE_VERIFICATION,
+} from 'astro:env/server';
 import { absoluteMediaUrl, absoluteUrl } from '../lib/bible/urls';
 import {
 	DEFAULT_OG_IMAGE,
@@ -68,6 +71,30 @@ type Props = {
 	 */
 	prev?: string;
 	next?: string;
+	/**
+	 * The Open Graph type. `website` for a hub, `article` for a piece of writing.
+	 *
+	 * Worth distinguishing because the JSON-LD already does. A topic page, an
+	 * answer page and a briefed chapter study each emit an `Article` node, and an
+	 * `og:type` of `website` beside it is the same page describing itself two
+	 * ways — a contradiction for anything that reads only the Open Graph tags,
+	 * which includes most social and chat unfurlers. `article` is also what
+	 * unlocks the published/modified times below.
+	 *
+	 * `website` stays the default, so a hub or a reader page says nothing new.
+	 * Pass `article` only where the page carries our own writing; an un-briefed
+	 * chapter page is `noindex` republished commentary and is not an article of
+	 * ours to claim.
+	 */
+	ogType?: 'website' | 'article';
+	/**
+	 * Article timestamps, meaningful only when `ogType` is `article`.
+	 *
+	 * Same two dates the page's `Article` JSON-LD carries; pass both or neither
+	 * so the two descriptions of the page cannot disagree.
+	 */
+	publishedTime?: Date;
+	modifiedTime?: Date;
 	jsonLd?: Record<string, unknown> | Record<string, unknown>[];
 };
 
@@ -84,6 +111,9 @@ const {
 	imageAlt = 'BibleHearth — read the Bible online, free',
 	prev,
 	next,
+	ogType = 'website',
+	publishedTime,
+	modifiedTime,
 	jsonLd,
 } = Astro.props;
 
@@ -164,6 +194,11 @@ const hreflangs = alternates.length
 				<meta name="msvalidate.01" content={BING_SITE_VERIFICATION} />
 			) : null
 		}
+		{
+			GOOGLE_SITE_VERIFICATION ? (
+				<meta name="google-site-verification" content={GOOGLE_SITE_VERIFICATION} />
+			) : null
+		}
 		{noindex ? <meta name="robots" content="noindex, follow" /> : null}
 		{canonical ? <link rel="canonical" href={canonical} /> : null}
 		{hreflangs.map((entry) => (
@@ -184,7 +219,23 @@ const hreflangs = alternates.length
 		<meta property="og:title" content={title} />
 		<meta property="og:description" content={description} />
 		{canonical ? <meta property="og:url" content={canonical} /> : null}
-		<meta property="og:type" content="website" />
+		<meta property="og:type" content={ogType} />
+		{
+			ogType === 'article' && publishedTime ? (
+				<meta
+					property="article:published_time"
+					content={publishedTime.toISOString()}
+				/>
+			) : null
+		}
+		{
+			ogType === 'article' && modifiedTime ? (
+				<meta
+					property="article:modified_time"
+					content={modifiedTime.toISOString()}
+				/>
+			) : null
+		}
 		<meta property="og:site_name" content="BibleHearth" />
 		<meta property="og:locale" content={lang.replace('-', '_')} />
 		<meta property="og:image" content={ogImage} />

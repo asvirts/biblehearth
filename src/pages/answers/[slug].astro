@@ -12,9 +12,10 @@ import { truncateWords } from '../../lib/bible/text';
 import { bookSlugFromUsfm } from '../../lib/bible/usfm';
 import { absoluteUrl, chapterPath } from '../../lib/bible/urls';
 import {
+	DEGRADED_CACHE_CONTROL,
 	READER_CACHE_CONTROL,
+	setCacheControl,
 	setLastModified,
-	setPageHeaders,
 } from '../../lib/http';
 import {
 	articleJsonLd,
@@ -53,7 +54,7 @@ const { anchor, views } = answer.data;
 let version: BibleVersion | null = null;
 let readerSlug = '';
 let passages = new Map<string, BiblePassage | null>();
-let status = 200;
+let upstreamStatus = 200;
 
 try {
 	const [defaultVersion, catalog] = await Promise.all([
@@ -66,14 +67,28 @@ try {
 		passages = await loadPassages(version.id, answerRefs(answer));
 	}
 } catch (error) {
-	status = errorStatus(error);
+	upstreamStatus = errorStatus(error);
 }
 
-Astro.response.status = status;
-setPageHeaders(Astro.response, status, READER_CACHE_CONTROL);
-if (status === 200) {
-	setLastModified(Astro.response, answer.data.reviewedAt);
-}
+/**
+ * 200 with a short TTL, not 503. Same reasoning as the topic pages.
+ *
+ * This page is even more ours than those: the compared readings, the support
+ * and objection under each one, the bottom line, the cautions and the FAQ are
+ * all written here, and the passage is the thing being argued about rather than
+ * the argument. A missing quotation leaves every claim on the page intact, and
+ * `StatusMessage` says which text is absent.
+ *
+ * `DEGRADED_CACHE_CONTROL` is what keeps this from caching a passage-less page
+ * for a day. 503 is reserved for a page with nothing on it, which this cannot
+ * be — the entry either loaded or 404'd above.
+ */
+const degraded = upstreamStatus !== 200 || !version;
+setCacheControl(
+	Astro.response,
+	degraded ? DEGRADED_CACHE_CONTROL : READER_CACHE_CONTROL,
+);
+setLastModified(Astro.response, answer.data.reviewedAt);
 
 /**
  * Single verses go to the version-agnostic hub; ranges have none, so they fall
@@ -107,6 +122,16 @@ const anchorVerses = expandUsfm(anchor.passage);
 
 const canonicalPath = answerPath(answer.id);
 const title = `${answer.data.question} Meaning and ${views.length} Main Views`;
+/**
+ * The visible `<h1>` is the question itself, so that is the `headline`.
+ *
+ * `headline` in an `Article` node is the article's heading, and Google asks that
+ * it match the rendered one. The `<title>` adds "Meaning and N Main Views"
+ * because that is what distinguishes this page in a SERP full of the same
+ * question; the `<h1>` does not, because a reader who has arrived does not need
+ * to be sold the page again.
+ */
+const headline = answer.data.question;
 const description = truncateWords(answer.data.shortAnswer, 155);
 
 const citedRefs = views.flatMap((view) =>
@@ -139,6 +164,9 @@ const share = answer.data.figure
 	markdown
 	image={share?.image}
 	imageAlt={share?.imageAlt}
+	ogType="article"
+	publishedTime={answer.data.publishedAt}
+	modifiedTime={answer.data.reviewedAt}
 	jsonLd={[
 		breadcrumbJsonLd(Astro.site, [
 			{ name: 'BibleHearth', path: '/' },
@@ -148,7 +176,7 @@ const share = answer.data.figure
 		articleJsonLd({
 			site: Astro.site,
 			path: canonicalPath,
-			headline: title,
+			headline,
 			description,
 			datePublished: answer.data.publishedAt,
 			dateModified: answer.data.reviewedAt,
@@ -173,7 +201,7 @@ const share = answer.data.figure
 		<span>{answer.data.label}</span>
 	</nav>
 
-	<h1>{answer.data.question}</h1>
+	<h1>{headline}</h1>
 
 	{/* Answer-first: this is the chunk a snippet or retrieval model lifts whole. */}
 	<p class="lede">{answer.data.shortAnswer}</p>
@@ -181,8 +209,9 @@ const share = answer.data.figure
 	{answer.data.figure ? <Figure figure={answer.data.figure as EditorialFigure} /> : null}
 
 	{
-		status !== 200 || !version ? (
+		degraded ? (
 			<StatusMessage
+				variant="notice"
 				title="Scripture is temporarily unavailable"
 				message="The passages for this page could not be loaded. The explanations below are still available."
 			/>

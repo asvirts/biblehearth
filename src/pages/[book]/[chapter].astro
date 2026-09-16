@@ -436,6 +436,16 @@ const reviewed = brief
 			month: 'long',
 		})
 	: null;
+
+/**
+ * `og:type` follows the brief, which is the same test `indexable` uses.
+ *
+ * A briefed chapter emits an `Article` node above and is an article; an
+ * un-briefed one is republished public-domain commentary under a `noindex`, and
+ * calling that an article of ours would be the one claim on the page that
+ * nothing on it supports.
+ */
+const ogType = brief ? 'article' : 'website';
 ---
 
 <BaseLayout
@@ -449,6 +459,9 @@ const reviewed = brief
 	alternates={alternates}
 	image={share?.image}
 	imageAlt={share?.imageAlt}
+	ogType={ogType}
+	publishedTime={brief?.data.publishedAt}
+	modifiedTime={brief?.data.reviewedAt}
 	jsonLd={jsonLd}
 >
 	<nav class="crumbs" aria-label="Breadcrumb">

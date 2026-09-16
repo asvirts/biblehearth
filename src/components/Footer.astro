@@ -16,7 +16,17 @@ const [topics, answers] = await Promise.all([listTopics(), listAnswers()]);
 				<ul>
 					<li><a href="/versions">Bible versions</a></li>
 					<li><a href="/verse-of-the-day">Verse of the day</a></li>
-					<li><a href="/study">Bible commentary</a></li>
+					{/*
+						"Chapter studies", not "Bible commentary". The anchor text is
+						the strongest hint this site gives about what /study is, and
+						what /study is for is the chapter studies — the original
+						writing. "Bible commentary" described the three republished
+						commentaries underneath them, which is the part of the page
+						four larger sites already publish verbatim and the part we
+						have no interest in ranking for. It also disagreed with the
+						header, which now says Study.
+					*/}
+					<li><a href="/study">Chapter studies</a></li>
 				</ul>
 			</div>
 			<div class="footer-col">

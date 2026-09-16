@@ -41,6 +41,30 @@ export const MARKDOWN_CACHE_CONTROL = SITEMAP_CACHE_CONTROL;
 export const NOTFOUND_CACHE_CONTROL = 'public, max-age=3600, s-maxage=86400';
 
 /**
+ * A page that rendered its own writing but not the Scripture beside it.
+ *
+ * Topic and answer pages are mostly ours: the short answer, the groups and their
+ * rationales, the per-verse glosses, the FAQ, the prose from `src/content`. None
+ * of that comes from upstream, so a throttled app key costs those pages the
+ * verse text and nothing else — the argument still reads, and `StatusMessage`
+ * says what is missing. Serving 503 for that threw away a complete article, and
+ * taught Googlebot that the URLs carrying our only original writing are
+ * unreliable. They return 200 instead, and 503 is reserved for a page with
+ * nothing on it.
+ *
+ * The TTL is what keeps that honest. `READER_CACHE_CONTROL` would pin a
+ * passage-less page at the edge for a day, so a five-minute throttle would
+ * outlive itself by 24 hours; five minutes here means the page repairs itself
+ * about as soon as the upstream does. Short, not `no-store`: the degraded page
+ * is still worth serving, and a crawl that arrives during a throttle should not
+ * re-invoke the function for every URL in the section.
+ *
+ * No `Retry-After`. The response is a 200 and there is nothing to retry.
+ */
+export const DEGRADED_CACHE_CONTROL =
+	'public, max-age=60, s-maxage=300, stale-while-revalidate=3600';
+
+/**
  * Genuine upstream failures must never be cached.
  *
  * Not a real choice on Vercel in any case: only 200, 404, 410 and the redirect

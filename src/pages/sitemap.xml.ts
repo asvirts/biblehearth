@@ -48,7 +48,7 @@ async function childLastmods(): Promise<Record<string, Date | undefined>> {
 	};
 }
 
-export const GET: APIRoute = async ({ site }) => {
+export const GET: APIRoute = async ({ request, site }) => {
 	/**
 	 * One default licensed Bible edition for every locale.
 	 *
@@ -94,5 +94,6 @@ export const GET: APIRoute = async ({ site }) => {
 				lastmod: lastmods[child.path],
 			})),
 		),
+		request,
 	);
 };

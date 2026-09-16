@@ -1,6 +1,6 @@
 import type { APIRoute } from 'astro';
 import { briefedChapters, STUDY_HUB_PATH } from '../lib/commentary';
-import { LOCALES } from '../lib/i18n/locales';
+import { DEFAULT_LOCALE } from '../lib/i18n/locales';
 import {
 	latestDate,
 	pageSitemapPaths,
@@ -13,6 +13,14 @@ import { listVersions, versionSlug } from '../lib/youversion/api';
  * `/study` is the only URL here with a date it can defend.
  *
  * The hub lists the briefed chapters, so it changed when the newest brief did.
+ *
+ * English only, because `/study` is the English hub. The other 57 locales have
+ * their own hub at `studyHubPath(locale)`, submitted by their own locale
+ * sitemap, and folding their briefs in here would date this URL from a page it
+ * does not contain — a Portuguese brief shipped today would advertise an
+ * English hub as changed when nothing on it moved. That is the fabricated
+ * freshness signal lib/sitemap.ts refuses everywhere else.
+ *
  * Everything else in this sitemap is hand-written — `/about`, `/privacy`, the
  * home page — and edited in git, which nothing at runtime can see. The
  * available substitutes are all worse than silence: the deploy time would
@@ -25,13 +33,11 @@ import { listVersions, versionSlug } from '../lib/youversion/api';
  * fetch to re-read text we cannot serve as text, every day, forever.
  */
 async function studyLastmod(): Promise<Date | undefined> {
-	const perLocale = await Promise.all(
-		LOCALES.map((locale) => briefedChapters(locale)),
-	);
-	return latestDate(perLocale.flat().map((chapter) => chapter.reviewedAt));
+	const briefed = await briefedChapters(DEFAULT_LOCALE);
+	return latestDate(briefed.map((chapter) => chapter.reviewedAt));
 }
 
-export const GET: APIRoute = async ({ site }) => {
+export const GET: APIRoute = async ({ request, site }) => {
 	let slugs: string[] = [];
 	try {
 		const versions = await listVersions();

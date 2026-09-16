@@ -195,15 +195,81 @@ export function latestDate(
 	return latest;
 }
 
-export async function xmlResponse(body: string): Promise<Response> {
-	return new Response(await gzipUtf8(body), {
-		headers: {
-			'Content-Type': 'application/xml; charset=utf-8',
-			'Content-Encoding': 'gzip',
-			'Cache-Control': SITEMAP_CACHE_CONTROL,
-			Vary: 'Accept-Encoding',
-		},
+/**
+ * A sitemap, gzipped only for a client that asked for gzip.
+ *
+ * `Content-Encoding: gzip` is a promise about the bytes, not a hint: a client
+ * that did not offer gzip is entitled to read the body as-is, and one that
+ * cannot inflate has no way to recover from a gzipped payload it never
+ * requested. The sitemap protocol allows gzipped sitemaps and Googlebot does
+ * send `Accept-Encoding: gzip`, so the common case is unchanged — but the
+ * uncommon ones are exactly the ones that matter here. `curl` without `--compressed`,
+ * a validator, or a hand-written fetch in a webmaster tool all got a file of
+ * binary where XML was expected, which reads as a broken sitemap rather than as
+ * a negotiation failure.
+ *
+ * `Vary: Accept-Encoding` is emitted either way, so a cache never serves one
+ * variant to a client that needs the other.
+ *
+ * Pass the route's `request`. Omitting it serves the XML uncompressed, which is
+ * the safe default: a caller that forgets loses some bandwidth, not correctness.
+ */
+export async function xmlResponse(
+	body: string,
+	request?: Request,
+): Promise<Response> {
+	const headers = new Headers({
+		'Content-Type': 'application/xml; charset=utf-8',
+		'Cache-Control': SITEMAP_CACHE_CONTROL,
+		Vary: 'Accept-Encoding',
 	});
+
+	if (!acceptsGzip(request)) {
+		return new Response(body, { headers });
+	}
+
+	headers.set('Content-Encoding', 'gzip');
+	return new Response(await gzipUtf8(body), { headers });
+}
+
+/**
+ * Whether `Accept-Encoding` permits gzip, per RFC 9110 §12.5.3.
+ *
+ * A missing header means no preference was stated, and the conservative reading
+ * is identity — the protocol permits a server to assume gzip there, but nothing
+ * on this site is worth a binary body sent to a client that never mentioned
+ * compression.
+ *
+ * The `q=0` cases are the ones worth spelling out: `gzip;q=0` is an explicit
+ * refusal, and `*;q=0` refuses everything not named, so a wildcard cannot be
+ * read as blanket permission. `*` with a positive weight does permit gzip when
+ * gzip itself is unmentioned.
+ */
+function acceptsGzip(request?: Request): boolean {
+	const header = request?.headers.get('accept-encoding');
+	if (!header) {
+		return false;
+	}
+
+	const weights = new Map<string, number>();
+	for (const part of header.split(',')) {
+		const [token, ...params] = part.trim().split(';');
+		const name = token?.trim().toLowerCase();
+		if (!name) {
+			continue;
+		}
+		const q = params
+			.map((param) => param.trim().toLowerCase())
+			.find((param) => param.startsWith('q='));
+		const weight = q ? Number.parseFloat(q.slice(2)) : 1;
+		weights.set(name, Number.isNaN(weight) ? 0 : weight);
+	}
+
+	const gzip = weights.get('gzip');
+	if (gzip !== undefined) {
+		return gzip > 0;
+	}
+	return (weights.get('*') ?? 0) > 0;
 }
 
 function isRoutableBook(bookId: string): boolean {

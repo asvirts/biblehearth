@@ -35,6 +35,24 @@ const path = Astro.url.pathname;
 			BibleHearth
 		</a>
 		<nav class="nav" aria-label="Primary">
+			{/*
+				Study leads, and is in the primary nav at all because it is the hub
+				for the writing that makes this site indexable. Every chapter study
+				hangs off /study, and until now the only site-wide link to it was one
+				line in the footer — so the section carrying all of our original
+				work had the weakest internal linking on the site, while /versions,
+				which is a list of other people's translations, sat in the header.
+
+				`startsWith('/study')` alone would miss the studies themselves: they
+				live at the site root (/john/3, not /study/john/3), so a reader on a
+				chapter study would see no nav item marked current. There is no
+				prefix that identifies them — 66 book slugs at the root is the
+				route's whole shape — so this matches nothing beyond the hub and its
+				own path rather than guessing.
+			*/}
+			<a href="/study" aria-current={path === '/study' ? 'page' : undefined}>
+				Study
+			</a>
 			<a href="/topics" aria-current={path.startsWith('/topics') ? 'page' : undefined}>
 				Topics
 			</a>

@@ -2,7 +2,7 @@ import type { APIRoute } from 'astro';
 import { answerPath, listAnswers } from '../lib/answers';
 import { latestDate, urlsetXmlWithLastmod, xmlResponse } from '../lib/sitemap';
 
-export const GET: APIRoute = async ({ site }) => {
+export const GET: APIRoute = async ({ request, site }) => {
 	const answers = await listAnswers();
 	const reviewed = answers.map((answer) => answer.data.reviewedAt);
 
@@ -16,5 +16,6 @@ export const GET: APIRoute = async ({ site }) => {
 				lastmod: answer.data.reviewedAt,
 			})),
 		]),
+		request,
 	);
 };

@@ -74,6 +74,31 @@ export default defineConfig({
 				optional: true,
 			}),
 			/**
+			 * The same, for Google Search Console.
+			 *
+			 * Optional on the same terms and for the same reasons as the Bing
+			 * token above — public access because it is emitted into every
+			 * page's head, optional so a build without it still succeeds.
+			 *
+			 * Search Console offers several ownership proofs and this is the one
+			 * that costs nothing to keep: a DNS TXT record has to be re-found in
+			 * a registrar the next time anyone asks, and an HTML file in
+			 * public/ is a URL that has to be excluded from robots.txt and the
+			 * sitemaps by hand. The meta tag is mirrored from BING_SITE_VERIFICATION
+			 * so there is one place to look for either.
+			 *
+			 * Paste the value from Search Console → Add property → URL prefix →
+			 * "HTML tag" (the `content` attribute only) into the Vercel project's
+			 * environment variables. Verification is what unlocks the Crawl Stats
+			 * report, which is where Googlebot's pace against a rate-limited app
+			 * key becomes visible.
+			 */
+			GOOGLE_SITE_VERIFICATION: envField.string({
+				context: 'server',
+				access: 'public',
+				optional: true,
+			}),
+			/**
 			 * The version the site reads in by default: the home page CTA, the
 			 * Verse of the Day, and anywhere a version is not named in the URL.
 			 * 111 is the NIV — the most-read English translation, so it is what

@@ -33,7 +33,7 @@ import {
  * get crawled, and it makes per-sitemap coverage in Search Console read as
  * though those pages belong to whichever report is being looked at.
  */
-export const GET: APIRoute = async ({ site }) => {
+export const GET: APIRoute = async ({ request, site }) => {
 	/**
 	 * One pass per locale, awaited together.
 	 *
@@ -117,5 +117,5 @@ export const GET: APIRoute = async ({ site }) => {
 		];
 	});
 
-	return xmlResponse(urlsetXmlWithLastmod(site, entries));
+	return xmlResponse(urlsetXmlWithLastmod(site, entries), request);
 };
