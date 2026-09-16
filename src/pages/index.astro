@@ -111,12 +111,33 @@ const votdHref =
 // editorial pages get a slot here rather than relying on the footer alone.
 const answers = await listAnswers();
 const featured = catalog.slice(0, 8);
-const studies = (await listChapterBriefs())
-	.sort(
-		(left, right) =>
-			right.data.reviewedAt.getTime() - left.data.reviewedAt.getTime(),
-	)
-	.slice(0, 8);
+/**
+ * Prefer the chapters people actually search, then fill from the rest.
+ *
+ * A date sort collapses when every brief shares one review day, which is the
+ * current collection: the first eight files in glob order would have won, and
+ * Psalm 23 would not have appeared on the strongest internal-link donor.
+ */
+const FEATURED_STUDY_USFM = [
+	'PSA.23',
+	'JHN.3',
+	'ROM.8',
+	'MAT.5',
+	'PHP.4',
+	'GEN.1',
+	'PSA.91',
+	'ISA.41',
+];
+const allStudies = await listChapterBriefs();
+const studiesByUsfm = new Map(
+	allStudies.map((brief) => [brief.data.usfm, brief] as const),
+);
+const studies = [
+	...FEATURED_STUDY_USFM.map((usfm) => studiesByUsfm.get(usfm)).filter(
+		(brief): brief is NonNullable<typeof brief> => Boolean(brief),
+	),
+	...allStudies.filter((brief) => !FEATURED_STUDY_USFM.includes(brief.data.usfm)),
+].slice(0, 8);
 
 /**
  * Static, and that is the fix.
@@ -186,79 +207,79 @@ const share = figure ? await shareCardFromFigure(figure) : undefined;
 						</section>
 					) : null
 				}
-
-				{
-					studies.length > 0 ? (
-						<section>
-							<h2>Chapter studies</h2>
-							<p class="muted">
-								Original writing on the chapters people look up most, with an
-								outline, a glossary, and notes from three commentaries.
-							</p>
-							<div class="version-grid">
-								{studies.map((brief) => {
-									const [book, chapter] = brief.data.usfm.split('.');
-									return (
-										<a
-											class="tile"
-											href={chapterStudyPath(book ?? '', chapter ?? '1')}
-										>
-											<span class="tile-kicker">Study</span>
-											{brief.data.title}
-										</a>
-									);
-								})}
-							</div>
-							<p>
-								<a href="/study">All chapter studies</a>
-							</p>
-						</section>
-					) : null
-				}
-
-				{
-					answers.length > 0 ? (
-						<section>
-							<h2>Questions people ask</h2>
-							<div class="version-grid">
-								{answers.map((answer) => (
-									<a class="tile" href={answerPath(answer.id)}>
-										<span class="tile-kicker">Answer</span>
-										{answer.data.question}
-									</a>
-								))}
-							</div>
-							<p>
-								<a href="/answers">All questions</a>
-								{' · '}
-								<a href="/topics">Bible verses by topic</a>
-							</p>
-						</section>
-					) : null
-				}
-
-				{
-					featured.length > 0 ? (
-						<section>
-							<h2>English versions</h2>
-							<div class="version-grid">
-								{featured.map((version) => {
-									const slug = versionSlug(version, catalog);
-									return (
-										<a class="tile" href={versionPath(slug)}>
-											<span class="tile-kicker">{displayAbbreviation(version)}</span>
-											{version.localized_title || version.title}
-										</a>
-									);
-								})}
-							</div>
-							<p>
-								<a href="/versions">Browse all versions</a>
-							</p>
-						</section>
-					) : null
-				}
 			</div>
 		)
+	}
+
+	{
+		studies.length > 0 ? (
+			<section>
+				<h2>Chapter studies</h2>
+				<p class="muted">
+					Original writing on the chapters people look up most, with an
+					outline, a glossary, and notes from three commentaries.
+				</p>
+				<div class="version-grid">
+					{studies.map((brief) => {
+						const [book, chapter] = brief.data.usfm.split('.');
+						return (
+							<a
+								class="tile"
+								href={chapterStudyPath(book ?? '', chapter ?? '1')}
+							>
+								<span class="tile-kicker">Study</span>
+								{brief.data.title}
+							</a>
+						);
+					})}
+				</div>
+				<p>
+					<a href="/study">All chapter studies</a>
+				</p>
+			</section>
+		) : null
+	}
+
+	{
+		answers.length > 0 ? (
+			<section>
+				<h2>Questions people ask</h2>
+				<div class="version-grid">
+					{answers.map((answer) => (
+						<a class="tile" href={answerPath(answer.id)}>
+							<span class="tile-kicker">Answer</span>
+							{answer.data.question}
+						</a>
+					))}
+				</div>
+				<p>
+					<a href="/answers">All questions</a>
+					{' · '}
+					<a href="/topics">Bible verses by topic</a>
+				</p>
+			</section>
+		) : null
+	}
+
+	{
+		status === 200 && featured.length > 0 ? (
+			<section>
+				<h2>English versions</h2>
+				<div class="version-grid">
+					{featured.map((version) => {
+						const slug = versionSlug(version, catalog);
+						return (
+							<a class="tile" href={versionPath(slug)}>
+								<span class="tile-kicker">{displayAbbreviation(version)}</span>
+								{version.localized_title || version.title}
+							</a>
+						);
+					})}
+				</div>
+				<p>
+					<a href="/versions">Browse all versions</a>
+				</p>
+			</section>
+		) : null
 	}
 </BaseLayout>
