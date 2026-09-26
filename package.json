@@ -18,7 +18,8 @@
     "copy:audit": "node scripts/copy-audit.mjs",
     "books:generate": "node scripts/generate-book-slugs.mjs",
     "locales:generate": "node scripts/generate-locales.mjs",
-    "sitemap:audit": "node scripts/sitemap-audit.mjs"
+    "sitemap:audit": "node scripts/sitemap-audit.mjs",
+    "keywords": "node scripts/keywords-lookup.mjs"
   },
   "dependencies": {
     "@astrojs/vercel": "^11.0.5",

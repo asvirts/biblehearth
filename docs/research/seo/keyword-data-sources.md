@@ -220,7 +220,7 @@ from `C meaning`, which is the query the brief competes for.
 | Form | Built from | Example | Count |
 |---|---|---|---|
 | raw `q` (only if ≤10 words and ≤80 chars) | `q` | what is the seat of scoffers in psalm 1:1 | ≈3,010 |
-| shortened `q` (only where raw `q` is over the limit) | `q` cut to ≤10 words: lower-cased, punctuation and leading auxiliaries ("does", "is", "why did") dropped, verse reference and key nouns kept | does psalm 1:3 promise believers prosper | ≈2,155 |
+| shortened `q` (only where raw `q` is over the limit) | `q` kept in its own wording and cut at whole clauses: "What does <phrase> mean …?" and "What does Jesus mean by <phrase>?" become `<phrase> meaning`; anything else loses trailing clauses, then is cut at ten words without ending on a function word or splitting a verse reference. Implemented in `scripts/keywords-lookup.mjs` | whoever hates his brother is in darkness meaning; why did god add fifteen years to hezekiah's life | 2,155 |
 | phrase + `meaning` | `slug` with hyphens replaced by spaces | kiss the son meaning; like a tree planted by streams of water meaning | 5,164 |
 | verse + `meaning` | first verse of `passage` | psalm 2:12 meaning | 4,763 distinct |
 
@@ -238,8 +238,11 @@ primary scores. Where the primary forms all come back empty, use an autocomplete
 on the shortened `q` or the phrase as a binary "demand exists" flag before dropping
 the question to priority 3. Spot-check about 50 shortened forms by hand before the
 full run. The shortening is mechanical and can drop the word that carries the intent.
+The first version dropped filler words mid-sentence and produced strings nobody types
+("what the list qualities add your faith 2 peter 1"), which a keyword tool would
+return nothing for; cutting whole clauses fixed that.
 
-Together that is about 22.5k keywords: ≈$4 on DataForSEO, or about 470k Ahrefs units.
+Together that is about 23.6k unique keywords (the 2026-09-26 run: 1,159 chapters, 5,161 questions): ≈$4 on DataForSEO, about 495k Ahrefs API units, or three Keywords Explorer pastes.
 
 ## Sources
 
