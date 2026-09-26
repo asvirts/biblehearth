@@ -252,7 +252,7 @@ async function catalogue() {
 }
 
 /** Files `expand` and `score` write; anything else in a CSV is an Ahrefs export. */
-const OWN_FILES = /^(keywords|shortened-questions|scores-)/;
+const OWN_FILES = /^(?:keywords|shortened-questions|scores-chapters|scores-questions)\.csv$/;
 
 async function expand(batchSize = 2_500) {
 	// 10,000 is the most Keywords Explorer takes in one paste.
@@ -268,8 +268,6 @@ async function expand(batchSize = 2_500) {
 	if (existing.some((f) => /\.(csv|tsv)$/i.test(f) && !OWN_FILES.test(f))) {
 		throw new Error(`${dir} already holds Ahrefs exports; move them or expand on another day`);
 	}
-	// A rerun at a different size would otherwise leave the old run's extra batches behind.
-	for (const f of existing.filter((f) => /^batch-\d+\.txt$/.test(f))) await rm(join(dir, f));
 
 	/** keyword → the rows that stand behind it */
 	const rows = [];
@@ -311,6 +309,10 @@ async function expand(batchSize = 2_500) {
 	}
 
 	const unique = [...new Set(rows.map((r) => r.keyword))];
+	// Only now, with every source read, clear the old run's batches: a rerun at a
+	// different size would otherwise leave its extra files behind, and clearing
+	// them any earlier would lose them if a read above failed.
+	for (const f of existing.filter((f) => /^batch-\d+\.txt$/.test(f))) await rm(join(dir, f));
 	const BATCH = batchSize;
 	for (let i = 0; i * BATCH < unique.length; i++) {
 		const name = `batch-${String(i + 1).padStart(2, '0')}.txt`;
