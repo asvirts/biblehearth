@@ -142,3 +142,9 @@ section comes into view, which is a reader who stayed to the end of our own
 writing; its `text` property is there to answer whether spending a passage fetch
 on the full chapter changes that. `translation-switch` measures what
 `DEFAULT_VERSION_ID` and `HUB_TRANSLATION_SLUGS` currently guess at.
+
+## Agent skills
+
+Skills that work on an issue tracker (`wayfinder`, and any other that asks for one)
+use GitHub Issues on `youversion/biblehearth`. How each operation maps onto GitHub is
+in [`docs/agents/issue-tracker.md`](docs/agents/issue-tracker.md).
