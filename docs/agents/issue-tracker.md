@@ -123,4 +123,22 @@ work doesn't depend on it after all) or rule that ticket out of scope too.
    that a later `Map edit` supersedes.
 
 **Assets.** Link them from the issue: a branch, a PR, or a file in the repo. Research
-findings go on a throwaway `research/<name>` branch, linked from the ticket.
+findings go on a throwaway `research/<name>` branch, linked from the ticket. A cloud
+session that may push only to its one assigned branch writes them to
+`docs/research/<effort>/<name>.md` on that branch instead, and names the path in the
+map's Notes. Parallel research subagents each write their own file and leave
+committing to the session that spawned them, so they don't race on one branch.
+
+## Skills in this environment
+
+- `wayfinder` is installed as `anthropic-skills:wayfinder`. The
+  `mattpocock-skills:` prefix isn't installed.
+- There's no `domain-modeling` skill. Where wayfinder calls for "grilling" and
+  "domain-modeling", run `anthropic-skills:grilling` alone.
+- `research` is `anthropic-skills:research`.
+
+## Maps
+
+| Map | Destination |
+| --- | --- |
+| [Map: Grow organic search traffic to BibleHearth](https://github.com/youversion/biblehearth/issues/19) | A ranked SEO roadmap with each workstream's approach decided |
