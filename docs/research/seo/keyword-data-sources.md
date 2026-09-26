@@ -242,7 +242,7 @@ The first version dropped filler words mid-sentence and produced strings nobody 
 ("what the list qualities add your faith 2 peter 1"), which a keyword tool would
 return nothing for; cutting whole clauses fixed that.
 
-Together that is about 23.6k unique keywords (the 2026-09-26 run: 1,159 chapters, 5,161 questions): ≈$4 on DataForSEO, about 495k Ahrefs API units, or three Keywords Explorer pastes.
+Together that is about 23.6k unique keywords (the 2026-09-26 run: 1,159 chapters, 5,161 questions, 23,590 keywords): ≈$4 on DataForSEO, about 495k Ahrefs API units, or ten Keywords Explorer pastes of 2,500 (Lite's report cap; three pastes of 10,000 on Standard and up).
 
 ## Sources
 

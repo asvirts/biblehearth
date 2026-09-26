@@ -1,13 +1,15 @@
 /**
  * Search demand for the writing backlog, looked up in Ahrefs Keywords Explorer.
  *
- *   npm run keywords -- expand            write the paste batches for today
- *   npm run keywords -- score <dir>       score from the Ahrefs exports in <dir>
+ *   npm run keywords -- expand [--batch N]   write the paste batches for today
+ *   npm run keywords -- score <dir>          score from the Ahrefs exports in <dir>
  *
  * `expand` turns every unbriefed chapter and every unpublished catalogue question
  * into the forms people actually type, and writes them to
- * content-ops/keywords/<date>/batch-N.txt, at most 10,000 to a file because that
- * is what Keywords Explorer takes in one paste. It also writes keywords.csv,
+ * content-ops/keywords/<date>/batch-N.txt. A batch is 2,500 keywords by default,
+ * which is what a Keywords Explorer report shows on Ahrefs Lite: paste more and
+ * the export silently stops at the cap. On Standard (30,000 rows a report) pass
+ * `--batch 10000`, the most one paste takes. It also writes keywords.csv,
  * which maps each keyword back to the chapter or question it stands for, and
  * shortened-questions.csv for the hand check the shortening needs before any
  * export is paid for.
@@ -62,6 +64,11 @@ const BOOKS = {
 	REV: ['Revelation', 22],
 };
 
+/** Every word of every book name, for spotting a reference a cut would split. */
+const BOOK_WORDS = new Set(
+	Object.values(BOOKS).flatMap(([name]) => name.toLowerCase().split(' ').filter((w) => !/^\d$/.test(w))),
+);
+
 /** The name in front of a chapter number: "Psalm 23", never "Psalms 23". */
 const chapterName = (usfm) => (usfm === 'PSA' ? 'Psalm' : BOOKS[usfm][0]);
 
@@ -113,7 +120,7 @@ const DANGLING = new Set([
 	'to', 'your', 'in', 'of', 'the', 'a', 'an', 'from', 'by', 'for', 'on', 'with',
 	'that', 'will', 'and', 'or', 'is', 'are', 'can', 'could', 'would', 'should',
 	'into', 'at', 'his', 'her', 'their', 'my', 'our', 'its', 'as', 'but', 'so',
-	'he', 'she', 'they', 'it', 'we',
+	'he', 'she', 'they', 'it', 'we', 'according',
 ]);
 
 /** Where a trailing clause starts: a comma, or a word that opens one. */
@@ -162,6 +169,12 @@ export function shorten(question) {
 		if (!fits(`${normalise(quoted)} meaning`) && comma > 0 && words(quoted.slice(0, comma)).length >= 3) {
 			quoted = quoted.slice(0, comma);
 		}
+		// "the fool says in his heart there is no god" is a better lookup than the
+		// same line trimmed to make room for "meaning": trimming drops the last
+		// word, which is usually the one the line is about.
+		if (!fits(`${normalise(meaning[1])} meaning`) && fits(normalise(meaning[1]))) {
+			return normalise(meaning[1]);
+		}
 		const phrase = words(normalise(quoted));
 		while ((!fits([...phrase, 'meaning'].join(' ')) || DANGLING.has(phrase.at(-1))) && phrase.length > 1) phrase.pop();
 		return [...phrase, 'meaning'].join(' ');
@@ -180,10 +193,14 @@ export function shorten(question) {
 	const all = words(normalise(cut));
 	const out = all.slice(0, MAX_WORDS);
 	while (out.join(' ').length > MAX_CHARS) out.pop();
-	// A cut that lands inside "in 2 Kings 20" drops the whole reference.
-	if (out.length < all.length && /^\d/.test(all[out.length])) {
-		const at = out.findLastIndex((w) => w === 'in' || w === 'from');
-		if (at > 3) out.length = at;
+	// A cut that lands inside "in 2 Kings 20" or "in 1 John 3" drops the whole
+	// reference rather than leaving "in 2 kings" or "in 1".
+	const next = all[out.length];
+	const splitsReference =
+		out.length < all.length &&
+		(/^\d/.test(next) || (BOOK_WORDS.has(next) && /^[123]$/.test(out.at(-1))));
+	if (splitsReference) {
+		while (out.length > 4 && (/^\d/.test(out.at(-1)) || BOOK_WORDS.has(out.at(-1)))) out.pop();
 	}
 	while (out.length > 4 && DANGLING.has(out.at(-1))) out.pop();
 	return out.join(' ');
@@ -234,7 +251,7 @@ async function catalogue() {
 	return out;
 }
 
-async function expand() {
+async function expand(batchSize = 2_500) {
 	const date = new Date().toISOString().slice(0, 10);
 	const dir = join('content-ops/keywords', date);
 	await mkdir(dir, { recursive: true });
@@ -279,9 +296,10 @@ async function expand() {
 	}
 
 	const unique = [...new Set(rows.map((r) => r.keyword))];
-	const BATCH = 10_000;
+	const BATCH = batchSize;
 	for (let i = 0; i * BATCH < unique.length; i++) {
-		await writeFile(join(dir, `batch-${i + 1}.txt`), unique.slice(i * BATCH, (i + 1) * BATCH).join('\n') + '\n');
+		const name = `batch-${String(i + 1).padStart(2, '0')}.txt`;
+		await writeFile(join(dir, name), unique.slice(i * BATCH, (i + 1) * BATCH).join('\n') + '\n');
 	}
 	await writeFile(join(dir, 'keywords.csv'), toCsv(['keyword', 'item', 'form'], rows));
 	await writeFile(join(dir, 'shortened-questions.csv'), toCsv(['slug', 'question', 'shortened'], shortened));
@@ -339,8 +357,16 @@ async function score(dir) {
 	const metrics = new Map();
 	const exports = (await readdir(dir)).filter((f) => /\.(csv|tsv)$/i.test(f) && !/^(keywords|shortened-questions|scores-)/.test(f));
 	if (!exports.length) throw new Error(`no Ahrefs exports in ${dir}`);
+	// An export that stops exactly at a plan's report cap may have been cut short.
+	// A full 2,500-keyword batch also lands there, so the per-batch coverage
+	// printed below is what tells the two apart.
+	const CAPS = new Set([2_500, 30_000, 75_000, 150_000]);
 	for (const file of exports) {
-		for (const [k, v] of parseExport(await readFile(join(dir, file)))) metrics.set(k, v);
+		const rows = parseExport(await readFile(join(dir, file)));
+		if (CAPS.has(rows.size)) {
+			console.warn(`${file}: exactly ${rows.size} rows, a report cap. If its batch below is short, re-export it in smaller pieces.`);
+		}
+		for (const [k, v] of rows) metrics.set(k, v);
 	}
 
 	// Written by `expand` from normalised text, so it never holds a comma or a quote.
@@ -400,13 +426,19 @@ async function score(dir) {
 	const looked = new Set(mapping.map((m) => m.keyword));
 	const found = [...looked].filter((k) => metrics.has(k)).length;
 	console.log(`${found} of ${looked.size} keywords found in ${exports.length} export(s)`);
+	// Per batch, so a batch that was never exported, or exported short, shows up.
+	for (const file of (await readdir(dir)).filter((f) => /^batch-\d+\.txt$/.test(f)).sort()) {
+		const batch = (await readFile(join(dir, file), 'utf8')).split('\n').filter(Boolean);
+		const hit = batch.filter((k) => metrics.has(k)).length;
+		console.log(`  ${file}: ${hit} of ${batch.length} in the exports`);
+	}
 	console.log(`${chapters.length} chapters and ${questions.length} questions scored; ${missing} with no data on any form`);
 }
 
-const [command, arg] = process.argv.slice(2);
-if (command === 'expand') await expand();
+const [command, arg, value] = process.argv.slice(2);
+if (command === 'expand') await expand(arg === '--batch' ? Number(value) : undefined);
 else if (command === 'score') await score(arg);
 else {
-	console.error('usage: npm run keywords -- expand | score <dir>');
+	console.error('usage: npm run keywords -- expand [--batch N] | score <dir>');
 	process.exit(1);
 }
