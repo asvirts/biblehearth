@@ -28,7 +28,7 @@
  *   that verse. It is left out of the score and kept only as a tiebreak, or one
  *   popular verse would lift every question anchored to it.
  */
-import { mkdir, readdir, readFile, writeFile } from 'node:fs/promises';
+import { mkdir, readdir, readFile, rm, writeFile } from 'node:fs/promises';
 import { basename, join } from 'node:path';
 
 /**
@@ -251,10 +251,25 @@ async function catalogue() {
 	return out;
 }
 
+/** Files `expand` and `score` write; anything else in a CSV is an Ahrefs export. */
+const OWN_FILES = /^(keywords|shortened-questions|scores-)/;
+
 async function expand(batchSize = 2_500) {
+	// 10,000 is the most Keywords Explorer takes in one paste.
+	if (!Number.isInteger(batchSize) || batchSize < 1 || batchSize > 10_000) {
+		throw new Error(`--batch must be a whole number from 1 to 10000, not ${batchSize}`);
+	}
 	const date = new Date().toISOString().slice(0, 10);
 	const dir = join('content-ops/keywords', date);
 	await mkdir(dir, { recursive: true });
+	const existing = await readdir(dir);
+	// Re-expanding rewrites keywords.csv, which exports already in the folder
+	// were scored against, so it stops rather than quietly detaching them.
+	if (existing.some((f) => /\.(csv|tsv)$/i.test(f) && !OWN_FILES.test(f))) {
+		throw new Error(`${dir} already holds Ahrefs exports; move them or expand on another day`);
+	}
+	// A rerun at a different size would otherwise leave the old run's extra batches behind.
+	for (const f of existing.filter((f) => /^batch-\d+\.txt$/.test(f))) await rm(join(dir, f));
 
 	/** keyword → the rows that stand behind it */
 	const rows = [];
@@ -355,7 +370,7 @@ function parseExport(buffer) {
 async function score(dir) {
 	if (!dir) throw new Error('usage: npm run keywords -- score <dir>');
 	const metrics = new Map();
-	const exports = (await readdir(dir)).filter((f) => /\.(csv|tsv)$/i.test(f) && !/^(keywords|shortened-questions|scores-)/.test(f));
+	const exports = (await readdir(dir)).filter((f) => /\.(csv|tsv)$/i.test(f) && !OWN_FILES.test(f));
 	if (!exports.length) throw new Error(`no Ahrefs exports in ${dir}`);
 	// An export that stops exactly at a plan's report cap may have been cut short.
 	// A full 2,500-keyword batch also lands there, so the per-batch coverage
