@@ -33,6 +33,15 @@ const ENDPOINT = 'https://api.indexnow.org/IndexNow';
 /** Protocol ceiling for a single POST. */
 const BATCH_LIMIT = 10_000;
 
+/**
+ * How long one POST may take before it counts as failed.
+ *
+ * This runs inside the deploy, so an endpoint that accepts the connection and
+ * then says nothing would otherwise hold the build open until the platform gave
+ * up on it.
+ */
+const REQUEST_TIMEOUT_MS = 30_000;
+
 /** The spec's key rule: 8-128 of [a-zA-Z0-9-], hosted as a bare .txt file. */
 const KEY_FILE = /^([a-zA-Z0-9-]{8,128})\.txt$/;
 
@@ -178,23 +187,35 @@ for (let start = 0; start < urls.length; start += BATCH_LIMIT) {
 		method: 'POST',
 		headers: { 'Content-Type': 'application/json; charset=utf-8' },
 		body: JSON.stringify({ host: site.host, key, keyLocation, urlList: batch }),
+		signal: AbortSignal.timeout(REQUEST_TIMEOUT_MS),
 	});
-	let response = await submit();
-	// First-ever submissions can 403 while IndexNow is still fetching the
-	// key file; the same payload then succeeds. Retry once, then report.
-	if (response.status === 403) {
-		response = await submit();
-	}
 
-	const meaning = MEANING[response.status] ?? (await response.text()).trim();
-	const line = `${batch.length} URLs → ${response.status} ${meaning}`;
+	try {
+		let response = await submit();
+		// First-ever submissions can 403 while IndexNow is still fetching the
+		// key file; the same payload then succeeds. Retry once, then report.
+		if (response.status === 403) {
+			response = await submit();
+		}
 
-	// 202 is a success: the key is being checked out of band, and the URLs are
-	// already queued. Treating it as a failure would send us re-submitting.
-	if (response.ok) {
-		console.log(line);
-	} else {
-		console.error(line);
+		const meaning = MEANING[response.status] ?? (await response.text()).trim();
+		const line = `${batch.length} URLs → ${response.status} ${meaning}`;
+
+		// 202 is a success: the key is being checked out of band, and the URLs are
+		// already queued. Treating it as a failure would send us re-submitting.
+		if (response.ok) {
+			console.log(line);
+		} else {
+			console.error(line);
+			failed += 1;
+		}
+	} catch (error) {
+		// No answer at all — DNS, a reset connection, the timeout above. It is a
+		// failed submission like any other, and has to be handled like one: left to
+		// throw, it exits non-zero out of `postbuild`, which fails the deploy this
+		// script promises never to fail.
+		const reason = error?.cause?.code ?? error?.message ?? String(error);
+		console.error(`${batch.length} URLs → no response (${reason})`);
 		failed += 1;
 	}
 }

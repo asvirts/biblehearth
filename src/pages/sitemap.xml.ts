@@ -1,7 +1,7 @@
 import type { APIRoute } from 'astro';
 import { listAnswers } from '../lib/answers';
 import { briefedChapters } from '../lib/commentary';
-import { LOCALES } from '../lib/i18n/locales';
+import { DEFAULT_LOCALE, LOCALES } from '../lib/i18n/locales';
 import {
 	latestDate,
 	localeSitemapPath,
@@ -24,11 +24,17 @@ import { listTopics } from '../lib/topics';
  * live in git, where nothing at runtime can see them. A page sitemap that
  * claimed the deploy time instead would be reporting "everything changed"
  * on every deploy, which is the fabricated lastmod the whole file avoids.
+ *
+ * English briefs only, and that is the same rule `sitemap-pages.xml` applies to
+ * `/study` itself: it is the English hub, so a Portuguese brief does not change
+ * it. The commentary sitemap, which lists every locale's briefs, takes the newest
+ * of all of them.
  */
 async function childLastmods(): Promise<Record<string, Date | undefined>> {
-	const [topics, answers, briefsPerLocale] = await Promise.all([
+	const [topics, answers, englishBriefs, briefsPerLocale] = await Promise.all([
 		listTopics(),
 		listAnswers(),
+		briefedChapters(DEFAULT_LOCALE),
 		Promise.all(LOCALES.map((locale) => briefedChapters(locale))),
 	]);
 
@@ -37,7 +43,9 @@ async function childLastmods(): Promise<Record<string, Date | undefined>> {
 	);
 
 	return {
-		'/sitemap-pages.xml': briefs,
+		'/sitemap-pages.xml': latestDate(
+			englishBriefs.map((chapter) => chapter.reviewedAt),
+		),
 		'/sitemap-topics.xml': latestDate(
 			topics.map((topic) => topic.data.reviewedAt),
 		),

@@ -79,6 +79,32 @@ type Strings = {
 	commentaries: (reference: string) => string;
 	/** Lead-in to the translation links: "Read Psalm 91 in …". */
 	readIn: (reference: string) => string;
+	/** Lead-in to the links under a chapter already shown in full. */
+	readInOther: (reference: string) => string;
+	/** Provenance line at the foot of a written study. Takes the review date. */
+	reviewedBy: (date: string) => string;
+	/**
+	 * The words on a book's study page.
+	 *
+	 * These say only what is true of that locale's page. English carries the
+	 * republished commentaries, so its copy promises them; a translated book has a
+	 * grid of chapters and whichever studies somebody has written, so its copy
+	 * promises nothing more.
+	 */
+	book: {
+		/** `<title>`. */
+		title: (book: string) => string;
+		/** Meta description. */
+		description: (book: string, chapters: number) => string;
+		/** Opening paragraph. `written` is how many chapters have a study. */
+		lede: (book: string, chapters: number, written: number) => string;
+		/** `<h2>` over the chapter grid. */
+		chaptersIn: (book: string) => string;
+		/** Note under the grid, when at least one chapter is written. */
+		writtenNote: string;
+		/** `<h2>` over the list of written studies. */
+		writtenIn: (book: string) => string;
+	};
 	/**
 	 * The note under an `<h1>` where the two psalm numbering traditions differ.
 	 *
@@ -124,6 +150,24 @@ const EN: Strings = {
 	},
 	commentaries: (r) => `What the commentaries say about ${r}`,
 	readIn: (r) => `Read ${r} in`,
+	readInOther: (r) => `Read ${r} in another translation:`,
+	reviewedBy: (date) =>
+		`Summary, outline and questions written and reviewed by BibleHearth, ${date}.`,
+	book: {
+		title: (book) => `${book} | Summary, Chapters, and Commentary`,
+		description: (book, chapters) =>
+			`Study all ${chapters} ${chapters === 1 ? 'chapter' : 'chapters'} of ${book} with chapter outlines, clear explanations, and notes from three commentaries.`,
+		lede: (book, chapters, written) =>
+			`The book of ${book} has ${chapters} ${chapters === 1 ? 'chapter' : 'chapters'}. Each page includes the chapter, an outline of its movement, and notes from three commentaries.${
+				written
+					? ` ${written} ${written === 1 ? 'chapter has' : 'chapters have'} a written summary in our own words.`
+					: ''
+			}`,
+		chaptersIn: (book) => `Chapters in ${book}`,
+		writtenNote:
+			'Highlighted chapters include an original BibleHearth study. The remaining chapters still include the commentary notes.',
+		writtenIn: (book) => `Written summaries in ${book}`,
+	},
 	psalmNumbering: (hebrew) => `Psalm ${hebrew} in Hebrew numbering.`,
 	psalmNumberingShared: (hebrew, septuagint) =>
 		`Part of Psalm ${hebrew} in Hebrew numbering (Septuagint ${septuagint}).`,
@@ -169,6 +213,25 @@ const PT: Strings = {
 	},
 	commentaries: (r) => `${r}: o que dizem os comentários`,
 	readIn: (r) => `${r} em outras traduções:`,
+	readInOther: (r) => `${r} em outras traduções:`,
+	reviewedBy: (date) =>
+		`Resumo, roteiro e perguntas escritos e revisados pelo BibleHearth, ${date}.`,
+	// The book name leads and a colon follows, for the reason in the header note:
+	// it takes an article in some books and not in others.
+	book: {
+		title: (book) => `${book} | Estudo bíblico e resumos dos capítulos`,
+		description: (book, chapters) =>
+			`${book}: ${chapters} ${chapters === 1 ? 'capítulo' : 'capítulos'}. Leia os estudos já escritos, com roteiro versículo por versículo, ideias principais e perguntas frequentes.`,
+		lede: (book, chapters, written) =>
+			`${book}: ${chapters} ${chapters === 1 ? 'capítulo' : 'capítulos'}.${
+				written
+					? ` ${written} ${written === 1 ? 'capítulo tem' : 'capítulos têm'} um estudo escrito por nós, em linguagem simples.`
+					: ''
+			}`,
+		chaptersIn: (book) => `${book}: capítulos`,
+		writtenNote: 'Os capítulos em destaque têm um estudo original do BibleHearth.',
+		writtenIn: (book) => `${book}: estudos escritos`,
+	},
 	psalmNumbering: (hebrew) => `Salmo ${hebrew} na numeração hebraica.`,
 	psalmNumberingShared: (hebrew, septuagint) =>
 		`Parte do Salmo ${hebrew} na numeração hebraica (Septuaginta ${septuagint}).`,
@@ -214,6 +277,23 @@ const ES: Strings = {
 	},
 	commentaries: (r) => `${r}: lo que dicen los comentarios`,
 	readIn: (r) => `${r} en otras traducciones:`,
+	readInOther: (r) => `${r} en otras traducciones:`,
+	reviewedBy: (date) =>
+		`Resumen, recorrido y preguntas escritos y revisados por BibleHearth, ${date}.`,
+	book: {
+		title: (book) => `${book} | Estudio bíblico y resúmenes de los capítulos`,
+		description: (book, chapters) =>
+			`${book}: ${chapters} ${chapters === 1 ? 'capítulo' : 'capítulos'}. Lee los estudios ya escritos, con recorrido versículo por versículo, ideas principales y preguntas frecuentes.`,
+		lede: (book, chapters, written) =>
+			`${book}: ${chapters} ${chapters === 1 ? 'capítulo' : 'capítulos'}.${
+				written
+					? ` ${written} ${written === 1 ? 'capítulo tiene' : 'capítulos tienen'} un estudio escrito por nosotros, en lenguaje sencillo.`
+					: ''
+			}`,
+		chaptersIn: (book) => `${book}: capítulos`,
+		writtenNote: 'Los capítulos destacados tienen un estudio original de BibleHearth.',
+		writtenIn: (book) => `${book}: estudios escritos`,
+	},
 	psalmNumbering: (hebrew) => `Salmo ${hebrew} en la numeración hebrea.`,
 	psalmNumberingShared: (hebrew, septuagint) =>
 		`Parte del Salmo ${hebrew} en la numeración hebrea (Septuaginta ${septuagint}).`,

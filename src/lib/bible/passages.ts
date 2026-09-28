@@ -39,11 +39,27 @@ export type LoadedPassage = {
 	passage: BiblePassage | null;
 };
 
+export type LoadedPassages = {
+	passages: Map<string, BiblePassage | null>;
+	/**
+	 * How many passages could not be fetched, as opposed to not existing.
+	 *
+	 * `getPassageHtml` answers null for text the upstream does not have and throws
+	 * when it could not ask. Both come back from here as null, so that one missing
+	 * quotation cannot take a page down, but only the second is temporary — and a
+	 * page has to know which it is looking at. Cached as though it were complete, a
+	 * page whose verses failed to load is served without them for a day; see
+	 * `DEGRADED_CACHE_CONTROL`.
+	 */
+	failed: number;
+};
+
 export async function loadPassages(
 	versionId: number,
 	refs: readonly string[],
-): Promise<Map<string, BiblePassage | null>> {
+): Promise<LoadedPassages> {
 	const unique = [...new Set(refs)];
+	let failed = 0;
 	const loaded = await mapWithConcurrency(
 		unique,
 		4,
@@ -53,9 +69,15 @@ export async function loadPassages(
 			passage: await getPassageHtml(versionId, usfm, {
 				headings: false,
 				notes: false,
-			}).catch(() => null),
+			}).catch(() => {
+				failed += 1;
+				return null;
+			}),
 		}),
 	);
 
-	return new Map(loaded.map((entry) => [entry.usfm, entry.passage]));
+	return {
+		passages: new Map(loaded.map((entry) => [entry.usfm, entry.passage])),
+		failed,
+	};
 }

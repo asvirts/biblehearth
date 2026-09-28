@@ -48,7 +48,9 @@ export function pageSitemapPaths(versionSlugs: readonly string[]): string[] {
 		CONTACT_PATH,
 		PRIVACY_PATH,
 		'/attributions',
-		...unique.map(versionPath),
+		// Not `.map(versionPath)`: `map` passes the index as a second argument, and
+		// `versionPath`'s second parameter is the locale.
+		...unique.map((slug) => versionPath(slug)),
 	];
 }
 
@@ -312,7 +314,7 @@ function escapeXml(value: string): string {
 		.replaceAll("'", '&apos;');
 }
 
-async function gzipUtf8(body: string): Promise<Uint8Array> {
+async function gzipUtf8(body: string): Promise<ArrayBuffer> {
 	const stream = new Blob([body]).stream().pipeThrough(new CompressionStream('gzip'));
-	return new Uint8Array(await new Response(stream).arrayBuffer());
+	return new Response(stream).arrayBuffer();
 }

@@ -54,6 +54,7 @@ const { anchor, views } = answer.data;
 let version: BibleVersion | null = null;
 let readerSlug = '';
 let passages = new Map<string, BiblePassage | null>();
+let failedPassages = 0;
 let upstreamStatus = 200;
 
 try {
@@ -64,7 +65,10 @@ try {
 	version = defaultVersion;
 	if (version) {
 		readerSlug = versionSlug(version, catalog.length ? catalog : [version]);
-		passages = await loadPassages(version.id, answerRefs(answer));
+		({ passages, failed: failedPassages } = await loadPassages(
+			version.id,
+			answerRefs(answer),
+		));
 	}
 } catch (error) {
 	upstreamStatus = errorStatus(error);
@@ -82,8 +86,12 @@ try {
  * `DEGRADED_CACHE_CONTROL` is what keeps this from caching a passage-less page
  * for a day. 503 is reserved for a page with nothing on it, which this cannot
  * be — the entry either loaded or 404'd above.
+ *
+ * Failed passages count too, not only a failed catalogue: the catalogue is held
+ * for a week past its refresh point, so during a throttle it still loads while
+ * every uncached passage does not.
  */
-const degraded = upstreamStatus !== 200 || !version;
+const degraded = upstreamStatus !== 200 || !version || failedPassages > 0;
 setCacheControl(
 	Astro.response,
 	degraded ? DEGRADED_CACHE_CONTROL : READER_CACHE_CONTROL,

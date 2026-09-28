@@ -43,7 +43,7 @@ export const GET: APIRoute = async ({ site }) => {
 	const body = [
 		'# BibleHearth',
 		'',
-		'> Free Bible reading and clear study material for people who are still getting oriented to Scripture, including nineteen English translations and original writing on chapters, topics, and common questions.',
+		'> Free Bible reading and clear study material for people who are still getting oriented to Scripture, including a choice of English translations and original writing on chapters, topics, and common questions.',
 		'',
 		'The reader under /bible/ serves Scripture licensed from its publishers. That',
 		'text is not reproduced as',
@@ -92,10 +92,14 @@ export const GET: APIRoute = async ({ site }) => {
 		'',
 		'## Optional',
 		'',
+		// The home page, not `/bible`: there is no index at that path (it is a 404),
+		// and the reader lives under a version, `/bible/<version>`. The count is left
+		// out on purpose — the catalogue comes from the upstream and this file makes
+		// no upstream calls, so a number here was wrong the day the catalogue was cut.
 		entry(
 			'Read the Bible',
-			absoluteUrl(site, '/bible'),
-			'The reader. Nineteen English translations, book and chapter indexes, and a page per verse. Licensed text, so there is no markdown twin.',
+			absoluteUrl(site, '/'),
+			'Start reading in an English translation, with book and chapter indexes and a page per verse. Licensed text, so there is no markdown twin.',
 		),
 		entry(
 			'Study index',

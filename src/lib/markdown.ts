@@ -1,6 +1,10 @@
 import { getEntries } from 'astro:content';
 import { answerPath, type Answer } from './answers';
-import { formatReference, localeChapterReference } from './bible/refs';
+import {
+	formatReference,
+	localeChapterReference,
+	localeReference,
+} from './bible/refs';
 import { absoluteUrl, verseHubPath } from './bible/urls';
 import { chapterStudyPath, type ChapterBrief } from './commentary';
 import { figureMarkdownCredit } from './images/types';
@@ -53,9 +57,18 @@ function link(label: string, href: string): string {
 	return `[${inline(label)}](${href})`;
 }
 
-/** `Romans 8:1` as a link to its verse hub, or bare when it has no hub. */
-function citation(usfm: string, site: URL | undefined): string {
-	const label = formatReference(usfm);
+/**
+ * `Romans 8:1` as a link to its verse hub, or bare when it has no hub.
+ *
+ * The label is written for the twin's own locale; the link is the English hub
+ * either way, because that is the only hub there is (see `verseHubPath`).
+ */
+function citation(
+	usfm: string,
+	site: URL | undefined,
+	locale: Locale = DEFAULT_LOCALE,
+): string {
+	const label = localeReference(locale, usfm);
 	const path = verseHubPath(usfm);
 	return path ? link(label, absoluteUrl(site, path)) : label;
 }
@@ -83,7 +96,7 @@ async function relatedTopicLinks(
 	if (refs.length === 0) {
 		return [];
 	}
-	const topics = await getEntries(refs);
+	const topics = await getEntries([...refs]);
 	return topics
 		.filter((topic) => topic && !topic.data.draft)
 		.map((topic) =>
@@ -160,7 +173,7 @@ export async function chapterBriefMarkdown(
 		...data.outline.flatMap((entry) => [
 			heading(
 				3,
-				`${citation(`${bookUsfm}.${chapterId}.${entry.verses}`, site)} — ${entry.heading}`,
+				`${citation(`${bookUsfm}.${chapterId}.${entry.verses}`, site, locale)} — ${entry.heading}`,
 			),
 			inline(entry.note),
 		]),
@@ -184,7 +197,7 @@ export async function chapterBriefMarkdown(
 
 		data.keyVerses.length ? heading(2, t.keyVerses(reference)) : null,
 		...data.keyVerses.flatMap((verse) => [
-			heading(3, citation(verse.usfm, site)),
+			heading(3, citation(verse.usfm, site, locale)),
 			inline(verse.why),
 		]),
 

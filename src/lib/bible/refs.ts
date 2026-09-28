@@ -1,5 +1,5 @@
 import type { Locale } from '../i18n/locales';
-import { localeBookNameForChapter } from './books';
+import { bookName as localeBookName, localeBookNameForChapter } from './books';
 import { displayChapterNumber } from './psalms';
 import { bookNameForChapter, bookNameFromUsfm } from './usfm';
 
@@ -79,6 +79,27 @@ export function localeChapterReference(
 ): string {
 	const name = localeBookNameForChapter(locale, bookUsfm);
 	return `${name} ${displayChapterNumber(locale, bookUsfm, chapter)}`;
+}
+
+/**
+ * `formatReference`, written for one locale: `PSA.91.1-2` is "Salmo 91:1-2" in
+ * Portuguese and "Psalm 91:1-2" in English.
+ *
+ * For any reference printed on a translated page. `formatReference` always uses
+ * the English name, which put "Psalm 91:1" in the key-verse headings of a
+ * Portuguese study whose own title says "Salmo 91". Built on
+ * `localeChapterReference` so the book name and the chapter number stay in step.
+ */
+export function localeReference(locale: Locale, usfm: string): string {
+	const [book, chapter, verse] = usfm.split('.');
+	if (!book) {
+		return usfm;
+	}
+	if (!chapter) {
+		return localeBookName(locale, book);
+	}
+	const chapterText = localeChapterReference(locale, book, chapter);
+	return verse ? `${chapterText}:${verse}` : chapterText;
 }
 
 /**

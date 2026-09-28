@@ -1,5 +1,6 @@
 import type { APIRoute } from 'astro';
 import { usfmFromLocaleBookSlug } from '../lib/bible/books';
+import { chapterInRange, isCanonicalBook } from '../lib/bible/chapters';
 import { hebrewChapter } from '../lib/bible/psalms';
 import { isNumericChapter, isNumericVerse } from '../lib/bible/usfm';
 import { bookPath, chapterPath, versePath, versionPath } from '../lib/bible/urls';
@@ -61,6 +62,19 @@ export const GET: APIRoute = ({ url, locals }) => {
 	const normalizedChapter = hebrewChapter(locale, bookUsfm, chapter);
 	if (normalizedChapter === null) {
 		return new Response('Unknown chapter', { status: 404 });
+	}
+
+	// The toolbar keeps the chapter list of the book being read, so changing the
+	// book can carry a number the new one does not have — Psalm 119 into Ruth. The
+	// reader's answer to that is the book's own page, not a 404.
+	if (
+		isCanonicalBook(bookUsfm) &&
+		!chapterInRange(bookUsfm, normalizedChapter)
+	) {
+		return Response.redirect(
+			new URL(bookPath(version, bookUsfm, locale), url.origin),
+			302,
+		);
 	}
 
 	if (verse) {

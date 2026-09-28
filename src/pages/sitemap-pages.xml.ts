@@ -57,5 +57,6 @@ export const GET: APIRoute = async ({ request, site }) => {
 				lastmod: path === STUDY_HUB_PATH ? reviewed : undefined,
 			})),
 		),
+		request,
 	);
 };

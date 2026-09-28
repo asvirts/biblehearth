@@ -216,9 +216,13 @@ const SLUG_WITH_ID = /^([a-z0-9]+(?:-[a-z0-9]+)*)-(\d+)$/;
  * spelling inside their own locale.
  */
 export async function resolveVersion(
-	slug: string,
+	requestedSlug: string,
 	locale: Locale = DEFAULT_LOCALE,
 ): Promise<{ version: BibleVersion; slug: string } | null> {
+	// Slugs are built lower-case (see `versionSlug`), so `/bible/NIV` names the same
+	// version as `/bible/niv`. Resolving it lets the caller's `resolved.slug !==
+	// requestedSlug` check turn it into a 301, where an exact match 404'd it.
+	const slug = requestedSlug.toLowerCase();
 	const withId = slug.match(SLUG_WITH_ID);
 	if (withId) {
 		const id = Number(withId[2]);

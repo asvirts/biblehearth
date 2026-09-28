@@ -3,7 +3,8 @@ import type { BiblePassage } from '@youversion/platform-core';
 import Passage from './Passage.astro';
 import Figure from './Figure.astro';
 import type { ChapterBrief } from '../lib/commentary';
-import { formatReference } from '../lib/bible/refs';
+import { displayChapterNumber } from '../lib/bible/psalms';
+import { localeReference } from '../lib/bible/refs';
 import { bookSlugFromUsfm } from '../lib/bible/usfm';
 import { topicPath } from '../lib/topics';
 import type { EditorialFigure } from '../lib/images/types';
@@ -50,6 +51,8 @@ const [bookUsfm, chapterId = '1'] = data.usfm.split('.');
 // /verse/1-corinthians/..., and deriving it from the filename would split
 // `1-corinthians-13` at the first hyphen and produce `/verse/1/...`.
 const bookSlug = bookSlugFromUsfm(bookUsfm ?? '');
+// The chapter number as this locale writes it, for the outline's own labels.
+const shownChapter = displayChapterNumber(locale, bookUsfm ?? '', chapterId);
 ---
 
 {/* Answer-first. This paragraph is what a featured snippet quotes and what an
@@ -89,7 +92,7 @@ const bookSlug = bookSlugFromUsfm(bookUsfm ?? '');
 						class="outline-ref"
 						href={`/verse/${bookSlug}/${chapterId}/${entry.verses.split('-')[0]}`}
 					>
-						{chapterId}:{entry.verses}
+						{shownChapter}:{entry.verses}
 					</a>
 					<h3>{entry.heading}</h3>
 					<p>{entry.note}</p>
@@ -144,9 +147,9 @@ const bookSlug = bookSlugFromUsfm(bookUsfm ?? '');
 					<article class="verse-card">
 						<h3>
 							{href ? (
-								<a href={href}>{formatReference(verse.usfm)}</a>
+								<a href={href}>{localeReference(locale, verse.usfm)}</a>
 							) : (
-								formatReference(verse.usfm)
+								localeReference(locale, verse.usfm)
 							)}
 						</h3>
 						{passage ? <Passage html={passage.content} /> : null}

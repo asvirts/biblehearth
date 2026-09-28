@@ -25,10 +25,14 @@ import {
 	type BookOverview,
 } from '../../lib/commentary';
 import { READER_CACHE_CONTROL, setCacheControl } from '../../lib/http';
+import { localePath } from '../../lib/i18n/locales';
+import { strings } from '../../lib/i18n/strings';
 import { breadcrumbJsonLd, creativeWorkJsonLd } from '../../lib/seo';
 
 /** Decided by middleware; see src/middleware.ts. */
 const locale = Astro.locals.locale;
+/** Headings and copy in this locale; see lib/i18n/strings.ts. */
+const t = strings(locale);
 
 const bookSlug = Astro.params.book;
 if (!bookSlug) {
@@ -126,8 +130,8 @@ const indexable = locale.prefix ? briefedCount > 0 : true;
  */
 const externalLinks = locale.prefix ? [] : externalStudyLinks(bookUsfm, 1);
 
-const title = `${bookName} | Summary, Chapters, and Commentary`;
-const description = `Study all ${total} ${total === 1 ? 'chapter' : 'chapters'} of ${bookName} with chapter outlines, clear explanations, and notes from three commentaries.`;
+const title = t.book.title(bookName);
+const description = t.book.description(bookName, total);
 ---
 
 <BaseLayout
@@ -151,28 +155,19 @@ const description = `Study all ${total} ${total === 1 ? 'chapter' : 'chapters'} 
 	]}
 >
 	<nav class="crumbs" aria-label="Breadcrumb">
-		<a href="/">Home</a>
+		<a href={localePath(locale, '/')}>{t.home}</a>
 		<span>/</span>
-		<a href={studyHubPath(locale)}>Bible study</a>
+		<a href={studyHubPath(locale)}>{t.studyHub}</a>
 		<span>/</span>
 		<span>{bookName}</span>
 	</nav>
 
 	<h1>{bookName}</h1>
 
-	<p class="lede">
-		The book of {bookName} has {total} {total === 1 ? 'chapter' : 'chapters'}.
-		Each page includes the chapter, an outline of its movement, and notes from
-		three commentaries.
-		{
-			briefedCount
-				? ` ${briefedCount} ${briefedCount === 1 ? 'chapter has' : 'chapters have'} a written summary in our own words.`
-				: ''
-		}
-	</p>
+	<p class="lede">{t.book.lede(bookName, total, briefedCount)}</p>
 
 	<section>
-		<h2>Chapters in {bookName}</h2>
+		<h2>{t.book.chaptersIn(bookName)}</h2>
 		<div class="chapter-grid">
 			{
 				/* `briefed` is the whole reason this is an event rather than a
@@ -183,34 +178,37 @@ const description = `Study all ${total} ${total === 1 ? 'chapter' : 'chapters'} 
 				   readers actually reach for. */
 			}
 			{
-				chapters.map((chapter) => (
-					<a
-						class:list={['tile', { 'tile-briefed': Boolean(chapter.brief) }]}
-						href={chapterStudyPath(bookUsfm, chapter.id, locale)}
-						title={chapter.brief?.data.title}
-						data-va="chapter-tile"
-						data-va-chapter={`${bookSlug}/${chapter.id}`}
-						data-va-briefed={chapter.brief ? 'yes' : 'no'}
-					>
-						{chapter.label}
-					</a>
-				))
+				/* A translated chapter exists only where somebody has written it; every
+				   other one is a 404 (see `[chapter].astro`). Linking all 150 tiles of
+				   `/es/salmo` therefore sent 149 of them to a dead end, so those are
+				   plain numbers. In English every chapter has a page and stays a link. */
+			}
+			{
+				chapters.map((chapter) =>
+					locale.prefix && !chapter.brief ? (
+						<span class="tile tile-unwritten">{chapter.label}</span>
+					) : (
+						<a
+							class:list={['tile', { 'tile-briefed': Boolean(chapter.brief) }]}
+							href={chapterStudyPath(bookUsfm, chapter.id, locale)}
+							title={chapter.brief?.data.title}
+							data-va="chapter-tile"
+							data-va-chapter={`${bookSlug}/${chapter.id}`}
+							data-va-briefed={chapter.brief ? 'yes' : 'no'}
+						>
+							{chapter.label}
+						</a>
+					),
+				)
 			}
 		</div>
-		{
-			briefedCount ? (
-				<p class="muted">
-					Highlighted chapters include an original BibleHearth study. The remaining
-					chapters still include the commentary notes.
-				</p>
-			) : null
-		}
+		{briefedCount ? <p class="muted">{t.book.writtenNote}</p> : null}
 	</section>
 
 	{
 		briefedCount ? (
 			<section>
-				<h2>Written summaries in {bookName}</h2>
+				<h2>{t.book.writtenIn(bookName)}</h2>
 				<ul class="topic-links">
 					{chapters
 						.filter((chapter) => chapter.brief)
@@ -257,8 +255,13 @@ const description = `Study all ${total} ${total === 1 ? 'chapter' : 'chapters'} 
 					</section>
 				))}
 			</section>
-		) : (
+		) : locale.prefix ? null : (
+			/* A translated book page has no introductions by design, so their absence
+			   there is not an outage. The `notice` variant keeps the page to one
+			   `<h1>` and drops the link home, which is advice to leave a page that
+			   rendered. */
 			<StatusMessage
+				variant="notice"
 				title="Book introductions are temporarily unavailable"
 				message="The commentary introductions could not be loaded. The chapter pages above still work."
 			/>

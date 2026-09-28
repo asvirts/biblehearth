@@ -43,6 +43,7 @@ import {
 	type ChapterCommentary,
 } from '../../lib/commentary';
 import {
+	DEGRADED_CACHE_CONTROL,
 	READER_CACHE_CONTROL,
 	setCacheControl,
 	setLastModified,
@@ -203,7 +204,7 @@ const alternates =
  * is the difference between a reader trusting the page and a reader checking it
  * against their own Bible and concluding we cannot count.
  */
-const numbering = psalmNumberNote(locale, Number(chapterId));
+const numbering = psalmNumberNote(locale, bookUsfm, Number(chapterId));
 
 if (commentaries.length === 0 && !brief) {
 	return Astro.rewrite('/404');
@@ -227,6 +228,8 @@ let readerLinks: { slug: string; label: string }[] = [];
 let passages = new Map<string, BiblePassage | null>();
 let chapterText: BiblePassage | null = null;
 let shownSlug = '';
+// Set when a fetch failed, as opposed to there being nothing to fetch.
+let scriptureFailed = false;
 
 try {
 	const [defaultVersion, catalog] = await Promise.all([
@@ -274,7 +277,7 @@ try {
 	 * incident. Write a brief and the chapter earns its text along with its
 	 * place in the index.
 	 */
-	[chapterText, passages] = await Promise.all([
+	const [chapterResult, keyVerses] = await Promise.all([
 		brief && version
 			? // `headings: true, notes: true` is not a display preference — it is
 				// the reader page's options, and the cache key is built from them
@@ -285,23 +288,59 @@ try {
 				getPassageHtml(version.id, usfm, {
 					headings: true,
 					notes: true,
-				}).catch(() => null)
+				}).catch(() => {
+					scriptureFailed = true;
+					return null;
+				})
 			: null,
 		brief?.data.keyVerses.length && version
 			? loadPassages(
 					version.id,
 					brief.data.keyVerses.map((verse) => verse.usfm),
 				)
-			: passages,
+			: { passages, failed: 0 },
 	]);
+	chapterText = chapterResult;
+	passages = keyVerses.passages;
+	if (keyVerses.failed > 0) {
+		scriptureFailed = true;
+	}
 } catch {
 	// Reader links and scripture drop out; everything else still renders.
+	scriptureFailed = true;
 }
 
 // A version is not an alternative to itself.
 const otherVersions = readerLinks.filter((link) => link.slug !== shownSlug);
 
-setCacheControl(Astro.response, READER_CACHE_CONTROL);
+/**
+ * Whether the neighbouring chapter has a page to link to.
+ *
+ * In English every chapter of the canon does — it carries the commentaries. A
+ * translated chapter exists only where somebody has written it, and every other
+ * one is a 404, so `/pt/salmo/91` was linking to `/pt/salmo/90` and `/pt/salmo/92`
+ * for two dead ends.
+ */
+const hasStudyPage = (chapter: number) =>
+	chapterInRange(bookUsfm, chapter) &&
+	(!locale.prefix || briefs.has(`${bookUsfm}.${chapter}`));
+
+/**
+ * A briefed page that lost its Scripture is cached for minutes, not a day.
+ *
+ * Same reasoning as the topic and answer pages, and it matters more here: the
+ * catalogue and the version are held for a week past their refresh point, so
+ * during a throttle they still load while the chapter and key verses — which are
+ * only cached once somebody has asked for them — do not. `READER_CACHE_CONTROL`
+ * would pin that page, without the text it earned its place in the index for, at
+ * the edge until tomorrow. A page with no brief fetches nothing, so it has
+ * nothing to lose.
+ */
+const degraded = Boolean(brief) && (scriptureFailed || !version);
+setCacheControl(
+	Astro.response,
+	degraded ? DEGRADED_CACHE_CONTROL : READER_CACHE_CONTROL,
+);
 // Only the briefed chapters have a date worth stating. The rest are `noindex`
 // commentary whose "last modified" would mean nothing but the deploy.
 if (brief) {
@@ -544,7 +583,7 @@ const ogType = brief ? 'article' : 'website';
 						<Passage html={chapterText.content} />
 						{otherVersions.length ? (
 							<p class="read-in">
-								Read {reference} in another translation:{' '}
+								{t.readInOther(reference)}{' '}
 								{otherVersions.map((link, index) => (
 									<>
 										{index > 0 ? ' · ' : ''}
@@ -602,8 +641,12 @@ const ogType = brief ? 'article' : 'website';
 					/>
 				))}
 			</div>
-		) : (
+		) : locale.prefix ? null : (
+			/* A translated page has no commentary by design, so an empty stack there
+			   is not an outage. Where it is one, the page already has its `<h1>`, and
+			   a second is what the `notice` variant exists to avoid. */
 			<StatusMessage
+				variant="notice"
 				title="Commentary is temporarily unavailable"
 				message="The commentary notes for this chapter could not be loaded. Please try again shortly."
 			/>
@@ -636,18 +679,18 @@ const ogType = brief ? 'article' : 'website';
 
 	<nav class="pager">
 		{
-			Number(chapterId) > 1 ? (
+			hasStudyPage(Number(chapterId) - 1) ? (
 				<a href={chapterStudyPath(bookUsfm, Number(chapterId) - 1, locale)}>
-					{bookName} {Number(chapterId) - 1}
+					{localeChapterReference(locale, bookUsfm, Number(chapterId) - 1)}
 				</a>
 			) : (
 				<span />
 			)
 		}
 		{
-			chapterInRange(bookUsfm, Number(chapterId) + 1) ? (
+			hasStudyPage(Number(chapterId) + 1) ? (
 				<a href={chapterStudyPath(bookUsfm, Number(chapterId) + 1, locale)}>
-					{bookName} {Number(chapterId) + 1}
+					{localeChapterReference(locale, bookUsfm, Number(chapterId) + 1)}
 				</a>
 			) : (
 				<span />
@@ -659,17 +702,22 @@ const ogType = brief ? 'article' : 'website';
 		{
 			reviewed ? (
 				<p class="muted">
-					Summary, outline and questions written and reviewed by BibleHearth,
-					{' '}
-					{reviewed}. Grounded in the commentaries above; wording is our own.
+					{t.reviewedBy(reviewed)}
+					{commentaries.length
+						? ' Grounded in the commentaries above; wording is our own.'
+						: ''}
 				</p>
 			) : null
 		}
-		<p class="muted">
-			Commentary text belongs to the authors named beside it. Tyndale Open Study
-			Notes are used under CC BY-SA 4.0; Matthew Henry and
-			Jamieson-Fausset-Brown are public domain. See{' '}
-			<a href="/attributions">attributions</a> for the full list.
-		</p>
+		{
+			commentaries.length ? (
+				<p class="muted">
+					Commentary text belongs to the authors named beside it. Tyndale Open Study
+					Notes are used under CC BY-SA 4.0; Matthew Henry and
+					Jamieson-Fausset-Brown are public domain. See{' '}
+					<a href="/attributions">attributions</a> for the full list.
+				</p>
+			) : null
+		}
 	</footer>
 </BaseLayout>

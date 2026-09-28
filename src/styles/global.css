@@ -806,6 +806,14 @@ h1 {
 	box-shadow: inset 0 0 0 1px var(--ember);
 }
 
+/* A chapter with no page to open: a number, not a link, so no hover state. */
+.tile-unwritten {
+	color: var(--muted);
+}
+.tile-unwritten:hover {
+	border-color: var(--line);
+}
+
 .book-overviews {
 	margin-block-start: 3rem;
 }

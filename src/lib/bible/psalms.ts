@@ -251,16 +251,26 @@ export function hebrewChapter(
  * what lets a page say "part of" instead of claiming a false equivalence. A
  * reader who came for LXX 114 and got the whole of Hebrew 116 deserves to be
  * told why the page is longer than the psalm they asked for.
+ *
+ * Takes the book, like the two functions above it, so a caller can hand any
+ * chapter of any book to it. The Psalms are the only book with two numberings:
+ * without the guard, Romans 12 in Russian was told it was "Psalm 12 in Hebrew
+ * numbering".
+ *
+ * Hebrew 9 is the case the equal-numbers shortcut gets wrong. It is also 9 in the
+ * Greek, but Greek 9 is Hebrew 9 and 10 together, so the page holds half of it
+ * and has to say so.
  */
 export function psalmNumberNote(
 	locale: Locale,
+	bookUsfm: string,
 	hebrewPsalm: number,
 ): { hebrew: number; septuagint: number; shared: boolean } | null {
-	if (psalmNumbering(locale) === 'hebrew') {
+	if (bookUsfm.toUpperCase() !== 'PSA' || psalmNumbering(locale) === 'hebrew') {
 		return null;
 	}
 	const septuagint = hebrewToSeptuagint(hebrewPsalm);
-	if (septuagint === null || septuagint === hebrewPsalm) {
+	if (septuagint === null) {
 		return null;
 	}
 	const shared = DIVERGENCES.some(
@@ -268,5 +278,8 @@ export function psalmNumberNote(
 			row.hebrew.includes(hebrewPsalm) &&
 			(row.hebrew.length > 1 || row.septuagint.length > 1),
 	);
+	if (septuagint === hebrewPsalm && !shared) {
+		return null;
+	}
 	return { hebrew: hebrewPsalm, septuagint, shared };
 }

@@ -31,6 +31,12 @@ const VERSE_ATTR = /\bv="([^"]*)"/;
 /** The class the platform marks a verse boundary with. */
 const VERSE_MARKER_CLASS = 'yv-v';
 
+/**
+ * The class on a heading block: `s1 yv-h` for a section title, `r yv-h` for a
+ * parallel-passage reference.
+ */
+const HEADING_CLASS = 'yv-h';
+
 type Block = {
 	/** The block's own open tag, verbatim, so a slice can be rewrapped in it. */
 	open: string;
@@ -129,6 +135,21 @@ function hasText(html: string): boolean {
 }
 
 /**
+ * Whether a block is a section heading rather than Scripture.
+ *
+ * A heading is a block of its own between two verse blocks, so a verse that ends
+ * a section would otherwise carry the title of the next one: Romans 1:7 came out
+ * with "Paul's Longing to Visit Rome" underneath it. A heading has no verse marker
+ * and belongs to neither neighbour.
+ */
+function isHeading(block: Block): boolean {
+	return (
+		CLASS_ATTR.exec(block.open)?.[1]?.split(/\s+/).includes(HEADING_CLASS) ??
+		false
+	);
+}
+
+/**
  * The HTML for a single verse, in the same form the upstream returns for it.
  *
  * A verse runs from its own marker to the next one, which in poetry means it
@@ -161,6 +182,11 @@ export function sliceVerse(chapterHtml: string, verseId: string): string | null 
 		const block = blocks[i];
 		if (!block) {
 			return null;
+		}
+
+		// The block holding the marker is the verse's own, whatever its class.
+		if (i !== start.block && isHeading(block)) {
+			continue;
 		}
 
 		// The verse begins mid-block on its marker, and ends mid-block on the

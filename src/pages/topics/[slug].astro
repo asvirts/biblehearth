@@ -56,6 +56,7 @@ const { Content } = await render(topic);
 let version: BibleVersion | null = null;
 let readerSlug = '';
 let passages = new Map<string, BiblePassage | null>();
+let failedPassages = 0;
 let upstreamStatus = 200;
 
 try {
@@ -66,10 +67,10 @@ try {
 	version = defaultVersion;
 	if (version) {
 		readerSlug = versionSlug(version, catalog.length ? catalog : [version]);
-		passages = await loadPassages(
+		({ passages, failed: failedPassages } = await loadPassages(
 			version.id,
 			topicVerses(topic).map((verse) => verse.usfm),
-		);
+		));
 	}
 } catch (error) {
 	upstreamStatus = errorStatus(error);
@@ -94,8 +95,13 @@ try {
  *
  * The TTL carries the honesty instead. See DEGRADED_CACHE_CONTROL: five minutes
  * rather than a day, so the page repairs itself about when the upstream does.
+ *
+ * Failed passages count as well as a failed catalogue. The version and the
+ * catalogue are cached for a week past their refresh point, so they still load
+ * during a throttle while every uncached passage does not — which left a page
+ * with no verses on it looking healthy, and cached for a day.
  */
-const degraded = upstreamStatus !== 200 || !version;
+const degraded = upstreamStatus !== 200 || !version || failedPassages > 0;
 setCacheControl(
 	Astro.response,
 	degraded ? DEGRADED_CACHE_CONTROL : READER_CACHE_CONTROL,
