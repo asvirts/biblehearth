@@ -25,7 +25,7 @@
     "@microsoft/clarity": "^1.0.2",
     "@vercel/functions": "^3.9.3",
     "@youversion/platform-core": "^2.6.2",
-    "astro": "^7.2.2",
+    "astro": "^7.4.2",
     "sharp": "^0.35.3"
   }
 }
