@@ -12,6 +12,7 @@ import { DEFAULT_LOCALE, type Locale } from './i18n/locales';
 import { strings } from './i18n/strings';
 import { MARKDOWN_CACHE_CONTROL, NOTFOUND_CACHE_CONTROL } from './http';
 import { topicPath, type Topic } from './topics';
+import { topicStudies } from './topics/studies';
 
 /**
  * Markdown twins of the three pages whose substance is ours.
@@ -225,6 +226,7 @@ export async function topicMarkdown(
 	const { data } = topic;
 	const canonical = absoluteUrl(site, topicPath(topic.id));
 	const related = await relatedTopicLinks(data.related, site);
+	const studies = await topicStudies(topic);
 	const t = strings();
 
 	return document([
@@ -253,9 +255,16 @@ export async function topicMarkdown(
 			: null,
 		...data.faqs.flatMap((faq) => [heading(3, faq.q), inline(faq.a)]),
 
+		studies.length ? heading(2, 'Study these passages in context') : null,
+		studies.length ? 'Explore the setting and meaning of chapters cited above.' : null,
+		studies.length ? bullets(studies.map((study) =>
+			`[${inline(study.title)}](${absoluteUrl(site, study.href)})`,
+		)) : null,
+
 		related.length ? heading(2, 'Related topics') : null,
 		related.length ? bullets(related) : null,
 
+		`By [BibleHearth](${absoluteUrl(site, '/about')}#who-runs-this). [How we write and review our guides](${absoluteUrl(site, '/about')}#editorial-process).`,
 		footer(canonical, data.reviewedAt, t.markdown),
 	]);
 }

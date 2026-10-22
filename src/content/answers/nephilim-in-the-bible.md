@@ -253,7 +253,7 @@ entity:
     - https://en.wikipedia.org/wiki/Nephilim
     - https://en.wikipedia.org/wiki/Anakim
 publishedAt: 2026-08-17
-reviewedAt: 2026-08-21
+reviewedAt: 2026-10-22
 ---
 
 ## The name
@@ -324,3 +324,18 @@ known by New Testament writers. Jude can quote a prophecy of Enoch to a
 Christian audience and expect readers to recognize it. The literature provides
 valuable evidence for how ancient Jewish readers filled Genesis 6:4's gaps. It
 can't establish that their reconstruction was correct.
+
+## Read the ancient sources
+
+These texts let you check several of the traditions discussed above. They are
+evidence for how earlier readers understood Genesis; their details do not settle
+what Genesis itself means.
+
+- **1 Enoch 6–8**, translated by R. H. Charles: [chapter 6](https://sacred-texts.com/book/the-book-of-enoch/chapter-vi)
+  describes the angels' descent; [chapter 7](https://sacred-texts.com/book/the-book-of-enoch/chapter-vii)
+  describes their giant offspring and violence; [chapter 8](https://sacred-texts.com/book/the-book-of-enoch/chapter-viii)
+  describes the crafts and practices they teach.
+- **Josephus, Antiquities of the Jews 1.3.1**, translated by William Whiston:
+  [the opening of chapter 3](https://www.ccel.org/ccel/josephus/complete.ii.ii.iii.html)
+  connects angels and women with powerful, unjust offspring and compares them
+  with the giants of Greek tradition.

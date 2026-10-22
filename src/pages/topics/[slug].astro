@@ -10,6 +10,7 @@ import { loadPassages } from '../../lib/bible/passages';
 import { formatReference } from '../../lib/bible/refs';
 import { truncateWords } from '../../lib/bible/text';
 import { absoluteUrl, chapterPath } from '../../lib/bible/urls';
+import { topicStudies } from '../../lib/topics/studies';
 import {
 	DEGRADED_CACHE_CONTROL,
 	READER_CACHE_CONTROL,
@@ -164,6 +165,8 @@ const relatedTopics = topic.data.related
 	.map((ref) => allTopics.find((item) => item.id === ref.id))
 	.filter((item): item is (typeof allTopics)[number] => Boolean(item));
 
+const relatedStudies = await topicStudies(topic);
+
 const reviewed = topic.data.reviewedAt.toLocaleDateString('en-US', {
 	year: 'numeric',
 	month: 'long',
@@ -284,6 +287,23 @@ const share = topic.data.figure
 	}
 
 	{
+		relatedStudies.length ? (
+			<section>
+				<h2>Study these passages in context</h2>
+				<p>Explore the setting and meaning of chapters cited above.</p>
+				<div class="version-grid">
+					{relatedStudies.map((study) => (
+						<a class="tile" href={study.href}>
+							<span class="tile-kicker">Chapter study</span>
+							{study.title}
+						</a>
+					))}
+				</div>
+			</section>
+		) : null
+	}
+
+	{
 		relatedTopics.length ? (
 			<section>
 				<h2>Related topics</h2>
@@ -300,6 +320,10 @@ const share = topic.data.figure
 	}
 
 	<footer class="topic-provenance">
+		<p class="muted">
+			By <a href="/about#who-runs-this">BibleHearth</a>.
+			<a href="/about#editorial-process">How we write and review our guides</a>.
+		</p>
 		<p class="muted">
 			Verse selection and explanations reviewed {reviewed}. Sources consulted
 			include Nave's Topical Bible (1897) and Torrey's New Topical Textbook

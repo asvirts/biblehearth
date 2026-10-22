@@ -15,6 +15,7 @@ import {
 	CONTACT_PATH,
 	CORRECTIONS_ANCHOR,
 	EDITORIAL_EMAIL,
+	SITE_OPERATOR,
 } from '../lib/site';
 import { listTopics } from '../lib/topics';
 import { hubFigures } from '../lib/images/hubs';
@@ -129,7 +130,7 @@ const share = figure ? await shareCardFromFigure(figure) : undefined;
 		</p>
 	</section>
 
-	<section>
+	<section id="editorial-process">
 		<h2>How a chapter study is written</h2>
 		<p>Each study begins with the chapter and follows the same basic process.</p>
 		<ol class="outline-list">
@@ -188,7 +189,7 @@ const share = figure ? await shareCardFromFigure(figure) : undefined;
 		<p>
 			There are {count(TOTAL_CHAPTERS)} chapters in the Bible. {count(written)}
 			{' '}of them are written up so far. The other {count(unwritten)} have a
-			working page where you can read the chapter and the commentaries. Until an
+			working page with commentaries and links to read the chapter. Until an
 			original study is ready, that page stays out of search indexes and the
 			sitemap.
 		</p>
@@ -246,10 +247,10 @@ const share = figure ? await shareCardFromFigure(figure) : undefined;
 		</p>
 	</section>
 
-	<section>
+	<section id="who-runs-this">
 		<h2>Who runs this</h2>
 		<p>
-			BibleHearth is independently run and has been publishing since August
+			BibleHearth is independently run by {SITE_OPERATOR} and has been publishing since August
 			2026. It is not affiliated with a church, a denomination or a Bible
 			publisher, and nothing written here is endorsed by one. Bible text reaches
 			these pages through the YouVersion Platform, which any developer can apply

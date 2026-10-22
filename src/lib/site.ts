@@ -9,6 +9,8 @@
  * an accountable publisher and the site does not have one.
  */
 export const SITE_NAME = 'BibleHearth';
+/** Public operator name confirmed by the site owner; not an author credential. */
+export const SITE_OPERATOR = 'Andrew Virts';
 
 export const ABOUT_PATH = '/about';
 export const CONTACT_PATH = '/contact';

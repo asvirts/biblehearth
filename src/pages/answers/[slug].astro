@@ -129,16 +129,8 @@ const anchorChapterHref =
 const anchorVerses = expandUsfm(anchor.passage);
 
 const canonicalPath = answerPath(answer.id);
-const title = `${answer.data.question} Meaning and ${views.length} Main Views`;
-/**
- * The visible `<h1>` is the question itself, so that is the `headline`.
- *
- * `headline` in an `Article` node is the article's heading, and Google asks that
- * it match the rendered one. The `<title>` adds "Meaning and N Main Views"
- * because that is what distinguishes this page in a SERP full of the same
- * question; the `<h1>` does not, because a reader who has arrived does not need
- * to be sold the page again.
- */
+const title = answer.data.question;
+// Keep the structured headline aligned with the visible question.
 const headline = answer.data.question;
 const description = truncateWords(answer.data.shortAnswer, 155);
 
@@ -363,9 +355,11 @@ const share = answer.data.figure
 
 	<footer class="topic-provenance">
 		<p class="muted">
-			Reviewed {reviewed}. This page presents the main readings of a disputed
+			Updated {reviewed}. Published by <a href="/about#who-runs-this">BibleHearth</a>.
+			This page presents the main readings of a disputed
 			passage, along with the evidence and objections attached to each one. It
 			is written as a non-denominational explainer.
+			<a href="/about#editorial-process">How our studies are prepared</a>.
 		</p>
 		{version ? <CopyrightNotice version={version} /> : null}
 	</footer>

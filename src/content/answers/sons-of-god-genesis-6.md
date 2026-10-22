@@ -267,7 +267,7 @@ entity:
     - https://en.wikipedia.org/wiki/Sons_of_God
     - https://en.wikipedia.org/wiki/Nephilim
 publishedAt: 2026-08-17
-reviewedAt: 2026-08-21
+reviewedAt: 2026-10-22
 ---
 
 ## The phrase itself
@@ -340,3 +340,23 @@ This history doesn't settle the interpretation. It shows that the question is
 ancient, that serious readers have reached different conclusions, and that
 their theological assumptions have sometimes influenced how they understood
 the Hebrew.
+
+## Read the ancient sources
+
+You can compare the interpretations in these primary texts. Each records an
+author's reading of Genesis, so agreement or disagreement with that author still
+needs to be weighed against the passage.
+
+- **1 Enoch 6–8**, translated by R. H. Charles: [chapter 6](https://sacred-texts.com/book/the-book-of-enoch/chapter-vi)
+  describes two hundred angels descending to take wives; [chapter 7](https://sacred-texts.com/book/the-book-of-enoch/chapter-vii)
+  describes their offspring; [chapter 8](https://sacred-texts.com/book/the-book-of-enoch/chapter-viii)
+  lists the crafts and practices they teach.
+- **Josephus, Antiquities of the Jews 1.3.1**, translated by William Whiston:
+  [the opening of chapter 3](https://www.ccel.org/ccel/josephus/complete.ii.ii.iii.html)
+  presents the angelic interpretation.
+- **Julius Africanus, Fragment 2**, in his [Extant Works](https://www.newadvent.org/fathers/0614.htm):
+  Africanus favors Seth's descendants, then considers what the angelic reading
+  would imply. Look for the heading “Fragment 2.”
+- **Augustine, City of God 15.23**, in [Book XV](https://www.newadvent.org/fathers/120115.htm):
+  Augustine argues that the sons of God were human beings and discusses why
+  unusual stature does not establish angelic parentage. Look for “Chapter 23.”

@@ -702,13 +702,22 @@ const ogType = brief ? 'article' : 'website';
 		{
 			reviewed ? (
 				<p class="muted">
-					{t.reviewedBy(reviewed)}
+					{locale.code === 'en' ? (
+						<>Summary, outline and questions by <a href="/about#who-runs-this">BibleHearth</a>, {reviewed}.</>
+					) : t.reviewedBy(reviewed)}
 					{commentaries.length
 						? ' Grounded in the commentaries above; wording is our own.'
 						: ''}
 				</p>
 			) : null
 		}
+		{brief && locale.code === 'en' ? (
+			<p class="muted">
+				<a href="/about#editorial-process">How these studies are prepared</a>
+				{' · '}
+				<a href="/about#corrections">Report a correction</a>
+			</p>
+		) : null}
 		{
 			commentaries.length ? (
 				<p class="muted">
