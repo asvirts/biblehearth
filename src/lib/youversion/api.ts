@@ -1,3 +1,5 @@
+import { displayAbbreviation, versionSlug, readableChapters } from './display';
+export { displayAbbreviation, versionSlug, readableChapters } from './display';
 import {
 	getAdjacentChapter,
 	getHttpStatus,
@@ -9,7 +11,7 @@ import {
 	type Collection,
 	type VOTD,
 } from '@youversion/platform-core';
-import { DEFAULT_BIBLE_ID } from 'astro:env/server';
+const DEFAULT_BIBLE_ID = Number(process.env.DEFAULT_BIBLE_ID || 111);
 import {
 	chapterUsfm,
 	isIntroChapter,
@@ -105,48 +107,44 @@ async function withPlatform<T>(operation: () => Promise<T>): Promise<T> {
 }
 
 async function listAllVersions(locale: Locale): Promise<BibleVersion[]> {
-	return loadCached(
-		`versions:${locale.code}`,
-		VERSION_CACHE_MS,
-		STALE_GRACE_MS,
-		async () =>
-			withPlatform(async () => {
-				const client = getBibleClient();
-				const versions: BibleVersion[] = [];
-				let pageToken: string | undefined;
+	return loadCached(`versions:${locale.code}`, VERSION_CACHE_MS, STALE_GRACE_MS, async () =>
+		withPlatform(async () => {
+			const client = getBibleClient();
+			const versions: BibleVersion[] = [];
+			let pageToken: string | undefined;
 
-				do {
-					const page: Collection<BibleVersion> = await client.getVersions(
-						locale.apiLanguageRange,
-						undefined,
-						{
-							page_size: 99,
-							page_token: pageToken,
-						},
-					);
-					versions.push(...page.data);
-					pageToken = page.next_page_token ?? undefined;
-				} while (pageToken && versions.length < 2000);
+			do {
+				const page: Collection<BibleVersion> = await client.getVersions(
+					locale.apiLanguageRange,
+					undefined,
+					{
+						page_size: 99,
+						page_token: pageToken,
+					},
+				);
+				versions.push(...page.data);
+				pageToken = page.next_page_token ?? undefined;
+			} while (pageToken && versions.length < 2000);
 
-				/**
-				 * An empty catalog is a failure wearing a 200.
-				 *
-				 * It has to throw rather than return, because everything
-				 * downstream reads an absent version as a missing one:
-				 * `resolveVersion` finds no match, returns null, and every
-				 * reader page rewrites to /404. Cached — and the envelope holds
-				 * for a week past its refresh point — one degraded response
-				 * would 404 the entire site until it aged out, which is not a
-				 * state that recovers on its own. Thrown, it is just another
-				 * unavailable upstream: `loadCached` keeps serving the last
-				 * good catalog, and a 503 invites the crawler back.
-				 */
-				if (versions.length === 0) {
-					throw new BibleUnavailableError();
-				}
+			/**
+			 * An empty catalog is a failure wearing a 200.
+			 *
+			 * It has to throw rather than return, because everything
+			 * downstream reads an absent version as a missing one:
+			 * `resolveVersion` finds no match, returns null, and every
+			 * reader page rewrites to /404. Cached — and the envelope holds
+			 * for a week past its refresh point — one degraded response
+			 * would 404 the entire site until it aged out, which is not a
+			 * state that recovers on its own. Thrown, it is just another
+			 * unavailable upstream: `loadCached` keeps serving the last
+			 * good catalog, and a 503 invites the crawler back.
+			 */
+			if (versions.length === 0) {
+				throw new BibleUnavailableError();
+			}
 
-				return versions;
-			}),
+			return versions;
+		}),
 	);
 }
 
@@ -164,9 +162,7 @@ async function listAllVersions(locale: Locale): Promise<BibleVersion[]> {
  * starting from nothing must not gain ~1,189 crawlable reader pages the day an
  * upstream edition appears in its language.
  */
-export async function listVersions(
-	locale: Locale = DEFAULT_LOCALE,
-): Promise<BibleVersion[]> {
+export async function listVersions(locale: Locale = DEFAULT_LOCALE): Promise<BibleVersion[]> {
 	const versions = await listAllVersions(locale);
 
 	if (locale.versionIds === null) {
@@ -186,22 +182,6 @@ export async function listVersions(
  * editions apart (NASB1995 vs NASB2020), so it is preferred wherever the
  * abbreviation is user-visible.
  */
-export function displayAbbreviation(
-	version: Pick<BibleVersion, 'abbreviation' | 'localized_abbreviation'>,
-): string {
-	return version.localized_abbreviation || version.abbreviation;
-}
-
-export function versionSlug(
-	version: Pick<BibleVersion, 'id' | 'abbreviation' | 'localized_abbreviation'>,
-	catalog: ReadonlyArray<Pick<BibleVersion, 'id' | 'abbreviation' | 'localized_abbreviation'>>,
-): string {
-	const abbr = displayAbbreviation(version).toLowerCase();
-	const collisions = catalog.filter(
-		(item) => displayAbbreviation(item).toLowerCase() === abbr,
-	);
-	return collisions.length > 1 ? `${abbr}-${version.id}` : abbr;
-}
 
 const SLUG_WITH_ID = /^([a-z0-9]+(?:-[a-z0-9]+)*)-(\d+)$/;
 
@@ -235,7 +215,11 @@ export async function resolveVersion(
 			return null;
 		}
 		const catalog = await listVersions(locale).catch(() => [version]);
-		return { version, slug: versionSlug(version, catalog) };
+		const catalogVersion = catalog.find((item) => item.id === version.id) ?? version;
+		return {
+			version: mergeVersionDetails(catalogVersion, version),
+			slug: versionSlug(catalogVersion, catalog),
+		};
 	}
 
 	const catalog = await listVersions(locale);
@@ -246,28 +230,62 @@ export async function resolveVersion(
 	);
 
 	if (matches.length === 1 && matches[0]) {
-		return { version: matches[0], slug: versionSlug(matches[0], catalog) };
+		const selected = matches[0];
+		return {
+			version: await hydrateVersion(selected),
+			slug: versionSlug(selected, catalog),
+		};
 	}
 
 	return null;
 }
 
 export async function getVersionById(id: number): Promise<BibleVersion | null> {
-	return loadCached(
-		`version:${id}`,
-		VERSION_CACHE_MS,
-		STALE_GRACE_MS,
-		async () => {
-			try {
-				return await withPlatform(() => getBibleClient().getVersion(id));
-			} catch (error) {
-				if (error instanceof BibleNotFoundError) {
-					return null;
-				}
-				throw error;
+	return loadCached(`version:${id}`, VERSION_CACHE_MS, STALE_GRACE_MS, async () => {
+		try {
+			return await withPlatform(() => getBibleClient().getVersion(id));
+		} catch (error) {
+			if (error instanceof BibleNotFoundError) {
+				return null;
 			}
-		},
-	);
+			throw error;
+		}
+	});
+}
+
+/**
+ * The catalogue is sufficient to choose an edition and stable URL, but its
+ * version objects may omit publisher copyright. The per-version detail is the
+ * authoritative source of attribution, so every text-bearing view needs it.
+ * Keep catalogue display identity stable: detail and catalogue localizations can
+ * differ, and a metadata refresh must not silently change a public URL.
+ */
+export function mergeVersionDetails(catalog: BibleVersion, detail: BibleVersion): BibleVersion {
+	if (catalog.id !== detail.id)
+		throw new BibleUnavailableError('Bible version details are unavailable');
+	return {
+		...catalog,
+		...detail,
+		id: catalog.id,
+		abbreviation: catalog.abbreviation || detail.abbreviation,
+		localized_abbreviation: catalog.localized_abbreviation || detail.localized_abbreviation,
+		title: catalog.title || detail.title,
+		localized_title: catalog.localized_title || detail.localized_title,
+		copyright: detail.copyright || catalog.copyright,
+		info: detail.info || catalog.info,
+		publisher_url: detail.publisher_url || catalog.publisher_url,
+	};
+}
+
+export async function hydrateVersion(
+	catalog: BibleVersion,
+	loadDetail: (id: number) => Promise<BibleVersion | null> = getVersionById,
+): Promise<BibleVersion> {
+	const detail = await loadDetail(catalog.id);
+	// A catalogue entry followed by a missing detail is an inconsistent upstream
+	// response, not evidence that a requested verse or Bible does not exist.
+	if (!detail) throw new BibleUnavailableError('Bible version details are unavailable');
+	return mergeVersionDetails(catalog, detail);
 }
 
 /**
@@ -300,7 +318,7 @@ export async function getDefaultVersion(
 	}
 
 	const catalog = await listVersions(locale);
-	return catalog[0] ?? null;
+	return catalog[0] ? hydrateVersion(catalog[0]) : null;
 }
 
 /**
@@ -372,12 +390,8 @@ export function chapterIndexKey(versionId: number): string {
 }
 
 export async function getBibleIndex(versionId: number): Promise<IndexedBible> {
-	return loadCached(
-		chapterIndexKey(versionId),
-		INDEX_CACHE_MS,
-		STALE_GRACE_MS,
-		async () =>
-			narrowIndex(await withPlatform(() => getBibleClient().getIndex(versionId))),
+	return loadCached(chapterIndexKey(versionId), INDEX_CACHE_MS, STALE_GRACE_MS, async () =>
+		narrowIndex(await withPlatform(() => getBibleClient().getIndex(versionId))),
 	);
 }
 
@@ -420,12 +434,6 @@ export function findChapter<T extends { id: string }>(
 	return book.chapters?.find((chapter) => chapter.id === chapterId) ?? null;
 }
 
-export function readableChapters(
-	book: { chapters?: ReadonlyArray<{ id: string; title: string }> },
-) {
-	return (book.chapters ?? []).filter((chapter) => isNumericChapter(chapter.id));
-}
-
 export function adjacentReadableChapter(
 	index: IndexedBible,
 	bookId: string,
@@ -465,14 +473,7 @@ export async function getPassageHtml(
 	return loadCached(key, PASSAGE_CACHE_MS, STALE_GRACE_MS, async () => {
 		try {
 			const passage = await withPlatform(() =>
-				getBibleClient().getPassage(
-					versionId,
-					usfm,
-					'html',
-					headings,
-					notes,
-					false,
-				),
+				getBibleClient().getPassage(versionId, usfm, 'html', headings, notes, false),
 			);
 
 			if (!passage.content) {
@@ -524,11 +525,10 @@ export async function getVerseHtml(
 ): Promise<BiblePassage | null> {
 	const usfm = verseUsfm(bookUsfm, chapterId, verseId);
 
-	const chapter = await getPassageHtml(
-		versionId,
-		chapterUsfm(bookUsfm, chapterId),
-		{ headings: true, notes: true },
-	);
+	const chapter = await getPassageHtml(versionId, chapterUsfm(bookUsfm, chapterId), {
+		headings: true,
+		notes: true,
+	});
 
 	if (chapter?.content) {
 		const content = sliceVerse(chapter.content, verseId);
@@ -567,14 +567,7 @@ export async function getPassageText(
 		async () => {
 			try {
 				const passage = await withPlatform(() =>
-					getBibleClient().getPassage(
-						versionId,
-						usfm,
-						'text',
-						false,
-						false,
-						false,
-					),
+					getBibleClient().getPassage(versionId, usfm, 'text', false, false, false),
 				);
 				return passage.content ? passage : null;
 			} catch (error) {
@@ -602,21 +595,16 @@ export async function getVerseOfTheDay(): Promise<VOTD | null> {
 	const start = Date.UTC(now.getUTCFullYear(), 0, 0);
 	const day = Math.floor((Date.now() - start) / 86_400_000);
 
-	return loadCached(
-		`votd:day:${day}`,
-		PASSAGE_CACHE_MS,
-		STALE_GRACE_MS,
-		async () => {
-			try {
-				return await withPlatform(() => getBibleClient().getVOTD(day));
-			} catch (error) {
-				if (error instanceof BibleNotFoundError) {
-					return null;
-				}
-				throw error;
+	return loadCached(`votd:day:${day}`, PASSAGE_CACHE_MS, STALE_GRACE_MS, async () => {
+		try {
+			return await withPlatform(() => getBibleClient().getVOTD(day));
+		} catch (error) {
+			if (error instanceof BibleNotFoundError) {
+				return null;
 			}
-		},
-	);
+			throw error;
+		}
+	});
 }
 
 /**
@@ -628,15 +616,10 @@ export async function getVerseOfTheDay(): Promise<VOTD | null> {
  */
 export async function getVerseOfTheDayCalendar(): Promise<VOTD[]> {
 	try {
-		return await loadCached(
-			'votd:calendar',
-			PASSAGE_CACHE_MS,
-			STALE_GRACE_MS,
-			async () => {
-				const page = await withPlatform(() => getBibleClient().getAllVOTDs());
-				return [...page.data];
-			},
-		);
+		return await loadCached('votd:calendar', PASSAGE_CACHE_MS, STALE_GRACE_MS, async () => {
+			const page = await withPlatform(() => getBibleClient().getAllVOTDs());
+			return [...page.data];
+		});
 	} catch {
 		// A missing calendar must not break the sitemap; topic verses still
 		// provide a usable seed set on their own.

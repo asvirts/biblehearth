@@ -11,7 +11,7 @@
  * worse than merely wasteful: every crawled reader page is a licensed passage
  * fetch against a rate-limited app key, so a mass submission buys a mass crawl
  * of pages that did not change — the exact shape of the incident that
- * src/pages/api/warm.ts exists to prevent. Use --sitemap once, to seed a site
+ * src/resources/api/warm.ts exists to prevent. Use --sitemap once, to seed a site
  * that has never been submitted, and pass explicit URLs from then on.
  *
  *   node scripts/indexnow.mjs /topics/anxiety /answers/what-is-grace
@@ -66,9 +66,7 @@ const AUTHORED = [
 			const cut = id.lastIndexOf('-');
 			const book = id.slice(0, cut);
 			const chapter = id.slice(cut + 1);
-			return cut < 1 || !/^\d+$/.test(chapter)
-				? []
-				: [`/${book}/${chapter}`, `/${book}`];
+			return cut < 1 || !/^\d+$/.test(chapter) ? [] : [`/${book}/${chapter}`, `/${book}`];
 		},
 	},
 	{ dir: 'src/content/topics', urls: (id) => [`/topics/${id}`] },
@@ -104,9 +102,7 @@ const publicDir = fileURLToPath(new URL('public/', root));
  * failure — see changedUrls(), which treats an absent manifest as "submit
  * nothing" rather than "submit everything".
  */
-const MANIFEST = fileURLToPath(
-	new URL('node_modules/.cache/indexnow/manifest.json', root),
-);
+const MANIFEST = fileURLToPath(new URL('node_modules/.cache/indexnow/manifest.json', root));
 
 const args = process.argv.slice(2);
 const dryRun = args.includes('--dry-run');
@@ -131,15 +127,13 @@ if (ifProduction && process.env.VERCEL_ENV !== 'production') {
 }
 
 if (!fromSitemap && !onlyChanged && targets.length === 0) {
-	fail(
-		'usage: node scripts/indexnow.mjs [--changed|--sitemap] [--dry-run] <url|path>...',
-	);
+	fail('usage: node scripts/indexnow.mjs [--changed|--sitemap] [--dry-run] <url|path>...');
 }
 
 // The one source of truth for the canonical host, so this cannot drift from
 // what the sitemaps and canonical tags emit.
-const { default: config } = await import(new URL('astro.config.mjs', root).href);
-const site = new URL(config.site);
+const { SITE_ORIGIN } = await import(new URL('site.config.mjs', root).href);
+const site = new URL(SITE_ORIGIN);
 
 const { key, keyLocation } = await readKey();
 
@@ -183,12 +177,13 @@ let failed = 0;
 
 for (let start = 0; start < urls.length; start += BATCH_LIMIT) {
 	const batch = urls.slice(start, start + BATCH_LIMIT);
-	const submit = () => fetch(ENDPOINT, {
-		method: 'POST',
-		headers: { 'Content-Type': 'application/json; charset=utf-8' },
-		body: JSON.stringify({ host: site.host, key, keyLocation, urlList: batch }),
-		signal: AbortSignal.timeout(REQUEST_TIMEOUT_MS),
-	});
+	const submit = () =>
+		fetch(ENDPOINT, {
+			method: 'POST',
+			headers: { 'Content-Type': 'application/json; charset=utf-8' },
+			body: JSON.stringify({ host: site.host, key, keyLocation, urlList: batch }),
+			signal: AbortSignal.timeout(REQUEST_TIMEOUT_MS),
+		});
 
 	try {
 		let response = await submit();
@@ -255,7 +250,9 @@ async function readKey() {
 	}
 
 	if (found.length === 0) {
-		fail(`no IndexNow key file in ${publicDir} — generate one at https://www.bing.com/indexnow/getstarted`);
+		fail(
+			`no IndexNow key file in ${publicDir} — generate one at https://www.bing.com/indexnow/getstarted`,
+		);
 	}
 	if (found.length > 1) {
 		fail(`more than one IndexNow key file in ${publicDir}: ${found.join(', ')}`);
@@ -294,9 +291,7 @@ async function changedUrls() {
 		return [];
 	}
 
-	const changed = Object.keys(current).filter(
-		(url) => current[url] !== previous[url],
-	);
+	const changed = Object.keys(current).filter((url) => current[url] !== previous[url]);
 	const removed = Object.keys(previous).filter((url) => !(url in current));
 
 	if (removed.length) {
@@ -422,7 +417,7 @@ function unescapeXml(value) {
  *
  * A URL on another host comes back 422 for the whole batch rather than for the
  * one bad entry, so it is worth refusing before the request. Trailing slashes
- * go because astro.config sets trailingSlash: 'never' — submitting one asks a
+ * go because next.config sets trailingSlash: false — submitting one asks a
  * crawler to spend a fetch on a redirect.
  */
 function canonical(arg) {

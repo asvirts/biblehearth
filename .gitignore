@@ -30,3 +30,8 @@ pnpm-debug.log*
 .idea/
 .env*
 !.env.example
+
+# Next.js output
+.next/
+out/
+*.tsbuildinfo

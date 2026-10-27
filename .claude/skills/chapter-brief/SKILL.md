@@ -14,7 +14,7 @@ Matthew Henry is already available on several larger Bible sites. Republishing
 the same commentary is useful to a reader, but it does not give a search engine
 a reason to index another copy. A chapter without a brief therefore renders
 `noindex` and stays out of the sitemap. **The brief is what earns the chapter its
-place in the index**, and `src/pages/[book]/[chapter].astro` enforces that rule.
+place in the index**, and `src/loaders/readers/study-chapter.ts` enforces that rule.
 
 ## Step 1 — Gather
 
@@ -133,15 +133,16 @@ If you are explicitly asked to add a picture for this chapter:
 ## Step 4 — Validate
 
 ```
-npx astro sync        # runs the Zod schema over every collection
-npx astro build       # must pass before shipping
+npx tsx scripts/content-check.ts  # validates every collection and reference
+npm run typecheck
+npm run build                    # must pass before shipping
 ```
 
 Then render it and read it:
 
 ```
-npx astro dev --background
-curl -s http://localhost:4322/psalms/28 | grep -o '<h[12][^>]*>[^<]*'
+npm run dev  # run in a persistent background terminal session
+# Open http://localhost:3000/psalms/28 in the Codex in-app browser.
 ```
 
 Check by eye: the `<h1>` reads as a claim, every heading uses the reference the

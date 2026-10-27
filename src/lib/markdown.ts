@@ -1,10 +1,6 @@
-import { getEntries } from 'astro:content';
+import { getEntries } from './content';
 import { answerPath, type Answer } from './answers';
-import {
-	formatReference,
-	localeChapterReference,
-	localeReference,
-} from './bible/refs';
+import { formatReference, localeChapterReference, localeReference } from './bible/refs';
 import { absoluteUrl, verseHubPath } from './bible/urls';
 import { chapterStudyPath, type ChapterBrief } from './commentary';
 import { figureMarkdownCredit } from './images/types';
@@ -64,11 +60,7 @@ function link(label: string, href: string): string {
  * The label is written for the twin's own locale; the link is the English hub
  * either way, because that is the only hub there is (see `verseHubPath`).
  */
-function citation(
-	usfm: string,
-	site: URL | undefined,
-	locale: Locale = DEFAULT_LOCALE,
-): string {
+function citation(usfm: string, site: URL | undefined, locale: Locale = DEFAULT_LOCALE): string {
 	const label = localeReference(locale, usfm);
 	const path = verseHubPath(usfm);
 	return path ? link(label, absoluteUrl(site, path)) : label;
@@ -91,8 +83,7 @@ function body(entry: { body?: string | undefined }): string | null {
 async function relatedTopicLinks(
 	refs: readonly { collection: 'topics'; id: string }[],
 	site: URL | undefined,
-	label: (title: string) => string = (title) =>
-		`Bible verses about ${title.toLowerCase()}`,
+	label: (title: string) => string = (title) => `Bible verses about ${title.toLowerCase()}`,
 ): Promise<string[]> {
 	if (refs.length === 0) {
 		return [];
@@ -100,12 +91,7 @@ async function relatedTopicLinks(
 	const topics = await getEntries([...refs]);
 	return topics
 		.filter((topic) => topic && !topic.data.draft)
-		.map((topic) =>
-			link(
-				label(topic.data.title),
-				absoluteUrl(site, topicPath(topic.id)),
-			),
-		);
+		.map((topic) => link(label(topic.data.title), absoluteUrl(site, topicPath(topic.id))));
 }
 
 function bullets(items: readonly string[]): string {
@@ -153,16 +139,9 @@ export async function chapterBriefMarkdown(
 	// heading says "Salmo 91" while its canonical points at /psalms/91 is a
 	// Portuguese document claiming to be a copy of an English page.
 	const reference = localeChapterReference(locale, bookUsfm, chapterId);
-	const canonical = absoluteUrl(
-		site,
-		chapterStudyPath(bookUsfm, chapterId, locale),
-	);
+	const canonical = absoluteUrl(site, chapterStudyPath(bookUsfm, chapterId, locale));
 	const t = strings(locale);
-	const topics = await relatedTopicLinks(
-		data.relatedTopics,
-		site,
-		t.relatedTopicLink,
-	);
+	const topics = await relatedTopicLinks(data.relatedTopics, site, t.relatedTopicLink);
 
 	return document([
 		heading(1, data.title),
@@ -180,20 +159,11 @@ export async function chapterBriefMarkdown(
 		]),
 
 		heading(2, t.themes(reference)),
-		...data.themes.flatMap((theme) => [
-			heading(3, theme.name),
-			inline(theme.explanation),
-		]),
+		...data.themes.flatMap((theme) => [heading(3, theme.name), inline(theme.explanation)]),
 
+		data.glossary.length ? heading(2, t.glossary(reference)) : null,
 		data.glossary.length
-			? heading(2, t.glossary(reference))
-			: null,
-		data.glossary.length
-			? bullets(
-					data.glossary.map(
-						(item) => `**${inline(item.term)}** — ${inline(item.plain)}`,
-					),
-				)
+			? bullets(data.glossary.map((item) => `**${inline(item.term)}** — ${inline(item.plain)}`))
 			: null,
 
 		data.keyVerses.length ? heading(2, t.keyVerses(reference)) : null,
@@ -202,9 +172,7 @@ export async function chapterBriefMarkdown(
 			inline(verse.why),
 		]),
 
-		data.caution
-			? heading(2, t.caution(reference))
-			: null,
+		data.caution ? heading(2, t.caution(reference)) : null,
 		data.caution ? inline(data.caution) : null,
 
 		heading(2, t.faqs(reference)),
@@ -219,10 +187,7 @@ export async function chapterBriefMarkdown(
 	]);
 }
 
-export async function topicMarkdown(
-	topic: Topic,
-	site: URL | undefined,
-): Promise<string> {
+export async function topicMarkdown(topic: Topic, site: URL | undefined): Promise<string> {
 	const { data } = topic;
 	const canonical = absoluteUrl(site, topicPath(topic.id));
 	const related = await relatedTopicLinks(data.related, site);
@@ -239,9 +204,7 @@ export async function topicMarkdown(
 			heading(2, group.heading),
 			inline(group.rationale),
 			bullets(
-				group.verses.map(
-					(verse) => `${citation(verse.usfm, site)} — ${inline(verse.gloss)}`,
-				),
+				group.verses.map((verse) => `${citation(verse.usfm, site)} — ${inline(verse.gloss)}`),
 			),
 		]),
 
@@ -250,16 +213,16 @@ export async function topicMarkdown(
 
 		body(topic),
 
-		data.faqs.length
-			? heading(2, `Common questions about ${data.title.toLowerCase()}`)
-			: null,
+		data.faqs.length ? heading(2, `Common questions about ${data.title.toLowerCase()}`) : null,
 		...data.faqs.flatMap((faq) => [heading(3, faq.q), inline(faq.a)]),
 
 		studies.length ? heading(2, 'Study these passages in context') : null,
 		studies.length ? 'Explore the setting and meaning of chapters cited above.' : null,
-		studies.length ? bullets(studies.map((study) =>
-			`[${inline(study.title)}](${absoluteUrl(site, study.href)})`,
-		)) : null,
+		studies.length
+			? bullets(
+					studies.map((study) => `[${inline(study.title)}](${absoluteUrl(site, study.href)})`),
+				)
+			: null,
 
 		related.length ? heading(2, 'Related topics') : null,
 		related.length ? bullets(related) : null,
@@ -269,10 +232,7 @@ export async function topicMarkdown(
 	]);
 }
 
-export async function answerMarkdown(
-	answer: Answer,
-	site: URL | undefined,
-): Promise<string> {
+export async function answerMarkdown(answer: Answer, site: URL | undefined): Promise<string> {
 	const { data } = answer;
 	const canonical = absoluteUrl(site, answerPath(answer.id));
 	const anchorReference = formatReference(data.anchor.passage);
@@ -298,11 +258,7 @@ export async function answerMarkdown(
 		...data.views.flatMap((view) => [
 			heading(3, view.name),
 			inline(view.claim),
-			bullets(
-				view.verses.map(
-					(verse) => `${citation(verse.usfm, site)} — ${inline(verse.gloss)}`,
-				),
-			),
+			bullets(view.verses.map((verse) => `${citation(verse.usfm, site)} — ${inline(verse.gloss)}`)),
 			`**What supports it.** ${inline(view.support)}`,
 			`**The strongest objection.** ${inline(view.objection)}`,
 			view.held ? `**Held by:** ${inline(view.held)}` : null,
@@ -314,9 +270,7 @@ export async function answerMarkdown(
 		data.caution.length ? heading(2, `Limits and common misreadings of ${anchorReference}`) : null,
 		...data.caution.map((paragraph) => inline(paragraph)),
 
-		data.faqs.length
-			? heading(2, `Common questions about the ${data.label}`)
-			: null,
+		data.faqs.length ? heading(2, `Common questions about the ${data.label}`) : null,
 		...data.faqs.flatMap((faq) => [heading(3, faq.q), inline(faq.a)]),
 
 		topics.length ? heading(2, 'Related topics') : null,

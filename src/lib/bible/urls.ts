@@ -1,3 +1,4 @@
+import { SITE_ORIGIN } from '../../../site.config.mjs';
 import { bookSlug } from './books';
 import { displayChapterNumber } from './psalms';
 import { bookSlugFromUsfm } from './usfm';
@@ -13,10 +14,7 @@ import { DEFAULT_LOCALE, localePath, type Locale } from '../i18n/locales';
  * the three right produces a URL that looks plausible and 404s, which is why
  * they are all derived here rather than assembled at call sites.
  */
-export function versionPath(
-	versionSlug: string,
-	locale: Locale = DEFAULT_LOCALE,
-): string {
+export function versionPath(versionSlug: string, locale: Locale = DEFAULT_LOCALE): string {
 	return localePath(locale, `/bible/${versionSlug}`);
 }
 
@@ -25,10 +23,7 @@ export function bookPath(
 	bookUsfm: string,
 	locale: Locale = DEFAULT_LOCALE,
 ): string {
-	return localePath(
-		locale,
-		`/bible/${versionSlug}/${bookSlug(locale, bookUsfm)}`,
-	);
+	return localePath(locale, `/bible/${versionSlug}/${bookSlug(locale, bookUsfm)}`);
 }
 
 export function chapterPath(
@@ -76,16 +71,14 @@ export function verseHubPath(usfm: string): string | null {
 	return `/verse/${bookSlugFromUsfm(book)}/${chapter}/${first}`;
 }
 
-const FALLBACK_ORIGIN = 'https://biblehearth.online';
+const FALLBACK_ORIGIN = SITE_ORIGIN;
 
 export function siteOrigin(site?: URL): string {
 	return (site ?? new URL(FALLBACK_ORIGIN)).origin;
 }
 
 export function normalizePath(path: string): string {
-	const url = /^https?:\/\//i.test(path)
-		? new URL(path)
-		: new URL(path, FALLBACK_ORIGIN);
+	const url = /^https?:\/\//i.test(path) ? new URL(path) : new URL(path, FALLBACK_ORIGIN);
 	let pathname = url.pathname;
 	if (pathname.length > 1 && pathname.endsWith('/')) {
 		pathname = pathname.slice(0, -1);
@@ -106,7 +99,7 @@ export function absoluteUrl(site: URL | undefined, path: string): string {
  * Make a media URL absolute without dropping its query string.
  *
  * `absoluteUrl` is for page paths: it strips `?query` because a canonical
- * must not carry one. Astro's image endpoint is the opposite — `/_image?href=…`
+ * must not carry one. A framework image endpoint is the opposite — `/_image?href=…`
  * in development, `/_vercel/image?url=…` in production — and dropping the
  * query yields a 400. Social scrapers and JSON-LD both need the whole address.
  */
@@ -123,7 +116,7 @@ export function absoluteMediaUrl(site: URL | undefined, path: string): string {
  * Half the locales spell their book slugs in their own script — `/ko/시편/91`,
  * `/ar/مزمور/91`, `/ru/псалом/90` — and raw Unicode is fine in an `href` but not
  * in an HTTP header or an XML sitemap. A `Location` header is a ByteString, so
- * `Astro.redirect('/ru/псалом/90')` throws outright: "character at index 4 has a
+ * An unencoded redirect throws outright: "character at index 4 has a
  * value of 1087 which is greater than 255". Sitemaps are the quieter half of the
  * same problem — RFC 3986 wants the URL escaped and a raw one is invalid XML's
  * cousin: accepted by parsers, flagged by validators.

@@ -7,8 +7,8 @@
 	--line: #e4d5c1;
 	--ember: #b54a2c;
 	--ember-dark: #8c351d;
-	--serif: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
-	--sans: "Source Sans 3", "Segoe UI", system-ui, sans-serif;
+	--serif: 'Iowan Old Style', 'Palatino Linotype', Palatino, Georgia, serif;
+	--sans: 'Source Sans 3', 'Segoe UI', system-ui, sans-serif;
 	/* Fluid page gutter: roomy on phones, capped on desktop. */
 	--gutter: clamp(1.15rem, 5vw, 3rem);
 	/* Minimum comfortable touch target. */
@@ -83,8 +83,7 @@ img {
 .site-footer {
 	border-top: 1px solid var(--line);
 	margin-top: 3rem;
-	padding: clamp(1.5rem, 5vw, 2rem) 0
-		calc(clamp(2rem, 7vw, 3rem) + env(safe-area-inset-bottom));
+	padding: clamp(1.5rem, 5vw, 2rem) 0 calc(clamp(2rem, 7vw, 3rem) + env(safe-area-inset-bottom));
 	color: var(--muted);
 	font-size: 0.9rem;
 }
@@ -137,6 +136,23 @@ img {
 .nav a[aria-current='page'],
 .nav a:hover {
 	color: var(--ink);
+}
+
+/* Keep every navigation link visible when the wordmark and links cannot fit. */
+@media (max-width: 36em) {
+	.header-inner {
+		flex-direction: column;
+		align-items: stretch;
+		gap: 0;
+		padding-block: 0.35rem;
+	}
+	.wordmark {
+		min-height: var(--tap);
+	}
+	.nav {
+		flex-wrap: wrap;
+		gap: 0.25rem 1.25rem;
+	}
 }
 
 .page {

@@ -1,0 +1,93 @@
+import { ABOUT_PATH, CONTACT_PATH, PRIVACY_PATH } from '../lib/site';
+import { useFooterData } from './FooterContext';
+
+export default function Footer() {
+	// Footer links appear on every page, so this is how /topics and /answers stay
+	// discoverable from deep inside the reader tree.
+	const { topics, answers } = useFooterData();
+	return (
+		<>
+			<footer className="site-footer">
+				<div className="wrap">
+					<nav className="footer-nav" aria-label="Footer">
+						<div className="footer-col">
+							<h2>Read</h2>
+							<ul>
+								<li>
+									<a href="/versions">Bible versions</a>
+								</li>
+								<li>
+									<a href="/verse-of-the-day">Verse of the day</a>
+								</li>
+								{/*
+						"Chapter studies", not "Bible commentary". The anchor text is
+						the strongest hint this site gives about what /study is, and
+						what /study is for is the chapter studies — the original
+						writing. "Bible commentary" described the three republished
+						commentaries underneath them, which is the part of the page
+						four larger sites already publish verbatim and the part we
+						have no interest in ranking for. It also disagreed with the
+						header, which now says Study.
+					*/}
+								<li>
+									<a href="/study">Chapter studies</a>
+								</li>
+							</ul>
+						</div>
+						<div className="footer-col">
+							<h2>Topics</h2>
+							<ul>
+								{topics.slice(0, 5).map((topic) => (
+									<li key={topic.id}>
+										<a href={`/topics/${topic.id}`}>{topic.data.title}</a>
+									</li>
+								))}
+								<li>
+									<a href="/topics">All topics</a>
+								</li>
+							</ul>
+						</div>
+						<div className="footer-col">
+							<h2>Answers</h2>
+							<ul>
+								{answers.slice(0, 5).map((answer) => (
+									<li key={answer.id}>
+										<a href={`/answers/${answer.id}`}>{answer.data.label}</a>
+									</li>
+								))}
+								<li>
+									<a href="/answers">All questions</a>
+								</li>
+							</ul>
+						</div>
+						<div className="footer-col">
+							<h2>This site</h2>
+							<ul>
+								<li>
+									<a href={ABOUT_PATH}>About BibleHearth</a>
+								</li>
+								<li>
+									<a href={CONTACT_PATH}>Contact</a>
+								</li>
+								<li>
+									<a href="/attributions">Attributions</a>
+								</li>
+								<li>
+									<a href={PRIVACY_PATH}>Privacy</a>
+								</li>
+							</ul>
+						</div>
+					</nav>
+					<p>
+						BibleHearth displays licensed Scripture from the YouVersion Platform, with the
+						publisher's required copyright notice on every reader page. Topic lists are selected by
+						BibleHearth with help from two public-domain indexes: Nave's Topical Bible (1897) and
+						Torrey's New Topical Textbook (1897). Commentary pages include Tyndale Open Study Notes
+						under CC BY-SA 4.0, plus the public-domain works of Matthew Henry (1706) and
+						Jamieson-Fausset-Brown (1871). See <a href="/attributions">attributions</a> for details.
+					</p>
+				</div>
+			</footer>
+		</>
+	);
+}

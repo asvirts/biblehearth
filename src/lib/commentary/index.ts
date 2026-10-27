@@ -1,12 +1,7 @@
-import { getCollection, type CollectionEntry } from 'astro:content';
-import { bookSlug } from '../bible/books';
-import { displayChapterNumber } from '../bible/psalms';
-import {
-	DEFAULT_LOCALE,
-	localeForCode,
-	localePath,
-	type Locale,
-} from '../i18n/locales';
+import { chapterStudyPath, bookStudyPath, STUDY_HUB_PATH } from './paths';
+export { STUDY_HUB_PATH, bookStudyPath, chapterStudyPath, studyHubPath } from './paths';
+import { getCollection, type CollectionEntry } from '../content';
+import { DEFAULT_LOCALE, localeForCode, type Locale } from '../i18n/locales';
 
 export type ChapterBrief = CollectionEntry<'chapters'>;
 
@@ -31,18 +26,6 @@ export { commentaryParagraphs, commentaryPlainText, escapeHtml } from './text';
  * are generated from publisher titles to avoid. The book and chapter segments,
  * which are the ones anyone actually searches, are already in the language.
  */
-export const STUDY_HUB_PATH = '/study';
-
-export function studyHubPath(locale: Locale = DEFAULT_LOCALE): string {
-	return localePath(locale, STUDY_HUB_PATH);
-}
-
-export function bookStudyPath(
-	bookUsfm: string,
-	locale: Locale = DEFAULT_LOCALE,
-): string {
-	return localePath(locale, `/${bookSlug(locale, bookUsfm)}`);
-}
 
 /**
  * The URL for one chapter, in one locale.
@@ -53,14 +36,6 @@ export function bookStudyPath(
  * lib/bible/psalms.ts. Callers pass what they have and never convert, so there
  * is one place the two numbering systems meet instead of one per link.
  */
-export function chapterStudyPath(
-	bookUsfm: string,
-	chapter: string | number,
-	locale: Locale = DEFAULT_LOCALE,
-): string {
-	const number = displayChapterNumber(locale, bookUsfm, chapter);
-	return `${bookStudyPath(bookUsfm, locale)}/${number}`;
-}
 
 /**
  * The locale a brief is written in, from where its file sits.
@@ -94,9 +69,7 @@ export function briefLocale(brief: ChapterBrief): Locale {
  * locale's URLs, llms.txt indexes one site. A caller that wants the whole set
  * asks per locale, which is also the shape hreflang needs.
  */
-export async function listChapterBriefs(
-	locale: Locale = DEFAULT_LOCALE,
-): Promise<ChapterBrief[]> {
+export async function listChapterBriefs(locale: Locale = DEFAULT_LOCALE): Promise<ChapterBrief[]> {
 	const briefs = await getCollection('chapters', ({ data }) => !data.draft);
 	return briefs
 		.filter((brief) => briefLocale(brief).code === locale.code)
