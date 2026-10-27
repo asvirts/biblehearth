@@ -1,4 +1,6 @@
-import { getCollection, type CollectionEntry } from 'astro:content';
+import { answerRefs } from './paths';
+export { answerPath, answerRefs } from './paths';
+import { getCollection, type CollectionEntry } from '../content';
 import { referenceIndex } from '../bible/refs';
 
 export type Answer = CollectionEntry<'answers'>;
@@ -9,16 +11,10 @@ export type AnswerRef = {
 	question: string;
 };
 
-export function answerPath(slug: string): string {
-	return `/answers/${slug}`;
-}
-
 /** Published answers, newest first. Drafts are excluded from every surface. */
 export async function listAnswers(): Promise<Answer[]> {
 	const answers = await getCollection('answers', ({ data }) => !data.draft);
-	return answers.sort(
-		(a, b) => b.data.publishedAt.getTime() - a.data.publishedAt.getTime(),
-	);
+	return answers.sort((a, b) => b.data.publishedAt.getTime() - a.data.publishedAt.getTime());
 }
 
 /**
@@ -29,15 +25,6 @@ export async function listAnswers(): Promise<Answer[]> {
  * sitemap seed, so a citation added to the markdown propagates everywhere
  * without a second edit.
  */
-export function answerRefs(answer: Answer): string[] {
-	return [
-		answer.data.anchor.chapter,
-		answer.data.anchor.passage,
-		...answer.data.views.flatMap((view) =>
-			view.verses.map((verse) => verse.usfm),
-		),
-	];
-}
 
 /** Reverse index: which answers discuss a given verse or chapter. */
 export async function verseAnswerIndex(): Promise<{

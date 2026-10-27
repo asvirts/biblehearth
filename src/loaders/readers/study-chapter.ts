@@ -1,0 +1,493 @@
+import type { BiblePassage, BibleVersion } from '@youversion/platform-core';
+import { marked } from 'marked';
+import { verseAnswerIndex } from '../../lib/answers';
+import { chapterInRange } from '../../lib/bible/chapters';
+import {
+	bookName as localeBookName,
+	hasBook,
+	isCanonicalLocaleBookSlug,
+	usfmFromLocaleBookSlug,
+} from '../../lib/bible/books';
+import { displayChapterNumber, hebrewChapter, psalmNumberNote } from '../../lib/bible/psalms';
+import { localeChapterReference } from '../../lib/bible/refs';
+import { localePath } from '../../lib/i18n/locales';
+import { strings } from '../../lib/i18n/strings';
+import { truncateWords } from '../../lib/bible/text';
+import { loadPassages } from '../../lib/bible/passages';
+import { HUB_TRANSLATION_SLUGS } from '../../lib/bible/translations';
+import { chapterPath, encodedPath } from '../../lib/bible/urls';
+import { isNumericChapter } from '../../lib/bible/usfm';
+import {
+	bookStudyPath,
+	briefLocales,
+	chapterBriefIndex,
+	chapterStudyPath,
+	commentaryGist,
+	externalStudyLinks,
+	loadChapterCommentaries,
+	studyHubPath,
+	type ChapterBrief,
+	type ChapterCommentary,
+} from '../../lib/commentary';
+import {
+	DEGRADED_CACHE_CONTROL,
+	READER_CACHE_CONTROL,
+	setCacheControl,
+	setLastModified,
+} from '../../lib/http';
+import { articleJsonLd, breadcrumbJsonLd, creativeWorkJsonLd, faqJsonLd } from '../../lib/seo';
+import { articleShareFields, shareCardFromFigure } from '../../lib/images/og';
+import { listTopics, topicPath } from '../../lib/topics';
+import {
+	displayAbbreviation,
+	getDefaultVersion,
+	getPassageHtml,
+	listVersions,
+	versionSlug,
+} from '../../lib/youversion/api';
+import type { PageContext } from '../../lib/page/types';
+
+/** Loads the StudyChapter view once on the server. */
+export async function loadStudyChapter(context: PageContext) {
+	/**
+	 * The locale this request is in, decided by middleware.
+	 *
+	 * Read from `locals` rather than from the URL because the prefix has already
+	 * been stripped by the time this route matched — `/pt/salmos/91` arrives here as
+	 * `/salmos/91`. Everything below branches on the tables this names, never on the
+	 * locale's identity, so there is no `if (spanish)` anywhere in this file.
+	 */
+	const locale = context.locals.locale;
+	/** Section headings and labels in this locale; see lib/i18n/strings.ts. */
+	const t = strings(locale);
+
+	const bookSlug = context.params.book;
+	const requestedChapter = context.params.chapter;
+
+	if (!bookSlug || !requestedChapter || !isNumericChapter(requestedChapter)) {
+		return context.notFound();
+	}
+
+	const bookUsfm = usfmFromLocaleBookSlug(locale, bookSlug);
+
+	/**
+	 * The number in the URL is the number this locale writes; `chapterId` is the
+	 * number the rest of the app counts in.
+	 *
+	 * They differ for the Psalms in Russian and Romanian — `/ru/псалом/90` is
+	 * `PSA.91` — and this is the one place that conversion happens on the way in.
+	 * Past this line every variable holds a Hebrew number, so nothing downstream has
+	 * to know which tradition the reader came from.
+	 */
+	const hebrew = bookUsfm ? hebrewChapter(locale, bookUsfm, requestedChapter) : null;
+	const chapterId = hebrew === null ? null : String(hebrew);
+
+	// Bounds-checked here rather than downstream, so `/genesis/51` is a 404
+	// without spending three upstream requests to discover it is empty. `hasBook`
+	// is the other half: a locale whose only licensed version is a New Testament
+	// does not have Genesis at all, and offering a page for it would be a chapter
+	// with no text behind it.
+	if (
+		!bookUsfm ||
+		!chapterId ||
+		!hasBook(locale, bookUsfm) ||
+		!chapterInRange(bookUsfm, chapterId)
+	) {
+		return context.notFound();
+	}
+
+	// `/psa/28` resolves to the same chapter as `/psalms/28`. Only one of them is
+	// the page; see isCanonicalLocaleBookSlug. This matters more in a non-Latin
+	// locale than in English — every hamza variant and every Unicode normalisation
+	// of a Korean title resolves, which is exactly why only one may be canonical.
+	if (!isCanonicalLocaleBookSlug(locale, bookSlug, bookUsfm)) {
+		return context.redirect(encodedPath(chapterStudyPath(bookUsfm, chapterId, locale)), 301);
+	}
+
+	const usfm = `${bookUsfm}.${chapterId}`;
+	const bookName = localeBookName(locale, bookUsfm);
+	const reference = localeChapterReference(locale, bookUsfm, chapterId);
+	const canonicalPath = chapterStudyPath(bookUsfm, chapterId, locale);
+	/** What this locale writes in a breadcrumb and beside the chapter heading. */
+	const displayNumber = displayChapterNumber(locale, bookUsfm, chapterId);
+
+	/**
+	 * The commentaries come first and they are the existence check.
+	 *
+	 * They do not depend on the licensed-scripture upstream, so a chapter page keeps
+	 * working through a YouVersion throttle — which matters more here than on a
+	 * reader page, because the value of this page is the commentary, not the text.
+	 * If no source has ever written on this reference and we have no brief for it,
+	 * the chapter does not exist and this is a 404 rather than an empty page.
+	 */
+	let commentaries: ChapterCommentary[] = [];
+	try {
+		/**
+		 * English only, because the commentaries are English.
+		 *
+		 * Tyndale, Matthew Henry and the rest exist in one language, and rendering
+		 * them under a `/pt/` URL puts several thousand words of English prose on a
+		 * Portuguese page — which reads as broken to a reader and as a partial
+		 * duplicate of the English page to a crawler.
+		 *
+		 * This also fixes the existence check below, and that is the more important
+		 * half. Un-gated, a translated chapter with no brief still had commentaries,
+		 * so it answered 200 with an English page nobody could use. Gated, it has
+		 * neither and 404s — which is the honest answer: we have not written that
+		 * chapter in that language yet.
+		 */
+		commentaries = locale.prefix ? [] : await loadChapterCommentaries(bookUsfm, chapterId);
+	} catch {
+		commentaries = [];
+	}
+
+	/**
+	 * The brief in this locale, and every locale that has one.
+	 *
+	 * Two different questions and both are needed: the first decides whether this
+	 * page is indexable at all, the second is the `hreflang` cluster. A chapter
+	 * briefed in English, Portuguese and Spanish must name exactly those three —
+	 * pointing at the other 55, where this same page renders `noindex`, would be a
+	 * cluster of alternates contradicting itself, and search engines discard a
+	 * self-contradicting cluster wholesale rather than honouring the good half.
+	 */
+	const [briefs, translatedInto] = await Promise.all([
+		chapterBriefIndex(locale),
+		briefLocales(usfm),
+	]);
+	const brief: ChapterBrief | undefined = briefs.get(usfm);
+
+	/**
+	 * `hreflang` alternates, or none at all.
+	 *
+	 * Emitted only when this chapter is written in more than one language. A cluster
+	 * of one says nothing a canonical tag has not already said, and a chapter with
+	 * no brief anywhere is `noindex` in every locale — advertising alternates
+	 * between pages that are all withheld from the index is noise pointing at noise.
+	 */
+	const alternates =
+		translatedInto.length > 1
+			? translatedInto.map((other) => ({
+					hreflang: other.htmlLang,
+					href: chapterStudyPath(bookUsfm, chapterId, other),
+				}))
+			: [];
+
+	/**
+	 * The note that stops «Псалом 90» looking like a miscount.
+	 *
+	 * Null in every locale that numbers the Psalms from the Hebrew, which is all but
+	 * three of them, so the markup below simply does not appear. Where it does, it
+	 * is the difference between a reader trusting the page and a reader checking it
+	 * against their own Bible and concluding we cannot count.
+	 */
+	const numbering = psalmNumberNote(locale, bookUsfm, Number(chapterId));
+
+	if (commentaries.length === 0 && !brief) {
+		return context.notFound();
+	}
+
+	// The markdown body is the "if this is your first time reading it" note. Kept
+	// out of the frontmatter because it is prose with headings, and rendering it
+	// last means the reader meets the structured summary before the aside.
+	const bodyHtml = brief ? await marked.parse(brief.body ?? '') : null;
+
+	/**
+	 * Scripture is a nice-to-have here, never a requirement — every fetch below is
+	 * allowed to fail and the page still renders.
+	 *
+	 * That is a deliberate inversion of the reader page, where the text *is* the
+	 * page. Here the text is one section among nine, so a throttled upstream costs
+	 * the reader a paragraph rather than the whole answer.
+	 */
+	let version: BibleVersion | null = null;
+	let readerLinks: { slug: string; label: string }[] = [];
+	let passages = new Map<string, BiblePassage | null>();
+	let chapterText: BiblePassage | null = null;
+	let shownSlug = '';
+	// Set when a fetch failed, as opposed to there being nothing to fetch.
+	let scriptureFailed = false;
+
+	try {
+		const [defaultVersion, catalog] = await Promise.all([
+			getDefaultVersion(locale),
+			listVersions(locale),
+		]);
+		version = defaultVersion;
+		shownSlug = defaultVersion ? versionSlug(defaultVersion, catalog) : '';
+
+		/**
+		 * Which translations to offer, and why the two branches are not the same
+		 * question.
+		 *
+		 * English has twenty versions on this key cut down to six, so the order is a
+		 * curated one and `HUB_TRANSLATION_SLUGS` holds it. Every other locale has
+		 * one to three, allowlisted in the registry — so the whole catalogue *is*
+		 * the shortlist, and matching it against a list of English slugs would find
+		 * nothing and silently drop this block from every translated page.
+		 *
+		 * That silence is the bug worth naming: the links would not look wrong, they
+		 * would look absent, on the pages whose only route to the text they are.
+		 */
+		const shortlist = locale.prefix
+			? catalog
+			: HUB_TRANSLATION_SLUGS.map((wanted) =>
+					catalog.find((item) => versionSlug(item, catalog) === wanted),
+				).filter((item): item is BibleVersion => Boolean(item));
+
+		readerLinks = shortlist.slice(0, 5).map((item) => ({
+			slug: versionSlug(item, catalog),
+			label: displayAbbreviation(item),
+		}));
+
+		/**
+		 * The full chapter, but only on a page that carries a brief.
+		 *
+		 * Someone searching "Psalm 28" wants to read Psalm 28, and sending them to a
+		 * different URL for the one thing they asked for is how this page lost the
+		 * query to BibleGateway. So a briefed chapter renders in full.
+		 *
+		 * The other eleven hundred chapters do not, and that is the same call made
+		 * for the same reason as `indexable` below: those pages are `noindex`, so
+		 * the fetch would buy no ranking, and it is precisely the URLs nobody has
+		 * requested yet that a crawler on a cold cache turns into a rate-limit
+		 * incident. Write a brief and the chapter earns its text along with its
+		 * place in the index.
+		 */
+		const [chapterResult, keyVerses] = await Promise.all([
+			brief && version
+				? // `headings: true, notes: true` is not a display preference — it is
+					// the reader page's options, and the cache key is built from them
+					// (see getPassageHtml). Ask for anything else and this becomes a
+					// second entry for the same chapter that pages/api/warm.ts does not
+					// fill, so every crawl hits it cold. Which is the exact shape of the
+					// 2026-08-18 incident the warmer exists to prevent.
+					getPassageHtml(version.id, usfm, {
+						headings: true,
+						notes: true,
+					}).catch(() => {
+						scriptureFailed = true;
+						return null;
+					})
+				: null,
+			brief?.data.keyVerses.length && version
+				? loadPassages(
+						version.id,
+						brief.data.keyVerses.map((verse) => verse.usfm),
+					)
+				: { passages, failed: 0 },
+		]);
+		chapterText = chapterResult;
+		passages = keyVerses.passages;
+		if (keyVerses.failed > 0) {
+			scriptureFailed = true;
+		}
+	} catch {
+		// Reader links and scripture drop out; everything else still renders.
+		scriptureFailed = true;
+	}
+
+	// A version is not an alternative to itself.
+	const otherVersions = readerLinks.filter((link) => link.slug !== shownSlug);
+
+	/**
+	 * Whether the neighbouring chapter has a page to link to.
+	 *
+	 * In English every chapter of the canon does — it carries the commentaries. A
+	 * translated chapter exists only where somebody has written it, and every other
+	 * one is a 404, so `/pt/salmo/91` was linking to `/pt/salmo/90` and `/pt/salmo/92`
+	 * for two dead ends.
+	 */
+	const hasStudyPage = (chapter: number) =>
+		chapterInRange(bookUsfm, chapter) && (!locale.prefix || briefs.has(`${bookUsfm}.${chapter}`));
+
+	/**
+	 * A briefed page that lost its Scripture is cached for minutes, not a day.
+	 *
+	 * Same reasoning as the topic and answer pages, and it matters more here: the
+	 * catalogue and the version are held for a week past their refresh point, so
+	 * during a throttle they still load while the chapter and key verses — which are
+	 * only cached once somebody has asked for them — do not. `READER_CACHE_CONTROL`
+	 * would pin that page, without the text it earned its place in the index for, at
+	 * the edge until tomorrow. A page with no brief fetches nothing, so it has
+	 * nothing to lose.
+	 */
+	const degraded = Boolean(brief) && (scriptureFailed || !version);
+	setCacheControl(context.response, degraded ? DEGRADED_CACHE_CONTROL : READER_CACHE_CONTROL);
+	// Only the briefed chapters have a date worth stating. The rest are `noindex`
+	// commentary whose "last modified" would mean nothing but the deploy.
+	if (brief) {
+		setLastModified(context.response, brief.data.reviewedAt);
+	}
+
+	const [allTopics, { byChapter: answersByChapter }] = await Promise.all([
+		listTopics(),
+		verseAnswerIndex(),
+	]);
+	const chapterAnswers = answersByChapter.get(usfm) ?? [];
+	const relatedTopics = (brief?.data.relatedTopics ?? [])
+		.map((ref) => allTopics.find((topic) => topic.id === ref.id))
+		.filter((topic): topic is (typeof allTopics)[number] => Boolean(topic))
+		.map((topic) => ({ slug: topic.id, title: topic.data.title }));
+
+	/**
+	 * BibleHub, StudyLight and the rest — all English, so English only.
+	 *
+	 * These are "read more elsewhere" links, and their value is that the page on the
+	 * other end says something this one does not. In Portuguese or Thai that is not
+	 * true of an English interlinear: it is an outbound link to a page the reader
+	 * cannot read, which spends this page's link equity for nothing.
+	 */
+	const externalLinks = locale.prefix ? [] : externalStudyLinks(bookUsfm, Number(chapterId));
+	const firstSourceAnchor = commentaries[0] ? `#notes-${commentaries[0].source.id}` : null;
+
+	const heading = brief?.data.title ?? `${reference}: Summary and Commentary`;
+
+	/**
+	 * Titles chase the way people actually phrase a chapter question — "genesis 1
+	 * summary", "what does romans 8 mean", "psalm 23 explained" — without stacking
+	 * every variant into one string. A briefed chapter leads with its own claim,
+	 * which is the more clickable and more distinctive half.
+	 *
+	 * That claim is the whole title now. It used to carry `| Summary, Meaning &
+	 * Commentary` as well, which put every briefed chapter between 75 and 107
+	 * characters: Bing rejects those outright, Google truncated them, and the three
+	 * words it bought were the three least distinctive on the page — every result
+	 * for "psalm 23" says "commentary". `shortAnswer` earns those queries in the
+	 * description, where a sentence has room to mean something. `seoTitle` is how a
+	 * brief whose `<h1>` runs long says what its short form should be.
+	 */
+	const title = brief
+		? (brief.data.seoTitle ?? brief.data.title)
+		: `${reference}: Summary, Meaning and Commentary`;
+
+	const gist = commentaryGist(commentaries);
+	// Longer than the 155 characters a SERP shows, deliberately. Google truncates
+	// the display and never penalises the extra, while answer engines quoting the
+	// page get the whole first thought rather than half of it. The field is
+	// front-loaded either way, so the first sentence survives any cut.
+	const description = brief
+		? truncateWords(brief.data.shortAnswer, 300)
+		: gist ||
+			`A verse-by-verse study of ${reference}: what the chapter says, what it means, and notes from three commentaries.`;
+
+	/**
+	 * A chapter with no brief carries only other people's text. Those pages stay
+	 * live and linked — they are genuinely useful, and three commentaries side by
+	 * side is something no other site puts on one page — but they are held out of
+	 * the index. Publishing eleven hundred pages whose substance is a public-domain
+	 * commentary already mirrored across BibleHub, StudyLight, CCEL and Blue Letter
+	 * Bible is the textbook shape of scaled content abuse, and it would put the
+	 * pages that *do* have original writing at risk alongside them. Writing a brief
+	 * is what earns a chapter its place in the index.
+	 *
+	 * It earns the markdown twin at `<url>.md` on the same terms, which is why one
+	 * flag drives both props below — a twin with no original writing in it would be
+	 * the same page, republished in a second format.
+	 */
+	const indexable = Boolean(brief);
+
+	const citations = commentaries.map((entry) => ({
+		name: entry.source.name,
+		author: entry.source.author,
+		license: entry.source.license.url,
+		url: entry.source.homepage,
+	}));
+
+	const share = brief?.data.figure ? await shareCardFromFigure(brief.data.figure) : undefined;
+
+	const jsonLd: Record<string, unknown>[] = [
+		breadcrumbJsonLd(context.site, [
+			{ name: 'BibleHearth', path: '/' },
+			{ name: 'Bible study', path: studyHubPath(locale) },
+			{ name: bookName, path: bookStudyPath(bookUsfm, locale) },
+			{ name: reference, path: canonicalPath },
+		]),
+	];
+
+	if (brief) {
+		jsonLd.push(
+			articleJsonLd({
+				site: context.site,
+				path: canonicalPath,
+				headline: heading,
+				description,
+				datePublished: brief.data.publishedAt,
+				dateModified: brief.data.reviewedAt,
+				about: brief.data.entity,
+				citation: citations,
+				...articleShareFields(share),
+			}),
+			faqJsonLd(brief.data.faqs),
+		);
+	} else {
+		jsonLd.push(
+			creativeWorkJsonLd({
+				name: `${reference} commentary`,
+				description,
+				inLanguage: locale.htmlLang,
+			}),
+		);
+	}
+
+	/**
+	 * The review date, written the way this locale writes dates.
+	 *
+	 * `toLocaleDateString` takes the BCP-47 tag straight from the registry, so
+	 * "August 2026" becomes "agosto de 2026" and "август 2026 г." without a table of
+	 * month names per language. Which is the whole reason the registry carries
+	 * `htmlLang` as a real BCP-47 tag rather than just a URL prefix.
+	 */
+	const reviewed = brief
+		? brief.data.reviewedAt.toLocaleDateString(locale.htmlLang, {
+				year: 'numeric',
+				month: 'long',
+			})
+		: null;
+
+	/**
+	 * `og:type` follows the brief, which is the same test `indexable` uses.
+	 *
+	 * A briefed chapter emits an `Article` node above and is an article; an
+	 * un-briefed one is republished public-domain commentary under a `noindex`, and
+	 * calling that an article of ours would be the one claim on the page that
+	 * nothing on it supports.
+	 */
+	const ogType: 'article' | 'website' = brief ? 'article' : 'website';
+
+	return {
+		locale,
+		bookUsfm,
+		chapterId,
+		bookName,
+		reference,
+		canonicalPath,
+		displayNumber,
+		commentaries,
+		// The rendered markdown body travels once as bodyHtml, not again as source.
+		brief: brief ? { data: brief.data } : undefined,
+		alternates,
+		numbering,
+		version,
+		readerLinks,
+		passages,
+		chapterText,
+		shownSlug,
+		otherVersions,
+		chapterAnswers,
+		relatedTopics,
+		externalLinks,
+		firstSourceAnchor,
+		heading,
+		title,
+		description,
+		indexable,
+		share,
+		jsonLd,
+		reviewed,
+		ogType,
+		bodyHtml,
+		hasPreviousStudy: hasStudyPage(Number(chapterId) - 1),
+		hasNextStudy: hasStudyPage(Number(chapterId) + 1),
+	};
+}

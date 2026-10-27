@@ -1,4 +1,4 @@
-import type { ImageMetadata } from 'astro';
+export type ImageMetadata = { src: string; width: number; height: number; format?: string };
 
 export const FIGURE_LICENSES = {
 	cc0: {
@@ -64,10 +64,7 @@ export function figureCreditLine(
  * 2.0 Geograph file is not credited as 4.0 just because the enum collapsed
  * the family.
  */
-export function licenseDisplayName(
-	license: FigureLicense | string,
-	licenseUrl: string,
-): string {
+export function licenseDisplayName(license: FigureLicense | string, licenseUrl: string): string {
 	try {
 		const path = new URL(licenseUrl).pathname;
 		const bySa = path.match(/\/licenses\/by-sa\/(\d+\.\d+)/);

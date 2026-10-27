@@ -1,11 +1,10 @@
-import { z, type SchemaContext } from 'astro:content';
+import { z } from 'zod';
+import type { ImageMetadata } from './types';
 import { FIGURE_LICENSES } from './types';
 
-type ImageHelper = SchemaContext['image'];
+type ImageHelper = () => z.ZodType<ImageMetadata>;
 
-const LICENSE_IDS = Object.keys(FIGURE_LICENSES) as Array<
-	keyof typeof FIGURE_LICENSES
->;
+const LICENSE_IDS = Object.keys(FIGURE_LICENSES) as Array<keyof typeof FIGURE_LICENSES>;
 
 /**
  * The picture on a chapter, topic or answer. Same fields in every collection

@@ -1,126 +1,45 @@
-# Issue tracker
+# Issue tracker: GitHub
 
-This repo's issue tracker is **GitHub Issues on `youversion/biblehearth`**. Skills that
-read or write tickets (`wayfinder` and anything else that asks for "the issue tracker")
-use it and nothing else. Refer to issues by title in anything a person reads; the
-number and URL ride inside the title's link.
+Issues and PRDs for this repo live as GitHub issues. Use the `gh` CLI for all operations.
 
-Agents in Claude Code cloud sessions have no `gh` CLI. They use the GitHub MCP tools
-(`mcp__github__*`), which act as the signed-in GitHub user. Local sessions with `gh`
-can do the same operations with `gh issue` and `gh api`.
+## Conventions
 
-## Labels
+- **Create an issue**: `gh issue create --title "..." --body "..."`. Use a heredoc for multi-line bodies.
+- **Read an issue**: `gh issue view <number> --comments`, filtering comments by `jq` and also fetching labels.
+- **List issues**: `gh issue list --state open --json number,title,body,labels,comments --jq '[.[] | {number, title, body, labels: [.labels[].name], comments: [.comments[].body]}]'` with appropriate `--label` and `--state` filters.
+- **Comment on an issue**: `gh issue comment <number> --body "..."`
+- **Apply / remove labels**: `gh issue edit <number> --add-label "..."` / `--remove-label "..."`
+- **Close**: `gh issue close <number> --comment "..."`
 
-Already created on the repo:
+Infer the repo from `git remote -v` — `gh` does this automatically when run inside a clone.
 
-| Label | Meaning |
-| --- | --- |
-| `wayfinder:map` | The map: one index issue per effort |
-| `wayfinder:research` | AFK research ticket |
-| `wayfinder:prototype` | HITL prototype ticket |
-| `wayfinder:grilling` | HITL grilling ticket |
-| `wayfinder:task` | Task ticket, HITL or AFK |
+## Pull requests as a triage surface
+
+**PRs as a request surface: no.** _(Set to `yes` if this repo treats external PRs as feature requests; `/triage` reads this flag.)_
+
+When set to `yes`, PRs run through the same labels and states as issues, using the `gh pr` equivalents:
+
+- **Read a PR**: `gh pr view <number> --comments` and `gh pr diff <number>` for the diff.
+- **List external PRs for triage**: `gh pr list --state open --json number,title,body,labels,author,authorAssociation,comments` then keep only `authorAssociation` of `CONTRIBUTOR`, `FIRST_TIME_CONTRIBUTOR`, or `NONE` (drop `OWNER`/`MEMBER`/`COLLABORATOR`).
+- **Comment / label / close**: `gh pr comment`, `gh pr edit --add-label`/`--remove-label`, `gh pr close`.
+
+GitHub shares one number space across issues and PRs, so a bare `#42` may be either — resolve with `gh pr view 42` and fall back to `gh issue view 42`.
+
+## When a skill says "publish to the issue tracker"
+
+Create a GitHub issue.
+
+## When a skill says "fetch the relevant ticket"
+
+Run `gh issue view <number> --comments`.
 
 ## Wayfinding operations
 
-**Create the map.** `issue_write` with `method: create`, `labels: ["wayfinder:map"]`,
-and the map body from the wayfinder skill.
+Used by `/wayfinder`. The **map** is a single issue with **child** issues as tickets.
 
-**Create a ticket.** `issue_write` with `method: create`, `parent_issue_number: <map>`
-and one `wayfinder:<type>` label. That creates the issue and attaches it as a GitHub
-sub-issue of the map in one call. To attach an existing issue instead, use
-`sub_issue_write` with `method: add`. It takes the issue's `id`, not its number.
-
-**List a map's tickets.** `issue_read` with `method: get_sub_issues` on the map.
-
-**Comments are the record.** Several sessions may work one map at once, and
-`issue_write` replaces an issue's whole body, so two sessions editing the same body
-can erase each other's change without either noticing. Comments are append-only and
-totally ordered, so nothing posted as a comment can be lost that way. Every piece of
-state that sessions share (claims, releases, blocking edges, answers, rulings) is
-therefore recorded as a comment. Issue bodies and the map's lists are views for
-people to read, and any session that finds one out of date repairs it from the
-comments.
-
-**Claim a ticket.** Every session acts as the same GitHub user, so the assignee
-alone can't tell two sessions apart. Claim in three steps, before any other work:
-
-1. `issue_write` with `method: update` and `assignees: [<driver>]`. The driver is the
-   person running the map, `asvirts` unless the map's Notes name someone else.
-2. Post a comment with `add_issue_comment` that reads `Claimed by <session URL>`.
-3. Read the comments back with `issue_read` `method: get_comments`. A claim is
-   active until a release frees it (see **Release a claim**). The oldest active claim
-   holds the ticket. If it isn't yours, post `Released <link to your claim comment>: lost claim`,
-   then leave the ticket alone and pick the next one on the frontier.
-
-**Release a claim.** Post `Released <link to the claim comment>: <why>`. A release
-that links to the claim holding the ticket frees every claim posted before it, so a
-losing session that died before releasing can't leave its claim behind. A release
-that links to any other claim frees only that one, so a late release from a stale
-session can't clear a newer claim. Release the holding claim when a session stops
-before resolving its ticket, when the person driving the map frees a ticket whose
-session died, and when anyone reopens a closed ticket.
-
-**Block a ticket.** Post `Blocked by #<n>` on the blocked ticket, one comment per
-edge. When charting, wire the edges in a second pass, once every ticket has a
-number. To remove an edge, post `Unblocked from #<n>: <why>`. For each blocker, the
-newer of those two comments decides whether the edge stands.
-
-Two views mirror the comments:
-
-- The ticket body's `## Blocked by` section, for people reading the issue:
-
-  ```markdown
-  ## Blocked by
-
-  - #12
-  - #15
-  ```
-
-- GitHub's native issue dependencies ("Blocked by" in the issue sidebar), so the
-  frontier shows up in GitHub's UI. The MCP tools can't read or write those, so a
-  cloud session asks the person driving the map to add or remove each sidebar link.
-  Where `gh` is available, run
-  `gh api repos/youversion/biblehearth/issues/<n>/dependencies/blocked_by -f issue_id=<blocker id>`
-  to add one, or
-  `gh api -X DELETE repos/youversion/biblehearth/issues/<n>/dependencies/blocked_by/<blocker id>`
-  to remove one.
-
-Anyone who changes a blocker in the sidebar or the body also posts the comment, or
-sessions won't see the change.
-
-**Find the frontier.** Get the map's sub-issues and read each open one's comments.
-Keep the tickets that have no active claim and whose standing blockers are all
-closed with `state_reason: completed`. A blocker closed as `not_planned` doesn't
-count as done: the ticket it blocks stays off the frontier until someone resolves
-the edge (see **Rule a ticket out of scope**). Take the frontier in sub-issue order.
-If a ticket's `## Blocked by` section doesn't match its comments, rewrite the
-section from the comments.
-
-**Resolve a ticket.** Post the answer with `add_issue_comment`, then close it with
-`issue_write`: `state: closed` and `state_reason: completed`. Then add its line to
-the map's **Decisions so far** (see **Update the map**).
-
-**Rule a ticket out of scope.** Post the ruling with `add_issue_comment`: the gist
-and why it's beyond the destination. Close the ticket with `state_reason: not_planned`
-and add one line to the map's **Out of scope** section. Then find every ticket with
-a standing edge to it. For each one, either post `Unblocked from #<n>: <why>` (the
-work doesn't depend on it after all) or rule that ticket out of scope too.
-
-**Update the map.** The map's lists are views of the closed tickets:
-
-1. Re-read the map body right before you write, and change only the lines you're
-   adding or editing.
-2. After writing, read it back and check that your line is there.
-3. Each time you load the map, compare **Decisions so far** with the map's sub-issues
-   closed as `completed`. Restore the line for any that's missing, gisted from the
-   ticket's resolution comment. Do the same for **Out of scope** and the tickets
-   closed as `not_planned`, using the ruling comment.
-4. The prose sections (**Destination**, **Notes**, **Not yet specified**) have no
-   tickets to rebuild them from. Before editing one, post a `Map edit: <what changed>`
-   comment on the map. Each time you load the map, check that every `Map edit`
-   comment is reflected in the body. Re-apply the missing ones in order, skipping any
-   that a later `Map edit` supersedes.
-
-**Assets.** Link them from the issue: a branch, a PR, or a file in the repo. Research
-findings go on a throwaway `research/<name>` branch, linked from the ticket.
+- **Map**: a single issue labelled `wayfinder:map`, holding the Notes / Decisions-so-far / Fog body. `gh issue create --label wayfinder:map`.
+- **Child ticket**: an issue linked to the map as a GitHub sub-issue (`gh api` on the sub-issues endpoint). Where sub-issues aren't enabled, add the child to a task list in the map body and put `Part of #<map>` at the top of the child body. Labels: `wayfinder:<type>` (`research`/`prototype`/`grilling`/`task`). Once claimed, the ticket is assigned to the driving dev.
+- **Blocking**: GitHub's **native issue dependencies** — the canonical, UI-visible representation. Add an edge with `gh api --method POST repos/<owner>/<repo>/issues/<child>/dependencies/blocked_by -F issue_id=<blocker-db-id>`, where `<blocker-db-id>` is the blocker's numeric **database id** (`gh api repos/<owner>/<repo>/issues/<n> --jq .id`, _not_ the `#number` or `node_id`). GitHub reports `issue_dependencies_summary.blocked_by` (open blockers only — the live gate). Where dependencies aren't available, fall back to a `Blocked by: #<n>, #<n>` line at the top of the child body. A ticket is unblocked when every blocker is closed.
+- **Frontier query**: list the map's open children (`gh issue list --state open`, scoped to the map's sub-issues / task list), drop any with an open blocker (`issue_dependencies_summary.blocked_by > 0`, or an open issue in the `Blocked by` line) or an assignee; first in map order wins.
+- **Claim**: `gh issue edit <n> --add-assignee @me` — the session's first write.
+- **Resolve**: `gh issue comment <n> --body "<answer>"`, then `gh issue close <n>`, then append a context pointer (gist + link) to the map's Decisions-so-far.

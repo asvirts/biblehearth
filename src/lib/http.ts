@@ -16,6 +16,9 @@
 export const READER_CACHE_CONTROL =
 	'public, max-age=3600, s-maxage=86400, stale-while-revalidate=604800, stale-if-error=604800';
 
+/** Retry omitted translations soon; stale markup must not prolong the omission. */
+export const PARTIAL_READER_CACHE_CONTROL = 'public, max-age=60, s-maxage=300';
+
 /** Verse of the Day rotates daily, so the home page refreshes far sooner. */
 export const HOME_CACHE_CONTROL =
 	'public, max-age=300, s-maxage=900, stale-while-revalidate=86400, stale-if-error=86400';
@@ -84,10 +87,7 @@ export const ERROR_CACHE_CONTROL = 'no-store';
  */
 export const RETRY_AFTER_SECONDS = 300;
 
-export function setCacheControl(
-	response: { headers: Headers },
-	value: string,
-): void {
+export function setCacheControl(response: { headers: Headers }, value: string): void {
 	response.headers.set('Cache-Control', value);
 }
 
@@ -106,10 +106,7 @@ export function setCacheControl(
  * comment already refuses to emit. Those pages get an ETag from the middleware
  * instead, which is derived from the bytes and therefore cannot lie.
  */
-export function setLastModified(
-	response: { headers: Headers },
-	date: Date,
-): void {
+export function setLastModified(response: { headers: Headers }, date: Date): void {
 	response.headers.set('Last-Modified', date.toUTCString());
 }
 
@@ -124,10 +121,7 @@ export function setPageHeaders(
 	status: number,
 	cacheControl: string,
 ): void {
-	setCacheControl(
-		response,
-		status === 200 ? cacheControl : ERROR_CACHE_CONTROL,
-	);
+	setCacheControl(response, status === 200 ? cacheControl : ERROR_CACHE_CONTROL);
 	if (status === 503 || status === 429) {
 		response.headers.set('Retry-After', String(RETRY_AFTER_SECONDS));
 	}

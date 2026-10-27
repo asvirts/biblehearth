@@ -1,36 +1,54 @@
 {
-  "name": "biblehearth",
-  "type": "module",
-  "version": "0.0.1",
-  "engines": {
-    "node": ">=22.12.0"
-  },
-  "scripts": {
-    "dev": "astro dev",
-    "build": "astro build",
-    "postbuild": "node scripts/indexnow.mjs --changed --if-production",
-    "preview": "astro preview",
-    "astro": "astro",
-    "indexnow": "node scripts/indexnow.mjs",
-    "questions:audit": "node scripts/questions-audit.mjs",
-    "questions:export": "node scripts/questions-export.mjs",
-    "chapter:research": "node scripts/chapter-research.mjs",
-    "copy:audit": "node scripts/copy-audit.mjs",
-    "books:generate": "node scripts/generate-book-slugs.mjs",
-    "locales:generate": "node scripts/generate-locales.mjs",
-    "sitemap:audit": "node scripts/sitemap-audit.mjs"
-  },
-  "dependencies": {
-    "@astrojs/vercel": "^11.0.16",
-    "@microsoft/clarity": "^1.0.2",
-    "@vercel/functions": "^3.10.3",
-    "@youversion/platform-core": "^2.15.0",
-    "astro": "^7.4.2",
-    "sharp": "^0.35.5"
-  },
-  "overrides": {
-    "@vercel/routing-utils": {
-      "path-to-regexp": "6.3.0"
-    }
-  }
+	"name": "biblehearth",
+	"type": "module",
+	"version": "0.0.1",
+	"engines": {
+		"node": ">=22.12.0"
+	},
+	"scripts": {
+		"test": "tsx --test tests/*.test.ts",
+		"dev": "next dev",
+		"build": "next build",
+		"postbuild": "node scripts/indexnow.mjs --changed --if-production",
+		"preview": "next start",
+		"indexnow": "node scripts/indexnow.mjs",
+		"questions:audit": "node scripts/questions-audit.mjs",
+		"questions:export": "node scripts/questions-export.mjs",
+		"chapter:research": "node scripts/chapter-research.mjs",
+		"copy:audit": "node scripts/copy-audit.mjs",
+		"books:generate": "node scripts/generate-book-slugs.mjs",
+		"locales:generate": "node scripts/generate-locales.mjs",
+		"sitemap:audit": "node scripts/sitemap-audit.mjs",
+		"start": "next start",
+		"typecheck": "tsc --noEmit",
+		"prebuild": "tsx scripts/content-check.ts",
+		"verify:http": "node scripts/verify-next.mjs"
+	},
+	"dependencies": {
+		"@vercel/analytics": "^2.0.0",
+		"@vercel/functions": "^3.10.3",
+		"@youversion/platform-core": "^2.15.0",
+		"gray-matter": "^4.0.3",
+		"marked": "^17.0.0",
+		"next": "16.4.3",
+		"react": "19.3.1",
+		"react-dom": "19.3.1",
+		"sharp": "^0.35.5",
+		"superjson": "^2.2.6",
+		"zod": "^4.6.6"
+	},
+	"overrides": {
+		"@vercel/routing-utils": {
+			"path-to-regexp": "6.3.0"
+		},
+		"zod": "^4.6.6"
+	},
+	"devDependencies": {
+		"@types/node": "^24.10.0",
+		"@types/react": "^19.2.14",
+		"@types/react-dom": "^19.2.3",
+		"prettier": "^3.9.10",
+		"tsx": "^4.21.0",
+		"typescript": "^5.9.3"
+	}
 }

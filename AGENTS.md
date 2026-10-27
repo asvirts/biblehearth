@@ -1,34 +1,53 @@
 ## Development
 
-When starting the dev server, use background mode:
+This is a Next.js Pages Router site. Preserve the current design in
+`src/styles/global.css` and `src/styles/scripture.css` unless a task requests a
+redesign. Run `npm run dev` in a persistent background terminal session and
+retain its handle for logs and shutdown. The default port is 3000.
 
-```
-astro dev --background
-```
+Run `npm test`, `npm run typecheck`, and `npm run build` for framework or routing
+changes. `prebuild` validates authored content and references, then copies
+credited editorial assets to `public/editorial/`.
 
-Manage the background server with `astro dev stop`, `astro dev status`, and `astro dev logs`.
+## Request and rendering boundaries
+
+- `src/pages/[[...path]].tsx` is the public HTML entry. Its
+  `getServerSideProps` calls `src/lib/page/server.ts` once per request.
+- `src/lib/page/routes.ts` matches static hubs before books and chapters and
+  preserves the old `/commentary` redirects. Resolve locale prefixes from the
+  public URL with `splitLocalePath()`, never from a client-supplied header.
+- `src/loaders/` owns I/O, credentials, existence checks, HTTP status, and cache
+  headers. `src/views/` owns synchronous React rendering. Models are data only;
+  SuperJSON preserves Dates and Maps across hydration. All page props are public.
+- Browser views import pure helpers from `src/lib/paths.ts`,
+  `src/lib/commentary/paths.ts`, and `src/lib/youversion/display.ts`. Do not pull
+  content I/O, cache adapters, or Platform credentials into the browser graph.
+- `src/resources/dispatch.ts` owns XML, Markdown, `llms.txt`, reading redirects,
+  and the authenticated warmer. Resources use the same locale resolution.
+- Temporary failures are not absence: return retryable 503 and `Retry-After`
+  when no Scripture can load; preserve 200 for an original article whose writing
+  rendered. Never turn a failed fetch into a cached 404.
+- Hydrate selected Bible versions from detail records before displaying text:
+  catalog summaries can omit copyright and publisher metadata.
+- Keep ordinary anchors for licensed reader links; speculative prefetching spends
+  passage quota before the reader chooses a page.
+- `site.config.mjs` supplies the canonical origin for rendering and publishing.
+- `CLAUDE.md` is a symlink to this file; edit the shared instructions here.
 
 ## Documentation
 
-Full documentation: https://docs.astro.build
-
-Consult these guides before working on related tasks:
-
-- [Adding pages, dynamic routes, or middleware](https://docs.astro.build/en/guides/routing/)
-- [Working with Astro components](https://docs.astro.build/en/basics/astro-components/)
-- [Using React, Vue, Svelte, or other framework components](https://docs.astro.build/en/guides/framework-components/)
-- [Adding or managing content](https://docs.astro.build/en/guides/content-collections/)
-- [Adding styles or using Tailwind](https://docs.astro.build/en/guides/styling/)
-- [Supporting multiple languages](https://docs.astro.build/en/guides/internationalization/)
+Consult the current [Next.js Pages Router docs](https://nextjs.org/docs/pages)
+when changing routing, rendering, or metadata. `getServerSideProps` is deliberate:
+real status codes and cache headers come from one load, without fetching licensed
+text in a separate request preflight.
 
 ## Study pages
 
 Every chapter of the Bible has a study page at `/{book}/{chapter}` — `/psalms/28`.
-Its book page is `/{book}` and the hub is `/study`. Those routes live at the site
-root, so `src/pages/[book]/[chapter].astro` is the greediest route in the app:
-any new top-level page needs a static segment to beat it, and 66 book slugs
-(`/john`, `/acts`, `/job`) are permanently spoken for. They moved out of
-`/commentary/*` on 2026-08-18; the old paths 301 from `astro.config.mjs`.
+Its book page is `/{book}` and the hub is `/study`. These routes live at the
+site root; 66 book slugs (`/john`, `/acts`, `/job`) are permanently spoken for.
+Register a new hub before the generic book matcher in `src/lib/page/routes.ts`.
+That matcher also permanently redirects the old `/commentary/*` paths.
 
 A study page carries the chapter itself, then original writing, then three
 republished commentaries. **The original writing is what makes it indexable.**
@@ -52,7 +71,7 @@ than interpolating a book name in front of a number.
 
 `/llms.txt` follows the [llmstxt.org](https://llmstxt.org) convention: a curated
 index of the pages whose substance is ours, generated in
-`src/pages/llms.txt.ts` from the same `listChapterBriefs()` the sitemap uses. It
+`src/resources/llms.txt.ts` from the same `listChapterBriefs()` the sitemap uses. It
 is not a sitemap — the ~1,180 chapter URLs and ~31,000 verse hubs stay out, and
 reach agents through the hubs listed under `## Optional`.
 
@@ -110,19 +129,17 @@ IndexNow on top of it. `--dry-run` prints the payload and sends nothing.
 Confirm receipt in [Bing Webmaster Tools](https://www.bing.com/webmasters) under
 Indexing → IndexNow. Verifying the site there needs `BING_SITE_VERIFICATION`
 set in Vercel — the `content` value of the `msvalidate.01` tag it offers — which
-BaseLayout emits into every page. It is also what unlocks Crawl Control, which
+PageLayout emits into every page. It is also what unlocks Crawl Control, which
 is where Bingbot's pace belongs; `robots.txt` gives it a `Crawl-delay: 1` group
 in the meantime, separate from the slower one the long tail gets.
 
 ## Custom events
 
-Vercel Web Analytics is on (`webAnalytics` in `astro.config.mjs`), and custom
-events are declared in markup rather than written in code: `data-va` names an
-event that fires on click, `data-va-view` one that fires when the element first
-reaches the viewport, and every `data-va-*` beside them becomes a property.
-`src/components/Analytics.astro` is the one delegated listener behind all of
-that, and its frontmatter is where the rules live — the script itself is bare,
-because an inline script is served to every reader on every page.
+Vercel Web Analytics is initialized in `src/pages/_app.tsx`. Custom events
+remain declared in markup: `data-va` names a click event, `data-va-view` names
+an event when the element first reaches the viewport, and accompanying
+`data-va-*` values become properties. `src/components/Analytics.tsx` is the
+single delegated listener; it reattaches observers when the route changes.
 
 Two rules decide whether an event is worth adding. **Never record what the URL
 already says**: the page view carries the path, so an event earns its keep only
@@ -145,6 +162,14 @@ on the full chapter changes that. `translation-switch` measures what
 
 ## Agent skills
 
-Skills that work on an issue tracker (`wayfinder`, and any other that asks for one)
-use GitHub Issues on `youversion/biblehearth`. How each operation maps onto GitHub is
-in [`docs/agents/issue-tracker.md`](docs/agents/issue-tracker.md).
+### Issue tracker
+
+GitHub Issues in youversion/biblehearth via `gh` CLI. See `docs/agents/issue-tracker.md`.
+
+### Triage labels
+
+Canonical five roles (`needs-triage`, `needs-info`, `ready-for-agent`, `ready-for-human`, `wontfix`). See `docs/agents/triage-labels.md`.
+
+### Domain docs
+
+Single-context — `CLAUDE.md` + `README.md` until `CONTEXT.md` / `docs/adr/` exist. See `docs/agents/domain.md`.

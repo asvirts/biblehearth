@@ -1,5 +1,5 @@
 import { ApiClient, BibleClient } from '@youversion/platform-core';
-import { YVP_APP_KEY } from 'astro:env/server';
+const YVP_APP_KEY = process.env.YVP_APP_KEY;
 
 export class PlatformConfigError extends Error {
 	constructor() {

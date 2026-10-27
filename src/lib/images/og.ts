@@ -1,6 +1,4 @@
-import { getImage } from 'astro:assets';
-import type { ImageMetadata } from 'astro';
-import { OG_IMAGE_HEIGHT, OG_IMAGE_WIDTH } from '../seo';
+import type { ImageMetadata } from './types';
 import { figureCreditLine } from './types';
 
 export type FigureShareCard = {
@@ -13,8 +11,8 @@ export type FigureShareCard = {
 };
 
 /**
- * A 1200×630 cover crop of the page figure, for Open Graph and the Article
- * image. The on-page figure keeps its own aspect; this crop is only the card.
+ * A shareable public image URL for Open Graph and Article metadata.
+ * The underlying image keeps its aspect ratio and should carry accurate dimensions.
  */
 export async function shareCardFromFigure(figure: {
 	src: ImageMetadata;
@@ -29,15 +27,8 @@ export async function shareCardFromFigure(figure: {
 		sourceUrl: string;
 	};
 }): Promise<FigureShareCard> {
-	const og = await getImage({
-		src: figure.src,
-		width: OG_IMAGE_WIDTH,
-		height: OG_IMAGE_HEIGHT,
-		fit: 'cover',
-		format: 'jpg',
-	});
 	return {
-		image: og.src,
+		image: figure.src.src,
 		imageAlt: figure.alt,
 		imageCaption: figure.caption,
 		imageCreditText: figureCreditLine(figure.credit),
