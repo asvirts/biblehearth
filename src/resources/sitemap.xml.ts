@@ -10,6 +10,7 @@ import {
 	type SitemapEntry,
 } from '../lib/sitemap';
 import { listTopics } from '../lib/topics';
+import { listVerseBriefs } from '../lib/verse-briefs';
 
 /**
  * The newest review date behind each child sitemap.
@@ -31,11 +32,12 @@ import { listTopics } from '../lib/topics';
  * of all of them.
  */
 async function childLastmods(): Promise<Record<string, Date | undefined>> {
-	const [topics, answers, englishBriefs, briefsPerLocale] = await Promise.all([
+	const [topics, answers, englishBriefs, briefsPerLocale, verses] = await Promise.all([
 		listTopics(),
 		listAnswers(),
 		briefedChapters(DEFAULT_LOCALE),
 		Promise.all(LOCALES.map((locale) => briefedChapters(locale))),
+		listVerseBriefs(),
 	]);
 
 	const briefs = latestDate(briefsPerLocale.flat().map((chapter) => chapter.reviewedAt));
@@ -45,6 +47,7 @@ async function childLastmods(): Promise<Record<string, Date | undefined>> {
 		'/sitemap-topics.xml': latestDate(topics.map((topic) => topic.data.reviewedAt)),
 		'/sitemap-answers.xml': latestDate(answers.map((answer) => answer.data.reviewedAt)),
 		'/sitemap-commentary.xml': briefs,
+		'/sitemap-verses.xml': latestDate(verses.map(({ data }) => data.reviewedAt)),
 	};
 }
 
@@ -79,9 +82,8 @@ export const GET: ResourceHandler = async ({ request, site }) => {
 		{ path: '/sitemap-topics.xml' },
 		{ path: '/sitemap-answers.xml' },
 		{ path: '/sitemap-commentary.xml' },
-		// Curated seed set only — see lib/seed.ts for why. No date: a verse hub
-		// is licensed Scripture, which does not have a review date, and the seed
-		// set's own changes are not something anything at runtime can observe.
+		// Curated seed set plus original explanations. Only authored explanations
+		// have review dates; licensed Scripture is not dated as a content change.
 		{ path: '/sitemap-verses.xml' },
 		...localeSitemaps.map((path) => ({ path })),
 	];

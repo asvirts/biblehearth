@@ -3,11 +3,11 @@ usfm: ISA.41
 title: "Isaiah 41 Explained: Do Not Fear, for I Am With You"
 seoTitle: "Isaiah 41 Explained: God's Help in Fear"
 shortAnswer: >-
-  Isaiah 41 tells Israel, "do not fear, for I am with you", because God is present, faithful, and strong
-  enough to help. The promise appears within a courtroom scene where God challenges
-  the nations and their idols to explain the past or predict the future. They cannot
-  answer. Israel's confidence rests on the God who chose them, guides history, takes
-  them by the hand, and can bring life even to a desert.
+  Isaiah 41 tells Israel not to fear because God is with his people and promises
+  to strengthen, help, and uphold them. The promise comes within a courtroom scene
+  in which God challenges the nations and their idols. It speaks to a vulnerable
+  community in the setting of exile and hope for restoration, using images of a
+  helping hand and water in the desert to describe God's care.
 outline:
   - verses: "1-4"
     heading: God summons the nations to court
@@ -25,10 +25,9 @@ outline:
   - verses: "8-10"
     heading: God tells his chosen servant not to fear
     note: >-
-      "But you, O Israel, my servant" begins God's answer to his people. He says,
-      "I have chosen and not rejected you." Verse 10 gives
-      the reason for courage: God is with them and promises to strengthen, help, and
-      uphold them.
+      God addresses Israel as his servant, recalls choosing the people, and says he
+      has not rejected them. Verse 10 gives two reasons for courage: God is with
+      them and is their God. He promises to strengthen, help, and uphold them.
   - verses: "11-13"
     heading: God takes Israel by the hand
     note: >-
@@ -119,8 +118,8 @@ glossary:
 keyVerses:
   - usfm: ISA.41.10
     why: >-
-      Two commands against fear are joined to God's presence and three promises: he
-      will strengthen, help, and say, "I will uphold you".
+      God's presence and relationship with Israel ground the call not to fear. He
+      promises to strengthen, help, and uphold his people with his righteous hand.
   - usfm: ISA.41.13
     why: >-
       God takes Israel's right hand and offers help. The image answers the idol in
@@ -138,11 +137,11 @@ keyVerses:
       The courtroom scene ends with a verdict against the idols. Their works cannot
       provide knowledge, help, or security.
 caution: >-
-  Isaiah 41:10 promises God's presence and help in real danger; it does not guarantee
-  that hardship will never happen. The original audience had faced national defeat,
-  exile, and the loss of their temple. God's promise gave them a future within his
-  purposes without denying those losses. Verse 14 belongs with verse 10 because it
-  locates their hope in God's strength while openly naming their weakness.
+  Isaiah 41:10 promises God's presence and help in real danger. The chapter speaks
+  to Israel in the setting of national upheaval and the hope of return from exile;
+  it does not promise that hardship or fear will disappear immediately. Christians
+  can draw comfort from God's care while remembering the community first addressed.
+  Seeking help from trusted people or a qualified professional can accompany prayer.
 faqs:
   - q: What does "fear not, for I am with you" mean?
     a: >-
@@ -170,12 +169,11 @@ faqs:
       The promise assures exiles that their covenant relationship continues.
   - q: Who is the one from the east in Isaiah 41:2 and 41:25?
     a: >-
-      The chapter does not name him. It describes a conqueror stirred up by God who
-      sweeps through kings and turns them to dust, coming from the east in verse 2
-      and from the north in verse 25, directions that fit common military routes.
-      Isaiah later names Cyrus of Persia, who ended Babylonian rule and permitted
-      exiles to return home. Most readers identify him here as well. The chapter
-      focuses on God as the one who raises him up.
+      The chapter does not name the conqueror. Many interpreters connect him with
+      Cyrus of Persia, named later in Isaiah 44:28 and 45:1, who conquered Babylon
+      and permitted exiles to return. Some earlier interpreters proposed Abraham.
+      The identification is an interpretation; the chapter emphasizes God as the
+      one who raises up the figure.
   - q: What is the courtroom scene in Isaiah 41 about?
     a: >-
       God summons the nations and their gods to present evidence. He asks them to
@@ -189,6 +187,12 @@ faqs:
       draw comfort from what it reveals about God's character: he remains with people
       brought low, helps them in weakness, and keeps his word. That truth can support
       prayer without erasing the verse's original setting.
+  - q: Why does Isaiah 41:10 say "dismayed" in some Bibles and "afraid" in others?
+    a: >-
+      The NIV uses "dismayed" for the second warning, while the Berean Standard
+      Bible says "afraid." Both speak to a fearful response and follow it with the
+      assurance that God is Israel's God. Their wording differs without changing
+      the chapter's focus on God's presence and help.
 relatedTopics:
   - fear
   - anxiety
@@ -200,7 +204,7 @@ entity:
   sameAs:
     - https://en.wikipedia.org/wiki/Isaiah_41
 publishedAt: 2026-08-19
-reviewedAt: 2026-08-21
+reviewedAt: 2026-10-27
 ---
 
 ## Reading Isaiah 41 as a whole

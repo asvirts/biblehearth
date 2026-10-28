@@ -35,9 +35,9 @@ outline:
   - verses: "6"
     heading: Goodness and mercy follow David home
     note: >-
-      The Hebrew verb translated "follow" often means to pursue or chase. David
-      pictures God's goodness and loyal love actively pursuing him throughout
-      his life and bringing him home.
+      The verb translated "follow" can also mean "pursue." Goodness and loyal love
+      accompany the speaker throughout life, and the closing line looks toward a
+      lasting place in the Lord's house.
 themes:
   - name: God as a present shepherd
     explanation: >-
@@ -78,14 +78,14 @@ glossary:
       the whole self.
   - term: The valley of the shadow of death
     plain: >-
-      A deep, dark ravine where a flock is especially exposed. The phrase can
-      also be translated "darkest valley". It includes death and can describe
-      any season in which the way forward can't be seen.
+      An image of a valley in deep darkness. Some translations use "darkest
+      valley"; others read "shadow of death." It can speak to the fear of death
+      or other dangers where the way forward is hard to see.
   - term: Rod and staff
     plain: >-
-      Two tools of the trade. The rod was a club for driving off predators; the
-      staff was the hooked stick for guiding and catching hold of sheep. One
-      guards and the other guides. David finds comfort in both.
+      A shepherd's rod and staff are tools associated with protecting and guiding
+      a flock. The psalm does not explain the separate use of each tool; together
+      they reassure the speaker that the shepherd is present.
   - term: Anoint my head with oil
     plain: >-
       Pouring perfumed oil on a guest's head was ordinary hospitality at a good
@@ -120,10 +120,10 @@ caution: >-
 faqs:
   - q: Who wrote Psalm 23 and when?
     a: >-
-      The psalm is headed "A psalm of David", and David spent his early life as
-      a working shepherd before becoming king of Israel around 1000 BC. The
-      details about still water, the rod, and the staff fit hands-on experience
-      with a shepherd's work.
+      The psalm's heading associates it with David, whom the Bible describes as
+      a shepherd before he became king. The heading does not say when the psalm
+      was written, and scholars differ over how such headings relate to authorship.
+      Its exact date and circumstances cannot be established from the poem.
   - q: What does "I shall not want" mean?
     a: >-
       It means "I will not lack anything I need". "Want" is being used in the
@@ -132,31 +132,41 @@ faqs:
       shepherd, not the fulfillment of every desire.
   - q: What is the valley of the shadow of death?
     a: >-
-      Literally a deep, dark ravine, the most dangerous stretch of ground a
-      flock could be moved through, where predators had cover and the sheep could
-      not see far. Many translations render it "the darkest valley". It certainly
-      includes dying, which is why the verse is read at funerals, and it can also
-      describe any period when the way out can't be seen.
+      The Hebrew can be translated "deep darkness," so many Bibles read "the
+      darkest valley." Older translations use "the valley of the shadow of death."
+      The image can comfort someone facing death or another grave danger. The
+      reason given for courage is that the shepherd is present in the valley.
   - q: Why does the psalm switch from sheep to a dinner table?
     a: >-
-      The two pictures develop the same relationship. God first appears as the
-      shepherd who keeps David alive in open country. He then becomes the host
-      who welcomes David as an honored guest. The movement carries David from
-      provision and survival to public welcome.
+      Many readers hear a shift from shepherd to host in verse 5: God prepares
+      a meal, anoints the guest with oil, and fills the cup while enemies watch.
+      Others understand the shepherd image to continue. Either way, the table
+      presents generous welcome with danger still in view.
+  - q: What does "my cup overflows" mean in Psalm 23?
+    a: >-
+      The full cup is part of the meal God prepares in Psalm 23:5. Together with
+      the oil and the table, it pictures a host's generous welcome even while
+      enemies are present. It expresses abundance within the poem, not a guarantee
+      that every believer will have material wealth.
+  - q: What does dwelling in the house of the Lord forever mean?
+    a: >-
+      Psalm 23:6 ends with the speaker's hope of remaining in God's presence.
+      The Hebrew phrase can mean "for length of days," and some translations
+      emphasize a long life. Many Christians also hear hope of life with God
+      beyond death. The verse follows a promise of goodness throughout life.
   - q: Is Psalm 23 about Jesus?
     a: >-
       Christians read it that way, and with reason: in John 10 Jesus calls
-      himself the good shepherd who lays down his life for the sheep, which is a
-      direct echo. Hebrews 13:20 and 1 Peter 2:25 use the same image of him. The
+      himself the good shepherd who lays down his life for the sheep. Hebrews
+      13:20 and 1 Peter 2:25 also use shepherd imagery for him. The
       psalm was written centuries earlier and has its own original setting. The
       New Testament later takes up its shepherd image and applies it to Jesus.
   - q: Why is Psalm 23 read at funerals?
     a: >-
-      Mostly because of verse 4. It is one of the few well-known passages that
-      names death directly without flinching and without pretending the loss is
-      small. It offers God's company through the darkest valley. Verse 6's
-      promise of dwelling in God's house forever gives
-      the psalm somewhere to end that a funeral needs.
+      Its picture of God accompanying someone through deep darkness gives words
+      of comfort at a death or funeral. The final hope of dwelling in the Lord's
+      house has also been read as hope beyond death. The Hebrew can be understood
+      as a long life in God's presence, so the psalm need not be limited to funerals.
 relatedTopics:
   - fear
   - grief
@@ -167,7 +177,7 @@ entity:
   sameAs:
     - https://en.wikipedia.org/wiki/Psalm_23
 publishedAt: 2026-08-17
-reviewedAt: 2026-08-21
+reviewedAt: 2026-10-27
 ---
 
 ## If this is your first time reading Psalm 23

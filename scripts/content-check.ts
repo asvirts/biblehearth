@@ -1,6 +1,7 @@
 import { copyFile, mkdir, readdir } from 'node:fs/promises';
 import path from 'node:path';
 import { getCollection, getEntries, type CollectionReference } from '../src/lib/content';
+import { listVerseBriefs } from '../src/lib/verse-briefs';
 
 /** Validate content before a Next.js build and make local figure assets public. */
 async function copyEditorialAssets(source: string, destination: string): Promise<number> {
@@ -21,10 +22,11 @@ async function copyEditorialAssets(source: string, destination: string): Promise
 }
 
 async function main() {
-	const [topics, answers, chapters] = await Promise.all([
+	const [topics, answers, chapters, verses] = await Promise.all([
 		getCollection('topics'),
 		getCollection('answers'),
 		getCollection('chapters'),
+		listVerseBriefs(),
 	]);
 	const refs: CollectionReference<'topics'>[] = [
 		...topics.flatMap((topic) => topic.data.related),
@@ -42,7 +44,7 @@ async function main() {
 		path.join(process.cwd(), 'public/editorial'),
 	);
 	console.log(
-		`Validated ${topics.length} topics, ${answers.length} answers, ${chapters.length} chapters, and ${refs.length} references; copied ${copied} editorial assets.`,
+		`Validated ${topics.length} topics, ${answers.length} answers, ${chapters.length} chapters, ${verses.length} verse explanations, and ${refs.length} references; copied ${copied} editorial assets.`,
 	);
 }
 

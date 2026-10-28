@@ -40,8 +40,9 @@ outline:
     heading: Hope leads to patient courage
     note: >-
       "Still I am certain to see the goodness of the LORD in the land of the living."
-      This is an expectation, not a claim that "I have seen". He closes by telling himself
-      or the worshiping community to wait for the Lord, take heart, and be strong.
+      Translations express verse 13 either as a declaration of belief or as an
+      unfinished thought about what might happen without that belief. The closing
+      call to wait and take courage leaves the precise addressee unstated.
 themes:
   - name: Confidence and pleading in the same voice
     explanation: >-
@@ -78,8 +79,8 @@ glossary:
       David wants to remain near the God he finds wholly desirable.
   - term: tabernacle
     plain: >-
-      Israel's portable worship tent before the temple was built, understood as the
-      special place of God's presence among the people.
+      A tent associated with worship and God's presence among Israel. Psalm 27
+      uses both tent and temple language to picture shelter and nearness to God.
   - term: seek his face
     plain: >-
       To seek someone's favorable attention and personal presence. David hears the
@@ -90,8 +91,8 @@ glossary:
       David expects to see God's goodness before death.
   - term: false witnesses
     plain: >-
-      People giving untrue testimony in a legal hearing. In a system heavily dependent
-      on witnesses, their accusations could threaten a person's life.
+      People who give untrue testimony against someone. Psalm 27 also describes
+      violence; the poem does not identify a particular hearing or incident.
 keyVerses:
   - usfm: PSA.27.1
     why: >-
@@ -127,16 +128,18 @@ faqs:
       follow express chosen confidence rather than denial of every fearful feeling.
   - q: What is the one thing David asks for in Psalm 27:4?
     a: >-
-      He asks to dwell in the Lord's house, gaze on God's beauty, and seek him there.
-      For David, this would refer to Israel's worship tent before the temple existed.
-      The request places enduring access to God above a specific result in the
-      surrounding conflict.
+      He asks to dwell in the Lord's house, gaze on God's beauty, and seek him
+      there. The poem uses house, temple, and tent as images of worship and shelter.
+      Its heading links it to David, but the poem does not establish a date or
+      identify a particular building. His desire is enduring nearness to God.
   - q: Why does Psalm 27 change from confidence to pleading halfway through?
     a: >-
       Scholars offer two main explanations. Some see two earlier poems joined because
       verses 1 through 6 resemble a confidence psalm and verses 7 through 14 a lament.
-      Others hear one prayer moving between conviction and distress. The final form
-      allows confident praise and desperate petition to stand together as faith.
+      Others hear one prayer moving between conviction and distress; words such as
+      "seek" and the repeated concern about enemies link the sections. The text
+      itself cannot settle how it was composed. Its present form holds confidence
+      and urgent pleading together.
   - q: What does "though my father and mother forsake me" mean?
     a: >-
       Family supplied food, legal standing, and protection in David's world. The verse
@@ -151,9 +154,10 @@ faqs:
       steps without trying to control God's timing.
   - q: What does "the land of the living" mean in Psalm 27:13?
     a: >-
-      The phrase means this present life among living people, in contrast with death.
-      David expects to witness God's goodness while still alive. The following call to
-      wait shows that this hope has not yet become visible.
+      The phrase refers to life among the living, in contrast with death. The
+      speaker hopes to see God's goodness in this life. Translations differ over
+      whether the preceding words form a confident statement or an unfinished
+      "if I had not believed" thought; both express reliance on that hope.
   - q: What does "seek his face" mean?
     a: >-
       It means seeking God's favorable attention and personal presence. David hears
@@ -170,7 +174,7 @@ entity:
   sameAs:
     - https://en.wikipedia.org/wiki/Psalm_27
 publishedAt: 2026-08-19
-reviewedAt: 2026-08-21
+reviewedAt: 2026-10-27
 ---
 
 ## Reading Psalm 27 through its change in tone
@@ -179,9 +183,10 @@ The first six verses speak with strong confidence. God is light, salvation, and 
 stronghold; earlier enemies have fallen, and even an army cannot erase David's trust.
 Verse 7 then begins an urgent plea for mercy, presence, guidance, and protection.
 
-The abrupt change has led some scholars to see two poems joined together, while
-others hear one person's prayer moving between assurance and fear. Either reading
-leaves both experiences within the same faithful prayer.
+The abrupt change has led some scholars to see two poems joined together. Others
+read the movement as one prayer: words for seeking, enemies, and rescue recur
+across the change in tone. The poem itself does not tell us how it was composed.
+Its present form gives both assurance and distress a place in prayer.
 
 Verse 4 provides the center. David's one desire is lifelong access to God's presence.
 The final verses then leave the conflict unresolved. He expects to see God's goodness

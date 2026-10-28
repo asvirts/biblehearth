@@ -47,11 +47,10 @@ outline:
 themes:
   - name: Anxiety is carried into prayer
     explanation: >-
-      Paul gives anxious people an action: "in every situation, by prayer and
-      petition, with thanksgiving, present your requests to God". The promised peace
-      comes from God and stands guard over heart
-      and mind. The passage invites dependence instead of demanding that someone
-      eliminate every anxious feeling by willpower.
+      Paul invites the church to bring its concerns to God through prayer, specific
+      requests, and thanksgiving. The next verse describes God's peace guarding
+      hearts and minds in Christ. This is an invitation to bring real concerns to
+      God, not a demand to erase every anxious feeling by willpower.
   - name: Contentment as a learned skill
     explanation: >-
       Paul says, "I have learned to be content" and "I have learned the secret".
@@ -135,10 +134,10 @@ faqs:
       for endurance in changing circumstances.
   - q: How can Paul say "do not be anxious" from a prison cell?
     a: >-
-      Paul writes while his legal future remains uncertain and elsewhere describes
-      distress and sorrow. He is speaking from experience of unresolved pressure.
-      His instruction gives concern a destination: name it before God with prayer and
-      thanksgiving, and receive peace as a guard.
+      Paul writes while imprisoned and elsewhere describes distress and sorrow. He
+      speaks from experience of unresolved pressure. He invites the church to name
+      its concerns to God in prayer with thanksgiving. The next verse describes God's
+      peace as a guard without giving a timetable for the difficulty to end.
   - q: Is Philippians 4:6 saying anxiety is a sin?
     a: >-
       Paul gives a practice for responding to ordinary worry instead of a medical
@@ -163,6 +162,12 @@ faqs:
       Paul writes partly to thank the Philippians for financial support during his
       imprisonment. He also encourages the church, reports on his circumstances, and
       addresses community concerns, including the dispute between Euodia and Syntyche.
+  - q: Why does the King James Version say "be careful for nothing"?
+    a: >-
+      In older English, "careful" could mean full of care or worry. Modern versions
+      use words such as "anxious" or "worry" to make that meaning clearer. Paul is
+      encouraging prayer about concerns, not forbidding prudent planning or care for
+      other people.
 relatedTopics:
   - anxiety
   - peace
@@ -174,7 +179,7 @@ entity:
   sameAs:
     - https://en.wikipedia.org/wiki/Philippians_4
 publishedAt: 2026-08-17
-reviewedAt: 2026-08-21
+reviewedAt: 2026-10-27
 ---
 
 ## Reading Philippians 4 in its setting
@@ -183,10 +188,14 @@ The chapter begins with conflict between two respected coworkers and closes with
 thanks for a financial gift. Its familiar words about peace, attention, and strength
 belong within the ordinary concerns of a real church.
 
-Paul also writes under guard with an unresolved case. His circumstances have not
-improved before he speaks of joy or contentment. He has learned through both scarcity
+Paul also writes under guard with an unresolved case. His circumstances remain difficult as he speaks of joy or contentment. He has learned through both scarcity
 and abundance that Christ can sustain him.
 
 That setting gives verses 6 and 7 their practical shape. Paul invites the church to
-bring each concern to God in specific prayer with thanksgiving. He promises peace as
-a guard over the inner life while the situation itself may still be unfinished.
+bring each concern to God in specific prayer with thanksgiving. He describes peace
+as a guard over the inner life while the situation itself may still be unfinished.
+
+The King James Version says “be careful for
+nothing.” Here “careful” refers to worry, not sensible planning. Modern translations
+make that distinction clearer. Prayer and appropriate mental health care can belong
+together; needing support is not evidence that a person has failed to pray well.
