@@ -2,11 +2,13 @@
 usfm: PSA.46
 title: "Psalm 46: God Is Our Refuge in a Shaken World"
 shortAnswer: >-
-  Psalm 46 presents God as a secure refuge while the earth shakes and nations rage.
-  Its famous command, "Be still, and know that I am God," follows a scene where God
-  ends wars and destroys weapons. In context, the words call the nations to stop and
-  recognize God's rule. The poem contrasts a roaring sea with a life-giving river,
-  then repeats its central assurance twice: the LORD of Hosts is with us.
+  Psalm 46 imagines a world in upheaval: mountains fall, nations rage, and God ends
+  wars by breaking weapons. Between those scenes, a river sustains the city of God,
+  whose singers repeat that the LORD of Hosts is with them. After the disarmament
+  scene, God commands, "Be still, and know that I am God." The context makes a call
+  for nations to stop fighting a strong reading, though the poem does not name its
+  addressee or identify a particular historical crisis. Its assurance is God's
+  presence amid danger, not a promise that calamity will never come.
 outline:
   - verses: "1-3"
     heading: God remains a refuge when the world gives way
@@ -27,21 +29,23 @@ outline:
       tools of war: bows, spears, and shields. The scene shows God dismantling the
       violence that has shaken the nations.
   - verses: "10-11"
-    heading: The nations are told to stop
+    heading: God calls the world to stop and recognize his rule
     note: >-
-      God speaks directly for the first time, telling the nations to be still and
-      recognize him: "know that I am God". He adds, "I will be exalted among the
-      nations" and throughout the earth. The poem ends by
-      repeating its assurance that God is with his people and is their fortress.
+      God speaks directly for the first time: "Be still, and know that I am God."
+      Because this follows the end of war and looks toward God's exaltation among
+      the nations, many readers hear a command to stop fighting. The poem does not
+      name the addressee, however, and its assurance also speaks to the worshipping
+      community. It closes by repeating that God is with his people and is their
+      fortress.
 themes:
-  - name: "Be still calls the nations to lay down their fight"
+  - name: '"Be still" follows the end of war'
     explanation: >-
-      Verse 10 comes directly after God breaks bows, shatters spears, and burns
-      shields. The Hebrew verb translated "be still" can mean to let go, slacken, or
-      cease, which is why some translations say "cease striving." The next line looks
-      toward God's exaltation among the nations. In this setting, the command stops
-      human conflict and asserts God's authority. Quiet prayer may echo its trust, but
-      warfare supplies the verse's immediate setting.
+      Verse 10 follows God's breaking of bows, spears, and shields, and it looks
+      toward God's exaltation among the nations. The Hebrew verb can mean to let go,
+      slacken, or cease, so a call to stop fighting fits the scene. The poem does not
+      identify the addressee, though, and some readers hear the words as reassurance
+      to people under threat as well. A quiet-prayer application can echo the trust
+      here; it should not erase the scene of war that comes just before it.
   - name: Chaotic water and a steady river tell two stories
     explanation: >-
       Water carries two different meanings across the poem. The sea roars and swallows
@@ -128,20 +132,18 @@ faqs:
   - q: What does "be still and know that I am God" mean?
     a: >-
       The Hebrew verb can mean to let go, slacken, or cease. The previous verses show
-      God breaking bows, shattering spears, and burning shields, so the command tells
-      warring nations to stop. The rest of the verse announces that God will be exalted
-      among the nations and throughout the earth. Some translations capture this sense
-      with "cease striving." The words call people to release their fight and recognize
-      God's authority.
+      God breaking weapons and bringing wars to an end, and the rest of verse 10 looks
+      to God's exaltation among the nations. This makes "stop fighting and recognize
+      God's rule" a strong reading. The poem does not explicitly name who hears the
+      command, however, so readers have also heard reassurance for God's threatened
+      people in the same words.
   - q: Is "be still and know that I am God" about quiet time or about war?
     a: >-
-      War provides the immediate setting. Verses 8 and 9 describe God ending conflicts
-      and destroying weapons, and verse 10 speaks of his rule among the nations. The
-      psalm does not describe solitude or a private devotional practice. Christians
-      have still drawn personal comfort from it for centuries, since God's presence in
-      a collapsing world speaks naturally to anxiety. Quiet reflection is a reasonable
-      response, as long as the verse's wider call for nations to stop fighting remains
-      in view.
+      The poem's immediate setting is war: verses 8 and 9 describe God ending conflict
+      and destroying weapons, and verse 10 speaks of his rule among the nations. It
+      does not describe a private devotional practice. People can still find comfort
+      in its words during anxious moments, but that application sits alongside the
+      poem's public call to stop fighting and recognize God's rule.
   - q: What does "God is our refuge and strength, a very present help" mean?
     a: >-
       Refuge describes a safe place, strength supplies what frightened people lack,
@@ -170,6 +172,14 @@ faqs:
       Isaiah and later applied to Jesus in Matthew. By stating the refrain in verses 7
       and 11, the singers answer earthquakes, floods, and war with the same assurance:
       God is present with his people.
+  - q: Was Psalm 46 written about a particular battle?
+    a: >-
+      The poem does not name a king, enemy, or battle, so its original occasion is
+      uncertain. Its references to the city, invading nations, and ended wars have
+      led some interpreters to connect it with a historical siege, including
+      Sennacherib's attack in Hezekiah's time. That is a proposed setting, not a date
+      stated in the psalm. The poem can also be read as a more general song of trust
+      in God's presence and rule.
   - q: Did Martin Luther write "A Mighty Fortress" from this psalm?
     a: >-
       Yes. Martin Luther wrote the German hymn "Ein feste Burg ist unser Gott", known
@@ -188,13 +198,13 @@ entity:
   sameAs:
     - https://en.wikipedia.org/wiki/Psalm_46
 publishedAt: 2026-08-19
-reviewedAt: 2026-08-21
+reviewedAt: 2026-10-27
 ---
 
 ## If this is your first time reading Psalm 46
 
-Psalm 46 is only eleven verses long. Its best-known line comes near the end, and
-verses 8 and 9 establish the scene you need for understanding it.
+Psalm 46 has eleven numbered verses in many English Bibles. Its best-known line
+comes near the end, and verses 8 and 9 establish the scene that shapes it.
 
 The opening imagines creation coming apart. Earth shifts, mountains fall into the
 sea, and the water roars. The singers still call God their refuge and say they will
@@ -206,15 +216,19 @@ shattering spears, and burning shields. The devastation falls on the weapons tha
 have devastated people.
 
 God then says, "Be still, and know that I am God." The Hebrew verb can mean to let
-go or cease, and the rest of the verse speaks to the nations. In its first setting,
-this is a command to stop fighting and recognize the authority of the God who has
-disarmed the battlefield.
+go or cease. Since the command follows the destruction of weapons and turns toward
+God's exaltation among the nations, many interpreters understand it as a call to
+stop fighting. The poem does not name the addressee, and some readers also hear
+reassurance directed to the threatened worshippers. Either way, the words claim
+that God rules over a world caught in conflict.
 
-The verse can still comfort someone in a quiet room. Its comfort grows stronger when
-the larger setting remains visible: God is able to halt violence that no human power
-can control.
+The verse can still comfort someone in a quiet room. Its comfort remains connected
+to the larger scene: God can bring violence to an end, and his presence steadies
+people while danger remains. The psalm does not promise that every crisis will end
+quickly or without loss.
 
 Verses 7 and 11 repeat the same refrain: the LORD of Hosts is with us, and the God of
-Jacob is our fortress. The Hebrew word immanu means "with us" and also appears in the
-name Immanuel. After earthquakes, floods, and war, Psalm 46 closes with the presence
-of God as its deepest source of security.
+Jacob is our fortress. The Hebrew phrase translated "with us" also appears in the
+name Immanuel. After earthquakes, floods, and war, Psalm 46 closes with God's
+presence as its deepest source of security. For another passage about peace amid
+trouble, see the [BibleHearth study on peace](/topics/peace).
