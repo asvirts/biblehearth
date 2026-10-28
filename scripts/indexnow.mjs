@@ -71,6 +71,13 @@ const AUTHORED = [
 	},
 	{ dir: 'src/content/topics', urls: (id) => [`/topics/${id}`] },
 	{ dir: 'src/content/answers', urls: (id) => [`/answers/${id}`] },
+	{
+		dir: 'src/content/verses',
+		urls: (id) => {
+			const match = /^(.*)-(\d+)-(\d+)$/.exec(id);
+			return match ? [`/verse/${match[1]}/${match[2]}/${match[3]}`] : [];
+		},
+	},
 ];
 
 /**

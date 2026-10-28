@@ -10,6 +10,7 @@ import {
 	verseUsfm,
 } from '../../lib/bible/usfm';
 import { scriptureToPlainText } from '../../lib/bible/text';
+import { adjacentVerse } from '../../lib/bible/verse-navigation';
 import {
 	absoluteUrl,
 	chapterPath,
@@ -25,12 +26,14 @@ import {
 	titleWithClause,
 } from '../../lib/seo';
 import { topicPath, verseTopicIndex } from '../../lib/topics';
-import { displayAbbreviation } from '../../lib/youversion/api';
+import { displayAbbreviation, getBibleIndex } from '../../lib/youversion/api';
 import { loadVerseHub as loadVerseHubData } from '../../lib/youversion/verse-hub';
 import type { PageContext } from '../../lib/page/types';
+import { verseBriefFor } from '../../lib/verse-briefs';
+import { DEGRADED_CACHE_CONTROL, setCacheControl, setLastModified } from '../../lib/http';
 
 /** Loads the VerseHub view once on the server. */
-export async function loadVerseHub(context: PageContext) {
+export async function loadVerseHub(context: PageContext, loadVerse = loadVerseHubData) {
 	const bookSlug = context.params.book;
 	const chapterId = context.params.chapter;
 	const verseId = context.params.verse;
@@ -68,13 +71,24 @@ export async function loadVerseHub(context: PageContext) {
 
 	const reference = `${bookNameForChapter(bookUsfm)} ${chapterId}:${verseId}`;
 
-	const { renderings, status, headers } = await loadVerseHubData(bookUsfm, chapterId, verseId);
+	const [brief, { renderings, status, headers }] = await Promise.all([
+		verseBriefFor(usfm),
+		loadVerse(bookUsfm, chapterId, verseId),
+	]);
 	if (status === 404) {
 		return context.notFound();
 	}
 
-	context.response.status = status;
+	context.response.status = brief ? 200 : status;
 	headers.forEach((value, name) => context.response.headers.set(name, value));
+	if (brief) {
+		setLastModified(context.response, brief.reviewedAt);
+		if (status !== 200) {
+			// The original article remains useful when its licensed text is unavailable.
+			setCacheControl(context.response, DEGRADED_CACHE_CONTROL);
+			context.response.headers.delete('Retry-After');
+		}
+	}
 
 	const primary = renderings[0];
 	const verseText = primary ? scriptureToPlainText(primary.passage.content) : '';
@@ -82,9 +96,11 @@ export async function loadVerseHub(context: PageContext) {
 	const canonicalPath = `/verse/${bookSlug}/${chapterId}/${verseId}`;
 	const translations = renderings.map((item) => displayAbbreviation(item.version));
 
-	const title = renderings.length
-		? titleWithClause(reference, `in ${renderings.length} Translations`, verseText)
-		: `${reference} — Compare Bible Translations`;
+	const title = brief
+		? `${reference}: Meaning and Translation Comparison`
+		: renderings.length
+			? titleWithClause(reference, `in ${renderings.length} Translations`, verseText)
+			: `${reference} — Compare Bible Translations`;
 
 	/**
 	 * The verse is what makes this relevant; the list is what makes it different.
@@ -101,13 +117,15 @@ export async function loadVerseHub(context: PageContext) {
 	 * sentence is true of every hub and is the first thing dropped; a long
 	 * reference shrinks the lead rather than the list.
 	 */
-	const description = descriptionWithClause(
-		verseText,
-		renderings.length
-			? `${reference} side by side in ${renderings.length} translations: ${translations.join(', ')}.`
-			: `Compare ${reference} across Bible translations on BibleHearth.`,
-		renderings.length ? 'Each links to the full chapter.' : '',
-	);
+	const description =
+		brief?.summary ??
+		descriptionWithClause(
+			verseText,
+			renderings.length
+				? `${reference} side by side in ${renderings.length} translations: ${translations.join(', ')}.`
+				: `Compare ${reference} across Bible translations on BibleHearth.`,
+			renderings.length ? 'Each links to the full chapter.' : '',
+		);
 
 	const [{ byVerse: topicsByVerse }, { byVerse: answersByVerse }] = await Promise.all([
 		verseTopicIndex(),
@@ -116,10 +134,38 @@ export async function loadVerseHub(context: PageContext) {
 	const relatedTopics = topicsByVerse.get(usfm) ?? [];
 	const relatedAnswers = answersByVerse.get(usfm) ?? [];
 
-	const previousVerse = Number(verseId) > 1 ? String(Number(verseId) - 1) : null;
-	const nextVerse = String(Number(verseId) + 1);
+	let previousLink: { href: string; label: string } | null = null;
+	let nextLink: { href: string; label: string } | null = null;
+	if (primary) {
+		try {
+			// The version index is cached metadata, not a speculative Scripture
+			// fetch. It carries the actual versification and chapter boundaries.
+			const index = await getBibleIndex(primary.version.id);
+			const linkFor = (direction: 'next' | 'previous') => {
+				const neighbor = adjacentVerse(
+					index.books,
+					{ bookId: bookUsfm, chapterId, verseId },
+					direction,
+				);
+				if (!neighbor) return null;
+				const path = verseHubPath(verseUsfm(neighbor.bookId, neighbor.chapterId, neighbor.verseId));
+				return path
+					? {
+							href: path,
+							label: `${bookNameForChapter(neighbor.bookId)} ${neighbor.chapterId}:${neighbor.verseId}`,
+						}
+					: null;
+			};
+			previousLink = linkFor('previous');
+			nextLink = linkFor('next');
+		} catch {
+			// Navigation is optional. An unavailable index must not change the
+			// status of an otherwise readable verse hub or generate guessed links.
+		}
+	}
 
 	return {
+		brief,
 		bookSlug,
 		chapterId,
 		verseId,
@@ -132,8 +178,8 @@ export async function loadVerseHub(context: PageContext) {
 		description,
 		relatedTopics,
 		relatedAnswers,
-		previousVerse,
-		nextVerse,
+		previousLink,
+		nextLink,
 		site: context.site.href,
 	};
 }

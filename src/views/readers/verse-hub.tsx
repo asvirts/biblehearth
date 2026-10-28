@@ -6,16 +6,17 @@ import StatusMessage from '../../components/StatusMessage';
 import { bookStudyPath } from '../../lib/commentary/paths';
 import { bookNameForChapter, bookNameFromUsfm } from '../../lib/bible/usfm';
 import { absoluteUrl, chapterPath, versePath, versionPath } from '../../lib/bible/urls';
-import { breadcrumbJsonLd, creativeWorkJsonLd, itemListJsonLd } from '../../lib/seo';
+import { articleJsonLd, breadcrumbJsonLd, creativeWorkJsonLd, itemListJsonLd } from '../../lib/seo';
 import { topicPath } from '../../lib/topics/paths';
 import { displayAbbreviation } from '../../lib/bible/version-display';
+import { chapterStudyPath } from '../../lib/commentary/paths';
 import type { loadVerseHub } from '../../loaders/readers/verse-hub';
 
 type Model = Awaited<ReturnType<typeof loadVerseHub>>;
 
 export function renderVerseHub(model: Model) {
 	const {
-		bookSlug,
+		brief,
 		chapterId,
 		verseId,
 		bookUsfm,
@@ -27,26 +28,63 @@ export function renderVerseHub(model: Model) {
 		description,
 		relatedTopics,
 		relatedAnswers,
-		previousVerse,
-		nextVerse,
+		previousLink,
+		nextLink,
 	} = model;
 	const site = new URL(model.site);
+	const explanation = brief ? (
+		<article className="chapter-notes" aria-labelledby="verse-meaning">
+			<h2 id="verse-meaning">{brief.title}</h2>
+			<p className="lede">{brief.summary}</p>
+			<div dangerouslySetInnerHTML={{ __html: brief.html }} />
+			<p>
+				<a href={chapterStudyPath(bookUsfm, chapterId)}>
+					Read the full {bookNameForChapter(bookUsfm)} {chapterId} study
+				</a>
+			</p>
+			<details>
+				<summary>Sources and further reading</summary>
+				<ul>
+					{brief.sources.map((source) => (
+						<li key={source.url}>
+							<a href={source.url} rel="noopener noreferrer">
+								{source.title}
+							</a>
+						</li>
+					))}
+				</ul>
+			</details>
+		</article>
+	) : null;
 	return (
 		<PageLayout
 			title={title}
 			description={description}
 			canonicalPath={canonicalPath}
+			ogType={brief ? 'article' : 'website'}
+			publishedTime={brief?.publishedAt}
+			modifiedTime={brief?.reviewedAt}
 			jsonLd={[
 				breadcrumbJsonLd(site, [
 					{ name: 'BibleHearth', path: '/' },
 					{ name: bookNameFromUsfm(bookUsfm), path: bookStudyPath(bookUsfm) },
 					{ name: reference, path: canonicalPath },
 				]),
-				creativeWorkJsonLd({
-					name: reference,
-					description,
-					inLanguage: 'en',
-				}),
+				brief
+					? articleJsonLd({
+							site,
+							path: canonicalPath,
+							headline: brief.title,
+							description,
+							datePublished: brief.publishedAt,
+							dateModified: brief.reviewedAt,
+							citation: brief.sources.map(({ title, url }) => ({ name: title, url })),
+						})
+					: creativeWorkJsonLd({
+							name: reference,
+							description,
+							inLanguage: 'en',
+						}),
 				itemListJsonLd({
 					name: `${reference} in ${renderings.length} translations`,
 					items: renderings.map((item) => ({
@@ -67,16 +105,20 @@ export function renderVerseHub(model: Model) {
 			<h1>{reference}</h1>
 
 			{status !== 200 || renderings.length === 0 ? (
-				<StatusMessage
-					variant="notice"
-					title="This verse is unavailable"
-					message="Scripture could not be loaded right now. Please try again shortly."
-				/>
+				<>
+					<StatusMessage
+						variant="notice"
+						title="This verse is unavailable"
+						message="Scripture could not be loaded right now. Please try again shortly."
+					/>
+					{explanation}
+				</>
 			) : (
 				<>
 					<p className="lede">
 						{reference} in {renderings.length} English translations. Each links through to the full
-						chapter for context.
+						chapter for context.{' '}
+						{brief ? <a href="#verse-meaning">Read the meaning and context</a> : null}
 					</p>
 
 					{renderings.map((item) => (
@@ -100,17 +142,11 @@ export function renderVerseHub(model: Model) {
 						</article>
 					))}
 
+					{explanation}
+
 					<nav className="pager">
-						{previousVerse ? (
-							<a href={`/verse/${bookSlug}/${chapterId}/${previousVerse}`}>
-								{reference.replace(/:\d+$/, `:${previousVerse}`)}
-							</a>
-						) : (
-							<span />
-						)}
-						<a href={`/verse/${bookSlug}/${chapterId}/${nextVerse}`}>
-							{reference.replace(/:\d+$/, `:${nextVerse}`)}
-						</a>
+						{previousLink ? <a href={previousLink.href}>{previousLink.label}</a> : <span />}
+						{nextLink ? <a href={nextLink.href}>{nextLink.label}</a> : <span />}
 					</nav>
 
 					<RelatedQuestions heading="Questions about this verse" answers={relatedAnswers} />

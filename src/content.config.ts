@@ -353,4 +353,22 @@ const chapters = defineCollection({
 			}),
 });
 
-export const collections = { topics, answers, chapters };
+/** Original explanations attached to a small, authored set of verse hubs. */
+const verses = defineCollection({
+	loader: glob({ pattern: '*.md', base: './src/content/verses' }),
+	schema: () =>
+		z.object({
+			usfm: z.string().regex(/^[A-Z0-9]{3}\.\d+\.\d+$/),
+			title: z.string().min(25).max(95),
+			summary: z.string().min(120).max(320),
+			sources: z
+				.array(z.object({ title: z.string().min(5), url: z.string().url() }))
+				.min(2)
+				.max(4),
+			publishedAt: z.coerce.date(),
+			reviewedAt: z.coerce.date(),
+			draft: z.boolean().default(false),
+		}),
+});
+
+export const collections = { topics, answers, chapters, verses };
