@@ -86,7 +86,7 @@ Limits are enforced by Zod at build time. Overshooting fails the build, so count
 | `relatedTopics` | ≤6 | Slugs only from the dossier's list. Anything else fails the build. |
 | `entity` | — | `name` plus `sameAs`. **Verify the URL returns 200 before writing it.** A fabricated Wikipedia link is the failure a reader remembers. |
 | `figure` | omit unless a picture has been chosen | Optional. Do not hunt for one. The site currently ships without editorial images; a published brief is valid without `figure`. If you are explicitly asked to add a picture: named biblical scene → public-domain painting or engraving of that scene; otherwise a photograph or museum object (manuscript, coin, landscape the text names). Never Unsplash/Pexels/Pixabay, never an AI image, never a generic European Jesus for an epistle. File goes in `src/assets/editorial/chapters/{slug}.jpg`; add the work to `scripts/data/editorial-images.json`. Fields: `src`, `alt` (20–180), `caption` (20–240), `kind` (`art` or `photograph`), `credit` (`title`, `creator`, `date`, `holder`, `license` `cc0`/`pd`/`cc-by`/`cc-by-sa`, `licenseUrl`, `sourceUrl`). |
-| `publishedAt` / `reviewedAt` | dates | Today's date, in `YYYY-MM-DD`. Drives `<lastmod>` and the Article schema. |
+| `publishedAt` / `reviewedAt` | dates | For a new brief, use today's date in `YYYY-MM-DD`. When revising, preserve `publishedAt` and update `reviewedAt` after a substantive review. These drive `<lastmod>` and Article dates. |
 
 The markdown **body** after the frontmatter is the "If this is your first time
 reading X" note. It renders after the structured sections. Use it to point out
@@ -155,12 +155,12 @@ The sitemap, the `/study` hub, the book page, the reader-page CTA and the
 `lastmod` all pick the brief up automatically from `chapterBriefIndex()`. Nothing
 to register.
 
-After a separately authorized deployment, tell the search engines the URL
-changed:
-
-```
-npm run indexnow -- /psalms/28
-```
+After a separately authorized production deployment, check the build's IndexNow
+receipt. The `postbuild` changed-content workflow submits changed chapter URLs
+and their book hubs automatically. A confirmed automatic submission completes
+this step. If the build reports a missing baseline or a submission failure,
+report that outcome and follow the project's manual-submission instructions
+only within the user's authorized scope.
 
 Submit only what changed. Never `--sitemap` on a routine publish: every reader
 page a crawler fetches is a licensed passage fetch against a rate-limited app
