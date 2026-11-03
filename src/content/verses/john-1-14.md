@@ -32,7 +32,7 @@ people, suffering, dying, and rising again.
 
 ### What does “the Word became flesh” mean?
 
-The NIV is among the translations displayed above. The KJV and NLT comparisons
+The NIV is among the translations compared on this page. The KJV and NLT comparisons
 here link to their publisher-hosted texts under Sources and further reading.
 
 “Flesh” here means human life in its physical, vulnerable condition. John is

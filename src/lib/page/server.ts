@@ -62,38 +62,11 @@ export async function getPageProps(
 			kind = 'NotFound';
 			model = await loaders.NotFound(context);
 		}
-		// Next handles If-None-Match against its rendered ETag. Editorial dates
-		// also support clients that send only If-Modified-Since, as before.
-		const since = request.headers.get('if-modified-since');
-		const modified = context.response.headers.get('Last-Modified');
-		if (
-			context.response.status === 200 &&
-			!request.headers.has('if-none-match') &&
-			since &&
-			modified
-		) {
-			const sinceTime = Date.parse(since);
-			const modifiedTime = Date.parse(modified);
-			if (
-				Number.isFinite(sinceTime) &&
-				Number.isFinite(modifiedTime) &&
-				modifiedTime <= sinceTime
-			) {
-				await sendResponse(
-					ctx.res,
-					new Response(null, { status: 304, headers: context.response.headers }),
-				);
-				return {
-					props: {
-						kind: 'NotFound',
-						data: '{}',
-						footer: { topics: [], answers: [] },
-						lang: 'en',
-						dir: 'ltr',
-					},
-				};
-			}
-		}
+		// Last-Modified based on an editorial review date cannot validate the full
+		// rendered page: its template, navigation, and licensed passage can change
+		// independently. Keep date metadata in the HTML, but let Next compare the
+		// rendered response body against its ETag for conditional requests.
+		context.response.headers.delete('Last-Modified');
 		const [topics, answers] = await Promise.all([listTopics(), listAnswers()]);
 		ctx.res.statusCode = context.response.status;
 		context.response.headers.forEach((value, name) => ctx.res.setHeader(name, value));

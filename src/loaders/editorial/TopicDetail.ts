@@ -12,7 +12,6 @@ import {
 	DEGRADED_CACHE_CONTROL,
 	READER_CACHE_CONTROL,
 	setCacheControl,
-	setLastModified,
 } from '../../lib/http';
 import { articleJsonLd, breadcrumbJsonLd, faqJsonLd, itemListJsonLd } from '../../lib/seo';
 import { articleShareFields, shareCardFromFigure } from '../../lib/images/og';
@@ -85,9 +84,6 @@ export async function loadTopicDetail(context: PageContext) {
 	 */
 	const degraded = upstreamStatus !== 200 || !version || failedPassages > 0;
 	setCacheControl(context.response, degraded ? DEGRADED_CACHE_CONTROL : READER_CACHE_CONTROL);
-	// The editorial date is the page's own and does not depend on the upstream.
-	setLastModified(context.response, topic.data.reviewedAt);
-
 	/**
 	 * Single verses link to the version-agnostic hub — that is the indexable page
 	 * for a reference, and it closes the loop back into every translation.

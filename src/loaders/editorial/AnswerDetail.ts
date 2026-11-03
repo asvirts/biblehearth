@@ -12,7 +12,6 @@ import {
 	DEGRADED_CACHE_CONTROL,
 	READER_CACHE_CONTROL,
 	setCacheControl,
-	setLastModified,
 } from '../../lib/http';
 import { articleJsonLd, breadcrumbJsonLd, faqJsonLd, itemListJsonLd } from '../../lib/seo';
 import { articleShareFields, shareCardFromFigure } from '../../lib/images/og';
@@ -76,8 +75,6 @@ export async function loadAnswerDetail(context: PageContext) {
 	 */
 	const degraded = upstreamStatus !== 200 || !version || failedPassages > 0;
 	setCacheControl(context.response, degraded ? DEGRADED_CACHE_CONTROL : READER_CACHE_CONTROL);
-	setLastModified(context.response, answer.data.reviewedAt);
-
 	/**
 	 * Single verses go to the version-agnostic hub; ranges have none, so they fall
 	 * back to the chapter. Same rule the topic pages use.

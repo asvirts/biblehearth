@@ -41,8 +41,8 @@ take sensible precautions, or care about others.
 The translations also handle the prayer language differently. The NIV names
 prayer and petition; the NIrV explains the invitation in more everyday terms.
 Each directs the reader toward bringing concerns and gratitude to God. You can
-compare the available translations above, alongside their publisher notices;
-the KJV is linked below as a historical comparison.
+compare the translations on this page, alongside their publisher notices;
+the KJV is linked under Sources and further reading as a historical comparison.
 
 ### What was happening in Philippi?
 

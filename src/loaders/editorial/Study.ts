@@ -18,11 +18,17 @@ import { breadcrumbJsonLd, itemListJsonLd } from '../../lib/seo';
 import { absoluteUrl } from '../../lib/bible/urls';
 import { hubFigures } from '../../lib/images/hubs';
 import { shareCardFromFigure } from '../../lib/images/og';
+import { listVerseBriefs } from '../../lib/verse-briefs';
+import { verseHubPath } from '../../lib/bible/urls';
 
 export async function loadStudy(context: PageContext) {
 	setCacheControl(context.response, READER_CACHE_CONTROL);
 
-	const briefs = await listChapterBriefs();
+	const [briefs, verseBriefs] = await Promise.all([listChapterBriefs(), listVerseBriefs()]);
+	const verseExplanations = verseBriefs.flatMap(({ data }) => {
+		const href = verseHubPath(data.usfm);
+		return href ? [{ href, title: data.title, summary: data.summary }] : [];
+	});
 
 	/**
 	 * What this hub can honestly claim, which is two different numbers.
@@ -67,6 +73,7 @@ export async function loadStudy(context: PageContext) {
 			title: brief.data.title,
 			usfm: brief.data.usfm,
 		})),
+		verseExplanations,
 		title,
 		description,
 		writtenSentence,

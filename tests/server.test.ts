@@ -127,30 +127,52 @@ test('localized pages report the requested language and right-to-left direction'
 	}
 });
 
-test('editorial modification dates support 304 while ETag and error responses take precedence', async () => {
+test('HTML Last-Modified cannot return 304 when rendered content may have changed', async () => {
 	const original = loaders.TopicDetail;
 	let status = 200;
-	const modified = 'Wed, 21 Oct 2026 00:00:00 GMT';
+	let revision = 'same editorial review date, first template';
+	const reviewed = 'Tue, 27 Oct 2026 00:00:00 GMT';
 	loaders.TopicDetail = async (page) => {
 		page.response.status = status;
-		page.response.headers.set('Last-Modified', modified);
+		// Even if a future loader accidentally adds a date-only validator, the
+		// HTML boundary must not use it to validate the composed response.
+		page.response.headers.set('Last-Modified', reviewed);
 		page.response.headers.set('Cache-Control', status === 200 ? 'public, max-age=60' : 'no-store');
-		return {};
+		return { revision };
 	};
 	try {
-		const fresh = context('/topics/anxiety', { requestHeaders: { 'if-modified-since': modified } });
-		await getPageProps(fresh.ctx);
-		assert.equal(fresh.response.statusCode, 304);
-		assert.equal(fresh.response.writableEnded, true);
-		assert.equal(fresh.response.body.length, 0);
+		for (const date of [reviewed, 'Wed, 04 Nov 2026 00:00:00 GMT']) {
+			revision = 'same editorial review date, first template';
+			const firstRequest = context('/topics/anxiety', {
+				requestHeaders: { 'if-modified-since': date },
+			});
+			const first = await getPageProps(firstRequest.ctx);
+			assert.equal(firstRequest.response.statusCode, 200);
+			assert.equal(firstRequest.response.getHeader('last-modified'), undefined);
+			assert.ok('props' in first);
+			const firstProps = await first.props;
+			assert.equal(firstProps.data.includes(revision), true);
+
+			revision = 'same editorial review date, changed template';
+			const changedRequest = context('/topics/anxiety', {
+				requestHeaders: { 'if-modified-since': date },
+			});
+			const changed = await getPageProps(changedRequest.ctx);
+			assert.equal(changedRequest.response.statusCode, 200);
+			assert.equal(changedRequest.response.getHeader('last-modified'), undefined);
+			assert.ok('props' in changed);
+			const changedProps = await changed.props;
+			assert.equal(changedProps.data.includes(revision), true);
+			assert.notEqual(changedProps.data, firstProps.data);
+		}
 		const etag = context('/topics/anxiety', {
-			requestHeaders: { 'if-modified-since': modified, 'if-none-match': '"different"' },
+			requestHeaders: { 'if-modified-since': reviewed, 'if-none-match': '"different"' },
 		});
-		await getPageProps(etag.ctx);
+		const etagResult = await getPageProps(etag.ctx);
 		assert.equal(etag.response.statusCode, 200);
-		assert.equal(etag.response.writableEnded, false);
+		assert.ok('props' in etagResult);
 		status = 503;
-		const error = context('/topics/anxiety', { requestHeaders: { 'if-modified-since': modified } });
+		const error = context('/topics/anxiety', { requestHeaders: { 'if-modified-since': reviewed } });
 		await getPageProps(error.ctx);
 		assert.equal(error.response.statusCode, 503);
 		assert.equal(error.response.writableEnded, false);

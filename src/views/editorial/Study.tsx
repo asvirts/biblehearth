@@ -10,7 +10,17 @@ import { COMMENTARY_SOURCES } from '../../lib/commentary/sources';
 import type { loadStudy } from '../../loaders/editorial/Study';
 
 export function Study(data: Awaited<ReturnType<typeof loadStudy>>): ReactElement {
-	const { site, briefs, title, description, writtenSentence, books, figure, share } = data;
+	const {
+		site,
+		briefs,
+		verseExplanations,
+		title,
+		description,
+		writtenSentence,
+		books,
+		figure,
+		share,
+	} = data;
 	const context = { site: new URL(site) };
 	return (
 		<PageLayout
@@ -31,6 +41,17 @@ export function Study(data: Awaited<ReturnType<typeof loadStudy>>): ReactElement
 						url: absoluteUrl(context.site, bookStudyPath(id)),
 					})),
 				}),
+				...(verseExplanations.length
+					? [
+							itemListJsonLd({
+								name: 'Verse meanings and context',
+								items: verseExplanations.map((explanation) => ({
+									name: explanation.title,
+									url: absoluteUrl(context.site, explanation.href),
+								})),
+							}),
+						]
+					: []),
 			]}
 		>
 			<nav className="crumbs" aria-label="Breadcrumb">
@@ -73,6 +94,24 @@ export function Study(data: Awaited<ReturnType<typeof loadStudy>>): ReactElement
 							);
 						})}
 					</ul>
+				</section>
+			) : null}
+
+			{verseExplanations.length ? (
+				<section>
+					<h2>Verse meanings and context</h2>
+					<p className="muted">
+						Original explanations of individual verses, with their setting, common questions, and
+						translation differences explained.
+					</p>
+					<div className="version-grid">
+						{verseExplanations.map((explanation) => (
+							<a className="tile" href={explanation.href} key={explanation.href}>
+								{explanation.title}
+								<p className="muted">{explanation.summary}</p>
+							</a>
+						))}
+					</div>
 				</section>
 			) : null}
 

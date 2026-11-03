@@ -1,5 +1,5 @@
 import { verseAnswerIndex } from '../../lib/answers';
-import { bookStudyPath } from '../../lib/commentary';
+import { bookStudyPath, chapterBriefIndex } from '../../lib/commentary';
 import {
 	bookNameForChapter,
 	bookNameFromUsfm,
@@ -30,7 +30,7 @@ import { displayAbbreviation, getBibleIndex } from '../../lib/youversion/api';
 import { loadVerseHub as loadVerseHubData } from '../../lib/youversion/verse-hub';
 import type { PageContext } from '../../lib/page/types';
 import { verseBriefFor } from '../../lib/verse-briefs';
-import { DEGRADED_CACHE_CONTROL, setCacheControl, setLastModified } from '../../lib/http';
+import { DEGRADED_CACHE_CONTROL, setCacheControl } from '../../lib/http';
 
 /** Loads the VerseHub view once on the server. */
 export async function loadVerseHub(context: PageContext, loadVerse = loadVerseHubData) {
@@ -71,9 +71,10 @@ export async function loadVerseHub(context: PageContext, loadVerse = loadVerseHu
 
 	const reference = `${bookNameForChapter(bookUsfm)} ${chapterId}:${verseId}`;
 
-	const [brief, { renderings, status, headers }] = await Promise.all([
+	const [brief, { renderings, status, headers }, chapterBriefs] = await Promise.all([
 		verseBriefFor(usfm),
 		loadVerse(bookUsfm, chapterId, verseId),
+		chapterBriefIndex(),
 	]);
 	if (status === 404) {
 		return context.notFound();
@@ -82,7 +83,6 @@ export async function loadVerseHub(context: PageContext, loadVerse = loadVerseHu
 	context.response.status = brief ? 200 : status;
 	headers.forEach((value, name) => context.response.headers.set(name, value));
 	if (brief) {
-		setLastModified(context.response, brief.reviewedAt);
 		if (status !== 200) {
 			// The original article remains useful when its licensed text is unavailable.
 			setCacheControl(context.response, DEGRADED_CACHE_CONTROL);
@@ -97,7 +97,7 @@ export async function loadVerseHub(context: PageContext, loadVerse = loadVerseHu
 	const translations = renderings.map((item) => displayAbbreviation(item.version));
 
 	const title = brief
-		? `${reference}: Meaning and Translation Comparison`
+		? brief.title
 		: renderings.length
 			? titleWithClause(reference, `in ${renderings.length} Translations`, verseText)
 			: `${reference} — Compare Bible Translations`;
@@ -166,6 +166,7 @@ export async function loadVerseHub(context: PageContext, loadVerse = loadVerseHu
 
 	return {
 		brief,
+		hasChapterBrief: chapterBriefs.has(`${bookUsfm}.${chapterId}`),
 		bookSlug,
 		chapterId,
 		verseId,
