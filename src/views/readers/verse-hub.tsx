@@ -17,6 +17,7 @@ type Model = Awaited<ReturnType<typeof loadVerseHub>>;
 export function renderVerseHub(model: Model) {
 	const {
 		brief,
+		hasChapterBrief,
 		chapterId,
 		verseId,
 		bookUsfm,
@@ -34,16 +35,22 @@ export function renderVerseHub(model: Model) {
 	const site = new URL(model.site);
 	const explanation = brief ? (
 		<article className="chapter-notes" aria-labelledby="verse-meaning">
-			<h2 id="verse-meaning">{brief.title}</h2>
+			<h2 id="verse-meaning">Meaning and context</h2>
 			<p className="lede">{brief.summary}</p>
+			{status === 200 && renderings.length ? (
+				<p>
+					<a href="#translations">Compare translations</a>
+				</p>
+			) : null}
 			<div dangerouslySetInnerHTML={{ __html: brief.html }} />
 			<p>
 				<a href={chapterStudyPath(bookUsfm, chapterId)}>
-					Read the full {bookNameForChapter(bookUsfm)} {chapterId} study
+					{hasChapterBrief ? 'Read the full' : 'Read the'} {bookNameForChapter(bookUsfm)}{' '}
+					{chapterId} {hasChapterBrief ? 'study' : 'commentary'}
 				</a>
 			</p>
-			<details>
-				<summary>Sources and further reading</summary>
+			<section>
+				<h3>Sources and further reading</h3>
 				<ul>
 					{brief.sources.map((source) => (
 						<li key={source.url}>
@@ -53,7 +60,24 @@ export function renderVerseHub(model: Model) {
 						</li>
 					))}
 				</ul>
-			</details>
+			</section>
+			<footer className="topic-provenance">
+				<p className="muted">
+					By <a href="/about#who-runs-this">BibleHearth</a>. Reviewed{' '}
+					{brief.reviewedAt.toLocaleDateString('en-US', {
+						timeZone: 'UTC',
+						year: 'numeric',
+						month: 'long',
+						day: 'numeric',
+					})}
+					.
+				</p>
+				<p className="muted">
+					<a href="/about#editorial-process">How we prepare our guides</a>
+					{' · '}
+					<a href="/about#corrections">Report a correction</a>
+				</p>
+			</footer>
 		</article>
 	) : null;
 	return (
@@ -102,7 +126,8 @@ export function renderVerseHub(model: Model) {
 				<span>{reference}</span>
 			</nav>
 
-			<h1>{reference}</h1>
+			<h1>{brief?.title ?? reference}</h1>
+			{explanation}
 
 			{status !== 200 || renderings.length === 0 ? (
 				<>
@@ -111,24 +136,32 @@ export function renderVerseHub(model: Model) {
 						title="This verse is unavailable"
 						message="Scripture could not be loaded right now. Please try again shortly."
 					/>
-					{explanation}
 				</>
 			) : (
 				<>
+					{brief ? <h2 id="translations">Compare translations</h2> : null}
 					<p className="lede">
 						{reference} in {renderings.length} English translations. Each links through to the full
 						chapter for context.{' '}
-						{brief ? <a href="#verse-meaning">Read the meaning and context</a> : null}
 					</p>
 
 					{renderings.map((item) => (
 						<article key={item.version.id} className="verse-card">
-							<h2>
-								<a href={versePath(item.slug, bookUsfm, chapterId, verseId)}>
-									{item.version.localized_title || item.version.title} (
-									{displayAbbreviation(item.version)})
-								</a>
-							</h2>
+							{brief ? (
+								<h3>
+									<a href={versePath(item.slug, bookUsfm, chapterId, verseId)}>
+										{item.version.localized_title || item.version.title} (
+										{displayAbbreviation(item.version)})
+									</a>
+								</h3>
+							) : (
+								<h2>
+									<a href={versePath(item.slug, bookUsfm, chapterId, verseId)}>
+										{item.version.localized_title || item.version.title} (
+										{displayAbbreviation(item.version)})
+									</a>
+								</h2>
+							)}
 							<Passage html={item.passage.content} />
 							<p className="muted">
 								<a href={chapterPath(item.slug, bookUsfm, chapterId)}>
@@ -141,8 +174,6 @@ export function renderVerseHub(model: Model) {
 							<CopyrightNotice version={item.version} />
 						</article>
 					))}
-
-					{explanation}
 
 					<nav className="pager">
 						{previousLink ? <a href={previousLink.href}>{previousLink.label}</a> : <span />}

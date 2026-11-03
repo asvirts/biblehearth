@@ -21,6 +21,7 @@ export function Home(data: Awaited<ReturnType<typeof loadHome>>): ReactElement {
 		answers,
 		featured,
 		studies,
+		verseExplanations,
 		description,
 		figure,
 		share,
@@ -93,6 +94,21 @@ export function Home(data: Awaited<ReturnType<typeof loadHome>>): ReactElement {
 						<p>
 							<a href="/study">All chapter studies</a>
 						</p>
+					</section>
+				) : null}
+
+				{verseExplanations.length > 0 ? (
+					<section>
+						<h2>Verse explanations</h2>
+						<div className="version-grid">
+							{verseExplanations.map((verse) => (
+								<a className="tile" href={verse.href} key={verse.href}>
+									<span className="tile-kicker">{verse.reference}</span>
+									{verse.title}
+									<p className="muted">{verse.summary}</p>
+								</a>
+							))}
+						</div>
 					</section>
 				) : null}
 

@@ -33,7 +33,6 @@ import {
 	DEGRADED_CACHE_CONTROL,
 	READER_CACHE_CONTROL,
 	setCacheControl,
-	setLastModified,
 } from '../../lib/http';
 import { articleJsonLd, breadcrumbJsonLd, creativeWorkJsonLd, faqJsonLd } from '../../lib/seo';
 import { articleShareFields, shareCardFromFigure } from '../../lib/images/og';
@@ -314,12 +313,6 @@ export async function loadStudyChapter(context: PageContext) {
 	 */
 	const degraded = Boolean(brief) && (scriptureFailed || !version);
 	setCacheControl(context.response, degraded ? DEGRADED_CACHE_CONTROL : READER_CACHE_CONTROL);
-	// Only the briefed chapters have a date worth stating. The rest are `noindex`
-	// commentary whose "last modified" would mean nothing but the deploy.
-	if (brief) {
-		setLastModified(context.response, brief.data.reviewedAt);
-	}
-
 	const [allTopics, { byChapter: answersByChapter }] = await Promise.all([
 		listTopics(),
 		verseAnswerIndex(),

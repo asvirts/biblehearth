@@ -2,8 +2,9 @@ import type { PageContext } from '../../lib/page/types';
 import type { BiblePassage, BibleVersion, VOTD } from '@youversion/platform-core';
 import { answerPath, listAnswers } from '../../lib/answers';
 import { chapterStudyPath, listChapterBriefs } from '../../lib/commentary';
-import { parsePassageId } from '../../lib/bible/usfm';
-import { chapterPath, versePath, versionPath } from '../../lib/bible/urls';
+import { bookNameForChapter, parsePassageId } from '../../lib/bible/usfm';
+import { chapterPath, versePath, versionPath, verseHubPath } from '../../lib/bible/urls';
+import { listVerseBriefs } from '../../lib/verse-briefs';
 import { DEGRADED_CACHE_CONTROL, HOME_CACHE_CONTROL, setCacheControl } from '../../lib/http';
 import { websiteJsonLd } from '../../lib/seo';
 import { hubFigures } from '../../lib/images/hubs';
@@ -102,6 +103,15 @@ export async function loadHome(context: PageContext) {
 	// editorial pages get a slot here rather than relying on the footer alone.
 	const answers = await listAnswers();
 	const featured = homeFeaturedVersions(catalog);
+	const verseExplanations = (await listVerseBriefs()).map(({ data }) => {
+		const [book = '', chapter = '', verse = ''] = data.usfm.split('.');
+		return {
+			reference: `${bookNameForChapter(book)} ${chapter}:${verse}`,
+			title: data.title,
+			summary: data.summary,
+			href: verseHubPath(data.usfm)!,
+		};
+	});
 
 	/**
 	 * The briefed chapter studies, which had no link from here at all.
@@ -172,6 +182,7 @@ export async function loadHome(context: PageContext) {
 		answers: answers.map((answer) => ({ id: answer.id, question: answer.data.question })),
 		featured,
 		studies,
+		verseExplanations,
 		description,
 		figure,
 		share,

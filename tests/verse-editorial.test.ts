@@ -40,7 +40,7 @@ test('original verse explanations survive an upstream outage without hiding a re
 		assert.equal(ctx.response.status, 200);
 		assert.equal(ctx.response.headers.get('cache-control'), DEGRADED_CACHE_CONTROL);
 		assert.equal(ctx.response.headers.get('retry-after'), null);
-		assert.ok(ctx.response.headers.get('last-modified'));
+		assert.equal(ctx.response.headers.get('last-modified'), null);
 		assert.equal(model.status, 503);
 		assert.ok(model.brief);
 		assert.equal(model.nextLink, null);
@@ -84,4 +84,54 @@ test('original writing never turns a definite missing verse into an indexable su
 		})),
 		/Unexpected 404/,
 	);
+});
+
+test('authored verse leads with original explanation, clear provenance and retained licensed passages', async () => {
+	const model = await loadVerseHub(context('isaiah', '41', '10'));
+	const version = {
+		id: 111,
+		abbreviation: 'NIV',
+		localized_abbreviation: 'NIV',
+		title: 'New International Version',
+		localized_title: 'New International Version',
+		copyright: 'Publisher copyright test notice',
+		info: '',
+		publisher_url: 'https://publisher.example',
+	};
+	const successful = {
+		...model,
+		status: 200,
+		renderings: [{ slug: 'niv', version, passage: { content: '<p>Example licensed passage</p>' } }],
+	} as typeof model;
+	const page = renderVerseHub(successful);
+	assert.equal(page.props.title, model.brief!.title);
+	const html = await new Response(
+		await renderToReadableStream((page.props as { children: ReactNode }).children),
+	).text();
+	assert.match(html, /<h1>What Does Isaiah 41:10 Mean/);
+	assert.ok(html.indexOf('What does the promise mean?') < html.indexOf('Example licensed passage'));
+	assert.ok(
+		html.indexOf('Example licensed passage') < html.indexOf('Publisher copyright test notice'),
+	);
+	assert.match(html, /Compare translations/);
+	assert.match(html.replaceAll('<!-- -->', ''), /Reviewed October 27, 2026/);
+	assert.match(html, /\/about#editorial-process/);
+	assert.match(html, /\/about#corrections/);
+	assert.match(html.replaceAll('<!-- -->', ''), /Read the full Isaiah 41 study/);
+});
+
+test('chapter links distinguish authored studies from commentary-only chapters', async () => {
+	for (const [book, chapter, verse, expected] of [
+		['matthew', '13', '12', 'Read the Matthew 13 commentary'],
+		['john', '1', '14', 'Read the John 1 commentary'],
+	] as const) {
+		const model = await loadVerseHub(context(book, chapter, verse));
+		assert.equal(model.hasChapterBrief, false);
+		const page = renderVerseHub(model);
+		const html = await new Response(
+			await renderToReadableStream((page.props as { children: ReactNode }).children),
+		).text();
+		assert.ok(html.replaceAll('<!-- -->', '').includes(expected));
+		assert.ok(!html.includes(`Read the full ${book} ${chapter} study`));
+	}
 });
