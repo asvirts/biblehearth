@@ -7,6 +7,7 @@ import {
 	setPageHeaders,
 } from '../http.ts';
 import { HUB_TRANSLATION_LIMIT, HUB_TRANSLATION_SLUGS } from './translations.ts';
+import { chapterInRange, isCanonicalBook } from './chapters.ts';
 
 /** The existing cached Scripture reads in production; controlled reads in tests. */
 export type VerseHubSource = {
@@ -14,6 +15,8 @@ export type VerseHubSource = {
 	versionSlug(version: BibleVersion, catalog: BibleVersion[]): string;
 	/** Fetch publisher metadata for a chosen edition before displaying its text. */
 	getVersionDetails?(version: BibleVersion): Promise<BibleVersion | null>;
+	/** Check translation-specific chapters outside the shared 66-book canon. */
+	hasChapter(versionId: number, bookUsfm: string, chapterId: string): Promise<boolean>;
 	getVerseHtml(
 		versionId: number,
 		bookUsfm: string,
@@ -76,6 +79,17 @@ export function createVerseHub(source: VerseHubSource) {
 		chapterId: string,
 		verseId: string,
 	): Promise<VerseHubResult> {
+		// The curated translations share this canon's chapter counts. Reject an
+		// impossible chapter before even loading the catalog or publisher details.
+		if (
+			!/^[1-9]\d*$/.test(chapterId) ||
+			!/^[1-9]\d*$/.test(verseId) ||
+			!Number.isSafeInteger(Number(chapterId)) ||
+			!Number.isSafeInteger(Number(verseId)) ||
+			(isCanonicalBook(bookUsfm) && !chapterInRange(bookUsfm, chapterId))
+		) {
+			return result(404);
+		}
 		try {
 			const catalog = await source.listVersions();
 			const chosen = HUB_TRANSLATION_SLUGS.flatMap((slug) => {
@@ -90,6 +104,17 @@ export function createVerseHub(source: VerseHubSource) {
 
 			const loaded = await Promise.all(
 				chosen.map(async ({ version, slug }): Promise<ReadResult> => {
+					if (!isCanonicalBook(bookUsfm)) {
+						try {
+							if (!(await source.hasChapter(version.id, bookUsfm, chapterId))) {
+								return { rendering: null, status: 404 };
+							}
+						} catch (error) {
+							const status = failureStatus(error);
+							// Missing or unavailable metadata cannot establish absence.
+							return { rendering: null, status: status === 404 ? 503 : status };
+						}
+					}
 					let detailedVersion = version;
 					if (source.getVersionDetails) {
 						try {

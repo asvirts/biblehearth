@@ -25,6 +25,7 @@ import { readFileSync, writeFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
 import { ApiClient, BibleClient } from '@youversion/platform-core';
+import { localeRow } from './lib/generated-sources.mjs';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 
@@ -197,22 +198,7 @@ for (const row of rows) {
 
 rows.sort((a, b) => a.englishName.localeCompare(b.englishName));
 
-const body = rows
-	.map(
-		(row) => `	{
-		code: '${row.prefix}',
-		prefix: '${row.prefix}',
-		htmlLang: '${row.htmlLang}',
-		apiLanguageRange: '${row.apiLanguageRange}',
-		dir: '${row.dir}',
-		endonym: ${JSON.stringify(row.endonym)},
-		englishName: ${JSON.stringify(row.englishName)},
-		versionIds: [${row.versionIds.join(', ')}],
-		defaultVersionId: ${row.defaultVersionId},
-		scope: '${row.scope}',
-	},`,
-	)
-	.join('\n');
+const body = rows.map((row) => `\t${localeRow(row)},`).join('\n');
 
 writeFileSync(
 	join(root, 'src/lib/i18n/locales.generated.ts'),

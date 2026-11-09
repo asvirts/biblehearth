@@ -185,6 +185,13 @@ export async function listVersions(locale: Locale = DEFAULT_LOCALE): Promise<Bib
 
 const SLUG_WITH_ID = /^([a-z0-9]+(?:-[a-z0-9]+)*)-(\d+)$/;
 
+type VersionResolutionSource = {
+	listVersions: typeof listVersions;
+	getVersionById: typeof getVersionById;
+	peekVersion: (id: number) => Promise<BibleVersion | undefined>;
+	defaultVersionId: number;
+};
+
 /**
  * A version slug back to the version it names, within one locale.
  *
@@ -198,7 +205,15 @@ const SLUG_WITH_ID = /^([a-z0-9]+(?:-[a-z0-9]+)*)-(\d+)$/;
 export async function resolveVersion(
 	requestedSlug: string,
 	locale: Locale = DEFAULT_LOCALE,
+	source: VersionResolutionSource = {
+		listVersions,
+		getVersionById,
+		peekVersion: (id) =>
+			peekCached<BibleVersion | null>(`version:${id}`).then((value) => value ?? undefined),
+		defaultVersionId: DEFAULT_BIBLE_ID,
+	},
 ): Promise<{ version: BibleVersion; slug: string } | null> {
+	if (requestedSlug.length > 128) return null;
 	// Slugs are built lower-case (see `versionSlug`), so `/bible/NIV` names the same
 	// version as `/bible/niv`. Resolving it lets the caller's `resolved.slug !==
 	// requestedSlug` check turn it into a 301, where an exact match 404'd it.
@@ -206,23 +221,58 @@ export async function resolveVersion(
 	const withId = slug.match(SLUG_WITH_ID);
 	if (withId) {
 		const id = Number(withId[2]);
-		const version = await getVersionById(id);
+		if (
+			!Number.isSafeInteger(id) ||
+			id <= 0 ||
+			(locale.versionIds !== null && !locale.versionIds.includes(id))
+		) {
+			return null;
+		}
+
+		// Admit IDs from shared metadata before spending a per-ID provider call.
+		// The fallback remains available for configured editions and previously
+		// observed detail records, rather than for arbitrary visitor-supplied IDs.
+		let catalog: BibleVersion[] = [];
+		let catalogError: unknown;
+		let catalogUnavailable = false;
+		try {
+			catalog = await source.listVersions(locale);
+		} catch (error) {
+			catalogUnavailable = true;
+			catalogError = error;
+		}
+		const listed = catalog.find((item) => item.id === id);
+		const cached = listed ? undefined : await source.peekVersion(id);
+		const configured =
+			locale.versionIds?.includes(id) ||
+			(locale.code === DEFAULT_LOCALE.code && id === source.defaultVersionId);
+		if (!listed && !configured && !cached) {
+			// A failed catalog cannot establish absence. Preserve a retryable error
+			// without turning that failure into permission for a new detail lookup.
+			if (catalogUnavailable) throw catalogError;
+			return null;
+		}
+		if (cached && (cached.id !== id || isExcludedVersion(cached) || !carries(locale, cached)))
+			return null;
+		const version = await source.getVersionById(id);
 		// An excluded version must 404 here too, or `/bible/tpt-1849` would
 		// bypass the catalog filter entirely — and for a translated locale, so
 		// must a version this locale does not carry, or `/es/bible/rves-147`
 		// would serve a page the allowlist deliberately withheld.
 		if (!version || isExcludedVersion(version) || !carries(locale, version)) {
+			if (!version && listed)
+				throw new BibleUnavailableError('Bible version details are unavailable');
 			return null;
 		}
-		const catalog = await listVersions(locale).catch(() => [version]);
-		const catalogVersion = catalog.find((item) => item.id === version.id) ?? version;
+		if (catalog.length === 0) catalog = [cached ?? version];
+		const catalogVersion = listed ?? cached ?? version;
 		return {
 			version: mergeVersionDetails(catalogVersion, version),
 			slug: versionSlug(catalogVersion, catalog),
 		};
 	}
 
-	const catalog = await listVersions(locale);
+	const catalog = await source.listVersions(locale);
 	const matches = catalog.filter(
 		(item) =>
 			item.abbreviation.toLowerCase() === slug ||
@@ -232,7 +282,7 @@ export async function resolveVersion(
 	if (matches.length === 1 && matches[0]) {
 		const selected = matches[0];
 		return {
-			version: await hydrateVersion(selected),
+			version: await hydrateVersion(selected, source.getVersionById),
 			slug: versionSlug(selected, catalog),
 		};
 	}

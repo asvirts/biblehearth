@@ -28,6 +28,23 @@ import type { PageContext } from '../../lib/page/types';
 import { isRouteControl } from '../../lib/page/navigation';
 import { projectBookLabel, projectReaderToolbar, projectVersionOptions } from './index-projection';
 
+/** Read a chapter only after its selected translation's index confirms it exists. */
+export async function readIndexedChapter(
+	index: IndexedBible,
+	versionId: number,
+	bookUsfm: string,
+	chapterId: string,
+	loadPassage = getPassageHtml,
+): Promise<{ book: IndexedBook; passage: BiblePassage } | null> {
+	const book = findBook(index, bookUsfm);
+	if (!book || !chapterExists(book, chapterId)) return null;
+	const passage = await loadPassage(versionId, chapterUsfm(bookUsfm, chapterId), {
+		headings: true,
+		notes: true,
+	});
+	return passage ? { book, passage } : null;
+}
+
 /** Loads the VersionChapter view once on the server. */
 export async function loadVersionChapter(context: PageContext) {
 	const requestedSlug = context.params.version;
@@ -85,19 +102,15 @@ export async function loadVersionChapter(context: PageContext) {
 
 		version = resolved.version;
 		slug = resolved.slug;
-		[index, catalog, passage] = await Promise.all([
+		[index, catalog] = await Promise.all([
 			getBibleIndex(resolved.version.id),
 			listVersions(locale),
-			getPassageHtml(resolved.version.id, chapterUsfm(bookUsfm, chapterId), {
-				headings: true,
-				notes: true,
-			}),
 		]);
-
-		book = findBook(index, bookUsfm);
-		if (!book || !chapterExists(book, chapterId) || !passage) {
+		const selected = await readIndexedChapter(index, resolved.version.id, bookUsfm, chapterId);
+		if (!selected) {
 			return context.notFound();
 		}
+		({ book, passage } = selected);
 
 		// These drive the Previous/Next links in the body and the `rel="prev"` and
 		// `rel="next"` pair in the head. `adjacentReadableChapter` is what makes the

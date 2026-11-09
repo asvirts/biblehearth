@@ -30,7 +30,7 @@
 		"@youversion/platform-core": "^2.15.0",
 		"gray-matter": "^4.0.3",
 		"marked": "^17.0.0",
-		"next": "16.4.3",
+		"next": "16.4.5",
 		"react": "19.3.1",
 		"react-dom": "19.3.1",
 		"sharp": "^0.35.5",
@@ -47,6 +47,7 @@
 		"@types/node": "^24.10.0",
 		"@types/react": "^19.2.14",
 		"@types/react-dom": "^19.2.3",
+		"parse5": "^8.0.0",
 		"prettier": "^3.9.10",
 		"tsx": "^4.21.0",
 		"typescript": "^5.9.3"

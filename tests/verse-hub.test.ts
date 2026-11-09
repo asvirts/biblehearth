@@ -33,6 +33,9 @@ function fixture(
 		versionSlug(item) {
 			return item.title;
 		},
+		async hasChapter() {
+			return true;
+		},
 		async getVerseHtml(id, book, chapter, verse) {
 			calls.push([id, book, chapter, verse]);
 			const read = reads[id];
@@ -59,6 +62,46 @@ const niv = version(1, 'niv');
 const nasb = version(2, 'nasb2020');
 const amp = version(3, 'amp');
 const unlicensed = version(4, 'not-in-curated-list');
+
+test('out-of-range chapters are rejected before catalog or passage reads', async () => {
+	for (const chapter of ['22', '23']) {
+		const { source, calls } = fixture([niv, nasb], [, passage(1), passage(2)]);
+		let catalogCalls = 0;
+		source.listVersions = async () => {
+			catalogCalls++;
+			return [niv, nasb];
+		};
+		const result = await createVerseHub(source)('JHN', chapter, '1');
+		assert.equal(result.status, 404);
+		assert.equal(catalogCalls, 0);
+		assert.deepEqual(calls, []);
+		headers(result, NOTFOUND_CACHE_CONTROL);
+	}
+});
+
+test('noncanonical chapters use each translation index before reading text', async () => {
+	const { source, calls } = fixture([niv, nasb], [, passage(1), passage(2)]);
+	const checked: Array<[number, string, string]> = [];
+	source.hasChapter = async (id, book, chapter) => {
+		checked.push([id, book, chapter]);
+		return id === 2;
+	};
+	const result = await createVerseHub(source)('TOB', '2', '1');
+	assert.equal(result.status, 200);
+	assert.deepEqual(checked, [[1, 'TOB', '2'], [2, 'TOB', '2']]);
+	assert.deepEqual(calls, [[2, 'TOB', '2', '1']]);
+});
+
+test('unavailable noncanonical chapter metadata remains retryable', async () => {
+	for (const status of [404, 503]) {
+		const { source, calls } = fixture([niv], [, passage(1)]);
+		source.hasChapter = async () => { throw failure(status); };
+		const result = await createVerseHub(source)('TOB', '2', '1');
+		assert.equal(result.status, 503);
+		assert.deepEqual(calls, []);
+		headers(result, 'no-store', '300');
+	}
+});
 
 test('curated licensed translations render in order and preserve the requested reference', async () => {
 	const { source, calls } = fixture(

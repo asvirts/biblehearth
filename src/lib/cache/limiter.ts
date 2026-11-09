@@ -23,6 +23,9 @@
  */
 const MAX_CONCURRENT = 4;
 
+/** Bound pending promises and timers as well as active provider calls. */
+const MAX_WAITING = 32;
+
 /**
  * How long a call waits for a slot before giving up.
  *
@@ -40,59 +43,78 @@ export class UpstreamBusyError extends Error {
 	}
 }
 
-let active = 0;
-const waiting: Array<{ resolve: () => void; reject: (error: Error) => void }> = [];
-
-function release(): void {
-	const next = waiting.shift();
-	if (next) {
-		// Hand the slot straight over rather than decrementing: releasing and
-		// re-acquiring would let a caller that arrived later jump the queue.
-		next.resolve();
-		return;
+export function createUpstreamLimiter({
+	maxConcurrent = MAX_CONCURRENT,
+	maxWaiting = MAX_WAITING,
+	maxWaitMs = MAX_WAIT_MS,
+} = {}) {
+	if (
+		!Number.isSafeInteger(maxConcurrent) ||
+		maxConcurrent < 1 ||
+		!Number.isSafeInteger(maxWaiting) ||
+		maxWaiting < 0 ||
+		!Number.isSafeInteger(maxWaitMs) ||
+		maxWaitMs < 1
+	) {
+		throw new RangeError('Invalid upstream limiter bounds');
 	}
-	active -= 1;
+	let active = 0;
+	const waiting: Array<{ resolve: () => void; reject: (error: Error) => void }> = [];
+
+	function release(): void {
+		const next = waiting.shift();
+		if (next) {
+			// Hand the slot straight over rather than decrementing: releasing and
+			// re-acquiring would let a caller that arrived later jump the queue.
+			next.resolve();
+			return;
+		}
+		active -= 1;
+	}
+
+	function acquire(): Promise<void> {
+		if (active < maxConcurrent) {
+			active += 1;
+			return Promise.resolve();
+		}
+		if (waiting.length >= maxWaiting) return Promise.reject(new UpstreamBusyError());
+
+		return new Promise((resolve, reject) => {
+			const entry = {
+				resolve: () => {
+					clearTimeout(timer);
+					resolve();
+				},
+				reject,
+			};
+
+			const timer = setTimeout(() => {
+				const index = waiting.indexOf(entry);
+				if (index !== -1) {
+					waiting.splice(index, 1);
+				}
+				reject(new UpstreamBusyError());
+			}, maxWaitMs);
+
+			// Node keeps the event loop alive for a pending timer, which on a
+			// serverless instance is time billed for waiting on nothing. Typed
+			// through the DOM's `setTimeout`, which returns a plain number, so the
+			// Node-only method has to be reached for rather than called outright.
+			(timer as unknown as { unref?: () => void }).unref?.();
+
+			waiting.push(entry);
+		});
+	}
+
+	/** Run `operation` once a slot is free, or throw `UpstreamBusyError` waiting. */
+	return async function limitUpstream<T>(operation: () => Promise<T>): Promise<T> {
+		await acquire();
+		try {
+			return await operation();
+		} finally {
+			release();
+		}
+	};
 }
 
-function acquire(): Promise<void> {
-	if (active < MAX_CONCURRENT) {
-		active += 1;
-		return Promise.resolve();
-	}
-
-	return new Promise((resolve, reject) => {
-		const entry = {
-			resolve: () => {
-				clearTimeout(timer);
-				resolve();
-			},
-			reject,
-		};
-
-		const timer = setTimeout(() => {
-			const index = waiting.indexOf(entry);
-			if (index !== -1) {
-				waiting.splice(index, 1);
-			}
-			reject(new UpstreamBusyError());
-		}, MAX_WAIT_MS);
-
-		// Node keeps the event loop alive for a pending timer, which on a
-		// serverless instance is time billed for waiting on nothing. Typed
-		// through the DOM's `setTimeout`, which returns a plain number, so the
-		// Node-only method has to be reached for rather than called outright.
-		(timer as unknown as { unref?: () => void }).unref?.();
-
-		waiting.push(entry);
-	});
-}
-
-/** Run `operation` once a slot is free, or throw `UpstreamBusyError` waiting. */
-export async function limitUpstream<T>(operation: () => Promise<T>): Promise<T> {
-	await acquire();
-	try {
-		return await operation();
-	} finally {
-		release();
-	}
-}
+export const limitUpstream = createUpstreamLimiter();

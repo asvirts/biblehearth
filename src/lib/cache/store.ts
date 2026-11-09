@@ -26,13 +26,28 @@ import { runtimeGet, runtimeSet } from './runtime';
 
 type Entry<T> = { value: T; soft: number; hard: number };
 
-/** Bounded so a crawl over many chapters cannot grow the heap without limit. */
+/** Bound both the number and the estimated serialized size of L1 entries. */
 const MAX_LOCAL_ENTRIES = 500;
+const MAX_LOCAL_BYTES = 64 * 1024 * 1024;
+const MAX_LOCAL_ENTRY_BYTES = 8 * 1024 * 1024;
+
+// JSON byte size alone understates JavaScript object and string overhead. This
+// conservative charge is an estimate, not an exact measurement of V8's heap.
+const LOCAL_SIZE_MULTIPLIER = 4;
 
 /** Vercel caps a Runtime Cache item at 2 MB; stay clear of the edge. */
 const MAX_REMOTE_BYTES = 1_500_000;
 
-const local = new Map<string, Entry<unknown>>();
+type LocalEntry<T> = Entry<T> & { chargedBytes: number };
+const local = new Map<string, LocalEntry<unknown>>();
+let localBytes = 0;
+
+function deleteLocal(key: string): void {
+	const previous = local.get(key);
+	if (!previous) return;
+	localBytes -= previous.chargedBytes;
+	local.delete(key);
+}
 
 /**
  * Loads currently in progress, keyed the same way as the cache itself.
@@ -64,26 +79,43 @@ function singleFlight<T>(key: string, load: () => Promise<T>): Promise<T> {
 }
 
 function localGet<T>(key: string): Entry<T> | undefined {
-	const entry = local.get(key) as Entry<T> | undefined;
+	const entry = local.get(key) as LocalEntry<T> | undefined;
 	if (!entry) {
 		return undefined;
 	}
 	if (entry.hard < Date.now()) {
-		local.delete(key);
+		deleteLocal(key);
 		return undefined;
 	}
 	return entry;
 }
 
 function localSet<T>(key: string, value: T, ttlMs: number, graceMs: number): T {
-	if (local.size >= MAX_LOCAL_ENTRIES && !local.has(key)) {
+	let serialized: string | undefined;
+	try {
+		serialized = JSON.stringify(value);
+	} catch {
+		// Keep an existing stale value for later fallback. Unsupported or cyclic
+		// values cannot safely be budgeted or stored in L2.
+		return value;
+	}
+	if (serialized === undefined) {
+		return value;
+	}
+	const chargedBytes =
+		(Buffer.byteLength(key, 'utf8') + Buffer.byteLength(serialized, 'utf8')) *
+		LOCAL_SIZE_MULTIPLIER;
+	if (chargedBytes > MAX_LOCAL_ENTRY_BYTES) return value;
+	deleteLocal(key);
+
+	while (local.size >= MAX_LOCAL_ENTRIES || localBytes + chargedBytes > MAX_LOCAL_BYTES) {
 		const oldest = local.keys().next().value;
-		if (oldest !== undefined) {
-			local.delete(oldest);
-		}
+		if (oldest === undefined) break;
+		deleteLocal(oldest);
 	}
 	const now = Date.now();
-	local.set(key, { value, soft: now + ttlMs, hard: now + ttlMs + graceMs });
+	local.set(key, { value, soft: now + ttlMs, hard: now + ttlMs + graceMs, chargedBytes });
+	localBytes += chargedBytes;
 	return value;
 }
 
@@ -117,7 +149,8 @@ function remoteSet<T>(
 	} catch {
 		return;
 	}
-	if (payload.length > MAX_REMOTE_BYTES) {
+	const bytes = Buffer.byteLength(payload, 'utf8');
+	if (bytes > MAX_REMOTE_BYTES) {
 		/**
 		 * Loud, because a silent drop here is invisible and permanent.
 		 *
@@ -131,7 +164,7 @@ function remoteSet<T>(
 		 * before it is cached, and the only way to know is to say so.
 		 */
 		console.warn(
-			`[cache] ${key} not cached remotely: ${payload.length} bytes exceeds ${MAX_REMOTE_BYTES}`,
+			`[cache] ${key} not cached remotely: ${bytes} bytes exceeds ${MAX_REMOTE_BYTES}`,
 		);
 		return;
 	}

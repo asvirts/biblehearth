@@ -11,6 +11,7 @@ import {
 } from '../../lib/bible/usfm';
 import { scriptureToPlainText } from '../../lib/bible/text';
 import { adjacentVerse } from '../../lib/bible/verse-navigation';
+import { chapterInRange, isCanonicalBook } from '../../lib/bible/chapters';
 import {
 	absoluteUrl,
 	chapterPath,
@@ -49,7 +50,19 @@ export async function loadVerseHub(context: PageContext, loadVerse = loadVerseHu
 	}
 
 	const bookUsfm = usfmFromBookSlug(bookSlug);
-	if (!bookUsfm) {
+	if (
+		!bookUsfm ||
+		!Number.isSafeInteger(Number(chapterId)) ||
+		!Number.isSafeInteger(Number(verseId)) ||
+		Number(chapterId) < 1 ||
+		Number(verseId) < 1 ||
+		(isCanonicalBook(bookUsfm) && !chapterInRange(bookUsfm, chapterId))
+	) {
+		return context.notFound();
+	}
+	// Reject padded numbers rather than allowing distinct cache keys for the
+	// same reference. The publisher indexes use the canonical decimal spelling.
+	if (String(Number(chapterId)) !== chapterId || String(Number(verseId)) !== verseId) {
 		return context.notFound();
 	}
 

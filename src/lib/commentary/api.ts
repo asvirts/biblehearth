@@ -1,6 +1,7 @@
 import { decodeEntities, truncateWords } from '../bible/text';
 import { loadCached } from '../cache/store';
 import { commentaryParagraphs, commentaryPlainText } from './text';
+import { readCommentaryResponse } from './response';
 import {
 	COMMENTARY_SOURCES,
 	commentarySource,
@@ -74,22 +75,7 @@ export type BookOverview = {
 	introduction: string[];
 };
 
-type ApiVerseItem = {
-	type?: string;
-	number?: number;
-	content?: unknown[];
-};
-
-type ApiChapterResponse = {
-	book?: { introduction?: string | null };
-	chapter?: {
-		number?: number;
-		introduction?: string | null;
-		content?: ApiVerseItem[];
-	};
-};
-
-async function fetchJson(path: string): Promise<unknown | null> {
+async function fetchJson(path: string) {
 	const response = await fetch(`${API_ORIGIN}${path}`, {
 		signal: AbortSignal.timeout(REQUEST_TIMEOUT_MS),
 		headers: { Accept: 'application/json' },
@@ -103,11 +89,11 @@ async function fetchJson(path: string): Promise<unknown | null> {
 	if (!response.ok) {
 		throw new Error(`Commentary upstream returned ${response.status}`);
 	}
-	return response.json();
+	return readCommentaryResponse(response);
 }
 
 /** Only strings carry text; anything else in the array is upstream noise. */
-function textOf(content: unknown[] | undefined): string[] {
+function textOf(content: unknown[] | null | undefined): string[] {
 	return (content ?? []).filter(
 		(item): item is string => typeof item === 'string',
 	);
@@ -176,9 +162,9 @@ export async function loadChapterCommentary(
 		COMMENTARY_CACHE_MS,
 		STALE_GRACE_MS,
 		async () => {
-			const payload = (await fetchJson(
+			const payload = await fetchJson(
 				`/api/c/${sourceId}/${book}/${chapter}.json`,
-			)) as ApiChapterResponse | null;
+			);
 
 			const chapterData = payload?.chapter;
 			if (!chapterData) {
@@ -243,9 +229,9 @@ export async function loadBookOverviews(book: string): Promise<BookOverview[]> {
 				COMMENTARY_CACHE_MS,
 				STALE_GRACE_MS,
 				async () => {
-					const payload = (await fetchJson(
+					const payload = await fetchJson(
 						`/api/c/${source.id}/${book}/1.json`,
-					)) as ApiChapterResponse | null;
+					);
 					const raw = payload?.book?.introduction;
 					return raw ? commentaryParagraphs([raw]) : null;
 				},
